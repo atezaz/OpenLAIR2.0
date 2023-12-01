@@ -1,0 +1,23 @@
+.mat-icon-button[disabled] {
+  color: #f5d900;
+}
+
+.mat-icon-button {
+  height: 24px;
+  width: 24px;
+  color: #f5d900 !important;
+
+  .mat-icon {
+    line-height: 19px !important
+  }
+}
+
+:host ::ng-deep {
+  .mat-button-focus-overlay {
+    opacity: 0 !important;
+  }
+
+  /*.mat-button-wrapper {*/
+  /*  line-height: 19px !important*/
+  /*}*/
+}

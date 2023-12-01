@@ -1,0 +1,53 @@
+.mx-1 {
+  margin-left: 0.25em;
+  margin-right: 0.25em;
+}
+
+.mx-2 {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+.rating-header {
+  min-width: 500px;
+  max-width: 1200px;
+}
+
+.rating-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  min-width: 500px;
+  max-width: 1200px;
+}
+
+.single-rating-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+
+.reviewDialogContent {
+  margin-bottom: 0.5em;
+  overflow-x: hidden;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.fa-trash {
+  color: #e14b1b;
+  cursor: pointer;
+}
+
+.fa-pencil {
+  color: #575353;
+  cursor: pointer;
+}
+
+.reviewPlaceholder {
+  padding: 50px 110px 50px 110px;
+;
+}

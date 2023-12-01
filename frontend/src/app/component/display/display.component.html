@@ -1,0 +1,209 @@
+<div class="tool_Home">
+  <!--   Not run the demo if it is not home page-->
+  <div class="content-left" [ngClass]="{extendedMetrics: searchMat}">
+    <div class="h-flex" style="max-width: 1100px">
+      <div class="w-20">
+    <span style="padding-bottom: 2px">
+      <strong>Learning Events</strong><br/>
+      <span class="stepDefine" style="font-size: 14px; cursor: pointer;" id="tooltipEvents"
+            data-tooltipster='{"side":"bottom","animation":"fall", "delay":"200", "theme":"tooltipster-shadow"}'
+            title="">
+        <img width="16px" src="assets/images/question.png"/> Click here for more details
+        <span class="" id="contentEvents">
+          <p style="text-align: left">
+            <strong>Learning Events</strong><br/>
+            A learning objective is the desired outcome of a single or multiple
+            learning event and is used to establish learning <br/>
+            activities to achieve the overall learning outcome
+            <a target="_blank"
+               href="https://research.tue.nl/en/publications/teacher-learning-in-the-context-of-educational-innovation-learnin">[13]</a>.
+            Learning design literature identified eight learning events:
+            <br/>create, explore, practice, imitate, receive, debate,
+            meta-learn/Elf-reflect, and experiment
+            <a target="_blank" href="http://www.labset.net/media/prod/8LEM.pdf">[1]</a>,
+            <a target="_blank" href="https://www.tandfonline.com/doi/abs/10.1080/10494820701343694">[2]</a>.
+            <br/><br/>
+            <img width="800px" src="assets/images/events.png"/>
+          </p>
+        </span>
+      </span>
+    </span>
+        <mat-form-field style="width: 100%">
+          <mat-select class="step1" placeholder="Learning Events" name="Select" [(ngModel)]="selectedLearningEvents"
+                      multiple #selectionModel="ngModel" (valueChange)="onEventValueChange($event)">
+            <app-select-check-all [model]="selectionModel" [values]="(learningEventsOptions$ | async)"
+                                  (sendCount)="onEventValueChange($event)">
+            </app-select-check-all>
+            <mat-option *ngFor="let option of (learningEventsOptions$ | async)" [value]="option">
+              {{ option }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="w-40">
+        <strong>Learning Activities</strong><br/>
+        <span style="font-size: 14px; cursor: pointer;" id="tooltipActivities"
+              data-tooltipster='{"side":"bottom","animation":"fall", "delay":"200", "theme":"tooltipster-shadow"}'
+              title="">
+      <img width="16px" src="assets/images/question.png"/> Click here for more
+      details
+      <span class="" id="contentActivities">
+        <p style="text-align: left">
+          <strong>Learning Activities</strong><br/>
+          A study by Gruber et al.
+          <a target="_blank"
+             href="https://www.researchgate.net/publication/334170760_Design_Thinking_for_Technology_Enhanced_Learning">[3]</a>
+          took the model of learning events and added learning activities<br/>
+          to identify its outcomes in LD. Learning activities are split into
+          in-class methods and tools,<br/>
+          and online methods and tools [<a target="_blank"
+                                           href="https://www.researchgate.net/publication/334170760_Design_Thinking_for_Technology_Enhanced_Learning">3</a>,
+          <a target="_blank"
+             href="https://www.researchgate.net/publication/222945649_Factors_affecting_teachers'_participation_in_professional_learning_activities">9</a>].
+          Examples of in-class methods and tools are exercise, <br/>exam,
+          presentation, discussion, demonstration, etc. On the other hand,
+          online methods and <br/>tools are blogs, wikis, forums, photo and
+          audio notes, online tests and quizzes, e-portfolios, <br/>etc.
+        </p>
+      </span>
+    </span>
+        <div class="pt-1">
+          <ng-multiselect-dropdown class="step2" [placeholder]="'Learning Activities'"
+                                   [settings]="dropdownSettings"
+                                   [data]="(learningActivitiesOptions$ | async)"
+                                   [(ngModel)]="selectedLearningActivities"
+                                   (onSelect)="onActivitySelectChange()"
+                                   (onSelectAll)="onActivitySelectChange()" (onDeSelect)="onActivitySelectChange()">
+          </ng-multiselect-dropdown>
+        </div>
+      </div>
+      <div class="w-20">
+        <strong>Indicators</strong><br/>
+        <span style="font-size: 14px; cursor: pointer;" id="tooltipIndicators"
+              data-tooltipster='{"side":"bottom","animation":"fall", "delay":"200", "theme":"tooltipster-shadow"}'
+              title="">
+      <span><img width="16px" src="assets/images/question.png"/> Click here for
+        more details</span>
+      <span class="toolBoxCss" id="contentIndicators">
+        <p style="height: 572px">
+          <strong>Indicators</strong><br/>
+          Metrics (measurements) are used to create indicators; an indicator is
+          the result of the analysis of one<br/>
+          or multiple metrics (e.g. number of views, login/logout frequency &
+          time, number of posts, etc.) and gives
+          <br/>
+          a more comprehensive picture on a particular (abstract) learner
+          status, e.g. reading comprehension, <br/>
+          self-reflection, etc. An indicator covers a particular aspect of an
+          abstract variable (e.g., student engagement)<br/>
+          by using relevant (measurable) items.<br/><br/>
+          Here is an example of Student Engagement in Moodle. <br/>
+          <img src="assets/images/engagement.jpg"/>
+        </p>
+      </span>
+    </span>
+        <div class="mat-input-element-fix pt-1">
+          <input class="step3" matInput [(ngModel)]="searchInd" placeholder="Search Indicator"/>
+        </div>
+      </div>
+      <div class="w-20">
+        <strong>Metrics</strong><br/>
+        <span style="font-size: 14px; cursor: pointer;" id="tooltipMetrics"
+              data-tooltipster='{"side":"bottom","animation":"fall", "delay":"200", "theme":"tooltipster-shadow"}'
+              title="">
+      <img width="16px" src="assets/images/question.png"/> Click here for more
+      details
+      <span class="toolBoxCss" id="contentMetrics">
+        <p style="text-align: left">
+          <strong>Metrics</strong><br/>
+          Learning analytics applications collect data from the interaction
+          between learners and LMSs.<br/>
+          To make sense of these captured data, they need to be categorized in a
+          corresponding unit of<br/>
+          measurement (e.g. number of views, login/logout frequency & time,
+          number of posts, etc.). In<br/>
+          this paper, we refer to the units of measurements as metrics.
+        </p>
+      </span>
+    </span>
+        <div class="mat-input-element-fix pt-1">
+          <input class="stepMetrics" matInput [(ngModel)]="searchMat" placeholder="Search Metrics"/>
+        </div>
+      </div>
+    </div>
+
+    <app-table *ngIf="!searchMat" [data]="(tableData$ | async)" [searchInd]="searchInd" [searchMat]="searchMat"
+               [checkedMap]="checkedMap" [loggedIn]="loggedIn"
+               (checkboxEmitter)="onCheckboxChange($event)"
+               (getMetericsEmitter)="getMeterics($event)"
+               (onReviewEmitter)="onReview($event)"
+               (updateValues)="fetchdata()"
+               (indicatorDeleted)="indicatorDeleted($event)"
+    ></app-table>
+  </div>
+
+  <div class="content-right" [ngClass]="{extendedMetrics: searchMat}">
+    <div class="h-flex">
+      <button class="stepVisualize buttonLaTool" (click)="visualizeClicked()">
+        <i class="fa-solid fa-display"></i> &nbsp; Visualize
+      </button>
+      <button class="stepDownload buttonLaTool" (click)="jsonClicked()"><i class="fa-solid fa-download"></i>
+        &nbsp; JSON
+      </button>
+
+      <button class="stepDownloadText buttonLaTool" (click)="textClicked()">
+        <i class="fa-solid fa-download"></i> &nbsp; TEXT
+      </button>
+
+      <button class="stepReset buttonRed" (click)="reset()"><i class="fa-solid fa-arrow-rotate-right"></i> &nbsp;
+        Reset
+      </button>
+
+      <button *ngIf="!loggedIn" (click)="logIn()" class="buttonLaTool login-button">Login
+      </button>
+
+      <button *ngIf="loggedIn"
+              style="background-image: linear-gradient(45deg, #8e1e22 10%, #edcfcf 51%, #8e1e22 100%) !important; box-shadow: 2px 4px 5px 0 #ead8d8;"
+              class="buttonLaTool logout-button" (click)='logout()'>Logout
+      </button>
+    </div>
+
+    <label *ngIf="atLeastOneChecked()" class="selected-indicators-label"> Selected Indicator(s)</label>
+    <div class="selected-indicators-wrapper">
+      <ul id="reset" style="line-height: 17px; font-size: 15px" *ngFor="let selectInd of ind_list">
+        <li>
+          {{ selectInd }}
+        </li>
+      </ul>
+    </div>
+
+    <a id="back-to-top" class="btn back-to-top" role="button" (click)="backToTop()">
+      <i class="material-icons buttonLaTool">arrow_upward</i>
+    </a>
+    <!-- <button class="stepReset buttonLaTool"  (click)="reset()"><img width="70px" src="assets/images/reset.png"/></button>  -->
+  </div>
+</div>
+<div *ngIf="searchMat" class="extendedMetricsTable">
+  <app-table [data]="(tableData$ | async)" [searchInd]="searchInd" [searchMat]="searchMat"
+             [checkedMap]="checkedMap" [loggedIn]="loggedIn"
+             (checkboxEmitter)="onCheckboxChange($event)"
+             (getMetericsEmitter)="getMeterics($event)"
+             (onReviewEmitter)="onReview($event)"
+             (updateValues)="fetchdata()"
+             (indicatorDeleted)="indicatorDeleted($event)"
+  ></app-table>
+</div>
+
+<ng-template #secondDialog>
+  <h2 matDialogTitle>Metrics</h2>
+  <mat-dialog-content>
+    <ul *ngFor="let metric of metrics_list">
+      <li>{{ metric }}</li>
+    </ul>
+  </mat-dialog-content>
+  <button mat-button mat-dialog-close>Close</button>
+</ng-template>
+
+<ng-template #reviewDialog let-indicator>
+  <app-review-display [indicator]="indicator"></app-review-display>
+</ng-template>

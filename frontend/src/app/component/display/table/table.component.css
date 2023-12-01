@@ -1,0 +1,68 @@
+.w-100 {
+  width: 100%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+th {
+  color: grey;
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  text-align: left;
+  padding-left: 1em;
+  padding-bottom: 0.5em;
+}
+
+.learningactivities {
+  width: 170px;
+}
+
+.activities:nth-child(odd) {
+  .learningactivities {
+    background-color: #f1f1f1;
+  }
+
+  .indicator {
+    background-color: #f1f1f1;
+  }
+}
+
+.activities:nth-child(even) {
+  .learningactivities {
+    background-color: #e5e5e5;
+  }
+
+  .indicator {
+    background-color: #e5e5e5;
+  }
+}
+
+.leraningevents:nth-child(odd) {
+  background-color: #f1f1f1;
+}
+
+.leraningevents {
+  width: 120px;
+}
+
+.sortable {
+  cursor: pointer;
+}
+
+.review-icon, .reference-icon {
+  margin-left: 0.3em;
+}
+
+.indicator-content {
+  display: flex;
+  align-items: flex-start;
+}
+
+.indicator-text {
+  display: flex;
+  flex-wrap: wrap;
+}
+

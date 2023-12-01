@@ -1,0 +1,65 @@
+<div class="rating-header">
+  <h2 matDialogTitle style="margin-bottom: 10px">Review(s) for {{indicator.indicatorName}}</h2>
+  <div *ngIf="totalAverage" [matTooltip]="totalAverage.toString()" [matTooltipPosition]="'right'"
+       style="margin-bottom: 10px; width: 15em">
+    Average score:
+    <mat-star-rating [disabled]="true" [rating]="totalAverage"></mat-star-rating>
+  </div>
+</div>
+<mat-dialog-content class="reviewDialogContent" *ngIf="reviews">
+  <div *ngIf="reviews.length === 0" class="reviewPlaceholder">No Reviews have been submitted yet.</div>
+  <div *ngFor="let review of reviews" class="rating-wrapper">
+    <fieldset style="border-radius: 8px;">
+      <legend>
+        <div class="d-flex">
+          <span style="font-weight: bold">Name: </span>{{review.name}}
+          <div *ngIf="loggedIn?.superAdmin">
+            <a class="mx-2" mat-dialog-close (click)="editAsSuperAdmin(review._id)">
+              <i class="fa fa-pencil"></i>
+            </a>
+            <a (click)="deleteAsSuperAdmin(review._id)">
+              <i class="fa fa-trash"></i>
+            </a>
+          </div>
+        </div>
+      </legend>
+      <div class="single-rating-wrapper">
+        <span style="font-weight: bold">Indicator quality:</span>
+        <mat-star-rating [disabled]="true" [(rating)]="review.indicatorQuality"></mat-star-rating>
+      </div>
+      <div>{{review.indicatorQualityNote}}</div>
+      <div class="single-rating-wrapper">
+        <span style="font-weight: bold">Article Clarity:</span>
+        <mat-star-rating [disabled]="true" [(rating)]="review.articleClarity"></mat-star-rating>
+      </div>
+      <div>{{review.articleClarityNote}}</div>
+      <div class="single-rating-wrapper">
+        <span style="font-weight: bold">Article Data:</span>
+        <mat-star-rating [disabled]="true" [(rating)]="review.articleData"></mat-star-rating>
+      </div>
+      <div>{{review.articleDataNote}}</div>
+      <div class="single-rating-wrapper">
+        <span style="font-weight: bold">Article Analysis:</span>
+        <mat-star-rating [disabled]="true" [(rating)]="review.articleAnalysis"></mat-star-rating>
+      </div>
+      <div>{{review.articleAnalysisNote}}</div>
+      <div class="single-rating-wrapper">
+        <span style="font-weight: bold">Article Conclusion:</span>
+        <mat-star-rating [disabled]="true" [(rating)]="review.articleConclusion"></mat-star-rating>
+      </div>
+      <div>{{review.articleConclusionNote}}</div>
+      <div class="single-rating-wrapper">
+        <span style="font-weight: bold">Article Contribution:</span>
+        <mat-star-rating [disabled]="true" [(rating)]="review.articleContribution"></mat-star-rating>
+      </div>
+      <div>{{review.articleContributionNote}}</div>
+    </fieldset>
+  </div>
+</mat-dialog-content>
+<button *ngIf="loggedIn" mat-button mat-dialog-close (click)="addReview()" class="buttonLaTool"
+        style="margin-right: 10px">{{buttonLabel}}
+</button>
+<button *ngIf="!loggedIn" mat-button mat-dialog-close (click)="logIn()" class="buttonLaTool"
+        style="margin-right: 10px">Login
+</button>
+<button mat-button mat-dialog-close style="border: 1px solid grey">Close</button>
