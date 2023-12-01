@@ -1,95 +1,118 @@
 <div *ngIf="indicator" class="outer-div">
-  <h2> Create Review for "{{indicator.Title}}"</h2>
+    <h2> Create Review for "{{indicator.Title}}"</h2>
 
-  <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+    <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
 
-    <div class="row">
-      <div class="column-100">
-        Name:
-        <span>{{formGroup.controls['name'].value}}</span>
-      </div>
-      <div class="column-25">
-        <div>Indicator quality: <mat-star-rating [(rating)]="indicatorQuality" (ratingChange)="ratingChanged('indicatorQuality', $event.valueOf())"></mat-star-rating>
+        <div class="row">
+            <div class="column-100">
+                <div class="row-no-wrap" *ngIf="reference">
+                    <div style="width: 80px">Reference:</div>
+                    <span>{{reference.referenceText}} {{reference.referenceNumber}}</span>
+                </div>
+                <div class="row-no-wrap" *ngIf="reference && reference.link">
+                    <div style="width: 80px">Link:</div>
+                    <a href="{{reference.link}}">{{shortenLink(reference.link)}}</a>
+                </div>
+                <div class="row">
+                    <div style="width: 80px">Name:</div>
+                    <span>{{formGroup.controls['name'].value}}</span>
+                </div>
+            </div>
+            <div class="column-25">
+                <div>Indicator quality:
+                    <mat-star-rating [(rating)]="indicatorQuality"
+                                     (ratingChange)="ratingChanged('indicatorQuality', $event.valueOf())"></mat-star-rating>
+                </div>
+                <div
+                    *ngIf="formGroup.controls['indicatorQuality'].invalid && (formGroup.controls['indicatorQuality'].dirty || formGroup.controls['indicatorQuality'].touched)"
+                    class="alert">
+                    <div *ngIf="formGroup.controls['indicatorQuality'].errors.required">
+                        Rating is required.
+                    </div>
+                </div>
+                <span style="margin-top: 10px;">Indicator quality Note:</span>
+                <textarea class="note-textarea" formControlName="indicatorQualityNote"></textarea>
+            </div>
+            <div class="column-25">
+                <div>Article Clarity:
+                    <mat-star-rating [(rating)]="articleClarity"
+                                     (ratingChange)="ratingChanged('articleClarity', $event.valueOf())"></mat-star-rating>
+                </div>
+                <div
+                    *ngIf="formGroup.controls['articleClarity'].invalid && (formGroup.controls['articleClarity'].dirty || formGroup.controls['articleClarity'].touched)"
+                    class="alert">
+                    <div *ngIf="formGroup.controls['articleClarity'].errors.required">
+                        Rating is required.
+                    </div>
+                </div>
+                <span style="margin-top: 10px;">Article Clarity Note:</span>
+                <textarea class="note-textarea" formControlName="articleClarityNote"></textarea>
+            </div>
+            <div class="column-25">
+                <div>Article Data:
+                    <mat-star-rating [(rating)]="articleData"
+                                     (ratingChange)="ratingChanged('articleData', $event.valueOf())"></mat-star-rating>
+                </div>
+                <div
+                    *ngIf="formGroup.controls['articleData'].invalid && (formGroup.controls['articleData'].dirty || formGroup.controls['articleData'].touched)"
+                    class="alert">
+                    <div *ngIf="formGroup.controls['articleData'].errors.required">
+                        Rating is required.
+                    </div>
+                </div>
+                <span style="margin-top: 10px;">Article Data Note:</span>
+                <textarea class="note-textarea" formControlName="articleDataNote"></textarea>
+            </div>
+            <div class="column-25">
+                <div>Article Analysis:
+                    <mat-star-rating [(rating)]="articleAnalysis"
+                                     (ratingChange)="ratingChanged('articleAnalysis', $event.valueOf())"></mat-star-rating>
+                </div>
+                <div
+                    *ngIf="formGroup.controls['articleAnalysis'].invalid && (formGroup.controls['articleAnalysis'].dirty || formGroup.controls['articleAnalysis'].touched)"
+                    class="alert">
+                    <div *ngIf="formGroup.controls['articleAnalysis'].errors.required">
+                        Rating is required.
+                    </div>
+                </div>
+                <span style="margin-top: 10px;">Article Analysis Note:</span>
+                <textarea class="note-textarea" formControlName="articleAnalysisNote"></textarea>
+            </div>
+            <div class="column-25">
+                <div>Article Conclusion:
+                    <mat-star-rating [(rating)]="articleConclusion"
+                                     (ratingChange)="ratingChanged('articleConclusion', $event.valueOf())"></mat-star-rating>
+                </div>
+                <div
+                    *ngIf="formGroup.controls['articleConclusion'].invalid && (formGroup.controls['articleConclusion'].dirty || formGroup.controls['articleConclusion'].touched)"
+                    class="alert">
+                    <div *ngIf="formGroup.controls['articleConclusion'].errors.required">
+                        Rating is required.
+                    </div>
+                </div>
+                <span style="margin-top: 10px;">Article Conclusion Note:</span>
+                <textarea class="note-textarea" formControlName="articleConclusionNote"></textarea>
+            </div>
+            <div class="column-25">
+                <div>Article Contribution:
+                    <mat-star-rating [(rating)]="articleContribution"
+                                     (ratingChange)="ratingChanged('articleContribution', $event.valueOf())"></mat-star-rating>
+                </div>
+                <div
+                    *ngIf="formGroup.controls['articleContribution'].invalid && (formGroup.controls['articleContribution'].dirty || formGroup.controls['articleContribution'].touched)"
+                    class="alert">
+                    <div *ngIf="formGroup.controls['articleContribution'].errors.required">
+                        Rating is required.
+                    </div>
+                </div>
+                <span style="margin-top: 10px;">Article Contribution Note:</span>
+                <textarea class="note-textarea" formControlName="articleContributionNote"></textarea>
+            </div>
         </div>
-        <div
-          *ngIf="formGroup.controls['indicatorQuality'].invalid && (formGroup.controls['indicatorQuality'].dirty || formGroup.controls['indicatorQuality'].touched)"
-          class="alert">
-          <div *ngIf="formGroup.controls['indicatorQuality'].errors.required">
-            Rating is required.
-          </div>
-        </div>
-        <span style="margin-top: 10px;">Indicator quality Note:</span>
-        <textarea class="note-textarea" formControlName="indicatorQualityNote"></textarea>
-      </div>
-      <div class="column-25">
-        <div>Article Clarity: <mat-star-rating [(rating)]="articleClarity" (ratingChange)="ratingChanged('articleClarity', $event.valueOf())"></mat-star-rating>
-        </div>
-        <div
-          *ngIf="formGroup.controls['articleClarity'].invalid && (formGroup.controls['articleClarity'].dirty || formGroup.controls['articleClarity'].touched)"
-          class="alert">
-          <div *ngIf="formGroup.controls['articleClarity'].errors.required">
-            Rating is required.
-          </div>
-        </div>
-        <span style="margin-top: 10px;">Article Clarity Note:</span>
-        <textarea class="note-textarea" formControlName="articleClarityNote"></textarea>
-      </div>
-      <div class="column-25">
-        <div>Article Data: <mat-star-rating [(rating)]="articleData" (ratingChange)="ratingChanged('articleData', $event.valueOf())"></mat-star-rating>
-        </div>
-        <div
-          *ngIf="formGroup.controls['articleData'].invalid && (formGroup.controls['articleData'].dirty || formGroup.controls['articleData'].touched)"
-          class="alert">
-          <div *ngIf="formGroup.controls['articleData'].errors.required">
-            Rating is required.
-          </div>
-        </div>
-        <span style="margin-top: 10px;">Article Data Note:</span>
-        <textarea class="note-textarea" formControlName="articleDataNote"></textarea>
-      </div>
-      <div class="column-25">
-        <div>Article Analysis: <mat-star-rating [(rating)]="articleAnalysis" (ratingChange)="ratingChanged('articleAnalysis', $event.valueOf())"></mat-star-rating>
-        </div>
-        <div
-          *ngIf="formGroup.controls['articleAnalysis'].invalid && (formGroup.controls['articleAnalysis'].dirty || formGroup.controls['articleAnalysis'].touched)"
-          class="alert">
-          <div *ngIf="formGroup.controls['articleAnalysis'].errors.required">
-            Rating is required.
-          </div>
-        </div>
-        <span style="margin-top: 10px;">Article Analysis Note:</span>
-        <textarea class="note-textarea" formControlName="articleAnalysisNote"></textarea>
-      </div>
-      <div class="column-25">
-        <div>Article Conclusion: <mat-star-rating [(rating)]="articleConclusion" (ratingChange)="ratingChanged('articleConclusion', $event.valueOf())"></mat-star-rating>
-        </div>
-        <div
-          *ngIf="formGroup.controls['articleConclusion'].invalid && (formGroup.controls['articleConclusion'].dirty || formGroup.controls['articleConclusion'].touched)"
-          class="alert">
-          <div *ngIf="formGroup.controls['articleConclusion'].errors.required">
-            Rating is required.
-          </div>
-        </div>
-        <span style="margin-top: 10px;">Article Conclusion Note:</span>
-        <textarea class="note-textarea" formControlName="articleConclusionNote"></textarea>
-      </div>
-      <div class="column-25">
-        <div>Article Contribution: <mat-star-rating [(rating)]="articleContribution" (ratingChange)="ratingChanged('articleContribution', $event.valueOf())"></mat-star-rating>
-        </div>
-        <div
-          *ngIf="formGroup.controls['articleContribution'].invalid && (formGroup.controls['articleContribution'].dirty || formGroup.controls['articleContribution'].touched)"
-          class="alert">
-          <div *ngIf="formGroup.controls['articleContribution'].errors.required">
-            Rating is required.
-          </div>
-        </div>
-        <span style="margin-top: 10px;">Article Contribution Note:</span>
-        <textarea class="note-textarea" formControlName="articleContributionNote"></textarea>
-      </div>
-    </div>
-    <button type="submit" class="buttonLaTool">Submit Review</button>
-    <button *ngIf="reviewId"
-      style="background-image: linear-gradient(45deg, #8e1e22 10%, #edcfcf 51%, #8e1e22 100%) !important; box-shadow: 2px 4px 5px 0px #ead8d8;"
-      class="buttonLaTool" (click)="deleteReview()">Delete Review</button>
+        <button type="submit" class="buttonLaTool">Submit Review</button>
+        <button *ngIf="reviewId"
+                style="background-image: linear-gradient(45deg, #8e1e22 10%, #edcfcf 51%, #8e1e22 100%) !important; box-shadow: 2px 4px 5px 0px #ead8d8;"
+                class="buttonLaTool" (click)="deleteReview()">Delete Review
+        </button>
     </form>
 </div>

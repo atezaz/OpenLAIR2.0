@@ -3,9 +3,16 @@
 }
 
 .row {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row-no-wrap {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-bottom: .5em;
 }
 
 .column-100 {

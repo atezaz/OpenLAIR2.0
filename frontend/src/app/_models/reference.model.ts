@@ -3,4 +3,6 @@ export interface Reference {
   referenceNumber?: string;
   referenceText?: string;
   link?: string;
+  development?: string;
+  status?: string;
 }

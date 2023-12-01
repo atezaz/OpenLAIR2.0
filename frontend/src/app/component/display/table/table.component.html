@@ -34,12 +34,16 @@
                         </span>
                       </a>
                       <div>
+                          <a class="sortable reference-icon stepReference" (click)="navigateToReferenceLink(indic)">
+                              <i class="fa fa-quote-right"></i>
+                          </a>
+                          <a class="sortable reference-icon stepReference" (click)="onVerdictEmitter.emit(indic)">
+                              <img style="height: 14px" src="assets/images/verdictHammer.png"/>
+                          </a>
                       <a class="sortable review-icon stepReview" (click)="onReviewEmitter.emit(indic)">
                         <i class="fa fa-star-o"></i>
                       </a>
-                      <a class="sortable reference-icon stepReference" (click)="navigateToReferenceLink(indic)">
-                        <i class="fa fa-hand-o-right"></i>
-                      </a>
+
                       <a *ngIf="loggedIn?.superAdmin" class="superAdmin-icon edit" (click)="editAsSuperAdmin(indic)">
                         <i class="fa fa-pencil"></i>
                       </a>

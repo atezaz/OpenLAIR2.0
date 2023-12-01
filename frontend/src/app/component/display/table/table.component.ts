@@ -34,6 +34,9 @@ export class TableComponent implements OnInit {
     onReviewEmitter: EventEmitter<any> = new EventEmitter<any>();
 
     @Output()
+    onVerdictEmitter: EventEmitter<any> = new EventEmitter<any>();
+
+    @Output()
     updateValues: EventEmitter<any> = new EventEmitter<any>();
 
     @Output()

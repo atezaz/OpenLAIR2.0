@@ -1,8 +1,8 @@
 <div class="rating-header">
-  <h2 matDialogTitle style="margin-bottom: 10px">Review(s) for {{indicator.indicatorName}}</h2>
+  <h2 matDialogTitle style="margin-bottom: 10px; padding-right: 2em">Review(s) for {{indicator.Title}}</h2>
   <div *ngIf="totalAverage" [matTooltip]="totalAverage.toString()" [matTooltipPosition]="'right'"
-       style="margin-bottom: 10px; width: 15em">
-    Average score:
+       style="margin-bottom: 10px; width: 18em">
+    Overall average score:
     <mat-star-rating [disabled]="true" [rating]="totalAverage"></mat-star-rating>
   </div>
 </div>
@@ -12,7 +12,7 @@
     <fieldset style="border-radius: 8px;">
       <legend>
         <div class="d-flex">
-          <span style="font-weight: bold">Name: </span>{{review.name}}
+          <span style="font-weight: bold; padding-right: 0.5em">Name: </span>{{review.name}}
           <div *ngIf="loggedIn?.superAdmin">
             <a class="mx-2" mat-dialog-close (click)="editAsSuperAdmin(review._id)">
               <i class="fa fa-pencil"></i>
@@ -23,6 +23,13 @@
           </div>
         </div>
       </legend>
+        <div class="single-rating-wrapper" [matTooltip]="calculateAverage(review).toString()" [matTooltipPosition]="'right'">
+            <span></span>
+            <div>
+                Average score:
+            <mat-star-rating [disabled]="true" [rating]="calculateAverage(review)"></mat-star-rating>
+            </div>
+        </div>
       <div class="single-rating-wrapper">
         <span style="font-weight: bold">Indicator quality:</span>
         <mat-star-rating [disabled]="true" [(rating)]="review.indicatorQuality"></mat-star-rating>

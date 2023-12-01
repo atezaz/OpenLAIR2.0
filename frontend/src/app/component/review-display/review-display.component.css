@@ -10,7 +10,9 @@
 
 .rating-header {
   min-width: 500px;
-  max-width: 1200px;
+    display: flex;
+
+    justify-content: space-between;
 }
 
 .rating-wrapper {
@@ -18,7 +20,6 @@
   flex-direction: column;
   margin-bottom: 20px;
   min-width: 500px;
-  max-width: 1200px;
 }
 
 .single-rating-wrapper {

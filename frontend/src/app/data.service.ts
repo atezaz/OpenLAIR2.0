@@ -94,10 +94,6 @@ export class DataService {
     return this.http.get<Reference>(`${this.uri}/reference/number/${referenceNumber}`);
   }
 
-  addReference(reference: Reference) {
-    return this.http.post(`${this.uri}/reference/add`, reference)
-  }
-
   updateReference(id, reference: Reference) {
     return this.http.put(`${this.uri}/reference/${id}/edit`, reference);
   }
@@ -124,7 +120,7 @@ export class DataService {
     return this.http.post(`${this.uri}/getsearchindicator`, {search, httpOptions});
   }
 
-  addIndicator(data: any) {
+  addIndicatorAndReference(data: any) {
     return this.http.post(`${this.uri}/indicator/add`, data);
   }
 
@@ -167,6 +163,9 @@ export class DataService {
 
 
   }
+    generateOldTreeStructure(oldTreeStructure) {
+        return this.http.post(`${this.uri}/generate/treeStructure`, oldTreeStructure);
+    }
 }
 
 

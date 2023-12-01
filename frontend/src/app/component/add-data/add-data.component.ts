@@ -37,6 +37,10 @@ export class AddDataComponent implements OnInit {
   private previousIndicatorName: string;
   private previousMetrics: string;
   indicatorId: string;
+  useExistingReference: boolean = false;
+  private previousReferenceName: string;
+  private previousReferenceLink: string;
+  private newReferenceNumber: string;
 
   constructor(private dataService: DataService, private router: Router, private route: ActivatedRoute, private fb: FormBuilder,
               headerService: HeaderService) {
@@ -54,7 +58,9 @@ export class AddDataComponent implements OnInit {
       learningActivity: [{value: null, disabled: this.shouldDisable()}, Validators.required],
       indicatorName: [null, Validators.required],
       metrics: [null, Validators.required],
-      indicatorReference: [null, Validators.required]
+      referenceText: [{value: null, disabled: this.shouldDisable()}, Validators.required],
+      referenceLink: [{value: null, disabled: this.shouldDisable()}],
+      referenceNumber: [{value: null, disabled: true}, Validators.required]
     });
   }
 
@@ -76,6 +82,16 @@ export class AddDataComponent implements OnInit {
     this.indicatorOptions$ = this.dataService.getIndicators().pipe(shareReplay());
     this.dataService.getReferences().subscribe(references => {
       this.referenceOptions = references;
+        const referenceIds = references.map(reference => reference.referenceNumber);
+        for (let i = 1; i <= referenceIds.length + 1; i++) {
+          if (!referenceIds.includes(`[${i}]`)) {
+            this.newReferenceNumber = `[${i}]`
+            if (!this.indicatorId) {
+              this.indicatorForm.patchValue({'referenceNumber': this.newReferenceNumber});
+            }
+            break;
+          }
+        }
     })
   }
 
@@ -84,8 +100,19 @@ export class AddDataComponent implements OnInit {
       this.indicatorForm.patchValue({
         indicatorName: pathObject.indicator.Title,
         metrics: pathObject.indicator.metrics,
-        indicatorReference: pathObject.indicator.referenceNumber,
+        referenceNumber: pathObject.indicator.referenceNumber,
       })
+      if (pathObject.reference) {
+        this.indicatorForm.patchValue({
+          referenceText: pathObject.reference.referenceText,
+          referenceLink: pathObject.reference.link
+        })
+      } else {
+        this.indicatorForm.patchValue({
+          referenceText: 'Reference has been deleted',
+          referenceLink: 'Reference has been deleted'
+        })
+      }
       setTimeout(() => {
         this.indicatorForm.get('learningEvent').setValue(pathObject.event);
         this.indicatorForm.get('learningActivity').setValue(pathObject.activity);
@@ -97,19 +124,25 @@ export class AddDataComponent implements OnInit {
     if (!this.indicatorForm.valid){
       return
     }
-    const formValue = this.indicatorForm.value;
+    const formValue = this.indicatorForm.getRawValue();
     const indicator: indicator = {
-      referenceNumber: formValue.indicatorReference.referenceNumber,
+      referenceNumber: formValue.referenceNumber,
       Title: formValue.indicatorName,
       metrics: formValue.metrics
     }
+    const reference: Reference = {
+      referenceNumber: formValue.referenceNumber,
+      referenceText: formValue.referenceText,
+      link: formValue.referenceLink
+    }
 
-    const dataObject: {activity: LearningActivity, indicator: indicator} = {
+    const dataObject: {activity: LearningActivity, indicator: indicator, reference: Reference} = {
       activity: formValue.learningActivity,
-      indicator
+      indicator,
+      reference
     }
     if (!this.indicatorId) {
-      this.dataService.addIndicator(dataObject).subscribe(() => {
+      this.dataService.addIndicatorAndReference(dataObject).subscribe(() => {
         this.router.navigate(['/']);
       })
     } else {
@@ -122,7 +155,7 @@ export class AddDataComponent implements OnInit {
 
   learningEventSelected(learningEvent: LearningEvent) {
     if (!this.indicatorId) {
-      this.indicatorForm.patchValue({learningActivities: null})
+        this.indicatorForm.get('learningActivity').setValue(null);
       this.similarActivityMessage = null;
       this.learningActivitiesOptions = learningEvent ? this.filterActivitiesByLearningEvent(learningEvent) : this.allLearningActivitiesOptions;
     }
@@ -191,39 +224,70 @@ export class AddDataComponent implements OnInit {
     this.router.navigate(['/']);
   }
 
-  checkboxClicked() {
+  checkboxIndicatorClicked() {
     this.useExistingIndicator = !this.useExistingIndicator;
     if (!this.useExistingIndicator) {
+      this.toggleDisable(false);
       this.indicatorForm.patchValue({
-        'indicatorName': this.previousIndicatorName,
-        'indicatorReference': null,
-        'metrics': this.previousMetrics
+        indicatorName: this.previousIndicatorName,
+        metrics: this.previousMetrics,
+        referenceText: this.previousReferenceName,
+        referenceLink: this.previousReferenceLink,
+        referenceNumber: this.newReferenceNumber
+
       });
     } else {
-      this.previousIndicatorName = this.indicatorForm.value['indicatorName'];
-      this.previousMetrics = this.indicatorForm.value['metrics'];
+      this.setPreviousValues()
+      this.toggleDisable(true);
       this.indicatorForm.patchValue({
-        'indicatorName': null,
-        'indicatorReference': null,
-        'metrics': null
+        indicatorName: null,
+        metrics: null,
+        referenceText: null,
+        referenceLink: null,
+        referenceNumber: null
+      });
+    }
+  }
+
+  checkboxReferenceClicked() {
+    this.useExistingReference = !this.useExistingReference;
+    if (!this.useExistingReference) {
+      this.indicatorForm.get('referenceLink').enable();
+      this.indicatorForm.patchValue({
+        referenceText: this.previousReferenceName,
+        referenceLink: this.previousReferenceLink,
+        referenceNumber: this.newReferenceNumber
+      });
+    } else {
+      this.setPreviousValues()
+      this.indicatorForm.get('referenceLink').disable();
+      this.indicatorForm.patchValue({
+        referenceText: null,
+        referenceLink: null,
+        referenceNumber: null
       });
     }
   }
 
   indicatorSelected(indicator: indicator) {
     if (indicator) {
+      const reference = this.retrieveReferenceByNumber(indicator.referenceNumber);
       this.indicatorForm.patchValue(
         {
-          'indicatorName': indicator.Title,
-          'indicatorReference': this.retrieveReferenceByNumber(indicator.referenceNumber),
-          'metrics': indicator.metrics
+          indicatorName: indicator.Title,
+          metrics: indicator.metrics,
+          referenceText: reference.referenceText,
+          referenceLink: reference.link,
+          referenceNumber: reference.referenceNumber
         });
     } else {
       this.indicatorForm.patchValue(
         {
-          'indicatorName': null,
-          'indicatorReference': null,
-          'metrics': null
+          indicatorName: null,
+          metrics: null,
+          referenceText: null,
+          referenceLink: null,
+          referenceNumber: null
         });
     }
   }
@@ -238,5 +302,44 @@ export class AddDataComponent implements OnInit {
 
   compareMethod(item, selected) {
     return item._id === selected._id;
+  }
+
+  onReferenceChange(reference: Reference) {
+    if (reference) {
+      this.indicatorForm.patchValue(
+        {
+          referenceText: reference.referenceText,
+          referenceLink: reference.link,
+          referenceNumber: reference.referenceNumber
+        });
+    } else {
+      this.indicatorForm.patchValue(
+        {
+          referenceText: null,
+          referenceLink: null,
+          referenceNumber: null
+        });
+    }
+  }
+
+  toggleDisable(boolean: Boolean) {
+    if (boolean) {
+      this.indicatorForm.get('referenceText').disable();
+      this.indicatorForm.get('referenceLink').disable();
+      this.indicatorForm.get('metrics').disable();
+    } else {
+      this.indicatorForm.get('referenceText').enable();
+      if(!this.useExistingReference) {
+        this.indicatorForm.get('referenceLink').enable();
+      }
+      this.indicatorForm.get('metrics').enable();
+    }
+  }
+
+  private setPreviousValues() {
+    this.previousIndicatorName = this.indicatorForm.value['indicatorName'];
+    this.previousMetrics = this.indicatorForm.value['metrics'];
+    this.previousReferenceName = this.indicatorForm.value['referenceText'];
+    this.previousReferenceLink = this.indicatorForm.value['referenceLink'];
   }
 }

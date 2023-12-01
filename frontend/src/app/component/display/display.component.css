@@ -131,3 +131,24 @@ ul {
   margin-inline-end: 0;
   padding-inline-start: 20px;
 }
+
+.verdictContent {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1em;
+}
+
+.verdictRow {
+    display: flex;
+}
+
+.verdictLabel {
+    font-weight: bold;
+    padding-bottom: 0.5em;
+    width: 6.7em;
+}
+
+.generateButton {
+    width: 15em;
+    margin-top: 1em;
+}

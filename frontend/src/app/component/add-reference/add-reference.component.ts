@@ -80,9 +80,9 @@ export class AddReferenceComponent implements OnInit {
         this.router.navigate(['/reference']);
       })
     } else {
-      this.dataService.addReference(reference).subscribe(() => {
-        this.router.navigate(['/reference']);
-      })
+      // this.dataService.addReference(reference).subscribe(() => {
+      //   this.router.navigate(['/reference']);
+      // })
     }
   }
 

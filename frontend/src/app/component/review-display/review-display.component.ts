@@ -47,11 +47,11 @@ export class ReviewDisplayComponent implements OnInit {
         this.reviewExistsForUser = false;
         this.buttonLabel = 'Create Review'
       }
-      this.calculateAverage(reviews)
+      this.calculateOverallAverage(reviews)
     });
   }
 
-  private calculateAverage(reviews: review[]) {
+  private calculateOverallAverage(reviews: review[]) {
     this.reviewAverage = {
       name: 'average',
       articleAnalysis: reviews.reduce((previousValue, currentValue) => previousValue + currentValue.articleAnalysis, 0) / reviews.length,
@@ -64,6 +64,11 @@ export class ReviewDisplayComponent implements OnInit {
     this.totalAverage = (this.reviewAverage.articleAnalysis + this.reviewAverage.articleConclusion + this.reviewAverage.articleContribution +
       this.reviewAverage.articleClarity + this.reviewAverage.articleData + this.reviewAverage.indicatorQuality) / 6;
   }
+
+    calculateAverage(review: review) {
+        return(review.articleAnalysis + review.articleConclusion + review.articleContribution +
+            review.articleClarity + review.articleData + review.indicatorQuality) / 6;
+    }
 
   createReview() {
     this.router.navigate([`/review/add/${this.indicator._id}`]);
@@ -82,7 +87,7 @@ export class ReviewDisplayComponent implements OnInit {
   }
 
   logIn() {
-    this.router.navigate(['/review/add'], {state: {additionalInfo: {indicator: this.indicator}}});
+    this.router.navigate([`/review/add/${this.indicator._id}`], {state: {additionalInfo: {indicator: this.indicator}}});
   }
 
   editAsSuperAdmin(reviewId: string) {

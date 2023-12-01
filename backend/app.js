@@ -37,7 +37,7 @@ const app = (0, _express.default)();
 const router = _express.default.Router();
 
 app.use((0, _cors.default)());
-app.use(_bodyParser.default.json()); // app.use((req, res, next)=>{  
+app.use(_bodyParser.default.json({limit: '10mb', extended: true}));// app.use((req, res, next)=>{
 //   res.setHeader("Access-Control-Allow-Origin", "*");
 //   res.setHeader(  
 //     "Access-Control-Allow-Headers",  
@@ -105,6 +105,25 @@ MongoClient.connect(mongoURL, {useUnifiedTopology: true}, function (err, db) {
 
     });
 
+    router.route('/generate/treeStructure').post((req, res) => {
+        const treeStructure = req.body;
+        treeStructure.forEach(event => {
+            event._id = mongo.ObjectId(event._id);
+        })
+
+        db.collection("treeStructure").deleteMany({}, (err, result) => {
+            if (err) console.log(err);
+            else {
+                db.collection("treeStructure").insertMany(treeStructure, (error, results) => {
+                    if (error) console.log(error);
+                    else {
+                        res.status(200).send(true);
+                    }
+                })
+            }
+        });
+    });
+
     router.route('/events').get((req, res) => {
 
         db.collection("event").find().toArray(function (error, result) {
@@ -136,12 +155,19 @@ MongoClient.connect(mongoURL, {useUnifiedTopology: true}, function (err, db) {
                 db.collection("event").findOne({"activityIds": mongo.ObjectId(activity._id)}, (error, event) => {
                     if (err) throw error;
 
-                    const pathObject = {
-                        event,
-                        activity,
-                        indicator
-                    }
-                    res.send(pathObject);
+                    db.collection("reference").findOne({'referenceNumber': indicator.referenceNumber}, (err, reference) => {
+                        if (err) console.log(err);
+                        else {
+                            const pathObject = {
+                                event,
+                                activity,
+                                indicator,
+                                reference
+                            }
+                            res.send(pathObject);
+                        }
+
+                    })
                 });
             });
         });
@@ -203,6 +229,7 @@ MongoClient.connect(mongoURL, {useUnifiedTopology: true}, function (err, db) {
     router.route('/indicator/add').post((req, res) => {
         const activityId = req.body.activity._id;
         const indicator = req.body.indicator;
+        const reference = req.body.reference;
 
         db.collection('indicator').insertOne(indicator, (error, result) => {
             if (err) {
@@ -212,7 +239,13 @@ MongoClient.connect(mongoURL, {useUnifiedTopology: true}, function (err, db) {
                 if (error2) {
                     console.log(error2)
                 } else {
-                    res.status(200).send(true)
+                    // res.status(200).send(true)
+                    db.collection("reference").insertOne(reference, (error, result) => {
+                        if (err) {
+                            console.log(err);
+                        }
+                        return res.status(200).send(result);
+                    });
                 }
             })
         });
@@ -279,16 +312,6 @@ MongoClient.connect(mongoURL, {useUnifiedTopology: true}, function (err, db) {
             else
                 res.send(reference);
         })
-    });
-
-    router.route('/reference/add').post((req, res) => {
-        const reference = req.body;
-        db.collection("reference").insertOne(reference, (error, result) => {
-            if (err) {
-                console.log(err);
-            }
-            return res.status(200).send(result);
-        });
     });
 
     router.route('/reference/:id/edit').put((req, res) => {

@@ -22,8 +22,6 @@ const routes: Routes = [
   { path: "add", component: AddDataComponent, canActivate: [AuthGuardService], data: {target: 'indicator'}},
   { path: "indicator/:id/edit", component: AddDataComponent, canActivate: [SuperAdminService]},
   { path: "reference", component: ReferanceComponent },
-  { path: "reference/add", component: AddReferenceComponent, canActivate: [AuthGuardService], data: {target: 'reference'}},
-  { path: "reference/:id/edit", component: AddReferenceComponent, canActivate: [SuperAdminService]},
   { path: "login", component: AdminComponent },
   { path: "dashboard", component: DashboardComponent },
   { path: "review/add/:indicatorId", component: ReviewEditComponent, canActivate: [AuthGuardService]},

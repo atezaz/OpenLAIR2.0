@@ -6,6 +6,7 @@ import {DataService} from "../../data.service";
 import {ActivatedRoute, Router} from "@angular/router";
 import {indicator} from "../../_models/indicator.model";
 import {HeaderService} from "../header/header.service";
+import {Reference} from "../../_models/reference.model";
 
 @Component({
     selector: 'app-review-edit',
@@ -43,6 +44,7 @@ export class ReviewEditComponent implements OnInit {
     private review: review;
     indicator: indicator;
     indicatorId: any;
+    reference: Reference;
 
     constructor(readonly dataService: DataService, private router: Router, private route: ActivatedRoute,
                 headerService: HeaderService) {
@@ -54,6 +56,9 @@ export class ReviewEditComponent implements OnInit {
                 this.review = review;
                 this.dataService.getIndicatorById(review.indicatorId).subscribe(indicator => {
                     this.indicator = indicator;
+                    this.dataService.getReferenceByReferenceNumber(indicator.referenceNumber).subscribe(reference => {
+                        this.reference = reference;
+                    })
                 })
             })
         }
@@ -61,6 +66,9 @@ export class ReviewEditComponent implements OnInit {
         if (this.indicatorId) {
             this.dataService.getIndicatorById(this.indicatorId).subscribe(indicator => {
                 this.indicator = indicator;
+                this.dataService.getReferenceByReferenceNumber(indicator.referenceNumber).subscribe(reference => {
+                    this.reference = reference;
+                })
             })
             this.dataService.getReviewByIndicatorIdAndUsername(this.indicatorId, this.currentUser.username).subscribe(review => {
                 console.log(review)
@@ -115,5 +123,18 @@ export class ReviewEditComponent implements OnInit {
         this.dataService.deleteReview(this.formGroup.controls['_id'].value).subscribe(savedRating => {
             this.router.navigate(['/']);
         });
+    }
+
+    shortenLink(link: string) {
+        const splittedLink = link.split('//');
+        let index = 0;
+        if (splittedLink.length > 1) {
+            index = 1;
+        }
+        if (splittedLink[index].includes('www.')) {
+            return splittedLink[index].slice(4);
+        } else {
+            return splittedLink[index];
+        }
     }
 }

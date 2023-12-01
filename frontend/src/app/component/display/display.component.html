@@ -137,6 +137,7 @@
                (checkboxEmitter)="onCheckboxChange($event)"
                (getMetericsEmitter)="getMeterics($event)"
                (onReviewEmitter)="onReview($event)"
+               (onVerdictEmitter)="onVerdict($event)"
                (updateValues)="fetchdata()"
                (indicatorDeleted)="indicatorDeleted($event)"
     ></app-table>
@@ -168,6 +169,10 @@
       </button>
     </div>
 
+      <button *ngIf="loggedIn && loggedIn.superAdmin" (click)="generateTreeStructure()" class="buttonLaTool generateButton">
+          Generate Data for TreeStructure
+      </button>
+
     <label *ngIf="atLeastOneChecked()" class="selected-indicators-label"> Selected Indicator(s)</label>
     <div class="selected-indicators-wrapper">
       <ul id="reset" style="line-height: 17px; font-size: 15px" *ngFor="let selectInd of ind_list">
@@ -189,13 +194,14 @@
              (checkboxEmitter)="onCheckboxChange($event)"
              (getMetericsEmitter)="getMeterics($event)"
              (onReviewEmitter)="onReview($event)"
+             (onVerdictEmitter)="onVerdict($event)"
              (updateValues)="fetchdata()"
              (indicatorDeleted)="indicatorDeleted($event)"
   ></app-table>
 </div>
 
 <ng-template #secondDialog>
-  <h2 matDialogTitle>Metrics</h2>
+  <h2 matDialogTitle>Metrics for the Indicator "{{metricsIndicatorTitle}}"</h2>
   <mat-dialog-content>
     <ul *ngFor="let metric of metrics_list">
       <li>{{ metric }}</li>
@@ -206,4 +212,23 @@
 
 <ng-template #reviewDialog let-indicator>
   <app-review-display [indicator]="indicator"></app-review-display>
+</ng-template>
+
+<ng-template #verdictDialog let-reference>
+    <h2 matDialogTitle>Verdict for the Indicator "{{metricsIndicatorTitle}}"</h2>
+    <mat-dialog-content>
+        <div class="verdictContent">
+            <div class="verdictRow">
+                <div class="verdictLabel">Verified:</div>
+                <div *ngIf="reference.status">{{reference.status}}</div>
+                <div *ngIf="!reference.status">No information</div>
+            </div>
+            <div class="verdictRow">
+                <div class="verdictLabel">Development:</div>
+                <div *ngIf="reference.development">{{reference.development}}</div>
+                <div *ngIf="!reference.development">No information</div>
+            </div>
+        </div>
+    </mat-dialog-content>
+    <button mat-button mat-dialog-close>Close</button>
 </ng-template>

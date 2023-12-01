@@ -3,12 +3,12 @@
     {{reference.referenceNumber}} {{reference.referenceText}}<br>
     <div style="display: flex">
       <a *ngIf="reference.link" href="{{reference.link}}">{{shortenLink(reference.link)}}</a>
-      <a *ngIf="loggedIn?.superAdmin" class="superAdmin-icon edit" (click)="editAsSuperAdmin(reference._id)">
-        <i class="fa fa-pencil"></i>
-      </a>
-      <a *ngIf="loggedIn?.superAdmin" class="superAdmin-icon delete" (click)="deleteAsSuperAdmin(reference._id)">
-        <i class="fa fa-trash"></i>
-      </a>
+<!--      <a *ngIf="loggedIn?.superAdmin" class="superAdmin-icon edit" (click)="editAsSuperAdmin(reference._id)">-->
+<!--        <i class="fa fa-pencil"></i>-->
+<!--      </a>-->
+<!--      <a *ngIf="loggedIn?.superAdmin" class="superAdmin-icon delete" (click)="deleteAsSuperAdmin(reference._id)">-->
+<!--        <i class="fa fa-trash"></i>-->
+<!--      </a>-->
     </div>
   </li>
 </ul>
