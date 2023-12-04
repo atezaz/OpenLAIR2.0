@@ -1,11 +1,9 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {DataService} from '../../data.service';
-import {ActivatedRoute, Route, Router} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {LearningEvent} from "../../_models/learningEvent.model";
 import {LearningActivity} from "../../_models/learningActivity.model";
 import {indicator} from "../../_models/indicator.model";
-import {DisplayComponent} from "../display/display.component";
 import {Reference} from "../../_models/reference.model";
 import {HeaderService} from "../header/header.service";
 import {Observable} from "rxjs";
@@ -13,333 +11,280 @@ import {shareReplay} from "rxjs/operators";
 import {PathObject} from "../../_models/pathObject.model";
 
 @Component({
-  selector: 'app-add-data',
-  templateUrl: './add-data.component.html',
-  styleUrls: ['./add-data.component.css']
+    selector: 'app-add-data',
+    templateUrl: './add-data.component.html',
+    styleUrls: ['./add-data.component.css']
 })
 
 
 export class AddDataComponent implements OnInit {
 
-  //NEW Stuff
+    data: PathObject;
+    private target: string;
 
-  similarActivityMessage: any;
-  CUserName: any;
-  indicatorForm: FormGroup;
+    //NEW Stuff
 
-  learningEventOptions: LearningEvent[];
-  learningActivitiesOptions: LearningActivity[];
-  allLearningActivitiesOptions: LearningActivity[];
-  indicatorOptions$: Observable<indicator[]>;
-  referenceOptions: Reference[];
+    similarActivityMessage: any;
+    CUserName: any;
+    indicatorForm: FormGroup;
+    referenceForm: FormGroup;
 
-  useExistingIndicator: boolean = false;
-  private previousIndicatorName: string;
-  private previousMetrics: string;
-  indicatorId: string;
-  useExistingReference: boolean = false;
-  private previousReferenceName: string;
-  private previousReferenceLink: string;
-  private newReferenceNumber: string;
+    learningActivitiesOptions: LearningActivity[];
+    indicatorOptions$: Observable<indicator[]>;
+    referenceOptions: Reference[];
 
-  constructor(private dataService: DataService, private router: Router, private route: ActivatedRoute, private fb: FormBuilder,
-              headerService: HeaderService) {
-    headerService.setHeader('add-indicator')
+    indicatorId: string;
+    useExistingReference: boolean = false;
+    private previousReferenceName: string;
+    private previousReferenceLink: string;
+    private newReferenceNumber: string;
+    private existingReferenceNumber: string;
 
-    if (localStorage.getItem('currentUser')) {
-      this.CUserName = JSON.parse(localStorage.getItem('currentUser')).username;
-    }
+    verifiedOptions: string[] = ['verified', 'not verified', 'not mentioned'];
+    developmentOptions: string[] = ['developed', 'proposed', 'not mentioned'];
 
-    this.indicatorId = route.snapshot.params.id;
+    constructor(private dataService: DataService, private router: Router, private route: ActivatedRoute, private fb: FormBuilder,
+                headerService: HeaderService) {
+        headerService.setHeader('add-indicator')
 
-    //// form entries///////
-    this.indicatorForm = this.fb.group({
-      learningEvent: [{value: null, disabled: this.shouldDisable()}, Validators.required],
-      learningActivity: [{value: null, disabled: this.shouldDisable()}, Validators.required],
-      indicatorName: [null, Validators.required],
-      metrics: [null, Validators.required],
-      referenceText: [{value: null, disabled: this.shouldDisable()}, Validators.required],
-      referenceLink: [{value: null, disabled: this.shouldDisable()}],
-      referenceNumber: [{value: null, disabled: true}, Validators.required]
-    });
-  }
-
-  ngOnInit() {
-    this.fetchData();
-    if (this.indicatorId) {
-      this.initializeWithExisitingIndicator()
-    }
-  }
-
-  fetchData() {
-    this.dataService.getEvents().subscribe(events => {
-      this.learningEventOptions = events;
-    });
-    this.dataService.getActivities().subscribe(activities => {
-      this.learningActivitiesOptions = activities;
-      this.allLearningActivitiesOptions = activities;
-    });
-    this.indicatorOptions$ = this.dataService.getIndicators().pipe(shareReplay());
-    this.dataService.getReferences().subscribe(references => {
-      this.referenceOptions = references;
-        const referenceIds = references.map(reference => reference.referenceNumber);
-        for (let i = 1; i <= referenceIds.length + 1; i++) {
-          if (!referenceIds.includes(`[${i}]`)) {
-            this.newReferenceNumber = `[${i}]`
-            if (!this.indicatorId) {
-              this.indicatorForm.patchValue({'referenceNumber': this.newReferenceNumber});
-            }
-            break;
-          }
+        if (localStorage.getItem('currentUser')) {
+            this.CUserName = JSON.parse(localStorage.getItem('currentUser')).username;
         }
-    })
-  }
 
-  private initializeWithExisitingIndicator() {
-    this.dataService.getPathByIndicatorId(this.indicatorId).subscribe((pathObject: PathObject) => {
-      this.indicatorForm.patchValue({
-        indicatorName: pathObject.indicator.Title,
-        metrics: pathObject.indicator.metrics,
-        referenceNumber: pathObject.indicator.referenceNumber,
-      })
-      if (pathObject.reference) {
-        this.indicatorForm.patchValue({
-          referenceText: pathObject.reference.referenceText,
-          referenceLink: pathObject.reference.link
+        this.target = this.route.snapshot.data.target;
+        this.data = this.route.snapshot.data.data;
+        if (this.data.reference) {
+            this.existingReferenceNumber = this.data.reference.referenceNumber;
+        }
+        if (this.data.indicator) {
+            this.indicatorId = this.data.indicator._id;
+            this.existingReferenceNumber = this.data.indicator.referenceNumber;
+        }
+
+        //// form entries///////
+        this.indicatorForm = this.fb.group({
+            learningActivity: [{value: null, disabled: this.target}, Validators.required],
+            indicatorName: [{value: null, disabled: this.readonly('reference')}, Validators.required],
+            metrics: [{value: null, disabled: this.readonly('reference')}, Validators.required],
+            referenceNumber: [{value: null, disabled: true}, Validators.required]
+        });
+
+        this.referenceForm = this.fb.group({
+            referenceText: [{value: null, disabled: this.readonly('indicator')}, Validators.required],
+            referenceLink: [{value: null, disabled: this.readonly('indicator')}, Validators.required],
+            referenceNumber: [{value: null, disabled: true}, Validators.required],
+            verified: [{value: null, disabled: this.readonly('indicator')}],
+            development: [{value: null, disabled: this.readonly('indicator')}],
+        });
+
+        this.referenceForm.controls['referenceNumber'].valueChanges.subscribe(value => this.indicatorForm.controls['referenceNumber'].setValue(value));
+    }
+
+    ngOnInit() {
+        this.fetchData();
+        setTimeout(() => {
+            this.initializeData()
+        }, 200)
+    }
+
+    fetchData() {
+        this.dataService.getActivities().subscribe(activities => {
+            this.learningActivitiesOptions = activities;
+        });
+        this.indicatorOptions$ = this.dataService.getIndicators().pipe(shareReplay());
+        this.dataService.getReferences().subscribe(references => {
+            this.referenceOptions = references;
+            const referenceIds = references.map(reference => reference.referenceNumber);
+            for (let i = 1; i <= referenceIds.length + 1; i++) {
+                if (!referenceIds.includes(`[${i}]`)) {
+                    this.newReferenceNumber = `[${i}]`
+                    if (!this.existingReferenceNumber) {
+                        this.referenceForm.patchValue({'referenceNumber': this.newReferenceNumber});
+                    }
+                    break;
+                }
+            }
         })
-      } else {
-        this.indicatorForm.patchValue({
-          referenceText: 'Reference has been deleted',
-          referenceLink: 'Reference has been deleted'
-        })
-      }
-      setTimeout(() => {
-        this.indicatorForm.get('learningEvent').setValue(pathObject.event);
-        this.indicatorForm.get('learningActivity').setValue(pathObject.activity);
-      }, 100);
-    })
-  }
-
-  addData() {
-    if (!this.indicatorForm.valid){
-      return
-    }
-    const formValue = this.indicatorForm.getRawValue();
-    const indicator: indicator = {
-      referenceNumber: formValue.referenceNumber,
-      Title: formValue.indicatorName,
-      metrics: formValue.metrics
-    }
-    const reference: Reference = {
-      referenceNumber: formValue.referenceNumber,
-      referenceText: formValue.referenceText,
-      link: formValue.referenceLink
     }
 
-    const dataObject: {activity: LearningActivity, indicator: indicator, reference: Reference} = {
-      activity: formValue.learningActivity,
-      indicator,
-      reference
+    private initializeData() {
+        if (this.target) {
+            if (this.data.indicator) {
+                this.indicatorForm.patchValue({
+                    indicatorName: this.data.indicator.Title,
+                    metrics: this.data.indicator.metrics,
+                })
+                this.referenceForm.patchValue({
+                    referenceNumber: this.data.indicator.referenceNumber,
+                })
+                this.indicatorForm.get('learningActivity').setValue(this.data.activity);
+            } else {
+                this.indicatorForm.patchValue({
+                    indicatorName: 'No indicator found',
+                    metrics: 'No indicator found',
+                })
+            }
+            if (this.data.reference) {
+                this.referenceForm.patchValue({
+                    referenceText: this.data.reference.referenceText,
+                    referenceLink: this.data.reference.link,
+                    referenceNumber: this.data.reference.referenceNumber,
+                    verified: this.data.reference.status,
+                    development: this.data.reference.development
+                })
+            } else {
+                this.referenceForm.patchValue({
+                    referenceText: 'Reference has been deleted',
+                    referenceLink: 'Reference has been deleted'
+                })
+            }
+        }
     }
-    if (!this.indicatorId) {
-      this.dataService.addIndicatorAndReference(dataObject).subscribe(() => {
+
+    addData() {
+        const indicatorFormValue = this.indicatorForm.getRawValue();
+        const referenceFormValue = this.referenceForm.getRawValue();
+
+        const indicator: indicator = {
+            referenceNumber: indicatorFormValue.referenceNumber,
+            Title: indicatorFormValue.indicatorName,
+            metrics: indicatorFormValue.metrics
+        }
+        let referenceLink = referenceFormValue.referenceLink;
+        if (referenceLink === '') {
+            referenceLink = null;
+        }
+        const reference: Reference = {
+            referenceNumber: referenceFormValue.referenceNumber,
+            referenceText: referenceFormValue.referenceText,
+            link: referenceLink,
+            status: referenceFormValue.verified,
+            development: referenceFormValue.development
+        }
+
+        this.indicatorForm.markAllAsTouched();
+        this.referenceForm.markAllAsTouched();
+
+        switch (this.target) {
+            case 'indicator':
+                if (!this.indicatorForm.valid) {
+                    return
+                }
+                this.dataService.editIndicator(this.indicatorId, indicator).subscribe(() => {
+                    this.router.navigate(['/']);
+                })
+                break;
+            case 'reference':
+                if (!this.referenceForm.valid) {
+                    return
+                }
+
+                this.dataService.updateReference(this.data.reference._id, reference).subscribe(() => {
+                    this.router.navigate(['/reference']);
+                })
+                break;
+            default:
+                if (!this.referenceForm.valid || !this.indicatorForm.valid) {
+                    return
+                }
+
+                const dataObject: { activity: LearningActivity, indicator: indicator, reference: Reference } = {
+                    activity: indicatorFormValue.learningActivity,
+                    indicator,
+                    reference: this.useExistingReference ? null : reference
+                }
+                this.dataService.addIndicatorAndReference(dataObject).subscribe(() => {
+                    this.router.navigate(['/']);
+                })
+        }
+    }
+
+    learningActivitySelected(learningActivity: LearningActivity) {
+        if (learningActivity) {
+            this.dataService.getEventsByActivityId(learningActivity._id).subscribe(events => {
+                const eventNames = events.map(event => event.name);
+                if (eventNames.length === 1) {
+                    this.similarActivityMessage = `The selected learning activity "${learningActivity.name}"
+                    lies under the learning event "${eventNames[0]}".`
+                }
+                if (eventNames.length > 1) {
+                    const namesWithComma = eventNames.join(', ')
+                    this.similarActivityMessage = `The selected learning activity "${learningActivity.name}" lies under
+                     the learning events "${namesWithComma}". Therefore, the Indicator and Metrics you want to add will
+                      be added automatically under all of the mentioned learning events.`
+                }
+            })
+        } else {
+            this.similarActivityMessage = null;
+        }
+    }
+
+    logout() {
+        localStorage.removeItem('currentUser');
         this.router.navigate(['/']);
-      })
-    } else {
-
-      this.dataService.editIndicator(this.indicatorId, indicator).subscribe(() => {
-        this.router.navigate(['/']);
-      })
     }
-  }
 
-  learningEventSelected(learningEvent: LearningEvent) {
-    if (!this.indicatorId) {
-        this.indicatorForm.get('learningActivity').setValue(null);
-      this.similarActivityMessage = null;
-      this.learningActivitiesOptions = learningEvent ? this.filterActivitiesByLearningEvent(learningEvent) : this.allLearningActivitiesOptions;
+    checkboxReferenceClicked() {
+        this.useExistingReference = !this.useExistingReference;
+        if (!this.useExistingReference) {
+            this.referenceForm.get('referenceLink').enable();
+            this.referenceForm.get('verified').enable();
+            this.referenceForm.get('development').enable();
+            this.referenceForm.patchValue({
+                referenceText: this.previousReferenceName,
+                referenceLink: this.previousReferenceLink,
+                referenceNumber: this.newReferenceNumber,
+                verified: null,
+                development: null
+            });
+        } else {
+            this.setPreviousValues()
+            this.referenceForm.get('referenceLink').disable();
+            this.referenceForm.get('verified').disable();
+            this.referenceForm.get('development').disable();
+            this.referenceForm.patchValue({
+                referenceText: null,
+                referenceLink: null,
+                referenceNumber: null,
+                verified: null,
+                development: null
+            });
+        }
     }
-  }
 
-  private filterActivitiesByLearningEvent(learningEvent: LearningEvent): LearningActivity[] {
-    return this.allLearningActivitiesOptions.filter(activity => {
-      return learningEvent.activityIds.includes(activity._id);
-    });
-  }
-
-  learningActivitySelected(learningActivity: LearningActivity) {
-    if (!this.indicatorId) {
-      const name = learningActivity ? learningActivity.name : null;
-      switch (name) {
-        case "Group Work":
-          this.similarActivityMessage = "The selected learning activity <em>\"Group Work\"</em> " +
-            "lies under the learning events <em>\"Create, Practice and Debate\"</em>.<br>Therefore," +
-            " the Indicator and Metrics you want to add will also be added automatically under the " +
-            "<em>\"Group Work\"</em> activity in the mentioned learning events.";
-          break;
-        case "Review/Study":
-          this.similarActivityMessage = "The selected learning activity <em>\"Review/Study\"</em> " +
-            "lies under the learning events <em>\"Receive, Meta-learn or Self-reflect and Debate\"</em>.<br>Therefore," +
-            " the Indicator and Metrics you want to add will also be added automatically under the " +
-            "<em>\"Review/Study\"</em> activity in the mentioned learning events.";
-          break;
-        case "Presentation":
-          this.similarActivityMessage = "The selected learning activity <em>\"Presentation\"</em> " +
-            "lies under the learning events <em>\"Receive, Imitate and Debate\"</em>.<br>Therefore," +
-            " the Indicator and Metrics you want to add will also be added automatically under the " +
-            "<em>\"Presentation\"</em> activity in the mentioned learning events.";
-          break;
-        case "Exercise (Training)":
-          this.similarActivityMessage = "The selected learning activity <em>\"Exercise (Training)\"</em> " +
-            "lies under the learning events <em>\"Imitate, Experiment and Practice\"</em>.<br>Therefore," +
-            " the Indicator and Metrics you want to add will also be added automatically under the " +
-            "<em>\"Exercise (Training)\"</em> activity in the mentioned learning events.";
-          break;
-        case "Question (Query/Inquiry)":
-          this.similarActivityMessage = "The selected learning activity <em>\"Question (Query/Inquiry)\"</em> " +
-            "lies under the learning events <em>\"Practice and Debate\"</em>.<br>Therefore," +
-            " the Indicator and Metrics you want to add will also be added automatically under the " +
-            "<em>\"Question (Query/Inquiry)\"</em> activity in the mentioned learning events.";
-          break;
-        case "Survey (Questionnaire)":
-          this.similarActivityMessage = "The selected learning activity <em>\"Survey (Questionnaire)\"</em> " +
-            "lies under the learning events <em>\"Explore, Practice and Debate\"</em>.<br>Therefore," +
-            " the Indicator and Metrics you want to add will also be added automatically under the " +
-            "<em>\"Survey (Questionnaire)\"</em> activity in the mentioned learning events.";
-          break;
-        case "Peer review/Assessment":
-          this.similarActivityMessage = "The selected learning activity <em>\"Peer review/Assessment\"</em> " +
-            "lies under the learning events <em>\"Practice and Meta-learn or Self-reflect\"</em>.<br>Therefore," +
-            " the Indicator and Metrics you want to add will also be added automatically under the " +
-            "<em>\"Peer review/Assessment\"</em> activity in the mentioned learning events.";
-          break;
-        default:
-          this.similarActivityMessage = false;
-      }
+    compareMethod(item, selected) {
+        return item._id === selected._id;
     }
-  }
 
-  logout() {
-    localStorage.removeItem('currentUser');
-    this.router.navigate(['/']);
-  }
-
-  checkboxIndicatorClicked() {
-    this.useExistingIndicator = !this.useExistingIndicator;
-    if (!this.useExistingIndicator) {
-      this.toggleDisable(false);
-      this.indicatorForm.patchValue({
-        indicatorName: this.previousIndicatorName,
-        metrics: this.previousMetrics,
-        referenceText: this.previousReferenceName,
-        referenceLink: this.previousReferenceLink,
-        referenceNumber: this.newReferenceNumber
-
-      });
-    } else {
-      this.setPreviousValues()
-      this.toggleDisable(true);
-      this.indicatorForm.patchValue({
-        indicatorName: null,
-        metrics: null,
-        referenceText: null,
-        referenceLink: null,
-        referenceNumber: null
-      });
+    onReferenceChange(reference: Reference) {
+        if (reference) {
+            this.referenceForm.patchValue(
+                {
+                    referenceText: reference.referenceText,
+                    referenceLink: reference.link,
+                    referenceNumber: reference.referenceNumber,
+                    verified: reference.status,
+                    development: reference.development
+                });
+        } else {
+            this.referenceForm.patchValue(
+                {
+                    referenceText: null,
+                    referenceLink: null,
+                    referenceNumber: null,
+                    verified: null,
+                    development: null
+                });
+        }
     }
-  }
 
-  checkboxReferenceClicked() {
-    this.useExistingReference = !this.useExistingReference;
-    if (!this.useExistingReference) {
-      this.indicatorForm.get('referenceLink').enable();
-      this.indicatorForm.patchValue({
-        referenceText: this.previousReferenceName,
-        referenceLink: this.previousReferenceLink,
-        referenceNumber: this.newReferenceNumber
-      });
-    } else {
-      this.setPreviousValues()
-      this.indicatorForm.get('referenceLink').disable();
-      this.indicatorForm.patchValue({
-        referenceText: null,
-        referenceLink: null,
-        referenceNumber: null
-      });
+    private setPreviousValues() {
+        this.previousReferenceName = this.referenceForm.value['referenceText'];
+        this.previousReferenceLink = this.referenceForm.value['referenceLink'];
     }
-  }
 
-  indicatorSelected(indicator: indicator) {
-    if (indicator) {
-      const reference = this.retrieveReferenceByNumber(indicator.referenceNumber);
-      this.indicatorForm.patchValue(
-        {
-          indicatorName: indicator.Title,
-          metrics: indicator.metrics,
-          referenceText: reference.referenceText,
-          referenceLink: reference.link,
-          referenceNumber: reference.referenceNumber
-        });
-    } else {
-      this.indicatorForm.patchValue(
-        {
-          indicatorName: null,
-          metrics: null,
-          referenceText: null,
-          referenceLink: null,
-          referenceNumber: null
-        });
+    readonly(target: string) {
+        if (!target) return false;
+        return this.target === target;
     }
-  }
-
-  private retrieveReferenceByNumber(refNumber: string) {
-    return this.referenceOptions.find(reference => reference.referenceNumber === refNumber);
-  }
-
-  shouldDisable() {
-    return this.indicatorId;
-  }
-
-  compareMethod(item, selected) {
-    return item._id === selected._id;
-  }
-
-  onReferenceChange(reference: Reference) {
-    if (reference) {
-      this.indicatorForm.patchValue(
-        {
-          referenceText: reference.referenceText,
-          referenceLink: reference.link,
-          referenceNumber: reference.referenceNumber
-        });
-    } else {
-      this.indicatorForm.patchValue(
-        {
-          referenceText: null,
-          referenceLink: null,
-          referenceNumber: null
-        });
-    }
-  }
-
-  toggleDisable(boolean: Boolean) {
-    if (boolean) {
-      this.indicatorForm.get('referenceText').disable();
-      this.indicatorForm.get('referenceLink').disable();
-      this.indicatorForm.get('metrics').disable();
-    } else {
-      this.indicatorForm.get('referenceText').enable();
-      if(!this.useExistingReference) {
-        this.indicatorForm.get('referenceLink').enable();
-      }
-      this.indicatorForm.get('metrics').enable();
-    }
-  }
-
-  private setPreviousValues() {
-    this.previousIndicatorName = this.indicatorForm.value['indicatorName'];
-    this.previousMetrics = this.indicatorForm.value['metrics'];
-    this.previousReferenceName = this.indicatorForm.value['referenceText'];
-    this.previousReferenceLink = this.indicatorForm.value['referenceLink'];
-  }
 }

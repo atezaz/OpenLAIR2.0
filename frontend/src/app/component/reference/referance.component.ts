@@ -51,9 +51,9 @@ export class ReferanceComponent implements OnInit {
     this.router.navigate([`reference/${id}/edit`]);
   }
 
-  deleteAsSuperAdmin(id: any) {
+  deleteAsSuperAdmin(reference: Reference) {
     if (confirm("Do you really want to delete this Reference?")) {
-      this.dataService.deleteReference(id).subscribe(() => {
+      this.dataService.deleteReference(reference).subscribe(() => {
         this.references$ = this.dataService.getReferences()
           .pipe(tap(references => this.sortByRefNumber(references)));
       });

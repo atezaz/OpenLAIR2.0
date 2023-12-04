@@ -74,6 +74,23 @@ MongoClient.connect(mongoURL, {useUnifiedTopology: true}, function (err, db) {
         })
     })
 
+    router.route('/register').post((req, res) => {
+        const user = req.body;
+        user.superAdmin = false;
+        db.collection("login").findOne({'username': user.username}, (err, userFound) => {
+            if (userFound) {
+                res.send(false);
+            } else {
+                db.collection("login").insertOne(user, (error, result) => {
+                    if (err) {
+                        console.log(err);
+                    }
+                    return res.status(200).send(true);
+                });
+            }
+        })
+    });
+
     /////////////Instruction for data display/////////////////
 
     router.route('/display/data').get((req, res) => {
@@ -134,6 +151,14 @@ MongoClient.connect(mongoURL, {useUnifiedTopology: true}, function (err, db) {
 
     });
 
+    router.route('/eventsByActivityId/:id').get((req, res) => {
+
+        db.collection("event").find({activityIds: mongo.ObjectId(req.params.id)}).toArray((error, events) => {
+            if (error) throw error;
+            res.send(events);
+        });
+    });
+
     router.route('/activities').get((req, res) => {
 
         db.collection("activity").find().toArray(function (error, result) {
@@ -169,6 +194,45 @@ MongoClient.connect(mongoURL, {useUnifiedTopology: true}, function (err, db) {
 
                     })
                 });
+            });
+        });
+    });
+
+    router.route('/path/reference/:id').get((req, res) => {
+
+        db.collection("reference").findOne({_id: mongo.ObjectId(req.params.id)}, (err, reference) => {
+            if (err) console.log(err);
+
+            db.collection("indicator").findOne({'referenceNumber': reference.referenceNumber}, (error, indicator) => {
+                if (err) throw error;
+
+                if (indicator) {
+                    db.collection("activity").findOne({"indicatorIds": mongo.ObjectId(indicator._id)}, (error, activity) => {
+                        if (err) throw error;
+
+                        db.collection("event").findOne({"activityIds": mongo.ObjectId(activity._id)}, (error, event) => {
+                            if (err) throw error;
+                            else {
+                                const pathObject = {
+                                    event,
+                                    activity,
+                                    indicator,
+                                    reference
+                                }
+                                res.send(pathObject);
+                            }
+
+                        })
+                    });
+                } else {
+                    const pathObject = {
+                        reference,
+                        indicator: null,
+                        activity: null,
+                        event: null
+                    }
+                    res.send(pathObject)
+                }
             });
         });
     });
@@ -218,7 +282,7 @@ MongoClient.connect(mongoURL, {useUnifiedTopology: true}, function (err, db) {
 
     router.route('/indicator/:id').get((req, res) => {
 
-        db.collection("indicator").findOne({_id: mongo.ObjectId(req.params.id)},(error, indicator) => {
+        db.collection("indicator").findOne({_id: mongo.ObjectId(req.params.id)}, (error, indicator) => {
             if (error) throw error;
 
             res.send(indicator);
@@ -240,12 +304,16 @@ MongoClient.connect(mongoURL, {useUnifiedTopology: true}, function (err, db) {
                     console.log(error2)
                 } else {
                     // res.status(200).send(true)
-                    db.collection("reference").insertOne(reference, (error, result) => {
-                        if (err) {
-                            console.log(err);
-                        }
-                        return res.status(200).send(result);
-                    });
+                    if (reference) {
+                        db.collection("reference").insertOne(reference, (error, result) => {
+                            if (err) {
+                                console.log(err);
+                            }
+                            return res.status(200).send(result);
+                        });
+                    } else {
+                        return res.status(200).send(result2);
+                    }
                 }
             })
         });
@@ -269,8 +337,8 @@ MongoClient.connect(mongoURL, {useUnifiedTopology: true}, function (err, db) {
 
     router.route('/indicator/:indicatorId/delete').delete((req, res) => {
         const indicatorId = req.params.indicatorId;
-        db.collection("activity").updateMany({"activityIds._id": indicatorId}, {
-            $pull: {activityIds: {indicatorId}}
+        db.collection("activity").updateMany({"indicatorIds": mongo.ObjectId(indicatorId)}, {
+            $pull: {indicatorIds: mongo.ObjectId(indicatorId)}
         }, (error, result) => {
             if (error) {
                 console.log(error);
@@ -321,6 +389,8 @@ MongoClient.connect(mongoURL, {useUnifiedTopology: true}, function (err, db) {
                 "referenceNumber": reference.referenceNumber,
                 "referenceText": reference.referenceText,
                 "link": reference.link,
+                "status": reference.status,
+                "development": reference.development
             },
             (error, result) => {
                 if (err) {
@@ -330,12 +400,14 @@ MongoClient.connect(mongoURL, {useUnifiedTopology: true}, function (err, db) {
             });
     });
 
-    router.route('/reference/:referenceId/delete').delete((req, res) => {
+    router.route('/reference/:referenceId/:referenceNumber/delete').delete((req, res) => {
         db.collection("reference").deleteOne({_id: mongo.ObjectId(req.params.referenceId)}, (error, result) => {
             if (err) {
                 console.log(err);
             }
-            return res.status(200).send(result);
+            db.collection("indicator").updateMany({referenceNumber: req.params.referenceNumber}, {$set:{referenceNumber: "[0]"}}, (error, result2) => {
+                return res.status(200).send(result2);
+            });
         });
     });
 
@@ -354,7 +426,7 @@ MongoClient.connect(mongoURL, {useUnifiedTopology: true}, function (err, db) {
 
     router.route('/display/review/:id/edit').get((req, res) => {
 
-        db.collection("review").findOne({'_id': mongo.ObjectId(req.params.id)},(err, data) => {
+        db.collection("review").findOne({'_id': mongo.ObjectId(req.params.id)}, (err, data) => {
             if (err)
                 console.log(err);
             else

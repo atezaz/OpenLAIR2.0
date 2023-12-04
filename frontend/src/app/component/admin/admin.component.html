@@ -1,36 +1,49 @@
 <div class="container">
   <form [formGroup]="loginForm" novalidate>
     <div id="title">
-      Login Form
+        {{buttonText()}} Form
     </div>
     <div id="username">
       <label>Username</label>
+        <div>
       <input type="text" formControlName="username" required>
+        <div
+            *ngIf="loginForm.controls['username'].invalid && (loginForm.controls['username'].dirty || loginForm.controls['username'].touched)"
+            class="alert">
+            <div *ngIf="loginForm.controls['username'].errors.required">
+                User Name is required.
+            </div>
+        </div>
+        </div>
     </div>
 
-    <div
-      *ngIf="loginForm.controls['username'].invalid && (loginForm.controls['username'].dirty || loginForm.controls['username'].touched)"
-      class="alert">
-      <div *ngIf="loginForm.controls['username'].errors.required">
-        User Name is required.
-      </div>
-    </div>
+
     <div id="password">
       <label class="learningActivities">Password</label>
+        <div>
       <input type="password" formControlName="password" required>
-    </div>
-    <div
-      *ngIf="loginForm.controls['password'].invalid && (loginForm.controls['password'].dirty || loginForm.controls['password'].touched)"
-      class="alert">
-      <div *ngIf="loginForm.controls['password'].errors.required">
-        Password is required.
-      </div>
+        <div
+            *ngIf="loginForm.controls['password'].invalid && (loginForm.controls['password'].dirty || loginForm.controls['password'].touched)"
+            class="alert">
+            <div *ngIf="loginForm.controls['password'].errors.required">
+                Password is required.
+            </div>
+        </div>
+        </div>
     </div>
     <div id="submit">
 
       <button class="submitbtn" mat-raised-button color="primary" type="submit" (click)="submit()"
-        [disabled]="loginForm.pristine || loginForm.invalid">Login</button>
+        [disabled]="loginForm.pristine || loginForm.invalid">{{buttonText()}}</button>
     </div>
+      <div *ngIf="!register" id="register">
+          Not yet registered? Sign up
+          <a (click)="onRegister()">here</a>.
+      </div>
+      <div *ngIf="register" id="login">
+          Already registered?
+          <a (click)="onRegister()">Back to Login</a>.
+      </div>
 
 
 

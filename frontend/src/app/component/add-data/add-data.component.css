@@ -1,107 +1,115 @@
 input[type="checkbox"] {
-  height: 20px;
-  width: 20px;
-  margin: 0 0.5em 0 0;
+    height: 20px;
+    width: 20px;
+    margin: 0 0.5em 0 0;
 }
 
 .form-element {
-  display: flex;
-  padding-bottom: 1em;
-  flex-direction: column;
-  max-width: calc(590px - 1em);
+    display: flex;
+    padding-bottom: 1em;
+    flex-direction: column;
+    max-width: calc(590px - 1em);
 }
 
 .form-element-15 {
-  width: 15%;
+    width: 15%;
 }
 
 .form-element-25 {
-  width: 25%;
+    width: 25%;
 }
 
 .form-element-50 {
-  width: 50%;
+    width: 50%;
 }
 
 .form-element-75 {
-  width: 75%;
+    width: 75%;
 }
 
 .form-element-85 {
-  width: 85%;
+    width: 85%;
 }
 
 .form-element-100 {
-  width: 100%
+    width: 100%
 }
 
 .content-wrapper {
-  padding: 1.5em;
-  display: flex;
-  justify-content: space-between;
+    padding: 1.5em;
+    display: flex;
+    justify-content: space-between;
 }
 
 .form-wrapper {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
 
-  & ng-select {
-    width: calc(100% - 1em);
-    margin-right: 1em;
-    font-size: 16px;
-  }
+    & ng-select {
+        width: calc(100% - 1em);
+        margin-right: 1em;
+        font-size: 16px;
+    }
 
-  & label {
-    font-weight: bold;
-    font-size: 16px;
-    width: 200px;
-    padding-bottom: 0.5em;
-  }
+    & label {
+        font-weight: bold;
+        font-size: 16px;
+        width: 200px;
+        padding-bottom: 0.5em;
+    }
 
-  & input:not([type="checkbox"]) {
-    font-size: 16px;
-    width: calc(100% - 1.5em);
-    height: 30px;
-  }
+    & input:not([type="checkbox"]) {
+        font-size: 16px;
+        width: calc(100% - 1.5em);
+        height: 30px;
+    }
 
-  & textarea {
-    font-size: 16px;
-    width: calc(100% - 1.4em);
-  }
+    & textarea {
+        font-size: 16px;
+        width: calc(100% - 1.4em);
+    }
 }
 
-.select-input{
-  width: calc(100% - 8px);
-  height: 30px;
+.select-input {
+    width: calc(100% - 8px);
+    height: 30px;
 }
 
 .title {
-  text-align: center;
-  font-weight: normal;
-  margin: 1em;
-  padding: 24px;
-  background-color: #3F51B5;
-  color: white;
+    text-align: center;
+    font-weight: normal;
+    margin: 1em;
+    padding: 24px;
+    background-color: #3F51B5;
+    color: white;
 }
 
 .save-button {
-  margin: 0.5em 0 0 0.15em
+    margin: 0.5em 0 0 0.15em
 }
 
 fieldset {
-  width: calc(50% - 3em);
-  border-radius: 4px;
-  &:not(.last) {
-    margin-right: 1em;
-  }
+    width: calc(50% - 3em);
+    border-radius: 4px;
+
+    &:not(.last) {
+        margin-right: 1em;
+    }
 }
 
 .form-section {
-  display: flex;
-  flex-wrap: wrap;
-  &.last {
-    justify-content: space-between;
-    flex-direction: column;
-  }
+    display: flex;
+    flex-wrap: wrap;
+
+    &.last {
+        justify-content: space-between;
+        flex-direction: column;
+    }
+}
+
+.alert {
+    color: red;
+    font-size: small;
+    margin: 0;
 }

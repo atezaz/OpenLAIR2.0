@@ -351,6 +351,8 @@ export class DisplayComponent implements OnInit {
         this.dataService.getReferenceByReferenceNumber(indicator.referenceNumber).subscribe(reference => {
             if (reference) {
                 this.dialog.open(this.verdictDialog, {data: reference});
+            } else {
+                window.alert('Reference has been deleted.')
             }
         })
     }
@@ -374,7 +376,6 @@ export class DisplayComponent implements OnInit {
         this.dataService.getdata().subscribe(treeDataNew => {
             const oldTreeStructure = treeDataNew.map(event => {
                 return {
-                    _id: event._id,
                     LearningEvents: event.name,
                     LearningActivities: event.activities.map(activity => {
                         return {
@@ -396,6 +397,35 @@ export class DisplayComponent implements OnInit {
                     window.alert("Could not generate TreeStructure. Further information can be found in the logs");
                 }
             });
+
+            this.exportToJSON(oldTreeStructure);
         })
+    }
+
+    private exportToJSON(oldTreeStructure) {
+        // Convert the text to BLOB.
+        let textToBLOB = new Blob(
+            [
+                JSON.stringify(oldTreeStructure),
+            ],
+            {type: "application/json"}
+        );
+
+        let sFileName = "treeStructure.json"; // The file to save the data.
+
+        let newLink = document.createElement("a");
+        newLink.download = sFileName;
+        if ((window as any).webkitURL != null) {
+            newLink.href = (window as any).webkitURL.createObjectURL(textToBLOB);
+        } else {
+            newLink.href = window.URL.createObjectURL(textToBLOB);
+            newLink.style.display = "none";
+            // document.body.appendChild(newLink);
+        }
+        newLink.click();
+    }
+
+    editReference(id: string) {
+        this.router.navigate([`reference/${id}/edit`]);
     }
 }

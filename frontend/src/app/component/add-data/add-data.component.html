@@ -1,110 +1,135 @@
 <!--Data Entry form -->
 
-<div style="margin: auto;" *ngIf="referenceOptions && learningEventOptions
+<div style="margin: auto;" *ngIf="referenceOptions
   && learningActivitiesOptions && (indicatorOptions$ | async)">
-  <form [formGroup]="indicatorForm">
 
     <div class="title">
-      Add NEW Indicators and their Metrics
+        Add NEW Indicators and their Metrics
     </div>
 
     <div class="content-wrapper">
-      <div class="form-wrapper">
-        <fieldset class="form-section">
-          <legend>Indicator</legend>
-          <div class="form-element form-element-50">
-            <label>Learning Events</label>
-            <ng-select formControlName="learningEvent" placeholder="Learning Events"
-                       (change)="learningEventSelected($event)"
-                       [compareWith]="compareMethod">
-              <ng-option *ngFor="let learningEvent of learningEventOptions" [value]="learningEvent">
-                {{learningEvent.name}}
-              </ng-option>
-            </ng-select>
-          </div>
-          <div class="form-element form-element-50">
-            <label>Learning Activities</label>
-            <ng-select formControlName="learningActivity" placeholder="Learning Activities"
-                       (change)="learningActivitySelected($event)"
-                       [compareWith]="compareMethod">
-              <ng-option *ngFor="let learningActivity of learningActivitiesOptions" [value]="learningActivity">
-                {{learningActivity.name}}
-              </ng-option>
-            </ng-select>
-          </div>
-          <div class="form-element form-element-100" *ngIf="similarActivityMessage">
-            <div style="color: rgb(4, 117, 14);" *ngIf="similarActivityMessage"
-                 [innerHTML]="similarActivityMessage"></div>
-          </div>
-          <div class="form-element form-element-100">
-            <label>Name</label>
-            <ng-container *ngIf="!useExistingIndicator">
-              <input type="text" formControlName="indicatorName" placeholder="Indicator Name" required/>
-            </ng-container>
-            <ng-container *ngIf="useExistingIndicator">
-              <ng-select formControlName="indicatorName" placeholder="Indicator Name"
-                         (change)="indicatorSelected($event)">
-                <ng-option *ngFor="let indicator of (indicatorOptions$ | async)" [value]="indicator">
-                  {{indicator.Title}}
-                </ng-option>
-              </ng-select>
-            </ng-container>
-          </div>
-          <div class="form-element form-element-100">
-            <label>Metrics</label>
-            <textarea class="text" cols="30" rows="10" type="text" formControlName="metrics"
-                      placeholder="Metrics must be comma seperated" required></textarea>
-          </div>
-          <div class="form-element-100 form-section">
-          <input type="checkbox" (change)="checkboxIndicatorClicked()" [disabled]="shouldDisable()"/>
-          <label>Use existing Indicator</label>
-          </div>
-        </fieldset>
-        <fieldset class="form-section last">
-          <legend>Reference</legend>
-          <div class="form-section">
-            <div class="form-element form-element-100">
-              <label>Text</label>
-              <ng-container *ngIf="!useExistingReference || useExistingIndicator">
-                <input type="text" formControlName="referenceText" placeholder="Reference Text" required/>
-              </ng-container>
-              <ng-container *ngIf="useExistingReference && !useExistingIndicator">
-              <ng-select placeholder="Reference" [readonly]="this.useExistingIndicator" (change)="onReferenceChange($event)">
-                <ng-option *ngFor="let reference of referenceOptions" [value]="reference">
-                  {{reference.referenceNumber}} {{reference.referenceText}}
-                </ng-option>
-              </ng-select>
-              </ng-container>
-            </div>
-            <div class="form-element form-element-85">
-              <label>Link</label>
-              <input type="text" formControlName="referenceLink" placeholder="Reference Link"/>
-            </div>
-            <div class="form-element form-element-15">
-              <label>Number</label>
-              <input type="text" formControlName="referenceNumber"/>
-            </div>
-          </div>
-          <div class="form-section">
-            <input type="checkbox" (change)="checkboxReferenceClicked()" [disabled]="this.useExistingIndicator || this.shouldDisable()"/>
-            <label>Use existing Reference</label>
-          </div>
-        </fieldset>
+        <div class="form-wrapper">
+            <fieldset>
+                <legend>Indicator</legend>
+                <form [formGroup]="indicatorForm" class="form-section">
+                    <div class="form-element form-element-100">
+                        <label>Learning Activities *</label>
+                        <ng-select formControlName="learningActivity" placeholder="Learning Activities"
+                                   (change)="learningActivitySelected($event)"
+                                   [compareWith]="compareMethod">
+                            <ng-option *ngFor="let learningActivity of learningActivitiesOptions"
+                                       [value]="learningActivity">
+                                {{learningActivity.name}}
+                            </ng-option>
+                        </ng-select>
+                        <div
+                            *ngIf="indicatorForm.controls['learningActivity'].invalid && (indicatorForm.controls['learningActivity'].dirty || indicatorForm.controls['learningActivity'].touched)"
+                            class="alert">
+                                Learning Activity is required.
+                        </div>
+                    </div>
+                    <div class="form-element form-element-100" *ngIf="similarActivityMessage">
+                        <div style="color: rgb(4, 117, 14);" [innerHTML]="similarActivityMessage"></div>
+                    </div>
+                    <div class="form-element form-element-85">
+                        <label>Name *</label>
+                        <input type="text" formControlName="indicatorName" placeholder="Indicator Name" required/>
+                        <div
+                            *ngIf="indicatorForm.controls['indicatorName'].invalid && (indicatorForm.controls['indicatorName'].dirty || indicatorForm.controls['indicatorName'].touched)"
+                            class="alert">
+                            Name is required.
+                        </div>
+                    </div>
+                    <div class="form-element form-element-15">
+                        <label>Number *</label>
+                        <input type="text" formControlName="referenceNumber"/>
+                    </div>
+                    <div class="form-element form-element-100">
+                        <label>Metrics *</label>
+                        <textarea class="text" cols="30" rows="10" type="text" formControlName="metrics"
+                                  placeholder="Metrics must be comma seperated" required></textarea>
+                        <div
+                            *ngIf="indicatorForm.controls['metrics'].invalid && (indicatorForm.controls['metrics'].dirty || indicatorForm.controls['metrics'].touched)"
+                            class="alert">
+                            Metrics are required.
+                        </div>
+                    </div>
+                </form>
+            </fieldset>
+            <fieldset>
+                <legend>Reference</legend>
+                <form [formGroup]="referenceForm" class="form-section last" style="height: 100%">
+                    <div class="form-section">
+                        <div class="form-element form-element-100">
+                            <label>Text *</label>
+                            <ng-container *ngIf="!useExistingReference">
+                                <input type="text" formControlName="referenceText" placeholder="Reference Text"
+                                       required/>
+                            </ng-container>
+                            <ng-container *ngIf="useExistingReference">
+                                <ng-select placeholder="Reference" [readonly]="this.readonly('indicator')"
+                                           (change)="onReferenceChange($event)">
+                                    <ng-option *ngFor="let reference of referenceOptions" [value]="reference">
+                                        {{reference.referenceNumber}} {{reference.referenceText}}
+                                    </ng-option>
+                                </ng-select>
+                            </ng-container>
+                            <div
+                                *ngIf="referenceForm.controls['referenceText'].invalid && (referenceForm.controls['referenceText'].dirty || referenceForm.controls['referenceText'].touched)"
+                                class="alert">
+                                Text is required.
+                            </div>
+                        </div>
+                        <div class="form-element form-element-85">
+                            <label>Link *</label>
+                            <input type="text" formControlName="referenceLink" placeholder="Reference Link"/>
+                            <div
+                                *ngIf="referenceForm.controls['referenceLink'].invalid && (referenceForm.controls['referenceLink'].dirty || referenceForm.controls['referenceLink'].touched)"
+                                class="alert">
+                                Link is required.
+                            </div>
+                        </div>
+                        <div class="form-element form-element-15">
+                            <label>Number *</label>
+                            <input type="text" formControlName="referenceNumber"/>
+                        </div>
+                        <div class="form-element form-element-50">
+                            <label>Verified</label>
+                            <ng-select formControlName="verified" placeholder="Verification">
+                                <ng-option *ngFor="let verifiedOption of verifiedOptions" [value]="verifiedOption">
+                                    {{verifiedOption}}
+                                </ng-option>
+                            </ng-select>
+                        </div>
+                        <div class="form-element form-element-50">
+                            <label>Development</label>
+                            <ng-select formControlName="development" placeholder="Development">
+                                <ng-option *ngFor="let developmentOption of developmentOptions" [value]="developmentOption">
+                                    {{developmentOption}}
+                                </ng-option>
+                            </ng-select>
+                        </div>
+                    </div>
+                    <div class="form-section">
+                        <input type="checkbox" (change)="checkboxReferenceClicked()" [disabled]="target"/>
+                        <label>Use existing Reference</label>
+                    </div>
+                </form>
+            </fieldset>
 
-        <button type="submit" class="buttonLaTool save-button"
-                (click)='addData()'>Save
-        </button>
-      </div>
-      <div style="min-width: 260px">
-        <button
-          style="padding: 6px 8px 6px 8px; float: right; margin-right: 8px; background-image: linear-gradient(45deg, #8e1e22 10%, #edcfcf 51%, #8e1e22 100%) !important; box-shadow: 2px 4px 5px 0 #ead8d8;"
-          class="buttonLaTool" (click)='logout()'>Logout
-        </button>
-        <span style="float: right; margin-right: 16px; margin-top: 17px;" *ngIf="CUserName">
+            <button type="submit" class="buttonLaTool save-button"
+                    (click)='addData()'>Save
+            </button>
+        </div>
+        <div style="min-width: 260px">
+            <button
+                style="padding: 6px 8px 6px 8px; float: right; margin-right: 8px; background-image: linear-gradient(45deg, #8e1e22 10%, #edcfcf 51%, #8e1e22 100%) !important; box-shadow: 2px 4px 5px 0 #ead8d8;"
+                class="buttonLaTool" (click)='logout()'>Logout
+            </button>
+            <span style="float: right; margin-right: 16px; margin-top: 17px;" *ngIf="CUserName">
        Welcome, {{CUserName}}
       </span>
-      </div>
+        </div>
     </div>
-  </form>
 
 </div>

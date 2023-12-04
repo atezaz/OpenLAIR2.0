@@ -7,8 +7,8 @@ import { AuthGuardService } from './auth-guard.service';
 import { ReferanceComponent } from "./component/reference/referance.component";
 import { DashboardComponent } from "./component/dashboard/dashboard.component";
 import {ReviewEditComponent} from "./component/review-edit/review-edit.component";
-import {AddReferenceComponent} from "./component/add-reference/add-reference.component";
 import {SuperAdminService} from "./superAdmin/super-admin.service";
+import {DataResolver} from "./component/add-data/data.resolver";
 
 const routes: Routes = [
   //{ path: '/display/data/s', redirectTo: '/', pathMatch: 'full' },
@@ -19,8 +19,9 @@ const routes: Routes = [
   //{ path: 'admin', component: AdminComponent },
   // { path: 'add/data', component: AddDataComponent, canActivate: [AuthGuardService] },
 
-  { path: "add", component: AddDataComponent, canActivate: [AuthGuardService], data: {target: 'indicator'}},
-  { path: "indicator/:id/edit", component: AddDataComponent, canActivate: [SuperAdminService]},
+  { path: "add", component: AddDataComponent, canActivate: [AuthGuardService], resolve: {data: DataResolver}},
+  { path: "indicator/:id/edit", component: AddDataComponent, canActivate: [SuperAdminService], data: {target: 'indicator'}, resolve: {data: DataResolver}},
+  { path: "reference/:id/edit", component: AddDataComponent, canActivate: [SuperAdminService], data: {target: 'reference'}, resolve: {data: DataResolver}},
   { path: "reference", component: ReferanceComponent },
   { path: "login", component: AdminComponent },
   { path: "dashboard", component: DashboardComponent },

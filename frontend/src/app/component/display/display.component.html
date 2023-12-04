@@ -230,5 +230,8 @@
             </div>
         </div>
     </mat-dialog-content>
+    <button *ngIf="loggedIn.superAdmin" mat-button mat-dialog-close (click)="editReference(reference._id)" class="buttonLaTool"
+            style="margin-right: 10px">Edit
+    </button>
     <button mat-button mat-dialog-close>Close</button>
 </ng-template>
