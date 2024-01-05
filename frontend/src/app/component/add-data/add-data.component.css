@@ -152,3 +152,44 @@ fieldset {
         }
     }
 }
+
+td {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+    min-width: 3rem;
+    max-width: 15rem;
+}
+
+mat-chip {
+    height: auto;
+}
+
+.data-display {
+    width: 100%;
+    box-shadow: none;
+    border: solid 1px;
+}
+
+.data-display-wrapper {
+    width: calc(50% - 1.5rem);
+    margin: 0.5rem;
+}
+
+.table-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.add-mat-chip {
+    background-image: linear-gradient(45deg, green 10%, #b4cae6 51%, #3f51b5 100%);
+    background-size: 300% auto;
+    /* background-color: green; */
+    color: white;
+}
+
+.indicator-mat-chip {
+    background-image: linear-gradient(45deg, #3f51b5 10%, #b4cae6 51%, #3f51b5 100%);
+    background-size: 300% auto;
+    /* background-color: blue; */
+    color: white;
+}

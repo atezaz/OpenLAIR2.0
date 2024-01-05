@@ -4,6 +4,7 @@ import { RouterModule, Routes } from "@angular/router";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 import { AngularFontAwesomeModule } from "angular-font-awesome";
+import {MatChipsModule, MatListModule} from "@angular/material"
 
 import {
   MatInputModule,
@@ -15,6 +16,7 @@ import {
   MatSelectModule,
   MatCheckboxModule,
   MatIconModule,
+  MatTableModule,
 } from "@angular/material";
 
 import { NgMultiSelectDropDownModule } from "ng-multiselect-dropdown";
@@ -83,6 +85,7 @@ import {NgSelectModule} from "@ng-select/ng-select";
 import {HeaderService} from "./component/header/header.service";
 import {TourService} from "../assets/js/tour.service";
 import {SuperAdminService} from "./superAdmin/super-admin.service";
+import { AddDataDialogComponent } from "./component/add-data/add-data-dialog.component";
 
 // const routes: Routes = [
 //   { path: "add", component: AddDataComponent, canActivate: [AuthGuardService]},
@@ -145,6 +148,7 @@ import {SuperAdminService} from "./superAdmin/super-admin.service";
     ReviewDisplayComponent,
     ReviewEditComponent,
     TableComponent,
+    AddDataDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -168,7 +172,14 @@ import {SuperAdminService} from "./superAdmin/super-admin.service";
     AngularFontAwesomeModule,
     HighchartsChartModule,
     MatIconModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatChipsModule,
+    MatTableModule,
+    MatListModule
+  ],
+
+  entryComponents: [
+    AddDataDialogComponent,
   ],
 
   providers: [DataService, AuthGuardService, SuperAdminService, ChartHelperService, HeaderService, TourService],

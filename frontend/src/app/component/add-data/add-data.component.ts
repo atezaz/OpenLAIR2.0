@@ -1,4 +1,5 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
+import { HttpClient, HttpHeaders} from '@angular/common/http';
 import {DataService} from '../../data.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
@@ -10,6 +11,9 @@ import {Observable} from "rxjs";
 import {shareReplay} from "rxjs/operators";
 import {PathObject} from "../../_models/pathObject.model";
 import {MatDialog} from "@angular/material/dialog";
+import { MatDialog } from '@angular/material';
+
+import { AddDataDialogComponent } from './add-data-dialog.component';
 
 @Component({
     selector: 'app-add-data',
@@ -21,6 +25,13 @@ import {MatDialog} from "@angular/material/dialog";
 export class AddDataComponent implements OnInit {
     @ViewChild("activityDialog", {static: true}) activityDialog: any;
     @ViewChild("normalUserSaveDialog", {static: true}) normalUserSaveDialog: any;
+
+    public fileName: string = ""
+    public fileData: any
+    public indicatorColumns: string[] = ['Count', 'Name', 'Action'];
+    public metricColumns: string[] = ['Count', 'Name', 'Action'];
+    public activityColumns: string[] = ['Count', 'Name', 'Indicators'];
+    public eventColumns: string[] = ['Count', 'Name', 'Activities'];
 
     data: PathObject;
     private target: string;
@@ -71,6 +82,7 @@ export class AddDataComponent implements OnInit {
     * */
     constructor(private dataService: DataService, private router: Router, private route: ActivatedRoute, private fb: FormBuilder,
                 headerService: HeaderService, public dialog: MatDialog) {
+                headerService: HeaderService, private http: HttpClient, private dialog: MatDialog) {
         headerService.setHeader('add-indicator')
 
         if (localStorage.getItem('currentUser')) {
@@ -418,5 +430,57 @@ export class AddDataComponent implements OnInit {
 
     showActivityDialoge() {
         this.dialog.open(this.activityDialog);
+    }
+
+    openIndicatorDialog(event: MouseEvent): void {
+        console.log(this.fileData)
+        const target: HTMLElement = event.target as HTMLElement
+        const delimiter = target.id.indexOf(':')
+        const group: string = target.id.slice(0, delimiter)
+        const name: string = target.id.slice(delimiter + 1)
+        this.dialog.open(AddDataDialogComponent, {
+            data: { name: name, data: this.fileData[group][name] }
+        })
+    }
+
+    onFileSelected(event: MouseEvent) {
+        const target: EventTarget = event.target
+        if(target instanceof HTMLInputElement) {
+            let file: File = target.files[0]
+            if (file) {
+                this.fileName = file.name
+                this.fileData = null
+
+                const formData = new FormData();
+                formData.append("file", file);
+
+                const headers = new HttpHeaders()
+                headers.append('Content-Type', 'multipart/form-data');
+                headers.append('Accept', 'application/json');
+
+                let options = { headers: headers };
+                this.http.post("http://localhost:8502", formData, options = options)
+                .subscribe((res) => {
+                    console.log("Got something back")
+                    this.fileData = (Object.values(res)[0])[0]
+                    console.log(this.fileData.activities)
+                    this.fileData.indicators = Object.entries(this.fileData.indicators)
+                    .map(val => { return { name: val[0], count: val[1] as number} })
+                    .sort((a, b) => b.count - a.count)
+                    this.fileData.metrics = Object.entries(this.fileData.metrics)
+                    .map(val => { return { name: val[0], count: val[1] as number} })
+                    .sort((a, b) => b.count - a.count)
+                    this.fileData.activities = Object.entries(this.fileData.activities)
+                    .map(val => { return { name: val[0], count: val[1][1] as number, list: val[1][0]} })
+                    .sort((a, b) => b.count - a.count)
+                    this.fileData.events = Object.entries(this.fileData.events)
+                    .map(val => { return { name: val[0], count: val[1][1] as number, list: val[1][0]} })
+                    .sort((a, b) => b.count - a.count)
+                    console.log(this.fileData.activities)
+                    
+                })
+            }
+
+        }
     }
 }
