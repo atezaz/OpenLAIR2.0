@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {DataService} from '../../data.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
@@ -9,6 +9,7 @@ import {HeaderService} from "../header/header.service";
 import {Observable} from "rxjs";
 import {shareReplay} from "rxjs/operators";
 import {PathObject} from "../../_models/pathObject.model";
+import {MatDialog} from "@angular/material/dialog";
 
 @Component({
     selector: 'app-add-data',
@@ -18,13 +19,16 @@ import {PathObject} from "../../_models/pathObject.model";
 
 
 export class AddDataComponent implements OnInit {
+    @ViewChild("activityDialog", {static: true}) activityDialog: any;
 
     data: PathObject;
     private target: string;
 
     //NEW Stuff
 
-    similarActivityMessage: any;
+    showActivityMessages: boolean = false;
+    activityMessages: string[] = [];
+    affectedEvents: Set<string> = new Set<string>();
     CUserName: any;
     indicatorForm: FormGroup;
     referenceForm: FormGroup;
@@ -42,15 +46,34 @@ export class AddDataComponent implements OnInit {
 
     verifiedOptions: string[] = ['verified', 'not verified', 'not mentioned'];
     developmentOptions: string[] = ['developed', 'proposed', 'not mentioned'];
+    referenceZero = false;
 
+    dropdownSettings = {
+        singleSelection: false,
+        idField: "_id",
+        textField: "name",
+        selectAllText: "Select All",
+        unSelectAllText: "Deselect All",
+        itemsShowLimit: 3,
+        allowSearchFilter: true,
+    };
+
+    selectedLearningActivities: LearningActivity[] = [];
+    originallySelectedLearningActivities: LearningActivity[];
+
+    /*
+    * initializes the add-data page depending on if it is a completely new object,
+    * an indicator is being edited, or a reference is being edited.
+    * */
     constructor(private dataService: DataService, private router: Router, private route: ActivatedRoute, private fb: FormBuilder,
-                headerService: HeaderService) {
+                headerService: HeaderService, public dialog: MatDialog) {
         headerService.setHeader('add-indicator')
 
         if (localStorage.getItem('currentUser')) {
             this.CUserName = JSON.parse(localStorage.getItem('currentUser')).username;
         }
 
+        //target determines which mode we're currently in(new indicator/edit indicator/edit reference)
         this.target = this.route.snapshot.data.target;
         this.data = this.route.snapshot.data.data;
         if (this.data.reference) {
@@ -60,10 +83,12 @@ export class AddDataComponent implements OnInit {
             this.indicatorId = this.data.indicator._id;
             this.existingReferenceNumber = this.data.indicator.referenceNumber;
         }
+        //boolean set to true if resource on indicator has been deleted.
+        this.referenceZero = this.existingReferenceNumber === '[0]';
 
         //// form entries///////
         this.indicatorForm = this.fb.group({
-            learningActivity: [{value: null, disabled: this.target}, Validators.required],
+            learningActivities: [{value: [], disabled: this.target}, Validators.required],
             indicatorName: [{value: null, disabled: this.readonly('reference')}, Validators.required],
             metrics: [{value: null, disabled: this.readonly('reference')}, Validators.required],
             referenceNumber: [{value: null, disabled: true}, Validators.required]
@@ -77,9 +102,20 @@ export class AddDataComponent implements OnInit {
             development: [{value: null, disabled: this.readonly('indicator')}],
         });
 
+        //subscription to update the referenceNumber in the indicator-form if changed in the reference-form
         this.referenceForm.controls['referenceNumber'].valueChanges.subscribe(value => this.indicatorForm.controls['referenceNumber'].setValue(value));
+
+        //gathering all activities of indicator, in case of indicator edit mode
+        if (this.target === 'indicator') {
+            this.dataService.getActivitiesByIndicatorId(this.indicatorId).subscribe(learningActivities => {
+                this.originallySelectedLearningActivities = learningActivities;
+                this.selectedLearningActivities = learningActivities
+                this.learningActivityiesSelected();
+            })
+        }
     }
 
+    // on initialisation the data from the Database is fetched and after a timeout used.
     ngOnInit() {
         this.fetchData();
         setTimeout(() => {
@@ -87,6 +123,7 @@ export class AddDataComponent implements OnInit {
         }, 200)
     }
 
+    // fetches Activities, Indicators and References from Database
     fetchData() {
         this.dataService.getActivities().subscribe(activities => {
             this.learningActivitiesOptions = activities;
@@ -107,6 +144,8 @@ export class AddDataComponent implements OnInit {
         })
     }
 
+    // initializes Form values in case either an indicator or a reference is edited.
+    // If no corresponding data is found, the form is initialized accordingly
     private initializeData() {
         if (this.target) {
             if (this.data.indicator) {
@@ -117,7 +156,6 @@ export class AddDataComponent implements OnInit {
                 this.referenceForm.patchValue({
                     referenceNumber: this.data.indicator.referenceNumber,
                 })
-                this.indicatorForm.get('learningActivity').setValue(this.data.activity);
             } else {
                 this.indicatorForm.patchValue({
                     indicatorName: 'No indicator found',
@@ -141,6 +179,9 @@ export class AddDataComponent implements OnInit {
         }
     }
 
+    // method called on save button clicked.
+    // depending on which Mode(Create/Edit Indicator/Edit Reference) is currently active, the matching Model is built
+    // and matching Service call is executed
     addData() {
         const indicatorFormValue = this.indicatorForm.getRawValue();
         const referenceFormValue = this.referenceForm.getRawValue();
@@ -170,7 +211,23 @@ export class AddDataComponent implements OnInit {
                 if (!this.indicatorForm.valid) {
                     return
                 }
-                this.dataService.editIndicator(this.indicatorId, indicator).subscribe(() => {
+
+                const removedActivities = this.originallySelectedLearningActivities
+                    .map(item => item._id)
+                    .filter(id => this.selectedLearningActivities
+                        .map(item => item._id).indexOf(id) < 0);
+                const addedActivities = this.selectedLearningActivities
+                    .map(item => item._id)
+                    .filter(id => this.originallySelectedLearningActivities
+                        .map(item => item._id).indexOf(id) < 0);
+
+                const editObject: {activitiesDeleted: LearningActivity[], activitiesAdded: LearningActivity[], indicator: indicator} = {
+                    activitiesDeleted: removedActivities,
+                    activitiesAdded: addedActivities,
+                    indicator
+                }
+
+                this.dataService.editIndicator(this.indicatorId, editObject).subscribe(() => {
                     this.router.navigate(['/']);
                 })
                 break;
@@ -188,8 +245,8 @@ export class AddDataComponent implements OnInit {
                     return
                 }
 
-                const dataObject: { activity: LearningActivity, indicator: indicator, reference: Reference } = {
-                    activity: indicatorFormValue.learningActivity,
+                const dataObject: {activities: LearningActivity[], indicator: indicator, reference: Reference } = {
+                    activities: this.selectedLearningActivities,
                     indicator,
                     reference: this.useExistingReference ? null : reference
                 }
@@ -199,31 +256,58 @@ export class AddDataComponent implements OnInit {
         }
     }
 
-    learningActivitySelected(learningActivity: LearningActivity) {
-        if (learningActivity) {
-            this.dataService.getEventsByActivityId(learningActivity._id).subscribe(events => {
-                const eventNames = events.map(event => event.name);
-                if (eventNames.length === 1) {
-                    this.similarActivityMessage = `The selected learning activity "${learningActivity.name}"
-                    lies under the learning event "${eventNames[0]}".`
-                }
-                if (eventNames.length > 1) {
-                    const namesWithComma = eventNames.join(', ')
-                    this.similarActivityMessage = `The selected learning activity "${learningActivity.name}" lies under
-                     the learning events "${namesWithComma}". Therefore, the Indicator and Metrics you want to add will
-                      be added automatically under all of the mentioned learning events.`
-                }
-            })
+    learningActivityiesSelected() {
+        setTimeout(() => {
+            this.indicatorForm.patchValue({learningActivities: this.selectedLearningActivities});
+            this.setActivityMessages(this.selectedLearningActivities);
+        }, 10)
+    }
+
+    // method to compute the strings which are needed to show the corresponding Events depending on the chosen Activities
+    setActivityMessages(activities: LearningActivity[]) {
+        this.affectedEvents.clear();
+        if (activities.length === 0) {
+            this.showActivityMessages = false;
         } else {
-            this.similarActivityMessage = null;
+            const messages: string[] = [];
+            activities.forEach(activity => {
+                this.dataService.getEventsByActivityId(activity._id).subscribe(events => {
+                    const eventNames = events.map(event => event.name);
+                    eventNames.forEach(name => this.affectedEvents.add(name));
+                    let message: string;
+                    if (eventNames.length === 1) {
+                        message = `The selected learning activity "${activity.name}"
+                    lies under the learning event "${eventNames[0]}".`
+                    }
+                    if (eventNames.length > 1) {
+                        const namesWithComma = eventNames.join(', ')
+                        message = `The selected learning activity "${activity.name}" lies under
+                     the learning events "${namesWithComma}".`
+                    }
+                    messages.push(message);
+                })
+            })
+
+            setTimeout(() => {
+                this.activityMessages = messages;
+                this.showActivityMessages = true;
+            }, 100);
         }
     }
 
+    showEvents() {
+        return [...this.affectedEvents.values()].join(", ");
+    }
+
+    // logs out user => clear currentUser data from LocalStorage
     logout() {
         localStorage.removeItem('currentUser');
         this.router.navigate(['/']);
     }
 
+    // method to switch between using an existing Reference and creating a new one on save.
+    // useExitsingReference switches the Reference Input to a Dropdown and disables the other Reference Form fields.
+    // Previously entered values are saved to reset them in case the checkbox is clicked again.
     checkboxReferenceClicked() {
         this.useExistingReference = !this.useExistingReference;
         if (!this.useExistingReference) {
@@ -252,10 +336,12 @@ export class AddDataComponent implements OnInit {
         }
     }
 
+    // method used to compare and differentiate Items in the Activity Dropdown
     compareMethod(item, selected) {
         return item._id === selected._id;
     }
 
+    // method for filling the referenceForm model when choosing an existing Reference from the Dropdown.
     onReferenceChange(reference: Reference) {
         if (reference) {
             this.referenceForm.patchValue(
@@ -278,13 +364,19 @@ export class AddDataComponent implements OnInit {
         }
     }
 
+    // method to temporarily save previously entered reference values
     private setPreviousValues() {
         this.previousReferenceName = this.referenceForm.value['referenceText'];
         this.previousReferenceLink = this.referenceForm.value['referenceLink'];
     }
 
+    // returns true if the omitted target is equal to the target of the current Mode.
     readonly(target: string) {
         if (!target) return false;
         return this.target === target;
+    }
+
+    showActivityDialoge() {
+        this.dialog.open(this.activityDialog);
     }
 }

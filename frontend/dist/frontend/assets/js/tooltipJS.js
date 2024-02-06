@@ -1,10 +1,8 @@
 $(document).ready(function () {
 
   $('#tooltipEvents').tooltipster({
-    //'theme': 'tooltipster-shadow',
     'interactive': true,
     'contentAsHTML': true,
-    //'autoClose': true,
     'trigger': 'click',
     functionInit: function (instance, helper) {
       var $origin = $(helper.origin);
@@ -73,7 +71,7 @@ $(document).ready(function () {
 
   });
 
-  $('#tooltipActivites').tooltipster({
+  $('#tooltipActivities').tooltipster({
     //'theme': 'tooltipster-shadow',
     'interactive': true,
     'contentAsHTML': true,
@@ -81,7 +79,7 @@ $(document).ready(function () {
     'trigger': 'click',
     functionInit: function (instance, helper) {
       var $origin = $(helper.origin);
-      var content = $origin.find('#contentActivites').detach();
+      var content = $origin.find('#contentActivities').detach();
       instance.content(content);
 
       var data = $origin.attr('data-tooltipster');

@@ -36,6 +36,7 @@ export class AdminComponent implements OnInit {
 
     }
 
+    // depending on submitting or signing in, calls the corresponding service method and logs-in/creates the user
     submit() {
         if (!this.register) {
             this.dataService.login(this.loginForm.value.username, this.loginForm.value.password)
@@ -63,11 +64,12 @@ export class AdminComponent implements OnInit {
         }
     }
 
-
+    // switches the local register variable
     onRegister() {
         this.register = !this.register;
     }
 
+    // computes which Text to show in the Button
     buttonText() {
         return this.register ? 'Sign up' : 'Login'
     }

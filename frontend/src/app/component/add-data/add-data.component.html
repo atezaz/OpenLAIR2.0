@@ -14,22 +14,24 @@
                 <form [formGroup]="indicatorForm" class="form-section">
                     <div class="form-element form-element-100">
                         <label>Learning Activities *</label>
-                        <ng-select formControlName="learningActivity" placeholder="Learning Activities"
-                                   (change)="learningActivitySelected($event)"
-                                   [compareWith]="compareMethod">
-                            <ng-option *ngFor="let learningActivity of learningActivitiesOptions"
-                                       [value]="learningActivity">
-                                {{learningActivity.name}}
-                            </ng-option>
-                        </ng-select>
+                        <ng-multiselect-dropdown [(ngModel)]="selectedLearningActivities"
+                                                 [ngModelOptions]="{standalone: true}"
+                                                 placeholder="Learning Activities"
+                                                 [settings]="dropdownSettings"
+                                                 [data]="learningActivitiesOptions"
+                                                 (onSelect)="learningActivityiesSelected()" (onDeSelect)="learningActivityiesSelected()"
+                                                 (onSelectAll)="learningActivityiesSelected()" (onDeSelectAll)="learningActivityiesSelected()"
+                        >
+                        </ng-multiselect-dropdown>
                         <div
-                            *ngIf="indicatorForm.controls['learningActivity'].invalid && (indicatorForm.controls['learningActivity'].dirty || indicatorForm.controls['learningActivity'].touched)"
+                            *ngIf="indicatorForm.controls['learningActivities'].invalid && (indicatorForm.controls['learningActivities'].dirty || indicatorForm.controls['learningActivities'].touched)"
                             class="alert">
                                 Learning Activity is required.
                         </div>
                     </div>
-                    <div class="form-element form-element-100" *ngIf="similarActivityMessage">
-                        <div style="color: rgb(4, 117, 14);" [innerHTML]="similarActivityMessage"></div>
+                    <div class="form-element form-element-100" *ngIf="showActivityMessages">
+                        <div style="color: rgb(4, 117, 14); cursor: pointer" (click)="showActivityDialoge()"
+                             [innerHTML]="'Indicators will be added to the corresponding Events, depending on the chosen Activities. For more informations click here'"></div>
                     </div>
                     <div class="form-element form-element-85">
                         <label>Name *</label>
@@ -67,7 +69,7 @@
                                        required/>
                             </ng-container>
                             <ng-container *ngIf="useExistingReference">
-                                <ng-select placeholder="Reference" [readonly]="this.readonly('indicator')"
+                                <ng-select placeholder="Reference" [readonly]="this.readonly('indicator') && !useExistingReference"
                                            (change)="onReferenceChange($event)">
                                     <ng-option *ngFor="let reference of referenceOptions" [value]="reference">
                                         {{reference.referenceNumber}} {{reference.referenceText}}
@@ -111,7 +113,7 @@
                         </div>
                     </div>
                     <div class="form-section">
-                        <input type="checkbox" (change)="checkboxReferenceClicked()" [disabled]="target"/>
+                        <input type="checkbox" (change)="checkboxReferenceClicked()" [disabled]="target && !referenceZero"/>
                         <label>Use existing Reference</label>
                     </div>
                 </form>
@@ -133,3 +135,17 @@
     </div>
 
 </div>
+
+<ng-template #activityDialog let-messages>
+    <h2 matDialogTitle>Events affected by Activity Choise</h2>
+    <mat-dialog-content>
+        <ul *ngFor="let message of activityMessages">
+            <li>{{ message }}</li>
+        </ul>
+        <div>Therefore, the Indicator and Metrics you want to add will
+        be added automatically under these events:
+        </div>
+        <div style="padding-bottom: 1em">{{showEvents()}}</div>
+    </mat-dialog-content>
+    <button mat-button mat-dialog-close>Close</button>
+</ng-template>

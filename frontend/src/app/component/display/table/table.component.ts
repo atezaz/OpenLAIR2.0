@@ -37,10 +37,7 @@ export class TableComponent implements OnInit {
     onVerdictEmitter: EventEmitter<any> = new EventEmitter<any>();
 
     @Output()
-    updateValues: EventEmitter<any> = new EventEmitter<any>();
-
-    @Output()
-    indicatorDeleted: EventEmitter<indicator> = new EventEmitter<indicator>();
+    onDeleteEmitter: EventEmitter<any> = new EventEmitter<any>();
 
     @Input()
     loggedIn: User;
@@ -51,27 +48,22 @@ export class TableComponent implements OnInit {
     ngOnInit() {
     }
 
+    // emits the indicator when the checkbox is clicked
     onCheckboxChange(indic: indicator) {
         this.checkboxEmitter.emit(indic)
     }
 
+    // navigates to edit of indicator
     editAsSuperAdmin(indic: indicator) {
         this.router.navigate([`indicator/${indic._id}/edit`])
     }
 
-    deleteAsSuperAdmin(indic: indicator) {
-        if (confirm("Do you really want to delete this Indicator?")) {
-            this.indicatorDeleted.emit(indic)
-            this.dataService.deleteIndicator(indic._id).subscribe(() => {
-                this.updateValues.emit();
-            });
-        }
-    }
-
+    // computes the original indicator name with referenceNumber
     getFullIndicatorName(indic: indicator): string {
         return `${indic.Title} ${indic.referenceNumber}`
     }
 
+    // navigates to the link corresponding to the reference of the chosen indicator
     navigateToReferenceLink(indic: indicator) {
         this.dataService.getReferenceByReferenceNumber(indic.referenceNumber).subscribe(reference => {
             window.open(reference.link);

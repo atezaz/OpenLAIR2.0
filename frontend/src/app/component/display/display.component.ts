@@ -2,12 +2,6 @@ import {
     Component,
     OnInit,
     ViewChild,
-    QueryList,
-    ViewChildren,
-    ElementRef,
-    TemplateRef,
-    Pipe,
-    PipeTransform,
 } from "@angular/core";
 import {DataService} from "../../data.service";
 import {Router} from "@angular/router";
@@ -22,7 +16,7 @@ import {ChartHelperService} from "src/app/chart-helper.service";
 import {review} from "../../_models/review.model";
 import {Observable} from "rxjs";
 import {LearningEvent} from "../../_models/learningEvent.model";
-import {filter, map, shareReplay, tap} from "rxjs/operators";
+import {map, tap} from "rxjs/operators";
 import {indicator} from "../../_models/indicator.model";
 import {HeaderService} from "../header/header.service";
 import {LearningActivity} from "../../_models/learningActivity.model";
@@ -37,19 +31,18 @@ export class DisplayComponent implements OnInit {
     @ViewChild("secondDialog", {static: true}) secondDialog: any;
     @ViewChild("reviewDialog", {static: true}) reviewDialog: any;
     @ViewChild("verdictDialog", {static: true}) verdictDialog: any;
+    @ViewChild("deleteDialog", {static: true}) deleteDialog: any;
     name = [];
     dropdownSettings: any;
     data: LearningEvent[];
     options = []; // learning events options
     searchInd: string; //textbox value
     searchMat: string; //textbox value
-    learningEvents = [];
     element = document.getElementById("header");
 
     ind_list = [];
     metrics: any;
     metrics_list: string[];
-    reviews: review[];
     loggedIn: User;
     treeData$: Observable<LearningEvent[]>;
     learningEventsOptions$: Observable<string[]>;
@@ -60,6 +53,7 @@ export class DisplayComponent implements OnInit {
     indicatorMap: Map<string, indicator> = new Map<string, indicator>();
     private allEventOptions: string[];
     selectedLearningEvents: string[] = [];
+    private previousSelectedEvents: string[] = [];
     selectedLearningActivities: string[] = [];
     metricsIndicatorTitle: string;
 
@@ -91,7 +85,7 @@ export class DisplayComponent implements OnInit {
         };
     }
 
-    // function of fetching data from database
+    // fetches Data from Database and retrieves previous selected Entities from LocalStorage to initialize with
     fetchdata() {
         const previousSelectedEvents: string[] = JSON.parse(localStorage.getItem('selectedEventsInit'));
         const previousSelectedActivities: string[] = JSON.parse(localStorage.getItem('selectedActivitiesInit'));
@@ -109,12 +103,13 @@ export class DisplayComponent implements OnInit {
         )
     }
 
+    //Initializes Dropdowns and selected Indicators with given attributes
     private initFromLocalStorage(events: string[], activities: string[], indicators: indicator[]) {
         if (events) {
-            this.onEventValueChange(events);
+            this.onEventValueChange(events, true);
             this.selectedLearningEvents = events;
         } else {
-            this.onEventValueChange(this.allEventOptions);
+            this.onEventValueChange(this.allEventOptions, true);
         }
         if (activities) {
             this.selectedLearningActivities = activities;
@@ -130,33 +125,46 @@ export class DisplayComponent implements OnInit {
         }
     }
 
-    onEventValueChange(eventValue: string[]) {
-        if (eventValue.length === 0) {
-            eventValue = this.allEventOptions;
+    // Handles changes in the Event Dropdown. Filters TableData and options for activity dropdown corresponding
+    // to selected Events. Saves selected Events in LocalStorage
+    onEventValueChange(eventValue: string[], init: boolean) {
+        if (this.eventsChanged(eventValue) || init) {
+            if (eventValue.length === 0) {
+                eventValue = this.allEventOptions;
+            }
+            this.resetTable(true);
+            this.selectedLearningEvents$ = this.treeData$.pipe(
+                map(learningEvents => {
+                    return learningEvents.filter(learningEvent => eventValue.includes(learningEvent.name));
+                }));
+
+            this.tableData$ = this.selectedLearningEvents$;
+
+            this.learningActivitiesOptions$ = this.tableData$.pipe(
+                map(learningEvents => {
+                    return [].concat(...learningEvents.map(learningEvent => learningEvent.activities))
+                }),
+                map((learningActivities: LearningActivity[]) => {
+                    return [...new Set(learningActivities.map(learningActivity => learningActivity.name))];
+                })
+            )
+
+            setTimeout(() => {
+                localStorage.setItem("selectedEventsInit", JSON.stringify(this.selectedLearningEvents));
+            });
         }
-        this.resetTable(true);
-        this.selectedLearningEvents$ = this.treeData$.pipe(
-            map(learningEvents => {
-                return learningEvents.filter(learningEvent => eventValue.includes(learningEvent.name));
-            }));
-
-        this.tableData$ = this.selectedLearningEvents$;
-
-        this.learningActivitiesOptions$ = this.tableData$.pipe(
-            map(learningEvents => {
-                return [].concat(...learningEvents.map(learningEvent => learningEvent.activities))
-            }),
-            map((learningActivities: LearningActivity[]) => {
-                return [...new Set(learningActivities.map(learningActivity => learningActivity.name))];
-            })
-        )
-
-        setTimeout(() => {
-            localStorage.setItem("selectedEventsInit", JSON.stringify(this.selectedLearningEvents));
-        });
     }
 
+    eventsChanged(currentEvents: string[]) {
+        const eventSet: Set<string> = new Set([...this.previousSelectedEvents, ...currentEvents]);
+        return [...eventSet.values()].length !== this.previousSelectedEvents.length || [...eventSet.values()].length !== currentEvents.length;
+    }
 
+    onOpen() {
+        this.previousSelectedEvents = this.selectedLearningEvents;
+    }
+
+    // resets the Table and clears table data stored in LocalStorage
     private resetTable(withActivities?: boolean) {
         if (withActivities) {
             this.selectedLearningActivities = []; //empty the seleted list of Activities after event change
@@ -170,7 +178,7 @@ export class DisplayComponent implements OnInit {
         this.searchMat = ""; //empty
     }
 
-/////////////// function for learning activities selection /////////////
+    // Filters TableData corresponding to selected Activities and save those in LocalStorage
     onActivitySelectChange() {
         this.resetTable();
         this.determineTableDataBySelectedEventsAndActivities();
@@ -179,6 +187,7 @@ export class DisplayComponent implements OnInit {
         });
     }
 
+    // Filters Table Data depending on Events and Activities selected
     private determineTableDataBySelectedEventsAndActivities() {
         if (this.selectedLearningActivities.length === 0) {
             this.tableData$ = this.selectedLearningEvents$
@@ -201,14 +210,70 @@ export class DisplayComponent implements OnInit {
         }
     }
 
-    ////////////////pop up by click Indicator to show meterics ///////////
+    // Filters Table Data depending on Search Strings entered in Indicator and Metric Search
+    determineFilteredTableDataByIndicatorAndMetricText() {
+        const indicatorFiltered = (this.searchInd && this.searchInd  !== "");
+        const metricFiltered = (this.searchMat && this.searchMat  !== "");
+        if (!indicatorFiltered && !metricFiltered) {
+            this.determineTableDataBySelectedEventsAndActivities();
+        } else {
+            if (indicatorFiltered) {
+               this.filterTableDataByIndicatorSearch();
+            }
+            if (metricFiltered) {
+                this.filterTableDataByMetricSearch();
+            }
+        }
+    }
+
+    filterTableDataByIndicatorSearch() {
+        this.tableData$ = this.tableData$.pipe(
+            map(learningEvents => {
+                return learningEvents.map(event => {
+                    event.activities.map(activity => {
+                        activity.indicators = activity.indicators.filter(indicator => {
+                            return `${indicator.Title} ${indicator.referenceNumber}`.toLowerCase().includes(this.searchInd.toLowerCase());
+                        })
+                        return activity;
+                    })
+                    event.activities = event.activities.filter(activity => activity.indicators.length > 0);
+                    return event;
+                })
+            }),
+            map(learningEvents => {
+                return learningEvents.filter(learningEvent => learningEvent.activities.length > 0);
+            })
+        )
+    }
+
+    filterTableDataByMetricSearch() {
+        this.tableData$ = this.tableData$.pipe(
+            map(learningEvents => {
+                return learningEvents.map(event => {
+                    event.activities.map(activity => {
+                        activity.indicators = activity.indicators.filter(indicator => {
+                            return indicator.metrics.toLowerCase().includes(this.searchMat.toLowerCase());
+                        })
+                        return activity;
+                    })
+                    event.activities = event.activities.filter(activity => activity.indicators.length > 0);
+                    return event;
+                })
+            }),
+            map(learningEvents => {
+                return learningEvents.filter(learningEvent => learningEvent.activities.length > 0);
+            })
+        )
+    }
+
+    // pop up by click Indicator to show meterics
     getMeterics(indicator: indicator) {
         this.metrics_list = indicator.metrics.split(",");
         this.metricsIndicatorTitle = indicator.Title
         this.dialog.open(this.secondDialog);
     }
 
-    ////////////////// function for checkbox to select indicator   //////////////////
+    //function for checkbox to select indicator and save selection in LocalStorage
     onCheckboxChange(indic: indicator) {
         const checked = !this.checkedMap.get(indic._id)
         this.checkedMap.set(indic._id, checked);
@@ -216,6 +281,9 @@ export class DisplayComponent implements OnInit {
             this.ind_list.push(indic.Title)
             this.indicatorMap.set(indic._id, indic);
         } else {
+            console.log(this.ind_list)
+            console.log(indic.Title)
+            console.log(this.ind_list.indexOf(indic.Title))
             const index = this.ind_list.indexOf(indic.Title);
             if (index !== -1) {
                 this.ind_list.splice(index, 1);
@@ -227,10 +295,12 @@ export class DisplayComponent implements OnInit {
         });
     }
 
+    // method to check if at least one indicator is selected
     atLeastOneChecked() {
         return [...this.checkedMap.values()].includes(true);
     }
 
+    // Transforms selected indicators into a downloadable .txt file
     textClicked() {
         const selectedIndicatorList = [...this.indicatorMap.values()].filter(indicator => indicator);
         const mimeType = 'text/plain';
@@ -252,6 +322,7 @@ export class DisplayComponent implements OnInit {
 
     }
 
+    // Transforms selected indicators into a downloadable .json file
     jsonClicked() {
         const selectedIndicatorList = [...this.indicatorMap.values()].filter(indicator => indicator);
         if (selectedIndicatorList.length > 0) {
@@ -286,6 +357,7 @@ export class DisplayComponent implements OnInit {
         }
     };
 
+    // removes all saved Table states from LocalStorage and clears all selected Events/Activities/Indicators
     reset() {
         localStorage.removeItem("selectedEventsInit");
         localStorage.removeItem("selectedActivitiesInit");
@@ -294,7 +366,7 @@ export class DisplayComponent implements OnInit {
         this.checkedMap.clear();
         this.indicatorMap.clear();
         this.selectedLearningEvents = [];
-        this.onEventValueChange(this.allEventOptions);
+        this.onEventValueChange(this.allEventOptions, true);
         localStorage.removeItem("check");
     }
 
@@ -327,6 +399,7 @@ export class DisplayComponent implements OnInit {
         }
     };
 
+    // Scrolls back to the top of the page
     backToTop() {
         this.element.scrollIntoView({behavior: "smooth"});
     }
@@ -342,10 +415,12 @@ export class DisplayComponent implements OnInit {
         document.getElementsByTagName("head")[0].appendChild(node);
     }
 
+    // method to open the review Dialog
     onReview(indicator: indicator) {
         this.dialog.open(this.reviewDialog, {data: indicator});
     }
 
+    // method to open the verdict Dialog
     onVerdict(indicator: indicator) {
         this.metricsIndicatorTitle = indicator.Title.trim();
         this.dataService.getReferenceByReferenceNumber(indicator.referenceNumber).subscribe(reference => {
@@ -357,21 +432,29 @@ export class DisplayComponent implements OnInit {
         })
     }
 
+    onDelete(data: any) {
+        this.dialog.open(this.deleteDialog, {data: {indicator: data.indicator, activity: data.activity}});
+    }
+
+    // navigates to logIn
     logIn() {
         this.router.navigate(['/login'], {state: {url: '/', additionalInfo: null}});
     }
 
+    // logs out user => clear currentUser data from LocalStorage
     logout() {
         localStorage.removeItem('currentUser');
         this.loggedIn = undefined;
     }
 
+    // clears indicator from selected indicators if indicator gets deleted
     indicatorDeleted(indicator: indicator) {
         if (this.checkedMap.get(indicator._id)) {
             this.onCheckboxChange(indicator);
         }
     }
 
+    // method to generate the old/previous Tree Structure DataBase and export it as .json file
     generateTreeStructure() {
         this.dataService.getdata().subscribe(treeDataNew => {
             const oldTreeStructure = treeDataNew.map(event => {
@@ -402,6 +485,7 @@ export class DisplayComponent implements OnInit {
         })
     }
 
+    // method to export the given treeStructure as Json
     private exportToJSON(oldTreeStructure) {
         // Convert the text to BLOB.
         let textToBLOB = new Blob(
@@ -425,7 +509,32 @@ export class DisplayComponent implements OnInit {
         newLink.click();
     }
 
+    // method to navigate to the Reference edit of the Reference which belongs to the omitted id
     editReference(id: string) {
         this.router.navigate([`reference/${id}/edit`]);
+    }
+
+    deleteIndicator(indicator: any) {
+            if (confirm("Do you really want to delete this Indicator?")) {
+                this.indicatorDeleted(indicator);
+                this.dataService.deleteIndicator(indicator._id).subscribe(() => {
+                    this.fetchdata();
+                });
+            }
+        }
+
+    removeIndicatorFromActivity(data: any) {
+        this.dataService.removeIndicatorFromActivity(data.activity._id, data.indicator._id).subscribe(success => {
+            if (success) {
+                this.fetchdata();
+            } else {
+                if (confirm('This activity is the only one assigned to the indicator. Do you wish to delete the entire indicator?')) {
+                    this.indicatorDeleted(data.indicator);
+                    this.dataService.deleteIndicator(data.indicator._id).subscribe(() => {
+                        this.fetchdata();
+                    });
+                }
+            }
+        })
     }
 }

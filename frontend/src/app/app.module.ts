@@ -80,7 +80,6 @@ import {MatTooltipModule} from "@angular/material/tooltip";
 import { ReviewEditComponent } from './component/review-edit/review-edit.component';
 import { TableComponent } from './component/display/table/table.component';
 import {NgSelectModule} from "@ng-select/ng-select";
-import {AddReferenceComponent} from "./component/add-reference/add-reference.component";
 import {HeaderService} from "./component/header/header.service";
 import {TourService} from "../assets/js/tour.service";
 import {SuperAdminService} from "./superAdmin/super-admin.service";
@@ -98,7 +97,6 @@ import {SuperAdminService} from "./superAdmin/super-admin.service";
   declarations: [
     AppComponent,
     AddDataComponent,
-    AddReferenceComponent,
     HeaderComponent,
     DisplayComponent,
     SanitizeHtmlPipe,

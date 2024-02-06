@@ -34,6 +34,7 @@ export class ReferanceComponent implements OnInit {
 
   protected readonly DisplayComponent = DisplayComponent;
 
+  // reduces the link to its value after the https:// or www.
   shortenLink(link: string) {
     const splittedLink = link.split('//');
     let index = 0;
@@ -47,10 +48,12 @@ export class ReferanceComponent implements OnInit {
     }
   }
 
+  // navigates to the edit page
   editAsSuperAdmin(id: any) {
     this.router.navigate([`reference/${id}/edit`]);
   }
 
+  // deletes reference from database
   deleteAsSuperAdmin(reference: Reference) {
     if (confirm("Do you really want to delete this Reference?")) {
       this.dataService.deleteReference(reference).subscribe(() => {
@@ -60,6 +63,7 @@ export class ReferanceComponent implements OnInit {
     }
   }
 
+  // Sort method to sort references by referenceNumber
   private sortByRefNumber(references: Reference[]): Reference[] {
     return references.sort((a,b) =>{
       const numberA = this.extractNumberFromRefNumber(a.referenceNumber);
@@ -72,6 +76,7 @@ export class ReferanceComponent implements OnInit {
     } )
   }
 
+  // method to retrieve the number in brackets from a referenceNumber
   private extractNumberFromRefNumber(refNumber: string): number {
     return Number(refNumber.substring(1, refNumber.length-1));
   }

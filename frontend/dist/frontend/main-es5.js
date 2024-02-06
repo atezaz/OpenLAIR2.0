@@ -1,20 +1,23 @@
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
-
+function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return typeof key === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (typeof input !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (typeof res !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["main"], {
+  /***/"./$$_lazy_route_resource lazy recursive":
+  /*!******************************************************!*\
+    !*** ./$$_lazy_route_resource lazy namespace object ***!
+    \******************************************************/
+  /*! no static exports found */
   /***/
-  "./$$_lazy_route_resource lazy recursive": function $$_lazy_route_resourceLazyRecursive(module, exports) {
+  function $$_lazy_route_resourceLazyRecursive(module, exports) {
     function webpackEmptyAsyncContext(req) {
       // Here Promise.resolve().then() is used instead of new Promise() to prevent
       // uncaught exception popping up in devtools
@@ -24,685 +27,883 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         throw e;
       });
     }
-
     webpackEmptyAsyncContext.keys = function () {
       return [];
     };
-
     webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
     module.exports = webpackEmptyAsyncContext;
     webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
+
     /***/
   },
 
+  /***/"./node_modules/raw-loader/dist/cjs.js!./src/app/app.component.html":
+  /*!**************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/app.component.html ***!
+    \**************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./node_modules/raw-loader/dist/cjs.js!./src/app/app.component.html": function node_modulesRawLoaderDistCjsJsSrcAppAppComponentHtml(module, __webpack_exports__, __webpack_require__) {
+  function node_modulesRawLoaderDistCjsJsSrcAppAppComponentHtml(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "<app-header></app-header>  \n\n<div>\n  <router-outlet></router-outlet>\n</div>\n  \n  \n";
+
     /***/
   },
 
+  /***/"./node_modules/raw-loader/dist/cjs.js!./src/app/chart-manager/chart-manager.component.html":
+  /*!**************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/chart-manager/chart-manager.component.html ***!
+    \**************************************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./node_modules/raw-loader/dist/cjs.js!./src/app/chart-manager/chart-manager.component.html": function node_modulesRawLoaderDistCjsJsSrcAppChartManagerChartManagerComponentHtml(module, __webpack_exports__, __webpack_require__) {
+  function node_modulesRawLoaderDistCjsJsSrcAppChartManagerChartManagerComponentHtml(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "<div class=\"buttons\" id=\"btn-menu\" [ngClass]=\"{ 'mat-elevation-z5': true, sticky: isSticky }\">\n  <button class=\"backBtn buttonLaTool\" routerLink=\"\">\n    Back\n  </button>\n\n  <button class=\"downloadCharts buttonLaTool\" (click)=\"downloadPage()\">\n    Download\n  </button>\n\n  <mat-form-field appearance=\"fill\">\n    <mat-select [formControl]=\"indicators\" multiple placeholder=\"Indicators\" [ngModel]=\"dropdownItems\">\n      <mat-select-trigger>\n        {{ indicators.value ? indicators.value[0] : \"\" }}\n        <span *ngIf=\"indicators.value?.length > 1\" class=\"selection\">\n          (+{{ indicators.value.length - 1 }}\n          {{ indicators.value?.length === 2 ? \"other\" : \"others\" }})\n        </span>\n      </mat-select-trigger>\n      <!-- These are the indicators that are not linked -->\n      <mat-option *ngFor=\"let indicator of dropdownItems\" [value]=\"indicator\" [ngStyle]=\"{\n          color:\n            indicator.includes([73]) ||\n            indicator.includes([57]) ||\n            indicator.includes([75]) ||\n            indicator.includes([135])\n              ? 'red'\n              : ''\n        }\" (onSelectionChange)=\"selectCharts($event, indicator)\">{{ indicator }}</mat-option>\n    </mat-select>\n  </mat-form-field>\n</div>\n\n<div class=\"container\">\n  <!-- componenents on top get rendered first -->\n\n  <!-- Student interaction patterns -->\n  <div class=\"main-content\" *ngIf=\"\n      referenceNumbers.includes('[127]') || referenceNumbers.includes('[121]')\n    \">\n    <app-student-interaction-patterns></app-student-interaction-patterns>\n  </div>\n\n  <!-- Reading Analytics -->\n  <div class=\"main-content\" *ngIf=\"\n      referenceNumbers.includes('[134]') ||\n      referenceNumbers.includes('[114]') ||\n      referenceNumbers.includes('[128]')\n    \">\n    <app-reading-analytics></app-reading-analytics>\n  </div>\n\n  <!-- Competency -->\n  <div class=\"main-content\" *ngIf=\"\n      referenceNumbers.includes('[31]') ||\n      referenceNumbers.includes('[46]') ||\n      referenceNumbers.includes('[98]')\n    \">\n    <app-competency></app-competency>\n  </div>\n\n  <!-- Learning progress -->\n  <div class=\"main-content\" *ngIf=\"\n      referenceNumbers.includes('[62]') ||\n      referenceNumbers.includes('[110]') ||\n      referenceNumbers.includes('[51]')\n    \">\n    <app-learning-progress></app-learning-progress>\n  </div>\n\n  <!-- Writing Analytics -->\n  <div class=\"main-content\" *ngIf=\"\n      referenceNumbers.includes('[61]') ||\n      referenceNumbers.includes('[48]') ||\n      referenceNumbers.includes('[89]') ||\n      referenceNumbers.includes('[85]')\n    \">\n    <app-writing-analytics></app-writing-analytics>\n  </div>\n\n  <!-- Discourse Analytics -->\n  <div class=\"main-content\" *ngIf=\"\n      referenceNumbers.includes('[24]') ||\n      referenceNumbers.includes('[27]') ||\n      referenceNumbers.includes('[49]') ||\n      referenceNumbers.includes('[142]') ||\n      referenceNumbers.includes('[80]') ||\n      referenceNumbers.includes('[88]')\n    \">\n    <app-discussion-quality></app-discussion-quality>\n  </div>\n\n  <!-- Clickstream analysis -->\n  <div class=\"main-content\" *ngIf=\"referenceNumbers.includes('[103]')\">\n    <app-clickstream-analysis></app-clickstream-analysis>\n  </div>\n\n  <!-- Video Analytics -->\n  <div class=\"main-content\" *ngIf=\"\n      referenceNumbers.includes('[138]') ||\n      referenceNumbers.includes('[72]') ||\n      referenceNumbers.includes('[116]')\n    \">\n    <app-video-engagements></app-video-engagements>\n  </div>\n\n  <!-- Initiative -->\n  <div class=\"main-content\" *ngIf=\"referenceNumbers.includes('[124]')\">\n    <app-initiative></app-initiative>\n  </div>\n\n  <!-- Social analysis -->\n  <div class=\"main-content\" *ngIf=\"referenceNumbers.includes('[63]')\">\n    <app-social-analysis></app-social-analysis>\n  </div>\n\n  <!--  Predictive analytics (Dropping out )-->\n\n  <div class=\"main-content\" *ngIf=\"\n      referenceNumbers.includes('[59]') ||\n      referenceNumbers.includes('[79]') ||\n      referenceNumbers.includes('[99]') ||\n      referenceNumbers.includes('[101]') ||\n      referenceNumbers.includes('[64]') ||\n      referenceNumbers.includes('[71]') ||\n      referenceNumbers.includes('[131]')\n    \">\n    <app-droppingout></app-droppingout>\n  </div>\n  <!-- Time distribution -->\n  <div class=\"main-content\" *ngIf=\"referenceNumbers.includes('[39]')\">\n    <app-time-distribution></app-time-distribution>\n  </div>\n\n  <!-- Time Planning -->\n  <div class=\"main-content\" *ngIf=\"\n      referenceNumbers.includes('[47]') ||\n      referenceNumbers.includes('[68]') ||\n      referenceNumbers.includes('[125]')\n    \">\n    <app-time-planning></app-time-planning>\n  </div>\n\n  <!-- Student comparison -->\n  <div class=\"main-content\" *ngIf=\"\n      referenceNumbers.includes('[130]') ||\n      referenceNumbers.includes('[126]') ||\n      referenceNumbers.includes('[129]') ||\n      referenceNumbers.includes('[25]') ||\n      referenceNumbers.includes('[50]')\n    \">\n    <app-student-comparison></app-student-comparison>\n  </div>\n\n  <!-- Engagement and Performance -->\n  <div class=\"main-content\" *ngIf=\"\n      referenceNumbers.includes('[69]') || referenceNumbers.includes('[86]')\n    \">\n    <app-engagement-performance></app-engagement-performance>\n  </div>\n\n  <!-- Online change detection-->\n  <div class=\"main-content\" *ngIf=\"referenceNumbers.includes('[137]')\">\n    <app-online-change-detection></app-online-change-detection>\n  </div>\n\n  <!-- Game analytics -->\n  <div class=\"main-content\" *ngIf=\"\n      referenceNumbers.includes('[45]') ||\n      referenceNumbers.includes('[43]') ||\n      referenceNumbers.includes('[104]')\n    \">\n    <app-gamification></app-gamification>\n  </div>\n\n  <!-- Predict course completion -->\n  <div class=\"main-content\" *ngIf=\"referenceNumbers.includes('[70]')\">\n    <app-predict-coursecompletion></app-predict-coursecompletion>\n  </div>\n\n  <!--  Procrastination  -->\n  <div class=\"main-content\" *ngIf=\"\n      referenceNumbers.includes('[102]') || referenceNumbers.includes('[107]')\n    \">\n    <app-procrastination></app-procrastination>\n  </div>\n\n  <!-- Group participation -->\n  <div class=\"main-content\" *ngIf=\"referenceNumbers.includes('[30]')\">\n    <app-group-participation></app-group-participation>\n  </div>\n\n  <!-- Clustering -->\n  <div class=\"main-content\" *ngIf=\"\n      referenceNumbers.includes('[66]') ||\n      referenceNumbers.includes('[120]') ||\n      referenceNumbers.includes('[113]') ||\n      referenceNumbers.includes('[29]')\n    \">\n    <app-clustering></app-clustering>\n  </div>\n\n  <!-- Final grade prediction -->\n  <div class=\"main-content\" *ngIf=\"\n      referenceNumbers.includes('[28]') ||\n      referenceNumbers.includes('[83]') ||\n      referenceNumbers.includes('[78]') ||\n      referenceNumbers.includes('[115]') ||\n      referenceNumbers.includes('[60]') ||\n      referenceNumbers.includes('[37]') ||\n      referenceNumbers.includes('[105]') ||\n      referenceNumbers.includes('[81]') ||\n      referenceNumbers.includes('[119]')\n    \">\n    <app-final-grade-prediction></app-final-grade-prediction>\n  </div>\n\n  <!-- Learning behaviour -->\n  <div class=\"main-content\" *ngIf=\"referenceNumbers.includes('[76]')\">\n    <app-learning-behaviour></app-learning-behaviour>\n  </div>\n\n  <!-- Social network analysis -->\n  <div class=\"main-content\" *ngIf=\"\n      referenceNumbers.includes('[90]') || referenceNumbers.includes('[52]')\n    \">\n    <app-social-network-analysis></app-social-network-analysis>\n  </div>\n\n  <!-- Self motivation -->\n  <div class=\"main-content\" *ngIf=\"referenceNumbers.includes('[139]')\">\n    <app-self-motivation></app-self-motivation>\n  </div>\n\n  <!-- Learning behaviour patterns -->\n  <div class=\"main-content\" *ngIf=\"\n      referenceNumbers.includes('[111]') ||\n      referenceNumbers.includes('[132]') ||\n      referenceNumbers.includes('[118]')\n    \">\n    <app-learning-behavior-patterns></app-learning-behavior-patterns>\n  </div>\n\n  <!-- Passing rate prediction -->\n  <div class=\"main-content\" *ngIf=\"\n      referenceNumbers.includes('[26]') ||\n      referenceNumbers.includes('[56]') ||\n      referenceNumbers.includes('[96]') ||\n      referenceNumbers.includes('[100]') ||\n      referenceNumbers.includes('[117]') ||\n      referenceNumbers.includes('[143]') ||\n      referenceNumbers.includes('[144]')\n    \">\n    <app-passing-rate-prediction></app-passing-rate-prediction>\n  </div>\n\n  <!--  Feedback (Self-regulation)-->\n  <div class=\"main-content\" *ngIf=\"\n      referenceNumbers.includes('[41]') || referenceNumbers.includes('[91]')\n    \">\n    <app-feedback></app-feedback>\n  </div>\n\n  <!-- Course assessment -->\n  <div class=\"main-content\" *ngIf=\"referenceNumbers.includes('[55]')\">\n    <app-course-assessment></app-course-assessment>\n  </div>\n\n  <!-- Affective-State -->\n  <div class=\"main-content\" *ngIf=\"\n      referenceNumbers.includes('[32]') ||\n      referenceNumbers.includes('[84]') ||\n      referenceNumbers.includes('[36]') ||\n      referenceNumbers.includes('[87]')\n    \">\n    <app-affective-state></app-affective-state>\n  </div>\n\n  <!-- Course difficulty -->\n  <div class=\"main-content\" *ngIf=\"\n      referenceNumbers.includes('[77]') || referenceNumbers.includes('[133]')\n    \">\n    <app-course-difficulty></app-course-difficulty>\n  </div>\n\n  <!-- Teacher curriculum usage -->\n  <div class=\"main-content\" *ngIf=\"\n      referenceNumbers.includes('[65]') || referenceNumbers.includes('[58]')\n    \">\n    <app-curriculum-usage></app-curriculum-usage>\n  </div>\n\n  <!-- Presentation skills -->\n  <div class=\"main-content\" *ngIf=\"\n      referenceNumbers.includes('[35]') || referenceNumbers.includes('[40]')\n    \">\n    <app-presentation-skills></app-presentation-skills>\n  </div>\n</div>";
+
     /***/
   },
 
+  /***/"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/affective-state/affective-state.component.html":
+  /*!*************************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/charts/affective-state/affective-state.component.html ***!
+    \*************************************************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/affective-state/affective-state.component.html": function node_modulesRawLoaderDistCjsJsSrcAppChartsAffectiveStateAffectiveStateComponentHtml(module, __webpack_exports__, __webpack_require__) {
+  function node_modulesRawLoaderDistCjsJsSrcAppChartsAffectiveStateAffectiveStateComponentHtml(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n";
+
     /***/
   },
 
+  /***/"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/clickstream-analysis/clickstream-analysis.component.html":
+  /*!***********************************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/charts/clickstream-analysis/clickstream-analysis.component.html ***!
+    \***********************************************************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/clickstream-analysis/clickstream-analysis.component.html": function node_modulesRawLoaderDistCjsJsSrcAppChartsClickstreamAnalysisClickstreamAnalysisComponentHtml(module, __webpack_exports__, __webpack_require__) {
+  function node_modulesRawLoaderDistCjsJsSrcAppChartsClickstreamAnalysisClickstreamAnalysisComponentHtml(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n";
+
     /***/
   },
 
+  /***/"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/clustering/clustering.component.html":
+  /*!***************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/charts/clustering/clustering.component.html ***!
+    \***************************************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/clustering/clustering.component.html": function node_modulesRawLoaderDistCjsJsSrcAppChartsClusteringClusteringComponentHtml(module, __webpack_exports__, __webpack_require__) {
+  function node_modulesRawLoaderDistCjsJsSrcAppChartsClusteringClusteringComponentHtml(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n";
+
     /***/
   },
 
+  /***/"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/competency/competency.component.html":
+  /*!***************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/charts/competency/competency.component.html ***!
+    \***************************************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/competency/competency.component.html": function node_modulesRawLoaderDistCjsJsSrcAppChartsCompetencyCompetencyComponentHtml(module, __webpack_exports__, __webpack_require__) {
+  function node_modulesRawLoaderDistCjsJsSrcAppChartsCompetencyCompetencyComponentHtml(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n";
+
     /***/
   },
 
+  /***/"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/course-assessment/course-assessment.component.html":
+  /*!*****************************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/charts/course-assessment/course-assessment.component.html ***!
+    \*****************************************************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/course-assessment/course-assessment.component.html": function node_modulesRawLoaderDistCjsJsSrcAppChartsCourseAssessmentCourseAssessmentComponentHtml(module, __webpack_exports__, __webpack_require__) {
+  function node_modulesRawLoaderDistCjsJsSrcAppChartsCourseAssessmentCourseAssessmentComponentHtml(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 50%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions2\"\n    style=\"width: 50%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n";
+
     /***/
   },
 
+  /***/"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/course-difficulty/course-difficulty.component.html":
+  /*!*****************************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/charts/course-difficulty/course-difficulty.component.html ***!
+    \*****************************************************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/course-difficulty/course-difficulty.component.html": function node_modulesRawLoaderDistCjsJsSrcAppChartsCourseDifficultyCourseDifficultyComponentHtml(module, __webpack_exports__, __webpack_require__) {
+  function node_modulesRawLoaderDistCjsJsSrcAppChartsCourseDifficultyCourseDifficultyComponentHtml(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n";
+
     /***/
   },
 
+  /***/"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/curriculum-usage/curriculum-usage.component.html":
+  /*!***************************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/charts/curriculum-usage/curriculum-usage.component.html ***!
+    \***************************************************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/curriculum-usage/curriculum-usage.component.html": function node_modulesRawLoaderDistCjsJsSrcAppChartsCurriculumUsageCurriculumUsageComponentHtml(module, __webpack_exports__, __webpack_require__) {
+  function node_modulesRawLoaderDistCjsJsSrcAppChartsCurriculumUsageCurriculumUsageComponentHtml(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n";
+
     /***/
   },
 
+  /***/"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/discussion-quality/discussion-quality.component.html":
+  /*!*******************************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/charts/discussion-quality/discussion-quality.component.html ***!
+    \*******************************************************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/discussion-quality/discussion-quality.component.html": function node_modulesRawLoaderDistCjsJsSrcAppChartsDiscussionQualityDiscussionQualityComponentHtml(module, __webpack_exports__, __webpack_require__) {
+  function node_modulesRawLoaderDistCjsJsSrcAppChartsDiscussionQualityDiscussionQualityComponentHtml(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "<highcharts-chart\n  [Highcharts]=\"Highcharts\"\n  [options]=\"chartOptions\"\n  style=\"width: 100%; height: 400px; display: block; float: left\"\n></highcharts-chart>\n";
+
     /***/
   },
 
+  /***/"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/droppingout/droppingout.component.html":
+  /*!*****************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/charts/droppingout/droppingout.component.html ***!
+    \*****************************************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/droppingout/droppingout.component.html": function node_modulesRawLoaderDistCjsJsSrcAppChartsDroppingoutDroppingoutComponentHtml(module, __webpack_exports__, __webpack_require__) {
+  function node_modulesRawLoaderDistCjsJsSrcAppChartsDroppingoutDroppingoutComponentHtml(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n";
+
     /***/
   },
 
+  /***/"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/engagement-performance/engagement-performance.component.html":
+  /*!***************************************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/charts/engagement-performance/engagement-performance.component.html ***!
+    \***************************************************************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/engagement-performance/engagement-performance.component.html": function node_modulesRawLoaderDistCjsJsSrcAppChartsEngagementPerformanceEngagementPerformanceComponentHtml(module, __webpack_exports__, __webpack_require__) {
+  function node_modulesRawLoaderDistCjsJsSrcAppChartsEngagementPerformanceEngagementPerformanceComponentHtml(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n";
+
     /***/
   },
 
+  /***/"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/feedback/feedback.component.html":
+  /*!***********************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/charts/feedback/feedback.component.html ***!
+    \***********************************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/feedback/feedback.component.html": function node_modulesRawLoaderDistCjsJsSrcAppChartsFeedbackFeedbackComponentHtml(module, __webpack_exports__, __webpack_require__) {
+  function node_modulesRawLoaderDistCjsJsSrcAppChartsFeedbackFeedbackComponentHtml(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "<SELECT id=\"list\" (change)=\"updateChart($event)\">\n  <option VALUE=\"A\">Video interactions</option>\n  <option VALUE=\"B\">Reading activities</option>\n  <option VALUE=\"C\">Assignment activities</option>\n  <option VALUE=\"D\">Dashboard access</option>\n</SELECT>\n<div class=\"example\">\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 50%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n\n<div class=\"example\">\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions2\"\n    style=\"width: 50%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n\n<!-- \n<figure class=\"highcharts-figure\">\n  <div id=\"container-speed\" class=\"chart-container\"></div>\n  <div id=\"container-rpm\" class=\"chart-container\"></div>\n</figure>\n-->\n";
+
     /***/
   },
 
+  /***/"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/final-grade-prediction/final-grade-prediction.component.html":
+  /*!***************************************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/charts/final-grade-prediction/final-grade-prediction.component.html ***!
+    \***************************************************************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/final-grade-prediction/final-grade-prediction.component.html": function node_modulesRawLoaderDistCjsJsSrcAppChartsFinalGradePredictionFinalGradePredictionComponentHtml(module, __webpack_exports__, __webpack_require__) {
+  function node_modulesRawLoaderDistCjsJsSrcAppChartsFinalGradePredictionFinalGradePredictionComponentHtml(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n";
+
     /***/
   },
 
+  /***/"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/gamification/gamification.component.html":
+  /*!*******************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/charts/gamification/gamification.component.html ***!
+    \*******************************************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/gamification/gamification.component.html": function node_modulesRawLoaderDistCjsJsSrcAppChartsGamificationGamificationComponentHtml(module, __webpack_exports__, __webpack_require__) {
+  function node_modulesRawLoaderDistCjsJsSrcAppChartsGamificationGamificationComponentHtml(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n";
+
     /***/
   },
 
+  /***/"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/group-participation/group-participation.component.html":
+  /*!*********************************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/charts/group-participation/group-participation.component.html ***!
+    \*********************************************************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/group-participation/group-participation.component.html": function node_modulesRawLoaderDistCjsJsSrcAppChartsGroupParticipationGroupParticipationComponentHtml(module, __webpack_exports__, __webpack_require__) {
+  function node_modulesRawLoaderDistCjsJsSrcAppChartsGroupParticipationGroupParticipationComponentHtml(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n";
+
     /***/
   },
 
+  /***/"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/initiative/initiative.component.html":
+  /*!***************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/charts/initiative/initiative.component.html ***!
+    \***************************************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/initiative/initiative.component.html": function node_modulesRawLoaderDistCjsJsSrcAppChartsInitiativeInitiativeComponentHtml(module, __webpack_exports__, __webpack_require__) {
+  function node_modulesRawLoaderDistCjsJsSrcAppChartsInitiativeInitiativeComponentHtml(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n";
+
     /***/
   },
 
+  /***/"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/learning-behavior-patterns/learning-behavior-patterns.component.html":
+  /*!***********************************************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/charts/learning-behavior-patterns/learning-behavior-patterns.component.html ***!
+    \***********************************************************************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/learning-behavior-patterns/learning-behavior-patterns.component.html": function node_modulesRawLoaderDistCjsJsSrcAppChartsLearningBehaviorPatternsLearningBehaviorPatternsComponentHtml(module, __webpack_exports__, __webpack_require__) {
+  function node_modulesRawLoaderDistCjsJsSrcAppChartsLearningBehaviorPatternsLearningBehaviorPatternsComponentHtml(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n";
+
     /***/
   },
 
+  /***/"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/learning-behaviour/learning-behaviour.component.html":
+  /*!*******************************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/charts/learning-behaviour/learning-behaviour.component.html ***!
+    \*******************************************************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/learning-behaviour/learning-behaviour.component.html": function node_modulesRawLoaderDistCjsJsSrcAppChartsLearningBehaviourLearningBehaviourComponentHtml(module, __webpack_exports__, __webpack_require__) {
+  function node_modulesRawLoaderDistCjsJsSrcAppChartsLearningBehaviourLearningBehaviourComponentHtml(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n";
+
     /***/
   },
 
+  /***/"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/learning-progress/learning-progress.component.html":
+  /*!*****************************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/charts/learning-progress/learning-progress.component.html ***!
+    \*****************************************************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/learning-progress/learning-progress.component.html": function node_modulesRawLoaderDistCjsJsSrcAppChartsLearningProgressLearningProgressComponentHtml(module, __webpack_exports__, __webpack_require__) {
+  function node_modulesRawLoaderDistCjsJsSrcAppChartsLearningProgressLearningProgressComponentHtml(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n";
+
     /***/
   },
 
+  /***/"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/online-change-detection/online-change-detection.component.html":
+  /*!*****************************************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/charts/online-change-detection/online-change-detection.component.html ***!
+    \*****************************************************************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/online-change-detection/online-change-detection.component.html": function node_modulesRawLoaderDistCjsJsSrcAppChartsOnlineChangeDetectionOnlineChangeDetectionComponentHtml(module, __webpack_exports__, __webpack_require__) {
+  function node_modulesRawLoaderDistCjsJsSrcAppChartsOnlineChangeDetectionOnlineChangeDetectionComponentHtml(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n";
+
     /***/
   },
 
+  /***/"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/passing-rate-prediction/passing-rate-prediction.component.html":
+  /*!*****************************************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/charts/passing-rate-prediction/passing-rate-prediction.component.html ***!
+    \*****************************************************************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/passing-rate-prediction/passing-rate-prediction.component.html": function node_modulesRawLoaderDistCjsJsSrcAppChartsPassingRatePredictionPassingRatePredictionComponentHtml(module, __webpack_exports__, __webpack_require__) {
+  function node_modulesRawLoaderDistCjsJsSrcAppChartsPassingRatePredictionPassingRatePredictionComponentHtml(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; height: 500px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n";
+
     /***/
   },
 
+  /***/"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/predict-coursecompletion/predict-coursecompletion.component.html":
+  /*!*******************************************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/charts/predict-coursecompletion/predict-coursecompletion.component.html ***!
+    \*******************************************************************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/predict-coursecompletion/predict-coursecompletion.component.html": function node_modulesRawLoaderDistCjsJsSrcAppChartsPredictCoursecompletionPredictCoursecompletionComponentHtml(module, __webpack_exports__, __webpack_require__) {
+  function node_modulesRawLoaderDistCjsJsSrcAppChartsPredictCoursecompletionPredictCoursecompletionComponentHtml(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n";
+
     /***/
   },
 
+  /***/"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/predict-exam-success/predict-exam-success.component.html":
+  /*!***********************************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/charts/predict-exam-success/predict-exam-success.component.html ***!
+    \***********************************************************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/predict-exam-success/predict-exam-success.component.html": function node_modulesRawLoaderDistCjsJsSrcAppChartsPredictExamSuccessPredictExamSuccessComponentHtml(module, __webpack_exports__, __webpack_require__) {
+  function node_modulesRawLoaderDistCjsJsSrcAppChartsPredictExamSuccessPredictExamSuccessComponentHtml(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n";
+
     /***/
   },
 
+  /***/"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/presentation-skills/presentation-skills.component.html":
+  /*!*********************************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/charts/presentation-skills/presentation-skills.component.html ***!
+    \*********************************************************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/presentation-skills/presentation-skills.component.html": function node_modulesRawLoaderDistCjsJsSrcAppChartsPresentationSkillsPresentationSkillsComponentHtml(module, __webpack_exports__, __webpack_require__) {
+  function node_modulesRawLoaderDistCjsJsSrcAppChartsPresentationSkillsPresentationSkillsComponentHtml(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "<div id=\"container\"></div>\n";
+
     /***/
   },
 
+  /***/"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/procrastination/procrastination.component.html":
+  /*!*************************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/charts/procrastination/procrastination.component.html ***!
+    \*************************************************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/procrastination/procrastination.component.html": function node_modulesRawLoaderDistCjsJsSrcAppChartsProcrastinationProcrastinationComponentHtml(module, __webpack_exports__, __webpack_require__) {
+  function node_modulesRawLoaderDistCjsJsSrcAppChartsProcrastinationProcrastinationComponentHtml(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n";
+
     /***/
   },
 
+  /***/"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/reading-analytics/reading-analytics.component.html":
+  /*!*****************************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/charts/reading-analytics/reading-analytics.component.html ***!
+    \*****************************************************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/reading-analytics/reading-analytics.component.html": function node_modulesRawLoaderDistCjsJsSrcAppChartsReadingAnalyticsReadingAnalyticsComponentHtml(module, __webpack_exports__, __webpack_require__) {
+  function node_modulesRawLoaderDistCjsJsSrcAppChartsReadingAnalyticsReadingAnalyticsComponentHtml(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n";
+
     /***/
   },
 
+  /***/"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/self-motivation/self-motivation.component.html":
+  /*!*************************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/charts/self-motivation/self-motivation.component.html ***!
+    \*************************************************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/self-motivation/self-motivation.component.html": function node_modulesRawLoaderDistCjsJsSrcAppChartsSelfMotivationSelfMotivationComponentHtml(module, __webpack_exports__, __webpack_require__) {
+  function node_modulesRawLoaderDistCjsJsSrcAppChartsSelfMotivationSelfMotivationComponentHtml(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n";
+
     /***/
   },
 
+  /***/"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/social-analysis/social-analysis.component.html":
+  /*!*************************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/charts/social-analysis/social-analysis.component.html ***!
+    \*************************************************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/social-analysis/social-analysis.component.html": function node_modulesRawLoaderDistCjsJsSrcAppChartsSocialAnalysisSocialAnalysisComponentHtml(module, __webpack_exports__, __webpack_require__) {
+  function node_modulesRawLoaderDistCjsJsSrcAppChartsSocialAnalysisSocialAnalysisComponentHtml(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n";
+
     /***/
   },
 
+  /***/"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/social-network-analysis/social-network-analysis.component.html":
+  /*!*****************************************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/charts/social-network-analysis/social-network-analysis.component.html ***!
+    \*****************************************************************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/social-network-analysis/social-network-analysis.component.html": function node_modulesRawLoaderDistCjsJsSrcAppChartsSocialNetworkAnalysisSocialNetworkAnalysisComponentHtml(module, __webpack_exports__, __webpack_require__) {
+  function node_modulesRawLoaderDistCjsJsSrcAppChartsSocialNetworkAnalysisSocialNetworkAnalysisComponentHtml(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n";
+
     /***/
   },
 
+  /***/"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/student-comparison/student-comparison.component.html":
+  /*!*******************************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/charts/student-comparison/student-comparison.component.html ***!
+    \*******************************************************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/student-comparison/student-comparison.component.html": function node_modulesRawLoaderDistCjsJsSrcAppChartsStudentComparisonStudentComparisonComponentHtml(module, __webpack_exports__, __webpack_require__) {
+  function node_modulesRawLoaderDistCjsJsSrcAppChartsStudentComparisonStudentComparisonComponentHtml(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "<SELECT id=\"list\" (change)=\"updateChart($event)\">\n  <option VALUE=\"A\">Clicks</option>\n  <option VALUE=\"B\">\"Lectures\" clicks</option>\n  <option VALUE=\"C\">\"Coursework\" clicks</option>\n  <option VALUE=\"D\">\"Practials\" clicks</option>\n  <option value=\"E\">Seen content</option>\n</SELECT>\n<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n";
+
     /***/
   },
 
+  /***/"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/student-interaction-patterns/student-interaction-patterns.component.html":
+  /*!***************************************************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/charts/student-interaction-patterns/student-interaction-patterns.component.html ***!
+    \***************************************************************************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/student-interaction-patterns/student-interaction-patterns.component.html": function node_modulesRawLoaderDistCjsJsSrcAppChartsStudentInteractionPatternsStudentInteractionPatternsComponentHtml(module, __webpack_exports__, __webpack_require__) {
+  function node_modulesRawLoaderDistCjsJsSrcAppChartsStudentInteractionPatternsStudentInteractionPatternsComponentHtml(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n";
+
     /***/
   },
 
+  /***/"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/time-distribution/time-distribution.component.html":
+  /*!*****************************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/charts/time-distribution/time-distribution.component.html ***!
+    \*****************************************************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/time-distribution/time-distribution.component.html": function node_modulesRawLoaderDistCjsJsSrcAppChartsTimeDistributionTimeDistributionComponentHtml(module, __webpack_exports__, __webpack_require__) {
+  function node_modulesRawLoaderDistCjsJsSrcAppChartsTimeDistributionTimeDistributionComponentHtml(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n";
+
     /***/
   },
 
+  /***/"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/time-planning/time-planning.component.html":
+  /*!*********************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/charts/time-planning/time-planning.component.html ***!
+    \*********************************************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/time-planning/time-planning.component.html": function node_modulesRawLoaderDistCjsJsSrcAppChartsTimePlanningTimePlanningComponentHtml(module, __webpack_exports__, __webpack_require__) {
+  function node_modulesRawLoaderDistCjsJsSrcAppChartsTimePlanningTimePlanningComponentHtml(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n";
+
     /***/
   },
 
+  /***/"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/video-analytics/video-analytics.component.html":
+  /*!*************************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/charts/video-analytics/video-analytics.component.html ***!
+    \*************************************************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/video-analytics/video-analytics.component.html": function node_modulesRawLoaderDistCjsJsSrcAppChartsVideoAnalyticsVideoAnalyticsComponentHtml(module, __webpack_exports__, __webpack_require__) {
+  function node_modulesRawLoaderDistCjsJsSrcAppChartsVideoAnalyticsVideoAnalyticsComponentHtml(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n";
+
     /***/
   },
 
+  /***/"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/video-engagements/video-engagements.component.html":
+  /*!*****************************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/charts/video-engagements/video-engagements.component.html ***!
+    \*****************************************************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/video-engagements/video-engagements.component.html": function node_modulesRawLoaderDistCjsJsSrcAppChartsVideoEngagementsVideoEngagementsComponentHtml(module, __webpack_exports__, __webpack_require__) {
+  function node_modulesRawLoaderDistCjsJsSrcAppChartsVideoEngagementsVideoEngagementsComponentHtml(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n";
+
     /***/
   },
 
+  /***/"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/writing-analytics/writing-analytics.component.html":
+  /*!*****************************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/charts/writing-analytics/writing-analytics.component.html ***!
+    \*****************************************************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/writing-analytics/writing-analytics.component.html": function node_modulesRawLoaderDistCjsJsSrcAppChartsWritingAnalyticsWritingAnalyticsComponentHtml(module, __webpack_exports__, __webpack_require__) {
+  function node_modulesRawLoaderDistCjsJsSrcAppChartsWritingAnalyticsWritingAnalyticsComponentHtml(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n";
+
     /***/
   },
 
+  /***/"./node_modules/raw-loader/dist/cjs.js!./src/app/component/add-data/add-data.component.html":
+  /*!**************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/component/add-data/add-data.component.html ***!
+    \**************************************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./node_modules/raw-loader/dist/cjs.js!./src/app/component/add-data/add-data.component.html": function node_modulesRawLoaderDistCjsJsSrcAppComponentAddDataAddDataComponentHtml(module, __webpack_exports__, __webpack_require__) {
+  function node_modulesRawLoaderDistCjsJsSrcAppComponentAddDataAddDataComponentHtml(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
+    __webpack_exports__["default"] = "<!--Data Entry form -->\n\n<div style=\"margin: auto;\" *ngIf=\"referenceOptions\n  && learningActivitiesOptions && (indicatorOptions$ | async)\">\n\n    <div class=\"title\">\n        Add NEW Indicators and their Metrics\n    </div>\n\n    <div class=\"content-wrapper\">\n        <div class=\"form-wrapper\">\n            <fieldset>\n                <legend>Indicator</legend>\n                <form [formGroup]=\"indicatorForm\" class=\"form-section\">\n                    <div class=\"form-element form-element-100\">\n                        <label>Learning Activities *</label>\n                        <ng-multiselect-dropdown [(ngModel)]=\"selectedLearningActivities\"\n                                                 [ngModelOptions]=\"{standalone: true}\"\n                                                 placeholder=\"Learning Activities\"\n                                                 [settings]=\"dropdownSettings\"\n                                                 [data]=\"learningActivitiesOptions\"\n                                                 (onSelect)=\"learningActivityiesSelected()\" (onDeSelect)=\"learningActivityiesSelected()\"\n                                                 (onSelectAll)=\"learningActivityiesSelected()\" (onDeSelectAll)=\"learningActivityiesSelected()\"\n                        >\n                        </ng-multiselect-dropdown>\n                        <div\n                            *ngIf=\"indicatorForm.controls['learningActivities'].invalid && (indicatorForm.controls['learningActivities'].dirty || indicatorForm.controls['learningActivities'].touched)\"\n                            class=\"alert\">\n                                Learning Activity is required.\n                        </div>\n                    </div>\n                    <div class=\"form-element form-element-100\" *ngIf=\"showActivityMessages\">\n                        <div style=\"color: rgb(4, 117, 14); cursor: pointer\" (click)=\"showActivityDialoge()\"\n                             [innerHTML]=\"'Indicators will be added to the corresponding Events, depending on the chosen Activities. For more informations click here'\"></div>\n                    </div>\n                    <div class=\"form-element form-element-85\">\n                        <label>Name *</label>\n                        <input type=\"text\" formControlName=\"indicatorName\" placeholder=\"Indicator Name\" required/>\n                        <div\n                            *ngIf=\"indicatorForm.controls['indicatorName'].invalid && (indicatorForm.controls['indicatorName'].dirty || indicatorForm.controls['indicatorName'].touched)\"\n                            class=\"alert\">\n                            Name is required.\n                        </div>\n                    </div>\n                    <div class=\"form-element form-element-15\">\n                        <label>Number *</label>\n                        <input type=\"text\" formControlName=\"referenceNumber\"/>\n                    </div>\n                    <div class=\"form-element form-element-100\">\n                        <label>Metrics *</label>\n                        <textarea class=\"text\" cols=\"30\" rows=\"10\" type=\"text\" formControlName=\"metrics\"\n                                  placeholder=\"Metrics must be comma seperated\" required></textarea>\n                        <div\n                            *ngIf=\"indicatorForm.controls['metrics'].invalid && (indicatorForm.controls['metrics'].dirty || indicatorForm.controls['metrics'].touched)\"\n                            class=\"alert\">\n                            Metrics are required.\n                        </div>\n                    </div>\n                </form>\n            </fieldset>\n            <fieldset>\n                <legend>Reference</legend>\n                <form [formGroup]=\"referenceForm\" class=\"form-section last\" style=\"height: 100%\">\n                    <div class=\"form-section\">\n                        <div class=\"form-element form-element-100\">\n                            <label>Text *</label>\n                            <ng-container *ngIf=\"!useExistingReference\">\n                                <input type=\"text\" formControlName=\"referenceText\" placeholder=\"Reference Text\"\n                                       required/>\n                            </ng-container>\n                            <ng-container *ngIf=\"useExistingReference\">\n                                <ng-select placeholder=\"Reference\" [readonly]=\"this.readonly('indicator') && !useExistingReference\"\n                                           (change)=\"onReferenceChange($event)\">\n                                    <ng-option *ngFor=\"let reference of referenceOptions\" [value]=\"reference\">\n                                        {{reference.referenceNumber}} {{reference.referenceText}}\n                                    </ng-option>\n                                </ng-select>\n                            </ng-container>\n                            <div\n                                *ngIf=\"referenceForm.controls['referenceText'].invalid && (referenceForm.controls['referenceText'].dirty || referenceForm.controls['referenceText'].touched)\"\n                                class=\"alert\">\n                                Text is required.\n                            </div>\n                        </div>\n                        <div class=\"form-element form-element-85\">\n                            <label>Link *</label>\n                            <input type=\"text\" formControlName=\"referenceLink\" placeholder=\"Reference Link\"/>\n                            <div\n                                *ngIf=\"referenceForm.controls['referenceLink'].invalid && (referenceForm.controls['referenceLink'].dirty || referenceForm.controls['referenceLink'].touched)\"\n                                class=\"alert\">\n                                Link is required.\n                            </div>\n                        </div>\n                        <div class=\"form-element form-element-15\">\n                            <label>Number *</label>\n                            <input type=\"text\" formControlName=\"referenceNumber\"/>\n                        </div>\n                        <div class=\"form-element form-element-50\">\n                            <label>Verified</label>\n                            <ng-select formControlName=\"verified\" placeholder=\"Verification\">\n                                <ng-option *ngFor=\"let verifiedOption of verifiedOptions\" [value]=\"verifiedOption\">\n                                    {{verifiedOption}}\n                                </ng-option>\n                            </ng-select>\n                        </div>\n                        <div class=\"form-element form-element-50\">\n                            <label>Development</label>\n                            <ng-select formControlName=\"development\" placeholder=\"Development\">\n                                <ng-option *ngFor=\"let developmentOption of developmentOptions\" [value]=\"developmentOption\">\n                                    {{developmentOption}}\n                                </ng-option>\n                            </ng-select>\n                        </div>\n                    </div>\n                    <div class=\"form-section\">\n                        <input type=\"checkbox\" (change)=\"checkboxReferenceClicked()\" [disabled]=\"target && !referenceZero\"/>\n                        <label>Use existing Reference</label>\n                    </div>\n                </form>\n            </fieldset>\n\n            <button type=\"submit\" class=\"buttonLaTool save-button\"\n                    (click)='addData()'>Save\n            </button>\n        </div>\n        <div style=\"min-width: 260px\">\n            <button\n                style=\"padding: 6px 8px 6px 8px; float: right; margin-right: 8px; background-image: linear-gradient(45deg, #8e1e22 10%, #edcfcf 51%, #8e1e22 100%) !important; box-shadow: 2px 4px 5px 0 #ead8d8;\"\n                class=\"buttonLaTool\" (click)='logout()'>Logout\n            </button>\n            <span style=\"float: right; margin-right: 16px; margin-top: 17px;\" *ngIf=\"CUserName\">\n       Welcome, {{CUserName}}\n      </span>\n        </div>\n    </div>\n\n</div>\n\n<ng-template #activityDialog let-messages>\n    <h2 matDialogTitle>Events affected by Activity Choise</h2>\n    <mat-dialog-content>\n        <ul *ngFor=\"let message of activityMessages\">\n            <li>{{ message }}</li>\n        </ul>\n        <div>Therefore, the Indicator and Metrics you want to add will\n        be added automatically under these events:\n        </div>\n        <div style=\"padding-bottom: 1em\">{{showEvents()}}</div>\n    </mat-dialog-content>\n    <button mat-button mat-dialog-close>Close</button>\n</ng-template>\n";
 
-
-    __webpack_exports__["default"] = "<!--Data Entry form -->\n\n<div style=\"margin: auto;\">\n  <form [formGroup]=\"dataEntryForm\">\n\n    <div id=\"title\">\n      Add NEW Indicators and their Metrics\n    </div>\n   \n    <label *ngIf=\"successfulMessage\" >\n      <input type=\"checkbox\" class=\"alertCheckbox\" autocomplete=\"off\" />\n      <div class=\"alert success\">\n        <span class=\"alertClose\">X</span>\n        <span class=\"alertText\" [innerHTML]=\"successfulMessage\">\n        <br class=\"clear\"/></span>\n      </div>\n    </label>\n\n    <div id=\"dropdown\">\n      <label>Learning Events</label>\n      <mat-select placeholder=\"Learning Events\" (selectionChange)=\"learningValueChange($event.value)\"\n        formControlName=\"learningEvents\">\n        <mat-option *ngFor=\"let learningEvent of options\" [value]=\"learningEvent\">\n          {{ learningEvent }}\n        </mat-option>\n      </mat-select>\n      \n      <button style=\"padding: 6px 8px 6px 8px; float: right; margin-right: 8px; background-image: linear-gradient(45deg, #8e1e22 10%, #edcfcf 51%, #8e1e22 100%) !important; box-shadow: 2px 4px 5px 0px #ead8d8;\" class=\"buttonLaTool\" (click)='logout()'>Logout</button>\n      <span style=\"float: right; margin-right: 16px; margin-top: 17px;\" *ngIf=\"CUserName\">\n       Welcome, {{CUserName}}\n      </span>\n    </div>\n\n    <div id=\"activities\">\n      <label for=\"\">Learning Activities</label>\n      <mat-select formControlName=\"learningActivities\" [(ngModel)]=\"LaOptionValue\" placeholder=\"Learning Activities\" (selectionChange)=\"onActivityValueChange($event.value)\">\n        <mat-option *ngFor=\"let LearningAct of dropdownList\" [value]=\"LearningAct\" >\n         {{ LearningAct}}\n        </mat-option>\n      </mat-select>\n      <div style=\"color: rgb(4, 117, 14); margin-left: 212px; margin-top: 7px;\" *ngIf=\"similarActivityMessage\" [innerHTML]=\"similarActivityMessage\"></div>\n    </div>\n\n    <div formArrayName=\"indicator\">\n      <div *ngFor=\"let indicator of indicatorControls; let i = index\" [formGroupName]=\"i\">\n        <div id=\"indicators\">\n          <label class=\"indicatorName\">Indicators</label>\n          <input type=\"text\" formControlName=\"indicatorName\" placeholder=\"Indicator Name [ref]\" required/>\n        </div>\n\n        <div class=\"formfield\">\n          <label class=\"metrics\">Metrics</label>\n          <textarea class=\"text\" cols=\"30\" rows=\"10\" type=\"text\" formControlName=\"metrics\"\n            placeholder=\"Metrics must be comma seperated\" required></textarea>\n        </div>\n      </div>\n\n    </div>\n    <div id=\"savebtn\">\n      <button type=\"submit\" class=\"buttonLaTool\" \n        (click)='addData(learningEvents,learningActivities,indicator,metrics)'\n        [disabled]=\"dataEntryForm.pristine || dataEntryForm.invalid\">Save</button>\n    \n        \n      </div>\n  </form>\n\n</div>\n";
     /***/
   },
 
+  /***/"./node_modules/raw-loader/dist/cjs.js!./src/app/component/admin/admin.component.html":
+  /*!********************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/component/admin/admin.component.html ***!
+    \********************************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./node_modules/raw-loader/dist/cjs.js!./src/app/component/admin/admin.component.html": function node_modulesRawLoaderDistCjsJsSrcAppComponentAdminAdminComponentHtml(module, __webpack_exports__, __webpack_require__) {
+  function node_modulesRawLoaderDistCjsJsSrcAppComponentAdminAdminComponentHtml(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
+    __webpack_exports__["default"] = "<div class=\"container\">\n  <form [formGroup]=\"loginForm\" novalidate>\n    <div id=\"title\">\n        {{buttonText()}} Form\n    </div>\n    <div id=\"username\">\n      <label>Username</label>\n        <div>\n      <input type=\"text\" formControlName=\"username\" required>\n        <div\n            *ngIf=\"loginForm.controls['username'].invalid && (loginForm.controls['username'].dirty || loginForm.controls['username'].touched)\"\n            class=\"alert\">\n            <div *ngIf=\"loginForm.controls['username'].errors.required\">\n                User Name is required.\n            </div>\n        </div>\n        </div>\n    </div>\n\n\n    <div id=\"password\">\n      <label class=\"learningActivities\">Password</label>\n        <div>\n      <input type=\"password\" formControlName=\"password\" required>\n        <div\n            *ngIf=\"loginForm.controls['password'].invalid && (loginForm.controls['password'].dirty || loginForm.controls['password'].touched)\"\n            class=\"alert\">\n            <div *ngIf=\"loginForm.controls['password'].errors.required\">\n                Password is required.\n            </div>\n        </div>\n        </div>\n    </div>\n    <div id=\"submit\">\n\n      <button class=\"submitbtn\" mat-raised-button color=\"primary\" type=\"submit\" (click)=\"submit()\"\n        [disabled]=\"loginForm.pristine || loginForm.invalid\">{{buttonText()}}</button>\n    </div>\n      <div *ngIf=\"!register\" id=\"register\">\n          Not yet registered? Sign up\n          <a (click)=\"onRegister()\">here</a>.\n      </div>\n      <div *ngIf=\"register\" id=\"login\">\n          Already registered?\n          <a (click)=\"onRegister()\">Back to Login</a>.\n      </div>\n\n\n\n  </form>\n\n</div>\n";
 
-
-    __webpack_exports__["default"] = "<div class=\"container\">\n  <form [formGroup]=\"loginForm\" novalidate>\n    <div id=\"title\">\n      Login Form\n    </div>\n    <div id=\"username\">\n      <label>Username</label>\n      <input type=\"text\" formControlName=\"username\" required>\n    </div>\n\n    <div\n      *ngIf=\"loginForm.controls['username'].invalid && (loginForm.controls['username'].dirty || loginForm.controls['username'].touched)\"\n      class=\"alert\">\n      <div *ngIf=\"loginForm.controls['username'].errors.required\">\n        User Name is required.\n      </div>\n    </div>\n    <div id=\"password\">\n      <label class=\"learningActivities\">Password</label>\n      <input type=\"password\" formControlName=\"password\" required>\n    </div>\n    <div\n      *ngIf=\"loginForm.controls['password'].invalid && (loginForm.controls['password'].dirty || loginForm.controls['password'].touched)\"\n      class=\"alert\">\n      <div *ngIf=\"loginForm.controls['password'].errors.required\">\n        Password is required.\n      </div>\n    </div>\n    <div id=\"submit\">\n\n      <button class=\"submitbtn\" mat-raised-button color=\"primary\" type=\"submit\" (click)=\"submit()\"\n        [disabled]=\"loginForm.pristine || loginForm.invalid\">Login</button>\n    </div>\n\n\n\n  </form>\n\n</div>\n";
     /***/
   },
 
+  /***/"./node_modules/raw-loader/dist/cjs.js!./src/app/component/dashboard/dashboard.component.html":
+  /*!****************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/component/dashboard/dashboard.component.html ***!
+    \****************************************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./node_modules/raw-loader/dist/cjs.js!./src/app/component/dashboard/dashboard.component.html": function node_modulesRawLoaderDistCjsJsSrcAppComponentDashboardDashboardComponentHtml(module, __webpack_exports__, __webpack_require__) {
+  function node_modulesRawLoaderDistCjsJsSrcAppComponentDashboardDashboardComponentHtml(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "<app-chart-manager> </app-chart-manager>\n\n<div class=\"footer\">\n  <p>Dashboard is rendered with OpenLAIR.</p>\n</div>\n\n<a id=\"back-to-top\" class=\"btn back-to-top\" role=\"button\" (click)=\"backToTop()\">\n  <i class=\"material-icons buttonLaTool\">arrow_upward</i>\n</a>\n";
+
     /***/
   },
 
+  /***/"./node_modules/raw-loader/dist/cjs.js!./src/app/component/display/display.component.html":
+  /*!************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/component/display/display.component.html ***!
+    \************************************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./node_modules/raw-loader/dist/cjs.js!./src/app/component/display/display.component.html": function node_modulesRawLoaderDistCjsJsSrcAppComponentDisplayDisplayComponentHtml(module, __webpack_exports__, __webpack_require__) {
+  function node_modulesRawLoaderDistCjsJsSrcAppComponentDisplayDisplayComponentHtml(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
+    __webpack_exports__["default"] = "<div class=\"tool_Home\">\n  <!--   Not run the demo if it is not home page-->\n  <div class=\"content-left\" [ngClass]=\"{extendedMetrics: searchMat}\">\n    <div class=\"h-flex\" style=\"max-width: 1100px\">\n      <div class=\"w-20\">\n    <span style=\"padding-bottom: 2px\">\n      <strong>Learning Events</strong><br/>\n      <span class=\"stepDefine\" style=\"font-size: 14px; cursor: pointer;\" id=\"tooltipEvents\"\n            data-tooltipster='{\"side\":\"bottom\",\"animation\":\"fall\", \"delay\":\"200\", \"theme\":\"tooltipster-shadow\"}'\n            title=\"\">\n        <img width=\"16px\" src=\"assets/images/question.png\"/> Click here for more details\n        <span class=\"\" id=\"contentEvents\">\n          <p style=\"text-align: left\">\n            <strong>Learning Events</strong><br/>\n            A learning objective is the desired outcome of a single or multiple\n            learning event and is used to establish learning <br/>\n            activities to achieve the overall learning outcome\n            <a target=\"_blank\"\n               href=\"https://research.tue.nl/en/publications/teacher-learning-in-the-context-of-educational-innovation-learnin\">[13]</a>.\n            Learning design literature identified eight learning events:\n            <br/>create, explore, practice, imitate, receive, debate,\n            meta-learn/Elf-reflect, and experiment\n            <a target=\"_blank\" href=\"http://www.labset.net/media/prod/8LEM.pdf\">[1]</a>,\n            <a target=\"_blank\" href=\"https://www.tandfonline.com/doi/abs/10.1080/10494820701343694\">[2]</a>.\n            <br/><br/>\n            <img width=\"800px\" src=\"assets/images/events.png\"/>\n          </p>\n        </span>\n      </span>\n    </span>\n        <mat-form-field style=\"width: 100%\">\n          <mat-select class=\"step1\" placeholder=\"Learning Events\" name=\"Select\" [(ngModel)]=\"selectedLearningEvents\"\n                      multiple #selectionModel=\"ngModel\" (opened)=\"onOpen()\" (closed)=\"onEventValueChange(selectedLearningEvents, false)\">\n            <app-select-check-all [model]=\"selectionModel\" [values]=\"(learningEventsOptions$ | async)\">\n            </app-select-check-all>\n            <mat-option *ngFor=\"let option of (learningEventsOptions$ | async)\" [value]=\"option\">\n              {{ option }}\n            </mat-option>\n          </mat-select>\n        </mat-form-field>\n      </div>\n      <div class=\"w-40\">\n        <strong>Learning Activities</strong><br/>\n        <span style=\"font-size: 14px; cursor: pointer;\" id=\"tooltipActivities\"\n              data-tooltipster='{\"side\":\"bottom\",\"animation\":\"fall\", \"delay\":\"200\", \"theme\":\"tooltipster-shadow\"}'\n              title=\"\">\n      <img width=\"16px\" src=\"assets/images/question.png\"/> Click here for more\n      details\n      <span class=\"\" id=\"contentActivities\">\n        <p style=\"text-align: left\">\n          <strong>Learning Activities</strong><br/>\n          A study by Gruber et al.\n          <a target=\"_blank\"\n             href=\"https://www.researchgate.net/publication/334170760_Design_Thinking_for_Technology_Enhanced_Learning\">[3]</a>\n          took the model of learning events and added learning activities<br/>\n          to identify its outcomes in LD. Learning activities are split into\n          in-class methods and tools,<br/>\n          and online methods and tools [<a target=\"_blank\"\n                                           href=\"https://www.researchgate.net/publication/334170760_Design_Thinking_for_Technology_Enhanced_Learning\">3</a>,\n          <a target=\"_blank\"\n             href=\"https://www.researchgate.net/publication/222945649_Factors_affecting_teachers'_participation_in_professional_learning_activities\">9</a>].\n          Examples of in-class methods and tools are exercise, <br/>exam,\n          presentation, discussion, demonstration, etc. On the other hand,\n          online methods and <br/>tools are blogs, wikis, forums, photo and\n          audio notes, online tests and quizzes, e-portfolios, <br/>etc.\n        </p>\n      </span>\n    </span>\n        <div class=\"pt-1\">\n          <ng-multiselect-dropdown class=\"step2\" [placeholder]=\"'Learning Activities'\"\n                                   [settings]=\"dropdownSettings\"\n                                   [data]=\"(learningActivitiesOptions$ | async)\"\n                                   [(ngModel)]=\"selectedLearningActivities\"\n                                   (onSelect)=\"onActivitySelectChange()\" (onDeSelectAll)=\"onActivitySelectChange()\"\n                                   (onSelectAll)=\"onActivitySelectChange()\" (onDeSelect)=\"onActivitySelectChange()\">\n          </ng-multiselect-dropdown>\n        </div>\n      </div>\n      <div class=\"w-20\">\n        <strong>Indicators</strong><br/>\n        <span style=\"font-size: 14px; cursor: pointer;\" id=\"tooltipIndicators\"\n              data-tooltipster='{\"side\":\"bottom\",\"animation\":\"fall\", \"delay\":\"200\", \"theme\":\"tooltipster-shadow\"}'\n              title=\"\">\n      <span><img width=\"16px\" src=\"assets/images/question.png\"/> Click here for\n        more details</span>\n      <span class=\"toolBoxCss\" id=\"contentIndicators\">\n        <p style=\"height: 572px\">\n          <strong>Indicators</strong><br/>\n          Metrics (measurements) are used to create indicators; an indicator is\n          the result of the analysis of one<br/>\n          or multiple metrics (e.g. number of views, login/logout frequency &\n          time, number of posts, etc.) and gives\n          <br/>\n          a more comprehensive picture on a particular (abstract) learner\n          status, e.g. reading comprehension, <br/>\n          self-reflection, etc. An indicator covers a particular aspect of an\n          abstract variable (e.g., student engagement)<br/>\n          by using relevant (measurable) items.<br/><br/>\n          Here is an example of Student Engagement in Moodle. <br/>\n          <img src=\"assets/images/engagement.jpg\"/>\n        </p>\n      </span>\n    </span>\n        <div class=\"mat-input-element-fix pt-1\">\n          <input class=\"step3\" matInput [(ngModel)]=\"searchInd\" (change)=\"determineFilteredTableDataByIndicatorAndMetricText()\"  placeholder=\"Search Indicator\"/>\n        </div>\n      </div>\n      <div class=\"w-20\">\n        <strong>Metrics</strong><br/>\n        <span style=\"font-size: 14px; cursor: pointer;\" id=\"tooltipMetrics\"\n              data-tooltipster='{\"side\":\"bottom\",\"animation\":\"fall\", \"delay\":\"200\", \"theme\":\"tooltipster-shadow\"}'\n              title=\"\">\n      <img width=\"16px\" src=\"assets/images/question.png\"/> Click here for more\n      details\n      <span class=\"toolBoxCss\" id=\"contentMetrics\">\n        <p style=\"text-align: left\">\n          <strong>Metrics</strong><br/>\n          Learning analytics applications collect data from the interaction\n          between learners and LMSs.<br/>\n          To make sense of these captured data, they need to be categorized in a\n          corresponding unit of<br/>\n          measurement (e.g. number of views, login/logout frequency & time,\n          number of posts, etc.). In<br/>\n          this paper, we refer to the units of measurements as metrics.\n        </p>\n      </span>\n    </span>\n        <div class=\"mat-input-element-fix pt-1\">\n          <input class=\"stepMetrics\" matInput [(ngModel)]=\"searchMat\" (change)=\"determineFilteredTableDataByIndicatorAndMetricText()\" placeholder=\"Search Metrics\"/>\n        </div>\n      </div>\n    </div>\n\n    <app-table *ngIf=\"!searchMat\" [data]=\"(tableData$ | async)\" [searchInd]=\"searchInd\" [searchMat]=\"searchMat\"\n               [checkedMap]=\"checkedMap\" [loggedIn]=\"loggedIn\"\n               (checkboxEmitter)=\"onCheckboxChange($event)\"\n               (getMetericsEmitter)=\"getMeterics($event)\"\n               (onReviewEmitter)=\"onReview($event)\"\n               (onVerdictEmitter)=\"onVerdict($event)\"\n               (onDeleteEmitter)=\"onDelete($event)\"\n    ></app-table>\n  </div>\n\n  <div class=\"content-right\" [ngClass]=\"{extendedMetrics: searchMat}\">\n    <div class=\"h-flex\">\n      <button class=\"stepVisualize buttonLaTool\" (click)=\"visualizeClicked()\">\n        <i class=\"fa-solid fa-display\"></i> &nbsp; Visualize\n      </button>\n      <button class=\"stepDownload buttonLaTool\" (click)=\"jsonClicked()\"><i class=\"fa-solid fa-download\"></i>\n        &nbsp; JSON\n      </button>\n\n      <button class=\"stepDownloadText buttonLaTool\" (click)=\"textClicked()\">\n        <i class=\"fa-solid fa-download\"></i> &nbsp; TEXT\n      </button>\n\n      <button class=\"stepReset buttonRed\" (click)=\"reset()\"><i class=\"fa-solid fa-arrow-rotate-right\"></i> &nbsp;\n        Reset\n      </button>\n\n      <button *ngIf=\"!loggedIn\" (click)=\"logIn()\" class=\"buttonLaTool login-button\">Login\n      </button>\n\n      <button *ngIf=\"loggedIn\"\n              style=\"background-image: linear-gradient(45deg, #8e1e22 10%, #edcfcf 51%, #8e1e22 100%) !important; box-shadow: 2px 4px 5px 0 #ead8d8;\"\n              class=\"buttonLaTool logout-button\" (click)='logout()'>Logout\n      </button>\n    </div>\n\n      <button *ngIf=\"loggedIn && loggedIn.superAdmin\" (click)=\"generateTreeStructure()\" class=\"buttonLaTool generateButton\">\n          Generate Data for TreeStructure\n      </button>\n\n    <label *ngIf=\"atLeastOneChecked()\" class=\"selected-indicators-label\"> Selected Indicator(s)</label>\n    <div class=\"selected-indicators-wrapper\">\n      <ul id=\"reset\" style=\"line-height: 17px; font-size: 15px\" *ngFor=\"let selectInd of ind_list\">\n        <li>\n          {{ selectInd }}\n        </li>\n      </ul>\n    </div>\n\n    <a id=\"back-to-top\" class=\"btn back-to-top\" role=\"button\" (click)=\"backToTop()\">\n      <i class=\"material-icons buttonLaTool\">arrow_upward</i>\n    </a>\n    <!-- <button class=\"stepReset buttonLaTool\"  (click)=\"reset()\"><img width=\"70px\" src=\"assets/images/reset.png\"/></button>  -->\n  </div>\n</div>\n<div *ngIf=\"searchMat\" class=\"extendedMetricsTable\">\n  <app-table [data]=\"(tableData$ | async)\" [searchInd]=\"searchInd\" [searchMat]=\"searchMat\"\n             [checkedMap]=\"checkedMap\" [loggedIn]=\"loggedIn\"\n             (checkboxEmitter)=\"onCheckboxChange($event)\"\n             (getMetericsEmitter)=\"getMeterics($event)\"\n             (onReviewEmitter)=\"onReview($event)\"\n             (onVerdictEmitter)=\"onVerdict($event)\"\n             (onDeleteEmitter)=\"onDelete($event)\"\n  ></app-table>\n</div>\n\n<ng-template #secondDialog>\n  <h2 matDialogTitle>Metrics for the Indicator \"{{metricsIndicatorTitle}}\"</h2>\n  <mat-dialog-content>\n    <ul *ngFor=\"let metric of metrics_list\">\n      <li>{{ metric }}</li>\n    </ul>\n  </mat-dialog-content>\n  <button mat-button mat-dialog-close>Close</button>\n</ng-template>\n\n<ng-template #reviewDialog let-indicator>\n  <app-review-display [indicator]=\"indicator\"></app-review-display>\n</ng-template>\n\n<ng-template #verdictDialog let-reference>\n    <h2 matDialogTitle>Verdict for the Indicator \"{{metricsIndicatorTitle}}\"</h2>\n    <mat-dialog-content>\n        <div class=\"verdictContent\">\n            <div class=\"verdictRow\">\n                <div class=\"verdictLabel\">Verified:</div>\n                <div *ngIf=\"reference.status\">{{reference.status}}</div>\n                <div *ngIf=\"!reference.status\">No information</div>\n            </div>\n            <div class=\"verdictRow\">\n                <div class=\"verdictLabel\">Development:</div>\n                <div *ngIf=\"reference.development\">{{reference.development}}</div>\n                <div *ngIf=\"!reference.development\">No information</div>\n            </div>\n        </div>\n    </mat-dialog-content>\n    <button *ngIf=\"loggedIn && loggedIn.superAdmin\" mat-button mat-dialog-close (click)=\"editReference(reference._id)\" class=\"buttonLaTool\"\n            style=\"margin-right: 10px\">Edit\n    </button>\n    <button mat-button mat-dialog-close>Close</button>\n</ng-template>\n\n<ng-template #deleteDialog let-data>\n    <h2 matDialogTitle>Which delete process do you want to execute?</h2>\n    <button mat-button mat-dialog-close (click)=\"deleteIndicator(data.indicator)\" class=\"buttonLaTool\"\n            style=\"margin-right: 10px\">Delete Indicator\n    </button>\n    <button mat-button mat-dialog-close (click)=\"removeIndicatorFromActivity(data)\" class=\"buttonLaTool\"\n            style=\"margin-right: 10px\">Remove from Activity\n    </button>\n    <button mat-button mat-dialog-close>Cancel</button>\n</ng-template>\n";
 
-
-    __webpack_exports__["default"] = "<span class=\"tool_Home\">\n  <!-- Not run the demo if it is not home page -->\n  <div>\n    <span style=\"padding-bottom: 2px\">\n      <strong>Learning Events</strong><br />\n      <span class=\"stepDefine\" style=\"font-size: 14px; cursor: pointer;\" id=\"tooltipEvents\"\n        data-tooltipster='{\"side\":\"bottom\",\"animation\":\"fall\", \"delay\":\"200\", \"theme\":\"tooltipster-shadow\"}' title=\"\">\n        <img width=\"16px\" src=\"assets/images/question.png\" /> Click here for more details\n        <span class=\"\" id=\"contentEvents\">\n          <p style=\"text-align: left\">\n            <strong>Learning Events</strong><br />\n            A learning objective is the desired outcome of a single or multiple\n            learning event and is used to establish learning <br />\n            activities to achieve the overall learning outcome\n            <a target=\"_blank\"\n              href=\"https://research.tue.nl/en/publications/teacher-learning-in-the-context-of-educational-innovation-learnin\">[13]</a>.\n            Learning design literature identified eight learning events:\n            <br />create, explore, practice, imitate, receive, debate,\n            meta-learn/Elf-reflect, and experiment\n            <a target=\"_blank\" href=\"http://www.labset.net/media/prod/8LEM.pdf\">[1]</a>,\n            <a target=\"_blank\" href=\"https://www.tandfonline.com/doi/abs/10.1080/10494820701343694\">[2]</a>.\n            <br /><br />\n            <img width=\"800px\" src=\"assets/images/events.png\" />\n          </p>\n        </span>\n      </span>\n    </span>\n    <br />\n    <mat-form-field>\n      <mat-select class=\"step1\" placeholder=\"Learning Events\" name=\"Select\" [(ngModel)]=\"LearningEvents_mateSelect\"\n        multiple #selectionModel=\"ngModel\" (valueChange)=\"onEventValueChange($event)\">\n        <app-select-check-all [model]=\"selectionModel\" [values]=\"AllLearningEventsOptions\"\n          (sendCount)=\"onEventValueChange($event)\">\n        </app-select-check-all>\n        <mat-option *ngFor=\"let option of AllLearningEventsOptions\" [value]=\"option\">\n          {{ option }}\n        </mat-option>\n      </mat-select>\n    </mat-form-field>\n  </div>\n  <div>\n    <strong>Learning Activites</strong><br />\n    <span style=\"font-size: 14px; cursor: pointer;\" id=\"tooltipActivites\"\n      data-tooltipster='{\"side\":\"bottom\",\"animation\":\"fall\", \"delay\":\"200\", \"theme\":\"tooltipster-shadow\"}' title=\"\">\n      <img width=\"16px\" src=\"assets/images/question.png\" /> Click here for more\n      details\n      <span class=\"\" id=\"contentActivites\">\n        <p style=\"text-align: left\">\n          <strong>Learning Activites</strong><br />\n          A study by Gruber et al.\n          <a target=\"_blank\"\n            href=\"https://www.researchgate.net/publication/334170760_Design_Thinking_for_Technology_Enhanced_Learning\">[3]</a>\n          took the model of learning events and added learning activities<br />\n          to identify its outcomes in LD. Learning activities are split into\n          in-class methods and tools,<br />\n          and online methods and tools [<a target=\"_blank\"\n            href=\"https://www.researchgate.net/publication/334170760_Design_Thinking_for_Technology_Enhanced_Learning\">3</a>,\n          <a target=\"_blank\"\n            href=\"https://www.researchgate.net/publication/222945649_Factors_affecting_teachers'_participation_in_professional_learning_activities\">9</a>].\n          Examples of in-class methods and tools are exercise, <br />exam,\n          presentation, discussion, demonstration, etc. On the other hand,\n          online methods and <br />tools are blogs, wikis, forums, photo and\n          audio notes, online tests and quizzes, e-portfolios, <br />etc.\n        </p>\n      </span>\n    </span>\n    <br /><br />\n    <ng-multiselect-dropdown class=\"step2\" [placeholder]=\"'Learning Activities'\" [data]=\"dropdownList\"\n      [(ngModel)]=\"selectedActivityItems\" [settings]=\"dropdownSettings\" (onSelect)=\"onActivitySelect($event)\"\n      (onSelectAll)=\"onSelectAll($event)\" (onDeSelect)=\"checkvalue($event)\">\n    </ng-multiselect-dropdown>\n  </div>\n  <div>\n    <strong>Indicators</strong><br />\n    <span style=\"font-size: 14px; cursor: pointer;\" id=\"tooltipIndicators\"\n      data-tooltipster='{\"side\":\"bottom\",\"animation\":\"fall\", \"delay\":\"200\", \"theme\":\"tooltipster-shadow\"}' title=\"\">\n      <span><img width=\"16px\" src=\"assets/images/question.png\" /> Click here for\n        more details</span>\n      <span class=\"toolBoxCss\" id=\"contentIndicators\">\n        <p style=\"height: 572px\">\n          <strong>Indicators</strong><br />\n          Metrics (measurements) are used to create indicators; an indicator is\n          the result of the analysis of one<br />\n          or multiple metrics (e.g. number of views, login/logout frequency &\n          time, number of posts, etc.) and gives\n          <br />\n          a more comprehensive picture on a particular (abstract) learner\n          status, e.g. reading comprehension, <br />\n          self-reflection, etc. An indicator covers a particular aspect of an\n          abstract variable (e.g., student engagement)<br />\n          by using relevant (measurable) items.<br /><br />\n          Here is an example of Student Engagement in Moodle. <br />\n          <img src=\"assets/images/engagement.jpg\" />\n        </p>\n      </span>\n    </span>\n    <br /><br />\n    <input class=\"step3\" matInput [(ngModel)]=\"searchInd\" placeholder=\"Search Indicator\"\n      (change)=\"searchIndicator(searchInd)\" />\n  </div>\n  <div>\n    <strong>Metrics</strong><br />\n    <span style=\"font-size: 14px; cursor: pointer;\" id=\"tooltipMetrics\"\n      data-tooltipster='{\"side\":\"bottom\",\"animation\":\"fall\", \"delay\":\"200\", \"theme\":\"tooltipster-shadow\"}' title=\"\">\n      <img width=\"16px\" src=\"assets/images/question.png\" /> Click here for more\n      details\n      <span class=\"toolBoxCss\" id=\"contentMetrics\">\n        <p style=\"text-align: left\">\n          <strong>Metrics</strong><br />\n          Learning analytics applications collect data from the interaction\n          between learners and LMSs.<br />\n          To make sense of these captured data, they need to be categorized in a\n          corresponding unit of<br />\n          measurement (e.g. number of views, login/logout frequency & time,\n          number of posts, etc.). In<br />\n          this paper, we refer to the units of measurements as metrics.\n        </p>\n      </span>\n    </span>\n    <br /><br />\n    <input class=\"stepMetrics\" matInput [(ngModel)]=\"searchMat\" placeholder=\"Search Metrics\"\n      (change)=\"learningEventsChangeOnSearch(searchMat)\" />\n  </div>\n\n  <div style=\"margin-left: 50px\">\n    <label *ngIf=\"ind\" style=\"color: gray; font-size: 15px\"> Selected Indicator(s)</label>\n    <ul id=\"reset\" style=\"line-height: 15%; font-size: 15px\" *ngFor=\"let selectInd of ind_list\">\n      <li>\n        {{ selectInd }}\n      </li>\n    </ul>\n    <span style=\"padding-top: 16px; padding-bottom: 16px\">\n      <button class=\"stepVisualize buttonLaTool\" (click)=\"forwardIndicators(ind_list)\">\n        <i class=\"fa-solid fa-display\"></i> &nbsp; Visualize\n      </button>\n      <button class=\"stepDownload buttonLaTool\" (click)=\"getSelectedind(mat_list)\"><i class=\"fa-solid fa-download\"></i>\n        &nbsp; JSON\n      </button>\n\n      <button class=\"stepDownloadText buttonLaTool\" (click)=\"download(mat_list, 'text/plain', 'Indicators TEXT.txt')\">\n        <i class=\"fa-solid fa-download\"></i> &nbsp; TEXT\n      </button>\n\n      <button class=\"stepReset buttonRed\" (click)=\"reset()\"><i class=\"fa-solid fa-arrow-rotate-right\"></i> &nbsp;\n        Reset</button>\n    </span>\n\n    <!-- <button class=\"stepReset buttonLaTool\"  (click)=\"reset()\"><img width=\"70px\" src=\"assets/images/reset.png\"/></button>  -->\n\n  </div>\n\n  <ng-template #secondDialog>\n    <h2 matDialogTitle>Metrics</h2>\n    <mat-dialog-content>\n      <ul *ngFor=\"let mat of sp\">\n        <!-- style=\"line-height: 20%\" -->\n        <li>{{ mat }}</li>\n      </ul>\n    </mat-dialog-content>\n    <button mat-button mat-dialog-close>Close</button>\n  </ng-template>\n\n  <table style=\"margin-left: 10px\">\n    <thead>\n      <th>Learning Events</th>\n      <div>\n        <th style=\"margin-left: 40px\">(Learning) Activities</th>\n      </div>\n      <div style=\"margin-left: 80px\">\n        <th>Indicators</th>\n      </div>\n    </thead>\n\n    <!-- for loop for learning events -->\n    <tr *ngFor=\"let learningEvents of data\">\n      <td style=\"width: 15\" class=\"leraningevents\">\n        {{ learningEvents.LearningEvents }}\n      </td>\n      <td>\n    <tr class=\"activities\" *ngFor=\"let LearningActivities of learningEvents.LearningActivities\">\n      <td style=\"width: 210px\">\n        {{ LearningActivities.Name }}\n      </td>\n      <td class=\"highlightIndicators\">\n        <!-- loop for indicators -->\n    <tr *ngFor=\"let indic of LearningActivities.indicator\">\n      <input class=\"step4\" #indicatorCheckbox type=\"checkbox\" value=\"indic\" [checked]=\"indic.checked\"\n        (change)=\"Checkbox($event, indic)\" />\n\n      <a class=\"sortable stepViewMetrics\" (click)=\"getMeterics(indic)\">\n        <span [innerHTML]=\"indic.indicatorName | sanitizeHtml: searchInd\">\n          {{ indic.indicatorName }}\n        </span>\n      </a>\n      <td *ngIf=\"searchMat\">\n    <tr>\n      <a class=\"sortable\">\n        <span [innerHTML]=\"indic.metrics | sanitizeHtml: searchMat\">\n          {{ indic.metrics }}\n        </span>\n      </a>\n    </tr>\n    </td>\n    </tr>\n    </td>\n    </tr>\n    </td>\n    </tr>\n  </table>\n\n  <a id=\"back-to-top\" class=\"btn back-to-top\" role=\"button\" (click)=\"backToTop()\">\n    <i class=\"material-icons buttonLaTool\">arrow_upward</i>\n  </a>\n</span>";
     /***/
   },
 
+  /***/"./node_modules/raw-loader/dist/cjs.js!./src/app/component/display/table/table.component.html":
+  /*!****************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/component/display/table/table.component.html ***!
+    \****************************************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./node_modules/raw-loader/dist/cjs.js!./src/app/component/dropdown/dropdown.component.html": function node_modulesRawLoaderDistCjsJsSrcAppComponentDropdownDropdownComponentHtml(module, __webpack_exports__, __webpack_require__) {
+  function node_modulesRawLoaderDistCjsJsSrcAppComponentDisplayTableTableComponentHtml(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
+    __webpack_exports__["default"] = "<table>\n  <tr>\n    <th style=\"width: 120px\">Learning Events</th>\n    <th>\n      <div>\n        <span class=\"learningactivities\">Learning<br>Activities</span>\n        <span style=\"margin-left: 6.5em\">Indicators</span>\n      </div>\n    </th>\n  </tr>\n\n  <!-- for loop for learning events -->\n  <tr *ngFor=\"let learningEvents of data\">\n    <td class=\"leraningevents\">\n      {{ learningEvents.name }}\n    </td>\n    <td>\n      <table class=\"w-100\">\n        <tr class=\"activities\" *ngFor=\"let LearningActivities of learningEvents.activities\">\n          <td class=\"learningactivities\">\n            {{ LearningActivities.name }}\n          </td>\n          <td>\n            <table class=\"w-100\">\n              <tr *ngFor=\"let indic of LearningActivities.indicators\" class=\"indicator\">\n                <td [ngClass]=\"{'w-50': searchMat}\" style=\"min-width: 730px\">\n                  <div class=\"indicator-content\">\n                    <input *ngIf=\"indic\" class=\"step4\" #indicatorCheckbox type=\"checkbox\"\n                           [checked]=\"checkedMap.get(indic._id)\"\n                           (click)=\"onCheckboxChange(indic)\"/>\n                    <div class=\"indicator-text\">\n                      <a class=\"sortable stepViewMetrics\" (click)=\"getMetericsEmitter.emit(indic)\">\n                        <span [innerHTML]=\"getFullIndicatorName(indic) | sanitizeHtml: searchInd\">\n                        </span>\n                      </a>\n                      <div>\n                          <a class=\"sortable reference-icon stepReference\" (click)=\"navigateToReferenceLink(indic)\">\n                              <i class=\"fa fa-quote-right\"></i>\n                          </a>\n                          <a class=\"sortable reference-icon stepReference\" (click)=\"onVerdictEmitter.emit(indic)\">\n                              <img style=\"height: 14px\" src=\"assets/images/verdictHammer.png\"/>\n                          </a>\n                      <a class=\"sortable review-icon stepReview\" (click)=\"onReviewEmitter.emit(indic)\">\n                        <i class=\"fa fa-star-o\"></i>\n                      </a>\n\n                      <a *ngIf=\"loggedIn?.superAdmin\" class=\"superAdmin-icon edit\" (click)=\"editAsSuperAdmin(indic)\">\n                        <i class=\"fa fa-pencil\"></i>\n                      </a>\n                      <a *ngIf=\"loggedIn?.superAdmin\" class=\"superAdmin-icon delete\"\n                         (click)=\"onDeleteEmitter.emit({indicator: indic, activity: LearningActivities})\">\n                        <i class=\"fa fa-trash\"></i>\n                      </a>\n                      </div>\n                    </div>\n                  </div>\n                </td>\n                <td *ngIf=\"searchMat\" class=\"w-50\">\n                  <a class=\"sortable\">\n                        <span [innerHTML]=\"indic.metrics | sanitizeHtml: searchMat\">\n                          {{ indic.metrics }}\n                        </span>\n                  </a>\n                </td>\n              </tr>\n            </table>\n          </td>\n        </tr>\n      </table>\n    </td>\n  </tr>\n</table>\n";
 
+    /***/
+  },
 
+  /***/"./node_modules/raw-loader/dist/cjs.js!./src/app/component/dropdown/dropdown.component.html":
+  /*!**************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/component/dropdown/dropdown.component.html ***!
+    \**************************************************************************************************/
+  /*! exports provided: default */
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppComponentDropdownDropdownComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
     __webpack_exports__["default"] = "<mat-form-field>\n  <mat-label>Learning Events</mat-label>\n  <mat-select\n    name=\"Select\"\n    class=\"design\"\n    [formControl]=\"learningevents\"\n    [(value)]=\"selected\"\n    [(ngModel)]=\"selected\"\n    (selectionChange)=\"changeLearningEvents($event.value, selected)\"\n    multiple\n  >\n    <mat-select-trigger> {{ selected }}</mat-select-trigger>\n\n    <mat-option\n      (click)=\"$event.stopPropagation()\"\n      (change)=\"toggleSelection($event)\"\n    >\n      {{ text }}\n    </mat-option>\n\n    <mat-option\n      *ngFor=\"let learningevents of learningEvents\"\n      [value]=\"learningevents\"\n      >{{ learningevents }}</mat-option\n    >\n  </mat-select>\n</mat-form-field>\n";
+
     /***/
   },
 
+  /***/"./node_modules/raw-loader/dist/cjs.js!./src/app/component/header/header.component.html":
+  /*!**********************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/component/header/header.component.html ***!
+    \**********************************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./node_modules/raw-loader/dist/cjs.js!./src/app/component/header/header.component.html": function node_modulesRawLoaderDistCjsJsSrcAppComponentHeaderHeaderComponentHtml(module, __webpack_exports__, __webpack_require__) {
+  function node_modulesRawLoaderDistCjsJsSrcAppComponentHeaderHeaderComponentHtml(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
+    __webpack_exports__["default"] = "<div class=\"header\" id=\"header\">\n  <mat-toolbar style=\"height: 72px;\" color=\"primary\">\n    <span class=\"step0\">\n      <span id=\"tooltipHeaderLogo\"\n            data-tooltipster='{\"side\":\"right\",\"animation\":\"grow\", \"delay\":\"200\", \"theme\":\"tooltipster-shadow\"}'>\n        <a><img routerLink=\"/\" class=\"HeaderLogo\" style=\"height: 66px; padding-top: 9px\" src=\"assets/images/logo.png\"/>\n          <span id=\"contentHeaderLogo\">\n            <!-- <p>\n              <strong>OpenLAIR</strong><br /><br />\n              Acronym [Blinded]<br />\n            </p> -->\n            <p>\n              <strong>OpenLAIR <a target=\"_blank\"\n                                  href=\"https://www.researchgate.net/publication/360034339_What_Indicators_Can_I_Serve_You_with_An_Evaluation_of_a_Research-Driven_Learning_Analytics_Indicator_Repository\">(Ahmad et al., 2022)</a> and <a\n                target=\"_blank\"\n                href=\"https://www.researchgate.net/publication/362256819_Connecting_the_dots_-_A_literature_review_on_learning_analytics_indicators_from_a_learning_design_perspective\">(Ahmad et al., 2022)</a> </strong><br/><br/>\n              Open Learning Analytics Indicator Repository<br/>\n            </p>\n          </span>\n      </a>\n    </span>\n    </span>\n\n    <div class=\"template-container-display\">\n      <div>\n      <span *ngIf=\"currentPage === 'display'\" id=\"tooltipHeaderLogo2\"\n            data-tooltipster='{\"side\":\"right\",\"animation\":\"grow\", \"delay\":\"200\", \"theme\":\"tooltipster-shadow\"}'>\n      <button class=\"buttonHead\" (click)=\"reset()\"><i class=\"fa-solid fa-arrow-rotate-right\"></i> Click here if the below TABLE is empty\n        <span id=\"contentHeaderLogo2\">\n          <p>\n            Please wait for 10 seconds\n          </p>\n        </span>\n      </button>\n    </span>\n      </div>\n      <div class=\"right-buttons\">\n        <button *ngIf=\"currentPage !== 'add-indicator'\" class=\"buttonHead\" (click)='addIndicators()'><img style=\"width: 17px;\"\n                                                                  src=\"assets/images/add.png\"/>&nbsp; Add Indicators\n        </button>\n\n        <!-- <a href=\"#\" onclick=\"myTour()\">Start Tour</a> -->\n        <button *ngIf=\"currentPage !== 'references'\" class=\"stepReferences buttonHead\" (click)='references()'><img style=\"width: 14px;\"\n                                                                              src=\"assets/images/ref.png\"/>&nbsp;\n          References\n        </button>\n\n        <!-- <a mat-button class=\"stepReferences\" href=\"https://atezaz.github.io/references.html\" target=\"_blank\">References</a> -->\n        <button *ngIf=\"currentPage === 'display'\" (click)=\"tourService.myTour()\" class=\"stepStartTour buttonHead\" id=\"myTourBtn\">\n          <i class=\"fa-solid fa-flag\"></i>&nbsp; Start Tour\n        </button>\n\n        <button *ngIf=\"currentPage !== 'display'\" class=\"buttonHead\" (click)=\"navigateHome()\">\n          <i class=\"fa-solid fa-house\"></i>&nbsp; Home\n        </button>\n      </div>\n    </div>\n  </mat-toolbar>\n</div>\n\n";
 
-
-    __webpack_exports__["default"] = "<div class=\"header\" id=\"header\">\r\n  <mat-toolbar style=\"height: 72px;\" color=\"primary\">\r\n    <span class=\"step0\" >\r\n      <span id=\"tooltipHeaderLogo\" data-tooltipster='{\"side\":\"right\",\"animation\":\"grow\", \"delay\":\"200\", \"theme\":\"tooltipster-shadow\"}'>\r\n        <a><img routerLink=\"/\" class=\"HeaderLogo\"  style=\"height: 66px; padding-top: 9px\" src=\"assets/images/logo.png\" />\r\n          <span id=\"contentHeaderLogo\">\r\n            <!-- <p>\r\n              <strong>OpenLAIR</strong><br /><br />\r\n              Acronym [Blinded]<br />\r\n            </p> -->\r\n            <p>\r\n              <strong>OpenLAIR <a target=\"_blank\" href=\"https://www.researchgate.net/publication/360034339_What_Indicators_Can_I_Serve_You_with_An_Evaluation_of_a_Research-Driven_Learning_Analytics_Indicator_Repository\">(Ahmad et al., 2022)</a> and <a target=\"_blank\" href=\"https://www.researchgate.net/publication/362256819_Connecting_the_dots_-_A_literature_review_on_learning_analytics_indicators_from_a_learning_design_perspective\">(Ahmad et al., 2022)</a> </strong><br /><br />\r\n              Open Learning Analytics Indicator Repository<br />\r\n            </p>\r\n          </span>\r\n      </a>\r\n    </span>\r\n    </span>\r\n    \r\n    \r\n    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;\r\n    <span id=\"tooltipHeaderLogo2\" data-tooltipster='{\"side\":\"right\",\"animation\":\"grow\", \"delay\":\"200\", \"theme\":\"tooltipster-shadow\"}'>\r\n      <button class=\"buttonHead\" (click)=\"reset()\"><i class=\"fa-solid fa-arrow-rotate-right\"></i> Click here if the below TABLE is empty\r\n        <span id=\"contentHeaderLogo2\" >\r\n          <p>\r\n            Please wait for 10 seconds\r\n          </p>\r\n        </span>\r\n\r\n      </button>\r\n    </span>\r\n    \r\n\r\n    <!-- <a style=\"color: white; font-size: 14px;\" (click)=\"reset()\"> Click here if the table is empty</a>           reset()-->\r\n    <span class=\"example-spacer\"></span>\r\n\r\n\r\n    <button class=\"buttonHead\" (click)='addIndicators()'><img style=\"width: 17px;\"\r\n      src=\"assets/images/add.png\" />&nbsp; Add Indicators</button>\r\n\r\n    <!-- <a href=\"#\" onclick=\"myTour()\">Start Tour</a> -->\r\n    <button class=\"stepReferences buttonHead\" (click)='references()'><img style=\"width: 14px;\"\r\n        src=\"assets/images/ref.png\" />&nbsp; References</button>\r\n    \r\n    <!-- <a mat-button class=\"stepReferences\" href=\"https://atezaz.github.io/references.html\" target=\"_blank\">References</a> -->\r\n    <button class=\"stepStartTour buttonHead\" id=\"myTourBtn\">\r\n      <i class=\"fa-solid fa-flag\"></i>&nbsp; Start Tour\r\n    </button>\r\n  </mat-toolbar>\r\n</div>";
     /***/
   },
 
+  /***/"./node_modules/raw-loader/dist/cjs.js!./src/app/component/reference/referance.component.html":
+  /*!****************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/component/reference/referance.component.html ***!
+    \****************************************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./node_modules/raw-loader/dist/cjs.js!./src/app/component/reference/referance.component.html": function node_modulesRawLoaderDistCjsJsSrcAppComponentReferenceReferanceComponentHtml(module, __webpack_exports__, __webpack_require__) {
+  function node_modulesRawLoaderDistCjsJsSrcAppComponentReferenceReferanceComponentHtml(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
+    __webpack_exports__["default"] = "<ul *ngIf=\"references$ | async as references\">\n  <li *ngFor=\"let reference of references\" class=\"referenceItem\">\n    {{reference.referenceNumber}} {{reference.referenceText}}<br>\n    <div style=\"display: flex\">\n      <a *ngIf=\"reference.link\" href=\"{{reference.link}}\">{{shortenLink(reference.link)}}</a>\n      <a *ngIf=\"loggedIn?.superAdmin\" class=\"superAdmin-icon edit\" (click)=\"editAsSuperAdmin(reference._id)\">\n        <i class=\"fa fa-pencil\"></i>\n      </a>\n      <a *ngIf=\"loggedIn?.superAdmin\" class=\"superAdmin-icon delete\" (click)=\"deleteAsSuperAdmin(reference)\">\n        <i class=\"fa fa-trash\"></i>\n      </a>\n    </div>\n  </li>\n</ul>\n\n<a id=\"back-to-top\" class=\"btn back-to-top\" role=\"button\" (click)=\"backToTop()\">\n  <i class=\"material-icons buttonLaTool\">arrow_upward</i>\n</a>\n";
 
-
-    __webpack_exports__["default"] = "<blockquote>\n    <p>\n        [1] Leclercq, D. & Poumay, M. (2005). The 8 learning Events Model. (2005).1. LabSET\n        <cite>\n            <a href=\"http://www.labset.net/media/prod/8LEM.pdf\">University of Liège</a>\n        </cite>\n    </p>\n    <p>\n       [2] Verpoorten, Dominique, Marianne Poumay, and Dieudonné Leclercq. (2007) \"The eight learning events model: A pedagogic conceptual tool supporting diversification of learning methods.\" Interactive Learning Environments 15.2 : 151-160.\n       <a target = \"_blank\" href = \"https://doi.org/10.1080/10494820701343694\"> doi.org/10.1080/10494820701343694</a>\n    </p>\n    <p>\n        [3] Gruber, Marion. (2019). Design Thinking for Technology Enhanced Learning\n        <cite>\n            <a target = \"_blank\" href=\"https://www.researchgate.net/publication/334170760_Design_Thinking_for_Technology_Enhanced_Learning\">Retrieved link </a>\n        </cite> \n    </p>\n    <p>\n        [4] Lockyer, Lori, Elizabeth Heathcote, and Shane Dawson. \"Informing pedagogical action: Aligning learning analytics with learning design.\" American Behavioral Scientist 57.10 (2013): 1439-1459.\n        <a target = \"_blank\" href = \"https://www.doi.org/10.1177/0002764213479367\"> doi.org/10.1177/0002764213479367</a>\n    </p>\n    <p>\n        [5] Bakharia, Aneesha, et al. \"A conceptual framework linking learning design with learning analytics.\" Proceedings of the Sixth International Conference on Learning Analytics & Knowledge. ACM, 2016.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2883851.2883944\"> doi.org/10.1145/2883851.2883944</a>\n    </p>\n    <p>\n        [6] Mangaroska, Katerina, and Michail Giannakos. \"Learning analytics for learning design: Towards evidence-driven decisions to enhance learning.\" European conference on technology enhanced learning. Springer, Cham, 2017.\n        <a target = \"_blank\" href = \"https://doi.org/10.1007/978-3-319-66610-5_38\"> doi.org/10.1007/978-3-319-66610-5_38</a>\n    </p>\n    <p>\n        [7] Mor, Yishay, and Brock Craft. \"Learning design: reflections on a snapshot of the current landscape.\" Research in learning technology 20 (2012): 85-94.\n        <a target = \"_blank\" href = \"https://doi.org/10.3402/rlt.v20i0.19196\"> doi.org/10.3402/rlt.v20i0.19196</a>\n    </p>\n    <p>\n        [8]  Hernández-Leo, D., Rodriguez Triana, M. J., Inventado, P. S., & Mor, Y. (2017). Preface: connecting learning design and learning analytics. Interaction Design and Architecture (s) Journal-IxD&A, 33(ARTICLE), 3-8.\n        <cite>\n            <a target = \"_blank\" href=\"https://infoscience.epfl.ch/record/231720\">Retrieved link </a>\n        </cite> \n\n    </p>\n    <p>\n        [9] Kwakman, Kitty. \"Factors affecting teachers’ participation in professional learning activities.\" Teaching and teacher education 19.2 (2003): 149-170.\n        <a target = \"_blank\" href = \"https://doi.org/10.1016/S0742-051X(02)00101-4\"> doi.org/10.1016/S0742-051X(02)00101-4</a>\n    </p>\n    <p>\n        [10] K. Mangaroska and M. N. Giannakos, \"Learning analytics for learning design: A systematic literature review of analytics-driven design to enhance learning,\" in IEEE Transactions on Learning Technologies.\n        <a target = \"_blank\" href = \"https://doi.org/10.1109/TLT.2018.2868673\"> doi.org/10.1109/TLT.2018.2868673</a>\n    </p>\n    <p>\n        [11] F. Martin, A. Ndoye, and P. Wilkins, “Using learning analytics to enhance student learning in online courses based on quality matters standards,” Journal of Educational Technology Systems, vol. 45, no. 2, pp. 165–187, 2016.\n        <a target = \"_blank\" href = \"https://doi.org/10.1177/0047239516656369\"> doi.org/10.1177/0047239516656369</a>\n    </p>\n    <p>\n        [12] Morss, Kate, and Rowena Murray. Teaching at university: A guide for postgraduates and researchers. Sage, 2005\n    </p>\n    <p>\n        [13] Bakkenes, Inge, Jan D. Vermunt, and Theo Wubbels. \"Teacher learning in the context of educational innovation: Learning activities and learning outcomes of experienced teachers.\" Learning and instruction 20.6 (2010): 533-548.\n        <a target = \"_blank\" href = \"https://doi.org/10.1016/j.learninstruc.2009.09.001\"> doi.org/10.1016/j.learninstruc.2009.09.001</a>\n    </p>\n    <p>\n        [14] Call for Papers of the 1st International Conference on Learning Analytics & Knowledge (LAK 2011)\n    </p>\n    <p>\n        [15]  Park, Yeonjeong, and I-H. Jo. \"Development of the learning analytics dashboard to support students’ learning performance.\" Journal of Universal Computer Science 21.1 (2015): 110.\n         <cite>\n            <a target = \"_blank\" href=\"http://www.jucs.org/jucs_21_1/development_of_the_learning/jucs_21_01_0110_0133_park.pdf\">Retrieved link </a>\n        </cite> \n\n    </p>\n    <p>\n        [16] Duval, Erik. \"Attention please!: learning analytics for visualization and recommendation.\" LAK 11 (2011): 9-17.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2090116.2090118\"> doi.org/10.1145/2090116.2090118</a>\n    </p>\n    <p>\n        [17] Gašević, Dragan, Shane Dawson, and George Siemens. \"Let’s not forget: Learning analytics are about learning.\" TechTrends 59.1 (2015): 64-71.\n        <a target = \"_blank\" href = \"https://doi.org/10.1007/s11528-014-0822-x\"> doi.org/10.1007/s11528-014-0822-x</a>\n    </p>\n    <p>\n        [18] Ferguson, R. (2012). Learning analytics: drivers, developments and challenges. International Journal of Technology Enhanced Learning, 4(5/6), 304-317.\n        <cite>\n            <a target = \"_blank\" href=\"https://www.inderscienceonline.com/doi/abs/10.1504/IJTEL.2012.051816\">Retrieved link </a>\n        </cite> \n\n    </p>\n    <p>\n        [19] Beetham, Helen, and Rhona Sharpe, eds. Rethinking pedagogy for a digital age: Designing for 21st century learning. routledge, 2013.\n        <cite>\n            <a target = \"_blank\" href=\"https://www.tcrecord.org/books/abstract.asp?ContentId=17261\">Retrieved link </a>\n        </cite> \n\n    </p>\n    <p>\n        [20] Phillips, Rob, et al. \"Exploring learning analytics as indicators of study behavior.\" EdMedia+ Innovate Learning. Association for the Advancement of Computing in Education (AACE), 2012.\n        <cite>\n            <a target = \"_blank\" href=\"https://www.learntechlib.org/p/41174/\">Retrieved link </a>\n        </cite>\n\n    </p>\n    <p>\n        [21] Mor, Yishay, Brock Craft, and Davinia Hernández-Leo. \"The art and science of learning design: Editoral.\" Research in Learning Technology 21 (2013).\n        <a target = \"_blank\" href = \"https://doi.org/10.3402/rlt.v21i0.22513\"> doi.org/10.3402/rlt.v21i0.22513</a>\n    </p>\n    <p>\n        [22] Craftb, Brock. \"Learning Design: reflections upon the current landscape.\" (2012).\n        <cite>\n            <a target = \"_blank\" href=\"http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.689.2132\">Retrieved link </a>\n        </cite> \n\n    </p>\n    <p>\n        [23] Koper, Rob. \"Current research in learning design.\" Educational Technology & Society 9.1 (2006): 13-22 \n        <cite>\n            <a target = \"_blank\" href=\"https://www.jstor.org/stable/jeductechsoci.9.1.13\">Retrieved link </a>\n        </cite> \n\n    </p>\n    <p>\n        [24]  Tan, J. P. L., Koh, E., Jonathan, C., & Yang, S. (2017). Learner dashboards a double-edged sword? Students’ sense-making of a collaborative critical reading and learning analytics environment for fostering 21st-century literacies.\n        <a target = \"_blank\" href = \"https://doi.org/10.18608/jla.2017.41.7\"> doi.org/10.18608/jla.2017.41.7</a>\n    </p>\n    <p>\n        [25]  Park, Y., & Jo, I. H. (2015). Development of the learning analytics dashboard to support students’ learning performance. Journal of Universal Computer Science, 21(1), 110.\n        <cite>\n            <a target = \"_blank\" href=\"http://www.jucs.org/jucs_21_1/development_of_the_learning/jucs_21_01_0110_0133_park.pdf\">Retrieved link </a>\n        </cite> \n\n</p>\n    <p>\n        [26]  Brouwer, N., Bredeweg, B., Latour, S., Berg, A., & van der Huizen, G. (2016, September). Learning analytics pilot with coach2-Searching for effective mirroring. In European Conference on Technology Enhanced Learning (pp. 363-369). Springer, Cham.\n        <a target = \"_blank\" href = \"https://doi.org/10.1007/978-3-319-45153-4_28\"> doi.org/10.1007/978-3-319-45153-4_28</a>\n    </p>\n    <p>\n        [27]  Beheshitha, S. S., Hatala, M., Gašević, D., & Joksimović, S. (2016, April). The role of achievement goal orientations when studying effect of learning analytics visualizations. In Proceedings of the sixth international conference on learning analytics & knowledge (pp. 54-63). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2883851.2883904\"> doi.org/10.1145/2883851.2883904</a>\n    </p>\n    <p>\n        [28]  Koulocheri, E., & Xenos, M. (2013, April). Considering formal assessment in learning analytics within a PLE: the HOU2LEARN case. In Proceedings of the Third International Conference on Learning Analytics and Knowledge (pp. 28-32). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2460296.2460304\"> doi.org/10.1145/2460296.2460304</a>\n    </p>\n    <p>\n        [29]  Håklev, S., Sharma, K., Slotta, J., & Dillenbourg, P. (2017, September). Contextualizing the co-creation of artefacts within the nested social structure of a collaborative MOOC. In European Conference on Technology Enhanced Learning (pp. 67-81). Springer, Cham.\n        <a target = \"_blank\" href = \"https://doi.org/10.1007/978-3-319-66610-5_6\"> doi.org/10.1007/978-3-319-66610-5_6</a>\n    </p>\n    <p>\n        [30]  Tervakari, A. M., Silius, K., Koro, J., Paukkeri, J., & Pirttilä, O. (2014, April). Usefulness of information visualizations based on educational data. In 2014 IEEE global engineering education conference (EDUCON) (pp. 142-151). IEEE.\n        <a target = \"_blank\" href = \"https://doi.org/10.1109/EDUCON.2014.6826081\"> doi.org/10.1109/EDUCON.2014.6826081</a>\n    </p>\n    <p>\n        [31]  Davis, D., Jivet, I., Kizilcec, R. F., Chen, G., Hauff, C., & Houben, G. J. (2017, March). Follow the successful crowd: raising MOOC completion rates through social comparison at scale. In Proceedings of the seventh international learning analytics & knowledge conference (pp. 454-463). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/3027385.3027411\"> doi.org/10.1145/3027385.3027411</a>\n    </p>\n    <p>\n        [32] Sedrakyan, G., Leony, D., Muñoz-Merino, P. J., Kloos, C. D., & Verbert, K. (2017, September). Evaluating student-facing learning dashboards of affective states. In European Conference on Technology Enhanced Learning (pp. 224-237). Springer, Cham.\n        <a target = \"_blank\" href = \"https://doi.org/10.1007/978-3-319-66610-5_17\"> doi.org/10.1007/978-3-319-66610-5_17</a>\n    </p>\n    <p>\n        [33]  de-la-Fuente-Valentín, L., Pardo, A., Hernández, F. L., & Burgos, D. (2015). A Visual Analytics Method for Score Estimation in Learning Courses. J. UCS, 21(1), 134-155.\n        <cite>\n            <a target = \"_blank\" href=\"http://www.jucs.org/jucs_21_1/a_visual_analytics_method/jucs_21_01_0134_0155_valentin.pdf\">Retrieved link </a>\n        </cite> \n\n    </p>\n    <p>\n        [34] Venant, R., Sharma, K., Vidal, P., Dillenbourg, P., & Broisin, J. (2017, September). Using sequential pattern mining to explore learners’ behaviors and evaluate their correlation with performance in inquiry-based learning. In European Conference on Technology Enhanced Learning (pp. 286-299). Springer, Cham.\n        <a target = \"_blank\" href = \"https://doi.org/10.1007/978-3-319-66610-5_21\"> doi.org/10.1007/978-3-319-66610-5_21</a>\n    </p>\n    <p>\n        [35]  Schneider, J., Börner, D., Van Rosmalen, P., & Specht, M. (2016). Can you help me with my pitch? Studying a tool for real-time automated feedback. IEEE Transactions on Learning Technologies, 9(4), 318-327.\n        <a target = \"_blank\" href = \"https://doi.org/10.1109/TLT.2016.2627043\"> doi.org/10.1109/TLT.2016.2627043</a>\n    </p>\n    <p>\n        [36]  Ruiz, S., Charleer, S., Urretavizcaya, M., Klerkx, J., Fernández-Castro, I., & Duval, E. (2016, April). Supporting learning by considering emotions: tracking and visualization a case study. In Proceedings of the sixth international conference on learning analytics & knowledge (pp. 254-263). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2883851.2883888\"> doi.org/10.1145/2883851.2883888</a>\n    </p>\n    <p>\n        [37]  Barber, R., & Sharkey, M. (2012, April). Course correction: Using analytics to predict course success. In Proceedings of the 2nd international conference on learning analytics and knowledge (pp. 259-262). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2330601.2330664\"> doi.org/10.1145/2330601.2330664</a>\n    </p>\n    <p>\n        [38]  Worsley, M. (2018, March). (Dis) engagement matters: Identifying efficacious learning practices with multimodal learning analytics. In Proceedings of the 8th International Conference on Learning Analytics and Knowledge (pp. 365-369). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/3170358.3170420\"> doi.org/10.1145/3170358.3170420</a>\n    </p>\n    <p>\n        [39]  Santos, J. L., Verbert, K., Govaerts, S., & Duval, E. (2013, April). Addressing learner issues with StepUp!: an evaluation. In Proceedings of the Third International Conference on Learning Analytics and Knowledge (pp. 14-22). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2460296.2460301\"> doi.org/10.1145/2460296.2460301</a>\n    </p>\n    <p>\n        [40]  Ochoa, X., Domínguez, F., Guamán, B., Maya, R., Falcones, G., & Castells, J. (2018, March). The rap system: automatic feedback of oral presentation skills using multimodal analysis and low-cost sensors. In Proceedings of the 8th international conference on learning analytics and knowledge (pp. 360-364). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/3170358.3170406\"> doi.org/10.1145/3170358.3170406</a>\n    </p>\n    <p>\n        [41]  Corrin, L., & de Barba, P. (2014). Exploring Students. Interpretation of Feedback Delivered through Learning Analytics Dashboards’, in Rhetoric and Reality: Critical Perspectives on Educational Technology, Eds. B. Hegarty, J. McDOnald and S. Loke (Dunedin: ascilite proceedings, 2014), 28.\n        <cite>\n            <a target = \"_blank\" href=\"https://researchbank.swinburne.edu.au/items/b81ec459-0eb4-4ccb-b221-e6876166e213/1/\">Retrieved link </a>\n        </cite> \n         \n    </p>\n    <p>\n        [42]  Fougt, S. S., Siebert-Evenstone, A., Eagan, B., Tabatabai, S., & Misfeldt, M. (2018, March). Epistemic network analysis of students' longer written assignments as formative/summative evaluation. In Proceedings of the 8th International Conference on Learning Analytics and Knowledge (pp. 126-130). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/3170358.3170414\"> doi.org/10.1145/3170358.3170414</a>\n    </p>\n    <p>\n        [43]  Holman, C., Aguilar, S., & Fishman, B. (2013, April). GradeCraft: What can we learn from a game-inspired learning management system?. In Proceedings of the third international conference on learning analytics and knowledge (pp. 260-264). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2460296.2460350\"> doi.org/10.1145/2460296.2460350</a>\n    </p>\n    <p>\n        [44]  Feild, J., Lewkow, N., Burns, S., & Gebhardt, K. (2018, March). A generalized classifier to identify online learning tool disengagement at scale. In Proceedings of the 8th International Conference on Learning Analytics and Knowledge (pp. 61-70). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/3170358.3170370\"> doi.org/10.1145/3170358.3170370</a>\n    </p>\n    <p>\n        [45]  Melero, J., Hernández‐Leo, D., Sun, J., Santos, P., & Blat, J. (2015). How was the activity? A visualization support for a case of location‐based learning design. British Journal of Educational Technology, 46(2), 317-329.\n        <a target = \"_blank\" href = \"https://doi.org/10.1111/bjet.12238\"> doi.org/10.1111/bjet.12238</a>\n    </p>\n    <p>\n        [46]  Davis, D., Kizilcec, R. F., Hauff, C., & Houben, G. J. (2018, March). The half-life of MOOC knowledge: a randomized trial evaluating knowledge retention and retrieval practice in MOOCs. In Proceedings of the 8th International Conference on Learning Analytics and Knowledge (pp. 1-10). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/3170358.3170383\"> doi.org/10.1145/3170358.3170383</a>\n\n    </p>\n    <p>\n        [47]  Harrer, A., & Göhnert, T. (2015, March). Integrated representations and small data: Towards contextualized and embedded analytics tools for learners. In Proceedings of the fifth international conference on learning analytics and knowledge (pp. 406-407). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2723576.2723665\"> doi.org/10.1145/2723576.2723665</a>\n    </p>\n    <p>\n        [48]  Liu, M., Calvo, R. A., Pardo, A., & Martin, A. (2014). Measuring and visualizing students’ behavioral engagement in writing activities. IEEE Transactions on learning technologies, 8(2), 215-224.\n        <a target = \"_blank\" href = \"https://doi.org/10.1109/TLT.2014.2378786\"> doi.org/10.1109/TLT.2014.2378786</a>\n    </p>\n    <p>\n        [49]  Wise, A., Zhao, Y., & Hausknecht, S. (2014). Learning analytics for online discussions: Embedded and extracted approaches. Journal of Learning Analytics, 1(2), 48-71.\n        <cite>\n            <a target = \"_blank\" href=\"https://eric.ed.gov/?id=EJ1127052\">Retrieved link </a>\n        </cite> \n\n    </p>\n    <p>\n        [50]  Iandoli, L., Quinto, I., De Liddo, A., & Shum, S. B. (2014). Socially augmented argumentation tools: Rationale, design and evaluation of a debate dashboard. International Journal of Human-Computer Studies, 72(3), 298-319.\n        <a target = \"_blank\" href = \"https://doi.org/10.1016/j.ijhcs.2013.08.006\"> doi.org/10.1016/j.ijhcs.2013.08.006</a>\n    </p>\n    <p>\n        [51] Kump, B., Seifert, C., Beham, G., Lindstaedt, S. N., & Ley, T. (2012, April). Seeing what the system thinks you know: visualizing evidence in an open learner model. In Proceedings of the 2nd international conference on learning analytics and knowledge (pp. 153-157). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2330601.2330640\"> doi.org/10.1145/2330601.2330640</a>\n    </p>\n    <p>\n        [52]  McAuley, J., O'Connor, A., & Lewis, D. (2012, April). Exploring reflection in online communities. In Proceedings of the 2nd international conference on learning analytics and knowledge (pp. 102-110). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2330601.2330630\"> doi.org/10.1145/2330601.2330630</a>\n    </p>\n    <p>\n        [53]  Govaerts, S., Verbert, K., & Duval, E. (2011, December). Evaluating the student activity meter: two case studies. In International Conference on Web-Based Learning (pp. 188-197). Springer, Berlin, Heidelberg.\n        <a target = \"_blank\" href = \"https://doi.org/10.1007/978-3-642-25813-8_20\"> doi.org/10.1007/978-3-642-25813-8_20</a>\n    </p>\n    <p>\n        [54]  Arnold, K. E., & Pistilli, M. D. (2012, April). Course signals at Purdue: Using learning analytics to increase student success. In Proceedings of the 2nd international conference on learning analytics and knowledge (pp. 267-270). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2330601.2330666\"> doi.org/10.1145/2330601.2330666</a>\n    </p>\n    <p>\n        [55]  Cooper, K., & Khosravi, H. (2018, March). Graph-based visual topic dependency models: Supporting assessment design and delivery at scale. In Proceedings of the 8th international conference on learning analytics and knowledge (pp. 11-15). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/3170358.3170418\"> doi.org/10.1145/3170358.3170418</a>\n    </p>\n    <p>\n        [56]  McKay, T., Miller, K., & Tritz, J. (2012, April). What to do with actionable intelligence: E 2 Coach as an intervention engine. In Proceedings of the 2nd International Conference on Learning Analytics and Knowledge (pp. 88-91). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2330601.2330627\"> doi.org/10.1145/2330601.2330627</a>\n    </p>\n    <p>\n        [57]  Vesin, B., Klašnja-Milićević, A., Ivanović, M., & Budimac, Z. (2013). Applying recommender systems and adaptive hypermedia for e-learning personalization. Computing and Informatics, 32(3), 629-659.\n        <cite>\n            <a target = \"_blank\" href=\"http://www.cai2.sk/ojs/index.php/cai/article/view/1736/536\">Retrieved link </a>\n        </cite> \n\n    </p>\n    <p>\n        [58]  Gunnarsson, B. L., & Alterman, R. (2014). Peer promotions as a method to identify quality content. Journal of Learning Analytics, 1(2), 126-150.\n        <a target = \"_blank\" href = \"https://doi.org/10.18608/jla.2014.12.7\"> doi.org/10.18608/jla.2014.12.7</a>\n    </p>\n    <p>\n        [59]  Aguiar, E., Ambrose, G. A. A., Chawla, N. V., Goodrich, V., & Brockman, J. (2014). Engagement vs performance: Using electronic portfolios to predict first semester engineering student persistence. Journal of Learning Analytics, 1(3), 7-33. \n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2567574.2567583\"> doi.org/10.1145/2567574.2567583</a>\n    </p>\n    <p>\n        [60]  Lowes, S., Lin, P., & Kinghorn, B. (2015). Exploring the link between online behaviours and course performance in asynchronous online high school courses. Journal of Learning Analytics, 2(2), 169-194.\n        <a target = \"_blank\" href = \"https://doi.org/10.18608/jla.2015.22.13\"> doi.org/10.18608/jla.2015.22.13</a>\n    </p>\n    <p>\n        [61]  Southavilay, V., Yacef, K., Reimann, P., & Calvo, R. A. (2013, April). Analysis of collaborative writing processes using revision maps and probabilistic topic models. In Proceedings of the third international conference on learning analytics and knowledge (pp. 38-47). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2460296.2460307\"> doi.org/10.1145/2460296.2460307</a>\n    </p>\n    <p>\n        [62]  Muñoz-Merino, P. J., Valiente, J. A. R., & Kloos, C. D. (2013, April). Inferring higher level learning information from low level data for the Khan Academy platform. In Proceedings of the third international conference on learning analytics and knowledge (pp. 112-116). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2460296.2460318\"> doi.org/10.1145/2460296.2460318</a>\n    </p>\n    <p>\n        [63]  Ahn, J. (2013, April). What can we learn from Facebook activity?: using social learning analytics to observe new media literacy skills. In Proceedings of the third international conference on learning analytics and knowledge (pp. 135-144). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2460296.2460323\"> doi.org/10.1145/2460296.2460323</a>\n    </p>\n    <p>\n        [64]  Wolff, A., Zdrahal, Z., Nikolov, A., & Pantucek, M. (2013, April). Improving retention: predicting at-risk students by analysing clicking behaviour in a virtual learning environment. In Proceedings of the third international conference on learning analytics and knowledge (pp. 145-149). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2460296.2460324\"> doi.org/10.1145/2460296.2460324</a> \n    </p>\n    <p>\n        [65]  Monroy, C., Rangel, V. S., & Whitaker, R. (2013, April). STEMscopes: contextualizing learning analytics in a K-12 science curriculum. In Proceedings of the Third International Conference on Learning Analytics and Knowledge (pp. 210-219). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2460296.2460339\"> doi.org/10.1145/2460296.2460339</a> \n    </p>\n    <p>\n        [66]  Bogarín, A., Romero, C., Cerezo, R., & Sánchez-Santillán, M. (2014, March). Clustering for improving educational process mining. In Proceedings of the fourth international conference on learning analytics and knowledge (pp. 11-15). ACM.  \n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2567574.2567604\"> doi.org/10.1145/2567574.2567604</a>\n    </p>\n    <p>\n        [67]  Nam, S., Lonn, S., Brown, T., Davis, C. S., & Koch, D. (2014, March). Customized course advising: investigating engineering student success with incoming profiles and patterns of concurrent course enrollment. In Proceedings of the Fourth International Conference on Learning Analytics And Knowledge (pp. 16-25). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2567574.2567589\"> doi.org/10.1145/2567574.2567589</a>\n    </p>\n    <p>\n        [68]  Papamitsiou, Z. K., Terzis, V., & Economides, A. A. (2014, March). Temporal learning analytics for computer based testing. In Proceedings of the Fourth International Conference on Learning Analytics And Knowledge (pp. 31-35). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2567574.2567609\"> doi.org/10.1145/2567574.2567609</a>\n    </p>\n    <p>\n        [69]  Coffrin, C., Corrin, L., de Barba, P., & Kennedy, G. (2014, March). Visualizing patterns of student engagement and performance in MOOCs. In Proceedings of the fourth international conference on learning analytics and knowledge (pp. 83-92). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2567574.2567586\"> doi.org/10.1145/2567574.2567586</a>\n    </p>\n    <p>\n        [70]  Santos, J. L., Klerkx, J., Duval, E., Gago, D., & Rodríguez, L. (2014, March). Success, activity and drop-outs in MOOCs an exploratory study on the UNED COMA courses. In Proceedings of the Fourth International Conference on Learning Analytics and Knowledge (pp. 98-102). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2567574.2567627\"> doi.org/10.1145/2567574.2567627</a>\n    </p>\n    <p>\n        [71]  Rogers, T., Colvin, C., & Chiera, B. (2014, March). Modest analytics: using the index method to identify students at risk of failure. In Proceedings of the Fourth International Conference on Learning Analytics And Knowledge (pp. 118-122). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2567574.2567629\"> doi.org/10.1145/2567574.2567629</a>\n    </p>\n    <p>\n        [72]  Gašević, D., Mirriahi, N., & Dawson, S. (2014, March). Analytics of the effects of video use and instruction to support reflective learning. In Proceedings of the fourth international conference on learning analytics and Knowledge (pp. 123-132). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2567574.2567590\"> doi.org/10.1145/2567574.2567590</a>\n    </p>\n    <p>\n        [73]  Vozniuk, A., Holzer, A., & Gillet, D. (2014, March). Peer assessment based on ratings in a social media course. In Proceedings of the Fourth International Conference on Learning Analytics And Knowledge (pp. 133-137). ACM. \n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2567574.2567608\"> doi.org/10.1145/2567574.2567608</a>\n    </p>\n    <p>\n        [74]  Wang, Y., Heffernan, N. T., & Heffernan, C. (2015, March). Towards better affect detectors: effect of missing skills, class features and common wrong answers. In Proceedings of the Fifth International Conference on Learning Analytics and Knowledge (pp. 31-35). ACM.   \n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2723576.2723618\"> doi.org/10.1145/2723576.2723618</a>\n    </p>\n    <p>\n        [75]  San Pedro, M. O., Baker, R. S., Heffernan, N. T., & Ocumpaugh, J. L. (2015, March). Exploring college major choice and middle school student behavior, affect and learning: what happens to students who game the system?. In Proceedings of the Fifth International Conference on Learning Analytics And Knowledge (pp. 36-40). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2723576.2723610\"> doi.org/10.1145/2723576.2723610</a> \n    </p>\n    <p>\n        [76]  Ferguson, R., & Clow, D. (2015, March). Examining engagement: analysing learner subpopulations in massive open online courses (MOOCs). In Proceedings of the fifth international conference on learning analytics and knowledge (pp. 51-58). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2723576.2723606\"> doi.org/10.1145/2723576.2723606</a> \n    </p>\n    <p>\n        [77]  Méndez, G., Ochoa, X., & Chiluiza, K. (2014, March). Techniques for data-driven curriculum analysis. In Proceedings of the fourth international conference on learning analytics and knowledge (pp. 148-157). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2567574.2567591\"> doi.org/10.1145/2567574.2567591</a>\n    </p>\n    <p>\n        [78]  Jo, I. H., Kim, D., & Yoon, M. (2014, March). Analyzing the log patterns of adult learners in LMS using learning analytics. In Proceedings of the Fourth International Conference on Learning Analytics And Knowledge (pp. 183-187). ACM.\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/2567574.2567616\"> doi.org/10.1145/2567574.2567616</a>\n    </p>\n    <p>\n        [79]  Waddington, R. J., & Nam, S. (2014, March). Practice exams make perfect: incorporating course resource use into an early warning system. In Proceedings of the Fourth International Conference on Learning Analytics And Knowledge (pp. 188-192). ACM.\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/2567574.2567623\"> doi.org/10.1145/2567574.2567623</a>\n    </p>\n    <p>\n        [80]  Chiu, M. M., & Fujita, N. (2014, March). Statistical discourse analysis of online discussions: Informal cognition, social metacognition and knowledge creation. In Proceedings of the Fourth International Conference on Learning Analytics And Knowledge (pp. 217-225). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2567574.2567580\"> doi.org/10.1145/2567574.2567580</a>\n    </p>\n    <p>\n        [81]  Yu, T., & Jo, I. H. (2014, March). Educational technology approach toward learning analytics: Relationship between student online behavior and learning performance in higher education. In Proceedings of the Fourth International Conference on Learning Analytics and Knowledge (pp. 269-270). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2567574.2567594\"> doi.org/10.1145/2567574.2567594</a>\n    </p>\n    <p>\n        [82] Aguiar, E., Lakkaraju, H., Bhanpuri, N., Miller, D., Yuhas, B., & Addison, K. L. (2015, March). Who, when, and why: a machine learning approach to prioritizing students at risk of not graduating high school on time. In Proceedings of the Fifth International Conference on Learning Analytics And Knowledge (pp. 93-102). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2723576.2723619\"> doi.org/10.1145/2723576.2723619</a>\n    </p>\n    <p>\n        [83]  Elbadrawy, A., Studham, R. S., & Karypis, G. (2015, March). Collaborative multi-regression models for predicting students' performance in course activities. In Proceedings of the Fifth International Conference on Learning Analytics And Knowledge (pp. 103-107). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2723576.2723590\"> doi.org/10.1145/2723576.2723590</a>\n    </p>\n    <p>\n        [84]  Grawemeyer, B., Mavrikis, M., Holmes, W., Gutierrez-Santos, S., Wiedmann, M., & Rummel, N. (2016, April). Affecting off-task behaviour: how affect-aware feedback can improve student learning. In Proceedings of the sixth international conference on learning analytics & knowledge (pp. 104-113). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2883851.2883936\"> doi.org/10.1145/2883851.2883936</a>\n    </p>\n    <p>\n        [85]  Allen, L. K., Mills, C., Jacovina, M. E., Crossley, S., D'mello, S., & McNamara, D. S. (2016, April). Investigating boredom and engagement during writing using multiple sources of information: the essay, the writer, and keystrokes. In Proceedings of the Sixth International Conference on Learning Analytics & Knowledge (pp. 114-123). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2883851.2883939\"> doi.org/10.1145/2883851.2883939</a> \n    </p>\n    <p>\n        [86]  Papoušek, J., Stanislav, V., & Pelánek, R. (2016, April). Evaluation of an adaptive practice system for learning geography facts. In Proceedings of the Sixth International Conference on Learning Analytics & Knowledge (pp. 134-142). ACM.\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/2883851.2883884\"> doi.org/10.1145/2883851.2883884</a> \n    </p>\n    <p>\n        [87]  Manai, O., Yamada, H., & Thorn, C. (2016, April). Real-time indicators and targeted supports: Using online platform data to accelerate student learning. In Proceedings of the Sixth International Conference on Learning Analytics & Knowledge (pp. 183-187). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2883851.2883942\"> doi.org/10.1145/2883851.2883942</a> \n    </p>\n    <p>\n        [88]  Hecking, T., Chounta, I. A., & Hoppe, H. U. (2016, April). Investigating social and semantic user roles in MOOC discussion forums. In Proceedings of the sixth international conference on learning analytics & knowledge (pp. 198-207). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2883851.2883924\"> doi.org/10.1145/2883851.2883924</a>    \n    </p>\n    <p>\n        [89]  Shum, S. B., Sándor, Á., Goldsmith, R., Wang, X., Bass, R., & McWilliams, M. (2016, April). Reflecting on reflective writing analytics: Assessment challenges and iterative evaluation of a prototype tool. In Proceedings of the sixth international conference on learning analytics & knowledge (pp. 213-222). ACM\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2883851.2883955\"> doi.org/10.1145/2883851.2883955</a>\n    </p>\n    <p>\n        [90]  Zhu, M., Bergner, Y., Zhang, Y., Baker, R., Wang, Y., & Paquette, L. (2016, April). Longitudinal engagement, performance, and social connectivity: a MOOC case study using exponential random graph models. In Proceedings of the Sixth International Conference on Learning Analytics & Knowledge (pp. 223-230). ACM.\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/2883851.2883934\"> doi.org/10.1145/2883851.2883934</a>\n    </p>\n    <p>\n        [91]  Khan, I., & Pardo, A. (2016, April). Data2U: Scalable real time student feedback in active learning environments. In Proceedings of the sixth international conference on learning analytics & knowledge (pp. 249-253). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2883851.2883911\"> doi.org/10.1145/2883851.2883911</a> \n    </p>\n    <p>\n        [92] Papamitsiou, Z., Karapistoli, E., & Economides, A. A. (2016, April). Applying classification techniques on temporal trace data for shaping student behavior models. In Proceedings of the Sixth International Conference on Learning Analytics & Knowledge (pp. 299-303). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2883851.2883926\"> doi.org/10.1145/2883851.2883926</a> \n    </p>\n    <p>\n        [93] Joksimović, S., Manataki, A., Gašević, D., Dawson, S., Kovanović, V., & De Kereki, I. F. (2016, April). Translating network position into performance: importance of centrality in different network configurations. In Proceedings of the sixth international conference on learning analytics & knowledge (pp. 314-323). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2883851.2883928\"> doi.org/10.1145/2883851.2883928</a>\n    </p>\n    <p>\n        [94]  Robinson, C., Yeomans, M., Reich, J., Hulleman, C., & Gehlbach, H. (2016, April). Forecasting student achievement in MOOCs with natural language processing. In Proceedings of the sixth international conference on learning analytics & knowledge (pp. 383-387). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2883851.2883932\"> doi.org/10.1145/2883851.2883932</a>\n    </p>\n    <p>\n        [95]  Wang, X., Wen, M., & Rosé, C. P. (2016, April). Towards triggering higher-order thinking behaviors in MOOCs. In Proceedings of the Sixth International Conference on Learning Analytics & Knowledge (pp. 398-407). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2883851.2883964\"> doi.org/10.1145/2883851.2883964</a>\n    </p>\n    <p>\n        [96]  Kennedy, G., Coffrin, C., De Barba, P., & Corrin, L. (2015, March). Predicting success: how learners' prior knowledge, skills and activities predict MOOC performance. In Proceedings of the fifth international conference on learning analytics and knowledge (pp. 136-140). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2723576.2723593\"> doi.org/10.1145/2723576.2723593</a>\n    </p>\n    <p>\n        [97] Harrison, S., Villano, R., Lynch, G., & Chen, G. (2015, March). Likelihood analysis of student enrollment outcomes using learning environment variables: A case study approach. In Proceedings of the Fifth International Conference on Learning Analytics And Knowledge (pp. 141-145). ACM.\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/2723576.2723621\"> doi.org/10.1145/2723576.2723621</a>\n    </p>\n    <p>\n        [98]  Pardo, A., Han, F., & Ellis, R. A. (2016, April). Exploring the relation between self-regulation, online activities, and academic performance: A case study. In Proceedings of the Sixth International Conference on Learning Analytics & Knowledge (pp. 422-429). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2883851.2883883\"> doi.org/10.1145/2883851.2883883</a>\n    </p>\n    <p>\n        [99]  Brown, M. G., DeMonbrun, R. M., Lonn, S., Aguilar, S. J., & Teasley, S. D. (2016, April). What and when: the role of course type and timing in students' academic performance. In Proceedings of the Sixth International Conference on Learning Analytics & Knowledge (pp. 459-468). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2883851.2883907\"> doi.org/10.1145/2883851.2883907</a>\n    </p>\n    <p>\n        [100]  Pardo, A., Mirriahi, N., Martinez-Maldonado, R., Jovanovic, J., Dawson, S., & Gašević, D. (2016, April). Generating actionable predictive models of academic performance. In Proceedings of the Sixth International Conference on Learning Analytics & Knowledge (pp. 474-478). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2883851.2883870\"> doi.org/10.1145/2883851.2883870</a>\n    </p>\n    <p>\n        [101]  Hlosta, M., Zdrahal, Z., & Zendulka, J. (2017, March). Ouroboros: early identification of at-risk students without models based on legacy data. In Proceedings of the Seventh International Learning Analytics & Knowledge Conference (pp. 6-15). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/3027385.3027449\"> doi.org/10.1145/3027385.3027449</a>\n    </p>\n    <p>\n        [102]  Agnihotri, L., Essa, A., & Baker, R. (2017, March). Impact of student choice of content adoption delay on course outcomes. In Proceedings of the Seventh International Learning Analytics & Knowledge Conference (pp. 16-20). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/3027385.3027437\"> doi.org/10.1145/3027385.3027437</a>\n    </p>\n    <p>\n        [103]  Park, J., Denaro, K., Rodriguez, F., Smyth, P., & Warschauer, M. (2017, March). Detecting changes in student behavior from clickstream data. In Proceedings of the Seventh International Learning Analytics & Knowledge Conference (pp. 21-30). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/3027385.3027430\"> doi.org/10.1145/3027385.3027430</a>\n    </p>\n    <p>\n        [104]  Käser, T., Hallinen, N. R., & Schwartz, D. L. (2017, March). Modeling exploration strategies to predict student performance within a learning environment and beyond. In Proceedings of the Seventh International Learning Analytics & Knowledge Conference (pp. 31-40). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/3027385.3027422\"> doi.org/10.1145/3027385.3027422</a>\n    </p>\n    <p>\n        [105]  Conijn, R., Snijders, C., Kleingeld, A., & Matzat, U. (2016). Predicting student performance from LMS data: A comparison of 17 blended courses using Moodle LMS. IEEE Transactions on Learning Technologies, 10(1), 17-29.\n        <a target = \"_blank\" href = \"https://doi.org/10.1109/TLT.2016.2616312\"> doi.org/10.1109/TLT.2016.2616312</a>\n    </p>\n    <p>\n        [106]  Hershkovitz, A., de Baker, R. S. J., Gobert, J., Wixon, M., & Pedro, M. S. (2013). Discovery with models: A case study on carelessness in computer-based science inquiry. American Behavioral Scientist, 57(10), 1480-1499.\n        <a target = \"_blank\" href = \"https://doi.org/10.1177/0002764213479365\"> doi.org/10.1177/0002764213479365</a>\n    </p>\n    <p>\n        [107]  Paule Ruiz, M. P., Riestra González, M., Sánchez Santillán, M., & Pérez Pérez, J. R. (2015). The Procrastination related indicators in e-learning platforms. Journal of Universal Computer Science.\n        <cite>\n            <a target = \"_blank\" href=\"http://www.jucs.org/jucs_21_1/the_procrastination_related_indicators/jucs_21_01_0007_0022_ruiz.pdf\">Retrieved link </a>\n        </cite>\n\n    </p>\n    <p>\n        [108]  Paredes, W. C., & Chung, K. S. K. (2012, April). Modelling learning & performance: a social networks perspective. In Proceedings of the 2nd International Conference on Learning Analytics and Knowledge (pp. 34-42). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2330601.2330617\"> doi.org/10.1145/2330601.2330617</a>\n    </p>\n    <p>\n        [109]  Smolin, D., & Butakov, S. (2012, April). Applying artificial intelligence to the educational data: an example of syllabus quality analysis. In Proceedings of the 2nd International Conference on Learning Analytics and Knowledge (pp. 164-169). ACM. \n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2330601.2330644\"> doi.org/10.1145/2330601.2330644</a>\n    </p>\n    <p>\n        [110]  Pursel, B. K., Zhang, L., Jablokow, K. W., Choi, G. W., & Velegol, D. (2016). Understanding MOOC students: motivations and behaviours indicative of MOOC completion. Journal of Computer Assisted Learning, 32(3), 202-217.\n        <a target = \"_blank\" href = \"https://doi.org/10.1111/jcal.12131\"> doi.org/10.1111/jcal.12131</a>\n    </p>\n    <p>\n        [111]  Jovanović, J., Gašević, D., Dawson, S., Pardo, A., & Mirriahi, N. (2017). Learning analytics to unveil learning strategies in a flipped classroom. The Internet and Higher Education, 33(4), 74-85.\n        <a target = \"_blank\" href = \"http://dx.doi.org/10.1016/j.iheduc.2017.02.001 \"> dx.doi.org/10.1016/j.iheduc.2017.02.001 </a>\n    </p>\n    <p>\n        [112]  Chavarriaga, O., Florian-Gaviria, B., & Solarte, O. (2014, September). A recommender system for students based on social knowledge and assessment data of competences. In European Conference on Technology Enhanced Learning (pp. 56-69). Springer, Cham.\n         <a target = \"_blank\" href = \"https://doi.org/10.1007/978-3-319-11200-8_5 \"> doi.org/10.1007/978-3-319-11200-8_5 </a>\n    </p>\n    <p>\n        [113]  Li, N., Kidziński, Ł., Jermann, P., & Dillenbourg, P. (2015). MOOC video interaction patterns: What do they tell us?. In Design for teaching and learning in a networked world (pp. 197-210). Springer, Cham.\n        <a target = \"_blank\" href = \"https://doi.org/10.1007/978-3-319-24258-3_15 \"> doi.org/10.1007/978-3-319-24258-3_15 </a>\n    </p>\n    <p>\n        [114]  Sadallah, M., Encelle, B., Maredj, A. E., & Prié, Y. (2015). Towards reading session-based indicators in educational reading analytics. In Design for Teaching and Learning in a Networked World (pp. 297-310). Springer, Cham.\n        <a target = \"_blank\" href = \"https://doi.org/10.1007/978-3-319-24258-3_22 \"> doi.org/10.1007/978-3-319-24258-3_22 </a>\n    </p>\n    <p>\n        [115]  Figueira, A. (2015). Predicting results from interaction patterns during online group work. In Design for Teaching and Learning in a Networked World (pp. 414-419). Springer, Cham.\n        <a target = \"_blank\" href = \"https://doi.org/10.1007/978-3-319-24258-3_33 \"> doi.org/10.1007/978-3-319-24258-3_33 </a>\n    </p>\n    <p>\n        [116]  Abolkasim, E., Lau, L., & Dimitrova, V. (2016, September). A semantic-driven model for ranking digital learning objects based on diversity in the user comments. In European Conference on Technology Enhanced Learning (pp. 3-15). Springer, Cham.\n        <a target = \"_blank\" href = \"https://doi.org/10.1007/978-3-319-45153-4_1\"> doi.org/10.1007/978-3-319-45153-4_1 </a>\n    </p>\n    <p>\n        [117]  You, J. W. (2016). Identifying significant indicators using LMS data to predict course achievement in online learning. The Internet and Higher Education, 29, 23-30.\n         <a target = \"_blank\" href = \"https://doi.org/10.1016/j.iheduc.2015.11.003\"> doi.org/10.1016/j.iheduc.2015.11.003 </a>\n    </p>\n    <p>\n        [118]  Gasevic, D., Jovanovic, J., Pardo, A., & Dawson, S. (2017). Detecting learning strategies with analytics: Links with self-reported measures and academic performance. Journal of Learning Analytics, 4(2), 113-128.\n        <a target = \"_blank\" href = \"http://dx.doi.org/10.18608/jla.2017.42.10\"> dx.doi.org/10.18608/jla.2017.42.10 </a>\n    </p>\n    <p>\n        [119]  Hart, S., Daucourt, M., & Ganley, C. (2017). Individual differences related to college students’ course performance in calculus II. Journal of Learning Analytics, 4(2), 129-153.\n        <a target = \"_blank\" href = \"https://doi.org/10.18608/jla.2017.42.11\"> doi.org/10.18608/jla.2017.42.11 </a>\n    </p>\n    <p>\n        [120] Casey, K. (2017). Using keystroke analytics to improve pass-fail classifiers. Journal of Learning Analytics, 4(2), 189-211.\n        <a target = \"_blank\" href = \"https://doi.org/10.18608/jla.2017.42.14\"> doi.org/10.18608/jla.2017.42.14 </a>\n    </p>\n    <p>\n        [121] Bakharia, A., & Dawson, S. (2011, February). SNAPP: a bird's-eye view of temporal participant interaction. In Proceedings of the 1st international conference on learning analytics and knowledge (pp. 168-173). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2090116.2090144\"> doi.org/10.1145/2090116.2090144 </a>\n    </p>\n    <p>\n        [122]  Lauría, E. J., Baron, J. D., Devireddy, M., Sundararaju, V., & Jayaprakash, S. M. (2012, April). Mining academic data to improve college student retention: An open source perspective. In Proceedings of the 2nd International Conference on Learning Analytics and Knowledge (pp. 139-142). ACM. \n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2330601.2330637\"> doi.org/10.1145/2330601.2330637 </a>\n    </p>\n    <p>\n        [123] Boroujeni, M. S., Sharma, K., Kidziński, Ł., Lucignano, L., & Dillenbourg, P. (2016, September). How to quantify student’s regularity?. In European Conference on Technology Enhanced Learning (pp. 277-291). Springer, Cham.\n        <a target = \"_blank\" href = \"https://doi.org/10.1007/978-3-319-45153-4_21\"> doi.org/10.1007/978-3-319-45153-4_21 </a>\n    </p>\n    <p>\n        [124] Scheffel, M., Drachsler, H., Kreijns, K., De Kraker, J., & Specht, M. (2017, March). Widget, widget as you lead, i am performing well indeed!: using results from an exploratory offline study to inform an empirical online study about a learning analytics widget in a collaborative learning environment. In Proceedings of the Seventh International Learning Analytics & Knowledge Conference (pp. 289-298). ACM.\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3027385.3027428\"> doi.org/10.1145/3027385.3027428 </a>\n    </p>\n    <p>\n        [125]  Schumacher, C., & Ifenthaler, D. (2018). Features students really expect from learning analytics. Computers in Human Behavior, 78, 397-407.\n        <a target = \"_blank\" href = \"https://doi.org/10.1016/j.chb.2017.06.030\"> doi.org/10.1016/j.chb.2017.06.030 </a>\n    </p>\n    <p>\n        [126] Aljohani, N. R., Daud, A., Abbasi, R. A., Alowibdi, J. S., Basheri, M., & Aslam, M. A. (2019). An integrated framework for course adapted student learning analytics dashboard. Computers in Human Behavior, 92, 679-690.\n        <a target = \"_blank\" href = \"https://doi.org/10.1016/j.chb.2018.03.035\"> doi.org/10.1016/j.chb.2018.03.035 </a>\n    </p>\n    <p>\n        [127] Saqr, M., Nouri, J., & Fors, U. (2018). Temporality matters: A learning analytics study of the patterns of interactions and its relation to performance,”. EDULEARN18: Proceedings, ser. EDULEARN proceedings, 5386-5393.\n        <a target = \"_blank\" href = \"https://doi.org/10.21125/edulearn.2018.1305\"> doi.org/10.21125/edulearn.2018.1305 </a>  \n    </p>\n    <p>\n        [128] Majumdar, R., Akçapınar, A., Akçapınar, G., Flanagan, B., & Ogata, H. (2018). Learning Analytics Dashboard Widgets to Author Teaching-Learning Cases for Evidence-based Education. Companion Procs. of 9th LAK.\n        <cite>\n            <a target = \"_blank\" href=\"https://repository.kulib.kyoto-u.ac.jp/dspace/handle/2433/244167\">Retrieved link </a>\n        </cite>\n\n    </p>\n    <p>\n        [129] Matcha, W., Gašević, D., Uzir, N. A. A., Jovanović, J., & Pardo, A. (2019, March). Analytics of Learning Strategies: Associations with Academic Performance and Feedback. In Proceedings of the 9th International Conference on Learning Analytics & Knowledge (pp. 461-470). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/3303772.3303787\"> doi.org/10.1145/3303772.3303787 </a>    \n    </p>\n    <p>\n        [130] de Quincey, E., Briggs, C., Kyriacou, T., & Waller, R. (2019, March). Student Centred Design of a Learning Analytics System. In Proceedings of the 9th International Conference on Learning Analytics & Knowledge (pp. 353-362). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/3303772.3303793\"> doi.org/10.1145/3303772.3303793 </a>\n    </p>\n    <p>\n        [131] Syed, M., Anggara, T., Lanski, A., Duan, X., Ambrose, G. A., & Chawla, N. V. (2019, March). Integrated Closed-loop Learning Analytics Scheme in a First Year Experience Course. In Proceedings of the 9th International Conference on Learning Analytics & Knowledge (pp. 521-530). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/3303772.3303803\"> doi.org/10.1145/3303772.3303803 </a>\n    </p>\n    <p>\n        [132] Wang, Y., Law, N., Hemberg, E., & O'Reilly, U. M. (2019, March). Using Detailed Access Trajectories for Learning Behavior Analysis. In Proceedings of the 9th International Conference on Learning Analytics & Knowledge (pp. 290-299). ACM.\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3303772.3303781\"> doi.org/10.1145/3303772.3303781</a> \n    </p>\n    <p>\n        [133] Jovanović, J., Gašević, D., Pardo, A., Dawson, S., & Whitelock-Wainwright, A. (2019, March). Introducing meaning to clicks: Towards traced-measures of self-efficacy and cognitive load. In Proceedings of the 9th International Conference on Learning Analytics & Knowledge (pp. 511-520). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/3303772.3303782\"> doi.org/10.1145/3303772.3303782</a> \n    </p>\n    <p>\n        [134] Klebanov, B. B., Loukina, A., Madnani, N., Sabatini, J., & Lentini, J. (2019, March). Would you?: Could you? On a tablet? Analytics of Children's eBook Reading. In Proceedings of the 9th International Conference on Learning Analytics & Knowledge (pp. 106-110). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/3303772.3303833\"> doi.org/10.1145/3303772.3303833</a>\n    </p>\n    <p>\n        [135] Niaki, S. A., George, C. P., Michailidis, G., & Beal, C. R. (2019, March). Investigating the Usage Patterns of Algebra Nation Tutoring Platform. In Proceedings of the 9th International Conference on Learning Analytics & Knowledge (pp. 481-490). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/3303772.3303788\"> doi.org/10.1145/3303772.3303788</a>\n    </p>\n    <p>\n        [136] Manrique, R., Nunes, B. P., Marino, O., Casanova, M. A., & Nurmikko-Fuller, T. (2019, March). An Analysis of Student Representation, Representative Features and Classification Algorithms to Predict Degree Dropout. In Proceedings of the 9th International Conference on Learning Analytics & Knowledge (pp. 401-410). ACM.\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3303772.3303800\"> doi.org/10.1145/3303772.3303800</a>\n    </p>\n    <p>\n        [137] Shimada, A., Taniguchi, Y., Okubo, F., Konomi, S. I., & Ogata, H. (2018, March). Online change detection for monitoring individual student behavior via clickstream data on E-book system. In Proceedings of the 8th International Conference on Learning Analytics and Knowledge (pp. 446-450). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/3170358.3170412\"> doi.org/10.1145/3170358.3170412</a>\n    </p>\n    <p>\n        [138] Van der Zee, T., Davis, D., Saab, N., Giesbers, B., Ginn, J., Van Der Sluis, F., ... & Admiraal, W. (2018, March). Evaluating retrieval practice in a MOOC: how writing and reading summaries of videos affects student learning. In Proceedings of the 8th International Conference on Learning Analytics and Knowledge (pp. 216-225). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/3170358.3170382\"> doi.org/10.1145/3170358.3170382</a>\n    </p>\n    <p>\n        [139] Chen, B., Fan, Y., Zhang, G., & Wang, Q. (2017, March). Examining motivations and self-regulated learning strategies of returning MOOCs learners. In Proceedings of the Seventh International Learning Analytics & Knowledge Conference (pp. 542-543). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/3027385.3029448\"> doi.org/10.1145/3027385.3029448</a>\n    </p>\n    <p>\n        [140] Dawson, S., Jovanovic, J., Gašević, D., & Pardo, A. (2017, March). From prediction to impact: Evaluation of a learning analytics retention program. In Proceedings of the Seventh International Learning Analytics & Knowledge Conference (pp. 474-478). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/3027385.3027405\"> doi.org/10.1145/3027385.3027405</a>\n    </p>\n    <p>\n        [141] Duval, E. (2011). Attention please!: learning analytics for visualization and recommendation. LAK, 11, 9-17.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2090116.2090118\"> doi.org/10.1145/2090116.2090118</a>     \n    </p>\n    <p>\n        [142] Ferguson, R., & Shum, S. B. (2011, February). Learning analytics to identify exploratory dialogue within synchronous text chat. In Proceedings of the 1st International Conference on Learning Analytics and Knowledge (pp. 99-103). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2090116.2090130\"> doi.org/10.1145/2090116.2090130</a>\n    </p>\n    <p>\n        [143] Sharkey, M. (2011, February). Academic analytics landscape at the University of Phoenix. In Proceedings of the 1st International Conference on Learning Analytics and Knowledge (pp. 122-126). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2090116.2090135\"> doi.org/10.1145/2090116.2090135</a>\n    </p>\n    <p>\n        [144] Fancsali, S. E. (2011, February). Variable construction for predictive and causal modeling of online education data. In Proceedings of the 1st International Conference on Learning Analytics and Knowledge (pp. 54-63). ACM. \n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2090116.2090123\"> doi.org/10.1145/2090116.2090123</a>\n    </p>\n    <p>\n        [145] Verbert, K., Drachsler, H., Manouselis, N., Wolpers, M., Vuorikari, R., & Duval, E. (2011, February). Dataset-driven research for improving recommender systems for learning. In Proceedings of the 1st International Conference on Learning Analytics and Knowledge (pp. 44-53). ACM.\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/2090116.2090122\"> doi.org/10.1145/2090116.2090122</a> \n    </p>\n    <p>\n        [146] Gwizdka, J., Hosseini, R., Cole, M., & Wang, S. (2017). Temporal dynamics of eye‐tracking and EEG during reading and relevance decisions. Journal of the Association for Information Science and Technology, 68(10), 2299-2312.\n        <cite>\n            <a target = \"_blank\" href=\"https://doi.org/10.1002/asi.23904\">https://doi.org/10.1002/asi.23904</a>\n        </cite>\n\n    </p>\n    <p>\n        [147] Jivet, I., Scheffel, M., Drachsler, H., & Specht, M. (2017, September). Awareness is not enough: pitfalls of learning analytics dashboards in the educational practice. In European Conference on Technology Enhanced Learning (pp. 82-96). Springer, Cham.\n        <a target = \"_blank\" href = \"https://doi.org/10.1007/978-3-319-66610-5_7\"> https://doi.org/10.1007/978-3-319-66610-5_7</a>\n    </p>\n    <p>\n        [148] Jivet, I., Scheffel, M., Specht, M., & Drachsler, H. (2018, March). License to evaluate: preparing learning analytics dashboards for educational practice. In Proceedings of the 8th International Conference on Learning Analytics and Knowledge (pp. 31-40). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/3170358.3170421\"> doi.org/10.1145/3170358.3170421</a>\n    </p>\n    <p>\n        [149] Inge Molenaar, Anne Horvers, Rick Dijkstra, and Ryan S. Baker. 2020. Personalized visualizations to promote young learners' SRL: the learning path app. In Proceedings of the Tenth International Conference on Learning Analytics & Knowledge (LAK '20). Association for Computing Machinery, New York, NY, USA, 330–339.\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3375462.3375465\"> https://doi.org/10.1145/3375462.3375465</a>\n    </p>\n    <p>\n        [150] Donia Malekian, James Bailey, and Gregor Kennedy. 2020. Prediction of students' assessment readiness in online learning environments: the sequence matters. In Proceedings of the Tenth International Conference on Learning Analytics & Knowledge (LAK '20). Association for Computing Machinery, New York, NY, USA, 382–391. DOI:\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3375462.3375468\"> https://doi.org/10.1145/3375462.3375468</a>\n    </p>\n\n    <p>\n        [151] Varshita Sher, Marek Hatala, and Dragan Gašević. 2020. Analyzing the consistency in within-activity learning patterns in blended learning. In Proceedings of the Tenth International Conference on Learning Analytics & Knowledge (LAK '20). Association for Computing Machinery, New York, NY, USA, 1–10. DOI:\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3375462.3375470\"> https://doi.org/10.1145/3375462.3375470</a>\n    </p>\n    <p>\n        [152] Anouschka van Leeuwen and Nikol Rummel. 2020. Comparing teachers' use of mirroring and advising dashboards. In Proceedings of the Tenth International Conference on Learning Analytics & Knowledge (LAK '20). Association for Computing Machinery, New York, NY, USA, 26–34. DOI:\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3375462.3375471\"> https://doi.org/10.1145/3375462.3375471</a>\n    </p>\n    <p>\n        [153] Fatemeh Salehian Kia, Stephanie D. Teasley, Marek Hatala, Stuart A. Karabenick, and Matthew Kay. 2020. How patterns of students dashboard use are related to their achievement and self-regulatory engagement. In Proceedings of the Tenth International Conference on Learning Analytics & Knowledge (LAK '20). Association for Computing Machinery, New York, NY, USA, 340–349. DOI:\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3375462.3375472\"> https://doi.org/10.1145/3375462.3375472</a>\n    </p>\n    <p>\n        [154] Jelena Jovanović, Shane Dawson, Srećko Joksimović, and George Siemens. 2020. Supporting actionable intelligence: reframing the analysis of observed study strategies. In Proceedings of the Tenth International Conference on Learning Analytics & Knowledge (LAK '20). Association for Computing Machinery, New York, NY, USA, 161–170. DOI:\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3375462.3375474\"> https://doi.org/10.1145/3375462.3375474</a>\n    </p>\n    <p>\n        [155] Timothy Tuti, Chris Paton, and Niall Winters. 2020. Learning to represent healthcare providers knowledge of neonatal emergency care: findings from a smartphone-based learning intervention targeting clinicians from LMICs. In Proceedings of the Tenth International Conference on Learning Analytics & Knowledge (LAK '20). Association for Computing Machinery, New York, NY, USA, 320–329. DOI:\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3375462.3375479\"> https://doi.org/10.1145/3375462.3375479</a>\n    </p>\n    <p>\n        [156] John Saint, Dragan Gašević, Wannisa Matcha, Nora'Ayu Ahmad Uzir, and Abelardo Pardo. 2020. Combining analytic methods to unlock sequential and temporal patterns of self-regulated learning. In Proceedings of the Tenth International Conference on Learning Analytics & Knowledge (LAK '20). Association for Computing Machinery, New York, NY, USA, 402–411. DOI:\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3375462.3375487\"> https://doi.org/10.1145/3375462.3375487</a>\n    </p>\n    <p>\n        [157] Nora'ayu Ahmad Uzir, Dragan Gašević, Jelena Jovanović, Wannisa Matcha, Lisa-Angelique Lim, and Anthea Fudge. 2020. Analytics of time management and learning strategies for effective online learning in blended environments. In Proceedings of the Tenth International Conference on Learning Analytics & Knowledge (LAK '20). Association for Computing Machinery, New York, NY, USA, 392–401. DOI:\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3375462.3375493\"> https://doi.org/10.1145/3375462.3375493</a>\n    </p>\n    <p>\n        [158] Steven Van Goidsenhoven, Daria Bogdanova, Galina Deeva, Seppe vanden Broucke, Jochen De Weerdt, and Monique Snoeck. 2020. Predicting student success in a blended learning environment. In Proceedings of the Tenth International Conference on Learning Analytics & Knowledge (LAK '20). Association for Computing Machinery, New York, NY, USA, 17–25. DOI:\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3375462.3375494\"> https://doi.org/10.1145/3375462.3375494</a>\n    </p>\n    <p>\n        [159] Máverick Ferreira, Vitor Rolim, Rafael Ferreira Mello, Rafael Dueire Lins, Guanliang Chen, and Dragan Gašević. 2020. Towards automatic content analysis of social presence in transcripts of online discussions. In Proceedings of the Tenth International Conference on Learning Analytics & Knowledge (LAK '20). Association for Computing Machinery, New York, NY, USA, 141–150. DOI:\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3375462.3375495\"> https://doi.org/10.1145/3375462.3375495</a>\n    </p>\n    <p>\n        [160] Kshitij Sharma, Zacharoula Papamitsiou, Jennifer K. Olsen, and Michail Giannakos. 2020. Predicting learners' effortful behaviour in adaptive assessment using multimodal data. In Proceedings of the Tenth International Conference on Learning Analytics & Knowledge (LAK '20). Association for Computing Machinery, New York, NY, USA, 480–489. DOI:\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3375462.3375498\"> https://doi.org/10.1145/3375462.3375498</a>\n    </p>\n    <p>\n        [161] Louis Faucon, Jennifer K. Olsen, and Pierre Dillenbourg. 2020. A bayesian model of individual differences and flexibility in inductive reasoning for categorization of examples. In Proceedings of the Tenth International Conference on Learning Analytics & Knowledge (LAK '20). Association for Computing Machinery, New York, NY, USA, 285–294. DOI:\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3375462.3375512\"> https://doi.org/10.1145/3375462.3375512</a>\n    </p>\n    <p>\n        [162] Namrata Srivastava, Sadia Nawaz, Jason M. Lodge, Eduardo Velloso, Sarah Erfani, and James Bailey. 2020. Exploring the usage of thermal imaging for understanding video lecture designs and students' experiences. In Proceedings of the Tenth International Conference on Learning Analytics & Knowledge (LAK '20). Association for Computing Machinery, New York, NY, USA, 250–259. DOI:\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3375462.3375514\"> https://doi.org/10.1145/3375462.3375514</a>\n    </p>\n    <p>\n        [163] Joshua Quick, Benjamin Motz, Jamie Israel, and Jason Kaetzel. 2020. What college students say, and what they do: aligning self-regulated learning theory with behavioral logs. In Proceedings of the Tenth International Conference on Learning Analytics & Knowledge (LAK '20). Association for Computing Machinery, New York, NY, USA, 534–543. DOI:\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3375462.3375516\"> https://doi.org/10.1145/3375462.3375516</a>\n    </p>\n    <p>\n        [164] Luca Benedetto, Andrea Cappelli, Roberto Turrin, and Paolo Cremonesi. 2020. R2DE: a NLP approach to estimating IRT parameters of newly generated questions. In Proceedings of the Tenth International Conference on Learning Analytics & Knowledge (LAK '20). Association for Computing Machinery, New York, NY, USA, 412–421. DOI:\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3375462.337551\"> https://doi.org/10.1145/3375462.337551</a>\n    </p>\n    <p>\n        [165] Huan Wei, Haotian Li, Meng Xia, Yong Wang, and Huamin Qu. 2020. Predicting student performance in interactive online question pools using mouse interaction features. In Proceedings of the Tenth International Conference on Learning Analytics & Knowledge (LAK '20). Association for Computing Machinery, New York, NY, USA, 645–654. DOI:\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3375462.3375521\"> https://doi.org/10.1145/3375462.3375521</a>\n    </p>\n    <p>\n        [166] Yanghee Kim, Sachit Butail, Michael Tscholl, Lichuan Liu, and Yunlong Wang. 2020. An exploratory approach to measuring collaborative engagement in child robot interaction. In Proceedings of the Tenth International Conference on Learning Analytics & Knowledge (LAK '20). Association for Computing Machinery, New York, NY, USA, 209–217. DOI:\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3375462.3375522\"> https://doi.org/10.1145/3375462.3375522</a>\n    </p>\n    <p>\n        [167] John A. Erickson, Anthony F. Botelho, Steven McAteer, Ashvini Varatharaj, and Neil T. Heffernan. 2020. The automated grading of student open responses in mathematics. In Proceedings of the Tenth International Conference on Learning Analytics & Knowledge (LAK '20). Association for Computing Machinery, New York, NY, USA, 615–624. DOI:\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3375462.3375523\"> https://doi.org/10.1145/3375462.3375523</a>\n    </p>\n    <p>\n        [168] Zachary A. Pardos and Weijie Jiang. 2020. Designing for serendipity in a university course recommendation system. In Proceedings of the Tenth International Conference on Learning Analytics & Knowledge (LAK '20). Association for Computing Machinery, New York, NY, USA, 350–359. DOI:\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3375462.3375524\"> https://doi.org/10.1145/3375462.3375524</a>\n    </p>\n    <p>\n        [169] Preya Shabrina, Ruth Okoilu Akintunde, Mehak Maniktala, Tiffany Barnes, Collin Lynch, and Teomara Rutherford. 2020. Peeking through the classroom window: a detailed data-driven analysis on the usage of a curriculum integrated math game in authentic classrooms. In Proceedings of the Tenth International Conference on Learning Analytics & Knowledge (LAK '20). Association for Computing Machinery, New York, NY, USA, 625–634. DOI:\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3375462.3375525\"> https://doi.org/10.1145/3375462.3375525</a>\n    </p>\n    <p>\n        [170] Hamideh Iraj, Anthea Fudge, Margaret Faulkner, Abelardo Pardo, and Vitomir Kovanović. 2020. Understanding students' engagement with personalised feedback messages. In Proceedings of the Tenth International Conference on Learning Analytics & Knowledge (LAK '20). Association for Computing Machinery, New York, NY, USA, 438–447. DOI:\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3375462.3375527\"> https://doi.org/10.1145/3375462.3375527</a>\n    </p>\n    <p>\n        [171] Yeonji Jung and Alyssa Friend Wise. 2020. How and how well do students reflect? multi-dimensional automated reflection assessment in health professions education. In Proceedings of the Tenth International Conference on Learning Analytics & Knowledge (LAK '20). Association for Computing Machinery, New York, NY, USA, 595–604. DOI:\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3375462.3375528\"> https://doi.org/10.1145/3375462.3375528</a>\n    </p>\n    <p>\n        [172] Ruth Okoilu Akintunde, Preya Shabrina, Veronica Catete, Tiffany Barnes, Collin Lynch, and Teomara Rutherford. 2020. Data-informed curriculum sequences for a curriculum-integrated game. In Proceedings of the Tenth International Conference on Learning Analytics & Knowledge (LAK '20). Association for Computing Machinery, New York, NY, USA, 635–644. https://doi.org/10.1145/3375462.3375530 \n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3375462.3375530 \"> https://doi.org/10.1145/3375462.3375530 </a>\n    </p>\n    <p>\n        [173] Oleksandra Poquet and Jelena Jovanovic. 2020. Intergroup and interpersonal forum positioning in shared-thread and post-reply networks. In Proceedings of the Tenth International Conference on Learning Analytics &amp; Knowledge (LAK '20). Association for Computing Machinery, New York, NY, USA, 187–196. \n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3375462.3375533\"> https://doi.org/10.1145/3375462.3375533</a>\n    </p>\n    <p>\n        [174] Wannisa Matcha, Dragan Gašević, Jelena Jovanović, Nora'ayu Ahmad Uzir, Chris W Oliver, Andrew Murray, and Danijela Gasevic. 2020. Analytics of learning strategies: the association with the personality traits. In Proceedings of the Tenth International Conference on Learning Analytics &amp; Knowledge (LAK '20). Association for Computing Machinery, New York, NY, USA, 151–160. \n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3375462.3375534\"> https://doi.org/10.1145/3375462.3375534</a>\n    </p>\n    <p>\n        [175] Schulten, C., Manske, S., Langner-Thiele, A., Hoppe, H.U. (2020). Digital Value-Adding Chains in Vocational Education: Automatic Keyword Extraction from Learning Videos to Provide Learning Resource Recommendations. In: Alario-Hoyos, C., Rodríguez-Triana, M.J., Scheffel, M., Arnedillo-Sánchez, I., Dennerlein, S.M. (eds) Addressing Global Challenges and Quality Education. EC-TEL 2020. Lecture Notes in Computer Science(), vol 12315. Springer, Cham. \n         <a target = \"_blank\" href = \"https://doi.org/10.1007/978-3-030-57717-9_2\"> https://doi.org/10.1007/978-3-030-57717-9_2</a>\n    </p>\n    <p>\n        [176] Conijn, R., Van Waes, L., van Zaanen, M. (2020). Human-Centered Design of a Dashboard on Students’ Revisions During Writing. In: Alario-Hoyos, C., Rodríguez-Triana, M.J., Scheffel, M., Arnedillo-Sánchez, I., Dennerlein, S.M. (eds) Addressing Global Challenges and Quality Education. EC-TEL 2020. Lecture Notes in Computer Science(), vol 12315. Springer, Cham. \n         <a target = \"_blank\" href = \"https://doi.org/10.1007/978-3-030-57717-9_3\"> https://doi.org/10.1007/978-3-030-57717-9_3</a>\n    </p>\n    <p>\n        [177] Labba, C., Roussanaly, A., Boyer, A. (2020). An Operational Framework for Evaluating the Performance of Learning Record Stores. In: Alario-Hoyos, C., Rodríguez-Triana, M.J., Scheffel, M., Arnedillo-Sánchez, I., Dennerlein, S.M. (eds) Addressing Global Challenges and Quality Education. EC-TEL 2020. Lecture Notes in Computer Science(), vol 12315. Springer, Cham. \n         <a target = \"_blank\" href = \"https://doi.org/10.1007/978-3-030-57717-9_4\"> https://doi.org/10.1007/978-3-030-57717-9_4</a>\n    </p>\n    <p>\n        [178] Nikolayeva, I., Yessad, A., Laforge, B., Luengo, V. (2020). Does an E-mail Reminder Intervention with Learning Analytics Reduce Procrastination in a Blended University Course?. In: Alario-Hoyos, C., Rodríguez-Triana, M.J., Scheffel, M., Arnedillo-Sánchez, I., Dennerlein, S.M. (eds) Addressing Global Challenges and Quality Education. EC-TEL 2020. Lecture Notes in Computer Science(), vol 12315. Springer, Cham.  \n         <a target = \"_blank\" href = \"https://doi.org/10.1007/978-3-030-57717-9_5\"> https://doi.org/10.1007/978-3-030-57717-9_5</a>\n    </p>\n    <p>\n        [179] Delnoij, L.E.C., Janssen, J.P.W., Dirkx, K.J.H., Martens, R.L. (2020). Designing an Online Self-assessment for Informed Study Decisions: The User Perspective. In: Alario-Hoyos, C., Rodríguez-Triana, M.J., Scheffel, M., Arnedillo-Sánchez, I., Dennerlein, S.M. (eds) Addressing Global Challenges and Quality Education. EC-TEL 2020. Lecture Notes in Computer Science(), vol 12315. Springer, Cham. \n         <a target = \"_blank\" href = \"https://doi.org/10.1007/978-3-030-57717-9_6\"> https://doi.org/10.1007/978-3-030-57717-9_6</a>\n    </p>\n    <p>\n        [180] Schlotterbeck, D., Araya, R., Caballero, D., Jimenez, A., Lehesvuori, S., Viiri, J. (2020). Assessing Teacher’s Discourse Effect on Students’ Learning: A Keyword Centrality Approach. In: Alario-Hoyos, C., Rodríguez-Triana, M.J., Scheffel, M., Arnedillo-Sánchez, I., Dennerlein, S.M. (eds) Addressing Global Challenges and Quality Education. EC-TEL 2020. Lecture Notes in Computer Science(), vol 12315. Springer, Cham. \n         <a target = \"_blank\" href = \"https://doi.org/10.1007/978-3-030-57717-9_8\"> https://doi.org/10.1007/978-3-030-57717-9_8</a>\n    </p>\n    <p>\n        [181] Saqr, M., Viberg, O. (2020). Using Diffusion Network Analytics to Examine and Support Knowledge Construction in CSCL Settings. In: Alario-Hoyos, C., Rodríguez-Triana, M.J., Scheffel, M., Arnedillo-Sánchez, I., Dennerlein, S.M. (eds) Addressing Global Challenges and Quality Education. EC-TEL 2020. Lecture Notes in Computer Science(), vol 12315. Springer, Cham. \n         <a target = \"_blank\" href = \"https://doi.org/10.1007/978-3-030-57717-9_12\"> https://doi.org/10.1007/978-3-030-57717-9_12</a>\n    </p>\n    <p>\n        [182] Akhuseyinoglu, K., Barria-Pineda, J., Sosnovsky, S., Lamprecht, AL., Guerra, J., Brusilovsky, P. (2020). Exploring Student-Controlled Social Comparison. In: Alario-Hoyos, C., Rodríguez-Triana, M.J., Scheffel, M., Arnedillo-Sánchez, I., Dennerlein, S.M. (eds) Addressing Global Challenges and Quality Education. EC-TEL 2020. Lecture Notes in Computer Science(), vol 12315. Springer, Cham. \n         <a target = \"_blank\" href = \"https://doi.org/10.1007/978-3-030-57717-9_18\"> https://doi.org/10.1007/978-3-030-57717-9_18</a>\n    </p>\n    <p>\n        [183] Zhang, Z., Brun, A., Boyer, A. (2020). New Measures for Offline Evaluation of Learning Path Recommenders. In: Alario-Hoyos, C., Rodríguez-Triana, M.J., Scheffel, M., Arnedillo-Sánchez, I., Dennerlein, S.M. (eds) Addressing Global Challenges and Quality Education. EC-TEL 2020. Lecture Notes in Computer Science(), vol 12315. Springer, Cham. \n         <a target = \"_blank\" href = \"https://doi.org/10.1007/978-3-030-57717-9_19\"> https://doi.org/10.1007/978-3-030-57717-9_19</a>\n    </p>\n    <p>\n        [184] Yousuf, B., Conlan, O., Wade, V. (2020). Assessing the Impact of the Combination of Self-directed Learning, Immediate Feedback and Visualizations on Student Engagement in Online Learning. In: Alario-Hoyos, C., Rodríguez-Triana, M.J., Scheffel, M., Arnedillo-Sánchez, I., Dennerlein, S.M. (eds) Addressing Global Challenges and Quality Education. EC-TEL 2020. Lecture Notes in Computer Science(), vol 12315. Springer, Cham. \n         <a target = \"_blank\" href = \"https://doi.org/10.1007/978-3-030-57717-9_20\"> https://doi.org/10.1007/978-3-030-57717-9_20</a>\n    </p>\n   \n    <p>\n        <br>\n        <br>\n        <br>\n        <br>\n        <br>\n    </p>\n    \n  \n    <a id=\"back-to-top\" class=\"btn btn-top back-to-top\" role=\"button\" (click)=\"backToTop()\">\n      <i class=\"material-icons\">arrow_upward</i>\n    </a>\n      \n</blockquote>\n";
     /***/
   },
 
+  /***/"./node_modules/raw-loader/dist/cjs.js!./src/app/component/review-display/review-display.component.html":
+  /*!**************************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/component/review-display/review-display.component.html ***!
+    \**************************************************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./node_modules/tslib/tslib.es6.js": function node_modulesTslibTslibEs6Js(module, __webpack_exports__, __webpack_require__) {
+  function node_modulesRawLoaderDistCjsJsSrcAppComponentReviewDisplayReviewDisplayComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+    __webpack_exports__["default"] = "<div class=\"rating-header\">\n  <h2 matDialogTitle style=\"margin-bottom: 10px; padding-right: 2em\">Review(s) for {{indicator.Title}}</h2>\n  <div *ngIf=\"totalAverage\" [matTooltip]=\"totalAverage.toString()\" [matTooltipPosition]=\"'right'\"\n       style=\"margin-bottom: 10px; width: 18em\">\n    Overall average score:\n    <mat-star-rating [disabled]=\"true\" [rating]=\"totalAverage\"></mat-star-rating>\n  </div>\n</div>\n<mat-dialog-content class=\"reviewDialogContent\" *ngIf=\"reviews\">\n  <div *ngIf=\"reviews.length === 0\" class=\"reviewPlaceholder\">No Reviews have been submitted yet.</div>\n  <div *ngFor=\"let review of reviews\" class=\"rating-wrapper\">\n    <fieldset style=\"border-radius: 8px;\">\n      <legend>\n        <div class=\"d-flex\">\n          <span style=\"font-weight: bold; padding-right: 0.5em\">Name: </span>{{review.name}}\n          <div *ngIf=\"loggedIn?.superAdmin\">\n            <a class=\"mx-2\" mat-dialog-close (click)=\"editAsSuperAdmin(review._id)\">\n              <i class=\"fa fa-pencil\"></i>\n            </a>\n            <a (click)=\"deleteAsSuperAdmin(review._id)\">\n              <i class=\"fa fa-trash\"></i>\n            </a>\n          </div>\n        </div>\n      </legend>\n        <div class=\"single-rating-wrapper\" [matTooltip]=\"calculateAverage(review).toString()\" [matTooltipPosition]=\"'right'\">\n            <span></span>\n            <div>\n                Average score:\n            <mat-star-rating [disabled]=\"true\" [rating]=\"calculateAverage(review)\"></mat-star-rating>\n            </div>\n        </div>\n      <div class=\"single-rating-wrapper\">\n        <span style=\"font-weight: bold\">Indicator quality:</span>\n        <mat-star-rating [disabled]=\"true\" [(rating)]=\"review.indicatorQuality\"></mat-star-rating>\n      </div>\n      <div>{{review.indicatorQualityNote}}</div>\n      <div class=\"single-rating-wrapper\">\n        <span style=\"font-weight: bold\">Article Clarity:</span>\n        <mat-star-rating [disabled]=\"true\" [(rating)]=\"review.articleClarity\"></mat-star-rating>\n      </div>\n      <div>{{review.articleClarityNote}}</div>\n      <div class=\"single-rating-wrapper\">\n        <span style=\"font-weight: bold\">Article Data:</span>\n        <mat-star-rating [disabled]=\"true\" [(rating)]=\"review.articleData\"></mat-star-rating>\n      </div>\n      <div>{{review.articleDataNote}}</div>\n      <div class=\"single-rating-wrapper\">\n        <span style=\"font-weight: bold\">Article Analysis:</span>\n        <mat-star-rating [disabled]=\"true\" [(rating)]=\"review.articleAnalysis\"></mat-star-rating>\n      </div>\n      <div>{{review.articleAnalysisNote}}</div>\n      <div class=\"single-rating-wrapper\">\n        <span style=\"font-weight: bold\">Article Conclusion:</span>\n        <mat-star-rating [disabled]=\"true\" [(rating)]=\"review.articleConclusion\"></mat-star-rating>\n      </div>\n      <div>{{review.articleConclusionNote}}</div>\n      <div class=\"single-rating-wrapper\">\n        <span style=\"font-weight: bold\">Article Contribution:</span>\n        <mat-star-rating [disabled]=\"true\" [(rating)]=\"review.articleContribution\"></mat-star-rating>\n      </div>\n      <div>{{review.articleContributionNote}}</div>\n    </fieldset>\n  </div>\n</mat-dialog-content>\n<button *ngIf=\"loggedIn\" mat-button mat-dialog-close (click)=\"addReview()\" class=\"buttonLaTool\"\n        style=\"margin-right: 10px\">{{buttonLabel}}\n</button>\n<button *ngIf=\"!loggedIn\" mat-button mat-dialog-close (click)=\"logIn()\" class=\"buttonLaTool\"\n        style=\"margin-right: 10px\">Login\n</button>\n<button mat-button mat-dialog-close style=\"border: 1px solid grey\">Close</button>\n";
+
+    /***/
+  },
+
+  /***/"./node_modules/raw-loader/dist/cjs.js!./src/app/component/review-edit/review-edit.component.html":
+  /*!********************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/component/review-edit/review-edit.component.html ***!
+    \********************************************************************************************************/
+  /*! exports provided: default */
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppComponentReviewEditReviewEditComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+    __webpack_exports__["default"] = "<div *ngIf=\"indicator\" class=\"outer-div\">\n    <h2> Create Review for \"{{indicator.Title}}\"</h2>\n\n    <form [formGroup]=\"formGroup\" (ngSubmit)=\"onSubmit()\">\n\n        <div class=\"row\">\n            <div class=\"column-100\">\n                <div class=\"row-no-wrap\" *ngIf=\"reference\">\n                    <div style=\"width: 80px\">Reference:</div>\n                    <span>{{reference.referenceText}} {{reference.referenceNumber}}</span>\n                </div>\n                <div class=\"row-no-wrap\" *ngIf=\"reference && reference.link\">\n                    <div style=\"width: 80px\">Link:</div>\n                    <a href=\"{{reference.link}}\">{{shortenLink(reference.link)}}</a>\n                </div>\n                <div class=\"row\">\n                    <div style=\"width: 80px\">Name:</div>\n                    <span>{{formGroup.controls['name'].value}}</span>\n                </div>\n            </div>\n            <div class=\"column-25\">\n                <div>Indicator quality:\n                    <mat-star-rating [(rating)]=\"indicatorQuality\"\n                                     (ratingChange)=\"ratingChanged('indicatorQuality', $event.valueOf())\"></mat-star-rating>\n                </div>\n                <div\n                    *ngIf=\"formGroup.controls['indicatorQuality'].invalid && (formGroup.controls['indicatorQuality'].dirty || formGroup.controls['indicatorQuality'].touched)\"\n                    class=\"alert\">\n                    <div *ngIf=\"formGroup.controls['indicatorQuality'].errors.required\">\n                        Rating is required.\n                    </div>\n                </div>\n                <span style=\"margin-top: 10px;\">Indicator quality Note:</span>\n                <textarea class=\"note-textarea\" formControlName=\"indicatorQualityNote\"></textarea>\n            </div>\n            <div class=\"column-25\">\n                <div>Article Clarity:\n                    <mat-star-rating [(rating)]=\"articleClarity\"\n                                     (ratingChange)=\"ratingChanged('articleClarity', $event.valueOf())\"></mat-star-rating>\n                </div>\n                <div\n                    *ngIf=\"formGroup.controls['articleClarity'].invalid && (formGroup.controls['articleClarity'].dirty || formGroup.controls['articleClarity'].touched)\"\n                    class=\"alert\">\n                    <div *ngIf=\"formGroup.controls['articleClarity'].errors.required\">\n                        Rating is required.\n                    </div>\n                </div>\n                <span style=\"margin-top: 10px;\">Article Clarity Note:</span>\n                <textarea class=\"note-textarea\" formControlName=\"articleClarityNote\"></textarea>\n            </div>\n            <div class=\"column-25\">\n                <div>Article Data:\n                    <mat-star-rating [(rating)]=\"articleData\"\n                                     (ratingChange)=\"ratingChanged('articleData', $event.valueOf())\"></mat-star-rating>\n                </div>\n                <div\n                    *ngIf=\"formGroup.controls['articleData'].invalid && (formGroup.controls['articleData'].dirty || formGroup.controls['articleData'].touched)\"\n                    class=\"alert\">\n                    <div *ngIf=\"formGroup.controls['articleData'].errors.required\">\n                        Rating is required.\n                    </div>\n                </div>\n                <span style=\"margin-top: 10px;\">Article Data Note:</span>\n                <textarea class=\"note-textarea\" formControlName=\"articleDataNote\"></textarea>\n            </div>\n            <div class=\"column-25\">\n                <div>Article Analysis:\n                    <mat-star-rating [(rating)]=\"articleAnalysis\"\n                                     (ratingChange)=\"ratingChanged('articleAnalysis', $event.valueOf())\"></mat-star-rating>\n                </div>\n                <div\n                    *ngIf=\"formGroup.controls['articleAnalysis'].invalid && (formGroup.controls['articleAnalysis'].dirty || formGroup.controls['articleAnalysis'].touched)\"\n                    class=\"alert\">\n                    <div *ngIf=\"formGroup.controls['articleAnalysis'].errors.required\">\n                        Rating is required.\n                    </div>\n                </div>\n                <span style=\"margin-top: 10px;\">Article Analysis Note:</span>\n                <textarea class=\"note-textarea\" formControlName=\"articleAnalysisNote\"></textarea>\n            </div>\n            <div class=\"column-25\">\n                <div>Article Conclusion:\n                    <mat-star-rating [(rating)]=\"articleConclusion\"\n                                     (ratingChange)=\"ratingChanged('articleConclusion', $event.valueOf())\"></mat-star-rating>\n                </div>\n                <div\n                    *ngIf=\"formGroup.controls['articleConclusion'].invalid && (formGroup.controls['articleConclusion'].dirty || formGroup.controls['articleConclusion'].touched)\"\n                    class=\"alert\">\n                    <div *ngIf=\"formGroup.controls['articleConclusion'].errors.required\">\n                        Rating is required.\n                    </div>\n                </div>\n                <span style=\"margin-top: 10px;\">Article Conclusion Note:</span>\n                <textarea class=\"note-textarea\" formControlName=\"articleConclusionNote\"></textarea>\n            </div>\n            <div class=\"column-25\">\n                <div>Article Contribution:\n                    <mat-star-rating [(rating)]=\"articleContribution\"\n                                     (ratingChange)=\"ratingChanged('articleContribution', $event.valueOf())\"></mat-star-rating>\n                </div>\n                <div\n                    *ngIf=\"formGroup.controls['articleContribution'].invalid && (formGroup.controls['articleContribution'].dirty || formGroup.controls['articleContribution'].touched)\"\n                    class=\"alert\">\n                    <div *ngIf=\"formGroup.controls['articleContribution'].errors.required\">\n                        Rating is required.\n                    </div>\n                </div>\n                <span style=\"margin-top: 10px;\">Article Contribution Note:</span>\n                <textarea class=\"note-textarea\" formControlName=\"articleContributionNote\"></textarea>\n            </div>\n        </div>\n        <button type=\"submit\" class=\"buttonLaTool\">Submit Review</button>\n        <button *ngIf=\"reviewId\"\n                style=\"background-image: linear-gradient(45deg, #8e1e22 10%, #edcfcf 51%, #8e1e22 100%) !important; box-shadow: 2px 4px 5px 0px #ead8d8;\"\n                class=\"buttonLaTool\" (click)=\"deleteReview()\">Delete Review\n        </button>\n    </form>\n</div>\n";
+
+    /***/
+  },
+
+  /***/"./node_modules/raw-loader/dist/cjs.js!./src/app/component/star-rating/star-rating.component.html":
+  /*!********************************************************************************************************!*\
+    !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/component/star-rating/star-rating.component.html ***!
+    \********************************************************************************************************/
+  /*! exports provided: default */
+  /***/
+  function node_modulesRawLoaderDistCjsJsSrcAppComponentStarRatingStarRatingComponentHtml(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+    __webpack_exports__["default"] = "<button mat-icon-button [disabled]=\"disabled\" [color]=\"color\" *ngFor=\"let ratingId of ratingArr;index as i\" [id]=\"'star_'+i\" (click)=\"onClick(i+1)\">\n  <mat-icon>\n    {{showIcon(i)}}\n  </mat-icon>\n</button>\n\n";
+
+    /***/
+  },
+
+  /***/"./node_modules/tslib/tslib.es6.js":
+  /*!*****************************************!*\
+    !*** ./node_modules/tslib/tslib.es6.js ***!
+    \*****************************************/
+  /*! exports provided: __extends, __assign, __rest, __decorate, __param, __metadata, __awaiter, __generator, __createBinding, __exportStar, __values, __read, __spread, __spreadArrays, __await, __asyncGenerator, __asyncDelegator, __asyncValues, __makeTemplateObject, __importStar, __importDefault, __classPrivateFieldGet, __classPrivateFieldSet */
+  /***/
+  function node_modulesTslibTslibEs6Js(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "__extends", function () {
       return __extends;
     });
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "__assign", function () {
       return _assign;
     });
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "__rest", function () {
       return __rest;
     });
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "__decorate", function () {
       return __decorate;
     });
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "__param", function () {
       return __param;
     });
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "__metadata", function () {
       return __metadata;
     });
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "__awaiter", function () {
       return __awaiter;
     });
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "__generator", function () {
       return __generator;
     });
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "__createBinding", function () {
       return __createBinding;
     });
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "__exportStar", function () {
       return __exportStar;
     });
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "__values", function () {
       return __values;
     });
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "__read", function () {
       return __read;
     });
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "__spread", function () {
       return __spread;
     });
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "__spreadArrays", function () {
       return __spreadArrays;
     });
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "__await", function () {
       return __await;
     });
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "__asyncGenerator", function () {
       return __asyncGenerator;
     });
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "__asyncDelegator", function () {
       return __asyncDelegator;
     });
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "__asyncValues", function () {
       return __asyncValues;
     });
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "__makeTemplateObject", function () {
       return __makeTemplateObject;
     });
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "__importStar", function () {
       return __importStar;
     });
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "__importDefault", function () {
       return __importDefault;
     });
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "__classPrivateFieldGet", function () {
       return __classPrivateFieldGet;
     });
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "__classPrivateFieldSet", function () {
       return __classPrivateFieldSet;
     });
@@ -720,9 +921,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
     PERFORMANCE OF THIS SOFTWARE.
     ***************************************************************************** */
-
     /* global Reflect, Promise */
-
 
     var _extendStatics = function extendStatics(d, b) {
       _extendStatics = Object.setPrototypeOf || {
@@ -730,80 +929,56 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       } instanceof Array && function (d, b) {
         d.__proto__ = b;
       } || function (d, b) {
-        for (var p in b) {
-          if (b.hasOwnProperty(p)) d[p] = b[p];
-        }
+        for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
       };
-
       return _extendStatics(d, b);
     };
-
     function __extends(d, b) {
       _extendStatics(d, b);
-
       function __() {
         this.constructor = d;
       }
-
       d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     }
-
     var _assign = function __assign() {
       _assign = Object.assign || function __assign(t) {
         for (var s, i = 1, n = arguments.length; i < n; i++) {
           s = arguments[i];
-
-          for (var p in s) {
-            if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
-          }
+          for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
         }
-
         return t;
       };
-
       return _assign.apply(this, arguments);
     };
-
     function __rest(s, e) {
       var t = {};
-
-      for (var p in s) {
-        if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
-      }
-
+      for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
       if (s != null && typeof Object.getOwnPropertySymbols === "function") for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
         if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i])) t[p[i]] = s[p[i]];
       }
       return t;
     }
-
     function __decorate(decorators, target, key, desc) {
       var c = arguments.length,
-          r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
-          d;
-      if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
-        if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-      }
+        r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+        d;
+      if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
       return c > 3 && r && Object.defineProperty(target, key, r), r;
     }
-
     function __param(paramIndex, decorator) {
       return function (target, key) {
         decorator(target, key, paramIndex);
       };
     }
-
     function __metadata(metadataKey, metadataValue) {
       if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(metadataKey, metadataValue);
     }
-
     function __awaiter(thisArg, _arguments, P, generator) {
       function adopt(value) {
         return value instanceof P ? value : new P(function (resolve) {
           resolve(value);
         });
       }
-
       return new (P || (P = Promise))(function (resolve, reject) {
         function fulfilled(value) {
           try {
@@ -812,7 +987,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             reject(e);
           }
         }
-
         function rejected(value) {
           try {
             step(generator["throw"](value));
@@ -820,29 +994,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             reject(e);
           }
         }
-
         function step(result) {
           result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected);
         }
-
         step((generator = generator.apply(thisArg, _arguments || [])).next());
       });
     }
-
     function __generator(thisArg, body) {
       var _ = {
-        label: 0,
-        sent: function sent() {
-          if (t[0] & 1) throw t[1];
-          return t[1];
+          label: 0,
+          sent: function sent() {
+            if (t[0] & 1) throw t[1];
+            return t[1];
+          },
+          trys: [],
+          ops: []
         },
-        trys: [],
-        ops: []
-      },
-          f,
-          y,
-          t,
-          g;
+        f,
+        y,
+        t,
+        g;
       return g = {
         next: verb(0),
         "throw": verb(1),
@@ -850,88 +1021,66 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, typeof Symbol === "function" && (g[Symbol.iterator] = function () {
         return this;
       }), g;
-
       function verb(n) {
         return function (v) {
           return step([n, v]);
         };
       }
-
       function step(op) {
         if (f) throw new TypeError("Generator is already executing.");
-
-        while (_) {
-          try {
-            if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-            if (y = 0, t) op = [op[0] & 2, t.value];
-
-            switch (op[0]) {
-              case 0:
-              case 1:
+        while (_) try {
+          if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+          if (y = 0, t) op = [op[0] & 2, t.value];
+          switch (op[0]) {
+            case 0:
+            case 1:
+              t = op;
+              break;
+            case 4:
+              _.label++;
+              return {
+                value: op[1],
+                done: false
+              };
+            case 5:
+              _.label++;
+              y = op[1];
+              op = [0];
+              continue;
+            case 7:
+              op = _.ops.pop();
+              _.trys.pop();
+              continue;
+            default:
+              if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
+                _ = 0;
+                continue;
+              }
+              if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
+                _.label = op[1];
+                break;
+              }
+              if (op[0] === 6 && _.label < t[1]) {
+                _.label = t[1];
                 t = op;
                 break;
-
-              case 4:
-                _.label++;
-                return {
-                  value: op[1],
-                  done: false
-                };
-
-              case 5:
-                _.label++;
-                y = op[1];
-                op = [0];
-                continue;
-
-              case 7:
-                op = _.ops.pop();
-
-                _.trys.pop();
-
-                continue;
-
-              default:
-                if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) {
-                  _ = 0;
-                  continue;
-                }
-
-                if (op[0] === 3 && (!t || op[1] > t[0] && op[1] < t[3])) {
-                  _.label = op[1];
-                  break;
-                }
-
-                if (op[0] === 6 && _.label < t[1]) {
-                  _.label = t[1];
-                  t = op;
-                  break;
-                }
-
-                if (t && _.label < t[2]) {
-                  _.label = t[2];
-
-                  _.ops.push(op);
-
-                  break;
-                }
-
-                if (t[2]) _.ops.pop();
-
-                _.trys.pop();
-
-                continue;
-            }
-
-            op = body.call(thisArg, _);
-          } catch (e) {
-            op = [6, e];
-            y = 0;
-          } finally {
-            f = t = 0;
+              }
+              if (t && _.label < t[2]) {
+                _.label = t[2];
+                _.ops.push(op);
+                break;
+              }
+              if (t[2]) _.ops.pop();
+              _.trys.pop();
+              continue;
           }
+          op = body.call(thisArg, _);
+        } catch (e) {
+          op = [6, e];
+          y = 0;
+        } finally {
+          f = t = 0;
         }
-
         if (op[0] & 5) throw op[1];
         return {
           value: op[0] ? op[1] : void 0,
@@ -939,22 +1088,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         };
       }
     }
-
     function __createBinding(o, m, k, k2) {
       if (k2 === undefined) k2 = k;
       o[k2] = m[k];
     }
-
     function __exportStar(m, exports) {
-      for (var p in m) {
-        if (p !== "default" && !exports.hasOwnProperty(p)) exports[p] = m[p];
-      }
+      for (var p in m) if (p !== "default" && !exports.hasOwnProperty(p)) exports[p] = m[p];
     }
-
     function __values(o) {
       var s = typeof Symbol === "function" && Symbol.iterator,
-          m = s && o[s],
-          i = 0;
+        m = s && o[s],
+        i = 0;
       if (m) return m.call(o);
       if (o && typeof o.length === "number") return {
         next: function next() {
@@ -967,19 +1111,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       };
       throw new TypeError(s ? "Object is not iterable." : "Symbol.iterator is not defined.");
     }
-
     function __read(o, n) {
       var m = typeof Symbol === "function" && o[Symbol.iterator];
       if (!m) return o;
       var i = m.call(o),
-          r,
-          ar = [],
-          e;
-
+        r,
+        ar = [],
+        e;
       try {
-        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) {
-          ar.push(r.value);
-        }
+        while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
       } catch (error) {
         e = {
           error: error
@@ -991,47 +1131,29 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           if (e) throw e.error;
         }
       }
-
       return ar;
     }
-
     function __spread() {
-      for (var ar = [], i = 0; i < arguments.length; i++) {
-        ar = ar.concat(__read(arguments[i]));
-      }
-
+      for (var ar = [], i = 0; i < arguments.length; i++) ar = ar.concat(__read(arguments[i]));
       return ar;
     }
-
     function __spreadArrays() {
-      for (var s = 0, i = 0, il = arguments.length; i < il; i++) {
-        s += arguments[i].length;
-      }
-
-      for (var r = Array(s), k = 0, i = 0; i < il; i++) {
-        for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++) {
-          r[k] = a[j];
-        }
-      }
-
+      for (var s = 0, i = 0, il = arguments.length; i < il; i++) s += arguments[i].length;
+      for (var r = Array(s), k = 0, i = 0; i < il; i++) for (var a = arguments[i], j = 0, jl = a.length; j < jl; j++, k++) r[k] = a[j];
       return r;
     }
-
     ;
-
     function __await(v) {
       return this instanceof __await ? (this.v = v, this) : new __await(v);
     }
-
     function __asyncGenerator(thisArg, _arguments, generator) {
       if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
       var g = generator.apply(thisArg, _arguments || []),
-          i,
-          q = [];
+        i,
+        q = [];
       return i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () {
         return this;
       }, i;
-
       function verb(n) {
         if (g[n]) i[n] = function (v) {
           return new Promise(function (a, b) {
@@ -1039,7 +1161,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           });
         };
       }
-
       function resume(n, v) {
         try {
           step(g[n](v));
@@ -1047,24 +1168,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           settle(q[0][3], e);
         }
       }
-
       function step(r) {
         r.value instanceof __await ? Promise.resolve(r.value.v).then(fulfill, reject) : settle(q[0][2], r);
       }
-
       function fulfill(value) {
         resume("next", value);
       }
-
       function reject(value) {
         resume("throw", value);
       }
-
       function settle(f, v) {
         if (f(v), q.shift(), q.length) resume(q[0][0], q[0][1]);
       }
     }
-
     function __asyncDelegator(o) {
       var i, p;
       return i = {}, verb("next"), verb("throw", function (e) {
@@ -1072,7 +1188,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }), verb("return"), i[Symbol.iterator] = function () {
         return this;
       }, i;
-
       function verb(n, f) {
         i[n] = o[n] ? function (v) {
           return (p = !p) ? {
@@ -1082,15 +1197,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         } : f;
       }
     }
-
     function __asyncValues(o) {
       if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
       var m = o[Symbol.asyncIterator],
-          i;
+        i;
       return m ? m.call(o) : (o = typeof __values === "function" ? __values(o) : o[Symbol.iterator](), i = {}, verb("next"), verb("throw"), verb("return"), i[Symbol.asyncIterator] = function () {
         return this;
       }, i);
-
       function verb(n) {
         i[n] = o[n] && function (v) {
           return new Promise(function (resolve, reject) {
@@ -1098,7 +1211,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           });
         };
       }
-
       function settle(resolve, reject, d, v) {
         Promise.resolve(v).then(function (v) {
           resolve({
@@ -1108,7 +1220,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }, reject);
       }
     }
-
     function __makeTemplateObject(cooked, raw) {
       if (Object.defineProperty) {
         Object.defineProperty(cooked, "raw", {
@@ -1117,115 +1228,78 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       } else {
         cooked.raw = raw;
       }
-
       return cooked;
     }
-
     ;
-
     function __importStar(mod) {
       if (mod && mod.__esModule) return mod;
       var result = {};
-      if (mod != null) for (var k in mod) {
-        if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
-      }
+      if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
       result["default"] = mod;
       return result;
     }
-
     function __importDefault(mod) {
       return mod && mod.__esModule ? mod : {
         "default": mod
       };
     }
-
     function __classPrivateFieldGet(receiver, privateMap) {
       if (!privateMap.has(receiver)) {
         throw new TypeError("attempted to get private field on non-instance");
       }
-
       return privateMap.get(receiver);
     }
-
     function __classPrivateFieldSet(receiver, privateMap, value) {
       if (!privateMap.has(receiver)) {
         throw new TypeError("attempted to set private field on non-instance");
       }
-
       privateMap.set(receiver, value);
       return value;
     }
-    /***/
 
+    /***/
   },
 
+  /***/"./src/app/app-routing.module.ts":
+  /*!***************************************!*\
+    !*** ./src/app/app-routing.module.ts ***!
+    \***************************************/
+  /*! exports provided: AppRoutingModule */
   /***/
-  "./src/app/app-routing.module.ts": function srcAppAppRoutingModuleTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppAppRoutingModuleTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "AppRoutingModule", function () {
       return AppRoutingModule;
     });
     /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
     /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
-
-
-    var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! @angular/router */
-    "./node_modules/@angular/router/fesm2015/router.js");
+    var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__( /*! @angular/router */"./node_modules/@angular/router/fesm2015/router.js");
     /* harmony import */
-
-
-    var _component_display_display_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! ./component/display/display.component */
-    "./src/app/component/display/display.component.ts");
+    var _component_display_display_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__( /*! ./component/display/display.component */"./src/app/component/display/display.component.ts");
     /* harmony import */
-
-
-    var _component_admin_admin_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-    /*! ./component/admin/admin.component */
-    "./src/app/component/admin/admin.component.ts");
+    var _component_admin_admin_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__( /*! ./component/admin/admin.component */"./src/app/component/admin/admin.component.ts");
     /* harmony import */
-
-
-    var _component_add_data_add_data_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
-    /*! ./component/add-data/add-data.component */
-    "./src/app/component/add-data/add-data.component.ts");
+    var _component_add_data_add_data_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__( /*! ./component/add-data/add-data.component */"./src/app/component/add-data/add-data.component.ts");
     /* harmony import */
-
-
-    var _auth_guard_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
-    /*! ./auth-guard.service */
-    "./src/app/auth-guard.service.ts");
+    var _auth_guard_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__( /*! ./auth-guard.service */"./src/app/auth-guard.service.ts");
     /* harmony import */
-
-
-    var _component_reference_referance_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
-    /*! ./component/reference/referance.component */
-    "./src/app/component/reference/referance.component.ts");
+    var _component_reference_referance_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__( /*! ./component/reference/referance.component */"./src/app/component/reference/referance.component.ts");
     /* harmony import */
-
-
-    var _component_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
-    /*! ./component/dashboard/dashboard.component */
-    "./src/app/component/dashboard/dashboard.component.ts");
-
-    var routes = [//{ path: '/display/data/s', redirectTo: '/', pathMatch: 'full' },
+    var _component_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__( /*! ./component/dashboard/dashboard.component */"./src/app/component/dashboard/dashboard.component.ts");
+    /* harmony import */
+    var _component_review_edit_review_edit_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__( /*! ./component/review-edit/review-edit.component */"./src/app/component/review-edit/review-edit.component.ts");
+    /* harmony import */
+    var _superAdmin_super_admin_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__( /*! ./superAdmin/super-admin.service */"./src/app/superAdmin/super-admin.service.ts");
+    /* harmony import */
+    var _component_add_data_data_resolver__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__( /*! ./component/add-data/data.resolver */"./src/app/component/add-data/data.resolver.ts");
+    var routes = [
+    //{ path: '/display/data/s', redirectTo: '/', pathMatch: 'full' },
     //{ path: 'display/data', component: DisplayComponent },
     //{ path: '', component: DisplayComponent },
     //{ path: 'admin', component: AdminComponent },
@@ -1233,7 +1307,30 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     {
       path: "add",
       component: _component_add_data_add_data_component__WEBPACK_IMPORTED_MODULE_5__["AddDataComponent"],
-      canActivate: [_auth_guard_service__WEBPACK_IMPORTED_MODULE_6__["AuthGuardService"]]
+      canActivate: [_auth_guard_service__WEBPACK_IMPORTED_MODULE_6__["AuthGuardService"]],
+      resolve: {
+        data: _component_add_data_data_resolver__WEBPACK_IMPORTED_MODULE_11__["DataResolver"]
+      }
+    }, {
+      path: "indicator/:id/edit",
+      component: _component_add_data_add_data_component__WEBPACK_IMPORTED_MODULE_5__["AddDataComponent"],
+      canActivate: [_superAdmin_super_admin_service__WEBPACK_IMPORTED_MODULE_10__["SuperAdminService"]],
+      data: {
+        target: 'indicator'
+      },
+      resolve: {
+        data: _component_add_data_data_resolver__WEBPACK_IMPORTED_MODULE_11__["DataResolver"]
+      }
+    }, {
+      path: "reference/:id/edit",
+      component: _component_add_data_add_data_component__WEBPACK_IMPORTED_MODULE_5__["AddDataComponent"],
+      canActivate: [_superAdmin_super_admin_service__WEBPACK_IMPORTED_MODULE_10__["SuperAdminService"]],
+      data: {
+        target: 'reference'
+      },
+      resolve: {
+        data: _component_add_data_data_resolver__WEBPACK_IMPORTED_MODULE_11__["DataResolver"]
+      }
     }, {
       path: "reference",
       component: _component_reference_referance_component__WEBPACK_IMPORTED_MODULE_7__["ReferanceComponent"]
@@ -1244,6 +1341,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       path: "dashboard",
       component: _component_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_8__["DashboardComponent"]
     }, {
+      path: "review/add/:indicatorId",
+      component: _component_review_edit_review_edit_component__WEBPACK_IMPORTED_MODULE_9__["ReviewEditComponent"],
+      canActivate: [_auth_guard_service__WEBPACK_IMPORTED_MODULE_6__["AuthGuardService"]]
+    }, {
+      path: "review/:id/edit",
+      component: _component_review_edit_review_edit_component__WEBPACK_IMPORTED_MODULE_9__["ReviewEditComponent"],
+      canActivate: [_auth_guard_service__WEBPACK_IMPORTED_MODULE_6__["AuthGuardService"]]
+    }, {
       path: "",
       component: _component_display_display_component__WEBPACK_IMPORTED_MODULE_3__["DisplayComponent"]
     }, {
@@ -1251,449 +1356,220 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       redirectTo: "display/data",
       pathMatch: "full"
     }];
-
-    var AppRoutingModule = function AppRoutingModule() {
+    var AppRoutingModule = /*#__PURE__*/_createClass(function AppRoutingModule() {
       _classCallCheck(this, AppRoutingModule);
-    };
-
+    });
     AppRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
       imports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"].forRoot(routes)],
       exports: [_angular_router__WEBPACK_IMPORTED_MODULE_2__["RouterModule"]]
     })], AppRoutingModule);
+
     /***/
   },
 
+  /***/"./src/app/app.component.css":
+  /*!***********************************!*\
+    !*** ./src/app/app.component.css ***!
+    \***********************************/
+  /*! exports provided: default */
   /***/
-  "./src/app/app.component.css": function srcAppAppComponentCss(module, __webpack_exports__, __webpack_require__) {
+  function srcAppAppComponentCss(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
+    __webpack_exports__["default"] = ".multiselect-dropdown .dropdown-btn {\n    display: inline-block;\n\n    width: 100%;\n    padding: 6px 12px;\n    margin-bottom: 0;\n    font-size: 12px;\n    font-weight: 400;\n    line-height: 1.1;\n    text-align: left;\n    vertical-align: middle;\n    cursor: pointer;\n    background-image: none;\n    border-radius: 0px;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxxQkFBcUI7O0lBRXJCLFdBQVc7SUFDWCxpQkFBaUI7SUFDakIsZ0JBQWdCO0lBQ2hCLGVBQWU7SUFDZixnQkFBZ0I7SUFDaEIsZ0JBQWdCO0lBQ2hCLGdCQUFnQjtJQUNoQixzQkFBc0I7SUFDdEIsZUFBZTtJQUNmLHNCQUFzQjtJQUN0QixrQkFBa0I7QUFDdEIiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5tdWx0aXNlbGVjdC1kcm9wZG93biAuZHJvcGRvd24tYnRuIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG5cbiAgICB3aWR0aDogMTAwJTtcbiAgICBwYWRkaW5nOiA2cHggMTJweDtcbiAgICBtYXJnaW4tYm90dG9tOiAwO1xuICAgIGZvbnQtc2l6ZTogMTJweDtcbiAgICBmb250LXdlaWdodDogNDAwO1xuICAgIGxpbmUtaGVpZ2h0OiAxLjE7XG4gICAgdGV4dC1hbGlnbjogbGVmdDtcbiAgICB2ZXJ0aWNhbC1hbGlnbjogbWlkZGxlO1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBiYWNrZ3JvdW5kLWltYWdlOiBub25lO1xuICAgIGJvcmRlci1yYWRpdXM6IDBweDtcbn1cbiJdfQ== */";
 
-
-    __webpack_exports__["default"] = ".multiselect-dropdown .dropdown-btn {\n    display: inline-block;\n    \n    width: 100%;\n    padding: 6px 12px;\n    margin-bottom: 0;\n    font-size: 12px;\n    font-weight: 400;\n    line-height: 1.1;\n    text-align: left;\n    vertical-align: middle;\n    cursor: pointer;\n    background-image: none;\n    border-radius: 0px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxxQkFBcUI7O0lBRXJCLFdBQVc7SUFDWCxpQkFBaUI7SUFDakIsZ0JBQWdCO0lBQ2hCLGVBQWU7SUFDZixnQkFBZ0I7SUFDaEIsZ0JBQWdCO0lBQ2hCLGdCQUFnQjtJQUNoQixzQkFBc0I7SUFDdEIsZUFBZTtJQUNmLHNCQUFzQjtJQUN0QixrQkFBa0I7QUFDdEIiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5tdWx0aXNlbGVjdC1kcm9wZG93biAuZHJvcGRvd24tYnRuIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gICAgXG4gICAgd2lkdGg6IDEwMCU7XG4gICAgcGFkZGluZzogNnB4IDEycHg7XG4gICAgbWFyZ2luLWJvdHRvbTogMDtcbiAgICBmb250LXNpemU6IDEycHg7XG4gICAgZm9udC13ZWlnaHQ6IDQwMDtcbiAgICBsaW5lLWhlaWdodDogMS4xO1xuICAgIHRleHQtYWxpZ246IGxlZnQ7XG4gICAgdmVydGljYWwtYWxpZ246IG1pZGRsZTtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgYmFja2dyb3VuZC1pbWFnZTogbm9uZTtcbiAgICBib3JkZXItcmFkaXVzOiAwcHg7XG59Il19 */";
     /***/
   },
 
+  /***/"./src/app/app.component.ts":
+  /*!**********************************!*\
+    !*** ./src/app/app.component.ts ***!
+    \**********************************/
+  /*! exports provided: AppComponent */
   /***/
-  "./src/app/app.component.ts": function srcAppAppComponentTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppAppComponentTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "AppComponent", function () {
       return AppComponent;
     });
     /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
     /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
-
-    var AppComponent = function AppComponent() {
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
+    var AppComponent = /*#__PURE__*/_createClass(function AppComponent() {
       _classCallCheck(this, AppComponent);
-
       this.title = 'frontend';
-    };
-
+    });
     AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: 'app-root',
-      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! raw-loader!./app.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/app.component.html"))["default"],
-      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! ./app.component.css */
-      "./src/app/app.component.css"))["default"]]
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! raw-loader!./app.component.html */"./node_modules/raw-loader/dist/cjs.js!./src/app/app.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! ./app.component.css */"./src/app/app.component.css"))["default"]]
     })], AppComponent);
+
     /***/
   },
 
+  /***/"./src/app/app.module.ts":
+  /*!*******************************!*\
+    !*** ./src/app/app.module.ts ***!
+    \*******************************/
+  /*! exports provided: AppModule */
   /***/
-  "./src/app/app.module.ts": function srcAppAppModuleTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppAppModuleTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "AppModule", function () {
       return AppModule;
     });
     /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
     /* harmony import */
-
-
-    var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/platform-browser */
-    "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
+    var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/platform-browser */"./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
     /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
-
-
-    var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
+    var _angular_forms__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__( /*! @angular/forms */"./node_modules/@angular/forms/fesm2015/forms.js");
     /* harmony import */
-
-
-    var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-    /*! @angular/common/http */
-    "./node_modules/@angular/common/fesm2015/http.js");
+    var _angular_common_http__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__( /*! @angular/common/http */"./node_modules/@angular/common/fesm2015/http.js");
     /* harmony import */
-
-
-    var angular_font_awesome__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
-    /*! angular-font-awesome */
-    "./node_modules/angular-font-awesome/dist/angular-font-awesome.js");
+    var angular_font_awesome__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__( /*! angular-font-awesome */"./node_modules/angular-font-awesome/dist/angular-font-awesome.js");
     /* harmony import */
-
-
-    var _angular_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
-    /*! @angular/material */
-    "./node_modules/@angular/material/esm2015/material.js");
+    var _angular_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__( /*! @angular/material */"./node_modules/@angular/material/esm2015/material.js");
     /* harmony import */
-
-
-    var ng_multiselect_dropdown__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
-    /*! ng-multiselect-dropdown */
-    "./node_modules/ng-multiselect-dropdown/fesm2015/ng-multiselect-dropdown.js");
+    var ng_multiselect_dropdown__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__( /*! ng-multiselect-dropdown */"./node_modules/ng-multiselect-dropdown/fesm2015/ng-multiselect-dropdown.js");
     /* harmony import */
-
-
-    var highcharts_angular__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
-    /*! highcharts-angular */
-    "./node_modules/highcharts-angular/fesm2015/highcharts-angular.js");
+    var highcharts_angular__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__( /*! highcharts-angular */"./node_modules/highcharts-angular/fesm2015/highcharts-angular.js");
     /* harmony import */
-
-
-    var angular2_multiselect_dropdown__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
-    /*! angular2-multiselect-dropdown */
-    "./node_modules/angular2-multiselect-dropdown/fesm2015/angular2-multiselect-dropdown.js");
+    var angular2_multiselect_dropdown__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__( /*! angular2-multiselect-dropdown */"./node_modules/angular2-multiselect-dropdown/fesm2015/angular2-multiselect-dropdown.js");
     /* harmony import */
-
-
-    var _app_routing_module__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
-    /*! ./app-routing.module */
-    "./src/app/app-routing.module.ts");
+    var _app_routing_module__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__( /*! ./app-routing.module */"./src/app/app-routing.module.ts");
     /* harmony import */
-
-
-    var _app_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
-    /*! ./app.component */
-    "./src/app/app.component.ts");
+    var _app_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__( /*! ./app.component */"./src/app/app.component.ts");
     /* harmony import */
-
-
-    var _component_add_data_add_data_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
-    /*! ./component/add-data/add-data.component */
-    "./src/app/component/add-data/add-data.component.ts");
+    var _component_add_data_add_data_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__( /*! ./component/add-data/add-data.component */"./src/app/component/add-data/add-data.component.ts");
     /* harmony import */
-
-
-    var _component_header_header_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
-    /*! ./component/header/header.component */
-    "./src/app/component/header/header.component.ts");
+    var _component_header_header_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__( /*! ./component/header/header.component */"./src/app/component/header/header.component.ts");
     /* harmony import */
-
-
-    var _component_display_filter_pipe__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
-    /*! ./component/display/filter.pipe */
-    "./src/app/component/display/filter.pipe.ts");
+    var _component_display_filter_pipe__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__( /*! ./component/display/filter.pipe */"./src/app/component/display/filter.pipe.ts");
     /* harmony import */
-
-
-    var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
-    /*! @angular/platform-browser/animations */
-    "./node_modules/@angular/platform-browser/fesm2015/animations.js");
+    var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__( /*! @angular/platform-browser/animations */"./node_modules/@angular/platform-browser/fesm2015/animations.js");
     /* harmony import */
-
-
-    var _data_service__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(
-    /*! ./data.service */
-    "./src/app/data.service.ts");
+    var _data_service__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__( /*! ./data.service */"./src/app/data.service.ts");
     /* harmony import */
-
-
-    var _component_display_display_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(
-    /*! ./component/display/display.component */
-    "./src/app/component/display/display.component.ts");
+    var _component_display_display_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__( /*! ./component/display/display.component */"./src/app/component/display/display.component.ts");
     /* harmony import */
-
-
-    var _component_dropdown_dropdown_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(
-    /*! ./component/dropdown/dropdown.component */
-    "./src/app/component/dropdown/dropdown.component.ts");
+    var _component_dropdown_dropdown_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__( /*! ./component/dropdown/dropdown.component */"./src/app/component/dropdown/dropdown.component.ts");
     /* harmony import */
-
-
-    var _component_reference_referance_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(
-    /*! ./component/reference/referance.component */
-    "./src/app/component/reference/referance.component.ts");
+    var _component_reference_referance_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__( /*! ./component/reference/referance.component */"./src/app/component/reference/referance.component.ts");
     /* harmony import */
-
-
-    var _component_display_select_check_all_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(
-    /*! ./component/display/select-check-all.component */
-    "./src/app/component/display/select-check-all.component.ts");
+    var _component_display_select_check_all_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__( /*! ./component/display/select-check-all.component */"./src/app/component/display/select-check-all.component.ts");
     /* harmony import */
-
-
-    var _auth_guard_service__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(
-    /*! ./auth-guard.service */
-    "./src/app/auth-guard.service.ts");
+    var _auth_guard_service__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__( /*! ./auth-guard.service */"./src/app/auth-guard.service.ts");
     /* harmony import */
-
-
-    var _component_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(
-    /*! ./component/dashboard/dashboard.component */
-    "./src/app/component/dashboard/dashboard.component.ts");
+    var _component_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__( /*! ./component/dashboard/dashboard.component */"./src/app/component/dashboard/dashboard.component.ts");
     /* harmony import */
-
-
-    var _chart_manager_chart_manager_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(
-    /*! ./chart-manager/chart-manager.component */
-    "./src/app/chart-manager/chart-manager.component.ts");
+    var _chart_manager_chart_manager_component__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__( /*! ./chart-manager/chart-manager.component */"./src/app/chart-manager/chart-manager.component.ts");
     /* harmony import */
-
-
-    var _charts_student_interaction_patterns_student_interaction_patterns_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(
-    /*! ./charts/student-interaction-patterns/student-interaction-patterns.component */
-    "./src/app/charts/student-interaction-patterns/student-interaction-patterns.component.ts");
+    var _charts_student_interaction_patterns_student_interaction_patterns_component__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__( /*! ./charts/student-interaction-patterns/student-interaction-patterns.component */"./src/app/charts/student-interaction-patterns/student-interaction-patterns.component.ts");
     /* harmony import */
-
-
-    var _charts_competency_competency_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(
-    /*! ./charts/competency/competency.component */
-    "./src/app/charts/competency/competency.component.ts");
+    var _charts_competency_competency_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__( /*! ./charts/competency/competency.component */"./src/app/charts/competency/competency.component.ts");
     /* harmony import */
-
-
-    var _chart_helper_service__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(
-    /*! ./chart-helper.service */
-    "./src/app/chart-helper.service.ts");
+    var _chart_helper_service__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__( /*! ./chart-helper.service */"./src/app/chart-helper.service.ts");
     /* harmony import */
-
-
-    var _charts_reading_analytics_reading_analytics_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(
-    /*! ./charts/reading-analytics/reading-analytics.component */
-    "./src/app/charts/reading-analytics/reading-analytics.component.ts");
+    var _charts_reading_analytics_reading_analytics_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__( /*! ./charts/reading-analytics/reading-analytics.component */"./src/app/charts/reading-analytics/reading-analytics.component.ts");
     /* harmony import */
-
-
-    var _charts_video_analytics_video_analytics_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(
-    /*! ./charts/video-analytics/video-analytics.component */
-    "./src/app/charts/video-analytics/video-analytics.component.ts");
+    var _charts_video_analytics_video_analytics_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__( /*! ./charts/video-analytics/video-analytics.component */"./src/app/charts/video-analytics/video-analytics.component.ts");
     /* harmony import */
-
-
-    var _charts_learning_progress_learning_progress_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(
-    /*! ./charts/learning-progress/learning-progress.component */
-    "./src/app/charts/learning-progress/learning-progress.component.ts");
+    var _charts_learning_progress_learning_progress_component__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__( /*! ./charts/learning-progress/learning-progress.component */"./src/app/charts/learning-progress/learning-progress.component.ts");
     /* harmony import */
-
-
-    var _charts_writing_analytics_writing_analytics_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(
-    /*! ./charts/writing-analytics/writing-analytics.component */
-    "./src/app/charts/writing-analytics/writing-analytics.component.ts");
+    var _charts_writing_analytics_writing_analytics_component__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__( /*! ./charts/writing-analytics/writing-analytics.component */"./src/app/charts/writing-analytics/writing-analytics.component.ts");
     /* harmony import */
-
-
-    var _charts_discussion_quality_discussion_quality_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(
-    /*! ./charts/discussion-quality/discussion-quality.component */
-    "./src/app/charts/discussion-quality/discussion-quality.component.ts");
+    var _charts_discussion_quality_discussion_quality_component__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__( /*! ./charts/discussion-quality/discussion-quality.component */"./src/app/charts/discussion-quality/discussion-quality.component.ts");
     /* harmony import */
-
-
-    var _charts_clickstream_analysis_clickstream_analysis_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(
-    /*! ./charts/clickstream-analysis/clickstream-analysis.component */
-    "./src/app/charts/clickstream-analysis/clickstream-analysis.component.ts");
+    var _charts_clickstream_analysis_clickstream_analysis_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__( /*! ./charts/clickstream-analysis/clickstream-analysis.component */"./src/app/charts/clickstream-analysis/clickstream-analysis.component.ts");
     /* harmony import */
-
-
-    var _charts_video_engagements_video_engagements_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(
-    /*! ./charts/video-engagements/video-engagements.component */
-    "./src/app/charts/video-engagements/video-engagements.component.ts");
+    var _charts_video_engagements_video_engagements_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__( /*! ./charts/video-engagements/video-engagements.component */"./src/app/charts/video-engagements/video-engagements.component.ts");
     /* harmony import */
-
-
-    var _charts_initiative_initiative_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(
-    /*! ./charts/initiative/initiative.component */
-    "./src/app/charts/initiative/initiative.component.ts");
+    var _charts_initiative_initiative_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__( /*! ./charts/initiative/initiative.component */"./src/app/charts/initiative/initiative.component.ts");
     /* harmony import */
-
-
-    var _charts_social_analysis_social_analysis_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(
-    /*! ./charts/social-analysis/social-analysis.component */
-    "./src/app/charts/social-analysis/social-analysis.component.ts");
+    var _charts_social_analysis_social_analysis_component__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__( /*! ./charts/social-analysis/social-analysis.component */"./src/app/charts/social-analysis/social-analysis.component.ts");
     /* harmony import */
-
-
-    var _charts_droppingout_droppingout_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(
-    /*! ./charts/droppingout/droppingout.component */
-    "./src/app/charts/droppingout/droppingout.component.ts");
+    var _charts_droppingout_droppingout_component__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__( /*! ./charts/droppingout/droppingout.component */"./src/app/charts/droppingout/droppingout.component.ts");
     /* harmony import */
-
-
-    var _charts_time_distribution_time_distribution_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(
-    /*! ./charts/time-distribution/time-distribution.component */
-    "./src/app/charts/time-distribution/time-distribution.component.ts");
+    var _charts_time_distribution_time_distribution_component__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__( /*! ./charts/time-distribution/time-distribution.component */"./src/app/charts/time-distribution/time-distribution.component.ts");
     /* harmony import */
-
-
-    var _charts_time_planning_time_planning_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(
-    /*! ./charts/time-planning/time-planning.component */
-    "./src/app/charts/time-planning/time-planning.component.ts");
+    var _charts_time_planning_time_planning_component__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__( /*! ./charts/time-planning/time-planning.component */"./src/app/charts/time-planning/time-planning.component.ts");
     /* harmony import */
-
-
-    var _charts_student_comparison_student_comparison_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(
-    /*! ./charts/student-comparison/student-comparison.component */
-    "./src/app/charts/student-comparison/student-comparison.component.ts");
+    var _charts_student_comparison_student_comparison_component__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__( /*! ./charts/student-comparison/student-comparison.component */"./src/app/charts/student-comparison/student-comparison.component.ts");
     /* harmony import */
-
-
-    var _charts_engagement_performance_engagement_performance_component__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(
-    /*! ./charts/engagement-performance/engagement-performance.component */
-    "./src/app/charts/engagement-performance/engagement-performance.component.ts");
+    var _charts_engagement_performance_engagement_performance_component__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__( /*! ./charts/engagement-performance/engagement-performance.component */"./src/app/charts/engagement-performance/engagement-performance.component.ts");
     /* harmony import */
-
-
-    var _charts_online_change_detection_online_change_detection_component__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(
-    /*! ./charts/online-change-detection/online-change-detection.component */
-    "./src/app/charts/online-change-detection/online-change-detection.component.ts");
+    var _charts_online_change_detection_online_change_detection_component__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__( /*! ./charts/online-change-detection/online-change-detection.component */"./src/app/charts/online-change-detection/online-change-detection.component.ts");
     /* harmony import */
-
-
-    var _charts_gamification_gamification_component__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(
-    /*! ./charts/gamification/gamification.component */
-    "./src/app/charts/gamification/gamification.component.ts");
+    var _charts_gamification_gamification_component__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__( /*! ./charts/gamification/gamification.component */"./src/app/charts/gamification/gamification.component.ts");
     /* harmony import */
-
-
-    var _charts_predict_coursecompletion_predict_coursecompletion_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(
-    /*! ./charts/predict-coursecompletion/predict-coursecompletion.component */
-    "./src/app/charts/predict-coursecompletion/predict-coursecompletion.component.ts");
+    var _charts_predict_coursecompletion_predict_coursecompletion_component__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__( /*! ./charts/predict-coursecompletion/predict-coursecompletion.component */"./src/app/charts/predict-coursecompletion/predict-coursecompletion.component.ts");
     /* harmony import */
-
-
-    var _charts_procrastination_procrastination_component__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(
-    /*! ./charts/procrastination/procrastination.component */
-    "./src/app/charts/procrastination/procrastination.component.ts");
+    var _charts_procrastination_procrastination_component__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__( /*! ./charts/procrastination/procrastination.component */"./src/app/charts/procrastination/procrastination.component.ts");
     /* harmony import */
-
-
-    var _charts_group_participation_group_participation_component__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(
-    /*! ./charts/group-participation/group-participation.component */
-    "./src/app/charts/group-participation/group-participation.component.ts");
+    var _charts_group_participation_group_participation_component__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__( /*! ./charts/group-participation/group-participation.component */"./src/app/charts/group-participation/group-participation.component.ts");
     /* harmony import */
-
-
-    var _charts_clustering_clustering_component__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(
-    /*! ./charts/clustering/clustering.component */
-    "./src/app/charts/clustering/clustering.component.ts");
+    var _charts_clustering_clustering_component__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__( /*! ./charts/clustering/clustering.component */"./src/app/charts/clustering/clustering.component.ts");
     /* harmony import */
-
-
-    var _charts_predict_exam_success_predict_exam_success_component__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(
-    /*! ./charts/predict-exam-success/predict-exam-success.component */
-    "./src/app/charts/predict-exam-success/predict-exam-success.component.ts");
+    var _charts_predict_exam_success_predict_exam_success_component__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__( /*! ./charts/predict-exam-success/predict-exam-success.component */"./src/app/charts/predict-exam-success/predict-exam-success.component.ts");
     /* harmony import */
-
-
-    var _charts_final_grade_prediction_final_grade_prediction_component__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(
-    /*! ./charts/final-grade-prediction/final-grade-prediction.component */
-    "./src/app/charts/final-grade-prediction/final-grade-prediction.component.ts");
+    var _charts_final_grade_prediction_final_grade_prediction_component__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__( /*! ./charts/final-grade-prediction/final-grade-prediction.component */"./src/app/charts/final-grade-prediction/final-grade-prediction.component.ts");
     /* harmony import */
-
-
-    var _charts_learning_behaviour_learning_behaviour_component__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(
-    /*! ./charts/learning-behaviour/learning-behaviour.component */
-    "./src/app/charts/learning-behaviour/learning-behaviour.component.ts");
+    var _charts_learning_behaviour_learning_behaviour_component__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__( /*! ./charts/learning-behaviour/learning-behaviour.component */"./src/app/charts/learning-behaviour/learning-behaviour.component.ts");
     /* harmony import */
-
-
-    var _charts_social_network_analysis_social_network_analysis_component__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(
-    /*! ./charts/social-network-analysis/social-network-analysis.component */
-    "./src/app/charts/social-network-analysis/social-network-analysis.component.ts");
+    var _charts_social_network_analysis_social_network_analysis_component__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__( /*! ./charts/social-network-analysis/social-network-analysis.component */"./src/app/charts/social-network-analysis/social-network-analysis.component.ts");
     /* harmony import */
-
-
-    var _charts_self_motivation_self_motivation_component__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(
-    /*! ./charts/self-motivation/self-motivation.component */
-    "./src/app/charts/self-motivation/self-motivation.component.ts");
+    var _charts_self_motivation_self_motivation_component__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__( /*! ./charts/self-motivation/self-motivation.component */"./src/app/charts/self-motivation/self-motivation.component.ts");
     /* harmony import */
-
-
-    var _charts_learning_behavior_patterns_learning_behavior_patterns_component__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__(
-    /*! ./charts/learning-behavior-patterns/learning-behavior-patterns.component */
-    "./src/app/charts/learning-behavior-patterns/learning-behavior-patterns.component.ts");
+    var _charts_learning_behavior_patterns_learning_behavior_patterns_component__WEBPACK_IMPORTED_MODULE_52__ = __webpack_require__( /*! ./charts/learning-behavior-patterns/learning-behavior-patterns.component */"./src/app/charts/learning-behavior-patterns/learning-behavior-patterns.component.ts");
     /* harmony import */
-
-
-    var _charts_passing_rate_prediction_passing_rate_prediction_component__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__(
-    /*! ./charts/passing-rate-prediction/passing-rate-prediction.component */
-    "./src/app/charts/passing-rate-prediction/passing-rate-prediction.component.ts");
+    var _charts_passing_rate_prediction_passing_rate_prediction_component__WEBPACK_IMPORTED_MODULE_53__ = __webpack_require__( /*! ./charts/passing-rate-prediction/passing-rate-prediction.component */"./src/app/charts/passing-rate-prediction/passing-rate-prediction.component.ts");
     /* harmony import */
-
-
-    var _charts_feedback_feedback_component__WEBPACK_IMPORTED_MODULE_54__ = __webpack_require__(
-    /*! ./charts/feedback/feedback.component */
-    "./src/app/charts/feedback/feedback.component.ts");
+    var _charts_feedback_feedback_component__WEBPACK_IMPORTED_MODULE_54__ = __webpack_require__( /*! ./charts/feedback/feedback.component */"./src/app/charts/feedback/feedback.component.ts");
     /* harmony import */
-
-
-    var _charts_course_assessment_course_assessment_component__WEBPACK_IMPORTED_MODULE_55__ = __webpack_require__(
-    /*! ./charts/course-assessment/course-assessment.component */
-    "./src/app/charts/course-assessment/course-assessment.component.ts");
+    var _charts_course_assessment_course_assessment_component__WEBPACK_IMPORTED_MODULE_55__ = __webpack_require__( /*! ./charts/course-assessment/course-assessment.component */"./src/app/charts/course-assessment/course-assessment.component.ts");
     /* harmony import */
-
-
-    var _charts_affective_state_affective_state_component__WEBPACK_IMPORTED_MODULE_56__ = __webpack_require__(
-    /*! ./charts/affective-state/affective-state.component */
-    "./src/app/charts/affective-state/affective-state.component.ts");
+    var _charts_affective_state_affective_state_component__WEBPACK_IMPORTED_MODULE_56__ = __webpack_require__( /*! ./charts/affective-state/affective-state.component */"./src/app/charts/affective-state/affective-state.component.ts");
     /* harmony import */
-
-
-    var _charts_course_difficulty_course_difficulty_component__WEBPACK_IMPORTED_MODULE_57__ = __webpack_require__(
-    /*! ./charts/course-difficulty/course-difficulty.component */
-    "./src/app/charts/course-difficulty/course-difficulty.component.ts");
+    var _charts_course_difficulty_course_difficulty_component__WEBPACK_IMPORTED_MODULE_57__ = __webpack_require__( /*! ./charts/course-difficulty/course-difficulty.component */"./src/app/charts/course-difficulty/course-difficulty.component.ts");
     /* harmony import */
-
-
-    var _charts_curriculum_usage_curriculum_usage_component__WEBPACK_IMPORTED_MODULE_58__ = __webpack_require__(
-    /*! ./charts/curriculum-usage/curriculum-usage.component */
-    "./src/app/charts/curriculum-usage/curriculum-usage.component.ts");
+    var _charts_curriculum_usage_curriculum_usage_component__WEBPACK_IMPORTED_MODULE_58__ = __webpack_require__( /*! ./charts/curriculum-usage/curriculum-usage.component */"./src/app/charts/curriculum-usage/curriculum-usage.component.ts");
     /* harmony import */
-
-
-    var _charts_presentation_skills_presentation_skills_component__WEBPACK_IMPORTED_MODULE_59__ = __webpack_require__(
-    /*! ./charts/presentation-skills/presentation-skills.component */
-    "./src/app/charts/presentation-skills/presentation-skills.component.ts");
+    var _charts_presentation_skills_presentation_skills_component__WEBPACK_IMPORTED_MODULE_59__ = __webpack_require__( /*! ./charts/presentation-skills/presentation-skills.component */"./src/app/charts/presentation-skills/presentation-skills.component.ts");
     /* harmony import */
+    var _component_admin_admin_component__WEBPACK_IMPORTED_MODULE_60__ = __webpack_require__( /*! ./component/admin/admin.component */"./src/app/component/admin/admin.component.ts");
+    /* harmony import */
+    var _component_star_rating_star_rating_component__WEBPACK_IMPORTED_MODULE_61__ = __webpack_require__( /*! ./component/star-rating/star-rating.component */"./src/app/component/star-rating/star-rating.component.ts");
+    /* harmony import */
+    var _component_review_display_review_display_component__WEBPACK_IMPORTED_MODULE_62__ = __webpack_require__( /*! ./component/review-display/review-display.component */"./src/app/component/review-display/review-display.component.ts");
+    /* harmony import */
+    var _angular_material_tooltip__WEBPACK_IMPORTED_MODULE_63__ = __webpack_require__( /*! @angular/material/tooltip */"./node_modules/@angular/material/esm2015/tooltip.js");
+    /* harmony import */
+    var _component_review_edit_review_edit_component__WEBPACK_IMPORTED_MODULE_64__ = __webpack_require__( /*! ./component/review-edit/review-edit.component */"./src/app/component/review-edit/review-edit.component.ts");
+    /* harmony import */
+    var _component_display_table_table_component__WEBPACK_IMPORTED_MODULE_65__ = __webpack_require__( /*! ./component/display/table/table.component */"./src/app/component/display/table/table.component.ts");
+    /* harmony import */
+    var _ng_select_ng_select__WEBPACK_IMPORTED_MODULE_66__ = __webpack_require__( /*! @ng-select/ng-select */"./node_modules/@ng-select/ng-select/fesm2015/ng-select-ng-select.js");
+    /* harmony import */
+    var _component_header_header_service__WEBPACK_IMPORTED_MODULE_67__ = __webpack_require__( /*! ./component/header/header.service */"./src/app/component/header/header.service.ts");
+    /* harmony import */
+    var _assets_js_tour_service__WEBPACK_IMPORTED_MODULE_68__ = __webpack_require__( /*! ../assets/js/tour.service */"./src/assets/js/tour.service.ts");
+    /* harmony import */
+    var _superAdmin_super_admin_service__WEBPACK_IMPORTED_MODULE_69__ = __webpack_require__( /*! ./superAdmin/super-admin.service */"./src/app/superAdmin/super-admin.service.ts");
 
-
-    var _component_admin_admin_component__WEBPACK_IMPORTED_MODULE_60__ = __webpack_require__(
-    /*! ./component/admin/admin.component */
-    "./src/app/component/admin/admin.component.ts"); // const routes: Routes = [
+    // const routes: Routes = [
     //   { path: "add", component: AddDataComponent, canActivate: [AuthGuardService]},
     //   { path: "reference", component: ReferanceComponent },
     //   { path: "login", component: AdminComponent },
@@ -1702,199 +1578,158 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     //   { path: "", redirectTo: "display/data", pathMatch: "full" },
     //   //{ path: "add/data", redirectTo: "add/data", pathMatch: "full" },
     // ];
-
-
-    var AppModule = function AppModule() {
+    var AppModule = /*#__PURE__*/_createClass(function AppModule() {
       _classCallCheck(this, AppModule);
-    };
-
+    });
     AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
-      declarations: [_app_component__WEBPACK_IMPORTED_MODULE_11__["AppComponent"], _component_add_data_add_data_component__WEBPACK_IMPORTED_MODULE_12__["AddDataComponent"], _component_header_header_component__WEBPACK_IMPORTED_MODULE_13__["HeaderComponent"], _component_display_display_component__WEBPACK_IMPORTED_MODULE_17__["DisplayComponent"], _component_display_filter_pipe__WEBPACK_IMPORTED_MODULE_14__["SanitizeHtmlPipe"], _component_dropdown_dropdown_component__WEBPACK_IMPORTED_MODULE_18__["DropdownComponent"], _component_display_select_check_all_component__WEBPACK_IMPORTED_MODULE_20__["SelectCheckAllComponent"], _component_reference_referance_component__WEBPACK_IMPORTED_MODULE_19__["ReferanceComponent"], _component_admin_admin_component__WEBPACK_IMPORTED_MODULE_60__["AdminComponent"], _component_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_22__["DashboardComponent"], _chart_manager_chart_manager_component__WEBPACK_IMPORTED_MODULE_23__["ChartManagerComponent"], _charts_student_interaction_patterns_student_interaction_patterns_component__WEBPACK_IMPORTED_MODULE_24__["StudentInteractionPatternsComponent"], _charts_competency_competency_component__WEBPACK_IMPORTED_MODULE_25__["CompetencyComponent"], _charts_reading_analytics_reading_analytics_component__WEBPACK_IMPORTED_MODULE_27__["ReadingAnalyticsComponent"], _charts_video_analytics_video_analytics_component__WEBPACK_IMPORTED_MODULE_28__["VideoAnalyticsComponent"], _charts_learning_progress_learning_progress_component__WEBPACK_IMPORTED_MODULE_29__["LearningProgressComponent"], _charts_writing_analytics_writing_analytics_component__WEBPACK_IMPORTED_MODULE_30__["WritingAnalyticsComponent"], _charts_discussion_quality_discussion_quality_component__WEBPACK_IMPORTED_MODULE_31__["DiscussionQualityComponent"], _charts_clickstream_analysis_clickstream_analysis_component__WEBPACK_IMPORTED_MODULE_32__["ClickstreamAnalysisComponent"], _charts_video_engagements_video_engagements_component__WEBPACK_IMPORTED_MODULE_33__["VideoEngagementsComponent"], _charts_initiative_initiative_component__WEBPACK_IMPORTED_MODULE_34__["InitiativeComponent"], _charts_social_analysis_social_analysis_component__WEBPACK_IMPORTED_MODULE_35__["SocialAnalysisComponent"], _charts_droppingout_droppingout_component__WEBPACK_IMPORTED_MODULE_36__["DroppingoutComponent"], _charts_time_distribution_time_distribution_component__WEBPACK_IMPORTED_MODULE_37__["TimeDistributionComponent"], _charts_time_planning_time_planning_component__WEBPACK_IMPORTED_MODULE_38__["TimePlanningComponent"], _charts_student_comparison_student_comparison_component__WEBPACK_IMPORTED_MODULE_39__["StudentComparisonComponent"], _charts_engagement_performance_engagement_performance_component__WEBPACK_IMPORTED_MODULE_40__["EngagementPerformanceComponent"], _charts_online_change_detection_online_change_detection_component__WEBPACK_IMPORTED_MODULE_41__["OnlineChangeDetectionComponent"], _charts_gamification_gamification_component__WEBPACK_IMPORTED_MODULE_42__["GamificationComponent"], _charts_predict_coursecompletion_predict_coursecompletion_component__WEBPACK_IMPORTED_MODULE_43__["PredictCoursecompletionComponent"], _charts_procrastination_procrastination_component__WEBPACK_IMPORTED_MODULE_44__["ProcrastinationComponent"], _charts_group_participation_group_participation_component__WEBPACK_IMPORTED_MODULE_45__["GroupParticipationComponent"], _charts_clustering_clustering_component__WEBPACK_IMPORTED_MODULE_46__["ClusteringComponent"], _charts_predict_exam_success_predict_exam_success_component__WEBPACK_IMPORTED_MODULE_47__["PredictExamSuccessComponent"], _charts_final_grade_prediction_final_grade_prediction_component__WEBPACK_IMPORTED_MODULE_48__["FinalGradePredictionComponent"], _charts_learning_behaviour_learning_behaviour_component__WEBPACK_IMPORTED_MODULE_49__["LearningBehaviourComponent"], _charts_social_network_analysis_social_network_analysis_component__WEBPACK_IMPORTED_MODULE_50__["SocialNetworkAnalysisComponent"], _charts_self_motivation_self_motivation_component__WEBPACK_IMPORTED_MODULE_51__["SelfMotivationComponent"], _charts_learning_behavior_patterns_learning_behavior_patterns_component__WEBPACK_IMPORTED_MODULE_52__["LearningBehaviorPatternsComponent"], _charts_passing_rate_prediction_passing_rate_prediction_component__WEBPACK_IMPORTED_MODULE_53__["PassingRatePredictionComponent"], _charts_feedback_feedback_component__WEBPACK_IMPORTED_MODULE_54__["FeedbackComponent"], _charts_course_assessment_course_assessment_component__WEBPACK_IMPORTED_MODULE_55__["CourseAssessmentComponent"], _charts_affective_state_affective_state_component__WEBPACK_IMPORTED_MODULE_56__["AffectiveStateComponent"], _charts_course_difficulty_course_difficulty_component__WEBPACK_IMPORTED_MODULE_57__["CourseDifficultyComponent"], _charts_curriculum_usage_curriculum_usage_component__WEBPACK_IMPORTED_MODULE_58__["CurriculumUsageComponent"], _charts_presentation_skills_presentation_skills_component__WEBPACK_IMPORTED_MODULE_59__["PresentationSkillsComponent"]],
-      imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_10__["AppRoutingModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"], //RouterModule.forRoot(routes),
-      _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_15__["BrowserAnimationsModule"], _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatInputModule"], _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatCardModule"], _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatButtonModule"], _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatToolbarModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"], _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatDialogModule"], _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatSnackBarModule"], ng_multiselect_dropdown__WEBPACK_IMPORTED_MODULE_7__["NgMultiSelectDropDownModule"], _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatSelectModule"], angular2_multiselect_dropdown__WEBPACK_IMPORTED_MODULE_9__["AngularMultiSelectModule"], _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatCheckboxModule"], angular_font_awesome__WEBPACK_IMPORTED_MODULE_5__["AngularFontAwesomeModule"], highcharts_angular__WEBPACK_IMPORTED_MODULE_8__["HighchartsChartModule"]],
-      providers: [_data_service__WEBPACK_IMPORTED_MODULE_16__["DataService"], _auth_guard_service__WEBPACK_IMPORTED_MODULE_21__["AuthGuardService"], _chart_helper_service__WEBPACK_IMPORTED_MODULE_26__["ChartHelperService"]],
+      declarations: [_app_component__WEBPACK_IMPORTED_MODULE_11__["AppComponent"], _component_add_data_add_data_component__WEBPACK_IMPORTED_MODULE_12__["AddDataComponent"], _component_header_header_component__WEBPACK_IMPORTED_MODULE_13__["HeaderComponent"], _component_display_display_component__WEBPACK_IMPORTED_MODULE_17__["DisplayComponent"], _component_display_filter_pipe__WEBPACK_IMPORTED_MODULE_14__["SanitizeHtmlPipe"], _component_dropdown_dropdown_component__WEBPACK_IMPORTED_MODULE_18__["DropdownComponent"], _component_display_select_check_all_component__WEBPACK_IMPORTED_MODULE_20__["SelectCheckAllComponent"], _component_reference_referance_component__WEBPACK_IMPORTED_MODULE_19__["ReferanceComponent"], _component_admin_admin_component__WEBPACK_IMPORTED_MODULE_60__["AdminComponent"], _component_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_22__["DashboardComponent"], _chart_manager_chart_manager_component__WEBPACK_IMPORTED_MODULE_23__["ChartManagerComponent"], _charts_student_interaction_patterns_student_interaction_patterns_component__WEBPACK_IMPORTED_MODULE_24__["StudentInteractionPatternsComponent"], _charts_competency_competency_component__WEBPACK_IMPORTED_MODULE_25__["CompetencyComponent"], _charts_reading_analytics_reading_analytics_component__WEBPACK_IMPORTED_MODULE_27__["ReadingAnalyticsComponent"], _charts_video_analytics_video_analytics_component__WEBPACK_IMPORTED_MODULE_28__["VideoAnalyticsComponent"], _charts_learning_progress_learning_progress_component__WEBPACK_IMPORTED_MODULE_29__["LearningProgressComponent"], _charts_writing_analytics_writing_analytics_component__WEBPACK_IMPORTED_MODULE_30__["WritingAnalyticsComponent"], _charts_discussion_quality_discussion_quality_component__WEBPACK_IMPORTED_MODULE_31__["DiscussionQualityComponent"], _charts_clickstream_analysis_clickstream_analysis_component__WEBPACK_IMPORTED_MODULE_32__["ClickstreamAnalysisComponent"], _charts_video_engagements_video_engagements_component__WEBPACK_IMPORTED_MODULE_33__["VideoEngagementsComponent"], _charts_initiative_initiative_component__WEBPACK_IMPORTED_MODULE_34__["InitiativeComponent"], _charts_social_analysis_social_analysis_component__WEBPACK_IMPORTED_MODULE_35__["SocialAnalysisComponent"], _charts_droppingout_droppingout_component__WEBPACK_IMPORTED_MODULE_36__["DroppingoutComponent"], _charts_time_distribution_time_distribution_component__WEBPACK_IMPORTED_MODULE_37__["TimeDistributionComponent"], _charts_time_planning_time_planning_component__WEBPACK_IMPORTED_MODULE_38__["TimePlanningComponent"], _charts_student_comparison_student_comparison_component__WEBPACK_IMPORTED_MODULE_39__["StudentComparisonComponent"], _charts_engagement_performance_engagement_performance_component__WEBPACK_IMPORTED_MODULE_40__["EngagementPerformanceComponent"], _charts_online_change_detection_online_change_detection_component__WEBPACK_IMPORTED_MODULE_41__["OnlineChangeDetectionComponent"], _charts_gamification_gamification_component__WEBPACK_IMPORTED_MODULE_42__["GamificationComponent"], _charts_predict_coursecompletion_predict_coursecompletion_component__WEBPACK_IMPORTED_MODULE_43__["PredictCoursecompletionComponent"], _charts_procrastination_procrastination_component__WEBPACK_IMPORTED_MODULE_44__["ProcrastinationComponent"], _charts_group_participation_group_participation_component__WEBPACK_IMPORTED_MODULE_45__["GroupParticipationComponent"], _charts_clustering_clustering_component__WEBPACK_IMPORTED_MODULE_46__["ClusteringComponent"], _charts_predict_exam_success_predict_exam_success_component__WEBPACK_IMPORTED_MODULE_47__["PredictExamSuccessComponent"], _charts_final_grade_prediction_final_grade_prediction_component__WEBPACK_IMPORTED_MODULE_48__["FinalGradePredictionComponent"], _charts_learning_behaviour_learning_behaviour_component__WEBPACK_IMPORTED_MODULE_49__["LearningBehaviourComponent"], _charts_social_network_analysis_social_network_analysis_component__WEBPACK_IMPORTED_MODULE_50__["SocialNetworkAnalysisComponent"], _charts_self_motivation_self_motivation_component__WEBPACK_IMPORTED_MODULE_51__["SelfMotivationComponent"], _charts_learning_behavior_patterns_learning_behavior_patterns_component__WEBPACK_IMPORTED_MODULE_52__["LearningBehaviorPatternsComponent"], _charts_passing_rate_prediction_passing_rate_prediction_component__WEBPACK_IMPORTED_MODULE_53__["PassingRatePredictionComponent"], _charts_feedback_feedback_component__WEBPACK_IMPORTED_MODULE_54__["FeedbackComponent"], _charts_course_assessment_course_assessment_component__WEBPACK_IMPORTED_MODULE_55__["CourseAssessmentComponent"], _charts_affective_state_affective_state_component__WEBPACK_IMPORTED_MODULE_56__["AffectiveStateComponent"], _charts_course_difficulty_course_difficulty_component__WEBPACK_IMPORTED_MODULE_57__["CourseDifficultyComponent"], _charts_curriculum_usage_curriculum_usage_component__WEBPACK_IMPORTED_MODULE_58__["CurriculumUsageComponent"], _charts_presentation_skills_presentation_skills_component__WEBPACK_IMPORTED_MODULE_59__["PresentationSkillsComponent"], _component_star_rating_star_rating_component__WEBPACK_IMPORTED_MODULE_61__["StarRatingComponent"], _component_review_display_review_display_component__WEBPACK_IMPORTED_MODULE_62__["ReviewDisplayComponent"], _component_review_edit_review_edit_component__WEBPACK_IMPORTED_MODULE_64__["ReviewEditComponent"], _component_display_table_table_component__WEBPACK_IMPORTED_MODULE_65__["TableComponent"]],
+      imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_10__["AppRoutingModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"], _ng_select_ng_select__WEBPACK_IMPORTED_MODULE_66__["NgSelectModule"],
+      //RouterModule.forRoot(routes),
+      _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_15__["BrowserAnimationsModule"], _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatInputModule"], _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatCardModule"], _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatButtonModule"], _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatToolbarModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_4__["HttpClientModule"], _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatDialogModule"], _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatSnackBarModule"], ng_multiselect_dropdown__WEBPACK_IMPORTED_MODULE_7__["NgMultiSelectDropDownModule"], _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatSelectModule"], angular2_multiselect_dropdown__WEBPACK_IMPORTED_MODULE_9__["AngularMultiSelectModule"], _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatCheckboxModule"], angular_font_awesome__WEBPACK_IMPORTED_MODULE_5__["AngularFontAwesomeModule"], highcharts_angular__WEBPACK_IMPORTED_MODULE_8__["HighchartsChartModule"], _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatIconModule"], _angular_material_tooltip__WEBPACK_IMPORTED_MODULE_63__["MatTooltipModule"]],
+      providers: [_data_service__WEBPACK_IMPORTED_MODULE_16__["DataService"], _auth_guard_service__WEBPACK_IMPORTED_MODULE_21__["AuthGuardService"], _superAdmin_super_admin_service__WEBPACK_IMPORTED_MODULE_69__["SuperAdminService"], _chart_helper_service__WEBPACK_IMPORTED_MODULE_26__["ChartHelperService"], _component_header_header_service__WEBPACK_IMPORTED_MODULE_67__["HeaderService"], _assets_js_tour_service__WEBPACK_IMPORTED_MODULE_68__["TourService"]],
       bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_11__["AppComponent"]]
     })], AppModule);
+
     /***/
   },
 
+  /***/"./src/app/auth-guard.service.ts":
+  /*!***************************************!*\
+    !*** ./src/app/auth-guard.service.ts ***!
+    \***************************************/
+  /*! exports provided: AuthGuardService */
   /***/
-  "./src/app/auth-guard.service.ts": function srcAppAuthGuardServiceTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppAuthGuardServiceTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "AuthGuardService", function () {
       return AuthGuardService;
     });
     /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
     /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
-
-
-    var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! @angular/router */
-    "./node_modules/@angular/router/fesm2015/router.js");
-    /* harmony import */
-
-
-    var _data_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! ./data.service */
-    "./src/app/data.service.ts");
-
+    var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__( /*! @angular/router */"./node_modules/@angular/router/fesm2015/router.js");
     var AuthGuardService = /*#__PURE__*/function () {
-      function AuthGuardService(dataService, router) {
+      function AuthGuardService(router) {
         _classCallCheck(this, AuthGuardService);
-
-        this.dataService = dataService;
         this.router = router;
       }
-
       _createClass(AuthGuardService, [{
         key: "canActivate",
         value: function canActivate(route, state) {
           var currentUser = JSON.parse(localStorage.getItem('currentUser')); //this.dataService.currentUserValue;
-
           if (currentUser) {
             return true;
           } else {
             //this.router.navigate(['/login']);
             this.router.navigate(['/login'], {
-              queryParams: {
-                returnUrl: state.url
+              state: {
+                url: state.url
               }
             });
             return false;
           }
         }
       }]);
-
       return AuthGuardService;
     }();
-
     AuthGuardService.ctorParameters = function () {
       return [{
-        type: _data_service__WEBPACK_IMPORTED_MODULE_3__["DataService"]
-      }, {
         type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]
       }];
     };
-
     AuthGuardService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])()], AuthGuardService);
+
     /***/
   },
 
+  /***/"./src/app/chart-helper.service.ts":
+  /*!*****************************************!*\
+    !*** ./src/app/chart-helper.service.ts ***!
+    \*****************************************/
+  /*! exports provided: ChartHelperService */
   /***/
-  "./src/app/chart-helper.service.ts": function srcAppChartHelperServiceTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartHelperServiceTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "ChartHelperService", function () {
       return ChartHelperService;
     });
     /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
     /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
-
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
     var ChartHelperService = /*#__PURE__*/function () {
       function ChartHelperService() {
         _classCallCheck(this, ChartHelperService);
-      } //Sets the indicators in the localstorage as a string
-
-
+      }
+      //Sets the indicators in the localstorage as a string
       _createClass(ChartHelperService, [{
         key: "setSettings",
         value: function setSettings(storageName, data) {
           localStorage.setItem(storageName, JSON.stringify(data));
         }
       }]);
-
       return ChartHelperService;
     }();
-
     ChartHelperService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
       providedIn: "root"
     })], ChartHelperService);
+
     /***/
   },
 
+  /***/"./src/app/chart-manager/chart-manager.component.css":
+  /*!***********************************************************!*\
+    !*** ./src/app/chart-manager/chart-manager.component.css ***!
+    \***********************************************************/
+  /*! exports provided: default */
   /***/
-  "./src/app/chart-manager/chart-manager.component.css": function srcAppChartManagerChartManagerComponentCss(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartManagerChartManagerComponentCss(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
+    __webpack_exports__["default"] = ".container {\n  display: grid;\n  grid-template-columns: repeat(12, 1fr);\n}\n\n.main-content {\n  grid-column: span 6;\n}\n\n::ng-deep .mat-form-field-infix {\n  width: 250px !important;\n}\n\n::ng-deep .mat-form-field {\n  position: -webkit-sticky !important;\n  position: sticky !important;\n  z-index: 100;\n  top: 0;\n}\n\n.mat-elevation-z5 {\n  position: relative;\n}\n\n.sticky {\n  top: 0px;\n}\n\n@media screen and (max-width: 768px) {\n  .main-content {\n    grid-column: span 12;\n  }\n}\n\n@media screen and (max-width: 480px) {\n  .main-content {\n    grid-column: span 12;\n  }\n}\n\n.downloadCharts {\n  margin: 1rem;\n  float: right;\n  z-index: 100;\n  position: fixed;\n  right: 1%;\n}\n\n.backBtn {\n  float: right;\n  margin: 1rem;\n  z-index: 100;\n  position: fixed;\n  right: 8%;\n}\n\n.mat-elevation-z5 {\n  position: relative;\n}\n\n.sticky {\n  position: fixed;\n  top: 0px;\n}\n\n.buttons {\n  height: 70px;\n  background-color: #fff;\n  border: 2px solid #f5f5f5;\n  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;\n  position: fixed;\n  right: 0;\n  float: right;\n  z-index: 99;\n  width: 100%;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY2hhcnQtbWFuYWdlci9jaGFydC1tYW5hZ2VyLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxhQUFhO0VBQ2Isc0NBQXNDO0FBQ3hDOztBQUVBO0VBQ0UsbUJBQW1CO0FBQ3JCOztBQUVBO0VBQ0UsdUJBQXVCO0FBQ3pCOztBQUVBO0VBQ0UsbUNBQTJCO0VBQTNCLDJCQUEyQjtFQUMzQixZQUFZO0VBQ1osTUFBTTtBQUNSOztBQUVBO0VBQ0Usa0JBQWtCO0FBQ3BCOztBQUVBO0VBQ0UsUUFBUTtBQUNWOztBQUVBO0VBQ0U7SUFDRSxvQkFBb0I7RUFDdEI7QUFDRjs7QUFDQTtFQUNFO0lBQ0Usb0JBQW9CO0VBQ3RCO0FBQ0Y7O0FBRUE7RUFDRSxZQUFZO0VBQ1osWUFBWTtFQUNaLFlBQVk7RUFDWixlQUFlO0VBQ2YsU0FBUztBQUNYOztBQUVBO0VBQ0UsWUFBWTtFQUNaLFlBQVk7RUFDWixZQUFZO0VBQ1osZUFBZTtFQUNmLFNBQVM7QUFDWDs7QUFFQTtFQUNFLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLGVBQWU7RUFDZixRQUFRO0FBQ1Y7O0FBRUE7RUFDRSxZQUFZO0VBQ1osc0JBQXNCO0VBQ3RCLHlCQUF5QjtFQUN6QixtREFBbUQ7RUFDbkQsZUFBZTtFQUNmLFFBQVE7RUFDUixZQUFZO0VBQ1osV0FBVztFQUNYLFdBQVc7QUFDYiIsImZpbGUiOiJzcmMvYXBwL2NoYXJ0LW1hbmFnZXIvY2hhcnQtbWFuYWdlci5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNvbnRhaW5lciB7XG4gIGRpc3BsYXk6IGdyaWQ7XG4gIGdyaWQtdGVtcGxhdGUtY29sdW1uczogcmVwZWF0KDEyLCAxZnIpO1xufVxuXG4ubWFpbi1jb250ZW50IHtcbiAgZ3JpZC1jb2x1bW46IHNwYW4gNjtcbn1cblxuOjpuZy1kZWVwIC5tYXQtZm9ybS1maWVsZC1pbmZpeCB7XG4gIHdpZHRoOiAyNTBweCAhaW1wb3J0YW50O1xufVxuXG46Om5nLWRlZXAgLm1hdC1mb3JtLWZpZWxkIHtcbiAgcG9zaXRpb246IHN0aWNreSAhaW1wb3J0YW50O1xuICB6LWluZGV4OiAxMDA7XG4gIHRvcDogMDtcbn1cblxuLm1hdC1lbGV2YXRpb24tejUge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG59XG5cbi5zdGlja3kge1xuICB0b3A6IDBweDtcbn1cblxuQG1lZGlhIHNjcmVlbiBhbmQgKG1heC13aWR0aDogNzY4cHgpIHtcbiAgLm1haW4tY29udGVudCB7XG4gICAgZ3JpZC1jb2x1bW46IHNwYW4gMTI7XG4gIH1cbn1cbkBtZWRpYSBzY3JlZW4gYW5kIChtYXgtd2lkdGg6IDQ4MHB4KSB7XG4gIC5tYWluLWNvbnRlbnQge1xuICAgIGdyaWQtY29sdW1uOiBzcGFuIDEyO1xuICB9XG59XG5cbi5kb3dubG9hZENoYXJ0cyB7XG4gIG1hcmdpbjogMXJlbTtcbiAgZmxvYXQ6IHJpZ2h0O1xuICB6LWluZGV4OiAxMDA7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgcmlnaHQ6IDElO1xufVxuXG4uYmFja0J0biB7XG4gIGZsb2F0OiByaWdodDtcbiAgbWFyZ2luOiAxcmVtO1xuICB6LWluZGV4OiAxMDA7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgcmlnaHQ6IDglO1xufVxuXG4ubWF0LWVsZXZhdGlvbi16NSB7XG4gIHBvc2l0aW9uOiByZWxhdGl2ZTtcbn1cblxuLnN0aWNreSB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgdG9wOiAwcHg7XG59XG5cbi5idXR0b25zIHtcbiAgaGVpZ2h0OiA3MHB4O1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xuICBib3JkZXI6IDJweCBzb2xpZCAjZjVmNWY1O1xuICBib3gtc2hhZG93OiByZ2JhKDAsIDAsIDAsIDAuMTUpIDEuOTVweCAxLjk1cHggMi42cHg7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgcmlnaHQ6IDA7XG4gIGZsb2F0OiByaWdodDtcbiAgei1pbmRleDogOTk7XG4gIHdpZHRoOiAxMDAlO1xufVxuIl19 */";
 
-
-    __webpack_exports__["default"] = ".container {\r\n  display: grid;\r\n  grid-template-columns: repeat(12, 1fr);\r\n}\r\n\r\n.main-content {\r\n  grid-column: span 6;\r\n}\r\n\r\n::ng-deep .mat-form-field-infix {\r\n  width: 250px !important;\r\n}\r\n\r\n::ng-deep .mat-form-field {\r\n  position: -webkit-sticky !important;\r\n  position: sticky !important;\r\n  z-index: 100;\r\n  top: 0;\r\n}\r\n\r\n.mat-elevation-z5 {\r\n  position: relative;\r\n}\r\n\r\n.sticky {\r\n  top: 0px;\r\n}\r\n\r\n@media screen and (max-width: 768px) {\r\n  .main-content {\r\n    grid-column: span 12;\r\n  }\r\n}\r\n\r\n@media screen and (max-width: 480px) {\r\n  .main-content {\r\n    grid-column: span 12;\r\n  }\r\n}\r\n\r\n.downloadCharts {\r\n  margin: 1rem;\r\n  float: right;\r\n  z-index: 100;\r\n  position: fixed;\r\n  right: 1%;\r\n}\r\n\r\n.backBtn {\r\n  float: right;\r\n  margin: 1rem;\r\n  z-index: 100;\r\n  position: fixed;\r\n  right: 8%;\r\n}\r\n\r\n.mat-elevation-z5 {\r\n  position: relative;\r\n}\r\n\r\n.sticky {\r\n  position: fixed;\r\n  top: 0px;\r\n}\r\n\r\n.buttons {\r\n  height: 70px;\r\n  background-color: #fff;\r\n  border: 2px solid #f5f5f5;\r\n  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;\r\n  position: fixed;\r\n  right: 0;\r\n  float: right;\r\n  z-index: 99;\r\n  width: 100%;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY2hhcnQtbWFuYWdlci9jaGFydC1tYW5hZ2VyLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxhQUFhO0VBQ2Isc0NBQXNDO0FBQ3hDOztBQUVBO0VBQ0UsbUJBQW1CO0FBQ3JCOztBQUVBO0VBQ0UsdUJBQXVCO0FBQ3pCOztBQUVBO0VBQ0UsbUNBQTJCO0VBQTNCLDJCQUEyQjtFQUMzQixZQUFZO0VBQ1osTUFBTTtBQUNSOztBQUVBO0VBQ0Usa0JBQWtCO0FBQ3BCOztBQUVBO0VBQ0UsUUFBUTtBQUNWOztBQUVBO0VBQ0U7SUFDRSxvQkFBb0I7RUFDdEI7QUFDRjs7QUFDQTtFQUNFO0lBQ0Usb0JBQW9CO0VBQ3RCO0FBQ0Y7O0FBRUE7RUFDRSxZQUFZO0VBQ1osWUFBWTtFQUNaLFlBQVk7RUFDWixlQUFlO0VBQ2YsU0FBUztBQUNYOztBQUVBO0VBQ0UsWUFBWTtFQUNaLFlBQVk7RUFDWixZQUFZO0VBQ1osZUFBZTtFQUNmLFNBQVM7QUFDWDs7QUFFQTtFQUNFLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLGVBQWU7RUFDZixRQUFRO0FBQ1Y7O0FBRUE7RUFDRSxZQUFZO0VBQ1osc0JBQXNCO0VBQ3RCLHlCQUF5QjtFQUN6QixtREFBbUQ7RUFDbkQsZUFBZTtFQUNmLFFBQVE7RUFDUixZQUFZO0VBQ1osV0FBVztFQUNYLFdBQVc7QUFDYiIsImZpbGUiOiJzcmMvYXBwL2NoYXJ0LW1hbmFnZXIvY2hhcnQtbWFuYWdlci5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNvbnRhaW5lciB7XHJcbiAgZGlzcGxheTogZ3JpZDtcclxuICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IHJlcGVhdCgxMiwgMWZyKTtcclxufVxyXG5cclxuLm1haW4tY29udGVudCB7XHJcbiAgZ3JpZC1jb2x1bW46IHNwYW4gNjtcclxufVxyXG5cclxuOjpuZy1kZWVwIC5tYXQtZm9ybS1maWVsZC1pbmZpeCB7XHJcbiAgd2lkdGg6IDI1MHB4ICFpbXBvcnRhbnQ7XHJcbn1cclxuXHJcbjo6bmctZGVlcCAubWF0LWZvcm0tZmllbGQge1xyXG4gIHBvc2l0aW9uOiBzdGlja3kgIWltcG9ydGFudDtcclxuICB6LWluZGV4OiAxMDA7XHJcbiAgdG9wOiAwO1xyXG59XHJcblxyXG4ubWF0LWVsZXZhdGlvbi16NSB7XHJcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG59XHJcblxyXG4uc3RpY2t5IHtcclxuICB0b3A6IDBweDtcclxufVxyXG5cclxuQG1lZGlhIHNjcmVlbiBhbmQgKG1heC13aWR0aDogNzY4cHgpIHtcclxuICAubWFpbi1jb250ZW50IHtcclxuICAgIGdyaWQtY29sdW1uOiBzcGFuIDEyO1xyXG4gIH1cclxufVxyXG5AbWVkaWEgc2NyZWVuIGFuZCAobWF4LXdpZHRoOiA0ODBweCkge1xyXG4gIC5tYWluLWNvbnRlbnQge1xyXG4gICAgZ3JpZC1jb2x1bW46IHNwYW4gMTI7XHJcbiAgfVxyXG59XHJcblxyXG4uZG93bmxvYWRDaGFydHMge1xyXG4gIG1hcmdpbjogMXJlbTtcclxuICBmbG9hdDogcmlnaHQ7XHJcbiAgei1pbmRleDogMTAwO1xyXG4gIHBvc2l0aW9uOiBmaXhlZDtcclxuICByaWdodDogMSU7XHJcbn1cclxuXHJcbi5iYWNrQnRuIHtcclxuICBmbG9hdDogcmlnaHQ7XHJcbiAgbWFyZ2luOiAxcmVtO1xyXG4gIHotaW5kZXg6IDEwMDtcclxuICBwb3NpdGlvbjogZml4ZWQ7XHJcbiAgcmlnaHQ6IDglO1xyXG59XHJcblxyXG4ubWF0LWVsZXZhdGlvbi16NSB7XHJcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG59XHJcblxyXG4uc3RpY2t5IHtcclxuICBwb3NpdGlvbjogZml4ZWQ7XHJcbiAgdG9wOiAwcHg7XHJcbn1cclxuXHJcbi5idXR0b25zIHtcclxuICBoZWlnaHQ6IDcwcHg7XHJcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcclxuICBib3JkZXI6IDJweCBzb2xpZCAjZjVmNWY1O1xyXG4gIGJveC1zaGFkb3c6IHJnYmEoMCwgMCwgMCwgMC4xNSkgMS45NXB4IDEuOTVweCAyLjZweDtcclxuICBwb3NpdGlvbjogZml4ZWQ7XHJcbiAgcmlnaHQ6IDA7XHJcbiAgZmxvYXQ6IHJpZ2h0O1xyXG4gIHotaW5kZXg6IDk5O1xyXG4gIHdpZHRoOiAxMDAlO1xyXG59XHJcbiJdfQ== */";
     /***/
   },
 
+  /***/"./src/app/chart-manager/chart-manager.component.ts":
+  /*!**********************************************************!*\
+    !*** ./src/app/chart-manager/chart-manager.component.ts ***!
+    \**********************************************************/
+  /*! exports provided: ChartManagerComponent */
   /***/
-  "./src/app/chart-manager/chart-manager.component.ts": function srcAppChartManagerChartManagerComponentTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartManagerChartManagerComponentTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "ChartManagerComponent", function () {
       return ChartManagerComponent;
     });
     /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
     /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
-
-
-    var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
-
+    var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__( /*! @angular/forms */"./node_modules/@angular/forms/fesm2015/forms.js");
     var ChartManagerComponent = /*#__PURE__*/function () {
       function ChartManagerComponent() {
         _classCallCheck(this, ChartManagerComponent);
-
         this.indicators = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]();
         this.components = [];
         this.isSticky = false;
         this.unselectedIndicator = [];
         this.regex = /\[[0-9]+\]/; // We will check if the array contains a string in the format [XX] where X = 0-9
       }
-
       _createClass(ChartManagerComponent, [{
         key: "checkScroll",
         value: function checkScroll() {
@@ -1906,27 +1741,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           The HTML template checks if referenceNumbers includes an indicator number in brackets and renders it.
               
         */
-
       }, {
         key: "ngOnInit",
         value: function ngOnInit() {
           this.dropdownItems = JSON.parse(localStorage.getItem("selectedIndicators")); //For the dropdown menu
-
           this.referenceNumbers = JSON.parse(localStorage.getItem("referenceNumbers")); //To render the charts
-        } //Selecting and unselecting charts in the drop down menu
-
+        }
+        //Selecting and unselecting charts in the drop down menu
       }, {
         key: "selectCharts",
         value: function selectCharts(event, state) {
           if (event.isUserInput) {
             if (!event.source.selected) {
               var num = state.match(this.regex)[0]; //E.G. state = Course difficulty [77] => num = [77]
-
               var index = this.referenceNumbers.indexOf(num);
               this.referenceNumbers.splice(index, 1)[0];
             } else {
               var _num = state.match(this.regex)[0];
-
               if (state.match(this.regex)[0]) {
                 this.referenceNumbers.push(_num); //push the reference into the referenceNumbers array after selecting it
               }
@@ -1938,13 +1769,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           writes all the HTML content of the current page into a html file
           The excludeStyle variable sets css properties which should not be seen in the local file to none
         */
-
       }, {
         key: "downloadPage",
         value: function downloadPage() {
           var htmlContent = [document.querySelector("html").innerHTML];
-          var excludeStyle = "\n      <style>\n      .downloadCharts{\n        display: none;\n      }\n  \n      .header {\n        display: none;\n      }\n  \n      .mat-form-field {\n        display: none;\n      }\n  \n      .footer {\n        display: block !important;\n      }\n      \n      .backBtn {\n        display:none;\n      }\n\n      .buttons {\n        display:none;\n      }\n  \n      .highcharts-subtitle {\n        display:none;\n      }\n     \n      </style>"; //add style sheet to the html
-
+          var excludeStyle = "\n      <style>\n      .downloadCharts{\n        display: none;\n      }\n  \n      .header {\n        display: none;\n      }\n  \n      .mat-form-field {\n        display: none;\n      }\n  \n      .footer {\n        display: block !important;\n      }\n      \n      .backBtn {\n        display:none;\n      }\n\n      .buttons {\n        display:none;\n      }\n  \n      .highcharts-subtitle {\n        display:none;\n      }\n     \n      </style>";
+          //add style sheet to the html
           htmlContent = [htmlContent[0].concat(excludeStyle)];
           var bl = new Blob(htmlContent, {
             type: "text/html"
@@ -1957,98 +1787,70 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           a.click();
         }
       }]);
-
       return ChartManagerComponent;
     }();
-
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["HostListener"])("window:scroll", ["$event"])], ChartManagerComponent.prototype, "checkScroll", null);
     ChartManagerComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: "app-chart-manager",
-      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! raw-loader!./chart-manager.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/chart-manager/chart-manager.component.html"))["default"],
-      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! ./chart-manager.component.css */
-      "./src/app/chart-manager/chart-manager.component.css"))["default"]]
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! raw-loader!./chart-manager.component.html */"./node_modules/raw-loader/dist/cjs.js!./src/app/chart-manager/chart-manager.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! ./chart-manager.component.css */"./src/app/chart-manager/chart-manager.component.css"))["default"]]
     })], ChartManagerComponent);
+
     /***/
   },
 
+  /***/"./src/app/charts/affective-state/affective-state.component.css":
+  /*!**********************************************************************!*\
+    !*** ./src/app/charts/affective-state/affective-state.component.css ***!
+    \**********************************************************************/
+  /*! exports provided: default */
   /***/
-  "./src/app/charts/affective-state/affective-state.component.css": function srcAppChartsAffectiveStateAffectiveStateComponentCss(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsAffectiveStateAffectiveStateComponentCss(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NoYXJ0cy9hZmZlY3RpdmUtc3RhdGUvYWZmZWN0aXZlLXN0YXRlLmNvbXBvbmVudC5jc3MifQ== */";
+
     /***/
   },
 
+  /***/"./src/app/charts/affective-state/affective-state.component.ts":
+  /*!*********************************************************************!*\
+    !*** ./src/app/charts/affective-state/affective-state.component.ts ***!
+    \*********************************************************************/
+  /*! exports provided: AffectiveStateComponent */
   /***/
-  "./src/app/charts/affective-state/affective-state.component.ts": function srcAppChartsAffectiveStateAffectiveStateComponentTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsAffectiveStateAffectiveStateComponentTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "AffectiveStateComponent", function () {
       return AffectiveStateComponent;
     });
     /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
     /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
-
-
-    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! highcharts */
-    "./node_modules/highcharts/highcharts.js");
+    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__( /*! highcharts */"./node_modules/highcharts/highcharts.js");
     /* harmony import */
-
-
     var highcharts__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(highcharts__WEBPACK_IMPORTED_MODULE_2__);
     /* harmony import */
-
-
-    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! highcharts/modules/exporting */
-    "./node_modules/highcharts/modules/exporting.js");
+    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__( /*! highcharts/modules/exporting */"./node_modules/highcharts/modules/exporting.js");
     /* harmony import */
-
-
     var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__);
     /* harmony import */
-
-
-    var highcharts_highcharts_more__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-    /*! highcharts/highcharts-more */
-    "./node_modules/highcharts/highcharts-more.js");
+    var highcharts_highcharts_more__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__( /*! highcharts/highcharts-more */"./node_modules/highcharts/highcharts-more.js");
     /* harmony import */
-
-
     var highcharts_highcharts_more__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(highcharts_highcharts_more__WEBPACK_IMPORTED_MODULE_4__);
-
     highcharts_highcharts_more__WEBPACK_IMPORTED_MODULE_4___default()(highcharts__WEBPACK_IMPORTED_MODULE_2__);
-
     var AffectiveStateComponent = /*#__PURE__*/function () {
       function AffectiveStateComponent() {
         _classCallCheck(this, AffectiveStateComponent);
-
         this.Highcharts = highcharts__WEBPACK_IMPORTED_MODULE_2__;
       }
-
       _createClass(AffectiveStateComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
@@ -2101,85 +1903,64 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }, highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default()(highcharts__WEBPACK_IMPORTED_MODULE_2__);
         }
       }]);
-
       return AffectiveStateComponent;
     }();
-
     AffectiveStateComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: "app-affective-state",
-      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! raw-loader!./affective-state.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/affective-state/affective-state.component.html"))["default"],
-      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! ./affective-state.component.css */
-      "./src/app/charts/affective-state/affective-state.component.css"))["default"]]
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! raw-loader!./affective-state.component.html */"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/affective-state/affective-state.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! ./affective-state.component.css */"./src/app/charts/affective-state/affective-state.component.css"))["default"]]
     })], AffectiveStateComponent);
+
     /***/
   },
 
+  /***/"./src/app/charts/clickstream-analysis/clickstream-analysis.component.css":
+  /*!********************************************************************************!*\
+    !*** ./src/app/charts/clickstream-analysis/clickstream-analysis.component.css ***!
+    \********************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./src/app/charts/clickstream-analysis/clickstream-analysis.component.css": function srcAppChartsClickstreamAnalysisClickstreamAnalysisComponentCss(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsClickstreamAnalysisClickstreamAnalysisComponentCss(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NoYXJ0cy9jbGlja3N0cmVhbS1hbmFseXNpcy9jbGlja3N0cmVhbS1hbmFseXNpcy5jb21wb25lbnQuY3NzIn0= */";
+
     /***/
   },
 
+  /***/"./src/app/charts/clickstream-analysis/clickstream-analysis.component.ts":
+  /*!*******************************************************************************!*\
+    !*** ./src/app/charts/clickstream-analysis/clickstream-analysis.component.ts ***!
+    \*******************************************************************************/
+  /*! exports provided: ClickstreamAnalysisComponent */
   /***/
-  "./src/app/charts/clickstream-analysis/clickstream-analysis.component.ts": function srcAppChartsClickstreamAnalysisClickstreamAnalysisComponentTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsClickstreamAnalysisClickstreamAnalysisComponentTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "ClickstreamAnalysisComponent", function () {
       return ClickstreamAnalysisComponent;
     });
     /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
     /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
-
-
-    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! highcharts */
-    "./node_modules/highcharts/highcharts.js");
+    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__( /*! highcharts */"./node_modules/highcharts/highcharts.js");
     /* harmony import */
-
-
     var highcharts__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(highcharts__WEBPACK_IMPORTED_MODULE_2__);
     /* harmony import */
-
-
-    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! highcharts/modules/exporting */
-    "./node_modules/highcharts/modules/exporting.js");
+    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__( /*! highcharts/modules/exporting */"./node_modules/highcharts/modules/exporting.js");
     /* harmony import */
-
-
     var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__);
-
     var ClickstreamAnalysisComponent = /*#__PURE__*/function () {
       function ClickstreamAnalysisComponent() {
         _classCallCheck(this, ClickstreamAnalysisComponent);
-
         this.Highcharts = highcharts__WEBPACK_IMPORTED_MODULE_2__;
       }
-
       _createClass(ClickstreamAnalysisComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
@@ -2229,91 +2010,66 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default()(highcharts__WEBPACK_IMPORTED_MODULE_2__);
         }
       }]);
-
       return ClickstreamAnalysisComponent;
     }();
-
     ClickstreamAnalysisComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: "app-clickstream-analysis",
-      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! raw-loader!./clickstream-analysis.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/clickstream-analysis/clickstream-analysis.component.html"))["default"],
-      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! ./clickstream-analysis.component.css */
-      "./src/app/charts/clickstream-analysis/clickstream-analysis.component.css"))["default"]]
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! raw-loader!./clickstream-analysis.component.html */"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/clickstream-analysis/clickstream-analysis.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! ./clickstream-analysis.component.css */"./src/app/charts/clickstream-analysis/clickstream-analysis.component.css"))["default"]]
     })], ClickstreamAnalysisComponent);
+
     /***/
   },
 
+  /***/"./src/app/charts/clustering/clustering.component.css":
+  /*!************************************************************!*\
+    !*** ./src/app/charts/clustering/clustering.component.css ***!
+    \************************************************************/
+  /*! exports provided: default */
   /***/
-  "./src/app/charts/clustering/clustering.component.css": function srcAppChartsClusteringClusteringComponentCss(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsClusteringClusteringComponentCss(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NoYXJ0cy9jbHVzdGVyaW5nL2NsdXN0ZXJpbmcuY29tcG9uZW50LmNzcyJ9 */";
+
     /***/
   },
 
+  /***/"./src/app/charts/clustering/clustering.component.ts":
+  /*!***********************************************************!*\
+    !*** ./src/app/charts/clustering/clustering.component.ts ***!
+    \***********************************************************/
+  /*! exports provided: ClusteringComponent */
   /***/
-  "./src/app/charts/clustering/clustering.component.ts": function srcAppChartsClusteringClusteringComponentTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsClusteringClusteringComponentTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "ClusteringComponent", function () {
       return ClusteringComponent;
     });
     /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
     /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
-
-
-    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! highcharts */
-    "./node_modules/highcharts/highcharts.js");
+    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__( /*! highcharts */"./node_modules/highcharts/highcharts.js");
     /* harmony import */
-
-
     var highcharts__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(highcharts__WEBPACK_IMPORTED_MODULE_2__);
     /* harmony import */
-
-
-    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! highcharts/modules/exporting */
-    "./node_modules/highcharts/modules/exporting.js");
+    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__( /*! highcharts/modules/exporting */"./node_modules/highcharts/modules/exporting.js");
     /* harmony import */
-
-
     var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__);
-
-    var drilldown = __webpack_require__(
-    /*! highcharts/modules/drilldown.js */
-    "./node_modules/highcharts/modules/drilldown.js");
-
+    var drilldown = __webpack_require__( /*! highcharts/modules/drilldown.js */"./node_modules/highcharts/modules/drilldown.js");
     drilldown(highcharts__WEBPACK_IMPORTED_MODULE_2__);
-
     var ClusteringComponent = /*#__PURE__*/function () {
       function ClusteringComponent() {
         _classCallCheck(this, ClusteringComponent);
-
         this.Highcharts = highcharts__WEBPACK_IMPORTED_MODULE_2__;
       }
-
       _createClass(ClusteringComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
@@ -2509,96 +2265,70 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }, highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default()(highcharts__WEBPACK_IMPORTED_MODULE_2__);
         }
       }]);
-
       return ClusteringComponent;
     }();
-
     ClusteringComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: "app-clustering",
-      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! raw-loader!./clustering.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/clustering/clustering.component.html"))["default"],
-      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! ./clustering.component.css */
-      "./src/app/charts/clustering/clustering.component.css"))["default"]]
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! raw-loader!./clustering.component.html */"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/clustering/clustering.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! ./clustering.component.css */"./src/app/charts/clustering/clustering.component.css"))["default"]]
     })], ClusteringComponent);
+
     /***/
   },
 
+  /***/"./src/app/charts/competency/competency.component.css":
+  /*!************************************************************!*\
+    !*** ./src/app/charts/competency/competency.component.css ***!
+    \************************************************************/
+  /*! exports provided: default */
   /***/
-  "./src/app/charts/competency/competency.component.css": function srcAppChartsCompetencyCompetencyComponentCss(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsCompetencyCompetencyComponentCss(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NoYXJ0cy9jb21wZXRlbmN5L2NvbXBldGVuY3kuY29tcG9uZW50LmNzcyJ9 */";
+
     /***/
   },
 
+  /***/"./src/app/charts/competency/competency.component.ts":
+  /*!***********************************************************!*\
+    !*** ./src/app/charts/competency/competency.component.ts ***!
+    \***********************************************************/
+  /*! exports provided: CompetencyComponent */
   /***/
-  "./src/app/charts/competency/competency.component.ts": function srcAppChartsCompetencyCompetencyComponentTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsCompetencyCompetencyComponentTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "CompetencyComponent", function () {
       return CompetencyComponent;
     });
     /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
     /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
-
-
-    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! highcharts */
-    "./node_modules/highcharts/highcharts.js");
+    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__( /*! highcharts */"./node_modules/highcharts/highcharts.js");
     /* harmony import */
-
-
     var highcharts__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(highcharts__WEBPACK_IMPORTED_MODULE_2__);
     /* harmony import */
-
-
-    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! highcharts/modules/exporting */
-    "./node_modules/highcharts/modules/exporting.js");
+    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__( /*! highcharts/modules/exporting */"./node_modules/highcharts/modules/exporting.js");
     /* harmony import */
-
-
     var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__);
     /* harmony import */
-
-
-    var highcharts_highcharts_more__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-    /*! highcharts/highcharts-more */
-    "./node_modules/highcharts/highcharts-more.js");
+    var highcharts_highcharts_more__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__( /*! highcharts/highcharts-more */"./node_modules/highcharts/highcharts-more.js");
     /* harmony import */
-
-
     var highcharts_highcharts_more__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(highcharts_highcharts_more__WEBPACK_IMPORTED_MODULE_4__);
-
     highcharts_highcharts_more__WEBPACK_IMPORTED_MODULE_4___default()(highcharts__WEBPACK_IMPORTED_MODULE_2__);
-
     var CompetencyComponent = /*#__PURE__*/function () {
       function CompetencyComponent() {
         _classCallCheck(this, CompetencyComponent);
-
         this.Highcharts = highcharts__WEBPACK_IMPORTED_MODULE_2__;
-      } // time watching videos
+      }
+      // time watching videos
       // time on platform
       // # videos accessed
       // # forum visits
@@ -2609,8 +2339,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       // avg. time on platform per week
       // # visited video lectures
       // # forum contributions
-
-
       _createClass(CompetencyComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
@@ -2666,97 +2394,69 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }, highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default()(highcharts__WEBPACK_IMPORTED_MODULE_2__);
         }
       }]);
-
       return CompetencyComponent;
     }();
-
     CompetencyComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: "app-competency",
-      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! raw-loader!./competency.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/competency/competency.component.html"))["default"],
-      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! ./competency.component.css */
-      "./src/app/charts/competency/competency.component.css"))["default"]]
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! raw-loader!./competency.component.html */"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/competency/competency.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! ./competency.component.css */"./src/app/charts/competency/competency.component.css"))["default"]]
     })], CompetencyComponent);
+
     /***/
   },
 
+  /***/"./src/app/charts/course-assessment/course-assessment.component.css":
+  /*!**************************************************************************!*\
+    !*** ./src/app/charts/course-assessment/course-assessment.component.css ***!
+    \**************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./src/app/charts/course-assessment/course-assessment.component.css": function srcAppChartsCourseAssessmentCourseAssessmentComponentCss(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsCourseAssessmentCourseAssessmentComponentCss(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NoYXJ0cy9jb3Vyc2UtYXNzZXNzbWVudC9jb3Vyc2UtYXNzZXNzbWVudC5jb21wb25lbnQuY3NzIn0= */";
+
     /***/
   },
 
+  /***/"./src/app/charts/course-assessment/course-assessment.component.ts":
+  /*!*************************************************************************!*\
+    !*** ./src/app/charts/course-assessment/course-assessment.component.ts ***!
+    \*************************************************************************/
+  /*! exports provided: CourseAssessmentComponent */
   /***/
-  "./src/app/charts/course-assessment/course-assessment.component.ts": function srcAppChartsCourseAssessmentCourseAssessmentComponentTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsCourseAssessmentCourseAssessmentComponentTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "CourseAssessmentComponent", function () {
       return CourseAssessmentComponent;
     });
     /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
     /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
-
-
-    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! highcharts */
-    "./node_modules/highcharts/highcharts.js");
+    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__( /*! highcharts */"./node_modules/highcharts/highcharts.js");
     /* harmony import */
-
-
     var highcharts__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(highcharts__WEBPACK_IMPORTED_MODULE_2__);
     /* harmony import */
-
-
-    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! highcharts/modules/exporting */
-    "./node_modules/highcharts/modules/exporting.js");
+    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__( /*! highcharts/modules/exporting */"./node_modules/highcharts/modules/exporting.js");
     /* harmony import */
-
-
     var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__);
     /* harmony import */
-
-
-    var highcharts_modules_networkgraph__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-    /*! highcharts/modules/networkgraph */
-    "./node_modules/highcharts/modules/networkgraph.js");
+    var highcharts_modules_networkgraph__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__( /*! highcharts/modules/networkgraph */"./node_modules/highcharts/modules/networkgraph.js");
     /* harmony import */
-
-
     var highcharts_modules_networkgraph__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(highcharts_modules_networkgraph__WEBPACK_IMPORTED_MODULE_4__);
-
     highcharts_modules_networkgraph__WEBPACK_IMPORTED_MODULE_4___default()(highcharts__WEBPACK_IMPORTED_MODULE_2__);
-
     var CourseAssessmentComponent = /*#__PURE__*/function () {
       function CourseAssessmentComponent() {
         _classCallCheck(this, CourseAssessmentComponent);
-
         this.Highcharts = highcharts__WEBPACK_IMPORTED_MODULE_2__;
       }
-
       _createClass(CourseAssessmentComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
@@ -2891,85 +2591,64 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           };
         }
       }]);
-
       return CourseAssessmentComponent;
     }();
-
     CourseAssessmentComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: "app-course-assessment",
-      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! raw-loader!./course-assessment.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/course-assessment/course-assessment.component.html"))["default"],
-      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! ./course-assessment.component.css */
-      "./src/app/charts/course-assessment/course-assessment.component.css"))["default"]]
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! raw-loader!./course-assessment.component.html */"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/course-assessment/course-assessment.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! ./course-assessment.component.css */"./src/app/charts/course-assessment/course-assessment.component.css"))["default"]]
     })], CourseAssessmentComponent);
+
     /***/
   },
 
+  /***/"./src/app/charts/course-difficulty/course-difficulty.component.css":
+  /*!**************************************************************************!*\
+    !*** ./src/app/charts/course-difficulty/course-difficulty.component.css ***!
+    \**************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./src/app/charts/course-difficulty/course-difficulty.component.css": function srcAppChartsCourseDifficultyCourseDifficultyComponentCss(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsCourseDifficultyCourseDifficultyComponentCss(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NoYXJ0cy9jb3Vyc2UtZGlmZmljdWx0eS9jb3Vyc2UtZGlmZmljdWx0eS5jb21wb25lbnQuY3NzIn0= */";
+
     /***/
   },
 
+  /***/"./src/app/charts/course-difficulty/course-difficulty.component.ts":
+  /*!*************************************************************************!*\
+    !*** ./src/app/charts/course-difficulty/course-difficulty.component.ts ***!
+    \*************************************************************************/
+  /*! exports provided: CourseDifficultyComponent */
   /***/
-  "./src/app/charts/course-difficulty/course-difficulty.component.ts": function srcAppChartsCourseDifficultyCourseDifficultyComponentTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsCourseDifficultyCourseDifficultyComponentTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "CourseDifficultyComponent", function () {
       return CourseDifficultyComponent;
     });
     /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
     /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
-
-
-    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! highcharts */
-    "./node_modules/highcharts/highcharts.js");
+    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__( /*! highcharts */"./node_modules/highcharts/highcharts.js");
     /* harmony import */
-
-
     var highcharts__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(highcharts__WEBPACK_IMPORTED_MODULE_2__);
     /* harmony import */
-
-
-    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! highcharts/modules/exporting */
-    "./node_modules/highcharts/modules/exporting.js");
+    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__( /*! highcharts/modules/exporting */"./node_modules/highcharts/modules/exporting.js");
     /* harmony import */
-
-
     var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__);
-
     var CourseDifficultyComponent = /*#__PURE__*/function () {
       function CourseDifficultyComponent() {
         _classCallCheck(this, CourseDifficultyComponent);
-
         this.Highcharts = highcharts__WEBPACK_IMPORTED_MODULE_2__;
       }
-
       _createClass(CourseDifficultyComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
@@ -3020,85 +2699,64 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default()(highcharts__WEBPACK_IMPORTED_MODULE_2__);
         }
       }]);
-
       return CourseDifficultyComponent;
     }();
-
     CourseDifficultyComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: "app-course-difficulty",
-      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! raw-loader!./course-difficulty.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/course-difficulty/course-difficulty.component.html"))["default"],
-      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! ./course-difficulty.component.css */
-      "./src/app/charts/course-difficulty/course-difficulty.component.css"))["default"]]
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! raw-loader!./course-difficulty.component.html */"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/course-difficulty/course-difficulty.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! ./course-difficulty.component.css */"./src/app/charts/course-difficulty/course-difficulty.component.css"))["default"]]
     })], CourseDifficultyComponent);
+
     /***/
   },
 
+  /***/"./src/app/charts/curriculum-usage/curriculum-usage.component.css":
+  /*!************************************************************************!*\
+    !*** ./src/app/charts/curriculum-usage/curriculum-usage.component.css ***!
+    \************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./src/app/charts/curriculum-usage/curriculum-usage.component.css": function srcAppChartsCurriculumUsageCurriculumUsageComponentCss(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsCurriculumUsageCurriculumUsageComponentCss(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NoYXJ0cy9jdXJyaWN1bHVtLXVzYWdlL2N1cnJpY3VsdW0tdXNhZ2UuY29tcG9uZW50LmNzcyJ9 */";
+
     /***/
   },
 
+  /***/"./src/app/charts/curriculum-usage/curriculum-usage.component.ts":
+  /*!***********************************************************************!*\
+    !*** ./src/app/charts/curriculum-usage/curriculum-usage.component.ts ***!
+    \***********************************************************************/
+  /*! exports provided: CurriculumUsageComponent */
   /***/
-  "./src/app/charts/curriculum-usage/curriculum-usage.component.ts": function srcAppChartsCurriculumUsageCurriculumUsageComponentTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsCurriculumUsageCurriculumUsageComponentTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "CurriculumUsageComponent", function () {
       return CurriculumUsageComponent;
     });
     /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
     /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
-
-
-    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! highcharts */
-    "./node_modules/highcharts/highcharts.js");
+    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__( /*! highcharts */"./node_modules/highcharts/highcharts.js");
     /* harmony import */
-
-
     var highcharts__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(highcharts__WEBPACK_IMPORTED_MODULE_2__);
     /* harmony import */
-
-
-    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! highcharts/modules/exporting */
-    "./node_modules/highcharts/modules/exporting.js");
+    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__( /*! highcharts/modules/exporting */"./node_modules/highcharts/modules/exporting.js");
     /* harmony import */
-
-
     var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__);
-
     var CurriculumUsageComponent = /*#__PURE__*/function () {
       function CurriculumUsageComponent() {
         _classCallCheck(this, CurriculumUsageComponent);
-
         this.Highcharts = highcharts__WEBPACK_IMPORTED_MODULE_2__;
       }
-
       _createClass(CurriculumUsageComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
@@ -3166,85 +2824,64 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }, highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default()(highcharts__WEBPACK_IMPORTED_MODULE_2__);
         }
       }]);
-
       return CurriculumUsageComponent;
     }();
-
     CurriculumUsageComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: "app-curriculum-usage",
-      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! raw-loader!./curriculum-usage.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/curriculum-usage/curriculum-usage.component.html"))["default"],
-      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! ./curriculum-usage.component.css */
-      "./src/app/charts/curriculum-usage/curriculum-usage.component.css"))["default"]]
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! raw-loader!./curriculum-usage.component.html */"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/curriculum-usage/curriculum-usage.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! ./curriculum-usage.component.css */"./src/app/charts/curriculum-usage/curriculum-usage.component.css"))["default"]]
     })], CurriculumUsageComponent);
+
     /***/
   },
 
+  /***/"./src/app/charts/discussion-quality/discussion-quality.component.css":
+  /*!****************************************************************************!*\
+    !*** ./src/app/charts/discussion-quality/discussion-quality.component.css ***!
+    \****************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./src/app/charts/discussion-quality/discussion-quality.component.css": function srcAppChartsDiscussionQualityDiscussionQualityComponentCss(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsDiscussionQualityDiscussionQualityComponentCss(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NoYXJ0cy9kaXNjdXNzaW9uLXF1YWxpdHkvZGlzY3Vzc2lvbi1xdWFsaXR5LmNvbXBvbmVudC5jc3MifQ== */";
+
     /***/
   },
 
+  /***/"./src/app/charts/discussion-quality/discussion-quality.component.ts":
+  /*!***************************************************************************!*\
+    !*** ./src/app/charts/discussion-quality/discussion-quality.component.ts ***!
+    \***************************************************************************/
+  /*! exports provided: DiscussionQualityComponent */
   /***/
-  "./src/app/charts/discussion-quality/discussion-quality.component.ts": function srcAppChartsDiscussionQualityDiscussionQualityComponentTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsDiscussionQualityDiscussionQualityComponentTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "DiscussionQualityComponent", function () {
       return DiscussionQualityComponent;
     });
     /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
     /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
-
-
-    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! highcharts */
-    "./node_modules/highcharts/highcharts.js");
+    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__( /*! highcharts */"./node_modules/highcharts/highcharts.js");
     /* harmony import */
-
-
     var highcharts__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(highcharts__WEBPACK_IMPORTED_MODULE_2__);
     /* harmony import */
-
-
-    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! highcharts/modules/exporting */
-    "./node_modules/highcharts/modules/exporting.js");
+    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__( /*! highcharts/modules/exporting */"./node_modules/highcharts/modules/exporting.js");
     /* harmony import */
-
-
     var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__);
-
     var DiscussionQualityComponent = /*#__PURE__*/function () {
       function DiscussionQualityComponent() {
         _classCallCheck(this, DiscussionQualityComponent);
-
         this.Highcharts = highcharts__WEBPACK_IMPORTED_MODULE_2__;
       }
-
       _createClass(DiscussionQualityComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
@@ -3301,85 +2938,64 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }, highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default()(highcharts__WEBPACK_IMPORTED_MODULE_2__);
         }
       }]);
-
       return DiscussionQualityComponent;
     }();
-
     DiscussionQualityComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: "app-discussion-quality",
-      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! raw-loader!./discussion-quality.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/discussion-quality/discussion-quality.component.html"))["default"],
-      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! ./discussion-quality.component.css */
-      "./src/app/charts/discussion-quality/discussion-quality.component.css"))["default"]]
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! raw-loader!./discussion-quality.component.html */"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/discussion-quality/discussion-quality.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! ./discussion-quality.component.css */"./src/app/charts/discussion-quality/discussion-quality.component.css"))["default"]]
     })], DiscussionQualityComponent);
+
     /***/
   },
 
+  /***/"./src/app/charts/droppingout/droppingout.component.css":
+  /*!**************************************************************!*\
+    !*** ./src/app/charts/droppingout/droppingout.component.css ***!
+    \**************************************************************/
+  /*! exports provided: default */
   /***/
-  "./src/app/charts/droppingout/droppingout.component.css": function srcAppChartsDroppingoutDroppingoutComponentCss(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsDroppingoutDroppingoutComponentCss(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NoYXJ0cy9kcm9wcGluZ291dC9kcm9wcGluZ291dC5jb21wb25lbnQuY3NzIn0= */";
+
     /***/
   },
 
+  /***/"./src/app/charts/droppingout/droppingout.component.ts":
+  /*!*************************************************************!*\
+    !*** ./src/app/charts/droppingout/droppingout.component.ts ***!
+    \*************************************************************/
+  /*! exports provided: DroppingoutComponent */
   /***/
-  "./src/app/charts/droppingout/droppingout.component.ts": function srcAppChartsDroppingoutDroppingoutComponentTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsDroppingoutDroppingoutComponentTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "DroppingoutComponent", function () {
       return DroppingoutComponent;
     });
     /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
     /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
-
-
-    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! highcharts */
-    "./node_modules/highcharts/highcharts.js");
+    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__( /*! highcharts */"./node_modules/highcharts/highcharts.js");
     /* harmony import */
-
-
     var highcharts__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(highcharts__WEBPACK_IMPORTED_MODULE_2__);
     /* harmony import */
-
-
-    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! highcharts/modules/exporting */
-    "./node_modules/highcharts/modules/exporting.js");
+    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__( /*! highcharts/modules/exporting */"./node_modules/highcharts/modules/exporting.js");
     /* harmony import */
-
-
     var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__);
-
     var DroppingoutComponent = /*#__PURE__*/function () {
       function DroppingoutComponent() {
         _classCallCheck(this, DroppingoutComponent);
-
         this.Highcharts = highcharts__WEBPACK_IMPORTED_MODULE_2__;
       }
-
       _createClass(DroppingoutComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
@@ -3417,7 +3033,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 enabled: true,
                 text: "Academic Performance"
               },
-
               /*
               plotLines:[{
                   value:0,
@@ -3648,85 +3263,64 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }, highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default()(highcharts__WEBPACK_IMPORTED_MODULE_2__);
         }
       }]);
-
       return DroppingoutComponent;
     }();
-
     DroppingoutComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: "app-droppingout",
-      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! raw-loader!./droppingout.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/droppingout/droppingout.component.html"))["default"],
-      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! ./droppingout.component.css */
-      "./src/app/charts/droppingout/droppingout.component.css"))["default"]]
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! raw-loader!./droppingout.component.html */"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/droppingout/droppingout.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! ./droppingout.component.css */"./src/app/charts/droppingout/droppingout.component.css"))["default"]]
     })], DroppingoutComponent);
+
     /***/
   },
 
+  /***/"./src/app/charts/engagement-performance/engagement-performance.component.css":
+  /*!************************************************************************************!*\
+    !*** ./src/app/charts/engagement-performance/engagement-performance.component.css ***!
+    \************************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./src/app/charts/engagement-performance/engagement-performance.component.css": function srcAppChartsEngagementPerformanceEngagementPerformanceComponentCss(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsEngagementPerformanceEngagementPerformanceComponentCss(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NoYXJ0cy9lbmdhZ2VtZW50LXBlcmZvcm1hbmNlL2VuZ2FnZW1lbnQtcGVyZm9ybWFuY2UuY29tcG9uZW50LmNzcyJ9 */";
+
     /***/
   },
 
+  /***/"./src/app/charts/engagement-performance/engagement-performance.component.ts":
+  /*!***********************************************************************************!*\
+    !*** ./src/app/charts/engagement-performance/engagement-performance.component.ts ***!
+    \***********************************************************************************/
+  /*! exports provided: EngagementPerformanceComponent */
   /***/
-  "./src/app/charts/engagement-performance/engagement-performance.component.ts": function srcAppChartsEngagementPerformanceEngagementPerformanceComponentTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsEngagementPerformanceEngagementPerformanceComponentTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "EngagementPerformanceComponent", function () {
       return EngagementPerformanceComponent;
     });
     /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
     /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
-
-
-    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! highcharts */
-    "./node_modules/highcharts/highcharts.js");
+    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__( /*! highcharts */"./node_modules/highcharts/highcharts.js");
     /* harmony import */
-
-
     var highcharts__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(highcharts__WEBPACK_IMPORTED_MODULE_2__);
     /* harmony import */
-
-
-    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! highcharts/modules/exporting */
-    "./node_modules/highcharts/modules/exporting.js");
+    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__( /*! highcharts/modules/exporting */"./node_modules/highcharts/modules/exporting.js");
     /* harmony import */
-
-
     var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__);
-
     var EngagementPerformanceComponent = /*#__PURE__*/function () {
       function EngagementPerformanceComponent() {
         _classCallCheck(this, EngagementPerformanceComponent);
-
         this.Highcharts = highcharts__WEBPACK_IMPORTED_MODULE_2__;
       }
-
       _createClass(EngagementPerformanceComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
@@ -3780,108 +3374,74 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }, highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default()(highcharts__WEBPACK_IMPORTED_MODULE_2__);
         }
       }]);
-
       return EngagementPerformanceComponent;
     }();
-
     EngagementPerformanceComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: "app-engagement-performance",
-      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! raw-loader!./engagement-performance.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/engagement-performance/engagement-performance.component.html"))["default"],
-      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! ./engagement-performance.component.css */
-      "./src/app/charts/engagement-performance/engagement-performance.component.css"))["default"]]
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! raw-loader!./engagement-performance.component.html */"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/engagement-performance/engagement-performance.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! ./engagement-performance.component.css */"./src/app/charts/engagement-performance/engagement-performance.component.css"))["default"]]
     })], EngagementPerformanceComponent);
+
     /***/
   },
 
+  /***/"./src/app/charts/feedback/feedback.component.css":
+  /*!********************************************************!*\
+    !*** ./src/app/charts/feedback/feedback.component.css ***!
+    \********************************************************/
+  /*! exports provided: default */
   /***/
-  "./src/app/charts/feedback/feedback.component.css": function srcAppChartsFeedbackFeedbackComponentCss(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsFeedbackFeedbackComponentCss(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NoYXJ0cy9mZWVkYmFjay9mZWVkYmFjay5jb21wb25lbnQuY3NzIn0= */";
+
     /***/
   },
 
+  /***/"./src/app/charts/feedback/feedback.component.ts":
+  /*!*******************************************************!*\
+    !*** ./src/app/charts/feedback/feedback.component.ts ***!
+    \*******************************************************/
+  /*! exports provided: FeedbackComponent */
   /***/
-  "./src/app/charts/feedback/feedback.component.ts": function srcAppChartsFeedbackFeedbackComponentTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsFeedbackFeedbackComponentTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "FeedbackComponent", function () {
       return FeedbackComponent;
     });
     /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
     /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
-
-
-    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! highcharts */
-    "./node_modules/highcharts/highcharts.js");
+    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__( /*! highcharts */"./node_modules/highcharts/highcharts.js");
     /* harmony import */
-
-
     var highcharts__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(highcharts__WEBPACK_IMPORTED_MODULE_2__);
     /* harmony import */
-
-
-    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! highcharts/modules/exporting */
-    "./node_modules/highcharts/modules/exporting.js");
+    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__( /*! highcharts/modules/exporting */"./node_modules/highcharts/modules/exporting.js");
     /* harmony import */
-
-
     var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__);
     /* harmony import */
-
-
-    var highcharts_highcharts_more_src__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-    /*! highcharts/highcharts-more.src */
-    "./node_modules/highcharts/highcharts-more.src.js");
+    var highcharts_highcharts_more_src__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__( /*! highcharts/highcharts-more.src */"./node_modules/highcharts/highcharts-more.src.js");
     /* harmony import */
-
-
     var highcharts_highcharts_more_src__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(highcharts_highcharts_more_src__WEBPACK_IMPORTED_MODULE_4__);
     /* harmony import */
-
-
-    var highcharts_modules_solid_gauge__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
-    /*! highcharts/modules/solid-gauge */
-    "./node_modules/highcharts/modules/solid-gauge.js");
+    var highcharts_modules_solid_gauge__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__( /*! highcharts/modules/solid-gauge */"./node_modules/highcharts/modules/solid-gauge.js");
     /* harmony import */
-
-
     var highcharts_modules_solid_gauge__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(highcharts_modules_solid_gauge__WEBPACK_IMPORTED_MODULE_5__);
-
     highcharts_highcharts_more_src__WEBPACK_IMPORTED_MODULE_4___default()(highcharts__WEBPACK_IMPORTED_MODULE_2__);
     highcharts_modules_solid_gauge__WEBPACK_IMPORTED_MODULE_5___default()(highcharts__WEBPACK_IMPORTED_MODULE_2__);
-
     var FeedbackComponent = /*#__PURE__*/function () {
       function FeedbackComponent() {
         _classCallCheck(this, FeedbackComponent);
-
         this.Highcharts = highcharts__WEBPACK_IMPORTED_MODULE_2__;
       }
-
       _createClass(FeedbackComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
@@ -4021,7 +3581,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "updateChart",
         value: function updateChart(event) {
           var selVal = event.target.value;
-
           if (selVal == "A" || selVal == "") {
             this.chartOptions["series"] = {
               name: "You",
@@ -4058,92 +3617,70 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               name: "Class",
               data: [63]
             };
-          } //Make a copy of the new object so the changes are visible
-
-
+          }
+          //Make a copy of the new object so the changes are visible
           this.chartOptions = Object.assign({}, this.chartOptions);
           this.chartOptions2 = Object.assign({}, this.chartOptions2);
         }
       }]);
-
       return FeedbackComponent;
     }();
-
     FeedbackComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: "app-feedback",
-      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! raw-loader!./feedback.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/feedback/feedback.component.html"))["default"],
-      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! ./feedback.component.css */
-      "./src/app/charts/feedback/feedback.component.css"))["default"]]
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! raw-loader!./feedback.component.html */"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/feedback/feedback.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! ./feedback.component.css */"./src/app/charts/feedback/feedback.component.css"))["default"]]
     })], FeedbackComponent);
+
     /***/
   },
 
+  /***/"./src/app/charts/final-grade-prediction/final-grade-prediction.component.css":
+  /*!************************************************************************************!*\
+    !*** ./src/app/charts/final-grade-prediction/final-grade-prediction.component.css ***!
+    \************************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./src/app/charts/final-grade-prediction/final-grade-prediction.component.css": function srcAppChartsFinalGradePredictionFinalGradePredictionComponentCss(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsFinalGradePredictionFinalGradePredictionComponentCss(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NoYXJ0cy9maW5hbC1ncmFkZS1wcmVkaWN0aW9uL2ZpbmFsLWdyYWRlLXByZWRpY3Rpb24uY29tcG9uZW50LmNzcyJ9 */";
+
     /***/
   },
 
+  /***/"./src/app/charts/final-grade-prediction/final-grade-prediction.component.ts":
+  /*!***********************************************************************************!*\
+    !*** ./src/app/charts/final-grade-prediction/final-grade-prediction.component.ts ***!
+    \***********************************************************************************/
+  /*! exports provided: FinalGradePredictionComponent */
   /***/
-  "./src/app/charts/final-grade-prediction/final-grade-prediction.component.ts": function srcAppChartsFinalGradePredictionFinalGradePredictionComponentTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsFinalGradePredictionFinalGradePredictionComponentTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "FinalGradePredictionComponent", function () {
       return FinalGradePredictionComponent;
     });
     /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
     /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
-
-
-    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! highcharts */
-    "./node_modules/highcharts/highcharts.js");
+    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__( /*! highcharts */"./node_modules/highcharts/highcharts.js");
     /* harmony import */
-
-
     var highcharts__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(highcharts__WEBPACK_IMPORTED_MODULE_2__);
     /* harmony import */
-
-
-    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! highcharts/modules/exporting */
-    "./node_modules/highcharts/modules/exporting.js");
+    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__( /*! highcharts/modules/exporting */"./node_modules/highcharts/modules/exporting.js");
     /* harmony import */
-
-
     var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__);
-
     var FinalGradePredictionComponent = /*#__PURE__*/function () {
       function FinalGradePredictionComponent() {
         _classCallCheck(this, FinalGradePredictionComponent);
-
         this.Highcharts = highcharts__WEBPACK_IMPORTED_MODULE_2__;
       }
-
       _createClass(FinalGradePredictionComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
@@ -4205,85 +3742,64 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default()(highcharts__WEBPACK_IMPORTED_MODULE_2__);
         }
       }]);
-
       return FinalGradePredictionComponent;
     }();
-
     FinalGradePredictionComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: "app-final-grade-prediction",
-      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! raw-loader!./final-grade-prediction.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/final-grade-prediction/final-grade-prediction.component.html"))["default"],
-      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! ./final-grade-prediction.component.css */
-      "./src/app/charts/final-grade-prediction/final-grade-prediction.component.css"))["default"]]
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! raw-loader!./final-grade-prediction.component.html */"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/final-grade-prediction/final-grade-prediction.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! ./final-grade-prediction.component.css */"./src/app/charts/final-grade-prediction/final-grade-prediction.component.css"))["default"]]
     })], FinalGradePredictionComponent);
+
     /***/
   },
 
+  /***/"./src/app/charts/gamification/gamification.component.css":
+  /*!****************************************************************!*\
+    !*** ./src/app/charts/gamification/gamification.component.css ***!
+    \****************************************************************/
+  /*! exports provided: default */
   /***/
-  "./src/app/charts/gamification/gamification.component.css": function srcAppChartsGamificationGamificationComponentCss(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsGamificationGamificationComponentCss(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NoYXJ0cy9nYW1pZmljYXRpb24vZ2FtaWZpY2F0aW9uLmNvbXBvbmVudC5jc3MifQ== */";
+
     /***/
   },
 
+  /***/"./src/app/charts/gamification/gamification.component.ts":
+  /*!***************************************************************!*\
+    !*** ./src/app/charts/gamification/gamification.component.ts ***!
+    \***************************************************************/
+  /*! exports provided: GamificationComponent */
   /***/
-  "./src/app/charts/gamification/gamification.component.ts": function srcAppChartsGamificationGamificationComponentTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsGamificationGamificationComponentTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "GamificationComponent", function () {
       return GamificationComponent;
     });
     /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
     /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
-
-
-    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! highcharts */
-    "./node_modules/highcharts/highcharts.js");
+    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__( /*! highcharts */"./node_modules/highcharts/highcharts.js");
     /* harmony import */
-
-
     var highcharts__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(highcharts__WEBPACK_IMPORTED_MODULE_2__);
     /* harmony import */
-
-
-    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! highcharts/modules/exporting */
-    "./node_modules/highcharts/modules/exporting.js");
+    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__( /*! highcharts/modules/exporting */"./node_modules/highcharts/modules/exporting.js");
     /* harmony import */
-
-
     var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__);
-
     var GamificationComponent = /*#__PURE__*/function () {
       function GamificationComponent() {
         _classCallCheck(this, GamificationComponent);
-
         this.Highcharts = highcharts__WEBPACK_IMPORTED_MODULE_2__;
       }
-
       _createClass(GamificationComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
@@ -4323,98 +3839,70 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }, highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default()(highcharts__WEBPACK_IMPORTED_MODULE_2__);
         }
       }]);
-
       return GamificationComponent;
     }();
-
     GamificationComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: "app-gamification",
-      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! raw-loader!./gamification.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/gamification/gamification.component.html"))["default"],
-      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! ./gamification.component.css */
-      "./src/app/charts/gamification/gamification.component.css"))["default"]]
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! raw-loader!./gamification.component.html */"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/gamification/gamification.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! ./gamification.component.css */"./src/app/charts/gamification/gamification.component.css"))["default"]]
     })], GamificationComponent);
+
     /***/
   },
 
+  /***/"./src/app/charts/group-participation/group-participation.component.css":
+  /*!******************************************************************************!*\
+    !*** ./src/app/charts/group-participation/group-participation.component.css ***!
+    \******************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./src/app/charts/group-participation/group-participation.component.css": function srcAppChartsGroupParticipationGroupParticipationComponentCss(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsGroupParticipationGroupParticipationComponentCss(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NoYXJ0cy9ncm91cC1wYXJ0aWNpcGF0aW9uL2dyb3VwLXBhcnRpY2lwYXRpb24uY29tcG9uZW50LmNzcyJ9 */";
+
     /***/
   },
 
+  /***/"./src/app/charts/group-participation/group-participation.component.ts":
+  /*!*****************************************************************************!*\
+    !*** ./src/app/charts/group-participation/group-participation.component.ts ***!
+    \*****************************************************************************/
+  /*! exports provided: GroupParticipationComponent */
   /***/
-  "./src/app/charts/group-participation/group-participation.component.ts": function srcAppChartsGroupParticipationGroupParticipationComponentTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsGroupParticipationGroupParticipationComponentTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "GroupParticipationComponent", function () {
       return GroupParticipationComponent;
     });
     /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
     /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
-
-
-    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! highcharts */
-    "./node_modules/highcharts/highcharts.js");
+    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__( /*! highcharts */"./node_modules/highcharts/highcharts.js");
     /* harmony import */
-
-
     var highcharts__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(highcharts__WEBPACK_IMPORTED_MODULE_2__);
     /* harmony import */
-
-
-    var highcharts_modules_sankey__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! highcharts/modules/sankey */
-    "./node_modules/highcharts/modules/sankey.js");
+    var highcharts_modules_sankey__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__( /*! highcharts/modules/sankey */"./node_modules/highcharts/modules/sankey.js");
     /* harmony import */
-
-
     var highcharts_modules_sankey__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(highcharts_modules_sankey__WEBPACK_IMPORTED_MODULE_3__);
     /* harmony import */
-
-
-    var highcharts_modules_dependency_wheel__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-    /*! highcharts/modules/dependency-wheel */
-    "./node_modules/highcharts/modules/dependency-wheel.js");
+    var highcharts_modules_dependency_wheel__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__( /*! highcharts/modules/dependency-wheel */"./node_modules/highcharts/modules/dependency-wheel.js");
     /* harmony import */
-
-
     var highcharts_modules_dependency_wheel__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(highcharts_modules_dependency_wheel__WEBPACK_IMPORTED_MODULE_4__);
-
     highcharts_modules_sankey__WEBPACK_IMPORTED_MODULE_3___default()(highcharts__WEBPACK_IMPORTED_MODULE_2__);
     highcharts_modules_dependency_wheel__WEBPACK_IMPORTED_MODULE_4___default()(highcharts__WEBPACK_IMPORTED_MODULE_2__);
-
     var GroupParticipationComponent = /*#__PURE__*/function () {
       function GroupParticipationComponent() {
         _classCallCheck(this, GroupParticipationComponent);
-
         this.Highcharts = highcharts__WEBPACK_IMPORTED_MODULE_2__;
       }
-
       _createClass(GroupParticipationComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
@@ -4455,97 +3943,69 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           };
         }
       }]);
-
       return GroupParticipationComponent;
     }();
-
     GroupParticipationComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: "app-group-participation",
-      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! raw-loader!./group-participation.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/group-participation/group-participation.component.html"))["default"],
-      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! ./group-participation.component.css */
-      "./src/app/charts/group-participation/group-participation.component.css"))["default"]]
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! raw-loader!./group-participation.component.html */"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/group-participation/group-participation.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! ./group-participation.component.css */"./src/app/charts/group-participation/group-participation.component.css"))["default"]]
     })], GroupParticipationComponent);
+
     /***/
   },
 
+  /***/"./src/app/charts/initiative/initiative.component.css":
+  /*!************************************************************!*\
+    !*** ./src/app/charts/initiative/initiative.component.css ***!
+    \************************************************************/
+  /*! exports provided: default */
   /***/
-  "./src/app/charts/initiative/initiative.component.css": function srcAppChartsInitiativeInitiativeComponentCss(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsInitiativeInitiativeComponentCss(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NoYXJ0cy9pbml0aWF0aXZlL2luaXRpYXRpdmUuY29tcG9uZW50LmNzcyJ9 */";
+
     /***/
   },
 
+  /***/"./src/app/charts/initiative/initiative.component.ts":
+  /*!***********************************************************!*\
+    !*** ./src/app/charts/initiative/initiative.component.ts ***!
+    \***********************************************************/
+  /*! exports provided: InitiativeComponent */
   /***/
-  "./src/app/charts/initiative/initiative.component.ts": function srcAppChartsInitiativeInitiativeComponentTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsInitiativeInitiativeComponentTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "InitiativeComponent", function () {
       return InitiativeComponent;
     });
     /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
     /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
-
-
-    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! highcharts */
-    "./node_modules/highcharts/highcharts.js");
+    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__( /*! highcharts */"./node_modules/highcharts/highcharts.js");
     /* harmony import */
-
-
     var highcharts__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(highcharts__WEBPACK_IMPORTED_MODULE_2__);
     /* harmony import */
-
-
-    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! highcharts/modules/exporting */
-    "./node_modules/highcharts/modules/exporting.js");
+    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__( /*! highcharts/modules/exporting */"./node_modules/highcharts/modules/exporting.js");
     /* harmony import */
-
-
     var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__);
     /* harmony import */
-
-
-    var highcharts_highcharts_more__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-    /*! highcharts/highcharts-more */
-    "./node_modules/highcharts/highcharts-more.js");
+    var highcharts_highcharts_more__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__( /*! highcharts/highcharts-more */"./node_modules/highcharts/highcharts-more.js");
     /* harmony import */
-
-
     var highcharts_highcharts_more__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(highcharts_highcharts_more__WEBPACK_IMPORTED_MODULE_4__);
-
     highcharts_highcharts_more__WEBPACK_IMPORTED_MODULE_4___default()(highcharts__WEBPACK_IMPORTED_MODULE_2__);
-
     var InitiativeComponent = /*#__PURE__*/function () {
       function InitiativeComponent() {
         _classCallCheck(this, InitiativeComponent);
-
         this.Highcharts = highcharts__WEBPACK_IMPORTED_MODULE_2__;
       }
-
       _createClass(InitiativeComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
@@ -4610,85 +4070,64 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }, highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default()(highcharts__WEBPACK_IMPORTED_MODULE_2__);
         }
       }]);
-
       return InitiativeComponent;
     }();
-
     InitiativeComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: "app-initiative",
-      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! raw-loader!./initiative.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/initiative/initiative.component.html"))["default"],
-      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! ./initiative.component.css */
-      "./src/app/charts/initiative/initiative.component.css"))["default"]]
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! raw-loader!./initiative.component.html */"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/initiative/initiative.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! ./initiative.component.css */"./src/app/charts/initiative/initiative.component.css"))["default"]]
     })], InitiativeComponent);
+
     /***/
   },
 
+  /***/"./src/app/charts/learning-behavior-patterns/learning-behavior-patterns.component.css":
+  /*!********************************************************************************************!*\
+    !*** ./src/app/charts/learning-behavior-patterns/learning-behavior-patterns.component.css ***!
+    \********************************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./src/app/charts/learning-behavior-patterns/learning-behavior-patterns.component.css": function srcAppChartsLearningBehaviorPatternsLearningBehaviorPatternsComponentCss(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsLearningBehaviorPatternsLearningBehaviorPatternsComponentCss(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NoYXJ0cy9sZWFybmluZy1iZWhhdmlvci1wYXR0ZXJucy9sZWFybmluZy1iZWhhdmlvci1wYXR0ZXJucy5jb21wb25lbnQuY3NzIn0= */";
+
     /***/
   },
 
+  /***/"./src/app/charts/learning-behavior-patterns/learning-behavior-patterns.component.ts":
+  /*!*******************************************************************************************!*\
+    !*** ./src/app/charts/learning-behavior-patterns/learning-behavior-patterns.component.ts ***!
+    \*******************************************************************************************/
+  /*! exports provided: LearningBehaviorPatternsComponent */
   /***/
-  "./src/app/charts/learning-behavior-patterns/learning-behavior-patterns.component.ts": function srcAppChartsLearningBehaviorPatternsLearningBehaviorPatternsComponentTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsLearningBehaviorPatternsLearningBehaviorPatternsComponentTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "LearningBehaviorPatternsComponent", function () {
       return LearningBehaviorPatternsComponent;
     });
     /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
     /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
-
-
-    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! highcharts */
-    "./node_modules/highcharts/highcharts.js");
+    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__( /*! highcharts */"./node_modules/highcharts/highcharts.js");
     /* harmony import */
-
-
     var highcharts__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(highcharts__WEBPACK_IMPORTED_MODULE_2__);
     /* harmony import */
-
-
-    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! highcharts/modules/exporting */
-    "./node_modules/highcharts/modules/exporting.js");
+    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__( /*! highcharts/modules/exporting */"./node_modules/highcharts/modules/exporting.js");
     /* harmony import */
-
-
     var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__);
-
     var LearningBehaviorPatternsComponent = /*#__PURE__*/function () {
       function LearningBehaviorPatternsComponent() {
         _classCallCheck(this, LearningBehaviorPatternsComponent);
-
         this.Highcharts = highcharts__WEBPACK_IMPORTED_MODULE_2__;
       }
-
       _createClass(LearningBehaviorPatternsComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
@@ -4761,85 +4200,64 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }, highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default()(highcharts__WEBPACK_IMPORTED_MODULE_2__);
         }
       }]);
-
       return LearningBehaviorPatternsComponent;
     }();
-
     LearningBehaviorPatternsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: "app-learning-behavior-patterns",
-      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! raw-loader!./learning-behavior-patterns.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/learning-behavior-patterns/learning-behavior-patterns.component.html"))["default"],
-      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! ./learning-behavior-patterns.component.css */
-      "./src/app/charts/learning-behavior-patterns/learning-behavior-patterns.component.css"))["default"]]
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! raw-loader!./learning-behavior-patterns.component.html */"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/learning-behavior-patterns/learning-behavior-patterns.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! ./learning-behavior-patterns.component.css */"./src/app/charts/learning-behavior-patterns/learning-behavior-patterns.component.css"))["default"]]
     })], LearningBehaviorPatternsComponent);
+
     /***/
   },
 
+  /***/"./src/app/charts/learning-behaviour/learning-behaviour.component.css":
+  /*!****************************************************************************!*\
+    !*** ./src/app/charts/learning-behaviour/learning-behaviour.component.css ***!
+    \****************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./src/app/charts/learning-behaviour/learning-behaviour.component.css": function srcAppChartsLearningBehaviourLearningBehaviourComponentCss(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsLearningBehaviourLearningBehaviourComponentCss(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NoYXJ0cy9sZWFybmluZy1iZWhhdmlvdXIvbGVhcm5pbmctYmVoYXZpb3VyLmNvbXBvbmVudC5jc3MifQ== */";
+
     /***/
   },
 
+  /***/"./src/app/charts/learning-behaviour/learning-behaviour.component.ts":
+  /*!***************************************************************************!*\
+    !*** ./src/app/charts/learning-behaviour/learning-behaviour.component.ts ***!
+    \***************************************************************************/
+  /*! exports provided: LearningBehaviourComponent */
   /***/
-  "./src/app/charts/learning-behaviour/learning-behaviour.component.ts": function srcAppChartsLearningBehaviourLearningBehaviourComponentTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsLearningBehaviourLearningBehaviourComponentTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "LearningBehaviourComponent", function () {
       return LearningBehaviourComponent;
     });
     /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
     /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
-
-
-    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! highcharts */
-    "./node_modules/highcharts/highcharts.js");
+    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__( /*! highcharts */"./node_modules/highcharts/highcharts.js");
     /* harmony import */
-
-
     var highcharts__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(highcharts__WEBPACK_IMPORTED_MODULE_2__);
     /* harmony import */
-
-
-    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! highcharts/modules/exporting */
-    "./node_modules/highcharts/modules/exporting.js");
+    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__( /*! highcharts/modules/exporting */"./node_modules/highcharts/modules/exporting.js");
     /* harmony import */
-
-
     var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__);
-
     var LearningBehaviourComponent = /*#__PURE__*/function () {
       function LearningBehaviourComponent() {
         _classCallCheck(this, LearningBehaviourComponent);
-
         this.Highcharts = highcharts__WEBPACK_IMPORTED_MODULE_2__;
       }
-
       _createClass(LearningBehaviourComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
@@ -4999,85 +4417,64 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default()(highcharts__WEBPACK_IMPORTED_MODULE_2__);
         }
       }]);
-
       return LearningBehaviourComponent;
     }();
-
     LearningBehaviourComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: "app-learning-behaviour",
-      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! raw-loader!./learning-behaviour.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/learning-behaviour/learning-behaviour.component.html"))["default"],
-      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! ./learning-behaviour.component.css */
-      "./src/app/charts/learning-behaviour/learning-behaviour.component.css"))["default"]]
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! raw-loader!./learning-behaviour.component.html */"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/learning-behaviour/learning-behaviour.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! ./learning-behaviour.component.css */"./src/app/charts/learning-behaviour/learning-behaviour.component.css"))["default"]]
     })], LearningBehaviourComponent);
+
     /***/
   },
 
+  /***/"./src/app/charts/learning-progress/learning-progress.component.css":
+  /*!**************************************************************************!*\
+    !*** ./src/app/charts/learning-progress/learning-progress.component.css ***!
+    \**************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./src/app/charts/learning-progress/learning-progress.component.css": function srcAppChartsLearningProgressLearningProgressComponentCss(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsLearningProgressLearningProgressComponentCss(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NoYXJ0cy9sZWFybmluZy1wcm9ncmVzcy9sZWFybmluZy1wcm9ncmVzcy5jb21wb25lbnQuY3NzIn0= */";
+
     /***/
   },
 
+  /***/"./src/app/charts/learning-progress/learning-progress.component.ts":
+  /*!*************************************************************************!*\
+    !*** ./src/app/charts/learning-progress/learning-progress.component.ts ***!
+    \*************************************************************************/
+  /*! exports provided: LearningProgressComponent */
   /***/
-  "./src/app/charts/learning-progress/learning-progress.component.ts": function srcAppChartsLearningProgressLearningProgressComponentTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsLearningProgressLearningProgressComponentTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "LearningProgressComponent", function () {
       return LearningProgressComponent;
     });
     /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
     /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
-
-
-    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! highcharts */
-    "./node_modules/highcharts/highcharts.js");
+    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__( /*! highcharts */"./node_modules/highcharts/highcharts.js");
     /* harmony import */
-
-
     var highcharts__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(highcharts__WEBPACK_IMPORTED_MODULE_2__);
     /* harmony import */
-
-
-    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! highcharts/modules/exporting */
-    "./node_modules/highcharts/modules/exporting.js");
+    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__( /*! highcharts/modules/exporting */"./node_modules/highcharts/modules/exporting.js");
     /* harmony import */
-
-
     var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__);
-
     var LearningProgressComponent = /*#__PURE__*/function () {
       function LearningProgressComponent() {
         _classCallCheck(this, LearningProgressComponent);
-
         this.Highcharts = highcharts__WEBPACK_IMPORTED_MODULE_2__;
       }
-
       _createClass(LearningProgressComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
@@ -5129,85 +4526,64 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }, highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default()(highcharts__WEBPACK_IMPORTED_MODULE_2__);
         }
       }]);
-
       return LearningProgressComponent;
     }();
-
     LearningProgressComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: "app-learning-progress",
-      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! raw-loader!./learning-progress.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/learning-progress/learning-progress.component.html"))["default"],
-      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! ./learning-progress.component.css */
-      "./src/app/charts/learning-progress/learning-progress.component.css"))["default"]]
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! raw-loader!./learning-progress.component.html */"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/learning-progress/learning-progress.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! ./learning-progress.component.css */"./src/app/charts/learning-progress/learning-progress.component.css"))["default"]]
     })], LearningProgressComponent);
+
     /***/
   },
 
+  /***/"./src/app/charts/online-change-detection/online-change-detection.component.css":
+  /*!**************************************************************************************!*\
+    !*** ./src/app/charts/online-change-detection/online-change-detection.component.css ***!
+    \**************************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./src/app/charts/online-change-detection/online-change-detection.component.css": function srcAppChartsOnlineChangeDetectionOnlineChangeDetectionComponentCss(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsOnlineChangeDetectionOnlineChangeDetectionComponentCss(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NoYXJ0cy9vbmxpbmUtY2hhbmdlLWRldGVjdGlvbi9vbmxpbmUtY2hhbmdlLWRldGVjdGlvbi5jb21wb25lbnQuY3NzIn0= */";
+
     /***/
   },
 
+  /***/"./src/app/charts/online-change-detection/online-change-detection.component.ts":
+  /*!*************************************************************************************!*\
+    !*** ./src/app/charts/online-change-detection/online-change-detection.component.ts ***!
+    \*************************************************************************************/
+  /*! exports provided: OnlineChangeDetectionComponent */
   /***/
-  "./src/app/charts/online-change-detection/online-change-detection.component.ts": function srcAppChartsOnlineChangeDetectionOnlineChangeDetectionComponentTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsOnlineChangeDetectionOnlineChangeDetectionComponentTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "OnlineChangeDetectionComponent", function () {
       return OnlineChangeDetectionComponent;
     });
     /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
     /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
-
-
-    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! highcharts */
-    "./node_modules/highcharts/highcharts.js");
+    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__( /*! highcharts */"./node_modules/highcharts/highcharts.js");
     /* harmony import */
-
-
     var highcharts__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(highcharts__WEBPACK_IMPORTED_MODULE_2__);
     /* harmony import */
-
-
-    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! highcharts/modules/exporting */
-    "./node_modules/highcharts/modules/exporting.js");
+    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__( /*! highcharts/modules/exporting */"./node_modules/highcharts/modules/exporting.js");
     /* harmony import */
-
-
     var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__);
-
     var OnlineChangeDetectionComponent = /*#__PURE__*/function () {
       function OnlineChangeDetectionComponent() {
         _classCallCheck(this, OnlineChangeDetectionComponent);
-
         this.Highcharts = highcharts__WEBPACK_IMPORTED_MODULE_2__;
       }
-
       _createClass(OnlineChangeDetectionComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
@@ -5227,8 +4603,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   var series = this.series[0];
                   setInterval(function () {
                     var x = new Date().getTime(),
-                        // current time
-                    y = Math.random();
+                      // current time
+                      y = Math.random();
                     series.addPoint([x, y], true, true);
                   }, 3000);
                 }
@@ -5251,7 +4627,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   if (newPoint) {
                     return "New point added. Value: " + newPoint.y;
                   }
-
                   return false;
                 }
               }
@@ -5285,91 +4660,74 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               data: function () {
                 // generate an array of random data
                 var data = [],
-                    time = new Date().getTime(),
-                    i;
-
+                  time = new Date().getTime(),
+                  i;
                 for (i = -19; i <= 0; i += 1) {
                   data.push({
                     x: time + i * 3000,
                     y: Math.random() * 10
                   });
                 }
-
                 return data;
               }()
             }]
           }, highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default()(highcharts__WEBPACK_IMPORTED_MODULE_2__);
         }
       }]);
-
       return OnlineChangeDetectionComponent;
     }();
-
     OnlineChangeDetectionComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: "app-online-change-detection",
-      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! raw-loader!./online-change-detection.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/online-change-detection/online-change-detection.component.html"))["default"],
-      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! ./online-change-detection.component.css */
-      "./src/app/charts/online-change-detection/online-change-detection.component.css"))["default"]]
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! raw-loader!./online-change-detection.component.html */"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/online-change-detection/online-change-detection.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! ./online-change-detection.component.css */"./src/app/charts/online-change-detection/online-change-detection.component.css"))["default"]]
     })], OnlineChangeDetectionComponent);
+
     /***/
   },
 
+  /***/"./src/app/charts/passing-rate-prediction/passing-rate-prediction.component.css":
+  /*!**************************************************************************************!*\
+    !*** ./src/app/charts/passing-rate-prediction/passing-rate-prediction.component.css ***!
+    \**************************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./src/app/charts/passing-rate-prediction/passing-rate-prediction.component.css": function srcAppChartsPassingRatePredictionPassingRatePredictionComponentCss(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsPassingRatePredictionPassingRatePredictionComponentCss(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NoYXJ0cy9wYXNzaW5nLXJhdGUtcHJlZGljdGlvbi9wYXNzaW5nLXJhdGUtcHJlZGljdGlvbi5jb21wb25lbnQuY3NzIn0= */";
+
     /***/
   },
 
+  /***/"./src/app/charts/passing-rate-prediction/passing-rate-prediction.component.ts":
+  /*!*************************************************************************************!*\
+    !*** ./src/app/charts/passing-rate-prediction/passing-rate-prediction.component.ts ***!
+    \*************************************************************************************/
+  /*! exports provided: PassingRatePredictionComponent */
   /***/
-  "./src/app/charts/passing-rate-prediction/passing-rate-prediction.component.ts": function srcAppChartsPassingRatePredictionPassingRatePredictionComponentTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsPassingRatePredictionPassingRatePredictionComponentTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "PassingRatePredictionComponent", function () {
       return PassingRatePredictionComponent;
     });
     /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
     /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
-
-
-    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! highcharts */
-    "./node_modules/highcharts/highcharts.js");
+    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__( /*! highcharts */"./node_modules/highcharts/highcharts.js");
     /* harmony import */
-
-
     var highcharts__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(highcharts__WEBPACK_IMPORTED_MODULE_2__);
-
     var PassingRatePredictionComponent = /*#__PURE__*/function () {
       function PassingRatePredictionComponent() {
         _classCallCheck(this, PassingRatePredictionComponent);
-
         this.Highcharts = highcharts__WEBPACK_IMPORTED_MODULE_2__;
       }
-
       _createClass(PassingRatePredictionComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
@@ -5462,85 +4820,64 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           };
         }
       }]);
-
       return PassingRatePredictionComponent;
     }();
-
     PassingRatePredictionComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: "app-passing-rate-prediction",
-      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! raw-loader!./passing-rate-prediction.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/passing-rate-prediction/passing-rate-prediction.component.html"))["default"],
-      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! ./passing-rate-prediction.component.css */
-      "./src/app/charts/passing-rate-prediction/passing-rate-prediction.component.css"))["default"]]
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! raw-loader!./passing-rate-prediction.component.html */"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/passing-rate-prediction/passing-rate-prediction.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! ./passing-rate-prediction.component.css */"./src/app/charts/passing-rate-prediction/passing-rate-prediction.component.css"))["default"]]
     })], PassingRatePredictionComponent);
+
     /***/
   },
 
+  /***/"./src/app/charts/predict-coursecompletion/predict-coursecompletion.component.css":
+  /*!****************************************************************************************!*\
+    !*** ./src/app/charts/predict-coursecompletion/predict-coursecompletion.component.css ***!
+    \****************************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./src/app/charts/predict-coursecompletion/predict-coursecompletion.component.css": function srcAppChartsPredictCoursecompletionPredictCoursecompletionComponentCss(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsPredictCoursecompletionPredictCoursecompletionComponentCss(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NoYXJ0cy9wcmVkaWN0LWNvdXJzZWNvbXBsZXRpb24vcHJlZGljdC1jb3Vyc2Vjb21wbGV0aW9uLmNvbXBvbmVudC5jc3MifQ== */";
+
     /***/
   },
 
+  /***/"./src/app/charts/predict-coursecompletion/predict-coursecompletion.component.ts":
+  /*!***************************************************************************************!*\
+    !*** ./src/app/charts/predict-coursecompletion/predict-coursecompletion.component.ts ***!
+    \***************************************************************************************/
+  /*! exports provided: PredictCoursecompletionComponent */
   /***/
-  "./src/app/charts/predict-coursecompletion/predict-coursecompletion.component.ts": function srcAppChartsPredictCoursecompletionPredictCoursecompletionComponentTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsPredictCoursecompletionPredictCoursecompletionComponentTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "PredictCoursecompletionComponent", function () {
       return PredictCoursecompletionComponent;
     });
     /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
     /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
-
-
-    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! highcharts */
-    "./node_modules/highcharts/highcharts.js");
+    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__( /*! highcharts */"./node_modules/highcharts/highcharts.js");
     /* harmony import */
-
-
     var highcharts__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(highcharts__WEBPACK_IMPORTED_MODULE_2__);
     /* harmony import */
-
-
-    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! highcharts/modules/exporting */
-    "./node_modules/highcharts/modules/exporting.js");
+    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__( /*! highcharts/modules/exporting */"./node_modules/highcharts/modules/exporting.js");
     /* harmony import */
-
-
     var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__);
-
     var PredictCoursecompletionComponent = /*#__PURE__*/function () {
       function PredictCoursecompletionComponent() {
         _classCallCheck(this, PredictCoursecompletionComponent);
-
         this.Highcharts = highcharts__WEBPACK_IMPORTED_MODULE_2__;
       }
-
       _createClass(PredictCoursecompletionComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
@@ -5569,6 +4906,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   return this.value; // clean, unformatted number for year
                 }
               },
+
               accessibility: {
                 rangeDescription: "Range: 0 to 43."
               }
@@ -5606,75 +4944,60 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }, highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default()(highcharts__WEBPACK_IMPORTED_MODULE_2__);
         }
       }]);
-
       return PredictCoursecompletionComponent;
     }();
-
     PredictCoursecompletionComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: "app-predict-coursecompletion",
-      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! raw-loader!./predict-coursecompletion.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/predict-coursecompletion/predict-coursecompletion.component.html"))["default"],
-      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! ./predict-coursecompletion.component.css */
-      "./src/app/charts/predict-coursecompletion/predict-coursecompletion.component.css"))["default"]]
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! raw-loader!./predict-coursecompletion.component.html */"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/predict-coursecompletion/predict-coursecompletion.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! ./predict-coursecompletion.component.css */"./src/app/charts/predict-coursecompletion/predict-coursecompletion.component.css"))["default"]]
     })], PredictCoursecompletionComponent);
+
     /***/
   },
 
+  /***/"./src/app/charts/predict-exam-success/predict-exam-success.component.css":
+  /*!********************************************************************************!*\
+    !*** ./src/app/charts/predict-exam-success/predict-exam-success.component.css ***!
+    \********************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./src/app/charts/predict-exam-success/predict-exam-success.component.css": function srcAppChartsPredictExamSuccessPredictExamSuccessComponentCss(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsPredictExamSuccessPredictExamSuccessComponentCss(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NoYXJ0cy9wcmVkaWN0LWV4YW0tc3VjY2Vzcy9wcmVkaWN0LWV4YW0tc3VjY2Vzcy5jb21wb25lbnQuY3NzIn0= */";
+
     /***/
   },
 
+  /***/"./src/app/charts/predict-exam-success/predict-exam-success.component.ts":
+  /*!*******************************************************************************!*\
+    !*** ./src/app/charts/predict-exam-success/predict-exam-success.component.ts ***!
+    \*******************************************************************************/
+  /*! exports provided: PredictExamSuccessComponent */
   /***/
-  "./src/app/charts/predict-exam-success/predict-exam-success.component.ts": function srcAppChartsPredictExamSuccessPredictExamSuccessComponentTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsPredictExamSuccessPredictExamSuccessComponentTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "PredictExamSuccessComponent", function () {
       return PredictExamSuccessComponent;
     });
     /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
     /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
-
-
-    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! highcharts */
-    "./node_modules/highcharts/highcharts.js");
+    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__( /*! highcharts */"./node_modules/highcharts/highcharts.js");
     /* harmony import */
-
-
     var highcharts__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(highcharts__WEBPACK_IMPORTED_MODULE_2__);
-
     var PredictExamSuccessComponent = /*#__PURE__*/function () {
       function PredictExamSuccessComponent() {
         _classCallCheck(this, PredictExamSuccessComponent);
-
         this.Highcharts = highcharts__WEBPACK_IMPORTED_MODULE_2__;
       }
-
       _createClass(PredictExamSuccessComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
@@ -5737,96 +5060,66 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           };
         }
       }]);
-
       return PredictExamSuccessComponent;
     }();
-
     PredictExamSuccessComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: "app-predict-exam-success",
-      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! raw-loader!./predict-exam-success.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/predict-exam-success/predict-exam-success.component.html"))["default"],
-      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! ./predict-exam-success.component.css */
-      "./src/app/charts/predict-exam-success/predict-exam-success.component.css"))["default"]]
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! raw-loader!./predict-exam-success.component.html */"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/predict-exam-success/predict-exam-success.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! ./predict-exam-success.component.css */"./src/app/charts/predict-exam-success/predict-exam-success.component.css"))["default"]]
     })], PredictExamSuccessComponent);
+
     /***/
   },
 
+  /***/"./src/app/charts/presentation-skills/presentation-skills.component.css":
+  /*!******************************************************************************!*\
+    !*** ./src/app/charts/presentation-skills/presentation-skills.component.css ***!
+    \******************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./src/app/charts/presentation-skills/presentation-skills.component.css": function srcAppChartsPresentationSkillsPresentationSkillsComponentCss(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsPresentationSkillsPresentationSkillsComponentCss(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NoYXJ0cy9wcmVzZW50YXRpb24tc2tpbGxzL3ByZXNlbnRhdGlvbi1za2lsbHMuY29tcG9uZW50LmNzcyJ9 */";
+
     /***/
   },
 
+  /***/"./src/app/charts/presentation-skills/presentation-skills.component.ts":
+  /*!*****************************************************************************!*\
+    !*** ./src/app/charts/presentation-skills/presentation-skills.component.ts ***!
+    \*****************************************************************************/
+  /*! exports provided: PresentationSkillsComponent */
   /***/
-  "./src/app/charts/presentation-skills/presentation-skills.component.ts": function srcAppChartsPresentationSkillsPresentationSkillsComponentTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsPresentationSkillsPresentationSkillsComponentTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "PresentationSkillsComponent", function () {
       return PresentationSkillsComponent;
     });
     /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
     /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
-
-
-    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! highcharts */
-    "./node_modules/highcharts/highcharts.js");
+    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__( /*! highcharts */"./node_modules/highcharts/highcharts.js");
     /* harmony import */
-
-
     var highcharts__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(highcharts__WEBPACK_IMPORTED_MODULE_2__);
-
-    var More = __webpack_require__(
-    /*! highcharts/highcharts-more */
-    "./node_modules/highcharts/highcharts-more.js");
-
+    var More = __webpack_require__( /*! highcharts/highcharts-more */"./node_modules/highcharts/highcharts-more.js");
     More(highcharts__WEBPACK_IMPORTED_MODULE_2__);
-
-    var Exporting = __webpack_require__(
-    /*! highcharts/modules/exporting */
-    "./node_modules/highcharts/modules/exporting.js");
-
+    var Exporting = __webpack_require__( /*! highcharts/modules/exporting */"./node_modules/highcharts/modules/exporting.js");
     Exporting(highcharts__WEBPACK_IMPORTED_MODULE_2__);
-
-    var ExportData = __webpack_require__(
-    /*! highcharts/modules/export-data */
-    "./node_modules/highcharts/modules/export-data.js");
-
+    var ExportData = __webpack_require__( /*! highcharts/modules/export-data */"./node_modules/highcharts/modules/export-data.js");
     ExportData(highcharts__WEBPACK_IMPORTED_MODULE_2__);
-
-    var Accessibility = __webpack_require__(
-    /*! highcharts/modules/accessibility */
-    "./node_modules/highcharts/modules/accessibility.js");
-
+    var Accessibility = __webpack_require__( /*! highcharts/modules/accessibility */"./node_modules/highcharts/modules/accessibility.js");
     Accessibility(highcharts__WEBPACK_IMPORTED_MODULE_2__);
-
     var PresentationSkillsComponent = /*#__PURE__*/function () {
       function PresentationSkillsComponent() {
         _classCallCheck(this, PresentationSkillsComponent);
-
         this.TimeChartData = {
           xData: [0.001567, 0.011765, 0.022194, 0.032316, 0.04266, 0.063668, 0.074477, 0.085323, 0.09576, 0.106078, 0.116096, 0.137524, 0.148342, 0.159059, 0.170005, 0.180716, 0.191407, 0.212538, 0.222819, 0.233929, 0.244239, 0.255301, 0.266081, 0.287527, 0.298115, 0.309392, 0.320217, 0.330928, 0.341401, 0.361717, 0.372173, 0.382337, 0.39294, 0.403072, 0.413454, 0.434618, 0.444845, 0.455745, 0.465785, 0.475987, 0.486064, 0.507086, 0.517517, 0.527961, 0.538242, 0.548414, 0.558444, 0.578941, 0.589212, 0.599472, 0.60977, 0.620178, 0.630189, 0.650782, 0.661001, 0.671137, 0.681175, 0.691235, 0.702012, 0.722644, 0.733166, 0.743824, 0.754059, 0.764109, 0.774519, 0.795597, 0.805721, 0.81592, 0.826139, 0.836369, 0.846826, 0.86771, 0.87803, 0.888342, 0.898695, 0.908723, 0.91922, 0.939802, 0.950378, 0.960776, 0.971377, 0.981843, 0.992312, 1.013125, 1.023302, 1.033488, 1.043822, 1.054203, 1.065019, 1.086078, 1.09635, 1.106421, 1.117028, 1.127541, 1.138599, 1.159588, 1.170167, 1.180741, 1.190794, 1.201112, 1.211355, 1.233278, 1.243477, 1.254957, 1.265227, 1.276378, 1.285656, 1.297311, 1.308367, 1.318715, 1.329589, 1.340834, 1.352388, 1.375063, 1.385369, 1.396291, 1.408156, 1.418989, 1.429535, 1.451141, 1.462205, 1.473011, 1.483844, 1.494311, 1.514761, 1.525336, 1.535858, 1.546476, 1.557325, 1.567512, 1.590091, 1.600925, 1.612303, 1.622558, 1.633071, 1.643555, 1.66484, 1.675722, 1.685986, 1.696733, 1.706895, 1.719102, 1.741295, 1.752144, 1.762688, 1.773713, 1.784052, 1.795705, 1.817305, 1.827465, 1.838408, 1.849369, 1.860023, 1.871438, 1.89257, 1.90323, 1.914398, 1.924634, 1.934642, 1.945212, 1.966275, 1.976294, 1.986422, 1.996652, 2.008005, 2.018309, 2.041139, 2.051221, 2.0613, 2.072507, 2.08342, 2.094075, 2.114574, 2.125286, 2.135765, 2.146845, 2.157966, 2.169391, 2.190921, 2.200899, 2.212709, 2.222671, 2.232908, 2.244001, 2.264898, 2.275703, 2.286885, 2.298115, 2.310186, 2.32059, 2.344695, 2.354843, 2.366387, 2.379001, 2.390328, 2.402215, 2.423134, 2.433156, 2.444912, 2.457061, 2.468253, 2.478978, 2.499832, 2.513223, 2.52561, 2.538429, 2.548659, 2.560809, 2.581308, 2.592816, 2.603963, 2.615992, 2.626242, 2.638223, 2.660346, 2.671583, 2.681938, 2.69265, 2.70588, 2.716296, 2.740081, 2.75085, 2.761319, 2.772027, 2.782659, 2.793531, 2.816194, 2.828031, 2.839243, 2.851443, 2.863884, 2.874359, 2.895246, 2.906506, 2.91761, 2.92786, 2.938937, 2.950218, 2.973357, 2.98366, 2.994639, 3.005213, 3.01666, 3.02761, 3.050025, 3.061713, 3.071828, 3.082787, 3.093422, 3.105289, 3.127231, 3.138982, 3.149755, 3.160217, 3.171299, 3.191571, 3.202226, 3.213225, 3.223987, 3.234092, 3.244644, 3.265939, 3.276411, 3.286489, 3.297156, 3.307909, 3.319018, 3.34064, 3.351107, 3.361683, 3.373136, 3.384768, 3.395457, 3.417722, 3.429096, 3.439122, 3.449679, 3.459868, 3.469997, 3.492679, 3.503647, 3.514941, 3.525858, 3.538746, 3.550422, 3.572255, 3.58452, 3.595367, 3.605736, 3.617401, 3.628324, 3.652523, 3.663679, 3.67378, 3.684605, 3.695595, 3.705843, 3.728706, 3.739169, 3.750205, 3.761258, 3.771771, 3.781911, 3.804724, 3.81631, 3.826313, 3.837847, 3.85049, 3.860999, 3.88262, 3.892937, 3.903053, 3.913656, 3.924698, 3.935126, 3.956362, 3.966543, 3.976899, 3.98752, 3.997644, 4.008721, 4.029852, 4.040633, 4.051006, 4.06126, 4.071761, 4.083526, 4.10749, 4.117855, 4.128661, 4.13934, 4.151117, 4.1624, 4.184736, 4.194826, 4.205098, 4.215261, 4.225325, 4.236367, 4.262012, 4.273794, 4.285743, 4.297226, 4.308086, 4.318245, 4.340246, 4.351486, 4.363196, 4.374465, 4.387109, 4.398635, 4.421101, 4.432135, 4.444666, 4.456226, 4.467413, 4.477804, 4.498505, 4.510413, 4.522595, 4.534044, 4.545944, 4.558048, 4.580379, 4.59312, 4.605616, 4.618065, 4.631266, 4.644086, 4.667943, 4.67948, 4.691266, 4.703019, 4.715923, 4.725932, 4.752312, 4.765224, 4.777128, 4.787361, 4.800435, 4.823353, 4.836044, 4.848602, 4.860302, 4.871112, 4.882779, 4.904695, 4.914823, 4.927074, 4.938111, 4.949586, 4.960761, 4.982911, 4.9942, 5.004246, 5.016296, 5.027215, 5.038043, 5.058885, 5.070303, 5.080649, 5.093865, 5.104424, 5.114903, 5.134965, 5.146346, 5.15634, 5.168547, 5.179066, 5.191167, 5.214242, 5.224914, 5.237573, 5.249537, 5.261586, 5.272517, 5.296154, 5.306348, 5.316773, 5.327153, 5.339961, 5.350638, 5.376502, 5.389277, 5.402142, 5.412197, 5.42399, 5.434873, 5.458466, 5.470907, 5.482679, 5.493339, 5.50574, 5.516349, 5.538897, 5.549552, 5.56083, 5.571879, 5.583764, 5.59509, 5.619028, 5.629925, 5.640716, 5.650957, 5.661787, 5.671957, 5.693974, 5.704919, 5.717491, 5.731152, 5.744728, 5.755687, 5.778668, 5.791951, 5.80409, 5.815697, 5.828482, 5.840501, 5.864145, 5.875704, 5.887893, 5.900147, 5.912517, 5.924894, 5.948897, 5.959155, 5.970262, 5.981632, 5.992996, 6.00356, 6.027256, 6.038776, 6.050959, 6.061351, 6.071864, 6.082436, 6.104054, 6.115602, 6.127623, 6.139058, 6.150639, 6.161323, 6.183013, 6.194359, 6.206269, 6.218033, 6.2281, 6.240494, 6.262584, 6.275326, 6.287166, 6.298953, 6.310644, 6.321583, 6.345676, 6.356738, 6.366782, 6.377931, 6.388519, 6.397159],
           datasets: [{
@@ -5851,31 +5144,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         };
         this.activity = this.TimeChartData;
       }
-
       _createClass(PresentationSkillsComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
           ["mousemove", "touchmove", "touchstart"].forEach(function (eventType) {
             document.getElementById("container").addEventListener(eventType, function (e) {
               var chart, point, i, event;
-
               for (i = 0; i < highcharts__WEBPACK_IMPORTED_MODULE_2__["charts"].length; i = i + 1) {
-                chart = highcharts__WEBPACK_IMPORTED_MODULE_2__["charts"][i]; // Find coordinates within the chart
-
-                event = chart.pointer.normalize(e); // Get the hovered point
-
+                chart = highcharts__WEBPACK_IMPORTED_MODULE_2__["charts"][i];
+                // Find coordinates within the chart
+                event = chart.pointer.normalize(e);
+                // Get the hovered point
                 point = chart.series[0].searchPoint(event, true);
-
                 if (point) {
                   point.highlight(e);
                 }
               }
             });
           });
-
           function syncExtremes(e) {
             var thisChart = this.chart;
-
             if (e.trigger !== "syncExtremes") {
               // Prevent feedback loop
               highcharts__WEBPACK_IMPORTED_MODULE_2__["each"](highcharts__WEBPACK_IMPORTED_MODULE_2__["charts"], function (chart) {
@@ -5890,23 +5178,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               });
             }
           }
-
           highcharts__WEBPACK_IMPORTED_MODULE_2__["Pointer"].prototype.reset = function () {
             return undefined;
           };
-
           highcharts__WEBPACK_IMPORTED_MODULE_2__["Point"].prototype.select = function (event) {
             event = this.series.chart.pointer.normalize(event);
             this.onMouseOver(); // Show the hover marker
-
             this.series.chart.tooltip.refresh(this); // Show the tooltip
-
             this.series.chart.xAxis[0].drawCrosshair(event, this); // Show the crosshair
           };
 
           this.xData = this.activity.xData;
           var that = this;
-
           if (this.activity) {
             this.activity.datasets.forEach(function (dataset, i) {
               dataset.data = highcharts__WEBPACK_IMPORTED_MODULE_2__["map"](dataset.data, function (val, j) {
@@ -5984,85 +5267,64 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }
         }
       }]);
-
       return PresentationSkillsComponent;
     }();
-
     PresentationSkillsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: "app-presentation-skills",
-      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! raw-loader!./presentation-skills.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/presentation-skills/presentation-skills.component.html"))["default"],
-      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! ./presentation-skills.component.css */
-      "./src/app/charts/presentation-skills/presentation-skills.component.css"))["default"]]
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! raw-loader!./presentation-skills.component.html */"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/presentation-skills/presentation-skills.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! ./presentation-skills.component.css */"./src/app/charts/presentation-skills/presentation-skills.component.css"))["default"]]
     })], PresentationSkillsComponent);
+
     /***/
   },
 
+  /***/"./src/app/charts/procrastination/procrastination.component.css":
+  /*!**********************************************************************!*\
+    !*** ./src/app/charts/procrastination/procrastination.component.css ***!
+    \**********************************************************************/
+  /*! exports provided: default */
   /***/
-  "./src/app/charts/procrastination/procrastination.component.css": function srcAppChartsProcrastinationProcrastinationComponentCss(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsProcrastinationProcrastinationComponentCss(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NoYXJ0cy9wcm9jcmFzdGluYXRpb24vcHJvY3Jhc3RpbmF0aW9uLmNvbXBvbmVudC5jc3MifQ== */";
+
     /***/
   },
 
+  /***/"./src/app/charts/procrastination/procrastination.component.ts":
+  /*!*********************************************************************!*\
+    !*** ./src/app/charts/procrastination/procrastination.component.ts ***!
+    \*********************************************************************/
+  /*! exports provided: ProcrastinationComponent */
   /***/
-  "./src/app/charts/procrastination/procrastination.component.ts": function srcAppChartsProcrastinationProcrastinationComponentTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsProcrastinationProcrastinationComponentTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "ProcrastinationComponent", function () {
       return ProcrastinationComponent;
     });
     /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
     /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
-
-
-    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! highcharts */
-    "./node_modules/highcharts/highcharts.js");
+    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__( /*! highcharts */"./node_modules/highcharts/highcharts.js");
     /* harmony import */
-
-
     var highcharts__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(highcharts__WEBPACK_IMPORTED_MODULE_2__);
     /* harmony import */
-
-
-    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! highcharts/modules/exporting */
-    "./node_modules/highcharts/modules/exporting.js");
+    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__( /*! highcharts/modules/exporting */"./node_modules/highcharts/modules/exporting.js");
     /* harmony import */
-
-
     var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__);
-
     var ProcrastinationComponent = /*#__PURE__*/function () {
       function ProcrastinationComponent() {
         _classCallCheck(this, ProcrastinationComponent);
-
         this.Highcharts = highcharts__WEBPACK_IMPORTED_MODULE_2__;
       }
-
       _createClass(ProcrastinationComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
@@ -6139,91 +5401,66 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }, highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default()(highcharts__WEBPACK_IMPORTED_MODULE_2__);
         }
       }]);
-
       return ProcrastinationComponent;
     }();
-
     ProcrastinationComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: "app-procrastination",
-      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! raw-loader!./procrastination.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/procrastination/procrastination.component.html"))["default"],
-      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! ./procrastination.component.css */
-      "./src/app/charts/procrastination/procrastination.component.css"))["default"]]
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! raw-loader!./procrastination.component.html */"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/procrastination/procrastination.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! ./procrastination.component.css */"./src/app/charts/procrastination/procrastination.component.css"))["default"]]
     })], ProcrastinationComponent);
+
     /***/
   },
 
+  /***/"./src/app/charts/reading-analytics/reading-analytics.component.css":
+  /*!**************************************************************************!*\
+    !*** ./src/app/charts/reading-analytics/reading-analytics.component.css ***!
+    \**************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./src/app/charts/reading-analytics/reading-analytics.component.css": function srcAppChartsReadingAnalyticsReadingAnalyticsComponentCss(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsReadingAnalyticsReadingAnalyticsComponentCss(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NoYXJ0cy9yZWFkaW5nLWFuYWx5dGljcy9yZWFkaW5nLWFuYWx5dGljcy5jb21wb25lbnQuY3NzIn0= */";
+
     /***/
   },
 
+  /***/"./src/app/charts/reading-analytics/reading-analytics.component.ts":
+  /*!*************************************************************************!*\
+    !*** ./src/app/charts/reading-analytics/reading-analytics.component.ts ***!
+    \*************************************************************************/
+  /*! exports provided: ReadingAnalyticsComponent */
   /***/
-  "./src/app/charts/reading-analytics/reading-analytics.component.ts": function srcAppChartsReadingAnalyticsReadingAnalyticsComponentTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsReadingAnalyticsReadingAnalyticsComponentTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "ReadingAnalyticsComponent", function () {
       return ReadingAnalyticsComponent;
     });
     /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
     /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
-
-
-    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! highcharts */
-    "./node_modules/highcharts/highcharts.js");
+    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__( /*! highcharts */"./node_modules/highcharts/highcharts.js");
     /* harmony import */
-
-
     var highcharts__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(highcharts__WEBPACK_IMPORTED_MODULE_2__);
     /* harmony import */
-
-
-    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! highcharts/modules/exporting */
-    "./node_modules/highcharts/modules/exporting.js");
+    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__( /*! highcharts/modules/exporting */"./node_modules/highcharts/modules/exporting.js");
     /* harmony import */
-
-
     var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__);
-
-    var Draggable = __webpack_require__(
-    /*! highcharts/modules/draggable-points.js */
-    "./node_modules/highcharts/modules/draggable-points.js");
-
+    var Draggable = __webpack_require__( /*! highcharts/modules/draggable-points.js */"./node_modules/highcharts/modules/draggable-points.js");
     Draggable(highcharts__WEBPACK_IMPORTED_MODULE_2__);
-
     var ReadingAnalyticsComponent = /*#__PURE__*/function () {
       function ReadingAnalyticsComponent() {
         _classCallCheck(this, ReadingAnalyticsComponent);
-
         this.Highcharts = highcharts__WEBPACK_IMPORTED_MODULE_2__;
       }
-
       _createClass(ReadingAnalyticsComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
@@ -6270,97 +5507,69 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default()(highcharts__WEBPACK_IMPORTED_MODULE_2__);
         }
       }]);
-
       return ReadingAnalyticsComponent;
     }();
-
     ReadingAnalyticsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: "app-reading-analytics",
-      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! raw-loader!./reading-analytics.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/reading-analytics/reading-analytics.component.html"))["default"],
-      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! ./reading-analytics.component.css */
-      "./src/app/charts/reading-analytics/reading-analytics.component.css"))["default"]]
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! raw-loader!./reading-analytics.component.html */"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/reading-analytics/reading-analytics.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! ./reading-analytics.component.css */"./src/app/charts/reading-analytics/reading-analytics.component.css"))["default"]]
     })], ReadingAnalyticsComponent);
+
     /***/
   },
 
+  /***/"./src/app/charts/self-motivation/self-motivation.component.css":
+  /*!**********************************************************************!*\
+    !*** ./src/app/charts/self-motivation/self-motivation.component.css ***!
+    \**********************************************************************/
+  /*! exports provided: default */
   /***/
-  "./src/app/charts/self-motivation/self-motivation.component.css": function srcAppChartsSelfMotivationSelfMotivationComponentCss(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsSelfMotivationSelfMotivationComponentCss(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NoYXJ0cy9zZWxmLW1vdGl2YXRpb24vc2VsZi1tb3RpdmF0aW9uLmNvbXBvbmVudC5jc3MifQ== */";
+
     /***/
   },
 
+  /***/"./src/app/charts/self-motivation/self-motivation.component.ts":
+  /*!*********************************************************************!*\
+    !*** ./src/app/charts/self-motivation/self-motivation.component.ts ***!
+    \*********************************************************************/
+  /*! exports provided: SelfMotivationComponent */
   /***/
-  "./src/app/charts/self-motivation/self-motivation.component.ts": function srcAppChartsSelfMotivationSelfMotivationComponentTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsSelfMotivationSelfMotivationComponentTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "SelfMotivationComponent", function () {
       return SelfMotivationComponent;
     });
     /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
     /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
-
-
-    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! highcharts */
-    "./node_modules/highcharts/highcharts.js");
+    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__( /*! highcharts */"./node_modules/highcharts/highcharts.js");
     /* harmony import */
-
-
     var highcharts__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(highcharts__WEBPACK_IMPORTED_MODULE_2__);
     /* harmony import */
-
-
-    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! highcharts/modules/exporting */
-    "./node_modules/highcharts/modules/exporting.js");
+    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__( /*! highcharts/modules/exporting */"./node_modules/highcharts/modules/exporting.js");
     /* harmony import */
-
-
     var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__);
     /* harmony import */
-
-
-    var highcharts_highcharts_more__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-    /*! highcharts/highcharts-more */
-    "./node_modules/highcharts/highcharts-more.js");
+    var highcharts_highcharts_more__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__( /*! highcharts/highcharts-more */"./node_modules/highcharts/highcharts-more.js");
     /* harmony import */
-
-
     var highcharts_highcharts_more__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(highcharts_highcharts_more__WEBPACK_IMPORTED_MODULE_4__);
-
     highcharts_highcharts_more__WEBPACK_IMPORTED_MODULE_4___default()(highcharts__WEBPACK_IMPORTED_MODULE_2__);
-
     var SelfMotivationComponent = /*#__PURE__*/function () {
       function SelfMotivationComponent() {
         _classCallCheck(this, SelfMotivationComponent);
-
         this.Highcharts = highcharts__WEBPACK_IMPORTED_MODULE_2__;
       }
-
       _createClass(SelfMotivationComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
@@ -6417,85 +5626,64 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }, highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default()(highcharts__WEBPACK_IMPORTED_MODULE_2__);
         }
       }]);
-
       return SelfMotivationComponent;
     }();
-
     SelfMotivationComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: "app-self-motivation",
-      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! raw-loader!./self-motivation.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/self-motivation/self-motivation.component.html"))["default"],
-      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! ./self-motivation.component.css */
-      "./src/app/charts/self-motivation/self-motivation.component.css"))["default"]]
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! raw-loader!./self-motivation.component.html */"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/self-motivation/self-motivation.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! ./self-motivation.component.css */"./src/app/charts/self-motivation/self-motivation.component.css"))["default"]]
     })], SelfMotivationComponent);
+
     /***/
   },
 
+  /***/"./src/app/charts/social-analysis/social-analysis.component.css":
+  /*!**********************************************************************!*\
+    !*** ./src/app/charts/social-analysis/social-analysis.component.css ***!
+    \**********************************************************************/
+  /*! exports provided: default */
   /***/
-  "./src/app/charts/social-analysis/social-analysis.component.css": function srcAppChartsSocialAnalysisSocialAnalysisComponentCss(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsSocialAnalysisSocialAnalysisComponentCss(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NoYXJ0cy9zb2NpYWwtYW5hbHlzaXMvc29jaWFsLWFuYWx5c2lzLmNvbXBvbmVudC5jc3MifQ== */";
+
     /***/
   },
 
+  /***/"./src/app/charts/social-analysis/social-analysis.component.ts":
+  /*!*********************************************************************!*\
+    !*** ./src/app/charts/social-analysis/social-analysis.component.ts ***!
+    \*********************************************************************/
+  /*! exports provided: SocialAnalysisComponent */
   /***/
-  "./src/app/charts/social-analysis/social-analysis.component.ts": function srcAppChartsSocialAnalysisSocialAnalysisComponentTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsSocialAnalysisSocialAnalysisComponentTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "SocialAnalysisComponent", function () {
       return SocialAnalysisComponent;
     });
     /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
     /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
-
-
-    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! highcharts */
-    "./node_modules/highcharts/highcharts.js");
+    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__( /*! highcharts */"./node_modules/highcharts/highcharts.js");
     /* harmony import */
-
-
     var highcharts__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(highcharts__WEBPACK_IMPORTED_MODULE_2__);
     /* harmony import */
-
-
-    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! highcharts/modules/exporting */
-    "./node_modules/highcharts/modules/exporting.js");
+    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__( /*! highcharts/modules/exporting */"./node_modules/highcharts/modules/exporting.js");
     /* harmony import */
-
-
     var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__);
-
     var SocialAnalysisComponent = /*#__PURE__*/function () {
       function SocialAnalysisComponent() {
         _classCallCheck(this, SocialAnalysisComponent);
-
         this.Highcharts = highcharts__WEBPACK_IMPORTED_MODULE_2__;
       }
-
       _createClass(SocialAnalysisComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
@@ -6570,99 +5758,72 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }, highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default()(highcharts__WEBPACK_IMPORTED_MODULE_2__);
         }
       }]);
-
       return SocialAnalysisComponent;
     }();
-
     SocialAnalysisComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: "app-social-analysis",
-      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! raw-loader!./social-analysis.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/social-analysis/social-analysis.component.html"))["default"],
-      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! ./social-analysis.component.css */
-      "./src/app/charts/social-analysis/social-analysis.component.css"))["default"]]
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! raw-loader!./social-analysis.component.html */"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/social-analysis/social-analysis.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! ./social-analysis.component.css */"./src/app/charts/social-analysis/social-analysis.component.css"))["default"]]
     })], SocialAnalysisComponent);
+
     /***/
   },
 
+  /***/"./src/app/charts/social-network-analysis/social-network-analysis.component.css":
+  /*!**************************************************************************************!*\
+    !*** ./src/app/charts/social-network-analysis/social-network-analysis.component.css ***!
+    \**************************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./src/app/charts/social-network-analysis/social-network-analysis.component.css": function srcAppChartsSocialNetworkAnalysisSocialNetworkAnalysisComponentCss(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsSocialNetworkAnalysisSocialNetworkAnalysisComponentCss(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NoYXJ0cy9zb2NpYWwtbmV0d29yay1hbmFseXNpcy9zb2NpYWwtbmV0d29yay1hbmFseXNpcy5jb21wb25lbnQuY3NzIn0= */";
+
     /***/
   },
 
+  /***/"./src/app/charts/social-network-analysis/social-network-analysis.component.ts":
+  /*!*************************************************************************************!*\
+    !*** ./src/app/charts/social-network-analysis/social-network-analysis.component.ts ***!
+    \*************************************************************************************/
+  /*! exports provided: SocialNetworkAnalysisComponent */
   /***/
-  "./src/app/charts/social-network-analysis/social-network-analysis.component.ts": function srcAppChartsSocialNetworkAnalysisSocialNetworkAnalysisComponentTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsSocialNetworkAnalysisSocialNetworkAnalysisComponentTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "SocialNetworkAnalysisComponent", function () {
       return SocialNetworkAnalysisComponent;
     });
     /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
     /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
-
-
-    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! highcharts */
-    "./node_modules/highcharts/highcharts.js");
+    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__( /*! highcharts */"./node_modules/highcharts/highcharts.js");
     /* harmony import */
-
-
     var highcharts__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(highcharts__WEBPACK_IMPORTED_MODULE_2__);
     /* harmony import */
-
-
-    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! highcharts/modules/exporting */
-    "./node_modules/highcharts/modules/exporting.js");
+    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__( /*! highcharts/modules/exporting */"./node_modules/highcharts/modules/exporting.js");
     /* harmony import */
-
-
     var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__);
     /* harmony import */
-
-
-    var highcharts_modules_networkgraph__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-    /*! highcharts/modules/networkgraph */
-    "./node_modules/highcharts/modules/networkgraph.js");
+    var highcharts_modules_networkgraph__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__( /*! highcharts/modules/networkgraph */"./node_modules/highcharts/modules/networkgraph.js");
     /* harmony import */
+    var highcharts_modules_networkgraph__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(highcharts_modules_networkgraph__WEBPACK_IMPORTED_MODULE_4__);
 
-
-    var highcharts_modules_networkgraph__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(highcharts_modules_networkgraph__WEBPACK_IMPORTED_MODULE_4__); //import nodeFormatter from "./nodeformatter";
-
-
+    //import nodeFormatter from "./nodeformatter";
     highcharts_modules_networkgraph__WEBPACK_IMPORTED_MODULE_4___default()(highcharts__WEBPACK_IMPORTED_MODULE_2__);
     nodeFormatter(highcharts__WEBPACK_IMPORTED_MODULE_2__);
-
     var SocialNetworkAnalysisComponent = /*#__PURE__*/function () {
       function SocialNetworkAnalysisComponent() {
         _classCallCheck(this, SocialNetworkAnalysisComponent);
-
         this.Highcharts = highcharts__WEBPACK_IMPORTED_MODULE_2__;
       }
-
       _createClass(SocialNetworkAnalysisComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
@@ -6705,11 +5866,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               formatter: function formatter() {
                 var linkTo_li = "";
                 var tooltipHTML = "";
-
                 for (var i = 0; i < this.point.linksFrom.length; i++) {
                   linkTo_li = linkTo_li + "<li>".concat(this.point.linksFrom[i].to, "</li>");
                 }
-
                 tooltipHTML = tooltipHTML + "<b>Replies to [".concat(this.point.name, "]</b>:<ul>").concat(linkTo_li, "</ul>");
                 return tooltipHTML;
               }
@@ -6717,29 +5876,21 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }, highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default()(highcharts__WEBPACK_IMPORTED_MODULE_2__);
         }
       }]);
-
       return SocialNetworkAnalysisComponent;
     }();
-
     SocialNetworkAnalysisComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: "app-social-network-analysis",
-      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! raw-loader!./social-network-analysis.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/social-network-analysis/social-network-analysis.component.html"))["default"],
-      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! ./social-network-analysis.component.css */
-      "./src/app/charts/social-network-analysis/social-network-analysis.component.css"))["default"]]
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! raw-loader!./social-network-analysis.component.html */"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/social-network-analysis/social-network-analysis.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! ./social-network-analysis.component.css */"./src/app/charts/social-network-analysis/social-network-analysis.component.css"))["default"]]
     })], SocialNetworkAnalysisComponent);
-
     function nodeFormatter(Highcharts) {
       // Add the nodes option through an event call. We want to start with the parent
       // item and apply separate colors to each child element, then the same color to
       // grandchildren.
       Highcharts.addEvent(Highcharts.Series, 'afterSetOptions', function (e) {
         var colors = Highcharts.getOptions().colors,
-            i = 0,
-            nodes = {};
-
+          i = 0,
+          nodes = {};
         if (this instanceof Highcharts.seriesTypes.networkgraph && e.options.id === 'lang-tree') {
           e.options.data.forEach(function (link) {
             if (link[0] === 'User 1') {
@@ -6769,73 +5920,57 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }
       });
     }
-    /***/
 
+    /***/
   },
 
+  /***/"./src/app/charts/student-comparison/student-comparison.component.css":
+  /*!****************************************************************************!*\
+    !*** ./src/app/charts/student-comparison/student-comparison.component.css ***!
+    \****************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./src/app/charts/student-comparison/student-comparison.component.css": function srcAppChartsStudentComparisonStudentComparisonComponentCss(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsStudentComparisonStudentComparisonComponentCss(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NoYXJ0cy9zdHVkZW50LWNvbXBhcmlzb24vc3R1ZGVudC1jb21wYXJpc29uLmNvbXBvbmVudC5jc3MifQ== */";
+
     /***/
   },
 
+  /***/"./src/app/charts/student-comparison/student-comparison.component.ts":
+  /*!***************************************************************************!*\
+    !*** ./src/app/charts/student-comparison/student-comparison.component.ts ***!
+    \***************************************************************************/
+  /*! exports provided: StudentComparisonComponent */
   /***/
-  "./src/app/charts/student-comparison/student-comparison.component.ts": function srcAppChartsStudentComparisonStudentComparisonComponentTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsStudentComparisonStudentComparisonComponentTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "StudentComparisonComponent", function () {
       return StudentComparisonComponent;
     });
     /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
     /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
-
-
-    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! highcharts */
-    "./node_modules/highcharts/highcharts.js");
+    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__( /*! highcharts */"./node_modules/highcharts/highcharts.js");
     /* harmony import */
-
-
     var highcharts__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(highcharts__WEBPACK_IMPORTED_MODULE_2__);
     /* harmony import */
-
-
-    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! highcharts/modules/exporting */
-    "./node_modules/highcharts/modules/exporting.js");
+    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__( /*! highcharts/modules/exporting */"./node_modules/highcharts/modules/exporting.js");
     /* harmony import */
-
-
     var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__);
-
     var StudentComparisonComponent = /*#__PURE__*/function () {
       function StudentComparisonComponent() {
         _classCallCheck(this, StudentComparisonComponent);
-
         this.Highcharts = highcharts__WEBPACK_IMPORTED_MODULE_2__;
       }
-
       _createClass(StudentComparisonComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
@@ -6877,7 +6012,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         key: "updateChart",
         value: function updateChart(event) {
           var selVal = event.target.value;
-
           if (selVal == "A" || selVal == "") {
             this.chartOptions["series"] = [{
               name: "You",
@@ -6919,95 +6053,74 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               data: [32, 43, 33, 52, 33]
             }];
           }
-
           this.selectedOption = event.target.options[event.target.options.selectedIndex].text;
           this.chartOptions["yAxis"]["title"]["text"] = this.selectedOption;
           this.chartOptions = Object.assign({}, this.chartOptions);
         }
       }]);
-
       return StudentComparisonComponent;
     }();
-
     StudentComparisonComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: "app-student-comparison",
-      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! raw-loader!./student-comparison.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/student-comparison/student-comparison.component.html"))["default"],
-      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! ./student-comparison.component.css */
-      "./src/app/charts/student-comparison/student-comparison.component.css"))["default"]]
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! raw-loader!./student-comparison.component.html */"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/student-comparison/student-comparison.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! ./student-comparison.component.css */"./src/app/charts/student-comparison/student-comparison.component.css"))["default"]]
     })], StudentComparisonComponent);
+
     /***/
   },
 
+  /***/"./src/app/charts/student-interaction-patterns/student-interaction-patterns.component.css":
+  /*!************************************************************************************************!*\
+    !*** ./src/app/charts/student-interaction-patterns/student-interaction-patterns.component.css ***!
+    \************************************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./src/app/charts/student-interaction-patterns/student-interaction-patterns.component.css": function srcAppChartsStudentInteractionPatternsStudentInteractionPatternsComponentCss(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsStudentInteractionPatternsStudentInteractionPatternsComponentCss(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NoYXJ0cy9zdHVkZW50LWludGVyYWN0aW9uLXBhdHRlcm5zL3N0dWRlbnQtaW50ZXJhY3Rpb24tcGF0dGVybnMuY29tcG9uZW50LmNzcyJ9 */";
+
     /***/
   },
 
+  /***/"./src/app/charts/student-interaction-patterns/student-interaction-patterns.component.ts":
+  /*!***********************************************************************************************!*\
+    !*** ./src/app/charts/student-interaction-patterns/student-interaction-patterns.component.ts ***!
+    \***********************************************************************************************/
+  /*! exports provided: StudentInteractionPatternsComponent */
   /***/
-  "./src/app/charts/student-interaction-patterns/student-interaction-patterns.component.ts": function srcAppChartsStudentInteractionPatternsStudentInteractionPatternsComponentTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsStudentInteractionPatternsStudentInteractionPatternsComponentTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "StudentInteractionPatternsComponent", function () {
       return StudentInteractionPatternsComponent;
     });
     /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
     /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
-
-
-    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! highcharts */
-    "./node_modules/highcharts/highcharts.js");
+    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__( /*! highcharts */"./node_modules/highcharts/highcharts.js");
     /* harmony import */
-
-
     var highcharts__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(highcharts__WEBPACK_IMPORTED_MODULE_2__);
     /* harmony import */
-
-
-    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! highcharts/modules/exporting */
-    "./node_modules/highcharts/modules/exporting.js");
+    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__( /*! highcharts/modules/exporting */"./node_modules/highcharts/modules/exporting.js");
     /* harmony import */
-
-
     var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__);
-
     var StudentInteractionPatternsComponent = /*#__PURE__*/function () {
       function StudentInteractionPatternsComponent() {
         _classCallCheck(this, StudentInteractionPatternsComponent);
-
         this.Highcharts = highcharts__WEBPACK_IMPORTED_MODULE_2__;
       }
-
       _createClass(StudentInteractionPatternsComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          this.setData(); //Option to allow export of chart
+          this.setData();
+          //Option to allow export of chart
         }
       }, {
         key: "setData",
@@ -7074,85 +6187,64 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default()(highcharts__WEBPACK_IMPORTED_MODULE_2__);
         }
       }]);
-
       return StudentInteractionPatternsComponent;
     }();
-
     StudentInteractionPatternsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: "app-student-interaction-patterns",
-      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! raw-loader!./student-interaction-patterns.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/student-interaction-patterns/student-interaction-patterns.component.html"))["default"],
-      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! ./student-interaction-patterns.component.css */
-      "./src/app/charts/student-interaction-patterns/student-interaction-patterns.component.css"))["default"]]
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! raw-loader!./student-interaction-patterns.component.html */"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/student-interaction-patterns/student-interaction-patterns.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! ./student-interaction-patterns.component.css */"./src/app/charts/student-interaction-patterns/student-interaction-patterns.component.css"))["default"]]
     })], StudentInteractionPatternsComponent);
+
     /***/
   },
 
+  /***/"./src/app/charts/time-distribution/time-distribution.component.css":
+  /*!**************************************************************************!*\
+    !*** ./src/app/charts/time-distribution/time-distribution.component.css ***!
+    \**************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./src/app/charts/time-distribution/time-distribution.component.css": function srcAppChartsTimeDistributionTimeDistributionComponentCss(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsTimeDistributionTimeDistributionComponentCss(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NoYXJ0cy90aW1lLWRpc3RyaWJ1dGlvbi90aW1lLWRpc3RyaWJ1dGlvbi5jb21wb25lbnQuY3NzIn0= */";
+
     /***/
   },
 
+  /***/"./src/app/charts/time-distribution/time-distribution.component.ts":
+  /*!*************************************************************************!*\
+    !*** ./src/app/charts/time-distribution/time-distribution.component.ts ***!
+    \*************************************************************************/
+  /*! exports provided: TimeDistributionComponent */
   /***/
-  "./src/app/charts/time-distribution/time-distribution.component.ts": function srcAppChartsTimeDistributionTimeDistributionComponentTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsTimeDistributionTimeDistributionComponentTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "TimeDistributionComponent", function () {
       return TimeDistributionComponent;
     });
     /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
     /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
-
-
-    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! highcharts */
-    "./node_modules/highcharts/highcharts.js");
+    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__( /*! highcharts */"./node_modules/highcharts/highcharts.js");
     /* harmony import */
-
-
     var highcharts__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(highcharts__WEBPACK_IMPORTED_MODULE_2__);
     /* harmony import */
-
-
-    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! highcharts/modules/exporting */
-    "./node_modules/highcharts/modules/exporting.js");
+    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__( /*! highcharts/modules/exporting */"./node_modules/highcharts/modules/exporting.js");
     /* harmony import */
-
-
     var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__);
-
     var TimeDistributionComponent = /*#__PURE__*/function () {
       function TimeDistributionComponent() {
         _classCallCheck(this, TimeDistributionComponent);
-
         this.Highcharts = highcharts__WEBPACK_IMPORTED_MODULE_2__;
       }
-
       _createClass(TimeDistributionComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
@@ -7206,91 +6298,66 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }, highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default()(highcharts__WEBPACK_IMPORTED_MODULE_2__);
         }
       }]);
-
       return TimeDistributionComponent;
     }();
-
     TimeDistributionComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: "app-time-distribution",
-      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! raw-loader!./time-distribution.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/time-distribution/time-distribution.component.html"))["default"],
-      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! ./time-distribution.component.css */
-      "./src/app/charts/time-distribution/time-distribution.component.css"))["default"]]
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! raw-loader!./time-distribution.component.html */"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/time-distribution/time-distribution.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! ./time-distribution.component.css */"./src/app/charts/time-distribution/time-distribution.component.css"))["default"]]
     })], TimeDistributionComponent);
+
     /***/
   },
 
+  /***/"./src/app/charts/time-planning/time-planning.component.css":
+  /*!******************************************************************!*\
+    !*** ./src/app/charts/time-planning/time-planning.component.css ***!
+    \******************************************************************/
+  /*! exports provided: default */
   /***/
-  "./src/app/charts/time-planning/time-planning.component.css": function srcAppChartsTimePlanningTimePlanningComponentCss(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsTimePlanningTimePlanningComponentCss(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NoYXJ0cy90aW1lLXBsYW5uaW5nL3RpbWUtcGxhbm5pbmcuY29tcG9uZW50LmNzcyJ9 */";
+
     /***/
   },
 
+  /***/"./src/app/charts/time-planning/time-planning.component.ts":
+  /*!*****************************************************************!*\
+    !*** ./src/app/charts/time-planning/time-planning.component.ts ***!
+    \*****************************************************************/
+  /*! exports provided: TimePlanningComponent */
   /***/
-  "./src/app/charts/time-planning/time-planning.component.ts": function srcAppChartsTimePlanningTimePlanningComponentTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsTimePlanningTimePlanningComponentTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "TimePlanningComponent", function () {
       return TimePlanningComponent;
     });
     /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
     /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
-
-
-    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! highcharts */
-    "./node_modules/highcharts/highcharts.js");
+    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__( /*! highcharts */"./node_modules/highcharts/highcharts.js");
     /* harmony import */
-
-
     var highcharts__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(highcharts__WEBPACK_IMPORTED_MODULE_2__);
     /* harmony import */
-
-
-    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! highcharts/modules/exporting */
-    "./node_modules/highcharts/modules/exporting.js");
+    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__( /*! highcharts/modules/exporting */"./node_modules/highcharts/modules/exporting.js");
     /* harmony import */
-
-
     var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__);
-
-    var drilldown = __webpack_require__(
-    /*! highcharts/modules/drilldown.js */
-    "./node_modules/highcharts/modules/drilldown.js");
-
+    var drilldown = __webpack_require__( /*! highcharts/modules/drilldown.js */"./node_modules/highcharts/modules/drilldown.js");
     drilldown(highcharts__WEBPACK_IMPORTED_MODULE_2__);
-
     var TimePlanningComponent = /*#__PURE__*/function () {
       function TimePlanningComponent() {
         _classCallCheck(this, TimePlanningComponent);
-
         this.Highcharts = highcharts__WEBPACK_IMPORTED_MODULE_2__;
       }
-
       _createClass(TimePlanningComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
@@ -7367,85 +6434,64 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }, highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default()(highcharts__WEBPACK_IMPORTED_MODULE_2__);
         }
       }]);
-
       return TimePlanningComponent;
     }();
-
     TimePlanningComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: "app-time-planning",
-      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! raw-loader!./time-planning.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/time-planning/time-planning.component.html"))["default"],
-      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! ./time-planning.component.css */
-      "./src/app/charts/time-planning/time-planning.component.css"))["default"]]
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! raw-loader!./time-planning.component.html */"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/time-planning/time-planning.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! ./time-planning.component.css */"./src/app/charts/time-planning/time-planning.component.css"))["default"]]
     })], TimePlanningComponent);
+
     /***/
   },
 
+  /***/"./src/app/charts/video-analytics/video-analytics.component.css":
+  /*!**********************************************************************!*\
+    !*** ./src/app/charts/video-analytics/video-analytics.component.css ***!
+    \**********************************************************************/
+  /*! exports provided: default */
   /***/
-  "./src/app/charts/video-analytics/video-analytics.component.css": function srcAppChartsVideoAnalyticsVideoAnalyticsComponentCss(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsVideoAnalyticsVideoAnalyticsComponentCss(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NoYXJ0cy92aWRlby1hbmFseXRpY3MvdmlkZW8tYW5hbHl0aWNzLmNvbXBvbmVudC5jc3MifQ== */";
+
     /***/
   },
 
+  /***/"./src/app/charts/video-analytics/video-analytics.component.ts":
+  /*!*********************************************************************!*\
+    !*** ./src/app/charts/video-analytics/video-analytics.component.ts ***!
+    \*********************************************************************/
+  /*! exports provided: VideoAnalyticsComponent */
   /***/
-  "./src/app/charts/video-analytics/video-analytics.component.ts": function srcAppChartsVideoAnalyticsVideoAnalyticsComponentTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsVideoAnalyticsVideoAnalyticsComponentTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "VideoAnalyticsComponent", function () {
       return VideoAnalyticsComponent;
     });
     /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
     /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
-
-
-    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! highcharts */
-    "./node_modules/highcharts/highcharts.js");
+    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__( /*! highcharts */"./node_modules/highcharts/highcharts.js");
     /* harmony import */
-
-
     var highcharts__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(highcharts__WEBPACK_IMPORTED_MODULE_2__);
     /* harmony import */
-
-
-    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! highcharts/modules/exporting */
-    "./node_modules/highcharts/modules/exporting.js");
+    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__( /*! highcharts/modules/exporting */"./node_modules/highcharts/modules/exporting.js");
     /* harmony import */
-
-
     var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__);
-
     var VideoAnalyticsComponent = /*#__PURE__*/function () {
       function VideoAnalyticsComponent() {
         _classCallCheck(this, VideoAnalyticsComponent);
-
         this.Highcharts = highcharts__WEBPACK_IMPORTED_MODULE_2__;
       }
-
       _createClass(VideoAnalyticsComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
@@ -7524,85 +6570,64 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }, highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default()(highcharts__WEBPACK_IMPORTED_MODULE_2__);
         }
       }]);
-
       return VideoAnalyticsComponent;
     }();
-
     VideoAnalyticsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: "app-video-analytics",
-      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! raw-loader!./video-analytics.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/video-analytics/video-analytics.component.html"))["default"],
-      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! ./video-analytics.component.css */
-      "./src/app/charts/video-analytics/video-analytics.component.css"))["default"]]
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! raw-loader!./video-analytics.component.html */"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/video-analytics/video-analytics.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! ./video-analytics.component.css */"./src/app/charts/video-analytics/video-analytics.component.css"))["default"]]
     })], VideoAnalyticsComponent);
+
     /***/
   },
 
+  /***/"./src/app/charts/video-engagements/video-engagements.component.css":
+  /*!**************************************************************************!*\
+    !*** ./src/app/charts/video-engagements/video-engagements.component.css ***!
+    \**************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./src/app/charts/video-engagements/video-engagements.component.css": function srcAppChartsVideoEngagementsVideoEngagementsComponentCss(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsVideoEngagementsVideoEngagementsComponentCss(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NoYXJ0cy92aWRlby1lbmdhZ2VtZW50cy92aWRlby1lbmdhZ2VtZW50cy5jb21wb25lbnQuY3NzIn0= */";
+
     /***/
   },
 
+  /***/"./src/app/charts/video-engagements/video-engagements.component.ts":
+  /*!*************************************************************************!*\
+    !*** ./src/app/charts/video-engagements/video-engagements.component.ts ***!
+    \*************************************************************************/
+  /*! exports provided: VideoEngagementsComponent */
   /***/
-  "./src/app/charts/video-engagements/video-engagements.component.ts": function srcAppChartsVideoEngagementsVideoEngagementsComponentTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsVideoEngagementsVideoEngagementsComponentTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "VideoEngagementsComponent", function () {
       return VideoEngagementsComponent;
     });
     /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
     /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
-
-
-    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! highcharts */
-    "./node_modules/highcharts/highcharts.js");
+    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__( /*! highcharts */"./node_modules/highcharts/highcharts.js");
     /* harmony import */
-
-
     var highcharts__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(highcharts__WEBPACK_IMPORTED_MODULE_2__);
     /* harmony import */
-
-
-    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! highcharts/modules/exporting */
-    "./node_modules/highcharts/modules/exporting.js");
+    var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__( /*! highcharts/modules/exporting */"./node_modules/highcharts/modules/exporting.js");
     /* harmony import */
-
-
     var highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3__);
-
     var VideoEngagementsComponent = /*#__PURE__*/function () {
       function VideoEngagementsComponent() {
         _classCallCheck(this, VideoEngagementsComponent);
-
         this.Highcharts = highcharts__WEBPACK_IMPORTED_MODULE_2__;
       }
-
       _createClass(VideoEngagementsComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
@@ -7662,93 +6687,66 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }, highcharts_modules_exporting__WEBPACK_IMPORTED_MODULE_3___default()(highcharts__WEBPACK_IMPORTED_MODULE_2__);
         }
       }]);
-
       return VideoEngagementsComponent;
     }();
-
     VideoEngagementsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: "app-video-engagements",
-      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! raw-loader!./video-engagements.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/video-engagements/video-engagements.component.html"))["default"],
-      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! ./video-engagements.component.css */
-      "./src/app/charts/video-engagements/video-engagements.component.css"))["default"]]
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! raw-loader!./video-engagements.component.html */"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/video-engagements/video-engagements.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! ./video-engagements.component.css */"./src/app/charts/video-engagements/video-engagements.component.css"))["default"]]
     })], VideoEngagementsComponent);
+
     /***/
   },
 
+  /***/"./src/app/charts/writing-analytics/writing-analytics.component.css":
+  /*!**************************************************************************!*\
+    !*** ./src/app/charts/writing-analytics/writing-analytics.component.css ***!
+    \**************************************************************************/
+  /*! exports provided: default */
   /***/
-  "./src/app/charts/writing-analytics/writing-analytics.component.css": function srcAppChartsWritingAnalyticsWritingAnalyticsComponentCss(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsWritingAnalyticsWritingAnalyticsComponentCss(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
-
-
     __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NoYXJ0cy93cml0aW5nLWFuYWx5dGljcy93cml0aW5nLWFuYWx5dGljcy5jb21wb25lbnQuY3NzIn0= */";
+
     /***/
   },
 
+  /***/"./src/app/charts/writing-analytics/writing-analytics.component.ts":
+  /*!*************************************************************************!*\
+    !*** ./src/app/charts/writing-analytics/writing-analytics.component.ts ***!
+    \*************************************************************************/
+  /*! exports provided: WritingAnalyticsComponent */
   /***/
-  "./src/app/charts/writing-analytics/writing-analytics.component.ts": function srcAppChartsWritingAnalyticsWritingAnalyticsComponentTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppChartsWritingAnalyticsWritingAnalyticsComponentTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "WritingAnalyticsComponent", function () {
       return WritingAnalyticsComponent;
     });
     /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
     /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
-
-
-    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! highcharts */
-    "./node_modules/highcharts/highcharts.js");
+    var highcharts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__( /*! highcharts */"./node_modules/highcharts/highcharts.js");
     /* harmony import */
-
-
     var highcharts__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(highcharts__WEBPACK_IMPORTED_MODULE_2__);
-
-    var drilldown = __webpack_require__(
-    /*! highcharts/modules/drilldown.js */
-    "./node_modules/highcharts/modules/drilldown.js");
-
+    var drilldown = __webpack_require__( /*! highcharts/modules/drilldown.js */"./node_modules/highcharts/modules/drilldown.js");
     drilldown(highcharts__WEBPACK_IMPORTED_MODULE_2__);
-
-    var heatmap = __webpack_require__(
-    /*! highcharts/modules/heatmap.js */
-    "./node_modules/highcharts/modules/heatmap.js");
-
+    var heatmap = __webpack_require__( /*! highcharts/modules/heatmap.js */"./node_modules/highcharts/modules/heatmap.js");
     heatmap(highcharts__WEBPACK_IMPORTED_MODULE_2__);
-
-    var treemap = __webpack_require__(
-    /*! highcharts/modules/treemap.js */
-    "./node_modules/highcharts/modules/treemap.js");
-
+    var treemap = __webpack_require__( /*! highcharts/modules/treemap.js */"./node_modules/highcharts/modules/treemap.js");
     treemap(highcharts__WEBPACK_IMPORTED_MODULE_2__);
-
     var WritingAnalyticsComponent = /*#__PURE__*/function () {
       function WritingAnalyticsComponent() {
         _classCallCheck(this, WritingAnalyticsComponent);
-
         this.Highcharts = highcharts__WEBPACK_IMPORTED_MODULE_2__;
       }
-
       _createClass(WritingAnalyticsComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
@@ -8302,381 +7300,647 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           };
         }
       }]);
-
       return WritingAnalyticsComponent;
     }();
-
     WritingAnalyticsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: "app-writing-analytics",
-      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! raw-loader!./writing-analytics.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/charts/writing-analytics/writing-analytics.component.html"))["default"],
-      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! ./writing-analytics.component.css */
-      "./src/app/charts/writing-analytics/writing-analytics.component.css"))["default"]]
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! raw-loader!./writing-analytics.component.html */"./node_modules/raw-loader/dist/cjs.js!./src/app/charts/writing-analytics/writing-analytics.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! ./writing-analytics.component.css */"./src/app/charts/writing-analytics/writing-analytics.component.css"))["default"]]
     })], WritingAnalyticsComponent);
+
     /***/
   },
 
+  /***/"./src/app/component/add-data/add-data.component.css":
+  /*!***********************************************************!*\
+    !*** ./src/app/component/add-data/add-data.component.css ***!
+    \***********************************************************/
+  /*! exports provided: default */
   /***/
-  "./src/app/component/add-data/add-data.component.css": function srcAppComponentAddDataAddDataComponentCss(module, __webpack_exports__, __webpack_require__) {
+  function srcAppComponentAddDataAddDataComponentCss(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
+    __webpack_exports__["default"] = "input[type=\"checkbox\"] {\n    height: 20px;\n    width: 20px;\n    margin: 0 0.5em 0 0;\n}\n\n.form-element {\n    display: flex;\n    padding-bottom: 1em;\n    flex-direction: column;\n    max-width: calc(590px - 1em);\n}\n\n.form-element-15 {\n    width: 15%;\n}\n\n.form-element-25 {\n    width: 25%;\n}\n\n.form-element-50 {\n    width: 50%;\n}\n\n.form-element-75 {\n    width: 75%;\n}\n\n.form-element-85 {\n    width: 85%;\n}\n\n.form-element-100 {\n    width: 100%\n}\n\n.content-wrapper {\n    padding: 1.5em;\n    display: flex;\n    justify-content: space-between;\n}\n\n.form-wrapper {\n    width: 100%;\n    display: flex;\n    flex-wrap: wrap;\n\n    & ng-select {\n        width: calc(100% - 1em);\n        margin-right: 1em;\n        font-size: 16px;\n    }\n\n    & ng-multiselect-dropdown {\n        width: calc(100% - 1em);\n        margin-right: 1em;\n        font-size: 16px;\n\n        .dropdown-btn {\n            width: 100% !important;\n            padding-right: 0 !important;\n            height: 26px;\n        }\n    }\n\n    & label {\n        font-weight: bold;\n        font-size: 16px;\n        width: 200px;\n        padding-bottom: 0.5em;\n    }\n\n    & input:not([type=\"checkbox\"]) {\n        font-size: 16px;\n        width: calc(100% - 1.5em);\n        height: 30px;\n    }\n\n    & textarea {\n        font-size: 16px;\n        width: calc(100% - 1.4em);\n    }\n}\n\n.select-input {\n    width: calc(100% - 8px);\n    height: 30px;\n}\n\n.title {\n    text-align: center;\n    font-weight: normal;\n    margin: 1em;\n    padding: 24px;\n    background-color: #3F51B5;\n    color: white;\n}\n\n.save-button {\n    margin: 0.5em 0 0 0.15em\n}\n\nfieldset {\n    width: calc(50% - 3em);\n    border-radius: 4px;\n\n    &:not(.last) {\n        margin-right: 1em;\n    }\n}\n\n.form-section {\n    display: flex;\n    flex-wrap: wrap;\n\n    &.last {\n        justify-content: space-between;\n        flex-direction: column;\n    }\n}\n\n.alert {\n    color: red;\n    font-size: small;\n    margin: 0;\n}\n\n:host ::ng-deep{\n    .dropdown-list {\n        .item1 {\n            overflow: hidden !important;\n        }\n\n        .item2 {\n            position: relative;\n        }\n    }\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50L2FkZC1kYXRhL2FkZC1kYXRhLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxZQUFZO0lBQ1osV0FBVztJQUNYLG1CQUFtQjtBQUN2Qjs7QUFFQTtJQUNJLGFBQWE7SUFDYixtQkFBbUI7SUFDbkIsc0JBQXNCO0lBQ3RCLDRCQUE0QjtBQUNoQzs7QUFFQTtJQUNJLFVBQVU7QUFDZDs7QUFFQTtJQUNJLFVBQVU7QUFDZDs7QUFFQTtJQUNJLFVBQVU7QUFDZDs7QUFFQTtJQUNJLFVBQVU7QUFDZDs7QUFFQTtJQUNJLFVBQVU7QUFDZDs7QUFFQTtJQUNJO0FBQ0o7O0FBRUE7SUFDSSxjQUFjO0lBQ2QsYUFBYTtJQUNiLDhCQUE4QjtBQUNsQzs7QUFFQTtJQUNJLFdBQVc7SUFDWCxhQUFhO0lBQ2IsZUFBZTs7SUFFZjtRQUNJLHVCQUF1QjtRQUN2QixpQkFBaUI7UUFDakIsZUFBZTtJQUNuQjs7SUFFQTtRQUNJLHVCQUF1QjtRQUN2QixpQkFBaUI7UUFDakIsZUFBZTs7UUFFZjtZQUNJLHNCQUFzQjtZQUN0QiwyQkFBMkI7WUFDM0IsWUFBWTtRQUNoQjtJQUNKOztJQUVBO1FBQ0ksaUJBQWlCO1FBQ2pCLGVBQWU7UUFDZixZQUFZO1FBQ1oscUJBQXFCO0lBQ3pCOztJQUVBO1FBQ0ksZUFBZTtRQUNmLHlCQUF5QjtRQUN6QixZQUFZO0lBQ2hCOztJQUVBO1FBQ0ksZUFBZTtRQUNmLHlCQUF5QjtJQUM3QjtBQUNKOztBQUVBO0lBQ0ksdUJBQXVCO0lBQ3ZCLFlBQVk7QUFDaEI7O0FBRUE7SUFDSSxrQkFBa0I7SUFDbEIsbUJBQW1CO0lBQ25CLFdBQVc7SUFDWCxhQUFhO0lBQ2IseUJBQXlCO0lBQ3pCLFlBQVk7QUFDaEI7O0FBRUE7SUFDSTtBQUNKOztBQUVBO0lBQ0ksc0JBQXNCO0lBQ3RCLGtCQUFrQjs7SUFFbEI7UUFDSSxpQkFBaUI7SUFDckI7QUFDSjs7QUFFQTtJQUNJLGFBQWE7SUFDYixlQUFlOztJQUVmO1FBQ0ksOEJBQThCO1FBQzlCLHNCQUFzQjtJQUMxQjtBQUNKOztBQUVBO0lBQ0ksVUFBVTtJQUNWLGdCQUFnQjtJQUNoQixTQUFTO0FBQ2I7O0FBRUE7SUFDSTtRQUNJO1lBQ0ksMkJBQTJCO1FBQy9COztRQUVBO1lBQ0ksa0JBQWtCO1FBQ3RCO0lBQ0o7QUFDSiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudC9hZGQtZGF0YS9hZGQtZGF0YS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiaW5wdXRbdHlwZT1cImNoZWNrYm94XCJdIHtcbiAgICBoZWlnaHQ6IDIwcHg7XG4gICAgd2lkdGg6IDIwcHg7XG4gICAgbWFyZ2luOiAwIDAuNWVtIDAgMDtcbn1cblxuLmZvcm0tZWxlbWVudCB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBwYWRkaW5nLWJvdHRvbTogMWVtO1xuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gICAgbWF4LXdpZHRoOiBjYWxjKDU5MHB4IC0gMWVtKTtcbn1cblxuLmZvcm0tZWxlbWVudC0xNSB7XG4gICAgd2lkdGg6IDE1JTtcbn1cblxuLmZvcm0tZWxlbWVudC0yNSB7XG4gICAgd2lkdGg6IDI1JTtcbn1cblxuLmZvcm0tZWxlbWVudC01MCB7XG4gICAgd2lkdGg6IDUwJTtcbn1cblxuLmZvcm0tZWxlbWVudC03NSB7XG4gICAgd2lkdGg6IDc1JTtcbn1cblxuLmZvcm0tZWxlbWVudC04NSB7XG4gICAgd2lkdGg6IDg1JTtcbn1cblxuLmZvcm0tZWxlbWVudC0xMDAge1xuICAgIHdpZHRoOiAxMDAlXG59XG5cbi5jb250ZW50LXdyYXBwZXIge1xuICAgIHBhZGRpbmc6IDEuNWVtO1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xufVxuXG4uZm9ybS13cmFwcGVyIHtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGZsZXgtd3JhcDogd3JhcDtcblxuICAgICYgbmctc2VsZWN0IHtcbiAgICAgICAgd2lkdGg6IGNhbGMoMTAwJSAtIDFlbSk7XG4gICAgICAgIG1hcmdpbi1yaWdodDogMWVtO1xuICAgICAgICBmb250LXNpemU6IDE2cHg7XG4gICAgfVxuXG4gICAgJiBuZy1tdWx0aXNlbGVjdC1kcm9wZG93biB7XG4gICAgICAgIHdpZHRoOiBjYWxjKDEwMCUgLSAxZW0pO1xuICAgICAgICBtYXJnaW4tcmlnaHQ6IDFlbTtcbiAgICAgICAgZm9udC1zaXplOiAxNnB4O1xuXG4gICAgICAgIC5kcm9wZG93bi1idG4ge1xuICAgICAgICAgICAgd2lkdGg6IDEwMCUgIWltcG9ydGFudDtcbiAgICAgICAgICAgIHBhZGRpbmctcmlnaHQ6IDAgIWltcG9ydGFudDtcbiAgICAgICAgICAgIGhlaWdodDogMjZweDtcbiAgICAgICAgfVxuICAgIH1cblxuICAgICYgbGFiZWwge1xuICAgICAgICBmb250LXdlaWdodDogYm9sZDtcbiAgICAgICAgZm9udC1zaXplOiAxNnB4O1xuICAgICAgICB3aWR0aDogMjAwcHg7XG4gICAgICAgIHBhZGRpbmctYm90dG9tOiAwLjVlbTtcbiAgICB9XG5cbiAgICAmIGlucHV0Om5vdChbdHlwZT1cImNoZWNrYm94XCJdKSB7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgd2lkdGg6IGNhbGMoMTAwJSAtIDEuNWVtKTtcbiAgICAgICAgaGVpZ2h0OiAzMHB4O1xuICAgIH1cblxuICAgICYgdGV4dGFyZWEge1xuICAgICAgICBmb250LXNpemU6IDE2cHg7XG4gICAgICAgIHdpZHRoOiBjYWxjKDEwMCUgLSAxLjRlbSk7XG4gICAgfVxufVxuXG4uc2VsZWN0LWlucHV0IHtcbiAgICB3aWR0aDogY2FsYygxMDAlIC0gOHB4KTtcbiAgICBoZWlnaHQ6IDMwcHg7XG59XG5cbi50aXRsZSB7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgIGZvbnQtd2VpZ2h0OiBub3JtYWw7XG4gICAgbWFyZ2luOiAxZW07XG4gICAgcGFkZGluZzogMjRweDtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjM0Y1MUI1O1xuICAgIGNvbG9yOiB3aGl0ZTtcbn1cblxuLnNhdmUtYnV0dG9uIHtcbiAgICBtYXJnaW46IDAuNWVtIDAgMCAwLjE1ZW1cbn1cblxuZmllbGRzZXQge1xuICAgIHdpZHRoOiBjYWxjKDUwJSAtIDNlbSk7XG4gICAgYm9yZGVyLXJhZGl1czogNHB4O1xuXG4gICAgJjpub3QoLmxhc3QpIHtcbiAgICAgICAgbWFyZ2luLXJpZ2h0OiAxZW07XG4gICAgfVxufVxuXG4uZm9ybS1zZWN0aW9uIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGZsZXgtd3JhcDogd3JhcDtcblxuICAgICYubGFzdCB7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcbiAgICAgICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgICB9XG59XG5cbi5hbGVydCB7XG4gICAgY29sb3I6IHJlZDtcbiAgICBmb250LXNpemU6IHNtYWxsO1xuICAgIG1hcmdpbjogMDtcbn1cblxuOmhvc3QgOjpuZy1kZWVwe1xuICAgIC5kcm9wZG93bi1saXN0IHtcbiAgICAgICAgLml0ZW0xIHtcbiAgICAgICAgICAgIG92ZXJmbG93OiBoaWRkZW4gIWltcG9ydGFudDtcbiAgICAgICAgfVxuXG4gICAgICAgIC5pdGVtMiB7XG4gICAgICAgICAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgICAgIH1cbiAgICB9XG59XG4iXX0= */";
 
-
-    __webpack_exports__["default"] = ".card {\n  background: white;\n  margin: 15px;\n  height: 75%;\n  width: 50%;\n  box-shadow: 1px 1px 2px 2px #888888;\n  padding-bottom: 24px;\n  position: absolute;\n  transform: translate(50%, 50%);\n  bottom: 40%;\n  right: 50%;\n  overflow: auto;\n}\n\n\n#title {\n  text-align: center;\n  font-weight: normal;\n  margin: 24px;\n  padding: 24px;\n  background-color: #3F51B5;\n  color: white;\n}\n\n\n#dropdown {\n  margin: 16px;\n  font-weight: bold;\n  font-size: 16px;\n}\n\n\n#dropdown>mat-select {\n  height: 20px;\n  width: 300px;\n  padding-left: 25px;\n  font-size: 16px;\n  font-weight: normal;\n  margin-left: 34px;\n  border: none;\n  border-radius: 4px;\n  color: white;\n\n}\n\n\n#dropdown>label {\n  padding-right: 40px;\n  padding-left: 40px;\n}\n\n\noption {\n  color: white;\n  border: none;\n}\n\n\n#activities {\n  margin: 16px;\n  padding-left: 12px;\n  font-weight: bold;\n  font-size: 16px;\n}\n\n\n#activities>mat-select {\n  height: 20px;\n  width: 300px;\n  padding-left: 25px;\n  font-size: 16px;\n  font-weight: normal;\n  margin-left: 32px;\n\n  border: none;\n  border-radius: 4px;\n  color: white;\n\n}\n\n\n#activities>label {\n  padding-right: 24px;\n  padding-left: 24px;\n\n}\n\n\n#indicators {\n  margin-top: 16px;\n  padding-left: 30px;\n  font-weight: bold;\n  font-size: 16px;\n\n}\n\n\n#indicators>label {\n\n  padding-right: 84px;\n  padding-left: 24px;\n\n}\n\n\n#indicators>input {\n  font-size: 16px;\n  font-weight: normal;\n\n  margin-left: 32px;\n  width: 500px;\n  height: 30px;\n  font-weight: bold;\n  font-size: 16px;\n\n}\n\n\n#metrics {\n  margin-top: 16px;\n  padding-left: 30px;\n  font-weight: bold;\n  font-size: 16px;\n\n}\n\n\n.metrics {\n\n  padding-right: 140px;\n  padding-left: 24px;\n  font-size: medium;\n  margin-left: 24px;\n\n\n}\n\n\n#metrics>input {\n  font-size: 16px;\n  font-weight: normal;\n  background-color: #3F51B5;\n  border: none;\n  border-radius: 4px;\n  width: 400px;\n  height: 30px;\n  color: white;\n}\n\n\n.btn {\n  margin-top: 24px;\n  padding-right: 92px;\n  padding-left: 24px;\n  text-align: center;\n}\n\n\n#btn1 {\n  margin-left: 12px;\n  margin-right: 24px;\n}\n\n\n#btn2 {\n  margin-top: 12px;\n  margin-right: 24px;\n}\n\n\n#savebtn {\n\n  margin: 40px;\n  padding-left: 200px;\n}\n\n\n.formfield * {\n  vertical-align: middle;\n  margin-top: 16px;\n  font-weight: bold;\n  font-size: 16px;\n  width: 500px;\n\n}\n\n\n.alert {\n  position: relative;\n  top: 10;\n  left: 0;\n  width: auto;\n  padding: 10px;\n  margin-left: 600px;\n  margin-right: 600px;\n  line-height: 1.8;\n  border-radius: 5px;\n  cursor: hand;\n  cursor: pointer;\n  font-family: sans-serif;\n  font-weight: 400;\n}\n\n\n.alertCheckbox {\n  display: none;\n}\n\n\n:checked + .alert {\n  display: none;\n}\n\n\n.alertText {\n  display: table;\n  margin: 0 auto;\n  text-align: center;\n  font-size: 16px;\n}\n\n\n.alertClose {\n  float: right;\n  padding-top: 5px;\n  font-size: 10px;\n}\n\n\n.clear {\n  clear: both;\n}\n\n\n.success {\n  border: 1px solid rgb(214, 233, 198);\n  background-color: rgb(223, 240, 216);\n  color: rgb(70, 136, 71);\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50L2FkZC1kYXRhL2FkZC1kYXRhLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxpQkFBaUI7RUFDakIsWUFBWTtFQUNaLFdBQVc7RUFDWCxVQUFVO0VBQ1YsbUNBQW1DO0VBQ25DLG9CQUFvQjtFQUNwQixrQkFBa0I7RUFDbEIsOEJBQThCO0VBQzlCLFdBQVc7RUFDWCxVQUFVO0VBQ1YsY0FBYztBQUNoQjs7O0FBR0E7RUFDRSxrQkFBa0I7RUFDbEIsbUJBQW1CO0VBQ25CLFlBQVk7RUFDWixhQUFhO0VBQ2IseUJBQXlCO0VBQ3pCLFlBQVk7QUFDZDs7O0FBRUE7RUFDRSxZQUFZO0VBQ1osaUJBQWlCO0VBQ2pCLGVBQWU7QUFDakI7OztBQUdBO0VBQ0UsWUFBWTtFQUNaLFlBQVk7RUFDWixrQkFBa0I7RUFDbEIsZUFBZTtFQUNmLG1CQUFtQjtFQUNuQixpQkFBaUI7RUFDakIsWUFBWTtFQUNaLGtCQUFrQjtFQUNsQixZQUFZOztBQUVkOzs7QUFFQTtFQUNFLG1CQUFtQjtFQUNuQixrQkFBa0I7QUFDcEI7OztBQUVBO0VBQ0UsWUFBWTtFQUNaLFlBQVk7QUFDZDs7O0FBRUE7RUFDRSxZQUFZO0VBQ1osa0JBQWtCO0VBQ2xCLGlCQUFpQjtFQUNqQixlQUFlO0FBQ2pCOzs7QUFFQTtFQUNFLFlBQVk7RUFDWixZQUFZO0VBQ1osa0JBQWtCO0VBQ2xCLGVBQWU7RUFDZixtQkFBbUI7RUFDbkIsaUJBQWlCOztFQUVqQixZQUFZO0VBQ1osa0JBQWtCO0VBQ2xCLFlBQVk7O0FBRWQ7OztBQUVBO0VBQ0UsbUJBQW1CO0VBQ25CLGtCQUFrQjs7QUFFcEI7OztBQUVBO0VBQ0UsZ0JBQWdCO0VBQ2hCLGtCQUFrQjtFQUNsQixpQkFBaUI7RUFDakIsZUFBZTs7QUFFakI7OztBQUVBOztFQUVFLG1CQUFtQjtFQUNuQixrQkFBa0I7O0FBRXBCOzs7QUFFQTtFQUNFLGVBQWU7RUFDZixtQkFBbUI7O0VBRW5CLGlCQUFpQjtFQUNqQixZQUFZO0VBQ1osWUFBWTtFQUNaLGlCQUFpQjtFQUNqQixlQUFlOztBQUVqQjs7O0FBRUE7RUFDRSxnQkFBZ0I7RUFDaEIsa0JBQWtCO0VBQ2xCLGlCQUFpQjtFQUNqQixlQUFlOztBQUVqQjs7O0FBRUE7O0VBRUUsb0JBQW9CO0VBQ3BCLGtCQUFrQjtFQUNsQixpQkFBaUI7RUFDakIsaUJBQWlCOzs7QUFHbkI7OztBQUVBO0VBQ0UsZUFBZTtFQUNmLG1CQUFtQjtFQUNuQix5QkFBeUI7RUFDekIsWUFBWTtFQUNaLGtCQUFrQjtFQUNsQixZQUFZO0VBQ1osWUFBWTtFQUNaLFlBQVk7QUFDZDs7O0FBRUE7RUFDRSxnQkFBZ0I7RUFDaEIsbUJBQW1CO0VBQ25CLGtCQUFrQjtFQUNsQixrQkFBa0I7QUFDcEI7OztBQUVBO0VBQ0UsaUJBQWlCO0VBQ2pCLGtCQUFrQjtBQUNwQjs7O0FBRUE7RUFDRSxnQkFBZ0I7RUFDaEIsa0JBQWtCO0FBQ3BCOzs7QUFFQTs7RUFFRSxZQUFZO0VBQ1osbUJBQW1CO0FBQ3JCOzs7QUFFQTtFQUNFLHNCQUFzQjtFQUN0QixnQkFBZ0I7RUFDaEIsaUJBQWlCO0VBQ2pCLGVBQWU7RUFDZixZQUFZOztBQUVkOzs7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQixPQUFPO0VBQ1AsT0FBTztFQUNQLFdBQVc7RUFDWCxhQUFhO0VBQ2Isa0JBQWtCO0VBQ2xCLG1CQUFtQjtFQUNuQixnQkFBZ0I7RUFDaEIsa0JBQWtCO0VBQ2xCLFlBQVk7RUFDWixlQUFlO0VBQ2YsdUJBQXVCO0VBQ3ZCLGdCQUFnQjtBQUNsQjs7O0FBRUE7RUFDRSxhQUFhO0FBQ2Y7OztBQUVBO0VBQ0UsYUFBYTtBQUNmOzs7QUFFQTtFQUNFLGNBQWM7RUFDZCxjQUFjO0VBQ2Qsa0JBQWtCO0VBQ2xCLGVBQWU7QUFDakI7OztBQUVBO0VBQ0UsWUFBWTtFQUNaLGdCQUFnQjtFQUNoQixlQUFlO0FBQ2pCOzs7QUFFQTtFQUNFLFdBQVc7QUFDYjs7O0FBRUE7RUFDRSxvQ0FBb0M7RUFDcEMsb0NBQW9DO0VBQ3BDLHVCQUF1QjtBQUN6QiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudC9hZGQtZGF0YS9hZGQtZGF0YS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNhcmQge1xuICBiYWNrZ3JvdW5kOiB3aGl0ZTtcbiAgbWFyZ2luOiAxNXB4O1xuICBoZWlnaHQ6IDc1JTtcbiAgd2lkdGg6IDUwJTtcbiAgYm94LXNoYWRvdzogMXB4IDFweCAycHggMnB4ICM4ODg4ODg7XG4gIHBhZGRpbmctYm90dG9tOiAyNHB4O1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHRyYW5zZm9ybTogdHJhbnNsYXRlKDUwJSwgNTAlKTtcbiAgYm90dG9tOiA0MCU7XG4gIHJpZ2h0OiA1MCU7XG4gIG92ZXJmbG93OiBhdXRvO1xufVxuXG5cbiN0aXRsZSB7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgZm9udC13ZWlnaHQ6IG5vcm1hbDtcbiAgbWFyZ2luOiAyNHB4O1xuICBwYWRkaW5nOiAyNHB4O1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjM0Y1MUI1O1xuICBjb2xvcjogd2hpdGU7XG59XG5cbiNkcm9wZG93biB7XG4gIG1hcmdpbjogMTZweDtcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gIGZvbnQtc2l6ZTogMTZweDtcbn1cblxuXG4jZHJvcGRvd24+bWF0LXNlbGVjdCB7XG4gIGhlaWdodDogMjBweDtcbiAgd2lkdGg6IDMwMHB4O1xuICBwYWRkaW5nLWxlZnQ6IDI1cHg7XG4gIGZvbnQtc2l6ZTogMTZweDtcbiAgZm9udC13ZWlnaHQ6IG5vcm1hbDtcbiAgbWFyZ2luLWxlZnQ6IDM0cHg7XG4gIGJvcmRlcjogbm9uZTtcbiAgYm9yZGVyLXJhZGl1czogNHB4O1xuICBjb2xvcjogd2hpdGU7XG5cbn1cblxuI2Ryb3Bkb3duPmxhYmVsIHtcbiAgcGFkZGluZy1yaWdodDogNDBweDtcbiAgcGFkZGluZy1sZWZ0OiA0MHB4O1xufVxuXG5vcHRpb24ge1xuICBjb2xvcjogd2hpdGU7XG4gIGJvcmRlcjogbm9uZTtcbn1cblxuI2FjdGl2aXRpZXMge1xuICBtYXJnaW46IDE2cHg7XG4gIHBhZGRpbmctbGVmdDogMTJweDtcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gIGZvbnQtc2l6ZTogMTZweDtcbn1cblxuI2FjdGl2aXRpZXM+bWF0LXNlbGVjdCB7XG4gIGhlaWdodDogMjBweDtcbiAgd2lkdGg6IDMwMHB4O1xuICBwYWRkaW5nLWxlZnQ6IDI1cHg7XG4gIGZvbnQtc2l6ZTogMTZweDtcbiAgZm9udC13ZWlnaHQ6IG5vcm1hbDtcbiAgbWFyZ2luLWxlZnQ6IDMycHg7XG5cbiAgYm9yZGVyOiBub25lO1xuICBib3JkZXItcmFkaXVzOiA0cHg7XG4gIGNvbG9yOiB3aGl0ZTtcblxufVxuXG4jYWN0aXZpdGllcz5sYWJlbCB7XG4gIHBhZGRpbmctcmlnaHQ6IDI0cHg7XG4gIHBhZGRpbmctbGVmdDogMjRweDtcblxufVxuXG4jaW5kaWNhdG9ycyB7XG4gIG1hcmdpbi10b3A6IDE2cHg7XG4gIHBhZGRpbmctbGVmdDogMzBweDtcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gIGZvbnQtc2l6ZTogMTZweDtcblxufVxuXG4jaW5kaWNhdG9ycz5sYWJlbCB7XG5cbiAgcGFkZGluZy1yaWdodDogODRweDtcbiAgcGFkZGluZy1sZWZ0OiAyNHB4O1xuXG59XG5cbiNpbmRpY2F0b3JzPmlucHV0IHtcbiAgZm9udC1zaXplOiAxNnB4O1xuICBmb250LXdlaWdodDogbm9ybWFsO1xuXG4gIG1hcmdpbi1sZWZ0OiAzMnB4O1xuICB3aWR0aDogNTAwcHg7XG4gIGhlaWdodDogMzBweDtcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gIGZvbnQtc2l6ZTogMTZweDtcblxufVxuXG4jbWV0cmljcyB7XG4gIG1hcmdpbi10b3A6IDE2cHg7XG4gIHBhZGRpbmctbGVmdDogMzBweDtcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gIGZvbnQtc2l6ZTogMTZweDtcblxufVxuXG4ubWV0cmljcyB7XG5cbiAgcGFkZGluZy1yaWdodDogMTQwcHg7XG4gIHBhZGRpbmctbGVmdDogMjRweDtcbiAgZm9udC1zaXplOiBtZWRpdW07XG4gIG1hcmdpbi1sZWZ0OiAyNHB4O1xuXG5cbn1cblxuI21ldHJpY3M+aW5wdXQge1xuICBmb250LXNpemU6IDE2cHg7XG4gIGZvbnQtd2VpZ2h0OiBub3JtYWw7XG4gIGJhY2tncm91bmQtY29sb3I6ICMzRjUxQjU7XG4gIGJvcmRlcjogbm9uZTtcbiAgYm9yZGVyLXJhZGl1czogNHB4O1xuICB3aWR0aDogNDAwcHg7XG4gIGhlaWdodDogMzBweDtcbiAgY29sb3I6IHdoaXRlO1xufVxuXG4uYnRuIHtcbiAgbWFyZ2luLXRvcDogMjRweDtcbiAgcGFkZGluZy1yaWdodDogOTJweDtcbiAgcGFkZGluZy1sZWZ0OiAyNHB4O1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG5cbiNidG4xIHtcbiAgbWFyZ2luLWxlZnQ6IDEycHg7XG4gIG1hcmdpbi1yaWdodDogMjRweDtcbn1cblxuI2J0bjIge1xuICBtYXJnaW4tdG9wOiAxMnB4O1xuICBtYXJnaW4tcmlnaHQ6IDI0cHg7XG59XG5cbiNzYXZlYnRuIHtcblxuICBtYXJnaW46IDQwcHg7XG4gIHBhZGRpbmctbGVmdDogMjAwcHg7XG59XG5cbi5mb3JtZmllbGQgKiB7XG4gIHZlcnRpY2FsLWFsaWduOiBtaWRkbGU7XG4gIG1hcmdpbi10b3A6IDE2cHg7XG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xuICBmb250LXNpemU6IDE2cHg7XG4gIHdpZHRoOiA1MDBweDtcblxufVxuXG4uYWxlcnQge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIHRvcDogMTA7XG4gIGxlZnQ6IDA7XG4gIHdpZHRoOiBhdXRvO1xuICBwYWRkaW5nOiAxMHB4O1xuICBtYXJnaW4tbGVmdDogNjAwcHg7XG4gIG1hcmdpbi1yaWdodDogNjAwcHg7XG4gIGxpbmUtaGVpZ2h0OiAxLjg7XG4gIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgY3Vyc29yOiBoYW5kO1xuICBjdXJzb3I6IHBvaW50ZXI7XG4gIGZvbnQtZmFtaWx5OiBzYW5zLXNlcmlmO1xuICBmb250LXdlaWdodDogNDAwO1xufVxuXG4uYWxlcnRDaGVja2JveCB7XG4gIGRpc3BsYXk6IG5vbmU7XG59XG5cbjpjaGVja2VkICsgLmFsZXJ0IHtcbiAgZGlzcGxheTogbm9uZTtcbn1cblxuLmFsZXJ0VGV4dCB7XG4gIGRpc3BsYXk6IHRhYmxlO1xuICBtYXJnaW46IDAgYXV0bztcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICBmb250LXNpemU6IDE2cHg7XG59XG5cbi5hbGVydENsb3NlIHtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nLXRvcDogNXB4O1xuICBmb250LXNpemU6IDEwcHg7XG59XG5cbi5jbGVhciB7XG4gIGNsZWFyOiBib3RoO1xufVxuXG4uc3VjY2VzcyB7XG4gIGJvcmRlcjogMXB4IHNvbGlkIHJnYigyMTQsIDIzMywgMTk4KTtcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDIyMywgMjQwLCAyMTYpO1xuICBjb2xvcjogcmdiKDcwLCAxMzYsIDcxKTtcbn0iXX0= */";
     /***/
   },
 
+  /***/"./src/app/component/add-data/add-data.component.ts":
+  /*!**********************************************************!*\
+    !*** ./src/app/component/add-data/add-data.component.ts ***!
+    \**********************************************************/
+  /*! exports provided: AddDataComponent */
   /***/
-  "./src/app/component/add-data/add-data.component.ts": function srcAppComponentAddDataAddDataComponentTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppComponentAddDataAddDataComponentTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "AddDataComponent", function () {
       return AddDataComponent;
     });
     /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
     /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
-
-
-    var _data_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! ../../data.service */
-    "./src/app/data.service.ts");
+    var _data_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__( /*! ../../data.service */"./src/app/data.service.ts");
     /* harmony import */
-
-
-    var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! @angular/router */
-    "./node_modules/@angular/router/fesm2015/router.js");
+    var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__( /*! @angular/router */"./node_modules/@angular/router/fesm2015/router.js");
     /* harmony import */
-
-
-    var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-    /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
-
+    var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__( /*! @angular/forms */"./node_modules/@angular/forms/fesm2015/forms.js");
+    /* harmony import */
+    var _header_header_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__( /*! ../header/header.service */"./src/app/component/header/header.service.ts");
+    /* harmony import */
+    var rxjs_operators__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__( /*! rxjs/operators */"./node_modules/rxjs/_esm2015/operators/index.js");
+    /* harmony import */
+    var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__( /*! @angular/material/dialog */"./node_modules/@angular/material/esm2015/dialog.js");
     var AddDataComponent = /*#__PURE__*/function () {
-      function AddDataComponent(dataService, router, fb) {
+      /*
+      * initializes the add-data page depending on if it is a completely new object,
+      * an indicator is being edited, or a reference is being edited.
+      * */
+      function AddDataComponent(dataService, router, route, fb, headerService, dialog) {
+        var _this = this;
         _classCallCheck(this, AddDataComponent);
-
         this.dataService = dataService;
         this.router = router;
+        this.route = route;
         this.fb = fb;
-        this.options = [];
-        this.selected = [];
-        this.dropdownList = [];
-        this.selectedItems = [];
-        this.fileToUpload = null;
-
+        this.dialog = dialog;
+        //NEW Stuff
+        this.showActivityMessages = false;
+        this.activityMessages = [];
+        this.affectedEvents = new Set();
+        this.useExistingReference = false;
+        this.verifiedOptions = ['verified', 'not verified', 'not mentioned'];
+        this.developmentOptions = ['developed', 'proposed', 'not mentioned'];
+        this.referenceZero = false;
+        this.dropdownSettings = {
+          singleSelection: false,
+          idField: "_id",
+          textField: "name",
+          selectAllText: "Select All",
+          unSelectAllText: "Deselect All",
+          itemsShowLimit: 3,
+          allowSearchFilter: true
+        };
+        this.selectedLearningActivities = [];
+        headerService.setHeader('add-indicator');
         if (localStorage.getItem('currentUser')) {
           this.CUserName = JSON.parse(localStorage.getItem('currentUser')).username;
-        } //// form entries///////
-
-
-        this.dataEntryForm = this.fb.group({
-          learningEvents: ["", _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required],
-          learningActivities: ["", _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required],
-          indicator: this.fb.array([this.createIndicator()])
+        }
+        //target determines which mode we're currently in(new indicator/edit indicator/edit reference)
+        this.target = this.route.snapshot.data.target;
+        this.data = this.route.snapshot.data.data;
+        if (this.data.reference) {
+          this.existingReferenceNumber = this.data.reference.referenceNumber;
+        }
+        if (this.data.indicator) {
+          this.indicatorId = this.data.indicator._id;
+          this.existingReferenceNumber = this.data.indicator.referenceNumber;
+        }
+        //boolean set to true if resource on indicator has been deleted.
+        this.referenceZero = this.existingReferenceNumber === '[0]';
+        //// form entries///////
+        this.indicatorForm = this.fb.group({
+          learningActivities: [{
+            value: [],
+            disabled: this.target
+          }, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required],
+          indicatorName: [{
+            value: null,
+            disabled: this.readonly('reference')
+          }, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required],
+          metrics: [{
+            value: null,
+            disabled: this.readonly('reference')
+          }, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required],
+          referenceNumber: [{
+            value: null,
+            disabled: true
+          }, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required]
         });
+        this.referenceForm = this.fb.group({
+          referenceText: [{
+            value: null,
+            disabled: this.readonly('indicator')
+          }, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required],
+          referenceLink: [{
+            value: null,
+            disabled: this.readonly('indicator')
+          }, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required],
+          referenceNumber: [{
+            value: null,
+            disabled: true
+          }, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required],
+          verified: [{
+            value: null,
+            disabled: this.readonly('indicator')
+          }],
+          development: [{
+            value: null,
+            disabled: this.readonly('indicator')
+          }]
+        });
+        //subscription to update the referenceNumber in the indicator-form if changed in the reference-form
+        this.referenceForm.controls['referenceNumber'].valueChanges.subscribe(function (value) {
+          return _this.indicatorForm.controls['referenceNumber'].setValue(value);
+        });
+        //gathering all activities of indicator, in case of indicator edit mode
+        if (this.target === 'indicator') {
+          this.dataService.getActivitiesByIndicatorId(this.indicatorId).subscribe(function (learningActivities) {
+            _this.originallySelectedLearningActivities = learningActivities;
+            _this.selectedLearningActivities = learningActivities;
+            _this.learningActivityiesSelected();
+          });
+        }
       }
-
+      // on initialisation the data from the Database is fetched and after a timeout used.
       _createClass(AddDataComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
-          this.fetchdata();
+          var _this2 = this;
+          this.fetchData();
+          setTimeout(function () {
+            _this2.initializeData();
+          }, 200);
         }
+        // fetches Activities, Indicators and References from Database
       }, {
-        key: "indicatorControls",
-        get: function get() {
-          return this.dataEntryForm.get('indicator')['controls'];
-        } /// adding new indicator and meterics entry/////////// 
-
-      }, {
-        key: "createIndicator",
-        value: function createIndicator() {
-          return this.fb.group({
-            indicatorName: ["", _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required],
-            metrics: ["", _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required]
+        key: "fetchData",
+        value: function fetchData() {
+          var _this3 = this;
+          this.dataService.getActivities().subscribe(function (activities) {
+            _this3.learningActivitiesOptions = activities;
           });
-        } /// code for add button//////////
-        // addIndicator(): void {
-        //   this.indicator = this.dataEntryForm.get('indicator') as FormArray;
-        //   this.indicator.push(this.createIndicator());
-        // }
-        // removeIndicator(i: number) {
-        //   this.indicator.removeAt(i);
-        // }
-
+          this.indicatorOptions$ = this.dataService.getIndicators().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["shareReplay"])());
+          this.dataService.getReferences().subscribe(function (references) {
+            _this3.referenceOptions = references;
+            var referenceIds = references.map(function (reference) {
+              return reference.referenceNumber;
+            });
+            for (var i = 1; i <= referenceIds.length + 1; i++) {
+              if (!referenceIds.includes("[".concat(i, "]"))) {
+                _this3.newReferenceNumber = "[".concat(i, "]");
+                if (!_this3.existingReferenceNumber) {
+                  _this3.referenceForm.patchValue({
+                    'referenceNumber': _this3.newReferenceNumber
+                  });
+                }
+                break;
+              }
+            }
+          });
+        }
+        // initializes Form values in case either an indicator or a reference is edited.
+        // If no corresponding data is found, the form is initialized accordingly
+      }, {
+        key: "initializeData",
+        value: function initializeData() {
+          if (this.target) {
+            if (this.data.indicator) {
+              this.indicatorForm.patchValue({
+                indicatorName: this.data.indicator.Title,
+                metrics: this.data.indicator.metrics
+              });
+              this.referenceForm.patchValue({
+                referenceNumber: this.data.indicator.referenceNumber
+              });
+            } else {
+              this.indicatorForm.patchValue({
+                indicatorName: 'No indicator found',
+                metrics: 'No indicator found'
+              });
+            }
+            if (this.data.reference) {
+              this.referenceForm.patchValue({
+                referenceText: this.data.reference.referenceText,
+                referenceLink: this.data.reference.link,
+                referenceNumber: this.data.reference.referenceNumber,
+                verified: this.data.reference.status,
+                development: this.data.reference.development
+              });
+            } else {
+              this.referenceForm.patchValue({
+                referenceText: 'Reference has been deleted',
+                referenceLink: 'Reference has been deleted'
+              });
+            }
+          }
+        }
+        // method called on save button clicked.
+        // depending on which Mode(Create/Edit Indicator/Edit Reference) is currently active, the matching Model is built
+        // and matching Service call is executed
       }, {
         key: "addData",
         value: function addData() {
-          var _this = this;
-
-          var indicators = this.dataEntryForm.value.indicator;
-          var indicator = [];
-          var metrics = [];
-          indicators.forEach(function (element) {
-            var ind = [element.indicatorName];
-            indicator.push(ind);
-          });
-          indicators.forEach(function (element) {
-            var met = [element.metrics];
-            metrics.push(met);
-          });
-          this.dataService.addData(this.dataEntryForm.value.learningEvents, this.dataEntryForm.value.learningActivities, this.dataEntryForm.value.indicator).subscribe(function () {
-            _this.router.navigate(['/data']);
-          });
-          this.dataEntryForm.reset(); // clear from entry
-
-          this.similarActivityMessage = false; // location.reload(); // reload web page
-
-          this.successfulMessage = "<b>Indicator and their Metrics added successfully!</b>"; //window.alert("");
-        }
-      }, {
-        key: "fetchdata",
-        value: function fetchdata() {
-          var _this2 = this;
-
-          this.dataService.getdata().subscribe(function (data) {
-            _this2.data = data;
-
-            var _iterator = _createForOfIteratorHelper(_this2.data),
-                _step;
-
-            try {
-              for (_iterator.s(); !(_step = _iterator.n()).done;) {
-                var val = _step.value;
-
-                _this2.options.push(val["LearningEvents"]);
+          var _this4 = this;
+          var indicatorFormValue = this.indicatorForm.getRawValue();
+          var referenceFormValue = this.referenceForm.getRawValue();
+          var indicator = {
+            referenceNumber: indicatorFormValue.referenceNumber,
+            Title: indicatorFormValue.indicatorName,
+            metrics: indicatorFormValue.metrics
+          };
+          var referenceLink = referenceFormValue.referenceLink;
+          if (referenceLink === '') {
+            referenceLink = null;
+          }
+          var reference = {
+            referenceNumber: referenceFormValue.referenceNumber,
+            referenceText: referenceFormValue.referenceText,
+            link: referenceLink,
+            status: referenceFormValue.verified,
+            development: referenceFormValue.development
+          };
+          this.indicatorForm.markAllAsTouched();
+          this.referenceForm.markAllAsTouched();
+          switch (this.target) {
+            case 'indicator':
+              if (!this.indicatorForm.valid) {
+                return;
               }
-            } catch (err) {
-              _iterator.e(err);
-            } finally {
-              _iterator.f();
-            }
-
-            _this2.selected.push(_this2.options);
-          });
+              var removedActivities = this.originallySelectedLearningActivities.map(function (item) {
+                return item._id;
+              }).filter(function (id) {
+                return _this4.selectedLearningActivities.map(function (item) {
+                  return item._id;
+                }).indexOf(id) < 0;
+              });
+              var addedActivities = this.selectedLearningActivities.map(function (item) {
+                return item._id;
+              }).filter(function (id) {
+                return _this4.originallySelectedLearningActivities.map(function (item) {
+                  return item._id;
+                }).indexOf(id) < 0;
+              });
+              var editObject = {
+                activitiesDeleted: removedActivities,
+                activitiesAdded: addedActivities,
+                indicator: indicator
+              };
+              this.dataService.editIndicator(this.indicatorId, editObject).subscribe(function () {
+                _this4.router.navigate(['/']);
+              });
+              break;
+            case 'reference':
+              if (!this.referenceForm.valid) {
+                return;
+              }
+              this.dataService.updateReference(this.data.reference._id, reference).subscribe(function () {
+                _this4.router.navigate(['/reference']);
+              });
+              break;
+            default:
+              if (!this.referenceForm.valid || !this.indicatorForm.valid) {
+                return;
+              }
+              var dataObject = {
+                activities: this.selectedLearningActivities,
+                indicator: indicator,
+                reference: this.useExistingReference ? null : reference
+              };
+              this.dataService.addIndicatorAndReference(dataObject).subscribe(function () {
+                _this4.router.navigate(['/']);
+              });
+          }
         }
       }, {
-        key: "learningValueChange",
-        value: function learningValueChange(x) {
-          var _this3 = this;
-
-          this.successfulMessage = false; //to hide the success message
-
-          this.selectedevent = x; //console.log("Event: ", x);
-
-          this.dataService.getdata().subscribe(function (data) {
-            _this3.data = data;
-
-            var event = _this3.data.filter(function (obj) {
-              return x.includes(obj.LearningEvents);
+        key: "learningActivityiesSelected",
+        value: function learningActivityiesSelected() {
+          var _this5 = this;
+          setTimeout(function () {
+            _this5.indicatorForm.patchValue({
+              learningActivities: _this5.selectedLearningActivities
             });
-
-            _this3.setLearningActivities(event);
-
-            if (x != "") {
-              _this3.data = event;
-            }
-          });
+            _this5.setActivityMessages(_this5.selectedLearningActivities);
+          }, 10);
         }
+        // method to compute the strings which are needed to show the corresponding Events depending on the chosen Activities
       }, {
-        key: "setLearningActivities",
-        value: function setLearningActivities(event) {
-          this.dropdownList = [];
-
-          var _iterator2 = _createForOfIteratorHelper(event),
-              _step2;
-
-          try {
-            for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
-              var learningEvents = _step2.value;
-
-              var _iterator3 = _createForOfIteratorHelper(learningEvents.LearningActivities),
-                  _step3;
-
-              try {
-                for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
-                  var entry = _step3.value;
-                  this.dropdownList.push(entry.Name);
-                }
-              } catch (err) {
-                _iterator3.e(err);
-              } finally {
-                _iterator3.f();
-              }
-            }
-          } catch (err) {
-            _iterator2.e(err);
-          } finally {
-            _iterator2.f();
-          }
-        }
-      }, {
-        key: "onActivityValueChange",
-        value: function onActivityValueChange(activityValue) {
-          var value = activityValue;
-          console.log("ActValue: ", activityValue);
-
-          if (activityValue == "Group Work") {
-            this.similarActivityMessage = "The selected learning activity <em>\"Group Work\"</em> lies under the learning events <em>\"Create, Practice and Debate\"</em>.<br>Therefore, the Indicator and Metrics you want to add will also be added automatically under the <em>\"Group Work\"</em> activity in the mentioned learning events.";
-          } else if (activityValue == "Review/Study") {
-            this.similarActivityMessage = "The selected learning activity <em>\"Review/Study\"</em> lies under the learning events <em>\"Receive, Meta-learn or Self-reflect and Debate\"</em>.<br>Therefore, the Indicator and Metrics you want to add will also be added automatically under the <em>\"Review/Study\"</em> activity in the mentioned learning events.";
-          } else if (activityValue == "Presentation") {
-            this.similarActivityMessage = "The selected learning activity <em>\"Presentation\"</em> lies under the learning events <em>\"Receive, Imitate and Debate\"</em>.<br>Therefore, the Indicator and Metrics you want to add will also be added automatically under the <em>\"Presentation\"</em> activity in the mentioned learning events.";
-          } else if (activityValue == "Exercise (Training)") {
-            this.similarActivityMessage = "The selected learning activity <em>\"Exercise (Training)\"</em> lies under the learning events <em>\"Imitate, Experiment and Practice\"</em>.<br>Therefore, the Indicator and Metrics you want to add will also be added automatically under the <em>\"Exercise (Training)\"</em> activity in the mentioned learning events.";
-          } else if (activityValue == "Question (Query/Inquiry)") {
-            this.similarActivityMessage = "The selected learning activity <em>\"Question (Query/Inquiry)\"</em> lies under the learning events <em>\"Practice and Debate\"</em>.<br>Therefore, the Indicator and Metrics you want to add will also be added automatically under the <em>\"Question (Query/Inquiry)\"</em> activity in the mentioned learning events.";
-          } else if (activityValue == "Survey (Questionnaire)") {
-            this.similarActivityMessage = "The selected learning activity <em>\"Survey (Questionnaire)\"</em> lies under the learning events <em>\"Explore, Practice and Debate\"</em>.<br>Therefore, the Indicator and Metrics you want to add will also be added automatically under the <em>\"Survey (Questionnaire)\"</em> activity in the mentioned learning events.";
-          } else if (activityValue == "Peer review/Assessment") {
-            this.similarActivityMessage = "The selected learning activity <em>\"Peer review/Assessment\"</em> lies under the learning events <em>\"Practice and Meta-learn or Self-reflect\"</em>.<br>Therefore, the Indicator and Metrics you want to add will also be added automatically under the <em>\"Peer review/Assessment\"</em> activity in the mentioned learning events.";
+        key: "setActivityMessages",
+        value: function setActivityMessages(activities) {
+          var _this6 = this;
+          this.affectedEvents.clear();
+          if (activities.length === 0) {
+            this.showActivityMessages = false;
           } else {
-            this.similarActivityMessage = false;
+            var messages = [];
+            activities.forEach(function (activity) {
+              _this6.dataService.getEventsByActivityId(activity._id).subscribe(function (events) {
+                var eventNames = events.map(function (event) {
+                  return event.name;
+                });
+                eventNames.forEach(function (name) {
+                  return _this6.affectedEvents.add(name);
+                });
+                var message;
+                if (eventNames.length === 1) {
+                  message = "The selected learning activity \"".concat(activity.name, "\"\n                    lies under the learning event \"").concat(eventNames[0], "\".");
+                }
+                if (eventNames.length > 1) {
+                  var namesWithComma = eventNames.join(', ');
+                  message = "The selected learning activity \"".concat(activity.name, "\" lies under\n                     the learning events \"").concat(namesWithComma, "\".");
+                }
+                messages.push(message);
+              });
+            });
+            setTimeout(function () {
+              _this6.activityMessages = messages;
+              _this6.showActivityMessages = true;
+            }, 100);
           }
         }
+      }, {
+        key: "showEvents",
+        value: function showEvents() {
+          return _toConsumableArray(this.affectedEvents.values()).join(", ");
+        }
+        // logs out user => clear currentUser data from LocalStorage
       }, {
         key: "logout",
         value: function logout() {
           localStorage.removeItem('currentUser');
           this.router.navigate(['/']);
         }
+        // method to switch between using an existing Reference and creating a new one on save.
+        // useExitsingReference switches the Reference Input to a Dropdown and disables the other Reference Form fields.
+        // Previously entered values are saved to reset them in case the checkbox is clicked again.
+      }, {
+        key: "checkboxReferenceClicked",
+        value: function checkboxReferenceClicked() {
+          this.useExistingReference = !this.useExistingReference;
+          if (!this.useExistingReference) {
+            this.referenceForm.get('referenceLink').enable();
+            this.referenceForm.get('verified').enable();
+            this.referenceForm.get('development').enable();
+            this.referenceForm.patchValue({
+              referenceText: this.previousReferenceName,
+              referenceLink: this.previousReferenceLink,
+              referenceNumber: this.newReferenceNumber,
+              verified: null,
+              development: null
+            });
+          } else {
+            this.setPreviousValues();
+            this.referenceForm.get('referenceLink').disable();
+            this.referenceForm.get('verified').disable();
+            this.referenceForm.get('development').disable();
+            this.referenceForm.patchValue({
+              referenceText: null,
+              referenceLink: null,
+              referenceNumber: null,
+              verified: null,
+              development: null
+            });
+          }
+        }
+        // method used to compare and differentiate Items in the Activity Dropdown
+      }, {
+        key: "compareMethod",
+        value: function compareMethod(item, selected) {
+          return item._id === selected._id;
+        }
+        // method for filling the referenceForm model when choosing an existing Reference from the Dropdown.
+      }, {
+        key: "onReferenceChange",
+        value: function onReferenceChange(reference) {
+          if (reference) {
+            this.referenceForm.patchValue({
+              referenceText: reference.referenceText,
+              referenceLink: reference.link,
+              referenceNumber: reference.referenceNumber,
+              verified: reference.status,
+              development: reference.development
+            });
+          } else {
+            this.referenceForm.patchValue({
+              referenceText: null,
+              referenceLink: null,
+              referenceNumber: null,
+              verified: null,
+              development: null
+            });
+          }
+        }
+        // method to temporarily save previously entered reference values
+      }, {
+        key: "setPreviousValues",
+        value: function setPreviousValues() {
+          this.previousReferenceName = this.referenceForm.value['referenceText'];
+          this.previousReferenceLink = this.referenceForm.value['referenceLink'];
+        }
+        // returns true if the omitted target is equal to the target of the current Mode.
+      }, {
+        key: "readonly",
+        value: function readonly(target) {
+          if (!target) return false;
+          return this.target === target;
+        }
+      }, {
+        key: "showActivityDialoge",
+        value: function showActivityDialoge() {
+          this.dialog.open(this.activityDialog);
+        }
       }]);
-
       return AddDataComponent;
     }();
-
     AddDataComponent.ctorParameters = function () {
       return [{
         type: _data_service__WEBPACK_IMPORTED_MODULE_2__["DataService"]
       }, {
         type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
       }, {
+        type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"]
+      }, {
         type: _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"]
+      }, {
+        type: _header_header_service__WEBPACK_IMPORTED_MODULE_5__["HeaderService"]
+      }, {
+        type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_7__["MatDialog"]
       }];
     };
-
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])("activityDialog", {
+      "static": true
+    })], AddDataComponent.prototype, "activityDialog", void 0);
     AddDataComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: 'app-add-data',
-      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! raw-loader!./add-data.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/component/add-data/add-data.component.html"))["default"],
-      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! ./add-data.component.css */
-      "./src/app/component/add-data/add-data.component.css"))["default"]]
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! raw-loader!./add-data.component.html */"./node_modules/raw-loader/dist/cjs.js!./src/app/component/add-data/add-data.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! ./add-data.component.css */"./src/app/component/add-data/add-data.component.css"))["default"]]
     })], AddDataComponent);
+
     /***/
   },
 
+  /***/"./src/app/component/add-data/data.resolver.ts":
+  /*!*****************************************************!*\
+    !*** ./src/app/component/add-data/data.resolver.ts ***!
+    \*****************************************************/
+  /*! exports provided: DataResolver */
   /***/
-  "./src/app/component/admin/admin.component.css": function srcAppComponentAdminAdminComponentCss(module, __webpack_exports__, __webpack_require__) {
-    "use strict";
-
-    __webpack_require__.r(__webpack_exports__);
-    /* harmony default export */
-
-
-    __webpack_exports__["default"] = ".container {\n\n  background: white;\n\n  height: auto;\n  width: auto;\n\n  box-shadow: 1px 1px 2px 2px #888888;\n  padding-bottom: 24px;\n  position: absolute;\n  transform: translate(50%, 50%);\n  bottom: 50%;\n  right: 50%;\n\n\n\n}\n\n#title {\n  text-align: center;\n  font-weight: normal;\n  padding: 24px;\n  background-color: #3F51B5;\n  color: white;\n}\n\n#username {\n  margin: 45px;\n  text-align: center;\n  margin-top: 25px;\n  padding-left: 10px;\n  font-weight: bold;\n  font-size: 16px;\n}\n\n#password {\n  margin: 45px;\n  text-align: center;\n  margin-top: 25px;\n  padding-left: 10px;\n  font-weight: bold;\n  font-size: 16px;\n}\n\nlabel {\n  padding-right: 20px;\n  padding-left: 16px;\n}\n\ninput {\n  font-size: 16px;\n  font-weight: normal;\n  background-color: #3F51B5;\n  border: none;\n  border-radius: 4px;\n  width: 180px;\n  height: 28px;\n  color: white;\n\n}\n\n#submit {\n  text-align: center;\n  margin: 40px;\n\n}\n\n#submit>button {\n  background-color: #3F51B5;\n  color: white;\n}\n\n.alert {\n  text-align: center;\n  color: red;\n  font-size: small;\n  margin: 0;\n}\n\n.submitbtn:disabled {\n  cursor: not-allowed;\n\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50L2FkbWluL2FkbWluLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O0VBRUUsaUJBQWlCOztFQUVqQixZQUFZO0VBQ1osV0FBVzs7RUFFWCxtQ0FBbUM7RUFDbkMsb0JBQW9CO0VBQ3BCLGtCQUFrQjtFQUNsQiw4QkFBOEI7RUFDOUIsV0FBVztFQUNYLFVBQVU7Ozs7QUFJWjs7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQixtQkFBbUI7RUFDbkIsYUFBYTtFQUNiLHlCQUF5QjtFQUN6QixZQUFZO0FBQ2Q7O0FBRUE7RUFDRSxZQUFZO0VBQ1osa0JBQWtCO0VBQ2xCLGdCQUFnQjtFQUNoQixrQkFBa0I7RUFDbEIsaUJBQWlCO0VBQ2pCLGVBQWU7QUFDakI7O0FBRUE7RUFDRSxZQUFZO0VBQ1osa0JBQWtCO0VBQ2xCLGdCQUFnQjtFQUNoQixrQkFBa0I7RUFDbEIsaUJBQWlCO0VBQ2pCLGVBQWU7QUFDakI7O0FBRUE7RUFDRSxtQkFBbUI7RUFDbkIsa0JBQWtCO0FBQ3BCOztBQUVBO0VBQ0UsZUFBZTtFQUNmLG1CQUFtQjtFQUNuQix5QkFBeUI7RUFDekIsWUFBWTtFQUNaLGtCQUFrQjtFQUNsQixZQUFZO0VBQ1osWUFBWTtFQUNaLFlBQVk7O0FBRWQ7O0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsWUFBWTs7QUFFZDs7QUFFQTtFQUNFLHlCQUF5QjtFQUN6QixZQUFZO0FBQ2Q7O0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsVUFBVTtFQUNWLGdCQUFnQjtFQUNoQixTQUFTO0FBQ1g7O0FBRUE7RUFDRSxtQkFBbUI7O0FBRXJCIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50L2FkbWluL2FkbWluLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY29udGFpbmVyIHtcblxuICBiYWNrZ3JvdW5kOiB3aGl0ZTtcblxuICBoZWlnaHQ6IGF1dG87XG4gIHdpZHRoOiBhdXRvO1xuXG4gIGJveC1zaGFkb3c6IDFweCAxcHggMnB4IDJweCAjODg4ODg4O1xuICBwYWRkaW5nLWJvdHRvbTogMjRweDtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSg1MCUsIDUwJSk7XG4gIGJvdHRvbTogNTAlO1xuICByaWdodDogNTAlO1xuXG5cblxufVxuXG4jdGl0bGUge1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIGZvbnQtd2VpZ2h0OiBub3JtYWw7XG4gIHBhZGRpbmc6IDI0cHg7XG4gIGJhY2tncm91bmQtY29sb3I6ICMzRjUxQjU7XG4gIGNvbG9yOiB3aGl0ZTtcbn1cblxuI3VzZXJuYW1lIHtcbiAgbWFyZ2luOiA0NXB4O1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIG1hcmdpbi10b3A6IDI1cHg7XG4gIHBhZGRpbmctbGVmdDogMTBweDtcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gIGZvbnQtc2l6ZTogMTZweDtcbn1cblxuI3Bhc3N3b3JkIHtcbiAgbWFyZ2luOiA0NXB4O1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIG1hcmdpbi10b3A6IDI1cHg7XG4gIHBhZGRpbmctbGVmdDogMTBweDtcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gIGZvbnQtc2l6ZTogMTZweDtcbn1cblxubGFiZWwge1xuICBwYWRkaW5nLXJpZ2h0OiAyMHB4O1xuICBwYWRkaW5nLWxlZnQ6IDE2cHg7XG59XG5cbmlucHV0IHtcbiAgZm9udC1zaXplOiAxNnB4O1xuICBmb250LXdlaWdodDogbm9ybWFsO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjM0Y1MUI1O1xuICBib3JkZXI6IG5vbmU7XG4gIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgd2lkdGg6IDE4MHB4O1xuICBoZWlnaHQ6IDI4cHg7XG4gIGNvbG9yOiB3aGl0ZTtcblxufVxuXG4jc3VibWl0IHtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICBtYXJnaW46IDQwcHg7XG5cbn1cblxuI3N1Ym1pdD5idXR0b24ge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjM0Y1MUI1O1xuICBjb2xvcjogd2hpdGU7XG59XG5cbi5hbGVydCB7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgY29sb3I6IHJlZDtcbiAgZm9udC1zaXplOiBzbWFsbDtcbiAgbWFyZ2luOiAwO1xufVxuXG4uc3VibWl0YnRuOmRpc2FibGVkIHtcbiAgY3Vyc29yOiBub3QtYWxsb3dlZDtcblxufVxuIl19 */";
-    /***/
-  },
-
-  /***/
-  "./src/app/component/admin/admin.component.ts": function srcAppComponentAdminAdminComponentTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppComponentAddDataDataResolverTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
+    __webpack_require__.d(__webpack_exports__, "DataResolver", function () {
+      return DataResolver;
+    });
+    /* harmony import */
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+    var _data_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__( /*! ../../data.service */"./src/app/data.service.ts");
+    /* harmony import */
+    var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__( /*! rxjs */"./node_modules/rxjs/_esm2015/index.js");
+    var DataResolver = /*#__PURE__*/function () {
+      function DataResolver(service) {
+        _classCallCheck(this, DataResolver);
+        this.service = service;
+      }
+      _createClass(DataResolver, [{
+        key: "resolve",
+        value: function resolve(route, state) {
+          var target = route.data.target;
+          if (!target) {
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["of"])({
+              activity: null,
+              indicator: null,
+              reference: null
+            });
+          }
+          var id = route.params.id;
+          if (target === 'indicator') {
+            return this.service.getPathByIndicatorId(id);
+          }
+          if (target === 'reference') {
+            return this.service.getPathByReferenceId(id);
+          }
+        }
+      }]);
+      return DataResolver;
+    }();
+    DataResolver.ctorParameters = function () {
+      return [{
+        type: _data_service__WEBPACK_IMPORTED_MODULE_2__["DataService"]
+      }];
+    };
+    DataResolver = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+      providedIn: 'root'
+    })], DataResolver);
 
+    /***/
+  },
 
+  /***/"./src/app/component/admin/admin.component.css":
+  /*!*****************************************************!*\
+    !*** ./src/app/component/admin/admin.component.css ***!
+    \*****************************************************/
+  /*! exports provided: default */
+  /***/
+  function srcAppComponentAdminAdminComponentCss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+    __webpack_exports__["default"] = ".container {\n\n    background: white;\n\n    height: auto;\n    width: auto;\n\n    box-shadow: 1px 1px 2px 2px #888888;\n    padding-bottom: 24px;\n    position: absolute;\n    transform: translate(50%, 50%);\n    bottom: 50%;\n    right: 50%;\n\n\n}\n\n#title {\n    text-align: center;\n    font-weight: normal;\n    padding: 24px;\n    background-color: #3F51B5;\n    color: white;\n}\n\n#username {\n    display: flex;\n    justify-content: space-between;\n    align-items: baseline;\n    margin: 25px 45px 0;\n    padding-left: 10px;\n    font-size: 16px;\n}\n\n#password {\n    display: flex;\n    justify-content: space-between;\n    align-items: baseline;\n    margin: 25px 45px 0;\n    padding-left: 10px;\n    font-size: 16px;\n}\n\nlabel {\n    padding-right: 20px;\n    padding-left: 16px;\n    font-weight: bold;\n}\n\ninput {\n    font-size: 16px;\n    font-weight: normal;\n    background-color: #3F51B5;\n    border: none;\n    border-radius: 4px;\n    width: 180px;\n    height: 28px;\n    color: white;\n\n}\n\n#submit {\n    text-align: center;\n    margin: 20px;\n\n}\n\n#register, #login {\n    text-align: center;\n}\n\na {\n    cursor: pointer;\n    font-weight: bold;\n}\n\n#submit > button {\n    background-color: #3F51B5;\n    color: white;\n}\n\n.alert {\n    color: red;\n    font-size: small;\n    margin: 0;\n}\n\n.submitbtn:disabled {\n    cursor: not-allowed;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50L2FkbWluL2FkbWluLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O0lBRUksaUJBQWlCOztJQUVqQixZQUFZO0lBQ1osV0FBVzs7SUFFWCxtQ0FBbUM7SUFDbkMsb0JBQW9CO0lBQ3BCLGtCQUFrQjtJQUNsQiw4QkFBOEI7SUFDOUIsV0FBVztJQUNYLFVBQVU7OztBQUdkOztBQUVBO0lBQ0ksa0JBQWtCO0lBQ2xCLG1CQUFtQjtJQUNuQixhQUFhO0lBQ2IseUJBQXlCO0lBQ3pCLFlBQVk7QUFDaEI7O0FBRUE7SUFDSSxhQUFhO0lBQ2IsOEJBQThCO0lBQzlCLHFCQUFxQjtJQUNyQixtQkFBbUI7SUFDbkIsa0JBQWtCO0lBQ2xCLGVBQWU7QUFDbkI7O0FBRUE7SUFDSSxhQUFhO0lBQ2IsOEJBQThCO0lBQzlCLHFCQUFxQjtJQUNyQixtQkFBbUI7SUFDbkIsa0JBQWtCO0lBQ2xCLGVBQWU7QUFDbkI7O0FBRUE7SUFDSSxtQkFBbUI7SUFDbkIsa0JBQWtCO0lBQ2xCLGlCQUFpQjtBQUNyQjs7QUFFQTtJQUNJLGVBQWU7SUFDZixtQkFBbUI7SUFDbkIseUJBQXlCO0lBQ3pCLFlBQVk7SUFDWixrQkFBa0I7SUFDbEIsWUFBWTtJQUNaLFlBQVk7SUFDWixZQUFZOztBQUVoQjs7QUFFQTtJQUNJLGtCQUFrQjtJQUNsQixZQUFZOztBQUVoQjs7QUFFQTtJQUNJLGtCQUFrQjtBQUN0Qjs7QUFFQTtJQUNJLGVBQWU7SUFDZixpQkFBaUI7QUFDckI7O0FBRUE7SUFDSSx5QkFBeUI7SUFDekIsWUFBWTtBQUNoQjs7QUFFQTtJQUNJLFVBQVU7SUFDVixnQkFBZ0I7SUFDaEIsU0FBUztBQUNiOztBQUVBO0lBQ0ksbUJBQW1CO0FBQ3ZCIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50L2FkbWluL2FkbWluLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY29udGFpbmVyIHtcblxuICAgIGJhY2tncm91bmQ6IHdoaXRlO1xuXG4gICAgaGVpZ2h0OiBhdXRvO1xuICAgIHdpZHRoOiBhdXRvO1xuXG4gICAgYm94LXNoYWRvdzogMXB4IDFweCAycHggMnB4ICM4ODg4ODg7XG4gICAgcGFkZGluZy1ib3R0b206IDI0cHg7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKDUwJSwgNTAlKTtcbiAgICBib3R0b206IDUwJTtcbiAgICByaWdodDogNTAlO1xuXG5cbn1cblxuI3RpdGxlIHtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgZm9udC13ZWlnaHQ6IG5vcm1hbDtcbiAgICBwYWRkaW5nOiAyNHB4O1xuICAgIGJhY2tncm91bmQtY29sb3I6ICMzRjUxQjU7XG4gICAgY29sb3I6IHdoaXRlO1xufVxuXG4jdXNlcm5hbWUge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xuICAgIGFsaWduLWl0ZW1zOiBiYXNlbGluZTtcbiAgICBtYXJnaW46IDI1cHggNDVweCAwO1xuICAgIHBhZGRpbmctbGVmdDogMTBweDtcbiAgICBmb250LXNpemU6IDE2cHg7XG59XG5cbiNwYXNzd29yZCB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XG4gICAgYWxpZ24taXRlbXM6IGJhc2VsaW5lO1xuICAgIG1hcmdpbjogMjVweCA0NXB4IDA7XG4gICAgcGFkZGluZy1sZWZ0OiAxMHB4O1xuICAgIGZvbnQtc2l6ZTogMTZweDtcbn1cblxubGFiZWwge1xuICAgIHBhZGRpbmctcmlnaHQ6IDIwcHg7XG4gICAgcGFkZGluZy1sZWZ0OiAxNnB4O1xuICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xufVxuXG5pbnB1dCB7XG4gICAgZm9udC1zaXplOiAxNnB4O1xuICAgIGZvbnQtd2VpZ2h0OiBub3JtYWw7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzNGNTFCNTtcbiAgICBib3JkZXI6IG5vbmU7XG4gICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgIHdpZHRoOiAxODBweDtcbiAgICBoZWlnaHQ6IDI4cHg7XG4gICAgY29sb3I6IHdoaXRlO1xuXG59XG5cbiNzdWJtaXQge1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICBtYXJnaW46IDIwcHg7XG5cbn1cblxuI3JlZ2lzdGVyLCAjbG9naW4ge1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbn1cblxuYSB7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xufVxuXG4jc3VibWl0ID4gYnV0dG9uIHtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjM0Y1MUI1O1xuICAgIGNvbG9yOiB3aGl0ZTtcbn1cblxuLmFsZXJ0IHtcbiAgICBjb2xvcjogcmVkO1xuICAgIGZvbnQtc2l6ZTogc21hbGw7XG4gICAgbWFyZ2luOiAwO1xufVxuXG4uc3VibWl0YnRuOmRpc2FibGVkIHtcbiAgICBjdXJzb3I6IG5vdC1hbGxvd2VkO1xufVxuIl19 */";
+
+    /***/
+  },
+
+  /***/"./src/app/component/admin/admin.component.ts":
+  /*!****************************************************!*\
+    !*** ./src/app/component/admin/admin.component.ts ***!
+    \****************************************************/
+  /*! exports provided: AdminComponent */
+  /***/
+  function srcAppComponentAdminAdminComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
     __webpack_require__.d(__webpack_exports__, "AdminComponent", function () {
       return AdminComponent;
     });
     /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
     /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
-
-
-    var _data_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! ../../data.service */
-    "./src/app/data.service.ts");
+    var _data_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__( /*! ../../data.service */"./src/app/data.service.ts");
     /* harmony import */
-
-
-    var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! @angular/router */
-    "./node_modules/@angular/router/fesm2015/router.js");
+    var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__( /*! @angular/router */"./node_modules/@angular/router/fesm2015/router.js");
     /* harmony import */
-
-
-    var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-    /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
-
+    var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__( /*! @angular/forms */"./node_modules/@angular/forms/fesm2015/forms.js");
     var AdminComponent = /*#__PURE__*/function () {
       function AdminComponent(dataService, router, fb) {
         _classCallCheck(this, AdminComponent);
-
         this.dataService = dataService;
         this.router = router;
         this.fb = fb;
+        this.currentUrl = 'add';
+        this.register = false;
         this.loginForm = this.fb.group({
           username: ["", _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required],
           password: ["", _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required]
         });
+        if (this.router.getCurrentNavigation().extras.state) {
+          this.currentUrl = this.router.getCurrentNavigation().extras.state.url;
+          this.additionalInfo = this.router.getCurrentNavigation().extras.state.additionalInfo;
+        }
       }
-
       _createClass(AdminComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {}
+        // depending on submitting or signing in, calls the corresponding service method and logs-in/creates the user
       }, {
         key: "submit",
         value: function submit() {
-          var _this4 = this;
-
-          this.dataService.login(this.loginForm.value.username, this.loginForm.value.password).subscribe(function (res) {
-            _this4.loginForm.reset();
-
-            _this4.dataService.loggedIn = true;
-
-            _this4.router.navigate(['add']);
-          }, function (err) {
-            return alert('User NOT found!');
-          });
+          var _this7 = this;
+          if (!this.register) {
+            this.dataService.login(this.loginForm.value.username, this.loginForm.value.password).subscribe(function (res) {
+              _this7.loginForm.reset();
+              _this7.dataService.loggedIn = true;
+              _this7.router.navigate([_this7.currentUrl], {
+                state: {
+                  additionalInfo: _this7.additionalInfo
+                }
+              });
+            }, function (err) {
+              return alert('User NOT found!');
+            });
+          } else {
+            this.dataService.register(this.loginForm.value).subscribe(function (added) {
+              if (added) {
+                window.alert('User had been registered. You will now be directed to the login page');
+                _this7.register = false;
+                _this7.loginForm.reset();
+              } else {
+                window.alert("User could not be registered. User with username ".concat(_this7.loginForm.value.username, " already exists"));
+                _this7.loginForm.reset();
+              }
+            });
+          }
+        }
+        // switches the local register variable
+      }, {
+        key: "onRegister",
+        value: function onRegister() {
+          this.register = !this.register;
+        }
+        // computes which Text to show in the Button
+      }, {
+        key: "buttonText",
+        value: function buttonText() {
+          return this.register ? 'Sign up' : 'Login';
         }
       }]);
-
       return AdminComponent;
     }();
-
     AdminComponent.ctorParameters = function () {
       return [{
         type: _data_service__WEBPACK_IMPORTED_MODULE_2__["DataService"]
@@ -8686,63 +7950,58 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         type: _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"]
       }];
     };
-
     AdminComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: 'app-admin',
-      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! raw-loader!./admin.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/component/admin/admin.component.html"))["default"],
-      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! ./admin.component.css */
-      "./src/app/component/admin/admin.component.css"))["default"]]
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! raw-loader!./admin.component.html */"./node_modules/raw-loader/dist/cjs.js!./src/app/component/admin/admin.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! ./admin.component.css */"./src/app/component/admin/admin.component.css"))["default"]]
     })], AdminComponent);
+
     /***/
   },
 
+  /***/"./src/app/component/dashboard/dashboard.component.css":
+  /*!*************************************************************!*\
+    !*** ./src/app/component/dashboard/dashboard.component.css ***!
+    \*************************************************************/
+  /*! exports provided: default */
   /***/
-  "./src/app/component/dashboard/dashboard.component.css": function srcAppComponentDashboardDashboardComponentCss(module, __webpack_exports__, __webpack_require__) {
+  function srcAppComponentDashboardDashboardComponentCss(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
+    __webpack_exports__["default"] = ".footer {\n  position: fixed;\n  left: 0;\n  bottom: 0;\n  width: 100%;\n  background-color: #f5f5f5;\n  color: #b9bdc0;\n  text-align: center;\n  display: none;\n}\n\n.buttonLaTool {\n  margin: 0;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50L2Rhc2hib2FyZC9kYXNoYm9hcmQuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGVBQWU7RUFDZixPQUFPO0VBQ1AsU0FBUztFQUNULFdBQVc7RUFDWCx5QkFBeUI7RUFDekIsY0FBYztFQUNkLGtCQUFrQjtFQUNsQixhQUFhO0FBQ2Y7O0FBRUE7RUFDRSxTQUFTO0FBQ1giLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnQvZGFzaGJvYXJkL2Rhc2hib2FyZC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmZvb3RlciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgbGVmdDogMDtcbiAgYm90dG9tOiAwO1xuICB3aWR0aDogMTAwJTtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2Y1ZjVmNTtcbiAgY29sb3I6ICNiOWJkYzA7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgZGlzcGxheTogbm9uZTtcbn1cblxuLmJ1dHRvbkxhVG9vbCB7XG4gIG1hcmdpbjogMDtcbn1cbiJdfQ== */";
 
-
-    __webpack_exports__["default"] = ".footer {\n  position: fixed;\n  left: 0;\n  bottom: 0;\n  width: 100%;\n  background-color: #f5f5f5;\n  color: #b9bdc0;\n  text-align: center;\n  display: none;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50L2Rhc2hib2FyZC9kYXNoYm9hcmQuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGVBQWU7RUFDZixPQUFPO0VBQ1AsU0FBUztFQUNULFdBQVc7RUFDWCx5QkFBeUI7RUFDekIsY0FBYztFQUNkLGtCQUFrQjtFQUNsQixhQUFhO0FBQ2YiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnQvZGFzaGJvYXJkL2Rhc2hib2FyZC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmZvb3RlciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgbGVmdDogMDtcbiAgYm90dG9tOiAwO1xuICB3aWR0aDogMTAwJTtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2Y1ZjVmNTtcbiAgY29sb3I6ICNiOWJkYzA7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgZGlzcGxheTogbm9uZTtcbn1cbiJdfQ== */";
     /***/
   },
 
+  /***/"./src/app/component/dashboard/dashboard.component.ts":
+  /*!************************************************************!*\
+    !*** ./src/app/component/dashboard/dashboard.component.ts ***!
+    \************************************************************/
+  /*! exports provided: DashboardComponent */
   /***/
-  "./src/app/component/dashboard/dashboard.component.ts": function srcAppComponentDashboardDashboardComponentTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppComponentDashboardDashboardComponentTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "DashboardComponent", function () {
       return DashboardComponent;
     });
     /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
     /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
-
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+    var _header_header_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__( /*! ../header/header.service */"./src/app/component/header/header.service.ts");
     var DashboardComponent = /*#__PURE__*/function () {
-      function DashboardComponent() {
+      function DashboardComponent(headerService) {
         _classCallCheck(this, DashboardComponent);
-
         this.isSticky = false;
         this.element = document.getElementById("header");
+        headerService.setHeader('visualize');
       }
-
       _createClass(DashboardComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {}
@@ -8754,211 +8013,95 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           });
         }
       }]);
-
       return DashboardComponent;
     }();
-
+    DashboardComponent.ctorParameters = function () {
+      return [{
+        type: _header_header_service__WEBPACK_IMPORTED_MODULE_2__["HeaderService"]
+      }];
+    };
     DashboardComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: "app-dashboard",
-      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! raw-loader!./dashboard.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/component/dashboard/dashboard.component.html"))["default"],
-      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! ./dashboard.component.css */
-      "./src/app/component/dashboard/dashboard.component.css"))["default"]]
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! raw-loader!./dashboard.component.html */"./node_modules/raw-loader/dist/cjs.js!./src/app/component/dashboard/dashboard.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! ./dashboard.component.css */"./src/app/component/dashboard/dashboard.component.css"))["default"]]
     })], DashboardComponent);
+
     /***/
   },
 
+  /***/"./src/app/component/display/display.component.css":
+  /*!*********************************************************!*\
+    !*** ./src/app/component/display/display.component.css ***!
+    \*********************************************************/
+  /*! exports provided: default */
   /***/
-  "./src/app/component/display/display.component.css": function srcAppComponentDisplayDisplayComponentCss(module, __webpack_exports__, __webpack_require__) {
+  function srcAppComponentDisplayDisplayComponentCss(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
+    __webpack_exports__["default"] = "\n.mat-select {\n  /*display: inline-block;*/\n  border: 1px solid #adadad;\n  width: 100%;\n  padding: 6px 2px;\n  margin-bottom: 0;\n  font-size: 12px;\n  font-weight: 100;\n  line-height: 1.1;\n  text-align: left;\n  vertical-align: middle;\n  cursor: pointer;\n  background-image: none;\n  border-radius: 4px;\n\n\n}\n::ng-deep .mat-form-field-underline {\n  display: none;\n}\n.mat-form-field {\n  font-size: 14px;\n  padding: 6px 2px;\n  text-align: center;\n  line-height: 2;\n  font-family: Roboto, \"Helvetica Neue\", sans-serif;\n  color: grey;\n}\n.center {\n  margin-left: 10%;\n  margin-right: 10%;\n}\n.highlightText {\n  background: yellow;\n}\n/*************************************/\n.tool_Home {\n  display: flex;\n}\n.content-left {\n  width: calc(65% - 30px);\n  min-width: 980px;\n  padding: 20px 0 20px 20px;\n  display: flex;\n  flex-direction: column;\n}\n.content-right {\n  width: calc(35% - 30px);\n  min-width: 630px;\n  padding: 20px;\n  display: flex;\n  flex-direction: column;\n}\n.h-flex{\n  display: flex;\n  gap: 2em\n}\n.mat-input-element-fix {\n  margin-left: -18px;\n  margin-right: 18px;\n}\n.pt-1 {\n  margin-top: 23px;\n}\n.w-20 {\n  width: 20%;\n}\n.w-40 {\n  width: 40%;\n  max-width: 350px;\n}\n.stepReset, .stepVisualize, .stepDownload, .stepDownloadText {\n  height: 41px;\n}\n.buttonLaTool {\n  margin: 0;\n}\n.extendedMetrics {\n  max-height: 250px;\n  padding-bottom: 0;\n}\n.extendedMetricsTable {\n  width: calc(100% - 40px);\n  padding: 0 20px 20px 20px\n}\n.logout-button {\n  padding-left: 12px;\n  padding-right: 12px;\n  width: 74px\n}\n.login-button {\n  padding-left: 18px;\n  padding-right: 18px;\n  width: 74px\n}\n.selected-indicators-wrapper {\n  overflow: auto;\n}\n.selected-indicators-label {\n  margin-top: 20px;\n  color: rgb(128, 128, 128);\n  font-size: 15px;\n  font-weight: 500;\n}\nul {\n  display: block;\n  list-style-type: disc;\n  -webkit-margin-before: 0.5em;\n          margin-block-start: 0.5em;\n  -webkit-margin-after: 0.5em;\n          margin-block-end: 0.5em;\n  -webkit-margin-start: 0;\n          margin-inline-start: 0;\n  -webkit-margin-end: 0;\n          margin-inline-end: 0;\n  -webkit-padding-start: 20px;\n          padding-inline-start: 20px;\n}\n.verdictContent {\n    display: flex;\n    flex-direction: column;\n    padding-bottom: 1em;\n}\n.verdictRow {\n    display: flex;\n}\n.verdictLabel {\n    font-weight: bold;\n    padding-bottom: 0.5em;\n    width: 6.7em;\n}\n.generateButton {\n    width: 15em;\n    margin-top: 1em;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50L2Rpc3BsYXkvZGlzcGxheS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFDQTtFQUNFLHlCQUF5QjtFQUN6Qix5QkFBeUI7RUFDekIsV0FBVztFQUNYLGdCQUFnQjtFQUNoQixnQkFBZ0I7RUFDaEIsZUFBZTtFQUNmLGdCQUFnQjtFQUNoQixnQkFBZ0I7RUFDaEIsZ0JBQWdCO0VBQ2hCLHNCQUFzQjtFQUN0QixlQUFlO0VBQ2Ysc0JBQXNCO0VBQ3RCLGtCQUFrQjs7O0FBR3BCO0FBQ0E7RUFDRSxhQUFhO0FBQ2Y7QUFDQTtFQUNFLGVBQWU7RUFDZixnQkFBZ0I7RUFDaEIsa0JBQWtCO0VBQ2xCLGNBQWM7RUFDZCxpREFBaUQ7RUFDakQsV0FBVztBQUNiO0FBQ0E7RUFDRSxnQkFBZ0I7RUFDaEIsaUJBQWlCO0FBQ25CO0FBRUE7RUFDRSxrQkFBa0I7QUFDcEI7QUFFQSxzQ0FBc0M7QUFFdEM7RUFDRSxhQUFhO0FBQ2Y7QUFFQTtFQUNFLHVCQUF1QjtFQUN2QixnQkFBZ0I7RUFDaEIseUJBQXlCO0VBQ3pCLGFBQWE7RUFDYixzQkFBc0I7QUFDeEI7QUFFQTtFQUNFLHVCQUF1QjtFQUN2QixnQkFBZ0I7RUFDaEIsYUFBYTtFQUNiLGFBQWE7RUFDYixzQkFBc0I7QUFDeEI7QUFFQTtFQUNFLGFBQWE7RUFDYjtBQUNGO0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsa0JBQWtCO0FBQ3BCO0FBRUE7RUFDRSxnQkFBZ0I7QUFDbEI7QUFFQTtFQUNFLFVBQVU7QUFDWjtBQUVBO0VBQ0UsVUFBVTtFQUNWLGdCQUFnQjtBQUNsQjtBQUVBO0VBQ0UsWUFBWTtBQUNkO0FBRUE7RUFDRSxTQUFTO0FBQ1g7QUFFQTtFQUNFLGlCQUFpQjtFQUNqQixpQkFBaUI7QUFDbkI7QUFFQTtFQUNFLHdCQUF3QjtFQUN4QjtBQUNGO0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsbUJBQW1CO0VBQ25CO0FBQ0Y7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQixtQkFBbUI7RUFDbkI7QUFDRjtBQUVBO0VBQ0UsY0FBYztBQUNoQjtBQUVBO0VBQ0UsZ0JBQWdCO0VBQ2hCLHlCQUF5QjtFQUN6QixlQUFlO0VBQ2YsZ0JBQWdCO0FBQ2xCO0FBRUE7RUFDRSxjQUFjO0VBQ2QscUJBQXFCO0VBQ3JCLDRCQUF5QjtVQUF6Qix5QkFBeUI7RUFDekIsMkJBQXVCO1VBQXZCLHVCQUF1QjtFQUN2Qix1QkFBc0I7VUFBdEIsc0JBQXNCO0VBQ3RCLHFCQUFvQjtVQUFwQixvQkFBb0I7RUFDcEIsMkJBQTBCO1VBQTFCLDBCQUEwQjtBQUM1QjtBQUVBO0lBQ0ksYUFBYTtJQUNiLHNCQUFzQjtJQUN0QixtQkFBbUI7QUFDdkI7QUFFQTtJQUNJLGFBQWE7QUFDakI7QUFFQTtJQUNJLGlCQUFpQjtJQUNqQixxQkFBcUI7SUFDckIsWUFBWTtBQUNoQjtBQUVBO0lBQ0ksV0FBVztJQUNYLGVBQWU7QUFDbkIiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnQvZGlzcGxheS9kaXNwbGF5LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcbi5tYXQtc2VsZWN0IHtcbiAgLypkaXNwbGF5OiBpbmxpbmUtYmxvY2s7Ki9cbiAgYm9yZGVyOiAxcHggc29saWQgI2FkYWRhZDtcbiAgd2lkdGg6IDEwMCU7XG4gIHBhZGRpbmc6IDZweCAycHg7XG4gIG1hcmdpbi1ib3R0b206IDA7XG4gIGZvbnQtc2l6ZTogMTJweDtcbiAgZm9udC13ZWlnaHQ6IDEwMDtcbiAgbGluZS1oZWlnaHQ6IDEuMTtcbiAgdGV4dC1hbGlnbjogbGVmdDtcbiAgdmVydGljYWwtYWxpZ246IG1pZGRsZTtcbiAgY3Vyc29yOiBwb2ludGVyO1xuICBiYWNrZ3JvdW5kLWltYWdlOiBub25lO1xuICBib3JkZXItcmFkaXVzOiA0cHg7XG5cblxufVxuOjpuZy1kZWVwIC5tYXQtZm9ybS1maWVsZC11bmRlcmxpbmUge1xuICBkaXNwbGF5OiBub25lO1xufVxuLm1hdC1mb3JtLWZpZWxkIHtcbiAgZm9udC1zaXplOiAxNHB4O1xuICBwYWRkaW5nOiA2cHggMnB4O1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIGxpbmUtaGVpZ2h0OiAyO1xuICBmb250LWZhbWlseTogUm9ib3RvLCBcIkhlbHZldGljYSBOZXVlXCIsIHNhbnMtc2VyaWY7XG4gIGNvbG9yOiBncmV5O1xufVxuLmNlbnRlciB7XG4gIG1hcmdpbi1sZWZ0OiAxMCU7XG4gIG1hcmdpbi1yaWdodDogMTAlO1xufVxuXG4uaGlnaGxpZ2h0VGV4dCB7XG4gIGJhY2tncm91bmQ6IHllbGxvdztcbn1cblxuLyoqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKiovXG5cbi50b29sX0hvbWUge1xuICBkaXNwbGF5OiBmbGV4O1xufVxuXG4uY29udGVudC1sZWZ0IHtcbiAgd2lkdGg6IGNhbGMoNjUlIC0gMzBweCk7XG4gIG1pbi13aWR0aDogOTgwcHg7XG4gIHBhZGRpbmc6IDIwcHggMCAyMHB4IDIwcHg7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG59XG5cbi5jb250ZW50LXJpZ2h0IHtcbiAgd2lkdGg6IGNhbGMoMzUlIC0gMzBweCk7XG4gIG1pbi13aWR0aDogNjMwcHg7XG4gIHBhZGRpbmc6IDIwcHg7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG59XG5cbi5oLWZsZXh7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGdhcDogMmVtXG59XG5cbi5tYXQtaW5wdXQtZWxlbWVudC1maXgge1xuICBtYXJnaW4tbGVmdDogLTE4cHg7XG4gIG1hcmdpbi1yaWdodDogMThweDtcbn1cblxuLnB0LTEge1xuICBtYXJnaW4tdG9wOiAyM3B4O1xufVxuXG4udy0yMCB7XG4gIHdpZHRoOiAyMCU7XG59XG5cbi53LTQwIHtcbiAgd2lkdGg6IDQwJTtcbiAgbWF4LXdpZHRoOiAzNTBweDtcbn1cblxuLnN0ZXBSZXNldCwgLnN0ZXBWaXN1YWxpemUsIC5zdGVwRG93bmxvYWQsIC5zdGVwRG93bmxvYWRUZXh0IHtcbiAgaGVpZ2h0OiA0MXB4O1xufVxuXG4uYnV0dG9uTGFUb29sIHtcbiAgbWFyZ2luOiAwO1xufVxuXG4uZXh0ZW5kZWRNZXRyaWNzIHtcbiAgbWF4LWhlaWdodDogMjUwcHg7XG4gIHBhZGRpbmctYm90dG9tOiAwO1xufVxuXG4uZXh0ZW5kZWRNZXRyaWNzVGFibGUge1xuICB3aWR0aDogY2FsYygxMDAlIC0gNDBweCk7XG4gIHBhZGRpbmc6IDAgMjBweCAyMHB4IDIwcHhcbn1cblxuLmxvZ291dC1idXR0b24ge1xuICBwYWRkaW5nLWxlZnQ6IDEycHg7XG4gIHBhZGRpbmctcmlnaHQ6IDEycHg7XG4gIHdpZHRoOiA3NHB4XG59XG5cbi5sb2dpbi1idXR0b24ge1xuICBwYWRkaW5nLWxlZnQ6IDE4cHg7XG4gIHBhZGRpbmctcmlnaHQ6IDE4cHg7XG4gIHdpZHRoOiA3NHB4XG59XG5cbi5zZWxlY3RlZC1pbmRpY2F0b3JzLXdyYXBwZXIge1xuICBvdmVyZmxvdzogYXV0bztcbn1cblxuLnNlbGVjdGVkLWluZGljYXRvcnMtbGFiZWwge1xuICBtYXJnaW4tdG9wOiAyMHB4O1xuICBjb2xvcjogcmdiKDEyOCwgMTI4LCAxMjgpO1xuICBmb250LXNpemU6IDE1cHg7XG4gIGZvbnQtd2VpZ2h0OiA1MDA7XG59XG5cbnVsIHtcbiAgZGlzcGxheTogYmxvY2s7XG4gIGxpc3Qtc3R5bGUtdHlwZTogZGlzYztcbiAgbWFyZ2luLWJsb2NrLXN0YXJ0OiAwLjVlbTtcbiAgbWFyZ2luLWJsb2NrLWVuZDogMC41ZW07XG4gIG1hcmdpbi1pbmxpbmUtc3RhcnQ6IDA7XG4gIG1hcmdpbi1pbmxpbmUtZW5kOiAwO1xuICBwYWRkaW5nLWlubGluZS1zdGFydDogMjBweDtcbn1cblxuLnZlcmRpY3RDb250ZW50IHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gICAgcGFkZGluZy1ib3R0b206IDFlbTtcbn1cblxuLnZlcmRpY3RSb3cge1xuICAgIGRpc3BsYXk6IGZsZXg7XG59XG5cbi52ZXJkaWN0TGFiZWwge1xuICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xuICAgIHBhZGRpbmctYm90dG9tOiAwLjVlbTtcbiAgICB3aWR0aDogNi43ZW07XG59XG5cbi5nZW5lcmF0ZUJ1dHRvbiB7XG4gICAgd2lkdGg6IDE1ZW07XG4gICAgbWFyZ2luLXRvcDogMWVtO1xufVxuIl19 */";
 
-
-    __webpack_exports__["default"] = "\n\nthead{\n  \n  color: grey;\n  font-size: .85em;\n  letter-spacing: .1em;\n  text-transform: uppercase;\n}\n\n\n.activities:nth-child(odd) {\n  background-color: #f1f1f1;\n  \n}\n\n\n.leraningevents:nth-child(odd) {\n  background-color: #f1f1f1;\n \n}\n\n\n.sortable {\n  cursor: pointer;\n}\n\n\ndiv {\n  display:inline-block;\n  margin: 20px;\n  \n}\n\n\nbutton {\n  display:inline-block;\n  margin: 30px;\n  \n}\n\n\n.mat-select {\n  display: inline-block;\n  border: 1px solid #adadad;\n  width: 100%;\n  padding: 6px 2px;\n  margin-bottom: 0;\n  font-size: 12px;\n  font-weight: 100;\n  line-height: 1.1;\n  text-align: left;\n  vertical-align: middle;\n  cursor: pointer;\n  background-image: none;\n  border-radius: 4px;\n  \n  \n}\n\n\n::ng-deep .mat-form-field-underline {\n  display: none;\n}\n\n\n.mat-form-field {\n  font-size: 14px;\n  padding: 6px 2px;\n  text-align: center;\n  line-height: 2;\n  font-family: Roboto, \"Helvetica Neue\", sans-serif;\n  color: grey;\n}\n\n\n.center {\n  margin-left: 10%;\n  margin-right: 10%;\n}\n\n\n.highlightText {\n  background: yellow;\n}\n\n\n/*************************************/\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50L2Rpc3BsYXkvZGlzcGxheS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBRUE7O0VBRUUsV0FBVztFQUNYLGdCQUFnQjtFQUNoQixvQkFBb0I7RUFDcEIseUJBQXlCO0FBQzNCOzs7QUFHQTtFQUNFLHlCQUF5Qjs7QUFFM0I7OztBQUVBO0VBQ0UseUJBQXlCOztBQUUzQjs7O0FBRUE7RUFDRSxlQUFlO0FBQ2pCOzs7QUFFQTtFQUNFLG9CQUFvQjtFQUNwQixZQUFZOztBQUVkOzs7QUFFQTtFQUNFLG9CQUFvQjtFQUNwQixZQUFZOztBQUVkOzs7QUFHQTtFQUNFLHFCQUFxQjtFQUNyQix5QkFBeUI7RUFDekIsV0FBVztFQUNYLGdCQUFnQjtFQUNoQixnQkFBZ0I7RUFDaEIsZUFBZTtFQUNmLGdCQUFnQjtFQUNoQixnQkFBZ0I7RUFDaEIsZ0JBQWdCO0VBQ2hCLHNCQUFzQjtFQUN0QixlQUFlO0VBQ2Ysc0JBQXNCO0VBQ3RCLGtCQUFrQjs7O0FBR3BCOzs7QUFDQTtFQUNFLGFBQWE7QUFDZjs7O0FBQ0E7RUFDRSxlQUFlO0VBQ2YsZ0JBQWdCO0VBQ2hCLGtCQUFrQjtFQUNsQixjQUFjO0VBQ2QsaURBQWlEO0VBQ2pELFdBQVc7QUFDYjs7O0FBQ0E7RUFDRSxnQkFBZ0I7RUFDaEIsaUJBQWlCO0FBQ25COzs7QUFFQTtFQUNFLGtCQUFrQjtBQUNwQjs7O0FBTUEsc0NBQXNDIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50L2Rpc3BsYXkvZGlzcGxheS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXG5cbnRoZWFke1xuICBcbiAgY29sb3I6IGdyZXk7XG4gIGZvbnQtc2l6ZTogLjg1ZW07XG4gIGxldHRlci1zcGFjaW5nOiAuMWVtO1xuICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xufVxuXG5cbi5hY3Rpdml0aWVzOm50aC1jaGlsZChvZGQpIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2YxZjFmMTtcbiAgXG59XG5cbi5sZXJhbmluZ2V2ZW50czpudGgtY2hpbGQob2RkKSB7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmMWYxZjE7XG4gXG59XG5cbi5zb3J0YWJsZSB7XG4gIGN1cnNvcjogcG9pbnRlcjtcbn1cblxuZGl2IHtcbiAgZGlzcGxheTppbmxpbmUtYmxvY2s7XG4gIG1hcmdpbjogMjBweDtcbiAgXG59XG5cbmJ1dHRvbiB7XG4gIGRpc3BsYXk6aW5saW5lLWJsb2NrO1xuICBtYXJnaW46IDMwcHg7XG4gIFxufVxuXG5cbi5tYXQtc2VsZWN0IHtcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICBib3JkZXI6IDFweCBzb2xpZCAjYWRhZGFkO1xuICB3aWR0aDogMTAwJTtcbiAgcGFkZGluZzogNnB4IDJweDtcbiAgbWFyZ2luLWJvdHRvbTogMDtcbiAgZm9udC1zaXplOiAxMnB4O1xuICBmb250LXdlaWdodDogMTAwO1xuICBsaW5lLWhlaWdodDogMS4xO1xuICB0ZXh0LWFsaWduOiBsZWZ0O1xuICB2ZXJ0aWNhbC1hbGlnbjogbWlkZGxlO1xuICBjdXJzb3I6IHBvaW50ZXI7XG4gIGJhY2tncm91bmQtaW1hZ2U6IG5vbmU7XG4gIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgXG4gIFxufVxuOjpuZy1kZWVwIC5tYXQtZm9ybS1maWVsZC11bmRlcmxpbmUge1xuICBkaXNwbGF5OiBub25lO1xufVxuLm1hdC1mb3JtLWZpZWxkIHtcbiAgZm9udC1zaXplOiAxNHB4O1xuICBwYWRkaW5nOiA2cHggMnB4O1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIGxpbmUtaGVpZ2h0OiAyO1xuICBmb250LWZhbWlseTogUm9ib3RvLCBcIkhlbHZldGljYSBOZXVlXCIsIHNhbnMtc2VyaWY7XG4gIGNvbG9yOiBncmV5O1xufVxuLmNlbnRlciB7XG4gIG1hcmdpbi1sZWZ0OiAxMCU7XG4gIG1hcmdpbi1yaWdodDogMTAlO1xufVxuXG4uaGlnaGxpZ2h0VGV4dCB7XG4gIGJhY2tncm91bmQ6IHllbGxvdztcbn1cblxuXG5cblxuXG4vKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKi8iXX0= */";
     /***/
   },
 
+  /***/"./src/app/component/display/display.component.ts":
+  /*!********************************************************!*\
+    !*** ./src/app/component/display/display.component.ts ***!
+    \********************************************************/
+  /*! exports provided: DisplayComponent */
   /***/
-  "./src/app/component/display/display.component.ts": function srcAppComponentDisplayDisplayComponentTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppComponentDisplayDisplayComponentTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "DisplayComponent", function () {
       return DisplayComponent;
     });
     /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
     /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
-
-
-    var _data_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! ../../data.service */
-    "./src/app/data.service.ts");
+    var _data_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__( /*! ../../data.service */"./src/app/data.service.ts");
     /* harmony import */
-
-
-    var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! @angular/router */
-    "./node_modules/@angular/router/fesm2015/router.js");
+    var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__( /*! @angular/router */"./node_modules/@angular/router/fesm2015/router.js");
     /* harmony import */
-
-
-    var _angular_material__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-    /*! @angular/material */
-    "./node_modules/@angular/material/esm2015/material.js");
+    var _angular_material__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__( /*! @angular/material */"./node_modules/@angular/material/esm2015/material.js");
     /* harmony import */
-
-
-    var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
-    /*! @angular/material/dialog */
-    "./node_modules/@angular/material/esm2015/dialog.js");
+    var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__( /*! @angular/material/dialog */"./node_modules/@angular/material/esm2015/dialog.js");
     /* harmony import */
-
-
-    var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
-    /*! @angular/platform-browser */
-    "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
+    var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__( /*! @angular/platform-browser */"./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
     /* harmony import */
-
-
-    var src_app_chart_helper_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
-    /*! src/app/chart-helper.service */
-    "./src/app/chart-helper.service.ts");
-
+    var src_app_chart_helper_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__( /*! src/app/chart-helper.service */"./src/app/chart-helper.service.ts");
+    /* harmony import */
+    var rxjs_operators__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__( /*! rxjs/operators */"./node_modules/rxjs/_esm2015/operators/index.js");
+    /* harmony import */
+    var _header_header_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__( /*! ../header/header.service */"./src/app/component/header/header.service.ts");
     var DisplayComponent = /*#__PURE__*/function () {
-      function DisplayComponent(dataService, chartHelperService, router, snackbar, dialog, sanitizer) {
-        var _this5 = this;
-
+      function DisplayComponent(dataService, chartHelperService, router, snackbar, dialog, sanitizer, headerTemplateService) {
         _classCallCheck(this, DisplayComponent);
-
         this.dataService = dataService;
         this.chartHelperService = chartHelperService;
         this.router = router;
         this.snackbar = snackbar;
         this.dialog = dialog;
         this.sanitizer = sanitizer;
-        this.dropdownList = []; //learning activities dropdown
-
-        this.selectedActivityItems = []; //learning activities dropdown
-
+        this.headerTemplateService = headerTemplateService;
         this.name = [];
         this.options = []; // learning events options
-
-        this.optionsActivities = []; // learning Activities options
-
-        this.AllActivities = []; // learning Activities options
-
-        this.AllLearningEventsOptions = [];
-        this.learningEvents = [];
-        this.learningAct = [];
-        this.isLoaded = false;
-        this.LearningEvents_mateSelect = [];
-        this.ind_list = [];
-        this.mat_list = [];
         this.element = document.getElementById("header");
-
-        this.getSelectedind = function (x) {
-          if (x.length > 0) {
-            var indicator = [];
-            var data = x;
-            data.forEach(function (element) {
-              var o = _defineProperty({}, element.indicatorName, element.metrics.split(","));
-
-              indicator.push(o); /// other properties and values
-            }); // Convert the text to BLOB.
-
-            var textToBLOB = new Blob([JSON.stringify({
-              indicator: indicator
-            })], {
-              type: "application/json"
-            });
-            var sFileName = "indicators JSON.json"; // The file to save the data.
-
-            var newLink = document.createElement("a");
-            newLink.download = sFileName;
-
-            if (window.webkitURL != null) {
-              newLink.href = window.webkitURL.createObjectURL(textToBLOB);
-            } else {
-              newLink.href = window.URL.createObjectURL(textToBLOB);
-              newLink.style.display = "none"; // document.body.appendChild(newLink);
-            }
-
-            newLink.click();
-          } else {
-            window.alert("No indicator is selected");
-          }
-        };
-        /*
-          This function pushes all selected indicators in an array
-          and stores them in localStorage, so the drop down menu in the dashboard page can display the selected indicators even after refreshing the page
-          We also store the "check" property in localStorage so the check marks stay checked when the user returns to the display component
-          */
-
-
-        this.forwardIndicators = function (x) {
-          var indicators = [];
-          var indicatorReferences = [];
-          var selectedLearningEvents = [];
-          var p = _this5.selectedevent;
-          var regex = /\[[0-9]+\]/;
-
-          var _iterator4 = _createForOfIteratorHelper(_this5.ind_list),
-              _step4;
-
-          try {
-            for (_iterator4.s(); !(_step4 = _iterator4.n()).done;) {
-              var ind = _step4.value;
-
-              //console.log(this.ind_list);
-              //console.log(this.options);
-              if (!indicators.includes(ind)) {
-                indicatorReferences.push(ind.match(regex)[0]);
-                indicators.push(ind);
-              }
-            } //this.chartHelperService.setSettings("selectedLearningEvents", selectedLearningEvents);
-
-          } catch (err) {
-            _iterator4.e(err);
-          } finally {
-            _iterator4.f();
-          }
-
-          _this5.chartHelperService.setSettings("selectedIndicators", indicators);
-
-          _this5.chartHelperService.setSettings("referenceNumbers", indicatorReferences);
-
-          if (indicators.length > 0) {
-            var eventList = _this5.data.filter(function (obj) {
-              return p.includes(obj.LearningEvents);
-            });
-
-            localStorage.setItem("check", JSON.stringify(eventList));
-
-            _this5.router.navigate(["/dashboard"]);
-          } else {
-            window.alert("No indicator is selected");
-          }
-        };
+        this.ind_list = [];
+        this.checkedMap = new Map();
+        this.indicatorMap = new Map();
+        this.selectedLearningEvents = [];
+        this.previousSelectedEvents = [];
+        this.selectedLearningActivities = [];
+        this.headerTemplateService.setHeader('display');
+        this.loggedIn = JSON.parse(localStorage.getItem('currentUser'));
+        this.treeData$ = this.dataService.getdata();
       }
-
       _createClass(DisplayComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
@@ -8969,384 +8112,265 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             idField: "item_id",
             textField: "item_text",
             selectAllText: "Select All",
-            unSelectAllText: "UnSelect All",
+            unSelectAllText: "Deselect All",
             itemsShowLimit: 3,
             allowSearchFilter: true
           };
-        } // function of fetching data from database
-
+        }
+        // fetches Data from Database and retrieves previous selected Entities from LocalStorage to initialize with
       }, {
         key: "fetchdata",
         value: function fetchdata() {
-          var _this6 = this;
-
-          //console.log("fetchdata: ");
-          this.dataService.getdata().subscribe(function (data) {
-            _this6.data = data; /// complete data present in database
-
-            var allEventActivities = data; //for pushing all the activities under selected events that are not selected Mainly for maintaing history
-
-            var _iterator5 = _createForOfIteratorHelper(_this6.data),
-                _step5;
-
-            try {
-              for (_iterator5.s(); !(_step5 = _iterator5.n()).done;) {
-                var val = _step5.value;
-
-                //retrive all learning events and PUSH all to the Dropdown and below I PUSH only those WAS checked before going to Dashboard
-                _this6.AllLearningEventsOptions.push(val["LearningEvents"]); //here it pushes all the Events
-
-              }
-            } catch (err) {
-              _iterator5.e(err);
-            } finally {
-              _iterator5.f();
-            }
-
-            if (!localStorage.getItem("check")) {
-              //retrive all learning Activities and PUSH all to the Dropdown for the first time
-              var eventCount = Object.keys(_this6.data).length;
-
-              for (var k = 0; k < eventCount; k++) {
-                var activitiesCount = Object.keys(_this6.data[k].LearningActivities).length;
-
-                for (var l = 0; l < activitiesCount; l++) {
-                  _this6.AllActivities.push(_this6.data[k].LearningActivities[l].Name);
-                }
-              }
-            }
-
-            _this6.isLoaded = true; //After the data is fetched, we check if the localStorage contains the check property (this is to retain the checkbox state)
-
-            if (localStorage.getItem("check")) {
-              //console.log("localStorage.getItem(): ", localStorage.getItem("check"));
-              //Parse the data with the check property and loop through the indicators and see if the checked property is true
-              //If it's true we push it to the ind_list and mat_list, so the selected indicators from before are displayed at the top
-              _this6.data = JSON.parse(localStorage.getItem("check"));
-
-              for (var i = 0; i < _this6.data.length; i++) {
-                for (var j = 0; j < _this6.data[i]["LearningActivities"].length; j++) {
-                  //console.log(data[i]["LearningActivities"][j]["indicator"]);
-                  for (var _k = 0; _k < _this6.data[i]["LearningActivities"][j]["indicator"].length; _k++) {
-                    if (_this6.data[i]["LearningActivities"][j]["indicator"][_k].checked) {
-                      _this6.ind_list.push(_this6.data[i]["LearningActivities"][j]["indicator"][_k]["indicatorName"]);
-
-                      _this6.mat_list.push(_this6.data[i]["LearningActivities"][j]["indicator"][_k]);
-                    }
-                  }
-                }
-              } // }
-              // if (localStorage.getItem("check"))
-              // {
-              //to retrive the Checked learningEvents after coming from the Dashboard
-
-
-              var _iterator6 = _createForOfIteratorHelper(_this6.data),
-                  _step6;
-
-              try {
-                for (_iterator6.s(); !(_step6 = _iterator6.n()).done;) {
-                  var val = _step6.value;
-
-                  _this6.options.push(val["LearningEvents"]);
-                }
-              } catch (err) {
-                _iterator6.e(err);
-              } finally {
-                _iterator6.f();
-              }
-
-              var _eventCount = Object.keys(_this6.data).length; //let activitiesCount = Object.keys(this.data.LearningActivities).length;
-              //to retrive the Checked learningActivities after coming from the Dashboard
-
-              for (var _k2 = 0; _k2 < _eventCount; _k2++) {
-                var _activitiesCount = Object.keys(_this6.data[_k2].LearningActivities).length;
-
-                for (var _l = 0; _l < _activitiesCount; _l++) {
-                  _this6.optionsActivities.push(_this6.data[_k2].LearningActivities[_l].Name);
-                }
-              }
-
-              _this6.LearningEvents_mateSelect = _this6.options; //to retain the current and previous state
-
-              _this6.selectedevent = _this6.options; // to keep the object filled becasue people can select Activity instead of Event first
-
-              var op = _this6.options;
-              var otherActivities = allEventActivities.filter(function (obj) {
-                return op.includes(obj.LearningEvents);
-              }); // let Count = Object.keys(otherActivities).length;
-              //   for (let k = 0; k < Count; k++) {
-              //     let activityCount = Object.keys(otherActivities[k].LearningActivities).length;
-              //     for (let l = 0; l < activityCount; l++) {
-              //       this.AllActivities.push(otherActivities[k].LearningActivities[l].Name);
-              //     }
-              //   }
-
-              _this6.setLearningActivities(otherActivities); //this will run for pushing all activities (into the LA Dropdown) under SelectedEvents for maintaining the history otherwise the else will run
-
-
-              _this6.selectedActivityItems = _this6.optionsActivities; // first the DD will be populated with activities then these will be selected
-            } else {
-              _this6.setLearningActivities(_this6.data);
-
-              _this6.LearningEvents_mateSelect = _this6.AllLearningEventsOptions; // to keep the object filled becasue people can select Activity instead of Event first
-
-              _this6.selectedevent = _this6.AllLearningEventsOptions;
-              _this6.selectedActivityItems = _this6.AllActivities;
-            }
-          });
+          var _this8 = this;
+          var previousSelectedEvents = JSON.parse(localStorage.getItem('selectedEventsInit'));
+          var previousSelectedActivities = JSON.parse(localStorage.getItem('selectedActivitiesInit'));
+          var previousSelectedIndicators = JSON.parse(localStorage.getItem('selectedIndicatorsInit'));
+          this.learningEventsOptions$ = this.dataService.getEvents().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (learningEvents) {
+            return learningEvents.map(function (learningEvent) {
+              return learningEvent.name;
+            });
+          }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["tap"])(function (options) {
+            _this8.allEventOptions = options;
+            _this8.initFromLocalStorage(previousSelectedEvents, previousSelectedActivities, previousSelectedIndicators);
+          }));
         }
+        //Initializes Dropdowns and selected Indicators with given attributes
+      }, {
+        key: "initFromLocalStorage",
+        value: function initFromLocalStorage(events, activities, indicators) {
+          var _this9 = this;
+          if (events) {
+            this.onEventValueChange(events, true);
+            this.selectedLearningEvents = events;
+          } else {
+            this.onEventValueChange(this.allEventOptions, true);
+          }
+          if (activities) {
+            this.selectedLearningActivities = activities;
+            this.onActivitySelectChange();
+          }
+          if (indicators) {
+            indicators.forEach(function (indicator) {
+              _this9.checkedMap.set(indicator._id, true);
+              _this9.indicatorMap.set(indicator._id, indicator);
+            });
+            localStorage.setItem("selectedIndicatorsInit", JSON.stringify(indicators));
+            this.ind_list = indicators.map(function (indicator) {
+              return indicator.Title;
+            });
+          }
+        }
+        // Handles changes in the Event Dropdown. Filters TableData and options for activity dropdown corresponding
+        // to selected Events. Saves selected Events in LocalStorage
       }, {
         key: "onEventValueChange",
-        value: function onEventValueChange(eventValue) {
-          var _this7 = this;
-
-          this.selectedevent = eventValue; //console.log("onEventValueChange:", p);
-
-          this.ind_list = []; //empty the seleted list of indicators after event an Event change
-
-          this.selectedActivityItems = []; //empty the seleted list of Activities after event change
-
-          this.searchInd = ""; //empty
-
-          this.searchMat = ""; //empty
-
-          this.dataService.getdata().subscribe(function (data) {
-            _this7.data = data; //console.log("data: ", this.data);
-            //  if (localStorage.getItem("check")) {this.data = JSON.parse(localStorage.getItem("check"));
-            //console.log("localStorage.inside: ", JSON.parse(localStorage.getItem("check")));//  }
-
-            _this7.isLoaded = true; //if (eventValue == "Select All") { } else {
-
-            var event = _this7.data.filter(function (obj) {
-              //console.log("inside else: ", obj.LearningEvents);
-              return eventValue.includes(obj.LearningEvents);
-            });
-
-            _this7.setLearningActivities(event); //to update the DD of LA
-
-
-            if (eventValue != "") {
-              _this7.data = event; //console.log("inside p IF: ", event);
-            } //}
-
-          });
-        } /////////////// function for learning activities selection /////////////
-
-      }, {
-        key: "onActivitySelect",
-        value: function onActivitySelect(item) {
-          var _this8 = this;
-
-          var p = this.selectedevent;
-          this.ind_list = []; //empty the seleted list of indicators after event an Event change
-
-          this.searchInd = ""; //empty
-
-          this.searchMat = ""; //empty
-          //console.log("item: ", item);
-          //console.log("this.selectedevent: ", p);
-
-          this.dataService.getdata().subscribe(function (data) {
-            _this8.data = data; //console.log("onActivitySelect: ", p);
-
-            _this8.isLoaded = true;
-
-            var event = _this8.data.filter(function (obj) {
-              return p.includes(obj.LearningEvents);
-            });
-
-            _this8.setLearningActivities(event); //console.log("onActivitySelect event: ", event);
-
-
-            if (p != "") {
-              _this8.data = event;
+        value: function onEventValueChange(eventValue, init) {
+          var _this10 = this;
+          if (this.eventsChanged(eventValue) || init) {
+            if (eventValue.length === 0) {
+              eventValue = this.allEventOptions;
             }
-
-            var newArray = _this8.selectedActivityItems;
-
-            _this8.data.filter(function (obj) {
-              obj.LearningActivities = obj.LearningActivities.filter(function (obj2) {
-                return newArray.includes(obj2.Name);
+            this.resetTable(true);
+            this.selectedLearningEvents$ = this.treeData$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (learningEvents) {
+              return learningEvents.filter(function (learningEvent) {
+                return eventValue.includes(learningEvent.name);
               });
+            }));
+            this.tableData$ = this.selectedLearningEvents$;
+            this.learningActivitiesOptions$ = this.tableData$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (learningEvents) {
+              var _ref;
+              return (_ref = []).concat.apply(_ref, _toConsumableArray(learningEvents.map(function (learningEvent) {
+                return learningEvent.activities;
+              })));
+            }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (learningActivities) {
+              return _toConsumableArray(new Set(learningActivities.map(function (learningActivity) {
+                return learningActivity.name;
+              })));
+            }));
+            setTimeout(function () {
+              localStorage.setItem("selectedEventsInit", JSON.stringify(_this10.selectedLearningEvents));
             });
+          }
+        }
+      }, {
+        key: "eventsChanged",
+        value: function eventsChanged(currentEvents) {
+          var eventSet = new Set([].concat(_toConsumableArray(this.previousSelectedEvents), _toConsumableArray(currentEvents)));
+          return _toConsumableArray(eventSet.values()).length !== this.previousSelectedEvents.length || _toConsumableArray(eventSet.values()).length !== currentEvents.length;
+        }
+      }, {
+        key: "onOpen",
+        value: function onOpen() {
+          this.previousSelectedEvents = this.selectedLearningEvents;
+        }
+        // resets the Table and clears table data stored in LocalStorage
+      }, {
+        key: "resetTable",
+        value: function resetTable(withActivities) {
+          if (withActivities) {
+            this.selectedLearningActivities = []; //empty the seleted list of Activities after event change
+            localStorage.removeItem("selectedActivitiesInit");
+          }
+          this.ind_list = []; //empty the seleted list of indicators after event an Event change
+          this.indicatorMap.clear();
+          this.checkedMap.clear();
+          localStorage.removeItem("selectedIndicatorsInit");
+          this.searchInd = ""; //empty
+          this.searchMat = ""; //empty
+        }
+        // Filters TableData corresponding to selected Activities and save those in LocalStorage
+      }, {
+        key: "onActivitySelectChange",
+        value: function onActivitySelectChange() {
+          var _this11 = this;
+          this.resetTable();
+          this.determineTableDataBySelectedEventsAndActivities();
+          setTimeout(function () {
+            localStorage.setItem("selectedActivitiesInit", JSON.stringify(_this11.selectedLearningActivities));
           });
         }
+        // Filters Table Data depending on Events and Activities selected
       }, {
-        key: "onSelectAll",
-        value: function onSelectAll(items) {
-          this.onActivitySelect(items); //console.log("onSelectAll: ", items);
-          //console.log("onSelectAll: ", this.selectedItems);
-          // this.onActivitySelect(items);
+        key: "determineTableDataBySelectedEventsAndActivities",
+        value: function determineTableDataBySelectedEventsAndActivities() {
+          var _this12 = this;
+          if (this.selectedLearningActivities.length === 0) {
+            this.tableData$ = this.selectedLearningEvents$;
+          } else {
+            this.tableData$ = this.selectedLearningEvents$.pipe(
+            // remove Activities from Events which are not selected
+            Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (learningEvents) {
+              return learningEvents.map(function (learningEvent) {
+                learningEvent.activities = learningEvent.activities.filter(function (activity) {
+                  return _this12.selectedLearningActivities.includes(activity.name);
+                });
+                return learningEvent;
+              });
+            }),
+            // remove Events which have no Activity left
+            Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (learningEvents) {
+              return learningEvents.filter(function (learningEvent) {
+                return learningEvent.activities.length > 0;
+              });
+            }));
+          }
+        }
+        // Filters Table Data depending on Search Strings entered in Indicator and Metric Search
+      }, {
+        key: "determineFilteredTableDataByIndicatorAndMetricText",
+        value: function determineFilteredTableDataByIndicatorAndMetricText() {
+          var indicatorFiltered = this.searchInd && this.searchInd !== "";
+          var metricFiltered = this.searchMat && this.searchMat !== "";
+          if (!indicatorFiltered && !metricFiltered) {
+            this.determineTableDataBySelectedEventsAndActivities();
+          } else {
+            if (indicatorFiltered) {
+              this.filterTableDataByIndicatorSearch();
+            }
+            if (metricFiltered) {
+              this.filterTableDataByMetricSearch();
+            }
+          }
         }
       }, {
-        key: "checkvalue",
-        value: function checkvalue(event) {
-          if (this.selectedActivityItems.length == 0) {//this.onEventValueChange(this.selectedevent);
-          } else {
-            var index = this.selectedActivityItems.length;
-
-            if (index !== -1) {
-              this.selectedActivityItems.splice(index, 1);
-              this.onActivitySelect(this.selectedActivityItems);
-            }
-          }
-        } /////////////// display learning activities ////////////////////
-
+        key: "filterTableDataByIndicatorSearch",
+        value: function filterTableDataByIndicatorSearch() {
+          var _this13 = this;
+          this.tableData$ = this.tableData$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (learningEvents) {
+            return learningEvents.map(function (event) {
+              event.activities.map(function (activity) {
+                activity.indicators = activity.indicators.filter(function (indicator) {
+                  return "".concat(indicator.Title, " ").concat(indicator.referenceNumber).toLowerCase().includes(_this13.searchInd.toLowerCase());
+                });
+                return activity;
+              });
+              event.activities = event.activities.filter(function (activity) {
+                return activity.indicators.length > 0;
+              });
+              return event;
+            });
+          }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (learningEvents) {
+            return learningEvents.filter(function (learningEvent) {
+              return learningEvent.activities.length > 0;
+            });
+          }));
+        }
       }, {
-        key: "setLearningActivities",
-        value: function setLearningActivities(events) {
-          //console.log("setLearningActivities event: ", events);
-          this.dropdownList = [];
-          this.name = [];
-
-          var _iterator7 = _createForOfIteratorHelper(events),
-              _step7;
-
-          try {
-            for (_iterator7.s(); !(_step7 = _iterator7.n()).done;) {
-              var learningEvent = _step7.value;
-
-              //console.log("setLearningActivities learningEvents: ", learningEvents);
-              var _iterator8 = _createForOfIteratorHelper(learningEvent.LearningActivities),
-                  _step8;
-
-              try {
-                for (_iterator8.s(); !(_step8 = _iterator8.n()).done;) {
-                  var entry = _step8.value;
-                  //console.log("setLearningActivities - entry- learningEvents.LearningActivities", entry);
-                  this.dropdownList.push(entry.Name);
-
-                  var _iterator9 = _createForOfIteratorHelper(entry.indicator),
-                      _step9;
-
-                  try {
-                    for (_iterator9.s(); !(_step9 = _iterator9.n()).done;) {
-                      var ind1 = _step9.value;
-                      this.name.push(ind1.metrics);
-                    }
-                  } catch (err) {
-                    _iterator9.e(err);
-                  } finally {
-                    _iterator9.f();
-                  }
-                }
-              } catch (err) {
-                _iterator8.e(err);
-              } finally {
-                _iterator8.f();
-              }
-            }
-          } catch (err) {
-            _iterator7.e(err);
-          } finally {
-            _iterator7.f();
-          }
-        } ////////////////pop up by click Indicator to show meterics ///////////
-
+        key: "filterTableDataByMetricSearch",
+        value: function filterTableDataByMetricSearch() {
+          var _this14 = this;
+          this.tableData$ = this.tableData$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (learningEvents) {
+            return learningEvents.map(function (event) {
+              event.activities.map(function (activity) {
+                activity.indicators = activity.indicators.filter(function (indicator) {
+                  return indicator.metrics.toLowerCase().includes(_this14.searchMat.toLowerCase());
+                });
+                return activity;
+              });
+              event.activities = event.activities.filter(function (activity) {
+                return activity.indicators.length > 0;
+              });
+              return event;
+            });
+          }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(function (learningEvents) {
+            return learningEvents.filter(function (learningEvent) {
+              return learningEvent.activities.length > 0;
+            });
+          }));
+        }
+        // pop up by click Indicator to show meterics
       }, {
         key: "getMeterics",
-        value: function getMeterics(indic) {
-          this.mat = indic.metrics;
-          var res = this.mat;
-          this.sp = res.split(",");
+        value: function getMeterics(indicator) {
+          this.metrics_list = indicator.metrics.split(",");
+          this.metricsIndicatorTitle = indicator.Title;
           this.dialog.open(this.secondDialog);
-        } ///////////////////   search by indicator ///////////////
-
+        }
+        //function for checkbox to select indicator and save selection in LocalStorage
       }, {
-        key: "searchIndicator",
-        value: function searchIndicator(search) {
-          var _this9 = this;
-
-          if (search || search == '') {
-            if (this.selectedevent) {
-              this.dataService.getsearchind(search).subscribe(function (data) {
-                var op = _this9.selectedevent;
-                var filterNonSelEvents = data.filter(function (obj) {
-                  return op.includes(obj.LearningEvents);
-                });
-                _this9.data = filterNonSelEvents;
-              });
-            } else {
-              this.dataService.getsearchind(search).subscribe(function (data) {
-                _this9.data = data;
-              });
-            }
+        key: "onCheckboxChange",
+        value: function onCheckboxChange(indic) {
+          var _this15 = this;
+          var checked = !this.checkedMap.get(indic._id);
+          this.checkedMap.set(indic._id, checked);
+          if (checked) {
+            this.ind_list.push(indic.Title);
+            this.indicatorMap.set(indic._id, indic);
           } else {
-            console.log("searchIndicator: ");
-          }
-        } ///////////////////   search by metrics ///////////////
-
-      }, {
-        key: "learningEventsChangeOnSearch",
-        value: function learningEventsChangeOnSearch(search) {
-          var _this10 = this;
-
-          // if (search) {
-          //   this.dataService.getsearchresult(search).subscribe((data: data[]) => {
-          //     this.data = data;
-          //   });
-          // } else {
-          //   console.log("learningEventsChangeOnSearch: ");
-          //  // this.fetchdata();
-          // }
-          if (search || search == '') {
-            if (this.selectedevent) {
-              this.dataService.getsearchresult(search).subscribe(function (data) {
-                var op = _this10.selectedevent;
-                var filterNonSelEvents = data.filter(function (obj) {
-                  return op.includes(obj.LearningEvents);
-                });
-                _this10.data = filterNonSelEvents;
-              });
-            } else {
-              this.dataService.getsearchresult(search).subscribe(function (data) {
-                _this10.data = data;
-              });
-            }
-          } else {
-            console.log("searchMatrics: ");
-          }
-        } ////////////////// function for checkbox to select indicator   //////////////////
-
-      }, {
-        key: "Checkbox",
-        value: function Checkbox(event, selectInd) {
-          this.ind = selectInd.indicatorName;
-          this.met = selectInd; //console.log("CheckboxFun event", event);
-          //console.log("CheckboxFun selectInd", selectInd);
-
-          if (event.target.checked) {
-            //Set the checked property to true and store it in localStorage so the checkboxes stay checked after reload
-            selectInd.checked = true;
-            localStorage.setItem("check", JSON.stringify(this.data));
-            this.ind_list.push(this.ind);
-            this.mat_list.push(this.met);
-          } else {
-            var index = this.ind_list.indexOf(this.ind); //Set checked to false and reset the localStorage values to keep it updated
-
-            selectInd.checked = false;
-            localStorage.setItem("check", JSON.stringify(this.data));
-            var index1 = this.mat_list.indexOf(this.met);
-
+            console.log(this.ind_list);
+            console.log(indic.Title);
+            console.log(this.ind_list.indexOf(indic.Title));
+            var index = this.ind_list.indexOf(indic.Title);
             if (index !== -1) {
               this.ind_list.splice(index, 1);
-              this.mat_list.splice(index1, 1);
+              this.indicatorMap.set(indic._id, null);
             }
           }
+          setTimeout(function () {
+            localStorage.setItem("selectedIndicatorsInit", JSON.stringify(_toConsumableArray(_this15.indicatorMap.values()).filter(function (i) {
+              return i;
+            })));
+          });
         }
+        // method to check if at least one indicator is selected
       }, {
-        key: "download",
-        value: function download(sList, mimeType, filename) {
-          if (sList.length > 0) {
-            var myFunction = function myFunction(item, index) {
-              content += index + 1 + " Indicator Name: " + item.indicatorName + "\n\t" + "Metrics: " + item.metrics + "\n\n";
-              console.log(item.indicatorName + item.metrics);
-            };
-
-            var content = "";
-            var data = sList;
-            data.forEach(myFunction);
+        key: "atLeastOneChecked",
+        value: function atLeastOneChecked() {
+          return _toConsumableArray(this.checkedMap.values()).includes(true);
+        }
+        // Transforms selected indicators into a downloadable .txt file
+      }, {
+        key: "textClicked",
+        value: function textClicked() {
+          var selectedIndicatorList = _toConsumableArray(this.indicatorMap.values()).filter(function (indicator) {
+            return indicator;
+          });
+          var mimeType = 'text/plain';
+          var filename = 'Indicators TEXT.txt';
+          if (selectedIndicatorList.length > 0) {
+            var content = selectedIndicatorList.map(function (indicator, index) {
+              return "".concat(index + 1, " Indicator Name: ").concat(indicator.Title).concat(indicator.referenceNumber, "\n\tMetrics: ").concat(indicator.metrics, "\n\n");
+            }).join('');
             var a = document.createElement('a');
             var blob = new Blob([content], {
               type: mimeType
@@ -9359,61 +8383,256 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             window.alert("No indicator is selected");
           }
         }
+        // Transforms selected indicators into a downloadable .json file
+      }, {
+        key: "jsonClicked",
+        value: function jsonClicked() {
+          var selectedIndicatorList = _toConsumableArray(this.indicatorMap.values()).filter(function (indicator) {
+            return indicator;
+          });
+          if (selectedIndicatorList.length > 0) {
+            var indicatorObjects = selectedIndicatorList.map(function (indicator) {
+              return _defineProperty({}, "".concat(indicator.Title).concat(indicator.referenceNumber), indicator.metrics.split(","));
+            });
+            // Convert the text to BLOB.
+            var textToBLOB = new Blob([JSON.stringify({
+              indicator: indicatorObjects
+            })], {
+              type: "application/json"
+            });
+            var sFileName = "indicators JSON.json"; // The file to save the data.
+            var newLink = document.createElement("a");
+            newLink.download = sFileName;
+            if (window.webkitURL != null) {
+              newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+            } else {
+              newLink.href = window.URL.createObjectURL(textToBLOB);
+              newLink.style.display = "none";
+              // document.body.appendChild(newLink);
+            }
+
+            newLink.click();
+          } else {
+            window.alert("No indicator is selected");
+          }
+        }
       }, {
         key: "reset",
-        value: function reset() {
+        value:
+        // removes all saved Table states from LocalStorage and clears all selected Events/Activities/Indicators
+        function reset() {
+          localStorage.removeItem("selectedEventsInit");
+          localStorage.removeItem("selectedActivitiesInit");
+          localStorage.removeItem("selectedIndicatorsInit");
           this.ind_list = [];
-          this.mat_list = []; //When the user presses the reset-button the "checked" property of the indicators have to be set to false and the check property in the localstorage is removed
-
-          for (var i = 0; i < this.data.length; i++) {
-            for (var j = 0; j < this.data[i]["LearningActivities"].length; j++) {
-              //  console.log(data[i]["LearningActivities"][j]["indicator"]);
-              for (var k = 0; k < this.data[i]["LearningActivities"][j]["indicator"].length; k++) {
-                this.data[i]["LearningActivities"][j]["indicator"][k].checked = false;
-              }
-            }
-          }
-
+          this.checkedMap.clear();
+          this.indicatorMap.clear();
+          this.selectedLearningEvents = [];
+          this.onEventValueChange(this.allEventOptions, true);
           localStorage.removeItem("check");
-          this.uncheckAll(); // this.router.navigate(['./display/data']);
-          // location.reload();
-
-          location.href = "/";
+        }
+        /*
+          This function pushes all selected indicators in an array
+          and stores them in localStorage, so the drop down menu in the dashboard page can display the selected indicators even after refreshing the page
+          We also store the "check" property in localStorage so the check marks stay checked when the user returns to the display component
+          */
+      }, {
+        key: "visualizeClicked",
+        value: function visualizeClicked() {
+          var indicatorNames = [];
+          var indicatorReferences = [];
+          //our Map of selected indicators is transformed to an Array of [indicatorReference, indicator]
+          _toConsumableArray(this.indicatorMap.entries()).forEach(function (array) {
+            if (array[1]) {
+              indicatorReferences.push(array[1].referenceNumber);
+              indicatorNames.push(array[1].Title);
+            }
+          });
+          //this.chartHelperService.setSettings("selectedLearningEvents", selectedLearningEvents);
+          this.chartHelperService.setSettings("selectedIndicators", indicatorNames);
+          this.chartHelperService.setSettings("referenceNumbers", indicatorReferences);
+          if (indicatorNames.length > 0) {
+            localStorage.setItem("selectedEventsInit", JSON.stringify(this.selectedLearningEvents));
+            localStorage.setItem("selectedActivitiesInit", JSON.stringify(this.selectedLearningActivities));
+            localStorage.setItem("selectedIndicatorsInit", JSON.stringify(_toConsumableArray(this.indicatorMap.values()).filter(function (i) {
+              return i;
+            })));
+            this.router.navigate(["/dashboard"]);
+          } else {
+            window.alert("No indicator is selected");
+          }
         }
       }, {
         key: "backToTop",
-        value: function backToTop() {
+        value:
+        // Scrolls back to the top of the page
+        function backToTop() {
           this.element.scrollIntoView({
             behavior: "smooth"
           });
-        } //will solve the issue of comming back from another page
-
+        }
+        //will solve the issue of comming back from another page
       }, {
         key: "loadScript",
         value: function loadScript() {
           var node = document.createElement("script"); // create script tag
-
           node.src = "assets/js/tooltipJS.js"; // set source
-
           node.type = "text/javascript";
           node.async = true; // makes script run asynchronously
-
-          node.charset = "utf-8"; // append to head of document
-
+          node.charset = "utf-8";
+          // append to head of document
           document.getElementsByTagName("head")[0].appendChild(node);
         }
+        // method to open the review Dialog
       }, {
-        key: "uncheckAll",
-        value: function uncheckAll() {
-          this.indicatorCheckboxs.forEach(function (element) {
-            element.nativeElement.checked = false;
+        key: "onReview",
+        value: function onReview(indicator) {
+          this.dialog.open(this.reviewDialog, {
+            data: indicator
+          });
+        }
+        // method to open the verdict Dialog
+      }, {
+        key: "onVerdict",
+        value: function onVerdict(indicator) {
+          var _this16 = this;
+          this.metricsIndicatorTitle = indicator.Title.trim();
+          this.dataService.getReferenceByReferenceNumber(indicator.referenceNumber).subscribe(function (reference) {
+            if (reference) {
+              _this16.dialog.open(_this16.verdictDialog, {
+                data: reference
+              });
+            } else {
+              window.alert('Reference has been deleted.');
+            }
+          });
+        }
+      }, {
+        key: "onDelete",
+        value: function onDelete(data) {
+          this.dialog.open(this.deleteDialog, {
+            data: {
+              indicator: data.indicator,
+              activity: data.activity
+            }
+          });
+        }
+        // navigates to logIn
+      }, {
+        key: "logIn",
+        value: function logIn() {
+          this.router.navigate(['/login'], {
+            state: {
+              url: '/',
+              additionalInfo: null
+            }
+          });
+        }
+        // logs out user => clear currentUser data from LocalStorage
+      }, {
+        key: "logout",
+        value: function logout() {
+          localStorage.removeItem('currentUser');
+          this.loggedIn = undefined;
+        }
+        // clears indicator from selected indicators if indicator gets deleted
+      }, {
+        key: "indicatorDeleted",
+        value: function indicatorDeleted(indicator) {
+          if (this.checkedMap.get(indicator._id)) {
+            this.onCheckboxChange(indicator);
+          }
+        }
+        // method to generate the old/previous Tree Structure DataBase and export it as .json file
+      }, {
+        key: "generateTreeStructure",
+        value: function generateTreeStructure() {
+          var _this17 = this;
+          this.dataService.getdata().subscribe(function (treeDataNew) {
+            var oldTreeStructure = treeDataNew.map(function (event) {
+              return {
+                LearningEvents: event.name,
+                LearningActivities: event.activities.map(function (activity) {
+                  return {
+                    Name: activity.name,
+                    indicator: activity.indicators.map(function (indicator) {
+                      return {
+                        indicatorName: indicator.Title.trim() + " " + indicator.referenceNumber,
+                        metrics: indicator.metrics
+                      };
+                    })
+                  };
+                })
+              };
+            });
+            _this17.dataService.generateOldTreeStructure(oldTreeStructure).subscribe(function (success) {
+              if (success) {
+                window.alert("Successfully generated TreeStructure");
+              } else {
+                window.alert("Could not generate TreeStructure. Further information can be found in the logs");
+              }
+            });
+            _this17.exportToJSON(oldTreeStructure);
+          });
+        }
+        // method to export the given treeStructure as Json
+      }, {
+        key: "exportToJSON",
+        value: function exportToJSON(oldTreeStructure) {
+          // Convert the text to BLOB.
+          var textToBLOB = new Blob([JSON.stringify(oldTreeStructure)], {
+            type: "application/json"
+          });
+          var sFileName = "treeStructure.json"; // The file to save the data.
+          var newLink = document.createElement("a");
+          newLink.download = sFileName;
+          if (window.webkitURL != null) {
+            newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+          } else {
+            newLink.href = window.URL.createObjectURL(textToBLOB);
+            newLink.style.display = "none";
+            // document.body.appendChild(newLink);
+          }
+
+          newLink.click();
+        }
+        // method to navigate to the Reference edit of the Reference which belongs to the omitted id
+      }, {
+        key: "editReference",
+        value: function editReference(id) {
+          this.router.navigate(["reference/".concat(id, "/edit")]);
+        }
+      }, {
+        key: "deleteIndicator",
+        value: function deleteIndicator(indicator) {
+          var _this18 = this;
+          if (confirm("Do you really want to delete this Indicator?")) {
+            this.indicatorDeleted(indicator);
+            this.dataService.deleteIndicator(indicator._id).subscribe(function () {
+              _this18.fetchdata();
+            });
+          }
+        }
+      }, {
+        key: "removeIndicatorFromActivity",
+        value: function removeIndicatorFromActivity(data) {
+          var _this19 = this;
+          this.dataService.removeIndicatorFromActivity(data.activity._id, data.indicator._id).subscribe(function (success) {
+            if (success) {
+              _this19.fetchdata();
+            } else {
+              if (confirm('This activity is the only one assigned to the indicator. Do you wish to delete the entire indicator?')) {
+                _this19.indicatorDeleted(data.indicator);
+                _this19.dataService.deleteIndicator(data.indicator._id).subscribe(function () {
+                  _this19.fetchdata();
+                });
+              }
+            }
           });
         }
       }]);
-
       return DisplayComponent;
     }();
-
     DisplayComponent.ctorParameters = function () {
       return [{
         type: _data_service__WEBPACK_IMPORTED_MODULE_2__["DataService"]
@@ -9427,62 +8646,56 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_5__["MatDialog"]
       }, {
         type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_6__["DomSanitizer"]
+      }, {
+        type: _header_header_service__WEBPACK_IMPORTED_MODULE_9__["HeaderService"]
       }];
     };
-
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])("secondDialog", {
       "static": true
     })], DisplayComponent.prototype, "secondDialog", void 0);
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChildren"])("indicatorCheckbox")], DisplayComponent.prototype, "indicatorCheckboxs", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])("reviewDialog", {
+      "static": true
+    })], DisplayComponent.prototype, "reviewDialog", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])("verdictDialog", {
+      "static": true
+    })], DisplayComponent.prototype, "verdictDialog", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])("deleteDialog", {
+      "static": true
+    })], DisplayComponent.prototype, "deleteDialog", void 0);
     DisplayComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: "app-display",
-      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! raw-loader!./display.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/component/display/display.component.html"))["default"],
-      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! ./display.component.css */
-      "./src/app/component/display/display.component.css"))["default"]]
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! raw-loader!./display.component.html */"./node_modules/raw-loader/dist/cjs.js!./src/app/component/display/display.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! ./display.component.css */"./src/app/component/display/display.component.css"))["default"]]
     })], DisplayComponent);
+
     /***/
   },
 
+  /***/"./src/app/component/display/filter.pipe.ts":
+  /*!**************************************************!*\
+    !*** ./src/app/component/display/filter.pipe.ts ***!
+    \**************************************************/
+  /*! exports provided: SanitizeHtmlPipe */
   /***/
-  "./src/app/component/display/filter.pipe.ts": function srcAppComponentDisplayFilterPipeTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppComponentDisplayFilterPipeTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "SanitizeHtmlPipe", function () {
       return SanitizeHtmlPipe;
     });
     /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
     /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
-
-
-    var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! @angular/platform-browser */
-    "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
-
+    var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__( /*! @angular/platform-browser */"./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
     var SanitizeHtmlPipe = /*#__PURE__*/function () {
       function SanitizeHtmlPipe(_sanitizer) {
         _classCallCheck(this, SanitizeHtmlPipe);
-
         this._sanitizer = _sanitizer;
       }
-
       _createClass(SanitizeHtmlPipe, [{
         key: "transform",
         value: function transform(text, search) {
@@ -9500,68 +8713,66 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }
         }
       }]);
-
       return SanitizeHtmlPipe;
     }();
-
     SanitizeHtmlPipe.ctorParameters = function () {
       return [{
         type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["DomSanitizer"]
       }];
     };
-
     SanitizeHtmlPipe = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Pipe"])({
       name: 'sanitizeHtml'
     })], SanitizeHtmlPipe);
+
     /***/
   },
 
+  /***/"./src/app/component/display/select-check-all.component.ts":
+  /*!*****************************************************************!*\
+    !*** ./src/app/component/display/select-check-all.component.ts ***!
+    \*****************************************************************/
+  /*! exports provided: SelectCheckAllComponent */
   /***/
-  "./src/app/component/display/select-check-all.component.ts": function srcAppComponentDisplaySelectCheckAllComponentTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppComponentDisplaySelectCheckAllComponentTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "SelectCheckAllComponent", function () {
       return SelectCheckAllComponent;
     });
     /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
     /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
-
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
     var SelectCheckAllComponent = /*#__PURE__*/function () {
       function SelectCheckAllComponent() {
         _classCallCheck(this, SelectCheckAllComponent);
-
         this.values = [];
         this.text = 'Select All';
         this.sendCount = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
       }
-
       _createClass(SelectCheckAllComponent, [{
         key: "ngOnInit",
-        value: function ngOnInit() {// this.model.update.emit(this.values);
+        value: function ngOnInit() {
+          // this.model.update.emit(this.values);
         }
       }, {
         key: "isChecked",
         value: function isChecked() {
-          return this.model.value && this.values.length && this.model.value.length === this.values.length;
+          if (!this.model || !this.values) {
+            return false;
+          } else {
+            return this.model.value.length === this.values.length;
+          }
         }
       }, {
         key: "isIndeterminate",
         value: function isIndeterminate() {
-          return this.model.value && this.values.length && this.model.value.length && this.model.value.length < this.values.length;
+          if (!this.model || !this.values) {
+            return false;
+          }
+          return this.model.value.length && this.model.value.length < this.values.length;
         }
       }, {
         key: "toggleSelection",
@@ -9575,10 +8786,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }
         }
       }]);
-
       return SelectCheckAllComponent;
     }();
-
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()], SelectCheckAllComponent.prototype, "model", void 0);
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()], SelectCheckAllComponent.prototype, "values", void 0);
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()], SelectCheckAllComponent.prototype, "text", void 0);
@@ -9588,55 +8797,156 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       template: "\n    <mat-checkbox class=\"mat-option\"\n                [disableRipple]=\"true\"\n                [indeterminate]=\"isIndeterminate()\"\n                [checked]=\"isChecked()\"\n                (click)=\"$event.stopPropagation()\"\n                (change)=\"toggleSelection($event)\"\n                >\n      {{text}}\n    </mat-checkbox>\n  ",
       styles: [""]
     })], SelectCheckAllComponent);
+
     /***/
   },
 
+  /***/"./src/app/component/display/table/table.component.css":
+  /*!*************************************************************!*\
+    !*** ./src/app/component/display/table/table.component.css ***!
+    \*************************************************************/
+  /*! exports provided: default */
   /***/
-  "./src/app/component/dropdown/dropdown.component.css": function srcAppComponentDropdownDropdownComponentCss(module, __webpack_exports__, __webpack_require__) {
+  function srcAppComponentDisplayTableTableComponentCss(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
+    __webpack_exports__["default"] = ".w-100 {\n  width: 100%;\n}\n\n.w-50 {\n  width: 50%;\n}\n\nth {\n  color: grey;\n  font-size: .85em;\n  letter-spacing: .1em;\n  text-transform: uppercase;\n  text-align: left;\n  padding-left: 1em;\n  padding-bottom: 0.5em;\n}\n\n.learningactivities {\n  width: 170px;\n}\n\n.activities:nth-child(odd) {\n  .learningactivities {\n    background-color: #f1f1f1;\n  }\n\n  .indicator {\n    background-color: #f1f1f1;\n  }\n}\n\n.activities:nth-child(even) {\n  .learningactivities {\n    background-color: #e5e5e5;\n  }\n\n  .indicator {\n    background-color: #e5e5e5;\n  }\n}\n\n.leraningevents:nth-child(odd) {\n  background-color: #f1f1f1;\n}\n\n.leraningevents {\n  width: 120px;\n}\n\n.sortable {\n  cursor: pointer;\n}\n\n.review-icon, .reference-icon {\n  margin-left: 0.3em;\n}\n\n.indicator-content {\n  display: flex;\n  align-items: flex-start;\n}\n\n.indicator-text {\n  display: flex;\n  flex-wrap: wrap;\n}\n\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50L2Rpc3BsYXkvdGFibGUvdGFibGUuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFdBQVc7QUFDYjs7QUFFQTtFQUNFLFVBQVU7QUFDWjs7QUFFQTtFQUNFLFdBQVc7RUFDWCxnQkFBZ0I7RUFDaEIsb0JBQW9CO0VBQ3BCLHlCQUF5QjtFQUN6QixnQkFBZ0I7RUFDaEIsaUJBQWlCO0VBQ2pCLHFCQUFxQjtBQUN2Qjs7QUFFQTtFQUNFLFlBQVk7QUFDZDs7QUFFQTtFQUNFO0lBQ0UseUJBQXlCO0VBQzNCOztFQUVBO0lBQ0UseUJBQXlCO0VBQzNCO0FBQ0Y7O0FBRUE7RUFDRTtJQUNFLHlCQUF5QjtFQUMzQjs7RUFFQTtJQUNFLHlCQUF5QjtFQUMzQjtBQUNGOztBQUVBO0VBQ0UseUJBQXlCO0FBQzNCOztBQUVBO0VBQ0UsWUFBWTtBQUNkOztBQUVBO0VBQ0UsZUFBZTtBQUNqQjs7QUFFQTtFQUNFLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLGFBQWE7RUFDYix1QkFBdUI7QUFDekI7O0FBRUE7RUFDRSxhQUFhO0VBQ2IsZUFBZTtBQUNqQiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudC9kaXNwbGF5L3RhYmxlL3RhYmxlLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIudy0xMDAge1xuICB3aWR0aDogMTAwJTtcbn1cblxuLnctNTAge1xuICB3aWR0aDogNTAlO1xufVxuXG50aCB7XG4gIGNvbG9yOiBncmV5O1xuICBmb250LXNpemU6IC44NWVtO1xuICBsZXR0ZXItc3BhY2luZzogLjFlbTtcbiAgdGV4dC10cmFuc2Zvcm06IHVwcGVyY2FzZTtcbiAgdGV4dC1hbGlnbjogbGVmdDtcbiAgcGFkZGluZy1sZWZ0OiAxZW07XG4gIHBhZGRpbmctYm90dG9tOiAwLjVlbTtcbn1cblxuLmxlYXJuaW5nYWN0aXZpdGllcyB7XG4gIHdpZHRoOiAxNzBweDtcbn1cblxuLmFjdGl2aXRpZXM6bnRoLWNoaWxkKG9kZCkge1xuICAubGVhcm5pbmdhY3Rpdml0aWVzIHtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjFmMWYxO1xuICB9XG5cbiAgLmluZGljYXRvciB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2YxZjFmMTtcbiAgfVxufVxuXG4uYWN0aXZpdGllczpudGgtY2hpbGQoZXZlbikge1xuICAubGVhcm5pbmdhY3Rpdml0aWVzIHtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZTVlNWU1O1xuICB9XG5cbiAgLmluZGljYXRvciB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2U1ZTVlNTtcbiAgfVxufVxuXG4ubGVyYW5pbmdldmVudHM6bnRoLWNoaWxkKG9kZCkge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjFmMWYxO1xufVxuXG4ubGVyYW5pbmdldmVudHMge1xuICB3aWR0aDogMTIwcHg7XG59XG5cbi5zb3J0YWJsZSB7XG4gIGN1cnNvcjogcG9pbnRlcjtcbn1cblxuLnJldmlldy1pY29uLCAucmVmZXJlbmNlLWljb24ge1xuICBtYXJnaW4tbGVmdDogMC4zZW07XG59XG5cbi5pbmRpY2F0b3ItY29udGVudCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGFsaWduLWl0ZW1zOiBmbGV4LXN0YXJ0O1xufVxuXG4uaW5kaWNhdG9yLXRleHQge1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LXdyYXA6IHdyYXA7XG59XG5cbiJdfQ== */";
 
-
-    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudC9kcm9wZG93bi9kcm9wZG93bi5jb21wb25lbnQuY3NzIn0= */";
     /***/
   },
 
+  /***/"./src/app/component/display/table/table.component.ts":
+  /*!************************************************************!*\
+    !*** ./src/app/component/display/table/table.component.ts ***!
+    \************************************************************/
+  /*! exports provided: TableComponent */
   /***/
-  "./src/app/component/dropdown/dropdown.component.ts": function srcAppComponentDropdownDropdownComponentTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppComponentDisplayTableTableComponentTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
+    __webpack_require__.d(__webpack_exports__, "TableComponent", function () {
+      return TableComponent;
+    });
+    /* harmony import */
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+    var _data_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__( /*! ../../../data.service */"./src/app/data.service.ts");
+    /* harmony import */
+    var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__( /*! @angular/router */"./node_modules/@angular/router/fesm2015/router.js");
+    var TableComponent = /*#__PURE__*/function () {
+      function TableComponent(dataService, router) {
+        _classCallCheck(this, TableComponent);
+        this.dataService = dataService;
+        this.router = router;
+        this.checkboxEmitter = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        this.getMetericsEmitter = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        this.onReviewEmitter = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        this.onVerdictEmitter = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        this.onDeleteEmitter = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+      }
+      _createClass(TableComponent, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {}
+        // emits the indicator when the checkbox is clicked
+      }, {
+        key: "onCheckboxChange",
+        value: function onCheckboxChange(indic) {
+          this.checkboxEmitter.emit(indic);
+        }
+        // navigates to edit of indicator
+      }, {
+        key: "editAsSuperAdmin",
+        value: function editAsSuperAdmin(indic) {
+          this.router.navigate(["indicator/".concat(indic._id, "/edit")]);
+        }
+        // computes the original indicator name with referenceNumber
+      }, {
+        key: "getFullIndicatorName",
+        value: function getFullIndicatorName(indic) {
+          return "".concat(indic.Title, " ").concat(indic.referenceNumber);
+        }
+        // navigates to the link corresponding to the reference of the chosen indicator
+      }, {
+        key: "navigateToReferenceLink",
+        value: function navigateToReferenceLink(indic) {
+          this.dataService.getReferenceByReferenceNumber(indic.referenceNumber).subscribe(function (reference) {
+            window.open(reference.link);
+          });
+        }
+      }]);
+      return TableComponent;
+    }();
+    TableComponent.ctorParameters = function () {
+      return [{
+        type: _data_service__WEBPACK_IMPORTED_MODULE_2__["DataService"]
+      }, {
+        type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+      }];
+    };
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()], TableComponent.prototype, "data", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()], TableComponent.prototype, "searchInd", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()], TableComponent.prototype, "searchMat", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()], TableComponent.prototype, "checkedMap", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])()], TableComponent.prototype, "checkboxEmitter", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])()], TableComponent.prototype, "getMetericsEmitter", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])()], TableComponent.prototype, "onReviewEmitter", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])()], TableComponent.prototype, "onVerdictEmitter", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])()], TableComponent.prototype, "onDeleteEmitter", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()], TableComponent.prototype, "loggedIn", void 0);
+    TableComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-table',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! raw-loader!./table.component.html */"./node_modules/raw-loader/dist/cjs.js!./src/app/component/display/table/table.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! ./table.component.css */"./src/app/component/display/table/table.component.css"))["default"]]
+    })], TableComponent);
 
+    /***/
+  },
 
+  /***/"./src/app/component/dropdown/dropdown.component.css":
+  /*!***********************************************************!*\
+    !*** ./src/app/component/dropdown/dropdown.component.css ***!
+    \***********************************************************/
+  /*! exports provided: default */
+  /***/
+  function srcAppComponentDropdownDropdownComponentCss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudC9kcm9wZG93bi9kcm9wZG93bi5jb21wb25lbnQuY3NzIn0= */";
+
+    /***/
+  },
+
+  /***/"./src/app/component/dropdown/dropdown.component.ts":
+  /*!**********************************************************!*\
+    !*** ./src/app/component/dropdown/dropdown.component.ts ***!
+    \**********************************************************/
+  /*! exports provided: DropdownComponent */
+  /***/
+  function srcAppComponentDropdownDropdownComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
     __webpack_require__.d(__webpack_exports__, "DropdownComponent", function () {
       return DropdownComponent;
     });
     /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
     /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
-
-
-    var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! @angular/forms */
-    "./node_modules/@angular/forms/fesm2015/forms.js");
-
+    var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__( /*! @angular/forms */"./node_modules/@angular/forms/fesm2015/forms.js");
     var DropdownComponent = /*#__PURE__*/function () {
       function DropdownComponent(fb) {
         _classCallCheck(this, DropdownComponent);
-
         this.fb = fb;
         this.learningevents = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]();
         this.learningEvents = [];
@@ -9644,7 +8954,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.valueChange = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
         this.text = 'Select All';
       }
-
       _createClass(DropdownComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {
@@ -9659,16 +8968,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.valueChange.emit(state);
         }
       }]);
-
       return DropdownComponent;
     }();
-
     DropdownComponent.ctorParameters = function () {
       return [{
         type: _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"]
       }];
     };
-
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()], DropdownComponent.prototype, "model", void 0);
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()], DropdownComponent.prototype, "values", void 0);
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])()], DropdownComponent.prototype, "valueChange", void 0);
@@ -9678,84 +8984,82 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     })], DropdownComponent.prototype, "allSelected", void 0);
     DropdownComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: "app-dropdown",
-      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! raw-loader!./dropdown.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/component/dropdown/dropdown.component.html"))["default"],
-      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! ./dropdown.component.css */
-      "./src/app/component/dropdown/dropdown.component.css"))["default"]]
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! raw-loader!./dropdown.component.html */"./node_modules/raw-loader/dist/cjs.js!./src/app/component/dropdown/dropdown.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! ./dropdown.component.css */"./src/app/component/dropdown/dropdown.component.css"))["default"]]
     })], DropdownComponent);
+
     /***/
   },
 
+  /***/"./src/app/component/header/header.component.css":
+  /*!*******************************************************!*\
+    !*** ./src/app/component/header/header.component.css ***!
+    \*******************************************************/
+  /*! exports provided: default */
   /***/
-  "./src/app/component/header/header.component.css": function srcAppComponentHeaderHeaderComponentCss(module, __webpack_exports__, __webpack_require__) {
+  function srcAppComponentHeaderHeaderComponentCss(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony default export */
+    __webpack_exports__["default"] = ".example-spacer {\n    flex: 1 1 auto;\n  }\n\n  .HeaderLogo {\n    cursor: pointer;\n  }\n\n  .buttonHead {\n  padding: 13px 26px;\n  text-align: center;\n  transition: 1s;\n  background-size: 1051% auto;\n  color: white;\n  border-radius: 4px;\n  display: inline-block;\n  border: 0;\n  background-image: linear-gradient(45deg, #3f51b5 10%, #a1bcde 51%, #3f51b5 100%);\n  cursor: pointer;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  -webkit-user-select: none;\n  touch-action: manipulation;\n  font-size: 15px;\n  height: 100%\n}\n\n  .buttonHead:hover {\n  background-position: right center;\n  /* change the direction of the change here */\n  color: #fff;\n  text-decoration: none;\n}\n\n  .buttonHead:active {\n  transform: scale(0.80);\n}\n\n  /*RUBEN STUFF*/\n\n  .template-container-display {\n  width: 100%;\n  padding-left: 3em;\n  display: flex;\n  justify-content: space-between;\n}\n\n  .right-buttons {\n  display: flex;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50L2hlYWRlci9oZWFkZXIuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGNBQWM7RUFDaEI7O0VBRUE7SUFDRSxlQUFlO0VBQ2pCOztFQUdGO0VBQ0Usa0JBQWtCO0VBQ2xCLGtCQUFrQjtFQUNsQixjQUFjO0VBQ2QsMkJBQTJCO0VBQzNCLFlBQVk7RUFDWixrQkFBa0I7RUFDbEIscUJBQXFCO0VBQ3JCLFNBQVM7RUFDVCxnRkFBZ0Y7RUFDaEYsZUFBZTtFQUNmLHNCQUFzQjtFQUN0QixxQkFBcUI7RUFDckIsaUJBQWlCO0VBQ2pCLHlCQUF5QjtFQUN6QiwwQkFBMEI7RUFDMUIsZUFBZTtFQUNmO0FBQ0Y7O0VBRUE7RUFDRSxpQ0FBaUM7RUFDakMsNENBQTRDO0VBQzVDLFdBQVc7RUFDWCxxQkFBcUI7QUFDdkI7O0VBRUE7RUFDRSxzQkFBc0I7QUFDeEI7O0VBR0EsY0FBYzs7RUFFZDtFQUNFLFdBQVc7RUFDWCxpQkFBaUI7RUFDakIsYUFBYTtFQUNiLDhCQUE4QjtBQUNoQzs7RUFFQTtFQUNFLGFBQWE7QUFDZiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudC9oZWFkZXIvaGVhZGVyLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhhbXBsZS1zcGFjZXIge1xuICAgIGZsZXg6IDEgMSBhdXRvO1xuICB9XG5cbiAgLkhlYWRlckxvZ28ge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgfVxuXG5cbi5idXR0b25IZWFkIHtcbiAgcGFkZGluZzogMTNweCAyNnB4O1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIHRyYW5zaXRpb246IDFzO1xuICBiYWNrZ3JvdW5kLXNpemU6IDEwNTElIGF1dG87XG4gIGNvbG9yOiB3aGl0ZTtcbiAgYm9yZGVyLXJhZGl1czogNHB4O1xuICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIGJvcmRlcjogMDtcbiAgYmFja2dyb3VuZC1pbWFnZTogbGluZWFyLWdyYWRpZW50KDQ1ZGVnLCAjM2Y1MWI1IDEwJSwgI2ExYmNkZSA1MSUsICMzZjUxYjUgMTAwJSk7XG4gIGN1cnNvcjogcG9pbnRlcjtcbiAgLW1vei11c2VyLXNlbGVjdDogbm9uZTtcbiAgLW1zLXVzZXItc2VsZWN0OiBub25lO1xuICB1c2VyLXNlbGVjdDogbm9uZTtcbiAgLXdlYmtpdC11c2VyLXNlbGVjdDogbm9uZTtcbiAgdG91Y2gtYWN0aW9uOiBtYW5pcHVsYXRpb247XG4gIGZvbnQtc2l6ZTogMTVweDtcbiAgaGVpZ2h0OiAxMDAlXG59XG5cbi5idXR0b25IZWFkOmhvdmVyIHtcbiAgYmFja2dyb3VuZC1wb3NpdGlvbjogcmlnaHQgY2VudGVyO1xuICAvKiBjaGFuZ2UgdGhlIGRpcmVjdGlvbiBvZiB0aGUgY2hhbmdlIGhlcmUgKi9cbiAgY29sb3I6ICNmZmY7XG4gIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbn1cblxuLmJ1dHRvbkhlYWQ6YWN0aXZlIHtcbiAgdHJhbnNmb3JtOiBzY2FsZSgwLjgwKTtcbn1cblxuXG4vKlJVQkVOIFNUVUZGKi9cblxuLnRlbXBsYXRlLWNvbnRhaW5lci1kaXNwbGF5IHtcbiAgd2lkdGg6IDEwMCU7XG4gIHBhZGRpbmctbGVmdDogM2VtO1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XG59XG5cbi5yaWdodC1idXR0b25zIHtcbiAgZGlzcGxheTogZmxleDtcbn1cbiJdfQ== */";
 
-
-    __webpack_exports__["default"] = ".example-spacer {\n    flex: 1 1 auto;\n  }\n  \n  .HeaderLogo {\n    cursor: pointer;\n  }\n  \n  .buttonHead {\n  padding: 13px 26px;\n  text-align: center;\n  transition: 1s;\n  background-size: 1051% auto;\n  color: white;\n  border-radius: 4px;\n  display: inline-block;\n  border: 0px;\n  background-image: linear-gradient(45deg, #3f51b5 10%, #a1bcde 51%, #3f51b5 100%);\n  cursor: pointer;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  -webkit-user-select: none;\n  touch-action: manipulation;\n  font-size: 15px;\n}\n  \n  .buttonHead:hover {\n  background-position: right center;\n  /* change the direction of the change here */\n  color: #fff;\n  text-decoration: none;\n}\n  \n  .buttonHead:active {\n  transform: scale(0.80);\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50L2hlYWRlci9oZWFkZXIuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGNBQWM7RUFDaEI7O0VBRUE7SUFDRSxlQUFlO0VBQ2pCOztFQUdGO0VBQ0Usa0JBQWtCO0VBQ2xCLGtCQUFrQjtFQUNsQixjQUFjO0VBQ2QsMkJBQTJCO0VBQzNCLFlBQVk7RUFDWixrQkFBa0I7RUFDbEIscUJBQXFCO0VBQ3JCLFdBQVc7RUFDWCxnRkFBZ0Y7RUFDaEYsZUFBZTtFQUNmLHNCQUFzQjtFQUN0QixxQkFBcUI7RUFDckIsaUJBQWlCO0VBQ2pCLHlCQUF5QjtFQUN6QiwwQkFBMEI7RUFDMUIsZUFBZTtBQUNqQjs7RUFFQTtFQUNFLGlDQUFpQztFQUNqQyw0Q0FBNEM7RUFDNUMsV0FBVztFQUNYLHFCQUFxQjtBQUN2Qjs7RUFFQTtFQUNFLHNCQUFzQjtBQUN4QiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudC9oZWFkZXIvaGVhZGVyLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhhbXBsZS1zcGFjZXIge1xuICAgIGZsZXg6IDEgMSBhdXRvO1xuICB9XG4gIFxuICAuSGVhZGVyTG9nbyB7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xuICB9XG5cblxuLmJ1dHRvbkhlYWQge1xuICBwYWRkaW5nOiAxM3B4IDI2cHg7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgdHJhbnNpdGlvbjogMXM7XG4gIGJhY2tncm91bmQtc2l6ZTogMTA1MSUgYXV0bztcbiAgY29sb3I6IHdoaXRlO1xuICBib3JkZXItcmFkaXVzOiA0cHg7XG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgYm9yZGVyOiAwcHg7XG4gIGJhY2tncm91bmQtaW1hZ2U6IGxpbmVhci1ncmFkaWVudCg0NWRlZywgIzNmNTFiNSAxMCUsICNhMWJjZGUgNTElLCAjM2Y1MWI1IDEwMCUpO1xuICBjdXJzb3I6IHBvaW50ZXI7XG4gIC1tb3otdXNlci1zZWxlY3Q6IG5vbmU7XG4gIC1tcy11c2VyLXNlbGVjdDogbm9uZTtcbiAgdXNlci1zZWxlY3Q6IG5vbmU7XG4gIC13ZWJraXQtdXNlci1zZWxlY3Q6IG5vbmU7XG4gIHRvdWNoLWFjdGlvbjogbWFuaXB1bGF0aW9uO1xuICBmb250LXNpemU6IDE1cHg7XG59XG5cbi5idXR0b25IZWFkOmhvdmVyIHtcbiAgYmFja2dyb3VuZC1wb3NpdGlvbjogcmlnaHQgY2VudGVyO1xuICAvKiBjaGFuZ2UgdGhlIGRpcmVjdGlvbiBvZiB0aGUgY2hhbmdlIGhlcmUgKi9cbiAgY29sb3I6ICNmZmY7XG4gIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbn1cblxuLmJ1dHRvbkhlYWQ6YWN0aXZlIHtcbiAgdHJhbnNmb3JtOiBzY2FsZSgwLjgwKTtcbn0iXX0= */";
     /***/
   },
 
+  /***/"./src/app/component/header/header.component.ts":
+  /*!******************************************************!*\
+    !*** ./src/app/component/header/header.component.ts ***!
+    \******************************************************/
+  /*! exports provided: HeaderComponent */
   /***/
-  "./src/app/component/header/header.component.ts": function srcAppComponentHeaderHeaderComponentTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppComponentHeaderHeaderComponentTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
-
-
     __webpack_require__.d(__webpack_exports__, "HeaderComponent", function () {
       return HeaderComponent;
     });
     /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
     /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
-
-
-    var _data_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! ../../data.service */
-    "./src/app/data.service.ts");
+    var _data_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__( /*! ../../data.service */"./src/app/data.service.ts");
     /* harmony import */
-
-
-    var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! @angular/router */
-    "./node_modules/@angular/router/fesm2015/router.js");
-
+    var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__( /*! @angular/router */"./node_modules/@angular/router/fesm2015/router.js");
+    /* harmony import */
+    var _header_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__( /*! ./header.service */"./src/app/component/header/header.service.ts");
+    /* harmony import */
+    var _assets_js_tour_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__( /*! ../../../assets/js/tour.service */"./src/assets/js/tour.service.ts");
     var HeaderComponent = /*#__PURE__*/function () {
-      function HeaderComponent(dataService, router) {
+      function HeaderComponent(dataService, router, headerTemplateService, tourService) {
         _classCallCheck(this, HeaderComponent);
-
         this.dataService = dataService;
         this.router = router;
+        this.headerTemplateService = headerTemplateService;
+        this.tourService = tourService;
       }
-
       _createClass(HeaderComponent, [{
         key: "ngOnInit",
-        value: function ngOnInit() {}
+        value: function ngOnInit() {
+          var _this20 = this;
+          this.headerTemplateService.headerSubject.subscribe(function (headerString) {
+            _this20.currentPage = headerString;
+          });
+        }
       }, {
         key: "addIndicators",
         value: function addIndicators() {
-          this.router.navigate(['/add']); //this.router.navigate([]).then(result => {  window.open( `/referance`, '_blank'); });
+          this.router.navigate(['/add']);
+          //this.router.navigate([]).then(result => {  window.open( `/referance`, '_blank'); });
         }
       }, {
         key: "references",
         value: function references() {
-          this.router.navigate(['/reference']); //this.router.navigate([]).then(result => {  window.open( `/referance`, '_blank'); });
+          this.router.navigate(['/reference']);
+          //this.router.navigate([]).then(result => {  window.open( `/referance`, '_blank'); });
         }
       }, {
         key: "admin",
@@ -9765,7 +9069,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "metrics",
         value: function metrics() {
-          // this.router.navigate(['/referance'] );
           this.router.navigate([]).then(function (result) {
             window.open("/metrics", '_blank');
           });
@@ -9775,74 +9078,133 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function reset() {
           location.href = "/";
         }
+      }, {
+        key: "navigateHome",
+        value: function navigateHome() {
+          this.router.navigate(['/']);
+        }
       }]);
-
       return HeaderComponent;
     }();
-
     HeaderComponent.ctorParameters = function () {
       return [{
         type: _data_service__WEBPACK_IMPORTED_MODULE_2__["DataService"]
       }, {
         type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+      }, {
+        type: _header_service__WEBPACK_IMPORTED_MODULE_4__["HeaderService"]
+      }, {
+        type: _assets_js_tour_service__WEBPACK_IMPORTED_MODULE_5__["TourService"]
       }];
     };
-
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])("headerDisplay", {
+      "static": true
+    })], HeaderComponent.prototype, "headerDisplay", void 0);
     HeaderComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: 'app-header',
-      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! raw-loader!./header.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/component/header/header.component.html"))["default"],
-      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! ./header.component.css */
-      "./src/app/component/header/header.component.css"))["default"]]
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! raw-loader!./header.component.html */"./node_modules/raw-loader/dist/cjs.js!./src/app/component/header/header.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! ./header.component.css */"./src/app/component/header/header.component.css"))["default"]]
     })], HeaderComponent);
+
     /***/
   },
 
+  /***/"./src/app/component/header/header.service.ts":
+  /*!****************************************************!*\
+    !*** ./src/app/component/header/header.service.ts ***!
+    \****************************************************/
+  /*! exports provided: HeaderService */
   /***/
-  "./src/app/component/reference/referance.component.css": function srcAppComponentReferenceReferanceComponentCss(module, __webpack_exports__, __webpack_require__) {
-    "use strict";
-
-    __webpack_require__.r(__webpack_exports__);
-    /* harmony default export */
-
-
-    __webpack_exports__["default"] = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudC9yZWZlcmVuY2UvcmVmZXJhbmNlLmNvbXBvbmVudC5jc3MifQ== */";
-    /***/
-  },
-
-  /***/
-  "./src/app/component/reference/referance.component.ts": function srcAppComponentReferenceReferanceComponentTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppComponentHeaderHeaderServiceTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
+    __webpack_require__.d(__webpack_exports__, "HeaderService", function () {
+      return HeaderService;
+    });
+    /* harmony import */
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+    var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__( /*! rxjs */"./node_modules/rxjs/_esm2015/index.js");
+    var HeaderService = /*#__PURE__*/function () {
+      function HeaderService() {
+        _classCallCheck(this, HeaderService);
+        this.headerSubject = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](null);
+      }
+      _createClass(HeaderService, [{
+        key: "setHeader",
+        value: function setHeader(header) {
+          this.headerSubject.next(header);
+        }
+      }]);
+      return HeaderService;
+    }();
+    HeaderService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])()], HeaderService);
 
+    /***/
+  },
 
+  /***/"./src/app/component/reference/referance.component.css":
+  /*!*************************************************************!*\
+    !*** ./src/app/component/reference/referance.component.css ***!
+    \*************************************************************/
+  /*! exports provided: default */
+  /***/
+  function srcAppComponentReferenceReferanceComponentCss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+    __webpack_exports__["default"] = ".referenceItem {\n  padding-bottom: 1em;\n}\n\n.buttonLaTool {\n  margin: 0;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50L3JlZmVyZW5jZS9yZWZlcmFuY2UuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLG1CQUFtQjtBQUNyQjs7QUFFQTtFQUNFLFNBQVM7QUFDWCIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudC9yZWZlcmVuY2UvcmVmZXJhbmNlLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIucmVmZXJlbmNlSXRlbSB7XG4gIHBhZGRpbmctYm90dG9tOiAxZW07XG59XG5cbi5idXR0b25MYVRvb2wge1xuICBtYXJnaW46IDA7XG59XG4iXX0= */";
+
+    /***/
+  },
+
+  /***/"./src/app/component/reference/referance.component.ts":
+  /*!************************************************************!*\
+    !*** ./src/app/component/reference/referance.component.ts ***!
+    \************************************************************/
+  /*! exports provided: ReferanceComponent */
+  /***/
+  function srcAppComponentReferenceReferanceComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
     __webpack_require__.d(__webpack_exports__, "ReferanceComponent", function () {
       return ReferanceComponent;
     });
     /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
     /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
-
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+    var _display_display_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__( /*! ../display/display.component */"./src/app/component/display/display.component.ts");
+    /* harmony import */
+    var _data_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__( /*! ../../data.service */"./src/app/data.service.ts");
+    /* harmony import */
+    var _header_header_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__( /*! ../header/header.service */"./src/app/component/header/header.service.ts");
+    /* harmony import */
+    var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__( /*! @angular/router */"./node_modules/@angular/router/fesm2015/router.js");
+    /* harmony import */
+    var rxjs_operators__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__( /*! rxjs/operators */"./node_modules/rxjs/_esm2015/operators/index.js");
     var ReferanceComponent = /*#__PURE__*/function () {
-      function ReferanceComponent() {
+      function ReferanceComponent(dataService, router, headerService) {
+        var _this21 = this;
         _classCallCheck(this, ReferanceComponent);
-
+        this.dataService = dataService;
+        this.router = router;
         this.element = document.getElementById("header");
+        this.references$ = this.dataService.getReferences().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["tap"])(function (references) {
+          return _this21.sortByRefNumber(references);
+        }));
+        this.DisplayComponent = _display_display_component__WEBPACK_IMPORTED_MODULE_2__["DisplayComponent"];
+        headerService.setHeader('references');
+        this.loggedIn = JSON.parse(localStorage.getItem('currentUser'));
       }
-
       _createClass(ReferanceComponent, [{
         key: "ngOnInit",
         value: function ngOnInit() {}
@@ -9853,78 +9215,688 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             behavior: "smooth"
           });
         }
+        // reduces the link to its value after the https:// or www.
+      }, {
+        key: "shortenLink",
+        value: function shortenLink(link) {
+          var splittedLink = link.split('//');
+          var index = 0;
+          if (splittedLink.length > 1) {
+            index = 1;
+          }
+          if (splittedLink[index].includes('www.')) {
+            return splittedLink[index].slice(4);
+          } else {
+            return splittedLink[index];
+          }
+        }
+        // navigates to the edit page
+      }, {
+        key: "editAsSuperAdmin",
+        value: function editAsSuperAdmin(id) {
+          this.router.navigate(["reference/".concat(id, "/edit")]);
+        }
+        // deletes reference from database
+      }, {
+        key: "deleteAsSuperAdmin",
+        value: function deleteAsSuperAdmin(reference) {
+          var _this22 = this;
+          if (confirm("Do you really want to delete this Reference?")) {
+            this.dataService.deleteReference(reference).subscribe(function () {
+              _this22.references$ = _this22.dataService.getReferences().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["tap"])(function (references) {
+                return _this22.sortByRefNumber(references);
+              }));
+            });
+          }
+        }
+        // Sort method to sort references by referenceNumber
+      }, {
+        key: "sortByRefNumber",
+        value: function sortByRefNumber(references) {
+          var _this23 = this;
+          return references.sort(function (a, b) {
+            var numberA = _this23.extractNumberFromRefNumber(a.referenceNumber);
+            var numberB = _this23.extractNumberFromRefNumber(b.referenceNumber);
+            if (numberA > numberB) {
+              return 1;
+            } else {
+              return -1;
+            }
+          });
+        }
+        // method to retrieve the number in brackets from a referenceNumber
+      }, {
+        key: "extractNumberFromRefNumber",
+        value: function extractNumberFromRefNumber(refNumber) {
+          return Number(refNumber.substring(1, refNumber.length - 1));
+        }
       }]);
-
       return ReferanceComponent;
     }();
-
+    ReferanceComponent.ctorParameters = function () {
+      return [{
+        type: _data_service__WEBPACK_IMPORTED_MODULE_3__["DataService"]
+      }, {
+        type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"]
+      }, {
+        type: _header_header_service__WEBPACK_IMPORTED_MODULE_4__["HeaderService"]
+      }];
+    };
     ReferanceComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
       selector: "app-referance",
-      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! raw-loader!./referance.component.html */
-      "./node_modules/raw-loader/dist/cjs.js!./src/app/component/reference/referance.component.html"))["default"],
-      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
-      /*! ./referance.component.css */
-      "./src/app/component/reference/referance.component.css"))["default"]]
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! raw-loader!./referance.component.html */"./node_modules/raw-loader/dist/cjs.js!./src/app/component/reference/referance.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! ./referance.component.css */"./src/app/component/reference/referance.component.css"))["default"]]
     })], ReferanceComponent);
+
     /***/
   },
 
+  /***/"./src/app/component/review-display/review-display.component.css":
+  /*!***********************************************************************!*\
+    !*** ./src/app/component/review-display/review-display.component.css ***!
+    \***********************************************************************/
+  /*! exports provided: default */
   /***/
-  "./src/app/data.service.ts": function srcAppDataServiceTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppComponentReviewDisplayReviewDisplayComponentCss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+    __webpack_exports__["default"] = ".mx-1 {\n  margin-left: 0.25em;\n  margin-right: 0.25em;\n}\n\n.mx-2 {\n  margin-left: 0.5em;\n  margin-right: 0.5em;\n}\n\n.rating-header {\n  min-width: 500px;\n    display: flex;\n\n    justify-content: space-between;\n}\n\n.rating-wrapper {\n  display: flex;\n  flex-direction: column;\n  margin-bottom: 20px;\n  min-width: 500px;\n}\n\n.single-rating-wrapper {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  margin: 0;\n}\n\n.reviewDialogContent {\n  margin-bottom: 0.5em;\n  overflow-x: hidden;\n}\n\n.d-flex {\n  display: flex;\n}\n\n.fa-trash {\n  color: #e14b1b;\n  cursor: pointer;\n}\n\n.fa-pencil {\n  color: #575353;\n  cursor: pointer;\n}\n\n.reviewPlaceholder {\n  padding: 50px 110px 50px 110px;\n;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50L3Jldmlldy1kaXNwbGF5L3Jldmlldy1kaXNwbGF5LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxtQkFBbUI7RUFDbkIsb0JBQW9CO0FBQ3RCOztBQUVBO0VBQ0Usa0JBQWtCO0VBQ2xCLG1CQUFtQjtBQUNyQjs7QUFFQTtFQUNFLGdCQUFnQjtJQUNkLGFBQWE7O0lBRWIsOEJBQThCO0FBQ2xDOztBQUVBO0VBQ0UsYUFBYTtFQUNiLHNCQUFzQjtFQUN0QixtQkFBbUI7RUFDbkIsZ0JBQWdCO0FBQ2xCOztBQUVBO0VBQ0UsYUFBYTtFQUNiLDhCQUE4QjtFQUM5QixtQkFBbUI7RUFDbkIsU0FBUztBQUNYOztBQUVBO0VBQ0Usb0JBQW9CO0VBQ3BCLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLGFBQWE7QUFDZjs7QUFFQTtFQUNFLGNBQWM7RUFDZCxlQUFlO0FBQ2pCOztBQUVBO0VBQ0UsY0FBYztFQUNkLGVBQWU7QUFDakI7O0FBRUE7RUFDRSw4QkFBOEI7O0FBRWhDIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50L3Jldmlldy1kaXNwbGF5L3Jldmlldy1kaXNwbGF5LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubXgtMSB7XG4gIG1hcmdpbi1sZWZ0OiAwLjI1ZW07XG4gIG1hcmdpbi1yaWdodDogMC4yNWVtO1xufVxuXG4ubXgtMiB7XG4gIG1hcmdpbi1sZWZ0OiAwLjVlbTtcbiAgbWFyZ2luLXJpZ2h0OiAwLjVlbTtcbn1cblxuLnJhdGluZy1oZWFkZXIge1xuICBtaW4td2lkdGg6IDUwMHB4O1xuICAgIGRpc3BsYXk6IGZsZXg7XG5cbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XG59XG5cbi5yYXRpbmctd3JhcHBlciB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIG1hcmdpbi1ib3R0b206IDIwcHg7XG4gIG1pbi13aWR0aDogNTAwcHg7XG59XG5cbi5zaW5nbGUtcmF0aW5nLXdyYXBwZXIge1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIG1hcmdpbjogMDtcbn1cblxuLnJldmlld0RpYWxvZ0NvbnRlbnQge1xuICBtYXJnaW4tYm90dG9tOiAwLjVlbTtcbiAgb3ZlcmZsb3cteDogaGlkZGVuO1xufVxuXG4uZC1mbGV4IHtcbiAgZGlzcGxheTogZmxleDtcbn1cblxuLmZhLXRyYXNoIHtcbiAgY29sb3I6ICNlMTRiMWI7XG4gIGN1cnNvcjogcG9pbnRlcjtcbn1cblxuLmZhLXBlbmNpbCB7XG4gIGNvbG9yOiAjNTc1MzUzO1xuICBjdXJzb3I6IHBvaW50ZXI7XG59XG5cbi5yZXZpZXdQbGFjZWhvbGRlciB7XG4gIHBhZGRpbmc6IDUwcHggMTEwcHggNTBweCAxMTBweDtcbjtcbn1cbiJdfQ== */";
+
+    /***/
+  },
+
+  /***/"./src/app/component/review-display/review-display.component.ts":
+  /*!**********************************************************************!*\
+    !*** ./src/app/component/review-display/review-display.component.ts ***!
+    \**********************************************************************/
+  /*! exports provided: ReviewDisplayComponent */
+  /***/
+  function srcAppComponentReviewDisplayReviewDisplayComponentTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
+    __webpack_require__.d(__webpack_exports__, "ReviewDisplayComponent", function () {
+      return ReviewDisplayComponent;
+    });
+    /* harmony import */
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+    var _data_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__( /*! ../../data.service */"./src/app/data.service.ts");
+    /* harmony import */
+    var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__( /*! @angular/router */"./node_modules/@angular/router/fesm2015/router.js");
+    var ReviewDisplayComponent = /*#__PURE__*/function () {
+      function ReviewDisplayComponent(dataService, router) {
+        _classCallCheck(this, ReviewDisplayComponent);
+        this.dataService = dataService;
+        this.router = router;
+        this.reviewExistsForUser = false;
+        this.buttonLabel = 'Create Review';
+        this.loggedIn = JSON.parse(localStorage.getItem('currentUser'));
+      }
+      _createClass(ReviewDisplayComponent, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {
+          this.getReviews();
+        }
+        // retrieves Reviews from the database and calculates the averages
+      }, {
+        key: "getReviews",
+        value: function getReviews() {
+          var _this24 = this;
+          this.dataService.getReviews(this.indicator._id).subscribe(function (reviews) {
+            _this24.reviews = !_this24.loggedIn ? reviews : reviews.sort(function (e1, e2) {
+              if (e1.name === _this24.loggedIn.username) {
+                return -1;
+              } else if (e2.name === _this24.loggedIn.username) {
+                return 1;
+              } else {
+                return 0;
+              }
+            });
+            if (_this24.loggedIn && _this24.reviews.length > 0 && _this24.reviews[0].name === _this24.loggedIn.username) {
+              _this24.reviewExistsForUser = true;
+              _this24.buttonLabel = 'Edit Review';
+            } else {
+              _this24.reviewExistsForUser = false;
+              _this24.buttonLabel = 'Create Review';
+            }
+            _this24.calculateOverallAverage(reviews);
+          });
+        }
+        // uses reviews from input to calculated the overall average over all categories
+      }, {
+        key: "calculateOverallAverage",
+        value: function calculateOverallAverage(reviews) {
+          this.reviewAverage = {
+            name: 'average',
+            articleAnalysis: reviews.reduce(function (previousValue, currentValue) {
+              return previousValue + currentValue.articleAnalysis;
+            }, 0) / reviews.length,
+            articleContribution: reviews.reduce(function (previousValue, currentValue) {
+              return previousValue + currentValue.articleContribution;
+            }, 0) / reviews.length,
+            articleClarity: reviews.reduce(function (previousValue, currentValue) {
+              return previousValue + currentValue.articleClarity;
+            }, 0) / reviews.length,
+            articleConclusion: reviews.reduce(function (previousValue, currentValue) {
+              return previousValue + currentValue.articleConclusion;
+            }, 0) / reviews.length,
+            articleData: reviews.reduce(function (previousValue, currentValue) {
+              return previousValue + currentValue.articleData;
+            }, 0) / reviews.length,
+            indicatorQuality: reviews.reduce(function (previousValue, currentValue) {
+              return previousValue + currentValue.indicatorQuality;
+            }, 0) / reviews.length
+          };
+          this.totalAverage = (this.reviewAverage.articleAnalysis + this.reviewAverage.articleConclusion + this.reviewAverage.articleContribution + this.reviewAverage.articleClarity + this.reviewAverage.articleData + this.reviewAverage.indicatorQuality) / 6;
+        }
+        // uses review from input to calculated the avarage
+      }, {
+        key: "calculateAverage",
+        value: function calculateAverage(review) {
+          return (review.articleAnalysis + review.articleConclusion + review.articleContribution + review.articleClarity + review.articleData + review.indicatorQuality) / 6;
+        }
+        // navigates to add review page
+      }, {
+        key: "createReview",
+        value: function createReview() {
+          this.router.navigate(["/review/add/".concat(this.indicator._id)]);
+        }
+        // navigates to edit review page
+      }, {
+        key: "editReview",
+        value: function editReview(reviewId) {
+          this.router.navigate(["review/".concat(reviewId, "/edit")], {
+            state: {
+              additionalInfo: {
+                indicator: this.indicator
+              }
+            }
+          });
+        }
+        // depending on if a review already exists for the user, the method calls the edit or create method
+      }, {
+        key: "addReview",
+        value: function addReview() {
+          if (this.reviewExistsForUser) {
+            this.editReview(this.reviews[0]._id);
+          } else {
+            this.createReview();
+          }
+        }
+        // navigates to login-page
+      }, {
+        key: "logIn",
+        value: function logIn() {
+          this.router.navigate(["/review/add/".concat(this.indicator._id)], {
+            state: {
+              additionalInfo: {
+                indicator: this.indicator
+              }
+            }
+          });
+        }
+        // opens Edit dialog for the superadmin
+      }, {
+        key: "editAsSuperAdmin",
+        value: function editAsSuperAdmin(reviewId) {
+          this.editReview(reviewId);
+        }
+        // deletes review from database after confirmation in the browser
+      }, {
+        key: "deleteAsSuperAdmin",
+        value: function deleteAsSuperAdmin(reviewId) {
+          var _this25 = this;
+          if (confirm("Do you really want to delete this Review?")) {
+            this.dataService.deleteReview(reviewId).subscribe(function () {
+              _this25.getReviews();
+            });
+          }
+        }
+      }]);
+      return ReviewDisplayComponent;
+    }();
+    ReviewDisplayComponent.ctorParameters = function () {
+      return [{
+        type: _data_service__WEBPACK_IMPORTED_MODULE_2__["DataService"]
+      }, {
+        type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"]
+      }];
+    };
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()], ReviewDisplayComponent.prototype, "indicator", void 0);
+    ReviewDisplayComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-review-display',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! raw-loader!./review-display.component.html */"./node_modules/raw-loader/dist/cjs.js!./src/app/component/review-display/review-display.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! ./review-display.component.css */"./src/app/component/review-display/review-display.component.css"))["default"]]
+    })], ReviewDisplayComponent);
 
+    /***/
+  },
 
+  /***/"./src/app/component/review-edit/review-edit.component.css":
+  /*!*****************************************************************!*\
+    !*** ./src/app/component/review-edit/review-edit.component.css ***!
+    \*****************************************************************/
+  /*! exports provided: default */
+  /***/
+  function srcAppComponentReviewEditReviewEditComponentCss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+    __webpack_exports__["default"] = ".outer-div {\n  margin: 50px;\n}\n\n.row {\n    width: 100%;\n    display: flex;\n    flex-wrap: wrap;\n}\n\n.row-no-wrap {\n    width: 100%;\n    display: flex;\n    flex-wrap: nowrap;\n    margin-bottom: .5em;\n}\n\n.column-100 {\n  display: flex;\n  flex-direction: column;\n  width: 100%;\n  margin-bottom: 20px;\n}\n\n.column-25 {\n  display: flex;\n  flex-direction: column;\n  width: 25%;\n  min-width: 280px;\n  margin-bottom: 20px;\n}\n\n.note-textarea {\n  max-width: 95%;\n  min-height: 100px;\n  font-size: initial;\n  font-family: sans-serif;\n}\n\n.alert {\n  color: red;\n  font-size: small;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50L3Jldmlldy1lZGl0L3Jldmlldy1lZGl0LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxZQUFZO0FBQ2Q7O0FBRUE7SUFDSSxXQUFXO0lBQ1gsYUFBYTtJQUNiLGVBQWU7QUFDbkI7O0FBRUE7SUFDSSxXQUFXO0lBQ1gsYUFBYTtJQUNiLGlCQUFpQjtJQUNqQixtQkFBbUI7QUFDdkI7O0FBRUE7RUFDRSxhQUFhO0VBQ2Isc0JBQXNCO0VBQ3RCLFdBQVc7RUFDWCxtQkFBbUI7QUFDckI7O0FBRUE7RUFDRSxhQUFhO0VBQ2Isc0JBQXNCO0VBQ3RCLFVBQVU7RUFDVixnQkFBZ0I7RUFDaEIsbUJBQW1CO0FBQ3JCOztBQUVBO0VBQ0UsY0FBYztFQUNkLGlCQUFpQjtFQUNqQixrQkFBa0I7RUFDbEIsdUJBQXVCO0FBQ3pCOztBQUVBO0VBQ0UsVUFBVTtFQUNWLGdCQUFnQjtBQUNsQiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudC9yZXZpZXctZWRpdC9yZXZpZXctZWRpdC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLm91dGVyLWRpdiB7XG4gIG1hcmdpbjogNTBweDtcbn1cblxuLnJvdyB7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBmbGV4LXdyYXA6IHdyYXA7XG59XG5cbi5yb3ctbm8td3JhcCB7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBmbGV4LXdyYXA6IG5vd3JhcDtcbiAgICBtYXJnaW4tYm90dG9tOiAuNWVtO1xufVxuXG4uY29sdW1uLTEwMCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIHdpZHRoOiAxMDAlO1xuICBtYXJnaW4tYm90dG9tOiAyMHB4O1xufVxuXG4uY29sdW1uLTI1IHtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgd2lkdGg6IDI1JTtcbiAgbWluLXdpZHRoOiAyODBweDtcbiAgbWFyZ2luLWJvdHRvbTogMjBweDtcbn1cblxuLm5vdGUtdGV4dGFyZWEge1xuICBtYXgtd2lkdGg6IDk1JTtcbiAgbWluLWhlaWdodDogMTAwcHg7XG4gIGZvbnQtc2l6ZTogaW5pdGlhbDtcbiAgZm9udC1mYW1pbHk6IHNhbnMtc2VyaWY7XG59XG5cbi5hbGVydCB7XG4gIGNvbG9yOiByZWQ7XG4gIGZvbnQtc2l6ZTogc21hbGw7XG59XG4iXX0= */";
+
+    /***/
+  },
+
+  /***/"./src/app/component/review-edit/review-edit.component.ts":
+  /*!****************************************************************!*\
+    !*** ./src/app/component/review-edit/review-edit.component.ts ***!
+    \****************************************************************/
+  /*! exports provided: ReviewEditComponent */
+  /***/
+  function srcAppComponentReviewEditReviewEditComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+    __webpack_require__.d(__webpack_exports__, "ReviewEditComponent", function () {
+      return ReviewEditComponent;
+    });
+    /* harmony import */
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+    var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__( /*! @angular/forms */"./node_modules/@angular/forms/fesm2015/forms.js");
+    /* harmony import */
+    var _data_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__( /*! ../../data.service */"./src/app/data.service.ts");
+    /* harmony import */
+    var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__( /*! @angular/router */"./node_modules/@angular/router/fesm2015/router.js");
+    /* harmony import */
+    var _header_header_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__( /*! ../header/header.service */"./src/app/component/header/header.service.ts");
+    var ReviewEditComponent = /*#__PURE__*/function () {
+      // initializes Edit page depending on the way the page was opened. Edit or New Review
+      function ReviewEditComponent(dataService, router, route, headerService) {
+        var _this26 = this;
+        _classCallCheck(this, ReviewEditComponent);
+        this.dataService = dataService;
+        this.router = router;
+        this.route = route;
+        this.formGroup = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormGroup"]({
+          _id: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](null),
+          name: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](''),
+          indicatorId: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](null),
+          indicatorQuality: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
+          indicatorQualityNote: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](''),
+          articleClarity: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
+          articleClarityNote: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](''),
+          articleData: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
+          articleDataNote: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](''),
+          articleAnalysis: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
+          articleAnalysisNote: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](''),
+          articleConclusion: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
+          articleConclusionNote: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](''),
+          articleContribution: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
+          articleContributionNote: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"]('')
+        });
+        headerService.setHeader('add-review');
+        this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
+        this.reviewId = this.route.snapshot.params.id;
+        if (this.reviewId) {
+          this.dataService.getReviewById(this.reviewId).subscribe(function (review) {
+            _this26.review = review;
+            _this26.dataService.getIndicatorById(review.indicatorId).subscribe(function (indicator) {
+              _this26.indicator = indicator;
+              _this26.dataService.getReferenceByReferenceNumber(indicator.referenceNumber).subscribe(function (reference) {
+                _this26.reference = reference;
+              });
+            });
+          });
+        }
+        this.indicatorId = this.route.snapshot.params.indicatorId;
+        if (this.indicatorId) {
+          this.dataService.getIndicatorById(this.indicatorId).subscribe(function (indicator) {
+            _this26.indicator = indicator;
+            _this26.dataService.getReferenceByReferenceNumber(indicator.referenceNumber).subscribe(function (reference) {
+              _this26.reference = reference;
+            });
+          });
+          this.dataService.getReviewByIndicatorIdAndUsername(this.indicatorId, this.currentUser.username).subscribe(function (review) {
+            if (review) {
+              _this26.router.navigate(["review/".concat(review._id, "/edit")]);
+            }
+          });
+        }
+      }
+      // initializes the form after a timeout for getting data from the backend
+      _createClass(ReviewEditComponent, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {
+          var _this27 = this;
+          setTimeout(function () {
+            _this27.formGroup.controls['name'].setValue(_this27.currentUser.username);
+            if (_this27.review) {
+              _this27.initializeForm(_this27.review);
+            }
+          }, 100);
+        }
+        // if the form is valid saves a new or overwrites an exisiting review
+      }, {
+        key: "onSubmit",
+        value: function onSubmit() {
+          var _this28 = this;
+          this.formGroup.markAllAsTouched();
+          if (!this.formGroup.valid) {
+            return;
+          }
+          var data = this.formGroup.value;
+          data.indicatorId = this.indicator._id;
+          var saveReview$ = this.reviewId ? this.dataService.editReview(data) : this.dataService.addReview(data);
+          saveReview$.subscribe(function (savedRating) {
+            _this28.router.navigate(['/']);
+          });
+        }
+        // sets formcontrol Value for given formcontrolName rating
+      }, {
+        key: "ratingChanged",
+        value: function ratingChanged(formControlName, rating) {
+          this.formGroup.controls[formControlName].setValue(rating);
+        }
+        // initializes Form
+      }, {
+        key: "initializeForm",
+        value: function initializeForm(review) {
+          this.formGroup.setValue(review);
+          this.indicatorQuality = review.indicatorQuality;
+          this.articleClarity = review.articleClarity;
+          this.articleData = review.articleData;
+          this.articleAnalysis = review.articleAnalysis;
+          this.articleConclusion = review.articleConclusion;
+          this.articleContribution = review.articleContribution;
+        }
+        // deletes an existing Review
+      }, {
+        key: "deleteReview",
+        value: function deleteReview() {
+          var _this29 = this;
+          this.dataService.deleteReview(this.formGroup.controls['_id'].value).subscribe(function (savedRating) {
+            _this29.router.navigate(['/']);
+          });
+        }
+        // reduces the link string to only show the part after https:// or www.
+      }, {
+        key: "shortenLink",
+        value: function shortenLink(link) {
+          var splittedLink = link.split('//');
+          var index = 0;
+          if (splittedLink.length > 1) {
+            index = 1;
+          }
+          if (splittedLink[index].includes('www.')) {
+            return splittedLink[index].slice(4);
+          } else {
+            return splittedLink[index];
+          }
+        }
+      }]);
+      return ReviewEditComponent;
+    }();
+    ReviewEditComponent.ctorParameters = function () {
+      return [{
+        type: _data_service__WEBPACK_IMPORTED_MODULE_3__["DataService"]
+      }, {
+        type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]
+      }, {
+        type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"]
+      }, {
+        type: _header_header_service__WEBPACK_IMPORTED_MODULE_5__["HeaderService"]
+      }];
+    };
+    ReviewEditComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'app-review-edit',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! raw-loader!./review-edit.component.html */"./node_modules/raw-loader/dist/cjs.js!./src/app/component/review-edit/review-edit.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! ./review-edit.component.css */"./src/app/component/review-edit/review-edit.component.css"))["default"]]
+    })], ReviewEditComponent);
+
+    /***/
+  },
+
+  /***/"./src/app/component/star-rating/star-rating.component.css":
+  /*!*****************************************************************!*\
+    !*** ./src/app/component/star-rating/star-rating.component.css ***!
+    \*****************************************************************/
+  /*! exports provided: default */
+  /***/
+  function srcAppComponentStarRatingStarRatingComponentCss(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony default export */
+    __webpack_exports__["default"] = ".mat-icon-button[disabled] {\n  color: #f5d900;\n}\n\n.mat-icon-button {\n  height: 24px;\n  width: 24px;\n  color: #f5d900 !important;\n\n  .mat-icon {\n    line-height: 19px !important\n  }\n}\n\n:host ::ng-deep {\n  .mat-button-focus-overlay {\n    opacity: 0 !important;\n  }\n\n  /*.mat-button-wrapper {*/\n  /*  line-height: 19px !important*/\n  /*}*/\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50L3N0YXItcmF0aW5nL3N0YXItcmF0aW5nLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxjQUFjO0FBQ2hCOztBQUVBO0VBQ0UsWUFBWTtFQUNaLFdBQVc7RUFDWCx5QkFBeUI7O0VBRXpCO0lBQ0U7RUFDRjtBQUNGOztBQUVBO0VBQ0U7SUFDRSxxQkFBcUI7RUFDdkI7O0VBRUEsd0JBQXdCO0VBQ3hCLGlDQUFpQztFQUNqQyxJQUFJO0FBQ04iLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnQvc3Rhci1yYXRpbmcvc3Rhci1yYXRpbmcuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5tYXQtaWNvbi1idXR0b25bZGlzYWJsZWRdIHtcbiAgY29sb3I6ICNmNWQ5MDA7XG59XG5cbi5tYXQtaWNvbi1idXR0b24ge1xuICBoZWlnaHQ6IDI0cHg7XG4gIHdpZHRoOiAyNHB4O1xuICBjb2xvcjogI2Y1ZDkwMCAhaW1wb3J0YW50O1xuXG4gIC5tYXQtaWNvbiB7XG4gICAgbGluZS1oZWlnaHQ6IDE5cHggIWltcG9ydGFudFxuICB9XG59XG5cbjpob3N0IDo6bmctZGVlcCB7XG4gIC5tYXQtYnV0dG9uLWZvY3VzLW92ZXJsYXkge1xuICAgIG9wYWNpdHk6IDAgIWltcG9ydGFudDtcbiAgfVxuXG4gIC8qLm1hdC1idXR0b24td3JhcHBlciB7Ki9cbiAgLyogIGxpbmUtaGVpZ2h0OiAxOXB4ICFpbXBvcnRhbnQqL1xuICAvKn0qL1xufVxuIl19 */";
+
+    /***/
+  },
+
+  /***/"./src/app/component/star-rating/star-rating.component.ts":
+  /*!****************************************************************!*\
+    !*** ./src/app/component/star-rating/star-rating.component.ts ***!
+    \****************************************************************/
+  /*! exports provided: StarRatingComponent, StarRatingColor */
+  /***/
+  function srcAppComponentStarRatingStarRatingComponentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+    __webpack_require__.d(__webpack_exports__, "StarRatingComponent", function () {
+      return StarRatingComponent;
+    });
+    /* harmony export (binding) */
+    __webpack_require__.d(__webpack_exports__, "StarRatingColor", function () {
+      return StarRatingColor;
+    });
+    /* harmony import */
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
+    var StarRatingComponent = /*#__PURE__*/function () {
+      function StarRatingComponent() {
+        _classCallCheck(this, StarRatingComponent);
+        this.rating = 3;
+        this.ratingChange = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        this.starCount = 5;
+        this.color = 'primary';
+        this.disabled = false;
+        this.ratingUpdated = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
+        this.ratingArr = [];
+      }
+      // initializes the rating array
+      _createClass(StarRatingComponent, [{
+        key: "ngOnInit",
+        value: function ngOnInit() {
+          for (var index = 0; index < this.starCount; index++) {
+            this.ratingArr.push(index);
+          }
+          this.rating = Math.round(this.rating);
+        }
+        // emits rating changed to parent component
+      }, {
+        key: "onClick",
+        value: function onClick(rating) {
+          if (!this.disabled) {
+            this.ratingChange.emit(rating);
+          }
+          return false;
+        }
+        // decides which icon to show, depending on the rating
+      }, {
+        key: "showIcon",
+        value: function showIcon(index) {
+          if (this.rating >= index + 1) {
+            return 'star';
+          } else {
+            return 'star_border';
+          }
+        }
+      }]);
+      return StarRatingComponent;
+    }();
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('rating')], StarRatingComponent.prototype, "rating", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])()], StarRatingComponent.prototype, "ratingChange", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('starCount')], StarRatingComponent.prototype, "starCount", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('color')], StarRatingComponent.prototype, "color", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()], StarRatingComponent.prototype, "disabled", void 0);
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])()], StarRatingComponent.prototype, "ratingUpdated", void 0);
+    StarRatingComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+      selector: 'mat-star-rating',
+      template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! raw-loader!./star-rating.component.html */"./node_modules/raw-loader/dist/cjs.js!./src/app/component/star-rating/star-rating.component.html"))["default"],
+      styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__( /*! ./star-rating.component.css */"./src/app/component/star-rating/star-rating.component.css"))["default"]]
+    })], StarRatingComponent);
+    var StarRatingColor;
+    (function (StarRatingColor) {
+      StarRatingColor["primary"] = "primary";
+      StarRatingColor["accent"] = "accent";
+      StarRatingColor["warn"] = "warn";
+    })(StarRatingColor || (StarRatingColor = {}));
+
+    /***/
+  },
+
+  /***/"./src/app/data.service.ts":
+  /*!*********************************!*\
+    !*** ./src/app/data.service.ts ***!
+    \*********************************/
+  /*! exports provided: DataService */
+  /***/
+  function srcAppDataServiceTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
     __webpack_require__.d(__webpack_exports__, "DataService", function () {
       return DataService;
     });
     /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
     /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
-
-
-    var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! @angular/common/http */
-    "./node_modules/@angular/common/fesm2015/http.js");
+    var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__( /*! @angular/common/http */"./node_modules/@angular/common/fesm2015/http.js");
     /* harmony import */
-
-
-    var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! rxjs/operators */
-    "./node_modules/rxjs/_esm2015/operators/index.js");
-
+    var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__( /*! rxjs/operators */"./node_modules/rxjs/_esm2015/operators/index.js");
     var DataService = /*#__PURE__*/function () {
       //68.65.123.130    OLD
       //198.187.29.73
       function DataService(http) {
         _classCallCheck(this, DataService);
-
-        this.http = http; //uri = 'https://programmingzen.org/openlair';
+        this.http = http;
+        //uri = 'https://programmingzen.org/openlair';
         //uri = 'https://backend.openlair.edutec.science/openlair'; //live
         //uri = 'http://localhost:49160/openlair';
-
         this.uri = 'http://localhost:3001/openlair'; //local
         //this.currentUserSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem('currentUser')));
         //this.currentUser = this.currentUserSubject.asObservable();
       }
-
       _createClass(DataService, [{
         key: "getdata",
         value: function getdata() {
           return this.http.get("".concat(this.uri, "/display/data"));
+        }
+      }, {
+        key: "getEvents",
+        value: function getEvents() {
+          return this.http.get("".concat(this.uri, "/events"));
+        }
+      }, {
+        key: "getActivities",
+        value: function getActivities() {
+          return this.http.get("".concat(this.uri, "/activities"));
+        }
+      }, {
+        key: "getActivitiesByIndicatorId",
+        value: function getActivitiesByIndicatorId(indicatorId) {
+          return this.http.get("".concat(this.uri, "/activities/indicator/").concat(indicatorId));
+        }
+      }, {
+        key: "getIndicators",
+        value: function getIndicators() {
+          return this.http.get("".concat(this.uri, "/indicators"));
+        }
+      }, {
+        key: "getIndicatorById",
+        value: function getIndicatorById(id) {
+          return this.http.get("".concat(this.uri, "/indicator/").concat(id));
+        }
+      }, {
+        key: "getPathByIndicatorId",
+        value: function getPathByIndicatorId(id) {
+          return this.http.get("".concat(this.uri, "/path/").concat(id));
+        }
+      }, {
+        key: "getPathByReferenceId",
+        value: function getPathByReferenceId(id) {
+          return this.http.get("".concat(this.uri, "/path/reference/").concat(id));
+        }
+      }, {
+        key: "getReviews",
+        value: function getReviews(indicatorId) {
+          return this.http.get("".concat(this.uri, "/display/review/").concat(indicatorId));
+        }
+      }, {
+        key: "getReviewById",
+        value: function getReviewById(reviewId) {
+          return this.http.get("".concat(this.uri, "/display/review/").concat(reviewId, "/edit"));
+        }
+      }, {
+        key: "getReviewByIndicatorIdAndUsername",
+        value: function getReviewByIndicatorIdAndUsername(indicatorId, username) {
+          return this.http.get("".concat(this.uri, "/display/review/").concat(indicatorId, "/").concat(username));
+        }
+      }, {
+        key: "addReview",
+        value: function addReview(review) {
+          return this.http.post("".concat(this.uri, "/review/add"), review);
+        }
+      }, {
+        key: "editReview",
+        value: function editReview(review) {
+          return this.http.put("".concat(this.uri, "/review/edit"), review);
+        }
+      }, {
+        key: "deleteReview",
+        value: function deleteReview(reviewId) {
+          return this.http["delete"]("".concat(this.uri, "/review/").concat(reviewId, "/delete"));
+        }
+      }, {
+        key: "getReferences",
+        value: function getReferences() {
+          return this.http.get("".concat(this.uri, "/reference"));
+        }
+      }, {
+        key: "getReferenceById",
+        value: function getReferenceById(referenceId) {
+          return this.http.get("".concat(this.uri, "/reference/").concat(referenceId));
+        }
+      }, {
+        key: "getReferenceByReferenceNumber",
+        value: function getReferenceByReferenceNumber(referenceNumber) {
+          return this.http.get("".concat(this.uri, "/reference/number/").concat(referenceNumber));
+        }
+      }, {
+        key: "updateReference",
+        value: function updateReference(id, reference) {
+          return this.http.put("".concat(this.uri, "/reference/").concat(id, "/edit"), reference);
+        }
+      }, {
+        key: "deleteReference",
+        value: function deleteReference(reference) {
+          return this.http["delete"]("".concat(this.uri, "/reference/").concat(reference._id, "/").concat(reference.referenceNumber, "/delete"));
         }
       }, {
         key: "getsearchresult",
@@ -9953,25 +9925,30 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           });
         }
       }, {
-        key: "addData",
-        value: function addData(LearningEvents, LearningActivities, indicator) {
-          var data1 = {
-            LearningEvents: LearningEvents,
-            LearningActivities: {
-              Name: LearningActivities,
-              indicator: indicator
-            }
-          };
-          console.log("addData:", data1);
-          return this.http.post("".concat(this.uri, "/add/data"), data1);
-        } //public get currentUserValue(): User {
-        //return this.currentUserSubject.value;
-        //}
-
+        key: "addIndicatorAndReference",
+        value: function addIndicatorAndReference(data) {
+          return this.http.post("".concat(this.uri, "/indicator/add"), data);
+        }
+      }, {
+        key: "editIndicator",
+        value: function editIndicator(id, data) {
+          return this.http.put("".concat(this.uri, "/indicator/").concat(id, "/edit"), data);
+        }
+      }, {
+        key: "deleteIndicator",
+        value: function deleteIndicator(indicatorId) {
+          return this.http["delete"]("".concat(this.uri, "/indicator/").concat(indicatorId, "/delete"));
+        }
+      }, {
+        key: "removeIndicatorFromActivity",
+        value: function removeIndicatorFromActivity(activityId, indicatorId) {
+          return this.http.put("".concat(this.uri, "/activity/").concat(activityId, "/remove"), {
+            indicatorId: indicatorId
+          });
+        }
       }, {
         key: "login",
         value: function login(username, password) {
-          console.log(username);
           var httpOptions = {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
               'Content-Type': 'text/plain'
@@ -9985,26 +9962,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             // store user details and basic auth credentials in local storage to keep user logged in between page refreshes
             //user.authdata = window.btoa(username + ':' + password);
             //this.currentUserSubject.next(user);
-            localStorage.setItem('currentUser', JSON.stringify(user)); //return user;
+            localStorage.setItem('currentUser', JSON.stringify(user));
+            //return user;
           }));
+        }
+      }, {
+        key: "register",
+        value: function register(user) {
+          return this.http.post("".concat(this.uri, "/register"), user);
         }
       }, {
         key: "isLoggedIn",
         value: function isLoggedIn() {
           return this.loggedIn;
-        }
-      }, {
-        key: "getActivities",
-        value: function getActivities(searchAct) {
-          var httpOptions = {
-            headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
-              'Content-Type': 'text/plain'
-            })
-          };
-          return this.http.post("".concat(this.uri, "/getActivities"), {
-            searchAct: searchAct,
-            httpOptions: httpOptions
-          });
         }
       }, {
         key: "upload",
@@ -10013,43 +9983,202 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           formData.append('file', file, file.name);
           return this.http.post("".concat(this.uri, "/upload"), formData);
         }
+      }, {
+        key: "generateOldTreeStructure",
+        value: function generateOldTreeStructure(oldTreeStructure) {
+          return this.http.post("".concat(this.uri, "/generate/treeStructure"), oldTreeStructure);
+        }
+      }, {
+        key: "getEventsByActivityId",
+        value: function getEventsByActivityId(id) {
+          return this.http.get("".concat(this.uri, "/eventsByActivityId/").concat(id));
+        }
       }]);
-
       return DataService;
     }();
-
     DataService.ctorParameters = function () {
       return [{
         type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]
       }];
     };
-
     DataService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
       providedIn: 'root'
     })], DataService);
+
     /***/
   },
 
+  /***/"./src/app/superAdmin/super-admin.service.ts":
+  /*!***************************************************!*\
+    !*** ./src/app/superAdmin/super-admin.service.ts ***!
+    \***************************************************/
+  /*! exports provided: SuperAdminService */
   /***/
-  "./src/environments/environment.ts": function srcEnvironmentsEnvironmentTs(module, __webpack_exports__, __webpack_require__) {
+  function srcAppSuperAdminSuperAdminServiceTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony export (binding) */
+    __webpack_require__.d(__webpack_exports__, "SuperAdminService", function () {
+      return SuperAdminService;
+    });
+    /* harmony import */
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+    var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__( /*! @angular/router */"./node_modules/@angular/router/fesm2015/router.js");
+    var SuperAdminService = /*#__PURE__*/function () {
+      function SuperAdminService(router) {
+        _classCallCheck(this, SuperAdminService);
+        this.router = router;
+      }
+      // method to only allow logged in users with super-Admin rights to continue
+      _createClass(SuperAdminService, [{
+        key: "canActivate",
+        value: function canActivate(route, state) {
+          var currentUser = JSON.parse(localStorage.getItem('currentUser')); //this.dataService.currentUserValue;
+          if (currentUser && currentUser.superAdmin) {
+            return true;
+          } else {
+            this.router.navigate(['/reference']);
+            return false;
+          }
+        }
+      }]);
+      return SuperAdminService;
+    }();
+    SuperAdminService.ctorParameters = function () {
+      return [{
+        type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]
+      }];
+    };
+    SuperAdminService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])()], SuperAdminService);
 
+    /***/
+  },
 
+  /***/"./src/assets/js/tour.service.ts":
+  /*!***************************************!*\
+    !*** ./src/assets/js/tour.service.ts ***!
+    \***************************************/
+  /*! exports provided: TourService */
+  /***/
+  function srcAssetsJsTourServiceTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+    __webpack_require__.d(__webpack_exports__, "TourService", function () {
+      return TourService;
+    });
+    /* harmony import */
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+    var intro_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__( /*! intro.js */"./node_modules/intro.js/intro.module.js");
+    var TourService = /*#__PURE__*/function () {
+      function TourService() {
+        _classCallCheck(this, TourService);
+      }
+      _createClass(TourService, [{
+        key: "myTour",
+        value: function myTour() {
+          var introguide = intro_js__WEBPACK_IMPORTED_MODULE_2__["default"]();
+          // var startbtn   = $('#startdemotour');
+          introguide.setOptions({
+            steps: [{
+              element: '.step0',
+              intro: 'This guided tour will explain how Learning Analytics indicators archive OpenLAIR can be used. <br> You can Exit the tour anytime you want.',
+              position: 'bottom'
+            }, {
+              element: '.stepDefine',
+              intro: 'You can CLICK here anytime for the definition of each filter item. i.e. <br> - Learning Events <br> - Learning Activities <br> - Indicators <br> - Metrics <br>',
+              position: 'bottom'
+            }, {
+              element: '.step1',
+              intro: 'Step 1: Here you can select your Learning Events or Objectives.',
+              position: 'right'
+            }, {
+              element: '.step2',
+              intro: 'Step 2: Here you can select your Learning Activities.',
+              position: 'right'
+            }, {
+              element: '.step3',
+              intro: 'Step 3 (Optional): If you are looking for any specific Indicator, here you can search by indicator.',
+              position: 'right'
+            }, {
+              element: document.querySelector('.step4'),
+              intro: 'Step 4: Here you can select (x) the Indicator(s) you want.',
+              position: 'bottom'
+            }, {
+              element: document.querySelector('.stepViewMetrics'),
+              intro: 'If you want to see the Metrics CLICK on the Indicator. <br> Each indicator is followed by its reference "[No.]"',
+              position: 'right'
+            }, {
+              element: document.querySelector('.stepReview'),
+              intro: 'If you want to see the ratings for a specific indicator, or create a review yourself, just click the star icon.',
+              position: 'right'
+            }, {
+              element: '.stepMetrics',
+              intro: 'Step 5 (Optional): If you are looking for any specific Metric, here you can search by metrics.',
+              position: 'right'
+            }, {
+              element: '.stepVisualize',
+              intro: "Step 6: After selecting the indicator(s), CLICK here to VISUALIZE the chosen indicator(s). This will give you an idea of what type of visualization type one can use. <br> You can also download the Dashboard and use it as a mockup (e.g., for meetings/presentations). <br> <br> NOTE: The selected indicators that are similar will be plotted in a single visualization type. <br> <br> For example the selected indicators 'Predict Student Grades [115]' and 'Predict Final Grade [119]' will be plotted in a single visualization type.",
+              position: 'bottom'
+            }, {
+              element: '.stepDownload',
+              intro: "In case you want the selected indicator(s) in a JSON (.json) format/file. CLICK here to DOWNLOAD the Indicator(s) as JSON along with their Metrics.",
+              position: 'bottom'
+            }, {
+              element: '.stepDownloadText',
+              intro: "In case you want the selected indicator(s) in a TEXT (.txt) format/file. CLICK here to DOWNLOAD the Indicator(s) as TEXT along with their Metrics.",
+              position: 'bottom'
+            }, {
+              element: '.stepReset',
+              intro: "In case you want to Deselect the selected indicator(s) and RESET the filters. CLICK here to RESET.",
+              position: 'left'
+            }, {
+              element: '.stepReferences',
+              intro: "Here you can see the References for your selected Indicators.",
+              position: 'left'
+            }, {
+              element: '.stepStartTour',
+              intro: "If you want to have this TOUR again you can start here anytime.  <br> <br> &nbsp; &nbsp;  &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;HAVE FUN!",
+              position: 'left'
+            }]
+          });
+          introguide.start();
+        }
+      }]);
+      return TourService;
+    }();
+    TourService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])()], TourService);
+
+    /***/
+  },
+
+  /***/"./src/environments/environment.ts":
+  /*!*****************************************!*\
+    !*** ./src/environments/environment.ts ***!
+    \*****************************************/
+  /*! exports provided: environment */
+  /***/
+  function srcEnvironmentsEnvironmentTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
     __webpack_require__.d(__webpack_exports__, "environment", function () {
       return environment;
     });
     /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js"); // This file can be replaced during build by using the `fileReplacements` array.
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
+    // This file can be replaced during build by using the `fileReplacements` array.
     // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
     // The list of file replacements can be found in `angular.json`.
-
 
     var environment = {
       production: false
@@ -10066,67 +10195,49 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /***/
   },
 
+  /***/"./src/main.ts":
+  /*!*********************!*\
+    !*** ./src/main.ts ***!
+    \*********************/
+  /*! no exports provided */
   /***/
-  "./src/main.ts": function srcMainTs(module, __webpack_exports__, __webpack_require__) {
+  function srcMainTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
     /* harmony import */
-
-
-    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-    /*! tslib */
-    "./node_modules/tslib/tslib.es6.js");
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__( /*! tslib */"./node_modules/tslib/tslib.es6.js");
     /* harmony import */
-
-
-    var hammerjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-    /*! hammerjs */
-    "./node_modules/hammerjs/hammer.js");
+    var hammerjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__( /*! hammerjs */"./node_modules/hammerjs/hammer.js");
     /* harmony import */
-
-
     var hammerjs__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(hammerjs__WEBPACK_IMPORTED_MODULE_1__);
     /* harmony import */
-
-
-    var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! @angular/core */
-    "./node_modules/@angular/core/fesm2015/core.js");
+    var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__( /*! @angular/core */"./node_modules/@angular/core/fesm2015/core.js");
     /* harmony import */
-
-
-    var _angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! @angular/platform-browser-dynamic */
-    "./node_modules/@angular/platform-browser-dynamic/fesm2015/platform-browser-dynamic.js");
+    var _angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__( /*! @angular/platform-browser-dynamic */"./node_modules/@angular/platform-browser-dynamic/fesm2015/platform-browser-dynamic.js");
     /* harmony import */
-
-
-    var _app_app_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-    /*! ./app/app.module */
-    "./src/app/app.module.ts");
+    var _app_app_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__( /*! ./app/app.module */"./src/app/app.module.ts");
     /* harmony import */
-
-
-    var _environments_environment__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
-    /*! ./environments/environment */
-    "./src/environments/environment.ts");
-
+    var _environments_environment__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__( /*! ./environments/environment */"./src/environments/environment.ts");
     if (_environments_environment__WEBPACK_IMPORTED_MODULE_5__["environment"].production) {
       Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["enableProdMode"])();
     }
-
     Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_3__["platformBrowserDynamic"])().bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_4__["AppModule"])["catch"](function (err) {
       return console.error(err);
     });
+
     /***/
   },
 
+  /***/0:
+  /*!***************************!*\
+    !*** multi ./src/main.ts ***!
+    \***************************/
+  /*! no static exports found */
   /***/
-  0: function _(module, exports, __webpack_require__) {
-    module.exports = __webpack_require__(
-    /*! D:\OpenLAIR_Docker\frontend\src\main.ts */
-    "./src/main.ts");
+  function _(module, exports, __webpack_require__) {
+    module.exports = __webpack_require__( /*! C:\Users\ahmad\Documents\GitHub\OpenLairRuben-main\OpenLairRuben-main\frontend\src\main.ts */"./src/main.ts");
+
     /***/
   }
 }, [[0, "runtime", "vendor"]]]);

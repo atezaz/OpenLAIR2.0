@@ -30,9 +30,8 @@
     </span>
         <mat-form-field style="width: 100%">
           <mat-select class="step1" placeholder="Learning Events" name="Select" [(ngModel)]="selectedLearningEvents"
-                      multiple #selectionModel="ngModel" (valueChange)="onEventValueChange($event)">
-            <app-select-check-all [model]="selectionModel" [values]="(learningEventsOptions$ | async)"
-                                  (sendCount)="onEventValueChange($event)">
+                      multiple #selectionModel="ngModel" (opened)="onOpen()" (closed)="onEventValueChange(selectedLearningEvents, false)">
+            <app-select-check-all [model]="selectionModel" [values]="(learningEventsOptions$ | async)">
             </app-select-check-all>
             <mat-option *ngFor="let option of (learningEventsOptions$ | async)" [value]="option">
               {{ option }}
@@ -72,7 +71,7 @@
                                    [settings]="dropdownSettings"
                                    [data]="(learningActivitiesOptions$ | async)"
                                    [(ngModel)]="selectedLearningActivities"
-                                   (onSelect)="onActivitySelectChange()"
+                                   (onSelect)="onActivitySelectChange()" (onDeSelectAll)="onActivitySelectChange()"
                                    (onSelectAll)="onActivitySelectChange()" (onDeSelect)="onActivitySelectChange()">
           </ng-multiselect-dropdown>
         </div>
@@ -103,7 +102,7 @@
       </span>
     </span>
         <div class="mat-input-element-fix pt-1">
-          <input class="step3" matInput [(ngModel)]="searchInd" placeholder="Search Indicator"/>
+          <input class="step3" matInput [(ngModel)]="searchInd" (change)="determineFilteredTableDataByIndicatorAndMetricText()"  placeholder="Search Indicator"/>
         </div>
       </div>
       <div class="w-20">
@@ -127,7 +126,7 @@
       </span>
     </span>
         <div class="mat-input-element-fix pt-1">
-          <input class="stepMetrics" matInput [(ngModel)]="searchMat" placeholder="Search Metrics"/>
+          <input class="stepMetrics" matInput [(ngModel)]="searchMat" (change)="determineFilteredTableDataByIndicatorAndMetricText()" placeholder="Search Metrics"/>
         </div>
       </div>
     </div>
@@ -138,8 +137,7 @@
                (getMetericsEmitter)="getMeterics($event)"
                (onReviewEmitter)="onReview($event)"
                (onVerdictEmitter)="onVerdict($event)"
-               (updateValues)="fetchdata()"
-               (indicatorDeleted)="indicatorDeleted($event)"
+               (onDeleteEmitter)="onDelete($event)"
     ></app-table>
   </div>
 
@@ -195,8 +193,7 @@
              (getMetericsEmitter)="getMeterics($event)"
              (onReviewEmitter)="onReview($event)"
              (onVerdictEmitter)="onVerdict($event)"
-             (updateValues)="fetchdata()"
-             (indicatorDeleted)="indicatorDeleted($event)"
+             (onDeleteEmitter)="onDelete($event)"
   ></app-table>
 </div>
 
@@ -230,8 +227,19 @@
             </div>
         </div>
     </mat-dialog-content>
-    <button *ngIf="loggedIn.superAdmin" mat-button mat-dialog-close (click)="editReference(reference._id)" class="buttonLaTool"
+    <button *ngIf="loggedIn && loggedIn.superAdmin" mat-button mat-dialog-close (click)="editReference(reference._id)" class="buttonLaTool"
             style="margin-right: 10px">Edit
     </button>
     <button mat-button mat-dialog-close>Close</button>
+</ng-template>
+
+<ng-template #deleteDialog let-data>
+    <h2 matDialogTitle>Which delete process do you want to execute?</h2>
+    <button mat-button mat-dialog-close (click)="deleteIndicator(data.indicator)" class="buttonLaTool"
+            style="margin-right: 10px">Delete Indicator
+    </button>
+    <button mat-button mat-dialog-close (click)="removeIndicatorFromActivity(data)" class="buttonLaTool"
+            style="margin-right: 10px">Remove from Activity
+    </button>
+    <button mat-button mat-dialog-close>Cancel</button>
 </ng-template>

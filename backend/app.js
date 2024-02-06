@@ -169,6 +169,32 @@ MongoClient.connect(mongoURL, {useUnifiedTopology: true}, function (err, db) {
 
     });
 
+    router.route('/activities/indicator/:id').get((req, res) => {
+
+        db.collection("activity").find({indicatorIds: mongo.ObjectId(req.params.id)}).toArray((error, activities) => {
+            if (error) throw error;
+            res.send(activities);
+        });
+
+    });
+
+    router.route('/activity/:id/remove').put((req, res) => {
+        const indicatorId = mongo.ObjectId(req.body.indicatorId);
+        db.collection("activity").find({indicatorIds: mongo.ObjectId(indicatorId)}).toArray( (error, activities) => {
+            if (activities.length === 1) {
+                res.send(false);
+            } else {
+                db.collection("activity").updateOne({'_id': mongo.ObjectId(req.params.id)}, {$pull: {indicatorIds: indicatorId}}, (error2, result) => {
+                    if (error) {
+                        console.log(error2)
+                    } else {
+                        res.status(200).send(true)
+                    }
+                });
+            }
+        })
+    });
+
     router.route('/path/:id').get((req, res) => {
 
         db.collection("indicator").findOne({_id: mongo.ObjectId(req.params.id)}, (error, indicator) => {
@@ -291,7 +317,7 @@ MongoClient.connect(mongoURL, {useUnifiedTopology: true}, function (err, db) {
     });
 
     router.route('/indicator/add').post((req, res) => {
-        const activityId = req.body.activity._id;
+        const activityIds = req.body.activities.map(activity => mongo.ObjectId(activity._id));
         const indicator = req.body.indicator;
         const reference = req.body.reference;
 
@@ -299,7 +325,7 @@ MongoClient.connect(mongoURL, {useUnifiedTopology: true}, function (err, db) {
             if (err) {
                 console.log(err);
             }
-            db.collection("activity").updateOne({'_id': mongo.ObjectId(activityId)}, {$push: {indicatorIds: indicator._id}}, (error2, result2) => {
+            db.collection("activity").updateMany({'_id': {$in: activityIds}}, {$push: {indicatorIds: indicator._id}}, (error2, result2) => {
                 if (error2) {
                     console.log(error2)
                 } else {
@@ -320,8 +346,12 @@ MongoClient.connect(mongoURL, {useUnifiedTopology: true}, function (err, db) {
     });
 
     router.route('/indicator/:id/edit').put((req, res) => {
-        const indicator = req.body;
-        db.collection("indicator").replaceOne({_id: mongo.ObjectId(req.params.id)},
+        const deletedActivityIds = req.body.activitiesDeleted.map(activityId => mongo.ObjectId(activityId));
+        const addedActivityIds = req.body.activitiesAdded.map(activityId => mongo.ObjectId(activityId));
+        const indicator = req.body.indicator;
+        const indicatorId = mongo.ObjectId(req.params.id);
+
+        db.collection("indicator").replaceOne({_id: indicatorId},
             {
                 "referenceNumber": indicator.referenceNumber,
                 "Title": indicator.Title,
@@ -331,7 +361,20 @@ MongoClient.connect(mongoURL, {useUnifiedTopology: true}, function (err, db) {
                 if (err) {
                     console.log(err);
                 }
-                return res.status(200).send(result);
+                else {
+                    db.collection("activity").updateMany({'_id': {$in: addedActivityIds}}, {$push: {indicatorIds: indicatorId}}, (error2, result2) => {
+                        if (error2) {
+                            console.log(error2)
+                        }
+                        db.collection("activity").updateMany({'_id': {$in: deletedActivityIds}}, {$pull: {indicatorIds: indicatorId}}, (error3, result3) => {
+                            if (error2) {
+                                console.log(error3)
+                            } else {
+                                res.status(200).send(result)
+                            }
+                        })
+                    })
+                }
             });
     });
 

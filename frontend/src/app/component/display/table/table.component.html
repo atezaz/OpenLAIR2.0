@@ -48,7 +48,7 @@
                         <i class="fa fa-pencil"></i>
                       </a>
                       <a *ngIf="loggedIn?.superAdmin" class="superAdmin-icon delete"
-                         (click)="deleteAsSuperAdmin(indic)">
+                         (click)="onDeleteEmitter.emit({indicator: indic, activity: LearningActivities})">
                         <i class="fa fa-trash"></i>
                       </a>
                       </div>

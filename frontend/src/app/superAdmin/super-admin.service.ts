@@ -9,6 +9,7 @@ export class SuperAdminService implements CanActivate {
   constructor(private router: Router) {
   }
 
+  // method to only allow logged in users with super-Admin rights to continue
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
 
     const currentUser = JSON.parse(localStorage.getItem('currentUser')); //this.dataService.currentUserValue;

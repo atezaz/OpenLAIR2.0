@@ -46,6 +46,7 @@ export class ReviewEditComponent implements OnInit {
     indicatorId: any;
     reference: Reference;
 
+    // initializes Edit page depending on the way the page was opened. Edit or New Review
     constructor(readonly dataService: DataService, private router: Router, private route: ActivatedRoute,
                 headerService: HeaderService) {
         headerService.setHeader('add-review')
@@ -71,7 +72,6 @@ export class ReviewEditComponent implements OnInit {
                 })
             })
             this.dataService.getReviewByIndicatorIdAndUsername(this.indicatorId, this.currentUser.username).subscribe(review => {
-                console.log(review)
                 if (review) {
                     this.router.navigate([`review/${review._id}/edit`]);
                 }
@@ -79,6 +79,7 @@ export class ReviewEditComponent implements OnInit {
         }
     }
 
+    // initializes the form after a timeout for getting data from the backend
     ngOnInit() {
         setTimeout(() => {
             this.formGroup.controls['name'].setValue(this.currentUser.username)
@@ -89,6 +90,7 @@ export class ReviewEditComponent implements OnInit {
         }, 100)
     }
 
+    // if the form is valid saves a new or overwrites an exisiting review
     onSubmit() {
         this.formGroup.markAllAsTouched();
         if (!this.formGroup.valid) {
@@ -105,10 +107,12 @@ export class ReviewEditComponent implements OnInit {
         });
     }
 
+    // sets formcontrol Value for given formcontrolName rating
     ratingChanged(formControlName: string, rating: number) {
         this.formGroup.controls[formControlName].setValue(rating);
     }
 
+    // initializes Form
     private initializeForm(review: review) {
         this.formGroup.setValue(review);
         this.indicatorQuality = review.indicatorQuality;
@@ -119,12 +123,14 @@ export class ReviewEditComponent implements OnInit {
         this.articleContribution = review.articleContribution;
     }
 
+    // deletes an existing Review
     deleteReview() {
         this.dataService.deleteReview(this.formGroup.controls['_id'].value).subscribe(savedRating => {
             this.router.navigate(['/']);
         });
     }
 
+    // reduces the link string to only show the part after https:// or www.
     shortenLink(link: string) {
         const splittedLink = link.split('//');
         let index = 0;

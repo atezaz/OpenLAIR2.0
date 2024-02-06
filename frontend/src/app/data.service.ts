@@ -46,6 +46,10 @@ export class DataService {
         return this.http.get<LearningActivity[]>(`${this.uri}/activities`);
     }
 
+    getActivitiesByIndicatorId(indicatorId: string): Observable<LearningActivity[]> {
+        return this.http.get<LearningActivity[]>(`${this.uri}/activities/indicator/${indicatorId}`);
+    }
+
     getIndicators(): Observable<indicator[]> {
         return this.http.get<indicator[]>(`${this.uri}/indicators`);
     }
@@ -128,12 +132,16 @@ export class DataService {
         return this.http.post(`${this.uri}/indicator/add`, data);
     }
 
-    editIndicator(id, indicator: indicator) {
-        return this.http.put(`${this.uri}/indicator/${id}/edit`, indicator);
+    editIndicator(id, data: any) {
+        return this.http.put(`${this.uri}/indicator/${id}/edit`, data);
     }
 
     deleteIndicator(indicatorId) {
         return this.http.delete(`${this.uri}/indicator/${indicatorId}/delete`);
+    }
+
+    removeIndicatorFromActivity(activityId: any, indicatorId: string) {
+        return this.http.put(`${this.uri}/activity/${activityId}/remove`, {indicatorId});
     }
 
     login(username: any, password: any) {

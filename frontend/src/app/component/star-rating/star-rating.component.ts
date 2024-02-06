@@ -14,18 +14,20 @@ export class StarRatingComponent implements OnInit {
   @Input() disabled: boolean = false;
   @Output() private ratingUpdated = new EventEmitter();
 
-  private ratingArr = [];
+  ratingArr = [];
 
   constructor() {
   }
 
-
+  // initializes the rating array
   ngOnInit() {
     for (let index = 0; index < this.starCount; index++) {
       this.ratingArr.push(index);
     }
     this.rating = Math.round(this.rating);
   }
+
+  // emits rating changed to parent component
   onClick(rating:number) {
     if (!this.disabled) {
       this.ratingChange.emit(rating);
@@ -33,6 +35,7 @@ export class StarRatingComponent implements OnInit {
     return false;
   }
 
+  // decides which icon to show, depending on the rating
   showIcon(index:number) {
     if (this.rating >= index + 1) {
       return 'star';
