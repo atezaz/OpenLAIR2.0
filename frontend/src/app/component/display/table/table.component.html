@@ -5,6 +5,7 @@
       <div>
         <span class="learningactivities">Learning<br>Activities</span>
         <span style="margin-left: 6.5em">Indicators</span>
+        <span *ngIf="notVerifiedIndicator && loggedIn?.superAdmin" class="not-verified-indicators">(There are Indicators present which have not yet been verified)</span>
       </div>
     </th>
   </tr>
@@ -22,40 +23,50 @@
           </td>
           <td>
             <table class="w-100">
-              <tr *ngFor="let indic of LearningActivities.indicators" class="indicator">
-                <td [ngClass]="{'w-50': searchMat}" style="min-width: 730px">
+              <tr *ngFor="let indic of LearningActivities.indicators" class="indicator" [ngClass]="{'not-yet-verified': !indic.verified}">
+                <td *ngIf="indic.verified || loggedIn?.superAdmin" [ngClass]="{'w-50': searchMat}" style="min-width: 730px">
                   <div class="indicator-content">
                     <input *ngIf="indic" class="step4" #indicatorCheckbox type="checkbox"
                            [checked]="checkedMap.get(indic._id)"
-                           (click)="onCheckboxChange(indic)"/>
+                           (click)="onCheckboxChange(indic)"
+                           [disabled]="!indic.verified"/>
                     <div class="indicator-text">
                       <a class="sortable stepViewMetrics" (click)="getMetericsEmitter.emit(indic)">
                         <span [innerHTML]="getFullIndicatorName(indic) | sanitizeHtml: searchInd">
                         </span>
                       </a>
                       <div>
-                          <a class="sortable reference-icon stepReference" (click)="navigateToReferenceLink(indic)">
+                          <a class="sortable reference-icon stepReference" (click)="navigateToReferenceLink(indic)"
+                             [matTooltip]="'Reference'">
                               <i class="fa fa-quote-right"></i>
                           </a>
-                          <a class="sortable reference-icon stepReference" (click)="onVerdictEmitter.emit(indic)">
+                          <a class="sortable reference-icon stepReference" (click)="onVerdictEmitter.emit(indic)"
+                             [matTooltip]="'Verdict'">
                               <img style="height: 14px" src="assets/images/verdictHammer.png"/>
                           </a>
-                      <a class="sortable review-icon stepReview" (click)="onReviewEmitter.emit(indic)">
+                      <a class="sortable review-icon stepReview" (click)="onReviewEmitter.emit(indic)"
+                         [matTooltip]="'Reviews'">
                         <i class="fa fa-star-o"></i>
                       </a>
 
-                      <a *ngIf="loggedIn?.superAdmin" class="superAdmin-icon edit" (click)="editAsSuperAdmin(indic)">
+                      <a *ngIf="loggedIn?.superAdmin" class="superAdmin-icon edit" (click)="editAsSuperAdmin(indic)"
+                         [matTooltip]="'Edit Indicator'">
                         <i class="fa fa-pencil"></i>
                       </a>
                       <a *ngIf="loggedIn?.superAdmin" class="superAdmin-icon delete"
-                         (click)="onDeleteEmitter.emit({indicator: indic, activity: LearningActivities})">
+                         (click)="onDeleteEmitter.emit({indicator: indic, activity: LearningActivities})"
+                         [matTooltip]="'Delete Indicator'">
                         <i class="fa fa-trash"></i>
+                      </a>
+                      <a *ngIf="loggedIn?.superAdmin && !indic.verified" class="superAdmin-icon verify"
+                         (click)="onVerifyEmitter.emit(indic)" [matTooltip]="'Verify Indicator'">
+                          <i class="fa fa-check"></i>
                       </a>
                       </div>
                     </div>
                   </div>
                 </td>
-                <td *ngIf="searchMat" class="w-50">
+                <td *ngIf="(indic.verified || loggedIn?.superAdmin) && searchMat" class="w-50" [ngClass]="{'not-yet-verified': !indic.verified}">
                   <a class="sortable">
                         <span [innerHTML]="indic.metrics | sanitizeHtml: searchMat">
                           {{ indic.metrics }}

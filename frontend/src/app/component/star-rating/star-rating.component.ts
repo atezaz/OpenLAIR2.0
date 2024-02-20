@@ -12,7 +12,6 @@ export class StarRatingComponent implements OnInit {
   @Input('starCount') private starCount: number = 5;
   @Input('color') private color: string = 'primary';
   @Input() disabled: boolean = false;
-  @Output() private ratingUpdated = new EventEmitter();
 
   ratingArr = [];
 

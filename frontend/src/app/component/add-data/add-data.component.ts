@@ -20,6 +20,7 @@ import {MatDialog} from "@angular/material/dialog";
 
 export class AddDataComponent implements OnInit {
     @ViewChild("activityDialog", {static: true}) activityDialog: any;
+    @ViewChild("normalUserSaveDialog", {static: true}) normalUserSaveDialog: any;
 
     data: PathObject;
     private target: string;
@@ -30,6 +31,7 @@ export class AddDataComponent implements OnInit {
     activityMessages: string[] = [];
     affectedEvents: Set<string> = new Set<string>();
     CUserName: any;
+    superAdmin: boolean;
     indicatorForm: FormGroup;
     referenceForm: FormGroup;
 
@@ -71,6 +73,7 @@ export class AddDataComponent implements OnInit {
 
         if (localStorage.getItem('currentUser')) {
             this.CUserName = JSON.parse(localStorage.getItem('currentUser')).username;
+            this.superAdmin = JSON.parse(localStorage.getItem('currentUser')).superAdmin;
         }
 
         //target determines which mode we're currently in(new indicator/edit indicator/edit reference)
@@ -91,7 +94,8 @@ export class AddDataComponent implements OnInit {
             learningActivities: [{value: [], disabled: this.target}, Validators.required],
             indicatorName: [{value: null, disabled: this.readonly('reference')}, Validators.required],
             metrics: [{value: null, disabled: this.readonly('reference')}, Validators.required],
-            referenceNumber: [{value: null, disabled: true}, Validators.required]
+            referenceNumber: [{value: null, disabled: true}, Validators.required],
+            summary: [{value: null, disabled: this.readonly('reference')}]
         });
 
         this.referenceForm = this.fb.group({
@@ -152,6 +156,7 @@ export class AddDataComponent implements OnInit {
                 this.indicatorForm.patchValue({
                     indicatorName: this.data.indicator.Title,
                     metrics: this.data.indicator.metrics,
+                    summary: this.data.indicator.summary
                 })
                 this.referenceForm.patchValue({
                     referenceNumber: this.data.indicator.referenceNumber,
@@ -160,6 +165,7 @@ export class AddDataComponent implements OnInit {
                 this.indicatorForm.patchValue({
                     indicatorName: 'No indicator found',
                     metrics: 'No indicator found',
+                    summary: 'No indicator found'
                 })
             }
             if (this.data.reference) {
@@ -189,7 +195,9 @@ export class AddDataComponent implements OnInit {
         const indicator: indicator = {
             referenceNumber: indicatorFormValue.referenceNumber,
             Title: indicatorFormValue.indicatorName,
-            metrics: indicatorFormValue.metrics
+            metrics: indicatorFormValue.metrics,
+            summary: indicatorFormValue.summary,
+            verified: this.superAdmin
         }
         let referenceLink = referenceFormValue.referenceLink;
         if (referenceLink === '') {
@@ -209,6 +217,7 @@ export class AddDataComponent implements OnInit {
         switch (this.target) {
             case 'indicator':
                 if (!this.indicatorForm.valid) {
+                    console.log('not valid')
                     return
                 }
 
@@ -245,15 +254,24 @@ export class AddDataComponent implements OnInit {
                     return
                 }
 
-                const dataObject: {activities: LearningActivity[], indicator: indicator, reference: Reference } = {
+                const dataObject: {activities: LearningActivity[], indicator: indicator, reference: Reference, superAdmin: boolean} = {
                     activities: this.selectedLearningActivities,
                     indicator,
-                    reference: this.useExistingReference ? null : reference
+                    reference: this.useExistingReference ? null : reference,
+                    superAdmin: this.superAdmin
                 }
                 this.dataService.addIndicatorAndReference(dataObject).subscribe(() => {
-                    this.router.navigate(['/']);
+                    if (this.superAdmin) {
+                        this.navigateToMainPage();
+                    } else {
+                        this.dialog.open(this.normalUserSaveDialog);
+                    }
                 })
         }
+    }
+
+    navigateToMainPage() {
+        this.router.navigate(['/']);
     }
 
     learningActivityiesSelected() {

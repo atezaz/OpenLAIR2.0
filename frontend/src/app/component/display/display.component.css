@@ -152,3 +152,14 @@ ul {
     width: 15em;
     margin-top: 1em;
 }
+
+.indicator-summary {
+    color: green;
+    width: 500px;
+    padding-bottom: 1em;
+}
+
+.mat-dialog-content {
+    overflow-x: hidden;
+    padding-bottom: 1em;
+}

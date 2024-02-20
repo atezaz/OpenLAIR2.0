@@ -3,4 +3,6 @@ export interface indicator {
   Title?: string;
   referenceNumber?: string;
   metrics?: string;
+  summary?: string;
+  verified?: boolean;
 }

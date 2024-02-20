@@ -66,3 +66,12 @@ th {
   flex-wrap: wrap;
 }
 
+.not-yet-verified {
+    background-color: #8e1e2254 !important;
+}
+
+.not-verified-indicators {
+    color: rgba(63, 81, 181, 0.82);
+    margin-left: 1em;
+}
+

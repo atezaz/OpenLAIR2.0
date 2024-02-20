@@ -58,6 +58,10 @@ export class DataService {
         return this.http.get<indicator>(`${this.uri}/indicator/${id}`);
     }
 
+    verifyIndicator(id: string): Observable<indicator> {
+        return this.http.put(`${this.uri}/indicator/verify`, {id});
+    }
+
     getPathByIndicatorId(id: string): Observable<PathObject> {
         return this.http.get<PathObject>(`${this.uri}/path/${id}`);
     }

@@ -41,7 +41,6 @@ export class DisplayComponent implements OnInit {
     element = document.getElementById("header");
 
     ind_list = [];
-    metrics: any;
     metrics_list: string[];
     loggedIn: User;
     treeData$: Observable<LearningEvent[]>;
@@ -56,6 +55,7 @@ export class DisplayComponent implements OnInit {
     private previousSelectedEvents: string[] = [];
     selectedLearningActivities: string[] = [];
     metricsIndicatorTitle: string;
+    notVerifiedIndicatorExists: boolean;
 
     constructor(
         private dataService: DataService,
@@ -74,6 +74,7 @@ export class DisplayComponent implements OnInit {
     ngOnInit() {
         this.fetchdata();
         this.loadScript();
+        this.checkForNotVerifiedIndicators();
         this.dropdownSettings = {
             singleSelection: false,
             idField: "item_id",
@@ -269,8 +270,7 @@ export class DisplayComponent implements OnInit {
     // pop up by click Indicator to show meterics
     getMeterics(indicator: indicator) {
         this.metrics_list = indicator.metrics.split(",");
-        this.metricsIndicatorTitle = indicator.Title
-        this.dialog.open(this.secondDialog);
+        this.dialog.open(this.secondDialog, {data: indicator});
     }
 
     //function for checkbox to select indicator and save selection in LocalStorage
@@ -436,6 +436,13 @@ export class DisplayComponent implements OnInit {
         this.dialog.open(this.deleteDialog, {data: {indicator: data.indicator, activity: data.activity}});
     }
 
+    onVerify(indicator: indicator) {
+        this.dataService.verifyIndicator(indicator._id).subscribe(() => {
+            indicator.verified = true;
+            this.checkForNotVerifiedIndicators();
+        });
+    }
+
     // navigates to logIn
     logIn() {
         this.router.navigate(['/login'], {state: {url: '/', additionalInfo: null}});
@@ -535,6 +542,13 @@ export class DisplayComponent implements OnInit {
                     });
                 }
             }
+        })
+    }
+
+    private checkForNotVerifiedIndicators() {
+        this.dataService.getIndicators().subscribe(indicators => {
+            const notVerifiedIndicator = indicators.find(indicator => !indicator.verified);
+            this.notVerifiedIndicatorExists = !!notVerifiedIndicator;
         })
     }
 }

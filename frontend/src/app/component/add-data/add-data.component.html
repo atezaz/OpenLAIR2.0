@@ -21,6 +21,7 @@
                                                  [data]="learningActivitiesOptions"
                                                  (onSelect)="learningActivityiesSelected()" (onDeSelect)="learningActivityiesSelected()"
                                                  (onSelectAll)="learningActivityiesSelected()" (onDeSelectAll)="learningActivityiesSelected()"
+                                                 [disabled]="readonly('reference')"
                         >
                         </ng-multiselect-dropdown>
                         <div
@@ -47,8 +48,13 @@
                         <input type="text" formControlName="referenceNumber"/>
                     </div>
                     <div class="form-element form-element-100">
+                        <label>Summary</label>
+                        <textarea class="text" rows="7" type="text" formControlName="summary"
+                                  placeholder="Short optional explanation of the indicator" required></textarea>
+                    </div>
+                    <div class="form-element form-element-100">
                         <label>Metrics *</label>
-                        <textarea class="text" cols="30" rows="10" type="text" formControlName="metrics"
+                        <textarea class="text" rows="7" type="text" formControlName="metrics"
                                   placeholder="Metrics must be comma seperated" required></textarea>
                         <div
                             *ngIf="indicatorForm.controls['metrics'].invalid && (indicatorForm.controls['metrics'].dirty || indicatorForm.controls['metrics'].touched)"
@@ -148,4 +154,12 @@
         <div style="padding-bottom: 1em">{{showEvents()}}</div>
     </mat-dialog-content>
     <button mat-button mat-dialog-close>Close</button>
+</ng-template>
+
+<ng-template #normalUserSaveDialog>
+    <h2 matDialogTitle>Indicator has been saved</h2>
+    <mat-dialog-content>
+        <div style="padding-bottom: 1em">The Indicator has been saved but has to be approved by an admin before being listed in the table.</div>
+    </mat-dialog-content>
+    <button mat-button mat-dialog-close (click)="navigateToMainPage()">Close</button>
 </ng-template>

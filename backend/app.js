@@ -22,9 +22,6 @@ var MongoClient = require('mongodb').MongoClient;
 
 var mongoURL = "mongodb://localhost:27017/" //Local MongoDB
 
-//var mongoURL = "mongodb://mongo:27017/" //Local MongoDB Docker (mongo)
-
-
 //console.log(mongoURL);
 
 const PORT = process.env.PORT || 3001;
@@ -356,6 +353,8 @@ MongoClient.connect(mongoURL, {useUnifiedTopology: true}, function (err, db) {
                 "referenceNumber": indicator.referenceNumber,
                 "Title": indicator.Title,
                 "metrics": indicator.metrics,
+                "summary": indicator.summary,
+                "verified": indicator.verified
             },
             (error, result) => {
                 if (err) {
@@ -394,6 +393,23 @@ MongoClient.connect(mongoURL, {useUnifiedTopology: true}, function (err, db) {
                 });
             }
         })
+    });
+
+    router.route('/indicator/verify').put((req, res) => {
+        const indicatorId = mongo.ObjectId(req.body.id);
+
+        db.collection("indicator").updateOne({_id: indicatorId},
+            {
+                $set: { verified: true }
+            },
+            (error, result) => {
+                if (err) {
+                    console.log(err);
+                }
+                else {
+                    return res.status(200).send(result);
+                }
+            });
     });
 
     /////////////Instruction for references/////////////////

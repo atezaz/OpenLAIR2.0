@@ -24,6 +24,9 @@ export class TableComponent implements OnInit {
     @Input()
     checkedMap: Map<string, boolean>;
 
+    @Input()
+    notVerifiedIndicator: boolean;
+
     @Output()
     checkboxEmitter: EventEmitter<indicator> = new EventEmitter<indicator>();
 
@@ -38,6 +41,10 @@ export class TableComponent implements OnInit {
 
     @Output()
     onDeleteEmitter: EventEmitter<any> = new EventEmitter<any>();
+
+    @Output()
+    onVerifyEmitter: EventEmitter<any> = new EventEmitter<any>();
+
 
     @Input()
     loggedIn: User;

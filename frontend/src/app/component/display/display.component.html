@@ -132,12 +132,13 @@
     </div>
 
     <app-table *ngIf="!searchMat" [data]="(tableData$ | async)" [searchInd]="searchInd" [searchMat]="searchMat"
-               [checkedMap]="checkedMap" [loggedIn]="loggedIn"
+               [checkedMap]="checkedMap" [loggedIn]="loggedIn" [notVerifiedIndicator]="notVerifiedIndicatorExists"
                (checkboxEmitter)="onCheckboxChange($event)"
                (getMetericsEmitter)="getMeterics($event)"
                (onReviewEmitter)="onReview($event)"
                (onVerdictEmitter)="onVerdict($event)"
                (onDeleteEmitter)="onDelete($event)"
+               (onVerifyEmitter)="onVerify($event)"
     ></app-table>
   </div>
 
@@ -188,21 +189,25 @@
 </div>
 <div *ngIf="searchMat" class="extendedMetricsTable">
   <app-table [data]="(tableData$ | async)" [searchInd]="searchInd" [searchMat]="searchMat"
-             [checkedMap]="checkedMap" [loggedIn]="loggedIn"
+             [checkedMap]="checkedMap" [loggedIn]="loggedIn" [notVerifiedIndicator]="notVerifiedIndicatorExists"
              (checkboxEmitter)="onCheckboxChange($event)"
              (getMetericsEmitter)="getMeterics($event)"
              (onReviewEmitter)="onReview($event)"
              (onVerdictEmitter)="onVerdict($event)"
              (onDeleteEmitter)="onDelete($event)"
+             (onVerifyEmitter)="onVerify($event)"
   ></app-table>
 </div>
 
-<ng-template #secondDialog>
-  <h2 matDialogTitle>Metrics for the Indicator "{{metricsIndicatorTitle}}"</h2>
+<ng-template #secondDialog let-indicator>
+  <h2 matDialogTitle>Metrics for the Indicator "{{indicator.Title}}"</h2>
   <mat-dialog-content>
+      <div *ngIf="indicator.summary" class="indicator-summary">{{indicator.summary}}</div>
+      <div>Metrics:
     <ul *ngFor="let metric of metrics_list">
       <li>{{ metric }}</li>
     </ul>
+      </div>
   </mat-dialog-content>
   <button mat-button mat-dialog-close>Close</button>
 </ng-template>
