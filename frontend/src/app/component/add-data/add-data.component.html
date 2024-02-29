@@ -32,7 +32,7 @@
                     </div>
                     <div class="form-element form-element-100" *ngIf="showActivityMessages">
                         <div style="color: rgb(4, 117, 14); cursor: pointer" (click)="showActivityDialoge()"
-                             [innerHTML]="'Indicators will be added to the corresponding Events, depending on the chosen Activities. For more informations click here'"></div>
+                             [innerHTML]="'Indicators will be added to the corresponding Events, depending on the chosen Activities. For more information click here'"></div>
                     </div>
                     <div class="form-element form-element-85">
                         <label>Name *</label>
@@ -50,7 +50,7 @@
                     <div class="form-element form-element-100">
                         <label>Summary</label>
                         <textarea class="text" rows="7" type="text" formControlName="summary"
-                                  placeholder="Short optional explanation of the indicator" required></textarea>
+                                  placeholder="Short optional explanation of the indicator"></textarea>
                     </div>
                     <div class="form-element form-element-100">
                         <label>Metrics *</label>
@@ -61,6 +61,10 @@
                             class="alert">
                             Metrics are required.
                         </div>
+                    </div>
+                    <div class="form-section" *ngIf="superAdmin">
+                        <input type="checkbox" formControlName="verified"/>
+                        <label>Verified</label>
                     </div>
                 </form>
             </fieldset>
@@ -119,7 +123,7 @@
                         </div>
                     </div>
                     <div class="form-section">
-                        <input type="checkbox" (change)="checkboxReferenceClicked()" [disabled]="target && !referenceZero"/>
+                        <input type="checkbox" formControlName="checkbox" (change)="checkboxReferenceClicked()"/>
                         <label>Use existing Reference</label>
                     </div>
                 </form>
@@ -143,7 +147,7 @@
 </div>
 
 <ng-template #activityDialog let-messages>
-    <h2 matDialogTitle>Events affected by Activity Choise</h2>
+    <h2 matDialogTitle>Events affected by Activity Choice</h2>
     <mat-dialog-content>
         <ul *ngFor="let message of activityMessages">
             <li>{{ message }}</li>
@@ -161,5 +165,5 @@
     <mat-dialog-content>
         <div style="padding-bottom: 1em">The Indicator has been saved but has to be approved by an admin before being listed in the table.</div>
     </mat-dialog-content>
-    <button mat-button mat-dialog-close (click)="navigateToMainPage()">Close</button>
+    <button mat-button mat-dialog-close (click)="restForms()">Close</button>
 </ng-template>

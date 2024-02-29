@@ -54,9 +54,10 @@ MongoClient.connect(mongoURL, {useUnifiedTopology: true}, function (err, db) {
     router.route('/login').post((req, res) => {
         var username = req.body.username;
         var password = req.body.password;
+        const regex = new RegExp(username, 'i')
 
         db.collection("login").findOne({
-            username: username,
+            username: {$regex: regex},
             password: password
         }, function (err, user) {
             if (err) {
@@ -73,8 +74,9 @@ MongoClient.connect(mongoURL, {useUnifiedTopology: true}, function (err, db) {
 
     router.route('/register').post((req, res) => {
         const user = req.body;
+        const regex = new RegExp(user.username, 'i')
         user.superAdmin = false;
-        db.collection("login").findOne({'username': user.username}, (err, userFound) => {
+        db.collection("login").findOne({'username': {$regex: new RegExp(regex, 'i')}}, (err, userFound) => {
             if (userFound) {
                 res.send(false);
             } else {

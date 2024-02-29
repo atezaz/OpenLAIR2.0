@@ -1,7 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {DataService} from '../../data.service';
 import {Router} from '@angular/router';
-import {FormControl, FormGroup, FormBuilder, FormArray, Validators} from '@angular/forms';
+import {FormGroup, FormBuilder, Validators} from '@angular/forms';
+import {User} from "../../_models";
 
 @Component({
     selector: 'app-admin',
@@ -39,7 +40,7 @@ export class AdminComponent implements OnInit {
     // depending on submitting or signing in, calls the corresponding service method and logs-in/creates the user
     submit() {
         if (!this.register) {
-            this.dataService.login(this.loginForm.value.username, this.loginForm.value.password)
+            this.dataService.login(this.loginForm.value.username, window.btoa(this.loginForm.value.password))
                 .subscribe(
                     res => {
                         this.loginForm.reset();
@@ -50,14 +51,17 @@ export class AdminComponent implements OnInit {
                     err => alert('User NOT found!')
                 )
         } else {
-            this.dataService.register(this.loginForm.value).subscribe(added => {
+            const userData: User = {
+                username: this.loginForm.value.username,
+                password: window.btoa(this.loginForm.value.password)
+            }
+            this.dataService.register(userData).subscribe(added => {
                     if (added) {
-                        window.alert('User had been registered. You will now be directed to the login page');
+                        window.alert('User has been registered. You will now be directed to the login page');
                         this.register = false;
                         this.loginForm.reset();
                     } else {
-                        window.alert(`User could not be registered. User with username ${this.loginForm.value.username} already exists`);
-                        this.loginForm.reset();
+                        window.alert(`User could not be registered. Username already exists`);
                     }
                 }
             )

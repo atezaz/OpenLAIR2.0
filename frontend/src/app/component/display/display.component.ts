@@ -438,7 +438,7 @@ export class DisplayComponent implements OnInit {
 
     onVerify(indicator: indicator) {
         this.dataService.verifyIndicator(indicator._id).subscribe(() => {
-            indicator.verified = true;
+            this.reset();
             this.checkForNotVerifiedIndicators();
         });
     }
@@ -522,7 +522,7 @@ export class DisplayComponent implements OnInit {
     }
 
     deleteIndicator(indicator: any) {
-            if (confirm("Do you really want to delete this Indicator?")) {
+            if (confirm(`Do you really want to delete the indicator "${indicator.Title}"?`)) {
                 this.indicatorDeleted(indicator);
                 this.dataService.deleteIndicator(indicator._id).subscribe(() => {
                     this.fetchdata();
@@ -535,7 +535,7 @@ export class DisplayComponent implements OnInit {
             if (success) {
                 this.fetchdata();
             } else {
-                if (confirm('This activity is the only one assigned to the indicator. Do you wish to delete the entire indicator?')) {
+                if (confirm(`This activity is the only one assigned to the indicator "${data.indicator.Title}". Do you wish to delete the entire indicator?`)) {
                     this.indicatorDeleted(data.indicator);
                     this.dataService.deleteIndicator(data.indicator._id).subscribe(() => {
                         this.fetchdata();

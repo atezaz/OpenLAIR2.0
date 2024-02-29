@@ -1,5 +1,5 @@
 ﻿export class User {
-    superAdmin: boolean;
-    username: string;
-    password: string;
+    superAdmin?: boolean;
+    username?: string;
+    password?: string;
 }

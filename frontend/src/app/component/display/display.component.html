@@ -239,7 +239,7 @@
 </ng-template>
 
 <ng-template #deleteDialog let-data>
-    <h2 matDialogTitle>Which delete process do you want to execute?</h2>
+    <h2 matDialogTitle>Which delete process do you want to execute for the indicator:<br>"{{data.indicator.Title}}"?</h2>
     <button mat-button mat-dialog-close (click)="deleteIndicator(data.indicator)" class="buttonLaTool"
             style="margin-right: 10px">Delete Indicator
     </button>

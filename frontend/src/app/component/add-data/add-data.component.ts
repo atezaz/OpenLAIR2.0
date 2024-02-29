@@ -43,6 +43,8 @@ export class AddDataComponent implements OnInit {
     useExistingReference: boolean = false;
     private previousReferenceName: string;
     private previousReferenceLink: string;
+    private previousReferenceVerified: boolean;
+    private previousReferenceDevelopment: boolean;
     private newReferenceNumber: string;
     private existingReferenceNumber: string;
 
@@ -95,15 +97,17 @@ export class AddDataComponent implements OnInit {
             indicatorName: [{value: null, disabled: this.readonly('reference')}, Validators.required],
             metrics: [{value: null, disabled: this.readonly('reference')}, Validators.required],
             referenceNumber: [{value: null, disabled: true}, Validators.required],
-            summary: [{value: null, disabled: this.readonly('reference')}]
+            summary: [{value: null, disabled: this.readonly('reference')}],
+            verified: [{value: this.superAdmin, disabled: this.readonly('reference')}]
         });
 
         this.referenceForm = this.fb.group({
-            referenceText: [{value: null, disabled: this.readonly('indicator')}, Validators.required],
-            referenceLink: [{value: null, disabled: this.readonly('indicator')}, Validators.required],
+            referenceText: [null, Validators.required],
+            referenceLink: [null, Validators.required],
             referenceNumber: [{value: null, disabled: true}, Validators.required],
-            verified: [{value: null, disabled: this.readonly('indicator')}],
-            development: [{value: null, disabled: this.readonly('indicator')}],
+            verified: [null],
+            development: [null],
+            checkbox: [{value: false, disabled: this.readonly('reference')}],
         });
 
         //subscription to update the referenceNumber in the indicator-form if changed in the reference-form
@@ -156,7 +160,8 @@ export class AddDataComponent implements OnInit {
                 this.indicatorForm.patchValue({
                     indicatorName: this.data.indicator.Title,
                     metrics: this.data.indicator.metrics,
-                    summary: this.data.indicator.summary
+                    summary: this.data.indicator.summary,
+                    verified: this.data.indicator.verified
                 })
                 this.referenceForm.patchValue({
                     referenceNumber: this.data.indicator.referenceNumber,
@@ -165,7 +170,8 @@ export class AddDataComponent implements OnInit {
                 this.indicatorForm.patchValue({
                     indicatorName: 'No indicator found',
                     metrics: 'No indicator found',
-                    summary: 'No indicator found'
+                    summary: 'No indicator found',
+                    verified: false
                 })
             }
             if (this.data.reference) {
@@ -197,7 +203,7 @@ export class AddDataComponent implements OnInit {
             Title: indicatorFormValue.indicatorName,
             metrics: indicatorFormValue.metrics,
             summary: indicatorFormValue.summary,
-            verified: this.superAdmin
+            verified: indicatorFormValue.verified
         }
         let referenceLink = referenceFormValue.referenceLink;
         if (referenceLink === '') {
@@ -216,8 +222,7 @@ export class AddDataComponent implements OnInit {
 
         switch (this.target) {
             case 'indicator':
-                if (!this.indicatorForm.valid) {
-                    console.log('not valid')
+                if (!this.indicatorForm.valid || !this.referenceForm.valid) {
                     return
                 }
 
@@ -237,7 +242,13 @@ export class AddDataComponent implements OnInit {
                 }
 
                 this.dataService.editIndicator(this.indicatorId, editObject).subscribe(() => {
-                    this.router.navigate(['/']);
+                    if (!this.useExistingReference) {
+                        this.dataService.updateReference(this.data.reference._id, reference).subscribe(() => {
+                            this.router.navigate(['/']);
+                        })
+                    } else {
+                        this.router.navigate(['/']);
+                    }
                 })
                 break;
             case 'reference':
@@ -262,12 +273,21 @@ export class AddDataComponent implements OnInit {
                 }
                 this.dataService.addIndicatorAndReference(dataObject).subscribe(() => {
                     if (this.superAdmin) {
-                        this.navigateToMainPage();
+                        window.alert(`Indicator ${indicator.Title} has been saved`)
+                        this.restForms();
                     } else {
                         this.dialog.open(this.normalUserSaveDialog);
                     }
                 })
         }
+    }
+
+    restForms() {
+        this.indicatorForm.reset();
+        this.selectedLearningActivities = [];
+        this.setActivityMessages(this.selectedLearningActivities);
+        this.referenceForm.reset();
+        this.useExistingReference = false;
     }
 
     navigateToMainPage() {
@@ -335,9 +355,9 @@ export class AddDataComponent implements OnInit {
             this.referenceForm.patchValue({
                 referenceText: this.previousReferenceName,
                 referenceLink: this.previousReferenceLink,
-                referenceNumber: this.newReferenceNumber,
-                verified: null,
-                development: null
+                referenceNumber: this.existingReferenceNumber ? this.existingReferenceNumber :this.newReferenceNumber,
+                verified: this.previousReferenceVerified,
+                development: this.previousReferenceDevelopment
             });
         } else {
             this.setPreviousValues()
@@ -386,6 +406,8 @@ export class AddDataComponent implements OnInit {
     private setPreviousValues() {
         this.previousReferenceName = this.referenceForm.value['referenceText'];
         this.previousReferenceLink = this.referenceForm.value['referenceLink'];
+        this.previousReferenceVerified = this.referenceForm.value['verified'];
+        this.previousReferenceDevelopment = this.referenceForm.value['development'];
     }
 
     // returns true if the omitted target is equal to the target of the current Mode.
