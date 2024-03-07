@@ -213,7 +213,7 @@
 </ng-template>
 
 <ng-template #reviewDialog let-indicator>
-  <app-review-display [indicator]="indicator"></app-review-display>
+  <app-review-display [indicator]="indicator" (closeDialogEmitter)="dialogClosed()"></app-review-display>
 </ng-template>
 
 <ng-template #verdictDialog let-reference>

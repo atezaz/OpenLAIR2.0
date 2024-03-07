@@ -32,7 +32,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<app-header></app-header>  \r\n\r\n<div>\r\n  <router-outlet></router-outlet>\r\n</div>\r\n  \r\n  \r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<app-header></app-header>  \n\n<div>\n  <router-outlet></router-outlet>\n</div>\n  \n  \n");
 
 /***/ }),
 
@@ -45,7 +45,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"buttons\" id=\"btn-menu\" [ngClass]=\"{ 'mat-elevation-z5': true, sticky: isSticky }\">\r\n  <button class=\"backBtn buttonLaTool\" routerLink=\"\">\r\n    Back\r\n  </button>\r\n\r\n  <button class=\"downloadCharts buttonLaTool\" (click)=\"downloadPage()\">\r\n    Download\r\n  </button>\r\n\r\n  <mat-form-field appearance=\"fill\">\r\n    <mat-select [formControl]=\"indicators\" multiple placeholder=\"Indicators\" [ngModel]=\"dropdownItems\">\r\n      <mat-select-trigger>\r\n        {{ indicators.value ? indicators.value[0] : \"\" }}\r\n        <span *ngIf=\"indicators.value?.length > 1\" class=\"selection\">\r\n          (+{{ indicators.value.length - 1 }}\r\n          {{ indicators.value?.length === 2 ? \"other\" : \"others\" }})\r\n        </span>\r\n      </mat-select-trigger>\r\n      <!-- These are the indicators that are not linked -->\r\n      <mat-option *ngFor=\"let indicator of dropdownItems\" [value]=\"indicator\" [ngStyle]=\"{\r\n          color:\r\n            indicator.includes([73]) ||\r\n            indicator.includes([57]) ||\r\n            indicator.includes([75]) ||\r\n            indicator.includes([135])\r\n              ? 'red'\r\n              : ''\r\n        }\" (onSelectionChange)=\"selectCharts($event, indicator)\">{{ indicator }}</mat-option>\r\n    </mat-select>\r\n  </mat-form-field>\r\n</div>\r\n\r\n<div class=\"container\">\r\n  <!-- componenents on top get rendered first -->\r\n\r\n  <!-- Student interaction patterns -->\r\n  <div class=\"main-content\" *ngIf=\"\r\n      referenceNumbers.includes('[127]') || referenceNumbers.includes('[121]')\r\n    \">\r\n    <app-student-interaction-patterns></app-student-interaction-patterns>\r\n  </div>\r\n\r\n  <!-- Reading Analytics -->\r\n  <div class=\"main-content\" *ngIf=\"\r\n      referenceNumbers.includes('[134]') ||\r\n      referenceNumbers.includes('[114]') ||\r\n      referenceNumbers.includes('[128]')\r\n    \">\r\n    <app-reading-analytics></app-reading-analytics>\r\n  </div>\r\n\r\n  <!-- Competency -->\r\n  <div class=\"main-content\" *ngIf=\"\r\n      referenceNumbers.includes('[31]') ||\r\n      referenceNumbers.includes('[46]') ||\r\n      referenceNumbers.includes('[98]')\r\n    \">\r\n    <app-competency></app-competency>\r\n  </div>\r\n\r\n  <!-- Learning progress -->\r\n  <div class=\"main-content\" *ngIf=\"\r\n      referenceNumbers.includes('[62]') ||\r\n      referenceNumbers.includes('[110]') ||\r\n      referenceNumbers.includes('[51]')\r\n    \">\r\n    <app-learning-progress></app-learning-progress>\r\n  </div>\r\n\r\n  <!-- Writing Analytics -->\r\n  <div class=\"main-content\" *ngIf=\"\r\n      referenceNumbers.includes('[61]') ||\r\n      referenceNumbers.includes('[48]') ||\r\n      referenceNumbers.includes('[89]') ||\r\n      referenceNumbers.includes('[85]')\r\n    \">\r\n    <app-writing-analytics></app-writing-analytics>\r\n  </div>\r\n\r\n  <!-- Discourse Analytics -->\r\n  <div class=\"main-content\" *ngIf=\"\r\n      referenceNumbers.includes('[24]') ||\r\n      referenceNumbers.includes('[27]') ||\r\n      referenceNumbers.includes('[49]') ||\r\n      referenceNumbers.includes('[142]') ||\r\n      referenceNumbers.includes('[80]') ||\r\n      referenceNumbers.includes('[88]')\r\n    \">\r\n    <app-discussion-quality></app-discussion-quality>\r\n  </div>\r\n\r\n  <!-- Clickstream analysis -->\r\n  <div class=\"main-content\" *ngIf=\"referenceNumbers.includes('[103]')\">\r\n    <app-clickstream-analysis></app-clickstream-analysis>\r\n  </div>\r\n\r\n  <!-- Video Analytics -->\r\n  <div class=\"main-content\" *ngIf=\"\r\n      referenceNumbers.includes('[138]') ||\r\n      referenceNumbers.includes('[72]') ||\r\n      referenceNumbers.includes('[116]')\r\n    \">\r\n    <app-video-engagements></app-video-engagements>\r\n  </div>\r\n\r\n  <!-- Initiative -->\r\n  <div class=\"main-content\" *ngIf=\"referenceNumbers.includes('[124]')\">\r\n    <app-initiative></app-initiative>\r\n  </div>\r\n\r\n  <!-- Social analysis -->\r\n  <div class=\"main-content\" *ngIf=\"referenceNumbers.includes('[63]')\">\r\n    <app-social-analysis></app-social-analysis>\r\n  </div>\r\n\r\n  <!--  Predictive analytics (Dropping out )-->\r\n\r\n  <div class=\"main-content\" *ngIf=\"\r\n      referenceNumbers.includes('[59]') ||\r\n      referenceNumbers.includes('[79]') ||\r\n      referenceNumbers.includes('[99]') ||\r\n      referenceNumbers.includes('[101]') ||\r\n      referenceNumbers.includes('[64]') ||\r\n      referenceNumbers.includes('[71]') ||\r\n      referenceNumbers.includes('[131]')\r\n    \">\r\n    <app-droppingout></app-droppingout>\r\n  </div>\r\n  <!-- Time distribution -->\r\n  <div class=\"main-content\" *ngIf=\"referenceNumbers.includes('[39]')\">\r\n    <app-time-distribution></app-time-distribution>\r\n  </div>\r\n\r\n  <!-- Time Planning -->\r\n  <div class=\"main-content\" *ngIf=\"\r\n      referenceNumbers.includes('[47]') ||\r\n      referenceNumbers.includes('[68]') ||\r\n      referenceNumbers.includes('[125]')\r\n    \">\r\n    <app-time-planning></app-time-planning>\r\n  </div>\r\n\r\n  <!-- Student comparison -->\r\n  <div class=\"main-content\" *ngIf=\"\r\n      referenceNumbers.includes('[130]') ||\r\n      referenceNumbers.includes('[126]') ||\r\n      referenceNumbers.includes('[129]') ||\r\n      referenceNumbers.includes('[25]') ||\r\n      referenceNumbers.includes('[50]')\r\n    \">\r\n    <app-student-comparison></app-student-comparison>\r\n  </div>\r\n\r\n  <!-- Engagement and Performance -->\r\n  <div class=\"main-content\" *ngIf=\"\r\n      referenceNumbers.includes('[69]') || referenceNumbers.includes('[86]')\r\n    \">\r\n    <app-engagement-performance></app-engagement-performance>\r\n  </div>\r\n\r\n  <!-- Online change detection-->\r\n  <div class=\"main-content\" *ngIf=\"referenceNumbers.includes('[137]')\">\r\n    <app-online-change-detection></app-online-change-detection>\r\n  </div>\r\n\r\n  <!-- Game analytics -->\r\n  <div class=\"main-content\" *ngIf=\"\r\n      referenceNumbers.includes('[45]') ||\r\n      referenceNumbers.includes('[43]') ||\r\n      referenceNumbers.includes('[104]')\r\n    \">\r\n    <app-gamification></app-gamification>\r\n  </div>\r\n\r\n  <!-- Predict course completion -->\r\n  <div class=\"main-content\" *ngIf=\"referenceNumbers.includes('[70]')\">\r\n    <app-predict-coursecompletion></app-predict-coursecompletion>\r\n  </div>\r\n\r\n  <!--  Procrastination  -->\r\n  <div class=\"main-content\" *ngIf=\"\r\n      referenceNumbers.includes('[102]') || referenceNumbers.includes('[107]')\r\n    \">\r\n    <app-procrastination></app-procrastination>\r\n  </div>\r\n\r\n  <!-- Group participation -->\r\n  <div class=\"main-content\" *ngIf=\"referenceNumbers.includes('[30]')\">\r\n    <app-group-participation></app-group-participation>\r\n  </div>\r\n\r\n  <!-- Clustering -->\r\n  <div class=\"main-content\" *ngIf=\"\r\n      referenceNumbers.includes('[66]') ||\r\n      referenceNumbers.includes('[120]') ||\r\n      referenceNumbers.includes('[113]') ||\r\n      referenceNumbers.includes('[29]')\r\n    \">\r\n    <app-clustering></app-clustering>\r\n  </div>\r\n\r\n  <!-- Final grade prediction -->\r\n  <div class=\"main-content\" *ngIf=\"\r\n      referenceNumbers.includes('[28]') ||\r\n      referenceNumbers.includes('[83]') ||\r\n      referenceNumbers.includes('[78]') ||\r\n      referenceNumbers.includes('[115]') ||\r\n      referenceNumbers.includes('[60]') ||\r\n      referenceNumbers.includes('[37]') ||\r\n      referenceNumbers.includes('[105]') ||\r\n      referenceNumbers.includes('[81]') ||\r\n      referenceNumbers.includes('[119]')\r\n    \">\r\n    <app-final-grade-prediction></app-final-grade-prediction>\r\n  </div>\r\n\r\n  <!-- Learning behaviour -->\r\n  <div class=\"main-content\" *ngIf=\"referenceNumbers.includes('[76]')\">\r\n    <app-learning-behaviour></app-learning-behaviour>\r\n  </div>\r\n\r\n  <!-- Social network analysis -->\r\n  <div class=\"main-content\" *ngIf=\"\r\n      referenceNumbers.includes('[90]') || referenceNumbers.includes('[52]')\r\n    \">\r\n    <app-social-network-analysis></app-social-network-analysis>\r\n  </div>\r\n\r\n  <!-- Self motivation -->\r\n  <div class=\"main-content\" *ngIf=\"referenceNumbers.includes('[139]')\">\r\n    <app-self-motivation></app-self-motivation>\r\n  </div>\r\n\r\n  <!-- Learning behaviour patterns -->\r\n  <div class=\"main-content\" *ngIf=\"\r\n      referenceNumbers.includes('[111]') ||\r\n      referenceNumbers.includes('[132]') ||\r\n      referenceNumbers.includes('[118]')\r\n    \">\r\n    <app-learning-behavior-patterns></app-learning-behavior-patterns>\r\n  </div>\r\n\r\n  <!-- Passing rate prediction -->\r\n  <div class=\"main-content\" *ngIf=\"\r\n      referenceNumbers.includes('[26]') ||\r\n      referenceNumbers.includes('[56]') ||\r\n      referenceNumbers.includes('[96]') ||\r\n      referenceNumbers.includes('[100]') ||\r\n      referenceNumbers.includes('[117]') ||\r\n      referenceNumbers.includes('[143]') ||\r\n      referenceNumbers.includes('[144]')\r\n    \">\r\n    <app-passing-rate-prediction></app-passing-rate-prediction>\r\n  </div>\r\n\r\n  <!--  Feedback (Self-regulation)-->\r\n  <div class=\"main-content\" *ngIf=\"\r\n      referenceNumbers.includes('[41]') || referenceNumbers.includes('[91]')\r\n    \">\r\n    <app-feedback></app-feedback>\r\n  </div>\r\n\r\n  <!-- Course assessment -->\r\n  <div class=\"main-content\" *ngIf=\"referenceNumbers.includes('[55]')\">\r\n    <app-course-assessment></app-course-assessment>\r\n  </div>\r\n\r\n  <!-- Affective-State -->\r\n  <div class=\"main-content\" *ngIf=\"\r\n      referenceNumbers.includes('[32]') ||\r\n      referenceNumbers.includes('[84]') ||\r\n      referenceNumbers.includes('[36]') ||\r\n      referenceNumbers.includes('[87]')\r\n    \">\r\n    <app-affective-state></app-affective-state>\r\n  </div>\r\n\r\n  <!-- Course difficulty -->\r\n  <div class=\"main-content\" *ngIf=\"\r\n      referenceNumbers.includes('[77]') || referenceNumbers.includes('[133]')\r\n    \">\r\n    <app-course-difficulty></app-course-difficulty>\r\n  </div>\r\n\r\n  <!-- Teacher curriculum usage -->\r\n  <div class=\"main-content\" *ngIf=\"\r\n      referenceNumbers.includes('[65]') || referenceNumbers.includes('[58]')\r\n    \">\r\n    <app-curriculum-usage></app-curriculum-usage>\r\n  </div>\r\n\r\n  <!-- Presentation skills -->\r\n  <div class=\"main-content\" *ngIf=\"\r\n      referenceNumbers.includes('[35]') || referenceNumbers.includes('[40]')\r\n    \">\r\n    <app-presentation-skills></app-presentation-skills>\r\n  </div>\r\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"buttons\" id=\"btn-menu\" [ngClass]=\"{ 'mat-elevation-z5': true, sticky: isSticky }\">\n  <button class=\"backBtn buttonLaTool\" routerLink=\"\">\n    Back\n  </button>\n\n  <button class=\"downloadCharts buttonLaTool\" (click)=\"downloadPage()\">\n    Download\n  </button>\n\n  <mat-form-field appearance=\"fill\">\n    <mat-select [formControl]=\"indicators\" multiple placeholder=\"Indicators\" [ngModel]=\"dropdownItems\">\n      <mat-select-trigger>\n        {{ indicators.value ? indicators.value[0] : \"\" }}\n        <span *ngIf=\"indicators.value?.length > 1\" class=\"selection\">\n          (+{{ indicators.value.length - 1 }}\n          {{ indicators.value?.length === 2 ? \"other\" : \"others\" }})\n        </span>\n      </mat-select-trigger>\n      <!-- These are the indicators that are not linked -->\n      <mat-option *ngFor=\"let indicator of dropdownItems\" [value]=\"indicator\" [ngStyle]=\"{\n          color:\n            indicator.includes([73]) ||\n            indicator.includes([57]) ||\n            indicator.includes([75]) ||\n            indicator.includes([135])\n              ? 'red'\n              : ''\n        }\" (onSelectionChange)=\"selectCharts($event, indicator)\">{{ indicator }}</mat-option>\n    </mat-select>\n  </mat-form-field>\n</div>\n\n<div class=\"container\">\n  <!-- componenents on top get rendered first -->\n\n  <!-- Student interaction patterns -->\n  <div class=\"main-content\" *ngIf=\"\n      referenceNumbers.includes('[127]') || referenceNumbers.includes('[121]')\n    \">\n    <app-student-interaction-patterns></app-student-interaction-patterns>\n  </div>\n\n  <!-- Reading Analytics -->\n  <div class=\"main-content\" *ngIf=\"\n      referenceNumbers.includes('[134]') ||\n      referenceNumbers.includes('[114]') ||\n      referenceNumbers.includes('[128]')\n    \">\n    <app-reading-analytics></app-reading-analytics>\n  </div>\n\n  <!-- Competency -->\n  <div class=\"main-content\" *ngIf=\"\n      referenceNumbers.includes('[31]') ||\n      referenceNumbers.includes('[46]') ||\n      referenceNumbers.includes('[98]')\n    \">\n    <app-competency></app-competency>\n  </div>\n\n  <!-- Learning progress -->\n  <div class=\"main-content\" *ngIf=\"\n      referenceNumbers.includes('[62]') ||\n      referenceNumbers.includes('[110]') ||\n      referenceNumbers.includes('[51]')\n    \">\n    <app-learning-progress></app-learning-progress>\n  </div>\n\n  <!-- Writing Analytics -->\n  <div class=\"main-content\" *ngIf=\"\n      referenceNumbers.includes('[61]') ||\n      referenceNumbers.includes('[48]') ||\n      referenceNumbers.includes('[89]') ||\n      referenceNumbers.includes('[85]')\n    \">\n    <app-writing-analytics></app-writing-analytics>\n  </div>\n\n  <!-- Discourse Analytics -->\n  <div class=\"main-content\" *ngIf=\"\n      referenceNumbers.includes('[24]') ||\n      referenceNumbers.includes('[27]') ||\n      referenceNumbers.includes('[49]') ||\n      referenceNumbers.includes('[142]') ||\n      referenceNumbers.includes('[80]') ||\n      referenceNumbers.includes('[88]')\n    \">\n    <app-discussion-quality></app-discussion-quality>\n  </div>\n\n  <!-- Clickstream analysis -->\n  <div class=\"main-content\" *ngIf=\"referenceNumbers.includes('[103]')\">\n    <app-clickstream-analysis></app-clickstream-analysis>\n  </div>\n\n  <!-- Video Analytics -->\n  <div class=\"main-content\" *ngIf=\"\n      referenceNumbers.includes('[138]') ||\n      referenceNumbers.includes('[72]') ||\n      referenceNumbers.includes('[116]')\n    \">\n    <app-video-engagements></app-video-engagements>\n  </div>\n\n  <!-- Initiative -->\n  <div class=\"main-content\" *ngIf=\"referenceNumbers.includes('[124]')\">\n    <app-initiative></app-initiative>\n  </div>\n\n  <!-- Social analysis -->\n  <div class=\"main-content\" *ngIf=\"referenceNumbers.includes('[63]')\">\n    <app-social-analysis></app-social-analysis>\n  </div>\n\n  <!--  Predictive analytics (Dropping out )-->\n\n  <div class=\"main-content\" *ngIf=\"\n      referenceNumbers.includes('[59]') ||\n      referenceNumbers.includes('[79]') ||\n      referenceNumbers.includes('[99]') ||\n      referenceNumbers.includes('[101]') ||\n      referenceNumbers.includes('[64]') ||\n      referenceNumbers.includes('[71]') ||\n      referenceNumbers.includes('[131]')\n    \">\n    <app-droppingout></app-droppingout>\n  </div>\n  <!-- Time distribution -->\n  <div class=\"main-content\" *ngIf=\"referenceNumbers.includes('[39]')\">\n    <app-time-distribution></app-time-distribution>\n  </div>\n\n  <!-- Time Planning -->\n  <div class=\"main-content\" *ngIf=\"\n      referenceNumbers.includes('[47]') ||\n      referenceNumbers.includes('[68]') ||\n      referenceNumbers.includes('[125]')\n    \">\n    <app-time-planning></app-time-planning>\n  </div>\n\n  <!-- Student comparison -->\n  <div class=\"main-content\" *ngIf=\"\n      referenceNumbers.includes('[130]') ||\n      referenceNumbers.includes('[126]') ||\n      referenceNumbers.includes('[129]') ||\n      referenceNumbers.includes('[25]') ||\n      referenceNumbers.includes('[50]')\n    \">\n    <app-student-comparison></app-student-comparison>\n  </div>\n\n  <!-- Engagement and Performance -->\n  <div class=\"main-content\" *ngIf=\"\n      referenceNumbers.includes('[69]') || referenceNumbers.includes('[86]')\n    \">\n    <app-engagement-performance></app-engagement-performance>\n  </div>\n\n  <!-- Online change detection-->\n  <div class=\"main-content\" *ngIf=\"referenceNumbers.includes('[137]')\">\n    <app-online-change-detection></app-online-change-detection>\n  </div>\n\n  <!-- Game analytics -->\n  <div class=\"main-content\" *ngIf=\"\n      referenceNumbers.includes('[45]') ||\n      referenceNumbers.includes('[43]') ||\n      referenceNumbers.includes('[104]')\n    \">\n    <app-gamification></app-gamification>\n  </div>\n\n  <!-- Predict course completion -->\n  <div class=\"main-content\" *ngIf=\"referenceNumbers.includes('[70]')\">\n    <app-predict-coursecompletion></app-predict-coursecompletion>\n  </div>\n\n  <!--  Procrastination  -->\n  <div class=\"main-content\" *ngIf=\"\n      referenceNumbers.includes('[102]') || referenceNumbers.includes('[107]')\n    \">\n    <app-procrastination></app-procrastination>\n  </div>\n\n  <!-- Group participation -->\n  <div class=\"main-content\" *ngIf=\"referenceNumbers.includes('[30]')\">\n    <app-group-participation></app-group-participation>\n  </div>\n\n  <!-- Clustering -->\n  <div class=\"main-content\" *ngIf=\"\n      referenceNumbers.includes('[66]') ||\n      referenceNumbers.includes('[120]') ||\n      referenceNumbers.includes('[113]') ||\n      referenceNumbers.includes('[29]')\n    \">\n    <app-clustering></app-clustering>\n  </div>\n\n  <!-- Final grade prediction -->\n  <div class=\"main-content\" *ngIf=\"\n      referenceNumbers.includes('[28]') ||\n      referenceNumbers.includes('[83]') ||\n      referenceNumbers.includes('[78]') ||\n      referenceNumbers.includes('[115]') ||\n      referenceNumbers.includes('[60]') ||\n      referenceNumbers.includes('[37]') ||\n      referenceNumbers.includes('[105]') ||\n      referenceNumbers.includes('[81]') ||\n      referenceNumbers.includes('[119]')\n    \">\n    <app-final-grade-prediction></app-final-grade-prediction>\n  </div>\n\n  <!-- Learning behaviour -->\n  <div class=\"main-content\" *ngIf=\"referenceNumbers.includes('[76]')\">\n    <app-learning-behaviour></app-learning-behaviour>\n  </div>\n\n  <!-- Social network analysis -->\n  <div class=\"main-content\" *ngIf=\"\n      referenceNumbers.includes('[90]') || referenceNumbers.includes('[52]')\n    \">\n    <app-social-network-analysis></app-social-network-analysis>\n  </div>\n\n  <!-- Self motivation -->\n  <div class=\"main-content\" *ngIf=\"referenceNumbers.includes('[139]')\">\n    <app-self-motivation></app-self-motivation>\n  </div>\n\n  <!-- Learning behaviour patterns -->\n  <div class=\"main-content\" *ngIf=\"\n      referenceNumbers.includes('[111]') ||\n      referenceNumbers.includes('[132]') ||\n      referenceNumbers.includes('[118]')\n    \">\n    <app-learning-behavior-patterns></app-learning-behavior-patterns>\n  </div>\n\n  <!-- Passing rate prediction -->\n  <div class=\"main-content\" *ngIf=\"\n      referenceNumbers.includes('[26]') ||\n      referenceNumbers.includes('[56]') ||\n      referenceNumbers.includes('[96]') ||\n      referenceNumbers.includes('[100]') ||\n      referenceNumbers.includes('[117]') ||\n      referenceNumbers.includes('[143]') ||\n      referenceNumbers.includes('[144]')\n    \">\n    <app-passing-rate-prediction></app-passing-rate-prediction>\n  </div>\n\n  <!--  Feedback (Self-regulation)-->\n  <div class=\"main-content\" *ngIf=\"\n      referenceNumbers.includes('[41]') || referenceNumbers.includes('[91]')\n    \">\n    <app-feedback></app-feedback>\n  </div>\n\n  <!-- Course assessment -->\n  <div class=\"main-content\" *ngIf=\"referenceNumbers.includes('[55]')\">\n    <app-course-assessment></app-course-assessment>\n  </div>\n\n  <!-- Affective-State -->\n  <div class=\"main-content\" *ngIf=\"\n      referenceNumbers.includes('[32]') ||\n      referenceNumbers.includes('[84]') ||\n      referenceNumbers.includes('[36]') ||\n      referenceNumbers.includes('[87]')\n    \">\n    <app-affective-state></app-affective-state>\n  </div>\n\n  <!-- Course difficulty -->\n  <div class=\"main-content\" *ngIf=\"\n      referenceNumbers.includes('[77]') || referenceNumbers.includes('[133]')\n    \">\n    <app-course-difficulty></app-course-difficulty>\n  </div>\n\n  <!-- Teacher curriculum usage -->\n  <div class=\"main-content\" *ngIf=\"\n      referenceNumbers.includes('[65]') || referenceNumbers.includes('[58]')\n    \">\n    <app-curriculum-usage></app-curriculum-usage>\n  </div>\n\n  <!-- Presentation skills -->\n  <div class=\"main-content\" *ngIf=\"\n      referenceNumbers.includes('[35]') || referenceNumbers.includes('[40]')\n    \">\n    <app-presentation-skills></app-presentation-skills>\n  </div>\n</div>");
 
 /***/ }),
 
@@ -58,7 +58,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n  <highcharts-chart\r\n    [Highcharts]=\"Highcharts\"\r\n    [options]=\"chartOptions\"\r\n    style=\"width: 100%; height: 400px; display: block; float: left\"\r\n  ></highcharts-chart>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n");
 
 /***/ }),
 
@@ -71,7 +71,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n  <highcharts-chart\r\n    [Highcharts]=\"Highcharts\"\r\n    [options]=\"chartOptions\"\r\n    style=\"width: 100%; height: 400px; display: block; float: left\"\r\n  ></highcharts-chart>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n");
 
 /***/ }),
 
@@ -84,7 +84,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n  <highcharts-chart\r\n    [Highcharts]=\"Highcharts\"\r\n    [options]=\"chartOptions\"\r\n    style=\"width: 100%; display: block; float: left\"\r\n  ></highcharts-chart>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n");
 
 /***/ }),
 
@@ -97,7 +97,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n  <highcharts-chart\r\n    [Highcharts]=\"Highcharts\"\r\n    [options]=\"chartOptions\"\r\n    style=\"width: 100%; height: 400px; display: block; float: left\"\r\n  ></highcharts-chart>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n");
 
 /***/ }),
 
@@ -110,7 +110,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n  <highcharts-chart\r\n    [Highcharts]=\"Highcharts\"\r\n    [options]=\"chartOptions\"\r\n    style=\"width: 50%; height: 400px; display: block; float: left\"\r\n  ></highcharts-chart>\r\n\r\n  <highcharts-chart\r\n    [Highcharts]=\"Highcharts\"\r\n    [options]=\"chartOptions2\"\r\n    style=\"width: 50%; height: 400px; display: block; float: left\"\r\n  ></highcharts-chart>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 50%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions2\"\n    style=\"width: 50%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n");
 
 /***/ }),
 
@@ -123,7 +123,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n  <highcharts-chart\r\n    [Highcharts]=\"Highcharts\"\r\n    [options]=\"chartOptions\"\r\n    style=\"width: 100%; height: 400px; display: block; float: left\"\r\n  ></highcharts-chart>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n");
 
 /***/ }),
 
@@ -136,7 +136,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n  <highcharts-chart\r\n    [Highcharts]=\"Highcharts\"\r\n    [options]=\"chartOptions\"\r\n    style=\"width: 100%; height: 400px; display: block; float: left\"\r\n  ></highcharts-chart>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n");
 
 /***/ }),
 
@@ -149,7 +149,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<highcharts-chart\r\n  [Highcharts]=\"Highcharts\"\r\n  [options]=\"chartOptions\"\r\n  style=\"width: 100%; height: 400px; display: block; float: left\"\r\n></highcharts-chart>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<highcharts-chart\n  [Highcharts]=\"Highcharts\"\n  [options]=\"chartOptions\"\n  style=\"width: 100%; height: 400px; display: block; float: left\"\n></highcharts-chart>\n");
 
 /***/ }),
 
@@ -162,7 +162,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n  <highcharts-chart\r\n    [Highcharts]=\"Highcharts\"\r\n    [options]=\"chartOptions\"\r\n    style=\"width: 100%; height: 400px; display: block; float: left\"\r\n  ></highcharts-chart>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n");
 
 /***/ }),
 
@@ -175,7 +175,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n  <highcharts-chart\r\n    [Highcharts]=\"Highcharts\"\r\n    [options]=\"chartOptions\"\r\n    style=\"width: 100%; height: 400px; display: block; float: left\"\r\n  ></highcharts-chart>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n");
 
 /***/ }),
 
@@ -188,7 +188,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<SELECT id=\"list\" (change)=\"updateChart($event)\">\r\n  <option VALUE=\"A\">Video interactions</option>\r\n  <option VALUE=\"B\">Reading activities</option>\r\n  <option VALUE=\"C\">Assignment activities</option>\r\n  <option VALUE=\"D\">Dashboard access</option>\r\n</SELECT>\r\n<div class=\"example\">\r\n  <highcharts-chart\r\n    [Highcharts]=\"Highcharts\"\r\n    [options]=\"chartOptions\"\r\n    style=\"width: 50%; height: 400px; display: block; float: left\"\r\n  ></highcharts-chart>\r\n</div>\r\n\r\n<div class=\"example\">\r\n  <highcharts-chart\r\n    [Highcharts]=\"Highcharts\"\r\n    [options]=\"chartOptions2\"\r\n    style=\"width: 50%; height: 400px; display: block; float: left\"\r\n  ></highcharts-chart>\r\n</div>\r\n\r\n<!-- \r\n<figure class=\"highcharts-figure\">\r\n  <div id=\"container-speed\" class=\"chart-container\"></div>\r\n  <div id=\"container-rpm\" class=\"chart-container\"></div>\r\n</figure>\r\n-->\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<SELECT id=\"list\" (change)=\"updateChart($event)\">\n  <option VALUE=\"A\">Video interactions</option>\n  <option VALUE=\"B\">Reading activities</option>\n  <option VALUE=\"C\">Assignment activities</option>\n  <option VALUE=\"D\">Dashboard access</option>\n</SELECT>\n<div class=\"example\">\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 50%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n\n<div class=\"example\">\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions2\"\n    style=\"width: 50%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n\n<!-- \n<figure class=\"highcharts-figure\">\n  <div id=\"container-speed\" class=\"chart-container\"></div>\n  <div id=\"container-rpm\" class=\"chart-container\"></div>\n</figure>\n-->\n");
 
 /***/ }),
 
@@ -201,7 +201,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n  <highcharts-chart\r\n    [Highcharts]=\"Highcharts\"\r\n    [options]=\"chartOptions\"\r\n    style=\"width: 100%; height: 400px; display: block; float: left\"\r\n  ></highcharts-chart>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n");
 
 /***/ }),
 
@@ -214,7 +214,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n  <highcharts-chart\r\n    [Highcharts]=\"Highcharts\"\r\n    [options]=\"chartOptions\"\r\n    style=\"width: 100%; height: 400px; display: block; float: left\"\r\n  ></highcharts-chart>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n");
 
 /***/ }),
 
@@ -227,7 +227,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n  <highcharts-chart\r\n    [Highcharts]=\"Highcharts\"\r\n    [options]=\"chartOptions\"\r\n    style=\"width: 100%; height: 400px; display: block; float: left\"\r\n  ></highcharts-chart>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n");
 
 /***/ }),
 
@@ -240,7 +240,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n  <highcharts-chart\r\n    [Highcharts]=\"Highcharts\"\r\n    [options]=\"chartOptions\"\r\n    style=\"width: 100%; height: 400px; display: block; float: left\"\r\n  ></highcharts-chart>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n");
 
 /***/ }),
 
@@ -253,7 +253,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n  <highcharts-chart\r\n    [Highcharts]=\"Highcharts\"\r\n    [options]=\"chartOptions\"\r\n    style=\"width: 100%; display: block; float: left\"\r\n  ></highcharts-chart>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n");
 
 /***/ }),
 
@@ -266,7 +266,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n  <highcharts-chart\r\n    [Highcharts]=\"Highcharts\"\r\n    [options]=\"chartOptions\"\r\n    style=\"width: 100%; display: block; float: left\"\r\n  ></highcharts-chart>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n");
 
 /***/ }),
 
@@ -279,7 +279,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n  <highcharts-chart\r\n    [Highcharts]=\"Highcharts\"\r\n    [options]=\"chartOptions\"\r\n    style=\"width: 100%; height: 400px; display: block; float: left\"\r\n  ></highcharts-chart>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n");
 
 /***/ }),
 
@@ -292,7 +292,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n  <highcharts-chart\r\n    [Highcharts]=\"Highcharts\"\r\n    [options]=\"chartOptions\"\r\n    style=\"width: 100%; height: 400px; display: block; float: left\"\r\n  ></highcharts-chart>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n");
 
 /***/ }),
 
@@ -305,7 +305,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n  <highcharts-chart\r\n    [Highcharts]=\"Highcharts\"\r\n    [options]=\"chartOptions\"\r\n    style=\"width: 100%; height: 500px; display: block; float: left\"\r\n  ></highcharts-chart>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; height: 500px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n");
 
 /***/ }),
 
@@ -318,7 +318,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n  <highcharts-chart\r\n    [Highcharts]=\"Highcharts\"\r\n    [options]=\"chartOptions\"\r\n    style=\"width: 100%; height: 400px; display: block; float: left\"\r\n  ></highcharts-chart>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n");
 
 /***/ }),
 
@@ -331,7 +331,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n  <highcharts-chart\r\n    [Highcharts]=\"Highcharts\"\r\n    [options]=\"chartOptions\"\r\n    style=\"width: 100%; height: 400px; display: block; float: left\"\r\n  ></highcharts-chart>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n");
 
 /***/ }),
 
@@ -344,7 +344,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div id=\"container\"></div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div id=\"container\"></div>\n");
 
 /***/ }),
 
@@ -357,7 +357,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n  <highcharts-chart\r\n    [Highcharts]=\"Highcharts\"\r\n    [options]=\"chartOptions\"\r\n    style=\"width: 100%; height: 400px; display: block; float: left\"\r\n  ></highcharts-chart>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n");
 
 /***/ }),
 
@@ -370,7 +370,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n  <highcharts-chart\r\n    [Highcharts]=\"Highcharts\"\r\n    [options]=\"chartOptions\"\r\n    style=\"width: 100%; height: 400px; display: block; float: left\"\r\n  ></highcharts-chart>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n");
 
 /***/ }),
 
@@ -383,7 +383,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n  <highcharts-chart\r\n    [Highcharts]=\"Highcharts\"\r\n    [options]=\"chartOptions\"\r\n    style=\"width: 100%; height: 400px; display: block; float: left\"\r\n  ></highcharts-chart>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n");
 
 /***/ }),
 
@@ -396,7 +396,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n  <highcharts-chart\r\n    [Highcharts]=\"Highcharts\"\r\n    [options]=\"chartOptions\"\r\n    style=\"width: 100%; height: 400px; display: block; float: left\"\r\n  ></highcharts-chart>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n");
 
 /***/ }),
 
@@ -409,7 +409,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n  <highcharts-chart\r\n    [Highcharts]=\"Highcharts\"\r\n    [options]=\"chartOptions\"\r\n    style=\"width: 100%; height: 400px; display: block; float: left\"\r\n  ></highcharts-chart>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n");
 
 /***/ }),
 
@@ -422,7 +422,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<SELECT id=\"list\" (change)=\"updateChart($event)\">\r\n  <option VALUE=\"A\">Clicks</option>\r\n  <option VALUE=\"B\">\"Lectures\" clicks</option>\r\n  <option VALUE=\"C\">\"Coursework\" clicks</option>\r\n  <option VALUE=\"D\">\"Practials\" clicks</option>\r\n  <option value=\"E\">Seen content</option>\r\n</SELECT>\r\n<div>\r\n  <highcharts-chart\r\n    [Highcharts]=\"Highcharts\"\r\n    [options]=\"chartOptions\"\r\n    style=\"width: 100%; height: 400px; display: block; float: left\"\r\n  ></highcharts-chart>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<SELECT id=\"list\" (change)=\"updateChart($event)\">\n  <option VALUE=\"A\">Clicks</option>\n  <option VALUE=\"B\">\"Lectures\" clicks</option>\n  <option VALUE=\"C\">\"Coursework\" clicks</option>\n  <option VALUE=\"D\">\"Practials\" clicks</option>\n  <option value=\"E\">Seen content</option>\n</SELECT>\n<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n");
 
 /***/ }),
 
@@ -435,7 +435,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n  <highcharts-chart\r\n    [Highcharts]=\"Highcharts\"\r\n    [options]=\"chartOptions\"\r\n    style=\"width: 100%; height: 400px; display: block; float: left\"\r\n  ></highcharts-chart>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n");
 
 /***/ }),
 
@@ -448,7 +448,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n  <highcharts-chart\r\n    [Highcharts]=\"Highcharts\"\r\n    [options]=\"chartOptions\"\r\n    style=\"width: 100%; height: 400px; display: block; float: left\"\r\n  ></highcharts-chart>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n");
 
 /***/ }),
 
@@ -461,7 +461,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n  <highcharts-chart\r\n    [Highcharts]=\"Highcharts\"\r\n    [options]=\"chartOptions\"\r\n    style=\"width: 100%; height: 400px; display: block; float: left\"\r\n  ></highcharts-chart>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n");
 
 /***/ }),
 
@@ -474,7 +474,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n  <highcharts-chart\r\n    [Highcharts]=\"Highcharts\"\r\n    [options]=\"chartOptions\"\r\n    style=\"width: 100%; height: 400px; display: block; float: left\"\r\n  ></highcharts-chart>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n");
 
 /***/ }),
 
@@ -487,7 +487,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n  <highcharts-chart\r\n    [Highcharts]=\"Highcharts\"\r\n    [options]=\"chartOptions\"\r\n    style=\"width: 100%; height: 400px; display: block; float: left\"\r\n  ></highcharts-chart>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n");
 
 /***/ }),
 
@@ -500,7 +500,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div>\r\n  <highcharts-chart\r\n    [Highcharts]=\"Highcharts\"\r\n    [options]=\"chartOptions\"\r\n    style=\"width: 100%; height: 400px; display: block; float: left\"\r\n  ></highcharts-chart>\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div>\n  <highcharts-chart\n    [Highcharts]=\"Highcharts\"\n    [options]=\"chartOptions\"\n    style=\"width: 100%; height: 400px; display: block; float: left\"\n  ></highcharts-chart>\n</div>\n");
 
 /***/ }),
 
@@ -513,7 +513,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<!--Data Entry form -->\r\n\r\n<div style=\"margin: auto;\" *ngIf=\"referenceOptions\r\n  && learningActivitiesOptions && (indicatorOptions$ | async)\">\r\n\r\n    <div class=\"title\">\r\n        Add NEW Indicators and their Metrics\r\n    </div>\r\n\r\n    <div class=\"content-wrapper\">\r\n        <div class=\"form-wrapper\">\r\n            <fieldset>\r\n                <legend>Indicator</legend>\r\n                <form [formGroup]=\"indicatorForm\" class=\"form-section\">\r\n                    <div class=\"form-element form-element-100\">\r\n                        <label>Learning Activities *</label>\r\n                        <ng-multiselect-dropdown [(ngModel)]=\"selectedLearningActivities\"\r\n                                                 [ngModelOptions]=\"{standalone: true}\"\r\n                                                 placeholder=\"Learning Activities\"\r\n                                                 [settings]=\"dropdownSettings\"\r\n                                                 [data]=\"learningActivitiesOptions\"\r\n                                                 (onSelect)=\"learningActivityiesSelected()\" (onDeSelect)=\"learningActivityiesSelected()\"\r\n                                                 (onSelectAll)=\"learningActivityiesSelected()\" (onDeSelectAll)=\"learningActivityiesSelected()\"\r\n                                                 [disabled]=\"readonly('reference')\"\r\n                        >\r\n                        </ng-multiselect-dropdown>\r\n                        <div\r\n                            *ngIf=\"indicatorForm.controls['learningActivities'].invalid && (indicatorForm.controls['learningActivities'].dirty || indicatorForm.controls['learningActivities'].touched)\"\r\n                            class=\"alert\">\r\n                                Learning Activity is required.\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"form-element form-element-100\" *ngIf=\"showActivityMessages\">\r\n                        <div style=\"color: rgb(4, 117, 14); cursor: pointer\" (click)=\"showActivityDialoge()\"\r\n                             [innerHTML]=\"'Indicators will be added to the corresponding Events, depending on the chosen Activities. For more information click here'\"></div>\r\n                    </div>\r\n                    <div class=\"form-element form-element-85\">\r\n                        <label>Name *</label>\r\n                        <input type=\"text\" formControlName=\"indicatorName\" placeholder=\"Indicator Name\" required/>\r\n                        <div\r\n                            *ngIf=\"indicatorForm.controls['indicatorName'].invalid && (indicatorForm.controls['indicatorName'].dirty || indicatorForm.controls['indicatorName'].touched)\"\r\n                            class=\"alert\">\r\n                            Name is required.\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"form-element form-element-15\">\r\n                        <label>Number *</label>\r\n                        <input type=\"text\" formControlName=\"referenceNumber\"/>\r\n                    </div>\r\n                    <div class=\"form-element form-element-100\">\r\n                        <label>Summary</label>\r\n                        <textarea class=\"text\" rows=\"7\" type=\"text\" formControlName=\"summary\"\r\n                                  placeholder=\"Short optional explanation of the indicator\"></textarea>\r\n                    </div>\r\n                    <div class=\"form-element form-element-100\">\r\n                        <label>Metrics *</label>\r\n                        <textarea class=\"text\" rows=\"7\" type=\"text\" formControlName=\"metrics\"\r\n                                  placeholder=\"Metrics must be comma seperated\" required></textarea>\r\n                        <div\r\n                            *ngIf=\"indicatorForm.controls['metrics'].invalid && (indicatorForm.controls['metrics'].dirty || indicatorForm.controls['metrics'].touched)\"\r\n                            class=\"alert\">\r\n                            Metrics are required.\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"form-section\" *ngIf=\"superAdmin\">\r\n                        <input type=\"checkbox\" formControlName=\"verified\"/>\r\n                        <label>Verified</label>\r\n                    </div>\r\n                </form>\r\n            </fieldset>\r\n            <fieldset>\r\n                <legend>Reference</legend>\r\n                <form [formGroup]=\"referenceForm\" class=\"form-section last\" style=\"height: 100%\">\r\n                    <div class=\"form-section\">\r\n                        <div class=\"form-element form-element-100\">\r\n                            <label>Text *</label>\r\n                            <ng-container *ngIf=\"!useExistingReference\">\r\n                                <input type=\"text\" formControlName=\"referenceText\" placeholder=\"Reference Text\"\r\n                                       required/>\r\n                            </ng-container>\r\n                            <ng-container *ngIf=\"useExistingReference\">\r\n                                <ng-select placeholder=\"Reference\" [readonly]=\"this.readonly('indicator') && !useExistingReference\"\r\n                                           (change)=\"onReferenceChange($event)\">\r\n                                    <ng-option *ngFor=\"let reference of referenceOptions\" [value]=\"reference\">\r\n                                        {{reference.referenceNumber}} {{reference.referenceText}}\r\n                                    </ng-option>\r\n                                </ng-select>\r\n                            </ng-container>\r\n                            <div\r\n                                *ngIf=\"referenceForm.controls['referenceText'].invalid && (referenceForm.controls['referenceText'].dirty || referenceForm.controls['referenceText'].touched)\"\r\n                                class=\"alert\">\r\n                                Text is required.\r\n                            </div>\r\n                        </div>\r\n                        <div class=\"form-element form-element-85\">\r\n                            <label>Link *</label>\r\n                            <input type=\"text\" formControlName=\"referenceLink\" placeholder=\"Reference Link\"/>\r\n                            <div\r\n                                *ngIf=\"referenceForm.controls['referenceLink'].invalid && (referenceForm.controls['referenceLink'].dirty || referenceForm.controls['referenceLink'].touched)\"\r\n                                class=\"alert\">\r\n                                Link is required.\r\n                            </div>\r\n                        </div>\r\n                        <div class=\"form-element form-element-15\">\r\n                            <label>Number *</label>\r\n                            <input type=\"text\" formControlName=\"referenceNumber\"/>\r\n                        </div>\r\n                        <div class=\"form-element form-element-50\">\r\n                            <label>Verified</label>\r\n                            <ng-select formControlName=\"verified\" placeholder=\"Verification\">\r\n                                <ng-option *ngFor=\"let verifiedOption of verifiedOptions\" [value]=\"verifiedOption\">\r\n                                    {{verifiedOption}}\r\n                                </ng-option>\r\n                            </ng-select>\r\n                        </div>\r\n                        <div class=\"form-element form-element-50\">\r\n                            <label>Development</label>\r\n                            <ng-select formControlName=\"development\" placeholder=\"Development\">\r\n                                <ng-option *ngFor=\"let developmentOption of developmentOptions\" [value]=\"developmentOption\">\r\n                                    {{developmentOption}}\r\n                                </ng-option>\r\n                            </ng-select>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"form-section\">\r\n                        <input type=\"checkbox\" formControlName=\"checkbox\" (change)=\"checkboxReferenceClicked()\"/>\r\n                        <label>Use existing Reference</label>\r\n                    </div>\r\n                </form>\r\n            </fieldset>\r\n\r\n            <button type=\"submit\" class=\"buttonLaTool save-button\"\r\n                    (click)='addData()'>Save\r\n            </button>\r\n        </div>\r\n        <div style=\"min-width: 260px\">\r\n            <button\r\n                style=\"padding: 6px 8px 6px 8px; float: right; margin-right: 8px; background-image: linear-gradient(45deg, #8e1e22 10%, #edcfcf 51%, #8e1e22 100%) !important; box-shadow: 2px 4px 5px 0 #ead8d8;\"\r\n                class=\"buttonLaTool\" (click)='logout()'>Logout\r\n            </button>\r\n            <span style=\"float: right; margin-right: 16px; margin-top: 17px;\" *ngIf=\"CUserName\">\r\n       Welcome, {{CUserName}}\r\n      </span>\r\n        </div>\r\n    </div>\r\n\r\n</div>\r\n\r\n<ng-template #activityDialog let-messages>\r\n    <h2 matDialogTitle>Events affected by Activity Choice</h2>\r\n    <mat-dialog-content>\r\n        <ul *ngFor=\"let message of activityMessages\">\r\n            <li>{{ message }}</li>\r\n        </ul>\r\n        <div>Therefore, the Indicator and Metrics you want to add will\r\n        be added automatically under these events:\r\n        </div>\r\n        <div style=\"padding-bottom: 1em\">{{showEvents()}}</div>\r\n    </mat-dialog-content>\r\n    <button mat-button mat-dialog-close>Close</button>\r\n</ng-template>\r\n\r\n<ng-template #normalUserSaveDialog>\r\n    <h2 matDialogTitle>Indicator has been saved</h2>\r\n    <mat-dialog-content>\r\n        <div style=\"padding-bottom: 1em\">The Indicator has been saved but has to be approved by an admin before being listed in the table.</div>\r\n    </mat-dialog-content>\r\n    <button mat-button mat-dialog-close (click)=\"restForms()\">Close</button>\r\n</ng-template>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<!--Data Entry form -->\n\n<div style=\"margin: auto;\">\n  <form [formGroup]=\"dataEntryForm\">\n\n    <div id=\"title\">\n      Add NEW Indicators and their Metrics\n    </div>\n   \n    <label *ngIf=\"successfulMessage\" >\n      <input type=\"checkbox\" class=\"alertCheckbox\" autocomplete=\"off\" />\n      <div class=\"alert success\">\n        <span class=\"alertClose\">X</span>\n        <span class=\"alertText\" [innerHTML]=\"successfulMessage\">\n        <br class=\"clear\"/></span>\n      </div>\n    </label>\n\n    <div id=\"dropdown\">\n      <label>Learning Events</label>\n      <mat-select placeholder=\"Learning Events\" (selectionChange)=\"learningValueChange($event.value)\"\n        formControlName=\"learningEvents\">\n        <mat-option *ngFor=\"let learningEvent of options\" [value]=\"learningEvent\">\n          {{ learningEvent }}\n        </mat-option>\n      </mat-select>\n      \n      <button style=\"padding: 6px 8px 6px 8px; float: right; margin-right: 8px; background-image: linear-gradient(45deg, #8e1e22 10%, #edcfcf 51%, #8e1e22 100%) !important; box-shadow: 2px 4px 5px 0px #ead8d8;\" class=\"buttonLaTool\" (click)='logout()'>Logout</button>\n      <span style=\"float: right; margin-right: 16px; margin-top: 17px;\" *ngIf=\"CUserName\">\n       Welcome, {{CUserName}}\n      </span>\n    </div>\n\n    <div id=\"activities\">\n      <label for=\"\">Learning Activities</label>\n      <mat-select formControlName=\"learningActivities\" [(ngModel)]=\"LaOptionValue\" placeholder=\"Learning Activities\" (selectionChange)=\"onActivityValueChange($event.value)\">\n        <mat-option *ngFor=\"let LearningAct of dropdownList\" [value]=\"LearningAct\" >\n         {{ LearningAct}}\n        </mat-option>\n      </mat-select>\n      <div style=\"color: rgb(4, 117, 14); margin-left: 212px; margin-top: 7px;\" *ngIf=\"similarActivityMessage\" [innerHTML]=\"similarActivityMessage\"></div>\n    </div>\n\n    <div formArrayName=\"indicator\">\n      <div *ngFor=\"let indicator of indicatorControls; let i = index\" [formGroupName]=\"i\">\n        <div id=\"indicators\">\n          <label class=\"indicatorName\">Indicators</label>\n          <input type=\"text\" formControlName=\"indicatorName\" placeholder=\"Indicator Name [ref]\" required/>\n        </div>\n\n        <div class=\"formfield\">\n          <label class=\"metrics\">Metrics</label>\n          <textarea class=\"text\" cols=\"30\" rows=\"10\" type=\"text\" formControlName=\"metrics\"\n            placeholder=\"Metrics must be comma seperated\" required></textarea>\n        </div>\n      </div>\n\n    </div>\n    <div id=\"savebtn\">\n      <button type=\"submit\" class=\"buttonLaTool\" \n        (click)='addData(learningEvents,learningActivities,indicator,metrics)'\n        [disabled]=\"dataEntryForm.pristine || dataEntryForm.invalid\">Save</button>\n    \n        \n      </div>\n  </form>\n\n</div>\n");
 
 /***/ }),
 
@@ -526,7 +526,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container\">\r\n  <form [formGroup]=\"loginForm\" novalidate>\r\n    <div id=\"title\">\r\n        {{buttonText()}} Form\r\n    </div>\r\n    <div id=\"username\">\r\n      <label>Username</label>\r\n        <div>\r\n      <input type=\"text\" formControlName=\"username\" required>\r\n        <div\r\n            *ngIf=\"loginForm.controls['username'].invalid && (loginForm.controls['username'].dirty || loginForm.controls['username'].touched)\"\r\n            class=\"alert\">\r\n            <div *ngIf=\"loginForm.controls['username'].errors.required\">\r\n                User Name is required.\r\n            </div>\r\n        </div>\r\n        </div>\r\n    </div>\r\n\r\n\r\n    <div id=\"password\">\r\n      <label class=\"learningActivities\">Password</label>\r\n        <div>\r\n      <input type=\"password\" formControlName=\"password\" required>\r\n        <div\r\n            *ngIf=\"loginForm.controls['password'].invalid && (loginForm.controls['password'].dirty || loginForm.controls['password'].touched)\"\r\n            class=\"alert\">\r\n            <div *ngIf=\"loginForm.controls['password'].errors.required\">\r\n                Password is required.\r\n            </div>\r\n        </div>\r\n        </div>\r\n    </div>\r\n    <div id=\"submit\">\r\n\r\n      <button class=\"submitbtn\" mat-raised-button color=\"primary\" type=\"submit\" (click)=\"submit()\"\r\n        [disabled]=\"loginForm.pristine || loginForm.invalid\">{{buttonText()}}</button>\r\n    </div>\r\n      <div *ngIf=\"!register\" id=\"register\">\r\n          Not yet registered? Sign up\r\n          <a (click)=\"onRegister()\">here</a>.\r\n      </div>\r\n      <div *ngIf=\"register\" id=\"login\">\r\n          Already registered?\r\n          <a (click)=\"onRegister()\">Back to Login</a>.\r\n      </div>\r\n\r\n\r\n\r\n  </form>\r\n\r\n</div>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"container\">\n  <form [formGroup]=\"loginForm\" novalidate>\n    <div id=\"title\">\n      Login Form\n    </div>\n    <div id=\"username\">\n      <label>Username</label>\n      <input type=\"text\" formControlName=\"username\" required>\n    </div>\n\n    <div\n      *ngIf=\"loginForm.controls['username'].invalid && (loginForm.controls['username'].dirty || loginForm.controls['username'].touched)\"\n      class=\"alert\">\n      <div *ngIf=\"loginForm.controls['username'].errors.required\">\n        User Name is required.\n      </div>\n    </div>\n    <div id=\"password\">\n      <label class=\"learningActivities\">Password</label>\n      <input type=\"password\" formControlName=\"password\" required>\n    </div>\n    <div\n      *ngIf=\"loginForm.controls['password'].invalid && (loginForm.controls['password'].dirty || loginForm.controls['password'].touched)\"\n      class=\"alert\">\n      <div *ngIf=\"loginForm.controls['password'].errors.required\">\n        Password is required.\n      </div>\n    </div>\n    <div id=\"submit\">\n\n      <button class=\"submitbtn\" mat-raised-button color=\"primary\" type=\"submit\" (click)=\"submit()\"\n        [disabled]=\"loginForm.pristine || loginForm.invalid\">Login</button>\n    </div>\n\n\n\n  </form>\n\n</div>\n");
 
 /***/ }),
 
@@ -539,7 +539,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<app-chart-manager> </app-chart-manager>\r\n\r\n<div class=\"footer\">\r\n  <p>Dashboard is rendered with OpenLAIR.</p>\r\n</div>\r\n\r\n<a id=\"back-to-top\" class=\"btn back-to-top\" role=\"button\" (click)=\"backToTop()\">\r\n  <i class=\"material-icons buttonLaTool\">arrow_upward</i>\r\n</a>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<app-chart-manager> </app-chart-manager>\n\n<div class=\"footer\">\n  <p>Dashboard is rendered with OpenLAIR.</p>\n</div>\n\n<a id=\"back-to-top\" class=\"btn back-to-top\" role=\"button\" (click)=\"backToTop()\">\n  <i class=\"material-icons buttonLaTool\">arrow_upward</i>\n</a>\n");
 
 /***/ }),
 
@@ -552,20 +552,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"tool_Home\">\r\n  <!--   Not run the demo if it is not home page-->\r\n  <div class=\"content-left\" [ngClass]=\"{extendedMetrics: searchMat}\">\r\n    <div class=\"h-flex\" style=\"max-width: 1100px\">\r\n      <div class=\"w-20\">\r\n    <span style=\"padding-bottom: 2px\">\r\n      <strong>Learning Events</strong><br/>\r\n      <span class=\"stepDefine\" style=\"font-size: 14px; cursor: pointer;\" id=\"tooltipEvents\"\r\n            data-tooltipster='{\"side\":\"bottom\",\"animation\":\"fall\", \"delay\":\"200\", \"theme\":\"tooltipster-shadow\"}'\r\n            title=\"\">\r\n        <img width=\"16px\" src=\"assets/images/question.png\"/> Click here for more details\r\n        <span class=\"\" id=\"contentEvents\">\r\n          <p style=\"text-align: left\">\r\n            <strong>Learning Events</strong><br/>\r\n            A learning objective is the desired outcome of a single or multiple\r\n            learning event and is used to establish learning <br/>\r\n            activities to achieve the overall learning outcome\r\n            <a target=\"_blank\"\r\n               href=\"https://research.tue.nl/en/publications/teacher-learning-in-the-context-of-educational-innovation-learnin\">[13]</a>.\r\n            Learning design literature identified eight learning events:\r\n            <br/>create, explore, practice, imitate, receive, debate,\r\n            meta-learn/Elf-reflect, and experiment\r\n            <a target=\"_blank\" href=\"http://www.labset.net/media/prod/8LEM.pdf\">[1]</a>,\r\n            <a target=\"_blank\" href=\"https://www.tandfonline.com/doi/abs/10.1080/10494820701343694\">[2]</a>.\r\n            <br/><br/>\r\n            <img width=\"800px\" src=\"assets/images/events.png\"/>\r\n          </p>\r\n        </span>\r\n      </span>\r\n    </span>\r\n        <mat-form-field style=\"width: 100%\">\r\n          <mat-select class=\"step1\" placeholder=\"Learning Events\" name=\"Select\" [(ngModel)]=\"selectedLearningEvents\"\r\n                      multiple #selectionModel=\"ngModel\" (opened)=\"onOpen()\" (closed)=\"onEventValueChange(selectedLearningEvents, false)\">\r\n            <app-select-check-all [model]=\"selectionModel\" [values]=\"(learningEventsOptions$ | async)\">\r\n            </app-select-check-all>\r\n            <mat-option *ngFor=\"let option of (learningEventsOptions$ | async)\" [value]=\"option\">\r\n              {{ option }}\r\n            </mat-option>\r\n          </mat-select>\r\n        </mat-form-field>\r\n      </div>\r\n      <div class=\"w-40\">\r\n        <strong>Learning Activities</strong><br/>\r\n        <span style=\"font-size: 14px; cursor: pointer;\" id=\"tooltipActivities\"\r\n              data-tooltipster='{\"side\":\"bottom\",\"animation\":\"fall\", \"delay\":\"200\", \"theme\":\"tooltipster-shadow\"}'\r\n              title=\"\">\r\n      <img width=\"16px\" src=\"assets/images/question.png\"/> Click here for more\r\n      details\r\n      <span class=\"\" id=\"contentActivities\">\r\n        <p style=\"text-align: left\">\r\n          <strong>Learning Activities</strong><br/>\r\n          A study by Gruber et al.\r\n          <a target=\"_blank\"\r\n             href=\"https://www.researchgate.net/publication/334170760_Design_Thinking_for_Technology_Enhanced_Learning\">[3]</a>\r\n          took the model of learning events and added learning activities<br/>\r\n          to identify its outcomes in LD. Learning activities are split into\r\n          in-class methods and tools,<br/>\r\n          and online methods and tools [<a target=\"_blank\"\r\n                                           href=\"https://www.researchgate.net/publication/334170760_Design_Thinking_for_Technology_Enhanced_Learning\">3</a>,\r\n          <a target=\"_blank\"\r\n             href=\"https://www.researchgate.net/publication/222945649_Factors_affecting_teachers'_participation_in_professional_learning_activities\">9</a>].\r\n          Examples of in-class methods and tools are exercise, <br/>exam,\r\n          presentation, discussion, demonstration, etc. On the other hand,\r\n          online methods and <br/>tools are blogs, wikis, forums, photo and\r\n          audio notes, online tests and quizzes, e-portfolios, <br/>etc.\r\n        </p>\r\n      </span>\r\n    </span>\r\n        <div class=\"pt-1\">\r\n          <ng-multiselect-dropdown class=\"step2\" [placeholder]=\"'Learning Activities'\"\r\n                                   [settings]=\"dropdownSettings\"\r\n                                   [data]=\"(learningActivitiesOptions$ | async)\"\r\n                                   [(ngModel)]=\"selectedLearningActivities\"\r\n                                   (onSelect)=\"onActivitySelectChange()\" (onDeSelectAll)=\"onActivitySelectChange()\"\r\n                                   (onSelectAll)=\"onActivitySelectChange()\" (onDeSelect)=\"onActivitySelectChange()\">\r\n          </ng-multiselect-dropdown>\r\n        </div>\r\n      </div>\r\n      <div class=\"w-20\">\r\n        <strong>Indicators</strong><br/>\r\n        <span style=\"font-size: 14px; cursor: pointer;\" id=\"tooltipIndicators\"\r\n              data-tooltipster='{\"side\":\"bottom\",\"animation\":\"fall\", \"delay\":\"200\", \"theme\":\"tooltipster-shadow\"}'\r\n              title=\"\">\r\n      <span><img width=\"16px\" src=\"assets/images/question.png\"/> Click here for\r\n        more details</span>\r\n      <span class=\"toolBoxCss\" id=\"contentIndicators\">\r\n        <p style=\"height: 572px\">\r\n          <strong>Indicators</strong><br/>\r\n          Metrics (measurements) are used to create indicators; an indicator is\r\n          the result of the analysis of one<br/>\r\n          or multiple metrics (e.g. number of views, login/logout frequency &\r\n          time, number of posts, etc.) and gives\r\n          <br/>\r\n          a more comprehensive picture on a particular (abstract) learner\r\n          status, e.g. reading comprehension, <br/>\r\n          self-reflection, etc. An indicator covers a particular aspect of an\r\n          abstract variable (e.g., student engagement)<br/>\r\n          by using relevant (measurable) items.<br/><br/>\r\n          Here is an example of Student Engagement in Moodle. <br/>\r\n          <img src=\"assets/images/engagement.jpg\"/>\r\n        </p>\r\n      </span>\r\n    </span>\r\n        <div class=\"mat-input-element-fix pt-1\">\r\n          <input class=\"step3\" matInput [(ngModel)]=\"searchInd\" (change)=\"determineFilteredTableDataByIndicatorAndMetricText()\"  placeholder=\"Search Indicator\"/>\r\n        </div>\r\n      </div>\r\n      <div class=\"w-20\">\r\n        <strong>Metrics</strong><br/>\r\n        <span style=\"font-size: 14px; cursor: pointer;\" id=\"tooltipMetrics\"\r\n              data-tooltipster='{\"side\":\"bottom\",\"animation\":\"fall\", \"delay\":\"200\", \"theme\":\"tooltipster-shadow\"}'\r\n              title=\"\">\r\n      <img width=\"16px\" src=\"assets/images/question.png\"/> Click here for more\r\n      details\r\n      <span class=\"toolBoxCss\" id=\"contentMetrics\">\r\n        <p style=\"text-align: left\">\r\n          <strong>Metrics</strong><br/>\r\n          Learning analytics applications collect data from the interaction\r\n          between learners and LMSs.<br/>\r\n          To make sense of these captured data, they need to be categorized in a\r\n          corresponding unit of<br/>\r\n          measurement (e.g. number of views, login/logout frequency & time,\r\n          number of posts, etc.). In<br/>\r\n          this paper, we refer to the units of measurements as metrics.\r\n        </p>\r\n      </span>\r\n    </span>\r\n        <div class=\"mat-input-element-fix pt-1\">\r\n          <input class=\"stepMetrics\" matInput [(ngModel)]=\"searchMat\" (change)=\"determineFilteredTableDataByIndicatorAndMetricText()\" placeholder=\"Search Metrics\"/>\r\n        </div>\r\n      </div>\r\n    </div>\r\n\r\n    <app-table *ngIf=\"!searchMat\" [data]=\"(tableData$ | async)\" [searchInd]=\"searchInd\" [searchMat]=\"searchMat\"\r\n               [checkedMap]=\"checkedMap\" [loggedIn]=\"loggedIn\" [notVerifiedIndicator]=\"notVerifiedIndicatorExists\"\r\n               (checkboxEmitter)=\"onCheckboxChange($event)\"\r\n               (getMetericsEmitter)=\"getMeterics($event)\"\r\n               (onReviewEmitter)=\"onReview($event)\"\r\n               (onVerdictEmitter)=\"onVerdict($event)\"\r\n               (onDeleteEmitter)=\"onDelete($event)\"\r\n               (onVerifyEmitter)=\"onVerify($event)\"\r\n    ></app-table>\r\n  </div>\r\n\r\n  <div class=\"content-right\" [ngClass]=\"{extendedMetrics: searchMat}\">\r\n    <div class=\"h-flex\">\r\n      <button class=\"stepVisualize buttonLaTool\" (click)=\"visualizeClicked()\">\r\n        <i class=\"fa-solid fa-display\"></i> &nbsp; Visualize\r\n      </button>\r\n      <button class=\"stepDownload buttonLaTool\" (click)=\"jsonClicked()\"><i class=\"fa-solid fa-download\"></i>\r\n        &nbsp; JSON\r\n      </button>\r\n\r\n      <button class=\"stepDownloadText buttonLaTool\" (click)=\"textClicked()\">\r\n        <i class=\"fa-solid fa-download\"></i> &nbsp; TEXT\r\n      </button>\r\n\r\n      <button class=\"stepReset buttonRed\" (click)=\"reset()\"><i class=\"fa-solid fa-arrow-rotate-right\"></i> &nbsp;\r\n        Reset\r\n      </button>\r\n\r\n      <button *ngIf=\"!loggedIn\" (click)=\"logIn()\" class=\"buttonLaTool login-button\">Login\r\n      </button>\r\n\r\n      <button *ngIf=\"loggedIn\"\r\n              style=\"background-image: linear-gradient(45deg, #8e1e22 10%, #edcfcf 51%, #8e1e22 100%) !important; box-shadow: 2px 4px 5px 0 #ead8d8;\"\r\n              class=\"buttonLaTool logout-button\" (click)='logout()'>Logout\r\n      </button>\r\n    </div>\r\n\r\n      <button *ngIf=\"loggedIn && loggedIn.superAdmin\" (click)=\"generateTreeStructure()\" class=\"buttonLaTool generateButton\">\r\n          Generate Data for TreeStructure\r\n      </button>\r\n\r\n    <label *ngIf=\"atLeastOneChecked()\" class=\"selected-indicators-label\"> Selected Indicator(s)</label>\r\n    <div class=\"selected-indicators-wrapper\">\r\n      <ul id=\"reset\" style=\"line-height: 17px; font-size: 15px\" *ngFor=\"let selectInd of ind_list\">\r\n        <li>\r\n          {{ selectInd }}\r\n        </li>\r\n      </ul>\r\n    </div>\r\n\r\n    <a id=\"back-to-top\" class=\"btn back-to-top\" role=\"button\" (click)=\"backToTop()\">\r\n      <i class=\"material-icons buttonLaTool\">arrow_upward</i>\r\n    </a>\r\n    <!-- <button class=\"stepReset buttonLaTool\"  (click)=\"reset()\"><img width=\"70px\" src=\"assets/images/reset.png\"/></button>  -->\r\n  </div>\r\n</div>\r\n<div *ngIf=\"searchMat\" class=\"extendedMetricsTable\">\r\n  <app-table [data]=\"(tableData$ | async)\" [searchInd]=\"searchInd\" [searchMat]=\"searchMat\"\r\n             [checkedMap]=\"checkedMap\" [loggedIn]=\"loggedIn\" [notVerifiedIndicator]=\"notVerifiedIndicatorExists\"\r\n             (checkboxEmitter)=\"onCheckboxChange($event)\"\r\n             (getMetericsEmitter)=\"getMeterics($event)\"\r\n             (onReviewEmitter)=\"onReview($event)\"\r\n             (onVerdictEmitter)=\"onVerdict($event)\"\r\n             (onDeleteEmitter)=\"onDelete($event)\"\r\n             (onVerifyEmitter)=\"onVerify($event)\"\r\n  ></app-table>\r\n</div>\r\n\r\n<ng-template #secondDialog let-indicator>\r\n  <h2 matDialogTitle>Metrics for the Indicator \"{{indicator.Title}}\"</h2>\r\n  <mat-dialog-content>\r\n      <div *ngIf=\"indicator.summary\" class=\"indicator-summary\">{{indicator.summary}}</div>\r\n      <div>Metrics:\r\n    <ul *ngFor=\"let metric of metrics_list\">\r\n      <li>{{ metric }}</li>\r\n    </ul>\r\n      </div>\r\n  </mat-dialog-content>\r\n  <button mat-button mat-dialog-close>Close</button>\r\n</ng-template>\r\n\r\n<ng-template #reviewDialog let-indicator>\r\n  <app-review-display [indicator]=\"indicator\"></app-review-display>\r\n</ng-template>\r\n\r\n<ng-template #verdictDialog let-reference>\r\n    <h2 matDialogTitle>Verdict for the Indicator \"{{metricsIndicatorTitle}}\"</h2>\r\n    <mat-dialog-content>\r\n        <div class=\"verdictContent\">\r\n            <div class=\"verdictRow\">\r\n                <div class=\"verdictLabel\">Verified:</div>\r\n                <div *ngIf=\"reference.status\">{{reference.status}}</div>\r\n                <div *ngIf=\"!reference.status\">No information</div>\r\n            </div>\r\n            <div class=\"verdictRow\">\r\n                <div class=\"verdictLabel\">Development:</div>\r\n                <div *ngIf=\"reference.development\">{{reference.development}}</div>\r\n                <div *ngIf=\"!reference.development\">No information</div>\r\n            </div>\r\n        </div>\r\n    </mat-dialog-content>\r\n    <button *ngIf=\"loggedIn && loggedIn.superAdmin\" mat-button mat-dialog-close (click)=\"editReference(reference._id)\" class=\"buttonLaTool\"\r\n            style=\"margin-right: 10px\">Edit\r\n    </button>\r\n    <button mat-button mat-dialog-close>Close</button>\r\n</ng-template>\r\n\r\n<ng-template #deleteDialog let-data>\r\n    <h2 matDialogTitle>Which delete process do you want to execute for the indicator:<br>\"{{data.indicator.Title}}\"?</h2>\r\n    <button mat-button mat-dialog-close (click)=\"deleteIndicator(data.indicator)\" class=\"buttonLaTool\"\r\n            style=\"margin-right: 10px\">Delete Indicator\r\n    </button>\r\n    <button mat-button mat-dialog-close (click)=\"removeIndicatorFromActivity(data)\" class=\"buttonLaTool\"\r\n            style=\"margin-right: 10px\">Remove from Activity\r\n    </button>\r\n    <button mat-button mat-dialog-close>Cancel</button>\r\n</ng-template>\r\n");
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/component/display/table/table.component.html":
-/*!****************************************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/component/display/table/table.component.html ***!
-  \****************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<table>\r\n  <tr>\r\n    <th style=\"width: 120px\">Learning Events</th>\r\n    <th>\r\n      <div>\r\n        <span class=\"learningactivities\">Learning<br>Activities</span>\r\n        <span style=\"margin-left: 6.5em\">Indicators</span>\r\n        <span *ngIf=\"notVerifiedIndicator && loggedIn?.superAdmin\" class=\"not-verified-indicators\">(There are Indicators present which have not yet been verified)</span>\r\n      </div>\r\n    </th>\r\n  </tr>\r\n\r\n  <!-- for loop for learning events -->\r\n  <tr *ngFor=\"let learningEvents of data\">\r\n    <td class=\"leraningevents\">\r\n      {{ learningEvents.name }}\r\n    </td>\r\n    <td>\r\n      <table class=\"w-100\">\r\n        <tr class=\"activities\" *ngFor=\"let LearningActivities of learningEvents.activities\">\r\n          <td class=\"learningactivities\">\r\n            {{ LearningActivities.name }}\r\n          </td>\r\n          <td>\r\n            <table class=\"w-100\">\r\n              <tr *ngFor=\"let indic of LearningActivities.indicators\" class=\"indicator\" [ngClass]=\"{'not-yet-verified': !indic.verified}\">\r\n                <td *ngIf=\"indic.verified || loggedIn?.superAdmin\" [ngClass]=\"{'w-50': searchMat}\" style=\"min-width: 730px\">\r\n                  <div class=\"indicator-content\">\r\n                    <input *ngIf=\"indic\" class=\"step4\" #indicatorCheckbox type=\"checkbox\"\r\n                           [checked]=\"checkedMap.get(indic._id)\"\r\n                           (click)=\"onCheckboxChange(indic)\"\r\n                           [disabled]=\"!indic.verified\"/>\r\n                    <div class=\"indicator-text\">\r\n                      <a class=\"sortable stepViewMetrics\" (click)=\"getMetericsEmitter.emit(indic)\">\r\n                        <span [innerHTML]=\"getFullIndicatorName(indic) | sanitizeHtml: searchInd\">\r\n                        </span>\r\n                      </a>\r\n                      <div>\r\n                          <a class=\"sortable reference-icon stepReference\" (click)=\"navigateToReferenceLink(indic)\"\r\n                             [matTooltip]=\"'Reference'\">\r\n                              <i class=\"fa fa-quote-right\"></i>\r\n                          </a>\r\n                          <a class=\"sortable reference-icon stepReference\" (click)=\"onVerdictEmitter.emit(indic)\"\r\n                             [matTooltip]=\"'Verdict'\">\r\n                              <img style=\"height: 14px\" src=\"assets/images/verdictHammer.png\"/>\r\n                          </a>\r\n                      <a class=\"sortable review-icon stepReview\" (click)=\"onReviewEmitter.emit(indic)\"\r\n                         [matTooltip]=\"'Reviews'\">\r\n                        <i class=\"fa fa-star-o\"></i>\r\n                      </a>\r\n\r\n                      <a *ngIf=\"loggedIn?.superAdmin\" class=\"superAdmin-icon edit\" (click)=\"editAsSuperAdmin(indic)\"\r\n                         [matTooltip]=\"'Edit Indicator'\">\r\n                        <i class=\"fa fa-pencil\"></i>\r\n                      </a>\r\n                      <a *ngIf=\"loggedIn?.superAdmin\" class=\"superAdmin-icon delete\"\r\n                         (click)=\"onDeleteEmitter.emit({indicator: indic, activity: LearningActivities})\"\r\n                         [matTooltip]=\"'Delete Indicator'\">\r\n                        <i class=\"fa fa-trash\"></i>\r\n                      </a>\r\n                      <a *ngIf=\"loggedIn?.superAdmin && !indic.verified\" class=\"superAdmin-icon verify\"\r\n                         (click)=\"onVerifyEmitter.emit(indic)\" [matTooltip]=\"'Verify Indicator'\">\r\n                          <i class=\"fa fa-check\"></i>\r\n                      </a>\r\n                      </div>\r\n                    </div>\r\n                  </div>\r\n                </td>\r\n                <td *ngIf=\"(indic.verified || loggedIn?.superAdmin) && searchMat\" class=\"w-50\" [ngClass]=\"{'not-yet-verified': !indic.verified}\">\r\n                  <a class=\"sortable\">\r\n                        <span [innerHTML]=\"indic.metrics | sanitizeHtml: searchMat\">\r\n                          {{ indic.metrics }}\r\n                        </span>\r\n                  </a>\r\n                </td>\r\n              </tr>\r\n            </table>\r\n          </td>\r\n        </tr>\r\n      </table>\r\n    </td>\r\n  </tr>\r\n</table>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<span class=\"tool_Home\">\n  <!-- Not run the demo if it is not home page -->\n  <div>\n    <span style=\"padding-bottom: 2px\">\n      <strong>Learning Events</strong><br />\n      <span class=\"stepDefine\" style=\"font-size: 14px; cursor: pointer;\" id=\"tooltipEvents\"\n        data-tooltipster='{\"side\":\"bottom\",\"animation\":\"fall\", \"delay\":\"200\", \"theme\":\"tooltipster-shadow\"}' title=\"\">\n        <img width=\"16px\" src=\"assets/images/question.png\" /> Click here for more details\n        <span class=\"\" id=\"contentEvents\">\n          <p style=\"text-align: left\">\n            <strong>Learning Events</strong><br />\n            A learning objective is the desired outcome of a single or multiple\n            learning event and is used to establish learning <br />\n            activities to achieve the overall learning outcome\n            <a target=\"_blank\"\n              href=\"https://research.tue.nl/en/publications/teacher-learning-in-the-context-of-educational-innovation-learnin\">[13]</a>.\n            Learning design literature identified eight learning events:\n            <br />create, explore, practice, imitate, receive, debate,\n            meta-learn/Elf-reflect, and experiment\n            <a target=\"_blank\" href=\"http://www.labset.net/media/prod/8LEM.pdf\">[1]</a>,\n            <a target=\"_blank\" href=\"https://www.tandfonline.com/doi/abs/10.1080/10494820701343694\">[2]</a>.\n            <br /><br />\n            <img width=\"800px\" src=\"assets/images/events.png\" />\n          </p>\n        </span>\n      </span>\n    </span>\n    <br />\n    <mat-form-field>\n      <mat-select class=\"step1\" placeholder=\"Learning Events\" name=\"Select\" [(ngModel)]=\"LearningEvents_mateSelect\"\n        multiple #selectionModel=\"ngModel\" (valueChange)=\"onEventValueChange($event)\">\n        <app-select-check-all [model]=\"selectionModel\" [values]=\"AllLearningEventsOptions\"\n          (sendCount)=\"onEventValueChange($event)\">\n        </app-select-check-all>\n        <mat-option *ngFor=\"let option of AllLearningEventsOptions\" [value]=\"option\">\n          {{ option }}\n        </mat-option>\n      </mat-select>\n    </mat-form-field>\n  </div>\n  <div>\n    <strong>Learning Activites</strong><br />\n    <span style=\"font-size: 14px; cursor: pointer;\" id=\"tooltipActivites\"\n      data-tooltipster='{\"side\":\"bottom\",\"animation\":\"fall\", \"delay\":\"200\", \"theme\":\"tooltipster-shadow\"}' title=\"\">\n      <img width=\"16px\" src=\"assets/images/question.png\" /> Click here for more\n      details\n      <span class=\"\" id=\"contentActivites\">\n        <p style=\"text-align: left\">\n          <strong>Learning Activites</strong><br />\n          A study by Gruber et al.\n          <a target=\"_blank\"\n            href=\"https://www.researchgate.net/publication/334170760_Design_Thinking_for_Technology_Enhanced_Learning\">[3]</a>\n          took the model of learning events and added learning activities<br />\n          to identify its outcomes in LD. Learning activities are split into\n          in-class methods and tools,<br />\n          and online methods and tools [<a target=\"_blank\"\n            href=\"https://www.researchgate.net/publication/334170760_Design_Thinking_for_Technology_Enhanced_Learning\">3</a>,\n          <a target=\"_blank\"\n            href=\"https://www.researchgate.net/publication/222945649_Factors_affecting_teachers'_participation_in_professional_learning_activities\">9</a>].\n          Examples of in-class methods and tools are exercise, <br />exam,\n          presentation, discussion, demonstration, etc. On the other hand,\n          online methods and <br />tools are blogs, wikis, forums, photo and\n          audio notes, online tests and quizzes, e-portfolios, <br />etc.\n        </p>\n      </span>\n    </span>\n    <br /><br />\n    <ng-multiselect-dropdown class=\"step2\" [placeholder]=\"'Learning Activities'\" [data]=\"dropdownList\"\n      [(ngModel)]=\"selectedActivityItems\" [settings]=\"dropdownSettings\" (onSelect)=\"onActivitySelect($event)\"\n      (onSelectAll)=\"onSelectAll($event)\" (onDeSelect)=\"checkvalue($event)\">\n    </ng-multiselect-dropdown>\n  </div>\n  <div>\n    <strong>Indicators</strong><br />\n    <span style=\"font-size: 14px; cursor: pointer;\" id=\"tooltipIndicators\"\n      data-tooltipster='{\"side\":\"bottom\",\"animation\":\"fall\", \"delay\":\"200\", \"theme\":\"tooltipster-shadow\"}' title=\"\">\n      <span><img width=\"16px\" src=\"assets/images/question.png\" /> Click here for\n        more details</span>\n      <span class=\"toolBoxCss\" id=\"contentIndicators\">\n        <p style=\"height: 572px\">\n          <strong>Indicators</strong><br />\n          Metrics (measurements) are used to create indicators; an indicator is\n          the result of the analysis of one<br />\n          or multiple metrics (e.g. number of views, login/logout frequency &\n          time, number of posts, etc.) and gives\n          <br />\n          a more comprehensive picture on a particular (abstract) learner\n          status, e.g. reading comprehension, <br />\n          self-reflection, etc. An indicator covers a particular aspect of an\n          abstract variable (e.g., student engagement)<br />\n          by using relevant (measurable) items.<br /><br />\n          Here is an example of Student Engagement in Moodle. <br />\n          <img src=\"assets/images/engagement.jpg\" />\n        </p>\n      </span>\n    </span>\n    <br /><br />\n    <input class=\"step3\" matInput [(ngModel)]=\"searchInd\" placeholder=\"Search Indicator\"\n      (change)=\"searchIndicator(searchInd)\" />\n  </div>\n  <div>\n    <strong>Metrics</strong><br />\n    <span style=\"font-size: 14px; cursor: pointer;\" id=\"tooltipMetrics\"\n      data-tooltipster='{\"side\":\"bottom\",\"animation\":\"fall\", \"delay\":\"200\", \"theme\":\"tooltipster-shadow\"}' title=\"\">\n      <img width=\"16px\" src=\"assets/images/question.png\" /> Click here for more\n      details\n      <span class=\"toolBoxCss\" id=\"contentMetrics\">\n        <p style=\"text-align: left\">\n          <strong>Metrics</strong><br />\n          Learning analytics applications collect data from the interaction\n          between learners and LMSs.<br />\n          To make sense of these captured data, they need to be categorized in a\n          corresponding unit of<br />\n          measurement (e.g. number of views, login/logout frequency & time,\n          number of posts, etc.). In<br />\n          this paper, we refer to the units of measurements as metrics.\n        </p>\n      </span>\n    </span>\n    <br /><br />\n    <input class=\"stepMetrics\" matInput [(ngModel)]=\"searchMat\" placeholder=\"Search Metrics\"\n      (change)=\"learningEventsChangeOnSearch(searchMat)\" />\n  </div>\n\n  <div style=\"margin-left: 50px\">\n    <label *ngIf=\"ind\" style=\"color: gray; font-size: 15px\"> Selected Indicator(s)</label>\n    <ul id=\"reset\" style=\"line-height: 15%; font-size: 15px\" *ngFor=\"let selectInd of ind_list\">\n      <li>\n        {{ selectInd }}\n      </li>\n    </ul>\n    <span style=\"padding-top: 16px; padding-bottom: 16px\">\n      <button class=\"stepVisualize buttonLaTool\" (click)=\"forwardIndicators(ind_list)\">\n        <i class=\"fa-solid fa-display\"></i> &nbsp; Visualize\n      </button>\n      <button class=\"stepDownload buttonLaTool\" (click)=\"getSelectedind(mat_list)\"><i class=\"fa-solid fa-download\"></i>\n        &nbsp; JSON\n      </button>\n\n      <button class=\"stepDownloadText buttonLaTool\" (click)=\"download(mat_list, 'text/plain', 'Indicators TEXT.txt')\">\n        <i class=\"fa-solid fa-download\"></i> &nbsp; TEXT\n      </button>\n\n      <button class=\"stepReset buttonRed\" (click)=\"reset()\"><i class=\"fa-solid fa-arrow-rotate-right\"></i> &nbsp;\n        Reset</button>\n    </span>\n\n    <!-- <button class=\"stepReset buttonLaTool\"  (click)=\"reset()\"><img width=\"70px\" src=\"assets/images/reset.png\"/></button>  -->\n\n  </div>\n\n  <ng-template #secondDialog>\n    <h2 matDialogTitle>Metrics</h2>\n    <mat-dialog-content>\n      <ul *ngFor=\"let mat of sp\">\n        <!-- style=\"line-height: 20%\" -->\n        <li>{{ mat }}</li>\n      </ul>\n    </mat-dialog-content>\n    <button mat-button mat-dialog-close>Close</button>\n  </ng-template>\n\n  <table style=\"margin-left: 10px\">\n    <thead>\n      <th>Learning Events</th>\n      <div>\n        <th style=\"margin-left: 40px\">(Learning) Activities</th>\n      </div>\n      <div style=\"margin-left: 80px\">\n        <th>Indicators</th>\n      </div>\n    </thead>\n\n    <!-- for loop for learning events -->\n    <tr *ngFor=\"let learningEvents of data\">\n      <td style=\"width: 15\" class=\"leraningevents\">\n        {{ learningEvents.LearningEvents }}\n      </td>\n      <td>\n    <tr class=\"activities\" *ngFor=\"let LearningActivities of learningEvents.LearningActivities\">\n      <td style=\"width: 210px\">\n        {{ LearningActivities.Name }}\n      </td>\n      <td class=\"highlightIndicators\">\n        <!-- loop for indicators -->\n    <tr *ngFor=\"let indic of LearningActivities.indicator\">\n      <input class=\"step4\" #indicatorCheckbox type=\"checkbox\" value=\"indic\" [checked]=\"indic.checked\"\n        (change)=\"Checkbox($event, indic)\" />\n\n      <a class=\"sortable stepViewMetrics\" (click)=\"getMeterics(indic)\">\n        <span [innerHTML]=\"indic.indicatorName | sanitizeHtml: searchInd\">\n          {{ indic.indicatorName }}\n        </span>\n      </a>\n      <td *ngIf=\"searchMat\">\n    <tr>\n      <a class=\"sortable\">\n        <span [innerHTML]=\"indic.metrics | sanitizeHtml: searchMat\">\n          {{ indic.metrics }}\n        </span>\n      </a>\n    </tr>\n    </td>\n    </tr>\n    </td>\n    </tr>\n    </td>\n    </tr>\n  </table>\n\n  <a id=\"back-to-top\" class=\"btn back-to-top\" role=\"button\" (click)=\"backToTop()\">\n    <i class=\"material-icons buttonLaTool\">arrow_upward</i>\n  </a>\n</span>");
 
 /***/ }),
 
@@ -578,7 +565,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<mat-form-field>\r\n  <mat-label>Learning Events</mat-label>\r\n  <mat-select\r\n    name=\"Select\"\r\n    class=\"design\"\r\n    [formControl]=\"learningevents\"\r\n    [(value)]=\"selected\"\r\n    [(ngModel)]=\"selected\"\r\n    (selectionChange)=\"changeLearningEvents($event.value, selected)\"\r\n    multiple\r\n  >\r\n    <mat-select-trigger> {{ selected }}</mat-select-trigger>\r\n\r\n    <mat-option\r\n      (click)=\"$event.stopPropagation()\"\r\n      (change)=\"toggleSelection($event)\"\r\n    >\r\n      {{ text }}\r\n    </mat-option>\r\n\r\n    <mat-option\r\n      *ngFor=\"let learningevents of learningEvents\"\r\n      [value]=\"learningevents\"\r\n      >{{ learningevents }}</mat-option\r\n    >\r\n  </mat-select>\r\n</mat-form-field>\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<mat-form-field>\n  <mat-label>Learning Events</mat-label>\n  <mat-select\n    name=\"Select\"\n    class=\"design\"\n    [formControl]=\"learningevents\"\n    [(value)]=\"selected\"\n    [(ngModel)]=\"selected\"\n    (selectionChange)=\"changeLearningEvents($event.value, selected)\"\n    multiple\n  >\n    <mat-select-trigger> {{ selected }}</mat-select-trigger>\n\n    <mat-option\n      (click)=\"$event.stopPropagation()\"\n      (change)=\"toggleSelection($event)\"\n    >\n      {{ text }}\n    </mat-option>\n\n    <mat-option\n      *ngFor=\"let learningevents of learningEvents\"\n      [value]=\"learningevents\"\n      >{{ learningevents }}</mat-option\n    >\n  </mat-select>\n</mat-form-field>\n");
 
 /***/ }),
 
@@ -591,7 +578,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"header\" id=\"header\">\r\n  <mat-toolbar style=\"height: 72px;\" color=\"primary\">\r\n    <span class=\"step0\">\r\n      <span id=\"tooltipHeaderLogo\"\r\n            data-tooltipster='{\"side\":\"right\",\"animation\":\"grow\", \"delay\":\"200\", \"theme\":\"tooltipster-shadow\"}'>\r\n        <a><img routerLink=\"/\" class=\"HeaderLogo\" style=\"height: 66px; padding-top: 9px\" src=\"assets/images/logo.png\"/>\r\n          <span id=\"contentHeaderLogo\">\r\n            <!-- <p>\r\n              <strong>OpenLAIR</strong><br /><br />\r\n              Acronym [Blinded]<br />\r\n            </p> -->\r\n            <p>\r\n              <strong>OpenLAIR <a target=\"_blank\"\r\n                                  href=\"https://www.researchgate.net/publication/360034339_What_Indicators_Can_I_Serve_You_with_An_Evaluation_of_a_Research-Driven_Learning_Analytics_Indicator_Repository\">(Ahmad et al., 2022)</a> and <a\r\n                target=\"_blank\"\r\n                href=\"https://www.researchgate.net/publication/362256819_Connecting_the_dots_-_A_literature_review_on_learning_analytics_indicators_from_a_learning_design_perspective\">(Ahmad et al., 2022)</a> </strong><br/><br/>\r\n              Open Learning Analytics Indicator Repository<br/>\r\n            </p>\r\n          </span>\r\n      </a>\r\n    </span>\r\n    </span>\r\n\r\n    <div class=\"template-container-display\">\r\n      <div>\r\n      <span *ngIf=\"currentPage === 'display'\" id=\"tooltipHeaderLogo2\"\r\n            data-tooltipster='{\"side\":\"right\",\"animation\":\"grow\", \"delay\":\"200\", \"theme\":\"tooltipster-shadow\"}'>\r\n      <button class=\"buttonHead\" (click)=\"reset()\"><i class=\"fa-solid fa-arrow-rotate-right\"></i> Click here if the below TABLE is empty\r\n        <span id=\"contentHeaderLogo2\">\r\n          <p>\r\n            Please wait for 10 seconds\r\n          </p>\r\n        </span>\r\n      </button>\r\n    </span>\r\n      </div>\r\n      <div class=\"right-buttons\">\r\n        <button *ngIf=\"currentPage !== 'add-indicator'\" class=\"buttonHead\" (click)='addIndicators()'><img style=\"width: 17px;\"\r\n                                                                  src=\"assets/images/add.png\"/>&nbsp; Add Indicators\r\n        </button>\r\n\r\n        <!-- <a href=\"#\" onclick=\"myTour()\">Start Tour</a> -->\r\n        <button *ngIf=\"currentPage !== 'references'\" class=\"stepReferences buttonHead\" (click)='references()'><img style=\"width: 14px;\"\r\n                                                                              src=\"assets/images/ref.png\"/>&nbsp;\r\n          References\r\n        </button>\r\n\r\n        <!-- <a mat-button class=\"stepReferences\" href=\"https://atezaz.github.io/references.html\" target=\"_blank\">References</a> -->\r\n        <button *ngIf=\"currentPage === 'display'\" (click)=\"tourService.myTour()\" class=\"stepStartTour buttonHead\" id=\"myTourBtn\">\r\n          <i class=\"fa-solid fa-flag\"></i>&nbsp; Start Tour\r\n        </button>\r\n\r\n        <button *ngIf=\"currentPage !== 'display'\" class=\"buttonHead\" (click)=\"navigateHome()\">\r\n          <i class=\"fa-solid fa-house\"></i>&nbsp; Home\r\n        </button>\r\n      </div>\r\n    </div>\r\n  </mat-toolbar>\r\n</div>\r\n\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"header\" id=\"header\">\r\n  <mat-toolbar style=\"height: 72px;\" color=\"primary\">\r\n    <span class=\"step0\" >\r\n      <span id=\"tooltipHeaderLogo\" data-tooltipster='{\"side\":\"right\",\"animation\":\"grow\", \"delay\":\"200\", \"theme\":\"tooltipster-shadow\"}'>\r\n        <a><img routerLink=\"/\" class=\"HeaderLogo\"  style=\"height: 66px; padding-top: 9px\" src=\"assets/images/logo.png\" />\r\n          <span id=\"contentHeaderLogo\">\r\n            <!-- <p>\r\n              <strong>OpenLAIR</strong><br /><br />\r\n              Acronym [Blinded]<br />\r\n            </p> -->\r\n            <p>\r\n              <strong>OpenLAIR <a target=\"_blank\" href=\"https://www.researchgate.net/publication/360034339_What_Indicators_Can_I_Serve_You_with_An_Evaluation_of_a_Research-Driven_Learning_Analytics_Indicator_Repository\">(Ahmad et al., 2022)</a> and <a target=\"_blank\" href=\"https://www.researchgate.net/publication/362256819_Connecting_the_dots_-_A_literature_review_on_learning_analytics_indicators_from_a_learning_design_perspective\">(Ahmad et al., 2022)</a> </strong><br /><br />\r\n              Open Learning Analytics Indicator Repository<br />\r\n            </p>\r\n          </span>\r\n      </a>\r\n    </span>\r\n    </span>\r\n    \r\n    \r\n    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;\r\n    <span id=\"tooltipHeaderLogo2\" data-tooltipster='{\"side\":\"right\",\"animation\":\"grow\", \"delay\":\"200\", \"theme\":\"tooltipster-shadow\"}'>\r\n      <button class=\"buttonHead\" (click)=\"reset()\"><i class=\"fa-solid fa-arrow-rotate-right\"></i> Click here if the below TABLE is empty\r\n        <span id=\"contentHeaderLogo2\" >\r\n          <p>\r\n            Please wait for 10 seconds\r\n          </p>\r\n        </span>\r\n\r\n      </button>\r\n    </span>\r\n    \r\n\r\n    <!-- <a style=\"color: white; font-size: 14px;\" (click)=\"reset()\"> Click here if the table is empty</a>           reset()-->\r\n    <span class=\"example-spacer\"></span>\r\n\r\n\r\n    <button class=\"buttonHead\" (click)='addIndicators()'><img style=\"width: 17px;\"\r\n      src=\"assets/images/add.png\" />&nbsp; Add Indicators</button>\r\n\r\n    <!-- <a href=\"#\" onclick=\"myTour()\">Start Tour</a> -->\r\n    <button class=\"stepReferences buttonHead\" (click)='references()'><img style=\"width: 14px;\"\r\n        src=\"assets/images/ref.png\" />&nbsp; References</button>\r\n    \r\n    <!-- <a mat-button class=\"stepReferences\" href=\"https://atezaz.github.io/references.html\" target=\"_blank\">References</a> -->\r\n    <button class=\"stepStartTour buttonHead\" id=\"myTourBtn\">\r\n      <i class=\"fa-solid fa-flag\"></i>&nbsp; Start Tour\r\n    </button>\r\n  </mat-toolbar>\r\n</div>");
 
 /***/ }),
 
@@ -604,46 +591,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ul *ngIf=\"references$ | async as references\">\r\n  <li *ngFor=\"let reference of references\" class=\"referenceItem\">\r\n    {{reference.referenceNumber}} {{reference.referenceText}}<br>\r\n    <div style=\"display: flex\">\r\n      <a *ngIf=\"reference.link\" href=\"{{reference.link}}\">{{shortenLink(reference.link)}}</a>\r\n      <a *ngIf=\"loggedIn?.superAdmin\" class=\"superAdmin-icon edit\" (click)=\"editAsSuperAdmin(reference._id)\">\r\n        <i class=\"fa fa-pencil\"></i>\r\n      </a>\r\n      <a *ngIf=\"loggedIn?.superAdmin\" class=\"superAdmin-icon delete\" (click)=\"deleteAsSuperAdmin(reference)\">\r\n        <i class=\"fa fa-trash\"></i>\r\n      </a>\r\n    </div>\r\n  </li>\r\n</ul>\r\n\r\n<a id=\"back-to-top\" class=\"btn back-to-top\" role=\"button\" (click)=\"backToTop()\">\r\n  <i class=\"material-icons buttonLaTool\">arrow_upward</i>\r\n</a>\r\n");
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/component/review-display/review-display.component.html":
-/*!**************************************************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/component/review-display/review-display.component.html ***!
-  \**************************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"rating-header\">\r\n  <h2 matDialogTitle style=\"margin-bottom: 10px; padding-right: 2em\">Review(s) for {{indicator.Title}}</h2>\r\n  <div *ngIf=\"totalAverage\" [matTooltip]=\"totalAverage.toString()\" [matTooltipPosition]=\"'right'\"\r\n       style=\"margin-bottom: 10px; width: 18em\">\r\n    Overall average score:\r\n    <mat-star-rating [disabled]=\"true\" [rating]=\"totalAverage\"></mat-star-rating>\r\n  </div>\r\n</div>\r\n<mat-dialog-content class=\"reviewDialogContent\" *ngIf=\"reviews\">\r\n  <div *ngIf=\"reviews.length === 0\" class=\"reviewPlaceholder\">No Reviews have been submitted yet.</div>\r\n  <div *ngFor=\"let review of reviews\" class=\"rating-wrapper\">\r\n    <fieldset style=\"border-radius: 8px;\">\r\n      <legend>\r\n        <div class=\"d-flex\">\r\n          <span style=\"font-weight: bold; padding-right: 0.5em\">Name: </span>{{review.name}}\r\n          <div *ngIf=\"loggedIn?.superAdmin\">\r\n            <a class=\"mx-2\" mat-dialog-close (click)=\"editAsSuperAdmin(review._id)\">\r\n              <i class=\"fa fa-pencil\"></i>\r\n            </a>\r\n            <a (click)=\"deleteAsSuperAdmin(review._id)\">\r\n              <i class=\"fa fa-trash\"></i>\r\n            </a>\r\n          </div>\r\n        </div>\r\n      </legend>\r\n        <div class=\"single-rating-wrapper\" [matTooltip]=\"calculateAverage(review).toString()\" [matTooltipPosition]=\"'right'\">\r\n            <span></span>\r\n            <div>\r\n                Average score:\r\n            <mat-star-rating [disabled]=\"true\" [rating]=\"calculateAverage(review)\"></mat-star-rating>\r\n            </div>\r\n        </div>\r\n      <div class=\"single-rating-wrapper\">\r\n        <span style=\"font-weight: bold\">Indicator quality:</span>\r\n        <mat-star-rating [disabled]=\"true\" [(rating)]=\"review.indicatorQuality\"></mat-star-rating>\r\n      </div>\r\n      <div>{{review.indicatorQualityNote}}</div>\r\n      <div class=\"single-rating-wrapper\">\r\n        <span style=\"font-weight: bold\">Article Clarity:</span>\r\n        <mat-star-rating [disabled]=\"true\" [(rating)]=\"review.articleClarity\"></mat-star-rating>\r\n      </div>\r\n      <div>{{review.articleClarityNote}}</div>\r\n      <div class=\"single-rating-wrapper\">\r\n        <span style=\"font-weight: bold\">Article Data:</span>\r\n        <mat-star-rating [disabled]=\"true\" [(rating)]=\"review.articleData\"></mat-star-rating>\r\n      </div>\r\n      <div>{{review.articleDataNote}}</div>\r\n      <div class=\"single-rating-wrapper\">\r\n        <span style=\"font-weight: bold\">Article Analysis:</span>\r\n        <mat-star-rating [disabled]=\"true\" [(rating)]=\"review.articleAnalysis\"></mat-star-rating>\r\n      </div>\r\n      <div>{{review.articleAnalysisNote}}</div>\r\n      <div class=\"single-rating-wrapper\">\r\n        <span style=\"font-weight: bold\">Article Conclusion:</span>\r\n        <mat-star-rating [disabled]=\"true\" [(rating)]=\"review.articleConclusion\"></mat-star-rating>\r\n      </div>\r\n      <div>{{review.articleConclusionNote}}</div>\r\n      <div class=\"single-rating-wrapper\">\r\n        <span style=\"font-weight: bold\">Article Contribution:</span>\r\n        <mat-star-rating [disabled]=\"true\" [(rating)]=\"review.articleContribution\"></mat-star-rating>\r\n      </div>\r\n      <div>{{review.articleContributionNote}}</div>\r\n    </fieldset>\r\n  </div>\r\n</mat-dialog-content>\r\n<button *ngIf=\"loggedIn\" mat-button mat-dialog-close (click)=\"addReview()\" class=\"buttonLaTool\"\r\n        style=\"margin-right: 10px\">{{buttonLabel}}\r\n</button>\r\n<button *ngIf=\"!loggedIn\" mat-button mat-dialog-close (click)=\"logIn()\" class=\"buttonLaTool\"\r\n        style=\"margin-right: 10px\">Login\r\n</button>\r\n<button mat-button mat-dialog-close style=\"border: 1px solid grey\">Close</button>\r\n");
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/component/review-edit/review-edit.component.html":
-/*!********************************************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/component/review-edit/review-edit.component.html ***!
-  \********************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div *ngIf=\"indicator\" class=\"outer-div\">\r\n    <h2> Create Review for \"{{indicator.Title}}\"</h2>\r\n\r\n    <form [formGroup]=\"formGroup\" (ngSubmit)=\"onSubmit()\">\r\n\r\n        <div class=\"row\">\r\n            <div class=\"column-100\">\r\n                <div class=\"row-no-wrap\" *ngIf=\"reference\">\r\n                    <div style=\"width: 80px\">Reference:</div>\r\n                    <span>{{reference.referenceText}} {{reference.referenceNumber}}</span>\r\n                </div>\r\n                <div class=\"row-no-wrap\" *ngIf=\"reference && reference.link\">\r\n                    <div style=\"width: 80px\">Link:</div>\r\n                    <a href=\"{{reference.link}}\">{{shortenLink(reference.link)}}</a>\r\n                </div>\r\n                <div class=\"row\">\r\n                    <div style=\"width: 80px\">Name:</div>\r\n                    <span>{{formGroup.controls['name'].value}}</span>\r\n                </div>\r\n            </div>\r\n            <div class=\"column-25\">\r\n                <div>Indicator quality:\r\n                    <mat-star-rating [(rating)]=\"indicatorQuality\"\r\n                                     (ratingChange)=\"ratingChanged('indicatorQuality', $event.valueOf())\"></mat-star-rating>\r\n                </div>\r\n                <div\r\n                    *ngIf=\"formGroup.controls['indicatorQuality'].invalid && (formGroup.controls['indicatorQuality'].dirty || formGroup.controls['indicatorQuality'].touched)\"\r\n                    class=\"alert\">\r\n                    <div *ngIf=\"formGroup.controls['indicatorQuality'].errors.required\">\r\n                        Rating is required.\r\n                    </div>\r\n                </div>\r\n                <span style=\"margin-top: 10px;\">Indicator quality Note:</span>\r\n                <textarea class=\"note-textarea\" formControlName=\"indicatorQualityNote\"></textarea>\r\n            </div>\r\n            <div class=\"column-25\">\r\n                <div>Article Clarity:\r\n                    <mat-star-rating [(rating)]=\"articleClarity\"\r\n                                     (ratingChange)=\"ratingChanged('articleClarity', $event.valueOf())\"></mat-star-rating>\r\n                </div>\r\n                <div\r\n                    *ngIf=\"formGroup.controls['articleClarity'].invalid && (formGroup.controls['articleClarity'].dirty || formGroup.controls['articleClarity'].touched)\"\r\n                    class=\"alert\">\r\n                    <div *ngIf=\"formGroup.controls['articleClarity'].errors.required\">\r\n                        Rating is required.\r\n                    </div>\r\n                </div>\r\n                <span style=\"margin-top: 10px;\">Article Clarity Note:</span>\r\n                <textarea class=\"note-textarea\" formControlName=\"articleClarityNote\"></textarea>\r\n            </div>\r\n            <div class=\"column-25\">\r\n                <div>Article Data:\r\n                    <mat-star-rating [(rating)]=\"articleData\"\r\n                                     (ratingChange)=\"ratingChanged('articleData', $event.valueOf())\"></mat-star-rating>\r\n                </div>\r\n                <div\r\n                    *ngIf=\"formGroup.controls['articleData'].invalid && (formGroup.controls['articleData'].dirty || formGroup.controls['articleData'].touched)\"\r\n                    class=\"alert\">\r\n                    <div *ngIf=\"formGroup.controls['articleData'].errors.required\">\r\n                        Rating is required.\r\n                    </div>\r\n                </div>\r\n                <span style=\"margin-top: 10px;\">Article Data Note:</span>\r\n                <textarea class=\"note-textarea\" formControlName=\"articleDataNote\"></textarea>\r\n            </div>\r\n            <div class=\"column-25\">\r\n                <div>Article Analysis:\r\n                    <mat-star-rating [(rating)]=\"articleAnalysis\"\r\n                                     (ratingChange)=\"ratingChanged('articleAnalysis', $event.valueOf())\"></mat-star-rating>\r\n                </div>\r\n                <div\r\n                    *ngIf=\"formGroup.controls['articleAnalysis'].invalid && (formGroup.controls['articleAnalysis'].dirty || formGroup.controls['articleAnalysis'].touched)\"\r\n                    class=\"alert\">\r\n                    <div *ngIf=\"formGroup.controls['articleAnalysis'].errors.required\">\r\n                        Rating is required.\r\n                    </div>\r\n                </div>\r\n                <span style=\"margin-top: 10px;\">Article Analysis Note:</span>\r\n                <textarea class=\"note-textarea\" formControlName=\"articleAnalysisNote\"></textarea>\r\n            </div>\r\n            <div class=\"column-25\">\r\n                <div>Article Conclusion:\r\n                    <mat-star-rating [(rating)]=\"articleConclusion\"\r\n                                     (ratingChange)=\"ratingChanged('articleConclusion', $event.valueOf())\"></mat-star-rating>\r\n                </div>\r\n                <div\r\n                    *ngIf=\"formGroup.controls['articleConclusion'].invalid && (formGroup.controls['articleConclusion'].dirty || formGroup.controls['articleConclusion'].touched)\"\r\n                    class=\"alert\">\r\n                    <div *ngIf=\"formGroup.controls['articleConclusion'].errors.required\">\r\n                        Rating is required.\r\n                    </div>\r\n                </div>\r\n                <span style=\"margin-top: 10px;\">Article Conclusion Note:</span>\r\n                <textarea class=\"note-textarea\" formControlName=\"articleConclusionNote\"></textarea>\r\n            </div>\r\n            <div class=\"column-25\">\r\n                <div>Article Contribution:\r\n                    <mat-star-rating [(rating)]=\"articleContribution\"\r\n                                     (ratingChange)=\"ratingChanged('articleContribution', $event.valueOf())\"></mat-star-rating>\r\n                </div>\r\n                <div\r\n                    *ngIf=\"formGroup.controls['articleContribution'].invalid && (formGroup.controls['articleContribution'].dirty || formGroup.controls['articleContribution'].touched)\"\r\n                    class=\"alert\">\r\n                    <div *ngIf=\"formGroup.controls['articleContribution'].errors.required\">\r\n                        Rating is required.\r\n                    </div>\r\n                </div>\r\n                <span style=\"margin-top: 10px;\">Article Contribution Note:</span>\r\n                <textarea class=\"note-textarea\" formControlName=\"articleContributionNote\"></textarea>\r\n            </div>\r\n        </div>\r\n        <button type=\"submit\" class=\"buttonLaTool\">Submit Review</button>\r\n        <button *ngIf=\"reviewId\"\r\n                style=\"background-image: linear-gradient(45deg, #8e1e22 10%, #edcfcf 51%, #8e1e22 100%) !important; box-shadow: 2px 4px 5px 0px #ead8d8;\"\r\n                class=\"buttonLaTool\" (click)=\"deleteReview()\">Delete Review\r\n        </button>\r\n    </form>\r\n</div>\r\n");
-
-/***/ }),
-
-/***/ "./node_modules/raw-loader/dist/cjs.js!./src/app/component/star-rating/star-rating.component.html":
-/*!********************************************************************************************************!*\
-  !*** ./node_modules/raw-loader/dist/cjs.js!./src/app/component/star-rating/star-rating.component.html ***!
-  \********************************************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<button mat-icon-button [disabled]=\"disabled\" [color]=\"color\" *ngFor=\"let ratingId of ratingArr;index as i\" [id]=\"'star_'+i\" (click)=\"onClick(i+1)\">\r\n  <mat-icon>\r\n    {{showIcon(i)}}\r\n  </mat-icon>\r\n</button>\r\n\r\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<blockquote>\n    <p>\n        [1] Leclercq, D. & Poumay, M. (2005). The 8 learning Events Model. (2005).1. LabSET\n        <cite>\n            <a href=\"http://www.labset.net/media/prod/8LEM.pdf\">University of Liège</a>\n        </cite>\n    </p>\n    <p>\n       [2] Verpoorten, Dominique, Marianne Poumay, and Dieudonné Leclercq. (2007) \"The eight learning events model: A pedagogic conceptual tool supporting diversification of learning methods.\" Interactive Learning Environments 15.2 : 151-160.\n       <a target = \"_blank\" href = \"https://doi.org/10.1080/10494820701343694\"> doi.org/10.1080/10494820701343694</a>\n    </p>\n    <p>\n        [3] Gruber, Marion. (2019). Design Thinking for Technology Enhanced Learning\n        <cite>\n            <a target = \"_blank\" href=\"https://www.researchgate.net/publication/334170760_Design_Thinking_for_Technology_Enhanced_Learning\">Retrieved link </a>\n        </cite> \n    </p>\n    <p>\n        [4] Lockyer, Lori, Elizabeth Heathcote, and Shane Dawson. \"Informing pedagogical action: Aligning learning analytics with learning design.\" American Behavioral Scientist 57.10 (2013): 1439-1459.\n        <a target = \"_blank\" href = \"https://www.doi.org/10.1177/0002764213479367\"> doi.org/10.1177/0002764213479367</a>\n    </p>\n    <p>\n        [5] Bakharia, Aneesha, et al. \"A conceptual framework linking learning design with learning analytics.\" Proceedings of the Sixth International Conference on Learning Analytics & Knowledge. ACM, 2016.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2883851.2883944\"> doi.org/10.1145/2883851.2883944</a>\n    </p>\n    <p>\n        [6] Mangaroska, Katerina, and Michail Giannakos. \"Learning analytics for learning design: Towards evidence-driven decisions to enhance learning.\" European conference on technology enhanced learning. Springer, Cham, 2017.\n        <a target = \"_blank\" href = \"https://doi.org/10.1007/978-3-319-66610-5_38\"> doi.org/10.1007/978-3-319-66610-5_38</a>\n    </p>\n    <p>\n        [7] Mor, Yishay, and Brock Craft. \"Learning design: reflections on a snapshot of the current landscape.\" Research in learning technology 20 (2012): 85-94.\n        <a target = \"_blank\" href = \"https://doi.org/10.3402/rlt.v20i0.19196\"> doi.org/10.3402/rlt.v20i0.19196</a>\n    </p>\n    <p>\n        [8]  Hernández-Leo, D., Rodriguez Triana, M. J., Inventado, P. S., & Mor, Y. (2017). Preface: connecting learning design and learning analytics. Interaction Design and Architecture (s) Journal-IxD&A, 33(ARTICLE), 3-8.\n        <cite>\n            <a target = \"_blank\" href=\"https://infoscience.epfl.ch/record/231720\">Retrieved link </a>\n        </cite> \n\n    </p>\n    <p>\n        [9] Kwakman, Kitty. \"Factors affecting teachers’ participation in professional learning activities.\" Teaching and teacher education 19.2 (2003): 149-170.\n        <a target = \"_blank\" href = \"https://doi.org/10.1016/S0742-051X(02)00101-4\"> doi.org/10.1016/S0742-051X(02)00101-4</a>\n    </p>\n    <p>\n        [10] K. Mangaroska and M. N. Giannakos, \"Learning analytics for learning design: A systematic literature review of analytics-driven design to enhance learning,\" in IEEE Transactions on Learning Technologies.\n        <a target = \"_blank\" href = \"https://doi.org/10.1109/TLT.2018.2868673\"> doi.org/10.1109/TLT.2018.2868673</a>\n    </p>\n    <p>\n        [11] F. Martin, A. Ndoye, and P. Wilkins, “Using learning analytics to enhance student learning in online courses based on quality matters standards,” Journal of Educational Technology Systems, vol. 45, no. 2, pp. 165–187, 2016.\n        <a target = \"_blank\" href = \"https://doi.org/10.1177/0047239516656369\"> doi.org/10.1177/0047239516656369</a>\n    </p>\n    <p>\n        [12] Morss, Kate, and Rowena Murray. Teaching at university: A guide for postgraduates and researchers. Sage, 2005\n    </p>\n    <p>\n        [13] Bakkenes, Inge, Jan D. Vermunt, and Theo Wubbels. \"Teacher learning in the context of educational innovation: Learning activities and learning outcomes of experienced teachers.\" Learning and instruction 20.6 (2010): 533-548.\n        <a target = \"_blank\" href = \"https://doi.org/10.1016/j.learninstruc.2009.09.001\"> doi.org/10.1016/j.learninstruc.2009.09.001</a>\n    </p>\n    <p>\n        [14] Call for Papers of the 1st International Conference on Learning Analytics & Knowledge (LAK 2011)\n    </p>\n    <p>\n        [15]  Park, Yeonjeong, and I-H. Jo. \"Development of the learning analytics dashboard to support students’ learning performance.\" Journal of Universal Computer Science 21.1 (2015): 110.\n         <cite>\n            <a target = \"_blank\" href=\"http://www.jucs.org/jucs_21_1/development_of_the_learning/jucs_21_01_0110_0133_park.pdf\">Retrieved link </a>\n        </cite> \n\n    </p>\n    <p>\n        [16] Duval, Erik. \"Attention please!: learning analytics for visualization and recommendation.\" LAK 11 (2011): 9-17.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2090116.2090118\"> doi.org/10.1145/2090116.2090118</a>\n    </p>\n    <p>\n        [17] Gašević, Dragan, Shane Dawson, and George Siemens. \"Let’s not forget: Learning analytics are about learning.\" TechTrends 59.1 (2015): 64-71.\n        <a target = \"_blank\" href = \"https://doi.org/10.1007/s11528-014-0822-x\"> doi.org/10.1007/s11528-014-0822-x</a>\n    </p>\n    <p>\n        [18] Ferguson, R. (2012). Learning analytics: drivers, developments and challenges. International Journal of Technology Enhanced Learning, 4(5/6), 304-317.\n        <cite>\n            <a target = \"_blank\" href=\"https://www.inderscienceonline.com/doi/abs/10.1504/IJTEL.2012.051816\">Retrieved link </a>\n        </cite> \n\n    </p>\n    <p>\n        [19] Beetham, Helen, and Rhona Sharpe, eds. Rethinking pedagogy for a digital age: Designing for 21st century learning. routledge, 2013.\n        <cite>\n            <a target = \"_blank\" href=\"https://www.tcrecord.org/books/abstract.asp?ContentId=17261\">Retrieved link </a>\n        </cite> \n\n    </p>\n    <p>\n        [20] Phillips, Rob, et al. \"Exploring learning analytics as indicators of study behavior.\" EdMedia+ Innovate Learning. Association for the Advancement of Computing in Education (AACE), 2012.\n        <cite>\n            <a target = \"_blank\" href=\"https://www.learntechlib.org/p/41174/\">Retrieved link </a>\n        </cite>\n\n    </p>\n    <p>\n        [21] Mor, Yishay, Brock Craft, and Davinia Hernández-Leo. \"The art and science of learning design: Editoral.\" Research in Learning Technology 21 (2013).\n        <a target = \"_blank\" href = \"https://doi.org/10.3402/rlt.v21i0.22513\"> doi.org/10.3402/rlt.v21i0.22513</a>\n    </p>\n    <p>\n        [22] Craftb, Brock. \"Learning Design: reflections upon the current landscape.\" (2012).\n        <cite>\n            <a target = \"_blank\" href=\"http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.689.2132\">Retrieved link </a>\n        </cite> \n\n    </p>\n    <p>\n        [23] Koper, Rob. \"Current research in learning design.\" Educational Technology & Society 9.1 (2006): 13-22 \n        <cite>\n            <a target = \"_blank\" href=\"https://www.jstor.org/stable/jeductechsoci.9.1.13\">Retrieved link </a>\n        </cite> \n\n    </p>\n    <p>\n        [24]  Tan, J. P. L., Koh, E., Jonathan, C., & Yang, S. (2017). Learner dashboards a double-edged sword? Students’ sense-making of a collaborative critical reading and learning analytics environment for fostering 21st-century literacies.\n        <a target = \"_blank\" href = \"https://doi.org/10.18608/jla.2017.41.7\"> doi.org/10.18608/jla.2017.41.7</a>\n    </p>\n    <p>\n        [25]  Park, Y., & Jo, I. H. (2015). Development of the learning analytics dashboard to support students’ learning performance. Journal of Universal Computer Science, 21(1), 110.\n        <cite>\n            <a target = \"_blank\" href=\"http://www.jucs.org/jucs_21_1/development_of_the_learning/jucs_21_01_0110_0133_park.pdf\">Retrieved link </a>\n        </cite> \n\n</p>\n    <p>\n        [26]  Brouwer, N., Bredeweg, B., Latour, S., Berg, A., & van der Huizen, G. (2016, September). Learning analytics pilot with coach2-Searching for effective mirroring. In European Conference on Technology Enhanced Learning (pp. 363-369). Springer, Cham.\n        <a target = \"_blank\" href = \"https://doi.org/10.1007/978-3-319-45153-4_28\"> doi.org/10.1007/978-3-319-45153-4_28</a>\n    </p>\n    <p>\n        [27]  Beheshitha, S. S., Hatala, M., Gašević, D., & Joksimović, S. (2016, April). The role of achievement goal orientations when studying effect of learning analytics visualizations. In Proceedings of the sixth international conference on learning analytics & knowledge (pp. 54-63). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2883851.2883904\"> doi.org/10.1145/2883851.2883904</a>\n    </p>\n    <p>\n        [28]  Koulocheri, E., & Xenos, M. (2013, April). Considering formal assessment in learning analytics within a PLE: the HOU2LEARN case. In Proceedings of the Third International Conference on Learning Analytics and Knowledge (pp. 28-32). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2460296.2460304\"> doi.org/10.1145/2460296.2460304</a>\n    </p>\n    <p>\n        [29]  Håklev, S., Sharma, K., Slotta, J., & Dillenbourg, P. (2017, September). Contextualizing the co-creation of artefacts within the nested social structure of a collaborative MOOC. In European Conference on Technology Enhanced Learning (pp. 67-81). Springer, Cham.\n        <a target = \"_blank\" href = \"https://doi.org/10.1007/978-3-319-66610-5_6\"> doi.org/10.1007/978-3-319-66610-5_6</a>\n    </p>\n    <p>\n        [30]  Tervakari, A. M., Silius, K., Koro, J., Paukkeri, J., & Pirttilä, O. (2014, April). Usefulness of information visualizations based on educational data. In 2014 IEEE global engineering education conference (EDUCON) (pp. 142-151). IEEE.\n        <a target = \"_blank\" href = \"https://doi.org/10.1109/EDUCON.2014.6826081\"> doi.org/10.1109/EDUCON.2014.6826081</a>\n    </p>\n    <p>\n        [31]  Davis, D., Jivet, I., Kizilcec, R. F., Chen, G., Hauff, C., & Houben, G. J. (2017, March). Follow the successful crowd: raising MOOC completion rates through social comparison at scale. In Proceedings of the seventh international learning analytics & knowledge conference (pp. 454-463). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/3027385.3027411\"> doi.org/10.1145/3027385.3027411</a>\n    </p>\n    <p>\n        [32] Sedrakyan, G., Leony, D., Muñoz-Merino, P. J., Kloos, C. D., & Verbert, K. (2017, September). Evaluating student-facing learning dashboards of affective states. In European Conference on Technology Enhanced Learning (pp. 224-237). Springer, Cham.\n        <a target = \"_blank\" href = \"https://doi.org/10.1007/978-3-319-66610-5_17\"> doi.org/10.1007/978-3-319-66610-5_17</a>\n    </p>\n    <p>\n        [33]  de-la-Fuente-Valentín, L., Pardo, A., Hernández, F. L., & Burgos, D. (2015). A Visual Analytics Method for Score Estimation in Learning Courses. J. UCS, 21(1), 134-155.\n        <cite>\n            <a target = \"_blank\" href=\"http://www.jucs.org/jucs_21_1/a_visual_analytics_method/jucs_21_01_0134_0155_valentin.pdf\">Retrieved link </a>\n        </cite> \n\n    </p>\n    <p>\n        [34] Venant, R., Sharma, K., Vidal, P., Dillenbourg, P., & Broisin, J. (2017, September). Using sequential pattern mining to explore learners’ behaviors and evaluate their correlation with performance in inquiry-based learning. In European Conference on Technology Enhanced Learning (pp. 286-299). Springer, Cham.\n        <a target = \"_blank\" href = \"https://doi.org/10.1007/978-3-319-66610-5_21\"> doi.org/10.1007/978-3-319-66610-5_21</a>\n    </p>\n    <p>\n        [35]  Schneider, J., Börner, D., Van Rosmalen, P., & Specht, M. (2016). Can you help me with my pitch? Studying a tool for real-time automated feedback. IEEE Transactions on Learning Technologies, 9(4), 318-327.\n        <a target = \"_blank\" href = \"https://doi.org/10.1109/TLT.2016.2627043\"> doi.org/10.1109/TLT.2016.2627043</a>\n    </p>\n    <p>\n        [36]  Ruiz, S., Charleer, S., Urretavizcaya, M., Klerkx, J., Fernández-Castro, I., & Duval, E. (2016, April). Supporting learning by considering emotions: tracking and visualization a case study. In Proceedings of the sixth international conference on learning analytics & knowledge (pp. 254-263). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2883851.2883888\"> doi.org/10.1145/2883851.2883888</a>\n    </p>\n    <p>\n        [37]  Barber, R., & Sharkey, M. (2012, April). Course correction: Using analytics to predict course success. In Proceedings of the 2nd international conference on learning analytics and knowledge (pp. 259-262). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2330601.2330664\"> doi.org/10.1145/2330601.2330664</a>\n    </p>\n    <p>\n        [38]  Worsley, M. (2018, March). (Dis) engagement matters: Identifying efficacious learning practices with multimodal learning analytics. In Proceedings of the 8th International Conference on Learning Analytics and Knowledge (pp. 365-369). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/3170358.3170420\"> doi.org/10.1145/3170358.3170420</a>\n    </p>\n    <p>\n        [39]  Santos, J. L., Verbert, K., Govaerts, S., & Duval, E. (2013, April). Addressing learner issues with StepUp!: an evaluation. In Proceedings of the Third International Conference on Learning Analytics and Knowledge (pp. 14-22). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2460296.2460301\"> doi.org/10.1145/2460296.2460301</a>\n    </p>\n    <p>\n        [40]  Ochoa, X., Domínguez, F., Guamán, B., Maya, R., Falcones, G., & Castells, J. (2018, March). The rap system: automatic feedback of oral presentation skills using multimodal analysis and low-cost sensors. In Proceedings of the 8th international conference on learning analytics and knowledge (pp. 360-364). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/3170358.3170406\"> doi.org/10.1145/3170358.3170406</a>\n    </p>\n    <p>\n        [41]  Corrin, L., & de Barba, P. (2014). Exploring Students. Interpretation of Feedback Delivered through Learning Analytics Dashboards’, in Rhetoric and Reality: Critical Perspectives on Educational Technology, Eds. B. Hegarty, J. McDOnald and S. Loke (Dunedin: ascilite proceedings, 2014), 28.\n        <cite>\n            <a target = \"_blank\" href=\"https://researchbank.swinburne.edu.au/items/b81ec459-0eb4-4ccb-b221-e6876166e213/1/\">Retrieved link </a>\n        </cite> \n         \n    </p>\n    <p>\n        [42]  Fougt, S. S., Siebert-Evenstone, A., Eagan, B., Tabatabai, S., & Misfeldt, M. (2018, March). Epistemic network analysis of students' longer written assignments as formative/summative evaluation. In Proceedings of the 8th International Conference on Learning Analytics and Knowledge (pp. 126-130). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/3170358.3170414\"> doi.org/10.1145/3170358.3170414</a>\n    </p>\n    <p>\n        [43]  Holman, C., Aguilar, S., & Fishman, B. (2013, April). GradeCraft: What can we learn from a game-inspired learning management system?. In Proceedings of the third international conference on learning analytics and knowledge (pp. 260-264). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2460296.2460350\"> doi.org/10.1145/2460296.2460350</a>\n    </p>\n    <p>\n        [44]  Feild, J., Lewkow, N., Burns, S., & Gebhardt, K. (2018, March). A generalized classifier to identify online learning tool disengagement at scale. In Proceedings of the 8th International Conference on Learning Analytics and Knowledge (pp. 61-70). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/3170358.3170370\"> doi.org/10.1145/3170358.3170370</a>\n    </p>\n    <p>\n        [45]  Melero, J., Hernández‐Leo, D., Sun, J., Santos, P., & Blat, J. (2015). How was the activity? A visualization support for a case of location‐based learning design. British Journal of Educational Technology, 46(2), 317-329.\n        <a target = \"_blank\" href = \"https://doi.org/10.1111/bjet.12238\"> doi.org/10.1111/bjet.12238</a>\n    </p>\n    <p>\n        [46]  Davis, D., Kizilcec, R. F., Hauff, C., & Houben, G. J. (2018, March). The half-life of MOOC knowledge: a randomized trial evaluating knowledge retention and retrieval practice in MOOCs. In Proceedings of the 8th International Conference on Learning Analytics and Knowledge (pp. 1-10). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/3170358.3170383\"> doi.org/10.1145/3170358.3170383</a>\n\n    </p>\n    <p>\n        [47]  Harrer, A., & Göhnert, T. (2015, March). Integrated representations and small data: Towards contextualized and embedded analytics tools for learners. In Proceedings of the fifth international conference on learning analytics and knowledge (pp. 406-407). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2723576.2723665\"> doi.org/10.1145/2723576.2723665</a>\n    </p>\n    <p>\n        [48]  Liu, M., Calvo, R. A., Pardo, A., & Martin, A. (2014). Measuring and visualizing students’ behavioral engagement in writing activities. IEEE Transactions on learning technologies, 8(2), 215-224.\n        <a target = \"_blank\" href = \"https://doi.org/10.1109/TLT.2014.2378786\"> doi.org/10.1109/TLT.2014.2378786</a>\n    </p>\n    <p>\n        [49]  Wise, A., Zhao, Y., & Hausknecht, S. (2014). Learning analytics for online discussions: Embedded and extracted approaches. Journal of Learning Analytics, 1(2), 48-71.\n        <cite>\n            <a target = \"_blank\" href=\"https://eric.ed.gov/?id=EJ1127052\">Retrieved link </a>\n        </cite> \n\n    </p>\n    <p>\n        [50]  Iandoli, L., Quinto, I., De Liddo, A., & Shum, S. B. (2014). Socially augmented argumentation tools: Rationale, design and evaluation of a debate dashboard. International Journal of Human-Computer Studies, 72(3), 298-319.\n        <a target = \"_blank\" href = \"https://doi.org/10.1016/j.ijhcs.2013.08.006\"> doi.org/10.1016/j.ijhcs.2013.08.006</a>\n    </p>\n    <p>\n        [51] Kump, B., Seifert, C., Beham, G., Lindstaedt, S. N., & Ley, T. (2012, April). Seeing what the system thinks you know: visualizing evidence in an open learner model. In Proceedings of the 2nd international conference on learning analytics and knowledge (pp. 153-157). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2330601.2330640\"> doi.org/10.1145/2330601.2330640</a>\n    </p>\n    <p>\n        [52]  McAuley, J., O'Connor, A., & Lewis, D. (2012, April). Exploring reflection in online communities. In Proceedings of the 2nd international conference on learning analytics and knowledge (pp. 102-110). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2330601.2330630\"> doi.org/10.1145/2330601.2330630</a>\n    </p>\n    <p>\n        [53]  Govaerts, S., Verbert, K., & Duval, E. (2011, December). Evaluating the student activity meter: two case studies. In International Conference on Web-Based Learning (pp. 188-197). Springer, Berlin, Heidelberg.\n        <a target = \"_blank\" href = \"https://doi.org/10.1007/978-3-642-25813-8_20\"> doi.org/10.1007/978-3-642-25813-8_20</a>\n    </p>\n    <p>\n        [54]  Arnold, K. E., & Pistilli, M. D. (2012, April). Course signals at Purdue: Using learning analytics to increase student success. In Proceedings of the 2nd international conference on learning analytics and knowledge (pp. 267-270). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2330601.2330666\"> doi.org/10.1145/2330601.2330666</a>\n    </p>\n    <p>\n        [55]  Cooper, K., & Khosravi, H. (2018, March). Graph-based visual topic dependency models: Supporting assessment design and delivery at scale. In Proceedings of the 8th international conference on learning analytics and knowledge (pp. 11-15). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/3170358.3170418\"> doi.org/10.1145/3170358.3170418</a>\n    </p>\n    <p>\n        [56]  McKay, T., Miller, K., & Tritz, J. (2012, April). What to do with actionable intelligence: E 2 Coach as an intervention engine. In Proceedings of the 2nd International Conference on Learning Analytics and Knowledge (pp. 88-91). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2330601.2330627\"> doi.org/10.1145/2330601.2330627</a>\n    </p>\n    <p>\n        [57]  Vesin, B., Klašnja-Milićević, A., Ivanović, M., & Budimac, Z. (2013). Applying recommender systems and adaptive hypermedia for e-learning personalization. Computing and Informatics, 32(3), 629-659.\n        <cite>\n            <a target = \"_blank\" href=\"http://www.cai2.sk/ojs/index.php/cai/article/view/1736/536\">Retrieved link </a>\n        </cite> \n\n    </p>\n    <p>\n        [58]  Gunnarsson, B. L., & Alterman, R. (2014). Peer promotions as a method to identify quality content. Journal of Learning Analytics, 1(2), 126-150.\n        <a target = \"_blank\" href = \"https://doi.org/10.18608/jla.2014.12.7\"> doi.org/10.18608/jla.2014.12.7</a>\n    </p>\n    <p>\n        [59]  Aguiar, E., Ambrose, G. A. A., Chawla, N. V., Goodrich, V., & Brockman, J. (2014). Engagement vs performance: Using electronic portfolios to predict first semester engineering student persistence. Journal of Learning Analytics, 1(3), 7-33. \n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2567574.2567583\"> doi.org/10.1145/2567574.2567583</a>\n    </p>\n    <p>\n        [60]  Lowes, S., Lin, P., & Kinghorn, B. (2015). Exploring the link between online behaviours and course performance in asynchronous online high school courses. Journal of Learning Analytics, 2(2), 169-194.\n        <a target = \"_blank\" href = \"https://doi.org/10.18608/jla.2015.22.13\"> doi.org/10.18608/jla.2015.22.13</a>\n    </p>\n    <p>\n        [61]  Southavilay, V., Yacef, K., Reimann, P., & Calvo, R. A. (2013, April). Analysis of collaborative writing processes using revision maps and probabilistic topic models. In Proceedings of the third international conference on learning analytics and knowledge (pp. 38-47). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2460296.2460307\"> doi.org/10.1145/2460296.2460307</a>\n    </p>\n    <p>\n        [62]  Muñoz-Merino, P. J., Valiente, J. A. R., & Kloos, C. D. (2013, April). Inferring higher level learning information from low level data for the Khan Academy platform. In Proceedings of the third international conference on learning analytics and knowledge (pp. 112-116). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2460296.2460318\"> doi.org/10.1145/2460296.2460318</a>\n    </p>\n    <p>\n        [63]  Ahn, J. (2013, April). What can we learn from Facebook activity?: using social learning analytics to observe new media literacy skills. In Proceedings of the third international conference on learning analytics and knowledge (pp. 135-144). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2460296.2460323\"> doi.org/10.1145/2460296.2460323</a>\n    </p>\n    <p>\n        [64]  Wolff, A., Zdrahal, Z., Nikolov, A., & Pantucek, M. (2013, April). Improving retention: predicting at-risk students by analysing clicking behaviour in a virtual learning environment. In Proceedings of the third international conference on learning analytics and knowledge (pp. 145-149). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2460296.2460324\"> doi.org/10.1145/2460296.2460324</a> \n    </p>\n    <p>\n        [65]  Monroy, C., Rangel, V. S., & Whitaker, R. (2013, April). STEMscopes: contextualizing learning analytics in a K-12 science curriculum. In Proceedings of the Third International Conference on Learning Analytics and Knowledge (pp. 210-219). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2460296.2460339\"> doi.org/10.1145/2460296.2460339</a> \n    </p>\n    <p>\n        [66]  Bogarín, A., Romero, C., Cerezo, R., & Sánchez-Santillán, M. (2014, March). Clustering for improving educational process mining. In Proceedings of the fourth international conference on learning analytics and knowledge (pp. 11-15). ACM.  \n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2567574.2567604\"> doi.org/10.1145/2567574.2567604</a>\n    </p>\n    <p>\n        [67]  Nam, S., Lonn, S., Brown, T., Davis, C. S., & Koch, D. (2014, March). Customized course advising: investigating engineering student success with incoming profiles and patterns of concurrent course enrollment. In Proceedings of the Fourth International Conference on Learning Analytics And Knowledge (pp. 16-25). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2567574.2567589\"> doi.org/10.1145/2567574.2567589</a>\n    </p>\n    <p>\n        [68]  Papamitsiou, Z. K., Terzis, V., & Economides, A. A. (2014, March). Temporal learning analytics for computer based testing. In Proceedings of the Fourth International Conference on Learning Analytics And Knowledge (pp. 31-35). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2567574.2567609\"> doi.org/10.1145/2567574.2567609</a>\n    </p>\n    <p>\n        [69]  Coffrin, C., Corrin, L., de Barba, P., & Kennedy, G. (2014, March). Visualizing patterns of student engagement and performance in MOOCs. In Proceedings of the fourth international conference on learning analytics and knowledge (pp. 83-92). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2567574.2567586\"> doi.org/10.1145/2567574.2567586</a>\n    </p>\n    <p>\n        [70]  Santos, J. L., Klerkx, J., Duval, E., Gago, D., & Rodríguez, L. (2014, March). Success, activity and drop-outs in MOOCs an exploratory study on the UNED COMA courses. In Proceedings of the Fourth International Conference on Learning Analytics and Knowledge (pp. 98-102). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2567574.2567627\"> doi.org/10.1145/2567574.2567627</a>\n    </p>\n    <p>\n        [71]  Rogers, T., Colvin, C., & Chiera, B. (2014, March). Modest analytics: using the index method to identify students at risk of failure. In Proceedings of the Fourth International Conference on Learning Analytics And Knowledge (pp. 118-122). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2567574.2567629\"> doi.org/10.1145/2567574.2567629</a>\n    </p>\n    <p>\n        [72]  Gašević, D., Mirriahi, N., & Dawson, S. (2014, March). Analytics of the effects of video use and instruction to support reflective learning. In Proceedings of the fourth international conference on learning analytics and Knowledge (pp. 123-132). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2567574.2567590\"> doi.org/10.1145/2567574.2567590</a>\n    </p>\n    <p>\n        [73]  Vozniuk, A., Holzer, A., & Gillet, D. (2014, March). Peer assessment based on ratings in a social media course. In Proceedings of the Fourth International Conference on Learning Analytics And Knowledge (pp. 133-137). ACM. \n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2567574.2567608\"> doi.org/10.1145/2567574.2567608</a>\n    </p>\n    <p>\n        [74]  Wang, Y., Heffernan, N. T., & Heffernan, C. (2015, March). Towards better affect detectors: effect of missing skills, class features and common wrong answers. In Proceedings of the Fifth International Conference on Learning Analytics and Knowledge (pp. 31-35). ACM.   \n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2723576.2723618\"> doi.org/10.1145/2723576.2723618</a>\n    </p>\n    <p>\n        [75]  San Pedro, M. O., Baker, R. S., Heffernan, N. T., & Ocumpaugh, J. L. (2015, March). Exploring college major choice and middle school student behavior, affect and learning: what happens to students who game the system?. In Proceedings of the Fifth International Conference on Learning Analytics And Knowledge (pp. 36-40). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2723576.2723610\"> doi.org/10.1145/2723576.2723610</a> \n    </p>\n    <p>\n        [76]  Ferguson, R., & Clow, D. (2015, March). Examining engagement: analysing learner subpopulations in massive open online courses (MOOCs). In Proceedings of the fifth international conference on learning analytics and knowledge (pp. 51-58). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2723576.2723606\"> doi.org/10.1145/2723576.2723606</a> \n    </p>\n    <p>\n        [77]  Méndez, G., Ochoa, X., & Chiluiza, K. (2014, March). Techniques for data-driven curriculum analysis. In Proceedings of the fourth international conference on learning analytics and knowledge (pp. 148-157). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2567574.2567591\"> doi.org/10.1145/2567574.2567591</a>\n    </p>\n    <p>\n        [78]  Jo, I. H., Kim, D., & Yoon, M. (2014, March). Analyzing the log patterns of adult learners in LMS using learning analytics. In Proceedings of the Fourth International Conference on Learning Analytics And Knowledge (pp. 183-187). ACM.\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/2567574.2567616\"> doi.org/10.1145/2567574.2567616</a>\n    </p>\n    <p>\n        [79]  Waddington, R. J., & Nam, S. (2014, March). Practice exams make perfect: incorporating course resource use into an early warning system. In Proceedings of the Fourth International Conference on Learning Analytics And Knowledge (pp. 188-192). ACM.\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/2567574.2567623\"> doi.org/10.1145/2567574.2567623</a>\n    </p>\n    <p>\n        [80]  Chiu, M. M., & Fujita, N. (2014, March). Statistical discourse analysis of online discussions: Informal cognition, social metacognition and knowledge creation. In Proceedings of the Fourth International Conference on Learning Analytics And Knowledge (pp. 217-225). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2567574.2567580\"> doi.org/10.1145/2567574.2567580</a>\n    </p>\n    <p>\n        [81]  Yu, T., & Jo, I. H. (2014, March). Educational technology approach toward learning analytics: Relationship between student online behavior and learning performance in higher education. In Proceedings of the Fourth International Conference on Learning Analytics and Knowledge (pp. 269-270). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2567574.2567594\"> doi.org/10.1145/2567574.2567594</a>\n    </p>\n    <p>\n        [82] Aguiar, E., Lakkaraju, H., Bhanpuri, N., Miller, D., Yuhas, B., & Addison, K. L. (2015, March). Who, when, and why: a machine learning approach to prioritizing students at risk of not graduating high school on time. In Proceedings of the Fifth International Conference on Learning Analytics And Knowledge (pp. 93-102). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2723576.2723619\"> doi.org/10.1145/2723576.2723619</a>\n    </p>\n    <p>\n        [83]  Elbadrawy, A., Studham, R. S., & Karypis, G. (2015, March). Collaborative multi-regression models for predicting students' performance in course activities. In Proceedings of the Fifth International Conference on Learning Analytics And Knowledge (pp. 103-107). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2723576.2723590\"> doi.org/10.1145/2723576.2723590</a>\n    </p>\n    <p>\n        [84]  Grawemeyer, B., Mavrikis, M., Holmes, W., Gutierrez-Santos, S., Wiedmann, M., & Rummel, N. (2016, April). Affecting off-task behaviour: how affect-aware feedback can improve student learning. In Proceedings of the sixth international conference on learning analytics & knowledge (pp. 104-113). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2883851.2883936\"> doi.org/10.1145/2883851.2883936</a>\n    </p>\n    <p>\n        [85]  Allen, L. K., Mills, C., Jacovina, M. E., Crossley, S., D'mello, S., & McNamara, D. S. (2016, April). Investigating boredom and engagement during writing using multiple sources of information: the essay, the writer, and keystrokes. In Proceedings of the Sixth International Conference on Learning Analytics & Knowledge (pp. 114-123). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2883851.2883939\"> doi.org/10.1145/2883851.2883939</a> \n    </p>\n    <p>\n        [86]  Papoušek, J., Stanislav, V., & Pelánek, R. (2016, April). Evaluation of an adaptive practice system for learning geography facts. In Proceedings of the Sixth International Conference on Learning Analytics & Knowledge (pp. 134-142). ACM.\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/2883851.2883884\"> doi.org/10.1145/2883851.2883884</a> \n    </p>\n    <p>\n        [87]  Manai, O., Yamada, H., & Thorn, C. (2016, April). Real-time indicators and targeted supports: Using online platform data to accelerate student learning. In Proceedings of the Sixth International Conference on Learning Analytics & Knowledge (pp. 183-187). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2883851.2883942\"> doi.org/10.1145/2883851.2883942</a> \n    </p>\n    <p>\n        [88]  Hecking, T., Chounta, I. A., & Hoppe, H. U. (2016, April). Investigating social and semantic user roles in MOOC discussion forums. In Proceedings of the sixth international conference on learning analytics & knowledge (pp. 198-207). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2883851.2883924\"> doi.org/10.1145/2883851.2883924</a>    \n    </p>\n    <p>\n        [89]  Shum, S. B., Sándor, Á., Goldsmith, R., Wang, X., Bass, R., & McWilliams, M. (2016, April). Reflecting on reflective writing analytics: Assessment challenges and iterative evaluation of a prototype tool. In Proceedings of the sixth international conference on learning analytics & knowledge (pp. 213-222). ACM\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2883851.2883955\"> doi.org/10.1145/2883851.2883955</a>\n    </p>\n    <p>\n        [90]  Zhu, M., Bergner, Y., Zhang, Y., Baker, R., Wang, Y., & Paquette, L. (2016, April). Longitudinal engagement, performance, and social connectivity: a MOOC case study using exponential random graph models. In Proceedings of the Sixth International Conference on Learning Analytics & Knowledge (pp. 223-230). ACM.\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/2883851.2883934\"> doi.org/10.1145/2883851.2883934</a>\n    </p>\n    <p>\n        [91]  Khan, I., & Pardo, A. (2016, April). Data2U: Scalable real time student feedback in active learning environments. In Proceedings of the sixth international conference on learning analytics & knowledge (pp. 249-253). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2883851.2883911\"> doi.org/10.1145/2883851.2883911</a> \n    </p>\n    <p>\n        [92] Papamitsiou, Z., Karapistoli, E., & Economides, A. A. (2016, April). Applying classification techniques on temporal trace data for shaping student behavior models. In Proceedings of the Sixth International Conference on Learning Analytics & Knowledge (pp. 299-303). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2883851.2883926\"> doi.org/10.1145/2883851.2883926</a> \n    </p>\n    <p>\n        [93] Joksimović, S., Manataki, A., Gašević, D., Dawson, S., Kovanović, V., & De Kereki, I. F. (2016, April). Translating network position into performance: importance of centrality in different network configurations. In Proceedings of the sixth international conference on learning analytics & knowledge (pp. 314-323). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2883851.2883928\"> doi.org/10.1145/2883851.2883928</a>\n    </p>\n    <p>\n        [94]  Robinson, C., Yeomans, M., Reich, J., Hulleman, C., & Gehlbach, H. (2016, April). Forecasting student achievement in MOOCs with natural language processing. In Proceedings of the sixth international conference on learning analytics & knowledge (pp. 383-387). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2883851.2883932\"> doi.org/10.1145/2883851.2883932</a>\n    </p>\n    <p>\n        [95]  Wang, X., Wen, M., & Rosé, C. P. (2016, April). Towards triggering higher-order thinking behaviors in MOOCs. In Proceedings of the Sixth International Conference on Learning Analytics & Knowledge (pp. 398-407). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2883851.2883964\"> doi.org/10.1145/2883851.2883964</a>\n    </p>\n    <p>\n        [96]  Kennedy, G., Coffrin, C., De Barba, P., & Corrin, L. (2015, March). Predicting success: how learners' prior knowledge, skills and activities predict MOOC performance. In Proceedings of the fifth international conference on learning analytics and knowledge (pp. 136-140). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2723576.2723593\"> doi.org/10.1145/2723576.2723593</a>\n    </p>\n    <p>\n        [97] Harrison, S., Villano, R., Lynch, G., & Chen, G. (2015, March). Likelihood analysis of student enrollment outcomes using learning environment variables: A case study approach. In Proceedings of the Fifth International Conference on Learning Analytics And Knowledge (pp. 141-145). ACM.\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/2723576.2723621\"> doi.org/10.1145/2723576.2723621</a>\n    </p>\n    <p>\n        [98]  Pardo, A., Han, F., & Ellis, R. A. (2016, April). Exploring the relation between self-regulation, online activities, and academic performance: A case study. In Proceedings of the Sixth International Conference on Learning Analytics & Knowledge (pp. 422-429). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2883851.2883883\"> doi.org/10.1145/2883851.2883883</a>\n    </p>\n    <p>\n        [99]  Brown, M. G., DeMonbrun, R. M., Lonn, S., Aguilar, S. J., & Teasley, S. D. (2016, April). What and when: the role of course type and timing in students' academic performance. In Proceedings of the Sixth International Conference on Learning Analytics & Knowledge (pp. 459-468). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2883851.2883907\"> doi.org/10.1145/2883851.2883907</a>\n    </p>\n    <p>\n        [100]  Pardo, A., Mirriahi, N., Martinez-Maldonado, R., Jovanovic, J., Dawson, S., & Gašević, D. (2016, April). Generating actionable predictive models of academic performance. In Proceedings of the Sixth International Conference on Learning Analytics & Knowledge (pp. 474-478). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2883851.2883870\"> doi.org/10.1145/2883851.2883870</a>\n    </p>\n    <p>\n        [101]  Hlosta, M., Zdrahal, Z., & Zendulka, J. (2017, March). Ouroboros: early identification of at-risk students without models based on legacy data. In Proceedings of the Seventh International Learning Analytics & Knowledge Conference (pp. 6-15). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/3027385.3027449\"> doi.org/10.1145/3027385.3027449</a>\n    </p>\n    <p>\n        [102]  Agnihotri, L., Essa, A., & Baker, R. (2017, March). Impact of student choice of content adoption delay on course outcomes. In Proceedings of the Seventh International Learning Analytics & Knowledge Conference (pp. 16-20). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/3027385.3027437\"> doi.org/10.1145/3027385.3027437</a>\n    </p>\n    <p>\n        [103]  Park, J., Denaro, K., Rodriguez, F., Smyth, P., & Warschauer, M. (2017, March). Detecting changes in student behavior from clickstream data. In Proceedings of the Seventh International Learning Analytics & Knowledge Conference (pp. 21-30). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/3027385.3027430\"> doi.org/10.1145/3027385.3027430</a>\n    </p>\n    <p>\n        [104]  Käser, T., Hallinen, N. R., & Schwartz, D. L. (2017, March). Modeling exploration strategies to predict student performance within a learning environment and beyond. In Proceedings of the Seventh International Learning Analytics & Knowledge Conference (pp. 31-40). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/3027385.3027422\"> doi.org/10.1145/3027385.3027422</a>\n    </p>\n    <p>\n        [105]  Conijn, R., Snijders, C., Kleingeld, A., & Matzat, U. (2016). Predicting student performance from LMS data: A comparison of 17 blended courses using Moodle LMS. IEEE Transactions on Learning Technologies, 10(1), 17-29.\n        <a target = \"_blank\" href = \"https://doi.org/10.1109/TLT.2016.2616312\"> doi.org/10.1109/TLT.2016.2616312</a>\n    </p>\n    <p>\n        [106]  Hershkovitz, A., de Baker, R. S. J., Gobert, J., Wixon, M., & Pedro, M. S. (2013). Discovery with models: A case study on carelessness in computer-based science inquiry. American Behavioral Scientist, 57(10), 1480-1499.\n        <a target = \"_blank\" href = \"https://doi.org/10.1177/0002764213479365\"> doi.org/10.1177/0002764213479365</a>\n    </p>\n    <p>\n        [107]  Paule Ruiz, M. P., Riestra González, M., Sánchez Santillán, M., & Pérez Pérez, J. R. (2015). The Procrastination related indicators in e-learning platforms. Journal of Universal Computer Science.\n        <cite>\n            <a target = \"_blank\" href=\"http://www.jucs.org/jucs_21_1/the_procrastination_related_indicators/jucs_21_01_0007_0022_ruiz.pdf\">Retrieved link </a>\n        </cite>\n\n    </p>\n    <p>\n        [108]  Paredes, W. C., & Chung, K. S. K. (2012, April). Modelling learning & performance: a social networks perspective. In Proceedings of the 2nd International Conference on Learning Analytics and Knowledge (pp. 34-42). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2330601.2330617\"> doi.org/10.1145/2330601.2330617</a>\n    </p>\n    <p>\n        [109]  Smolin, D., & Butakov, S. (2012, April). Applying artificial intelligence to the educational data: an example of syllabus quality analysis. In Proceedings of the 2nd International Conference on Learning Analytics and Knowledge (pp. 164-169). ACM. \n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2330601.2330644\"> doi.org/10.1145/2330601.2330644</a>\n    </p>\n    <p>\n        [110]  Pursel, B. K., Zhang, L., Jablokow, K. W., Choi, G. W., & Velegol, D. (2016). Understanding MOOC students: motivations and behaviours indicative of MOOC completion. Journal of Computer Assisted Learning, 32(3), 202-217.\n        <a target = \"_blank\" href = \"https://doi.org/10.1111/jcal.12131\"> doi.org/10.1111/jcal.12131</a>\n    </p>\n    <p>\n        [111]  Jovanović, J., Gašević, D., Dawson, S., Pardo, A., & Mirriahi, N. (2017). Learning analytics to unveil learning strategies in a flipped classroom. The Internet and Higher Education, 33(4), 74-85.\n        <a target = \"_blank\" href = \"http://dx.doi.org/10.1016/j.iheduc.2017.02.001 \"> dx.doi.org/10.1016/j.iheduc.2017.02.001 </a>\n    </p>\n    <p>\n        [112]  Chavarriaga, O., Florian-Gaviria, B., & Solarte, O. (2014, September). A recommender system for students based on social knowledge and assessment data of competences. In European Conference on Technology Enhanced Learning (pp. 56-69). Springer, Cham.\n         <a target = \"_blank\" href = \"https://doi.org/10.1007/978-3-319-11200-8_5 \"> doi.org/10.1007/978-3-319-11200-8_5 </a>\n    </p>\n    <p>\n        [113]  Li, N., Kidziński, Ł., Jermann, P., & Dillenbourg, P. (2015). MOOC video interaction patterns: What do they tell us?. In Design for teaching and learning in a networked world (pp. 197-210). Springer, Cham.\n        <a target = \"_blank\" href = \"https://doi.org/10.1007/978-3-319-24258-3_15 \"> doi.org/10.1007/978-3-319-24258-3_15 </a>\n    </p>\n    <p>\n        [114]  Sadallah, M., Encelle, B., Maredj, A. E., & Prié, Y. (2015). Towards reading session-based indicators in educational reading analytics. In Design for Teaching and Learning in a Networked World (pp. 297-310). Springer, Cham.\n        <a target = \"_blank\" href = \"https://doi.org/10.1007/978-3-319-24258-3_22 \"> doi.org/10.1007/978-3-319-24258-3_22 </a>\n    </p>\n    <p>\n        [115]  Figueira, A. (2015). Predicting results from interaction patterns during online group work. In Design for Teaching and Learning in a Networked World (pp. 414-419). Springer, Cham.\n        <a target = \"_blank\" href = \"https://doi.org/10.1007/978-3-319-24258-3_33 \"> doi.org/10.1007/978-3-319-24258-3_33 </a>\n    </p>\n    <p>\n        [116]  Abolkasim, E., Lau, L., & Dimitrova, V. (2016, September). A semantic-driven model for ranking digital learning objects based on diversity in the user comments. In European Conference on Technology Enhanced Learning (pp. 3-15). Springer, Cham.\n        <a target = \"_blank\" href = \"https://doi.org/10.1007/978-3-319-45153-4_1\"> doi.org/10.1007/978-3-319-45153-4_1 </a>\n    </p>\n    <p>\n        [117]  You, J. W. (2016). Identifying significant indicators using LMS data to predict course achievement in online learning. The Internet and Higher Education, 29, 23-30.\n         <a target = \"_blank\" href = \"https://doi.org/10.1016/j.iheduc.2015.11.003\"> doi.org/10.1016/j.iheduc.2015.11.003 </a>\n    </p>\n    <p>\n        [118]  Gasevic, D., Jovanovic, J., Pardo, A., & Dawson, S. (2017). Detecting learning strategies with analytics: Links with self-reported measures and academic performance. Journal of Learning Analytics, 4(2), 113-128.\n        <a target = \"_blank\" href = \"http://dx.doi.org/10.18608/jla.2017.42.10\"> dx.doi.org/10.18608/jla.2017.42.10 </a>\n    </p>\n    <p>\n        [119]  Hart, S., Daucourt, M., & Ganley, C. (2017). Individual differences related to college students’ course performance in calculus II. Journal of Learning Analytics, 4(2), 129-153.\n        <a target = \"_blank\" href = \"https://doi.org/10.18608/jla.2017.42.11\"> doi.org/10.18608/jla.2017.42.11 </a>\n    </p>\n    <p>\n        [120] Casey, K. (2017). Using keystroke analytics to improve pass-fail classifiers. Journal of Learning Analytics, 4(2), 189-211.\n        <a target = \"_blank\" href = \"https://doi.org/10.18608/jla.2017.42.14\"> doi.org/10.18608/jla.2017.42.14 </a>\n    </p>\n    <p>\n        [121] Bakharia, A., & Dawson, S. (2011, February). SNAPP: a bird's-eye view of temporal participant interaction. In Proceedings of the 1st international conference on learning analytics and knowledge (pp. 168-173). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2090116.2090144\"> doi.org/10.1145/2090116.2090144 </a>\n    </p>\n    <p>\n        [122]  Lauría, E. J., Baron, J. D., Devireddy, M., Sundararaju, V., & Jayaprakash, S. M. (2012, April). Mining academic data to improve college student retention: An open source perspective. In Proceedings of the 2nd International Conference on Learning Analytics and Knowledge (pp. 139-142). ACM. \n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2330601.2330637\"> doi.org/10.1145/2330601.2330637 </a>\n    </p>\n    <p>\n        [123] Boroujeni, M. S., Sharma, K., Kidziński, Ł., Lucignano, L., & Dillenbourg, P. (2016, September). How to quantify student’s regularity?. In European Conference on Technology Enhanced Learning (pp. 277-291). Springer, Cham.\n        <a target = \"_blank\" href = \"https://doi.org/10.1007/978-3-319-45153-4_21\"> doi.org/10.1007/978-3-319-45153-4_21 </a>\n    </p>\n    <p>\n        [124] Scheffel, M., Drachsler, H., Kreijns, K., De Kraker, J., & Specht, M. (2017, March). Widget, widget as you lead, i am performing well indeed!: using results from an exploratory offline study to inform an empirical online study about a learning analytics widget in a collaborative learning environment. In Proceedings of the Seventh International Learning Analytics & Knowledge Conference (pp. 289-298). ACM.\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3027385.3027428\"> doi.org/10.1145/3027385.3027428 </a>\n    </p>\n    <p>\n        [125]  Schumacher, C., & Ifenthaler, D. (2018). Features students really expect from learning analytics. Computers in Human Behavior, 78, 397-407.\n        <a target = \"_blank\" href = \"https://doi.org/10.1016/j.chb.2017.06.030\"> doi.org/10.1016/j.chb.2017.06.030 </a>\n    </p>\n    <p>\n        [126] Aljohani, N. R., Daud, A., Abbasi, R. A., Alowibdi, J. S., Basheri, M., & Aslam, M. A. (2019). An integrated framework for course adapted student learning analytics dashboard. Computers in Human Behavior, 92, 679-690.\n        <a target = \"_blank\" href = \"https://doi.org/10.1016/j.chb.2018.03.035\"> doi.org/10.1016/j.chb.2018.03.035 </a>\n    </p>\n    <p>\n        [127] Saqr, M., Nouri, J., & Fors, U. (2018). Temporality matters: A learning analytics study of the patterns of interactions and its relation to performance,”. EDULEARN18: Proceedings, ser. EDULEARN proceedings, 5386-5393.\n        <a target = \"_blank\" href = \"https://doi.org/10.21125/edulearn.2018.1305\"> doi.org/10.21125/edulearn.2018.1305 </a>  \n    </p>\n    <p>\n        [128] Majumdar, R., Akçapınar, A., Akçapınar, G., Flanagan, B., & Ogata, H. (2018). Learning Analytics Dashboard Widgets to Author Teaching-Learning Cases for Evidence-based Education. Companion Procs. of 9th LAK.\n        <cite>\n            <a target = \"_blank\" href=\"https://repository.kulib.kyoto-u.ac.jp/dspace/handle/2433/244167\">Retrieved link </a>\n        </cite>\n\n    </p>\n    <p>\n        [129] Matcha, W., Gašević, D., Uzir, N. A. A., Jovanović, J., & Pardo, A. (2019, March). Analytics of Learning Strategies: Associations with Academic Performance and Feedback. In Proceedings of the 9th International Conference on Learning Analytics & Knowledge (pp. 461-470). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/3303772.3303787\"> doi.org/10.1145/3303772.3303787 </a>    \n    </p>\n    <p>\n        [130] de Quincey, E., Briggs, C., Kyriacou, T., & Waller, R. (2019, March). Student Centred Design of a Learning Analytics System. In Proceedings of the 9th International Conference on Learning Analytics & Knowledge (pp. 353-362). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/3303772.3303793\"> doi.org/10.1145/3303772.3303793 </a>\n    </p>\n    <p>\n        [131] Syed, M., Anggara, T., Lanski, A., Duan, X., Ambrose, G. A., & Chawla, N. V. (2019, March). Integrated Closed-loop Learning Analytics Scheme in a First Year Experience Course. In Proceedings of the 9th International Conference on Learning Analytics & Knowledge (pp. 521-530). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/3303772.3303803\"> doi.org/10.1145/3303772.3303803 </a>\n    </p>\n    <p>\n        [132] Wang, Y., Law, N., Hemberg, E., & O'Reilly, U. M. (2019, March). Using Detailed Access Trajectories for Learning Behavior Analysis. In Proceedings of the 9th International Conference on Learning Analytics & Knowledge (pp. 290-299). ACM.\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3303772.3303781\"> doi.org/10.1145/3303772.3303781</a> \n    </p>\n    <p>\n        [133] Jovanović, J., Gašević, D., Pardo, A., Dawson, S., & Whitelock-Wainwright, A. (2019, March). Introducing meaning to clicks: Towards traced-measures of self-efficacy and cognitive load. In Proceedings of the 9th International Conference on Learning Analytics & Knowledge (pp. 511-520). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/3303772.3303782\"> doi.org/10.1145/3303772.3303782</a> \n    </p>\n    <p>\n        [134] Klebanov, B. B., Loukina, A., Madnani, N., Sabatini, J., & Lentini, J. (2019, March). Would you?: Could you? On a tablet? Analytics of Children's eBook Reading. In Proceedings of the 9th International Conference on Learning Analytics & Knowledge (pp. 106-110). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/3303772.3303833\"> doi.org/10.1145/3303772.3303833</a>\n    </p>\n    <p>\n        [135] Niaki, S. A., George, C. P., Michailidis, G., & Beal, C. R. (2019, March). Investigating the Usage Patterns of Algebra Nation Tutoring Platform. In Proceedings of the 9th International Conference on Learning Analytics & Knowledge (pp. 481-490). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/3303772.3303788\"> doi.org/10.1145/3303772.3303788</a>\n    </p>\n    <p>\n        [136] Manrique, R., Nunes, B. P., Marino, O., Casanova, M. A., & Nurmikko-Fuller, T. (2019, March). An Analysis of Student Representation, Representative Features and Classification Algorithms to Predict Degree Dropout. In Proceedings of the 9th International Conference on Learning Analytics & Knowledge (pp. 401-410). ACM.\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3303772.3303800\"> doi.org/10.1145/3303772.3303800</a>\n    </p>\n    <p>\n        [137] Shimada, A., Taniguchi, Y., Okubo, F., Konomi, S. I., & Ogata, H. (2018, March). Online change detection for monitoring individual student behavior via clickstream data on E-book system. In Proceedings of the 8th International Conference on Learning Analytics and Knowledge (pp. 446-450). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/3170358.3170412\"> doi.org/10.1145/3170358.3170412</a>\n    </p>\n    <p>\n        [138] Van der Zee, T., Davis, D., Saab, N., Giesbers, B., Ginn, J., Van Der Sluis, F., ... & Admiraal, W. (2018, March). Evaluating retrieval practice in a MOOC: how writing and reading summaries of videos affects student learning. In Proceedings of the 8th International Conference on Learning Analytics and Knowledge (pp. 216-225). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/3170358.3170382\"> doi.org/10.1145/3170358.3170382</a>\n    </p>\n    <p>\n        [139] Chen, B., Fan, Y., Zhang, G., & Wang, Q. (2017, March). Examining motivations and self-regulated learning strategies of returning MOOCs learners. In Proceedings of the Seventh International Learning Analytics & Knowledge Conference (pp. 542-543). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/3027385.3029448\"> doi.org/10.1145/3027385.3029448</a>\n    </p>\n    <p>\n        [140] Dawson, S., Jovanovic, J., Gašević, D., & Pardo, A. (2017, March). From prediction to impact: Evaluation of a learning analytics retention program. In Proceedings of the Seventh International Learning Analytics & Knowledge Conference (pp. 474-478). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/3027385.3027405\"> doi.org/10.1145/3027385.3027405</a>\n    </p>\n    <p>\n        [141] Duval, E. (2011). Attention please!: learning analytics for visualization and recommendation. LAK, 11, 9-17.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2090116.2090118\"> doi.org/10.1145/2090116.2090118</a>     \n    </p>\n    <p>\n        [142] Ferguson, R., & Shum, S. B. (2011, February). Learning analytics to identify exploratory dialogue within synchronous text chat. In Proceedings of the 1st International Conference on Learning Analytics and Knowledge (pp. 99-103). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2090116.2090130\"> doi.org/10.1145/2090116.2090130</a>\n    </p>\n    <p>\n        [143] Sharkey, M. (2011, February). Academic analytics landscape at the University of Phoenix. In Proceedings of the 1st International Conference on Learning Analytics and Knowledge (pp. 122-126). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2090116.2090135\"> doi.org/10.1145/2090116.2090135</a>\n    </p>\n    <p>\n        [144] Fancsali, S. E. (2011, February). Variable construction for predictive and causal modeling of online education data. In Proceedings of the 1st International Conference on Learning Analytics and Knowledge (pp. 54-63). ACM. \n        <a target = \"_blank\" href = \"https://doi.org/10.1145/2090116.2090123\"> doi.org/10.1145/2090116.2090123</a>\n    </p>\n    <p>\n        [145] Verbert, K., Drachsler, H., Manouselis, N., Wolpers, M., Vuorikari, R., & Duval, E. (2011, February). Dataset-driven research for improving recommender systems for learning. In Proceedings of the 1st International Conference on Learning Analytics and Knowledge (pp. 44-53). ACM.\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/2090116.2090122\"> doi.org/10.1145/2090116.2090122</a> \n    </p>\n    <p>\n        [146] Gwizdka, J., Hosseini, R., Cole, M., & Wang, S. (2017). Temporal dynamics of eye‐tracking and EEG during reading and relevance decisions. Journal of the Association for Information Science and Technology, 68(10), 2299-2312.\n        <cite>\n            <a target = \"_blank\" href=\"https://doi.org/10.1002/asi.23904\">https://doi.org/10.1002/asi.23904</a>\n        </cite>\n\n    </p>\n    <p>\n        [147] Jivet, I., Scheffel, M., Drachsler, H., & Specht, M. (2017, September). Awareness is not enough: pitfalls of learning analytics dashboards in the educational practice. In European Conference on Technology Enhanced Learning (pp. 82-96). Springer, Cham.\n        <a target = \"_blank\" href = \"https://doi.org/10.1007/978-3-319-66610-5_7\"> https://doi.org/10.1007/978-3-319-66610-5_7</a>\n    </p>\n    <p>\n        [148] Jivet, I., Scheffel, M., Specht, M., & Drachsler, H. (2018, March). License to evaluate: preparing learning analytics dashboards for educational practice. In Proceedings of the 8th International Conference on Learning Analytics and Knowledge (pp. 31-40). ACM.\n        <a target = \"_blank\" href = \"https://doi.org/10.1145/3170358.3170421\"> doi.org/10.1145/3170358.3170421</a>\n    </p>\n    <p>\n        [149] Inge Molenaar, Anne Horvers, Rick Dijkstra, and Ryan S. Baker. 2020. Personalized visualizations to promote young learners' SRL: the learning path app. In Proceedings of the Tenth International Conference on Learning Analytics & Knowledge (LAK '20). Association for Computing Machinery, New York, NY, USA, 330–339.\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3375462.3375465\"> https://doi.org/10.1145/3375462.3375465</a>\n    </p>\n    <p>\n        [150] Donia Malekian, James Bailey, and Gregor Kennedy. 2020. Prediction of students' assessment readiness in online learning environments: the sequence matters. In Proceedings of the Tenth International Conference on Learning Analytics & Knowledge (LAK '20). Association for Computing Machinery, New York, NY, USA, 382–391. DOI:\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3375462.3375468\"> https://doi.org/10.1145/3375462.3375468</a>\n    </p>\n\n    <p>\n        [151] Varshita Sher, Marek Hatala, and Dragan Gašević. 2020. Analyzing the consistency in within-activity learning patterns in blended learning. In Proceedings of the Tenth International Conference on Learning Analytics & Knowledge (LAK '20). Association for Computing Machinery, New York, NY, USA, 1–10. DOI:\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3375462.3375470\"> https://doi.org/10.1145/3375462.3375470</a>\n    </p>\n    <p>\n        [152] Anouschka van Leeuwen and Nikol Rummel. 2020. Comparing teachers' use of mirroring and advising dashboards. In Proceedings of the Tenth International Conference on Learning Analytics & Knowledge (LAK '20). Association for Computing Machinery, New York, NY, USA, 26–34. DOI:\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3375462.3375471\"> https://doi.org/10.1145/3375462.3375471</a>\n    </p>\n    <p>\n        [153] Fatemeh Salehian Kia, Stephanie D. Teasley, Marek Hatala, Stuart A. Karabenick, and Matthew Kay. 2020. How patterns of students dashboard use are related to their achievement and self-regulatory engagement. In Proceedings of the Tenth International Conference on Learning Analytics & Knowledge (LAK '20). Association for Computing Machinery, New York, NY, USA, 340–349. DOI:\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3375462.3375472\"> https://doi.org/10.1145/3375462.3375472</a>\n    </p>\n    <p>\n        [154] Jelena Jovanović, Shane Dawson, Srećko Joksimović, and George Siemens. 2020. Supporting actionable intelligence: reframing the analysis of observed study strategies. In Proceedings of the Tenth International Conference on Learning Analytics & Knowledge (LAK '20). Association for Computing Machinery, New York, NY, USA, 161–170. DOI:\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3375462.3375474\"> https://doi.org/10.1145/3375462.3375474</a>\n    </p>\n    <p>\n        [155] Timothy Tuti, Chris Paton, and Niall Winters. 2020. Learning to represent healthcare providers knowledge of neonatal emergency care: findings from a smartphone-based learning intervention targeting clinicians from LMICs. In Proceedings of the Tenth International Conference on Learning Analytics & Knowledge (LAK '20). Association for Computing Machinery, New York, NY, USA, 320–329. DOI:\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3375462.3375479\"> https://doi.org/10.1145/3375462.3375479</a>\n    </p>\n    <p>\n        [156] John Saint, Dragan Gašević, Wannisa Matcha, Nora'Ayu Ahmad Uzir, and Abelardo Pardo. 2020. Combining analytic methods to unlock sequential and temporal patterns of self-regulated learning. In Proceedings of the Tenth International Conference on Learning Analytics & Knowledge (LAK '20). Association for Computing Machinery, New York, NY, USA, 402–411. DOI:\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3375462.3375487\"> https://doi.org/10.1145/3375462.3375487</a>\n    </p>\n    <p>\n        [157] Nora'ayu Ahmad Uzir, Dragan Gašević, Jelena Jovanović, Wannisa Matcha, Lisa-Angelique Lim, and Anthea Fudge. 2020. Analytics of time management and learning strategies for effective online learning in blended environments. In Proceedings of the Tenth International Conference on Learning Analytics & Knowledge (LAK '20). Association for Computing Machinery, New York, NY, USA, 392–401. DOI:\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3375462.3375493\"> https://doi.org/10.1145/3375462.3375493</a>\n    </p>\n    <p>\n        [158] Steven Van Goidsenhoven, Daria Bogdanova, Galina Deeva, Seppe vanden Broucke, Jochen De Weerdt, and Monique Snoeck. 2020. Predicting student success in a blended learning environment. In Proceedings of the Tenth International Conference on Learning Analytics & Knowledge (LAK '20). Association for Computing Machinery, New York, NY, USA, 17–25. DOI:\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3375462.3375494\"> https://doi.org/10.1145/3375462.3375494</a>\n    </p>\n    <p>\n        [159] Máverick Ferreira, Vitor Rolim, Rafael Ferreira Mello, Rafael Dueire Lins, Guanliang Chen, and Dragan Gašević. 2020. Towards automatic content analysis of social presence in transcripts of online discussions. In Proceedings of the Tenth International Conference on Learning Analytics & Knowledge (LAK '20). Association for Computing Machinery, New York, NY, USA, 141–150. DOI:\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3375462.3375495\"> https://doi.org/10.1145/3375462.3375495</a>\n    </p>\n    <p>\n        [160] Kshitij Sharma, Zacharoula Papamitsiou, Jennifer K. Olsen, and Michail Giannakos. 2020. Predicting learners' effortful behaviour in adaptive assessment using multimodal data. In Proceedings of the Tenth International Conference on Learning Analytics & Knowledge (LAK '20). Association for Computing Machinery, New York, NY, USA, 480–489. DOI:\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3375462.3375498\"> https://doi.org/10.1145/3375462.3375498</a>\n    </p>\n    <p>\n        [161] Louis Faucon, Jennifer K. Olsen, and Pierre Dillenbourg. 2020. A bayesian model of individual differences and flexibility in inductive reasoning for categorization of examples. In Proceedings of the Tenth International Conference on Learning Analytics & Knowledge (LAK '20). Association for Computing Machinery, New York, NY, USA, 285–294. DOI:\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3375462.3375512\"> https://doi.org/10.1145/3375462.3375512</a>\n    </p>\n    <p>\n        [162] Namrata Srivastava, Sadia Nawaz, Jason M. Lodge, Eduardo Velloso, Sarah Erfani, and James Bailey. 2020. Exploring the usage of thermal imaging for understanding video lecture designs and students' experiences. In Proceedings of the Tenth International Conference on Learning Analytics & Knowledge (LAK '20). Association for Computing Machinery, New York, NY, USA, 250–259. DOI:\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3375462.3375514\"> https://doi.org/10.1145/3375462.3375514</a>\n    </p>\n    <p>\n        [163] Joshua Quick, Benjamin Motz, Jamie Israel, and Jason Kaetzel. 2020. What college students say, and what they do: aligning self-regulated learning theory with behavioral logs. In Proceedings of the Tenth International Conference on Learning Analytics & Knowledge (LAK '20). Association for Computing Machinery, New York, NY, USA, 534–543. DOI:\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3375462.3375516\"> https://doi.org/10.1145/3375462.3375516</a>\n    </p>\n    <p>\n        [164] Luca Benedetto, Andrea Cappelli, Roberto Turrin, and Paolo Cremonesi. 2020. R2DE: a NLP approach to estimating IRT parameters of newly generated questions. In Proceedings of the Tenth International Conference on Learning Analytics & Knowledge (LAK '20). Association for Computing Machinery, New York, NY, USA, 412–421. DOI:\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3375462.337551\"> https://doi.org/10.1145/3375462.337551</a>\n    </p>\n    <p>\n        [165] Huan Wei, Haotian Li, Meng Xia, Yong Wang, and Huamin Qu. 2020. Predicting student performance in interactive online question pools using mouse interaction features. In Proceedings of the Tenth International Conference on Learning Analytics & Knowledge (LAK '20). Association for Computing Machinery, New York, NY, USA, 645–654. DOI:\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3375462.3375521\"> https://doi.org/10.1145/3375462.3375521</a>\n    </p>\n    <p>\n        [166] Yanghee Kim, Sachit Butail, Michael Tscholl, Lichuan Liu, and Yunlong Wang. 2020. An exploratory approach to measuring collaborative engagement in child robot interaction. In Proceedings of the Tenth International Conference on Learning Analytics & Knowledge (LAK '20). Association for Computing Machinery, New York, NY, USA, 209–217. DOI:\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3375462.3375522\"> https://doi.org/10.1145/3375462.3375522</a>\n    </p>\n    <p>\n        [167] John A. Erickson, Anthony F. Botelho, Steven McAteer, Ashvini Varatharaj, and Neil T. Heffernan. 2020. The automated grading of student open responses in mathematics. In Proceedings of the Tenth International Conference on Learning Analytics & Knowledge (LAK '20). Association for Computing Machinery, New York, NY, USA, 615–624. DOI:\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3375462.3375523\"> https://doi.org/10.1145/3375462.3375523</a>\n    </p>\n    <p>\n        [168] Zachary A. Pardos and Weijie Jiang. 2020. Designing for serendipity in a university course recommendation system. In Proceedings of the Tenth International Conference on Learning Analytics & Knowledge (LAK '20). Association for Computing Machinery, New York, NY, USA, 350–359. DOI:\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3375462.3375524\"> https://doi.org/10.1145/3375462.3375524</a>\n    </p>\n    <p>\n        [169] Preya Shabrina, Ruth Okoilu Akintunde, Mehak Maniktala, Tiffany Barnes, Collin Lynch, and Teomara Rutherford. 2020. Peeking through the classroom window: a detailed data-driven analysis on the usage of a curriculum integrated math game in authentic classrooms. In Proceedings of the Tenth International Conference on Learning Analytics & Knowledge (LAK '20). Association for Computing Machinery, New York, NY, USA, 625–634. DOI:\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3375462.3375525\"> https://doi.org/10.1145/3375462.3375525</a>\n    </p>\n    <p>\n        [170] Hamideh Iraj, Anthea Fudge, Margaret Faulkner, Abelardo Pardo, and Vitomir Kovanović. 2020. Understanding students' engagement with personalised feedback messages. In Proceedings of the Tenth International Conference on Learning Analytics & Knowledge (LAK '20). Association for Computing Machinery, New York, NY, USA, 438–447. DOI:\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3375462.3375527\"> https://doi.org/10.1145/3375462.3375527</a>\n    </p>\n    <p>\n        [171] Yeonji Jung and Alyssa Friend Wise. 2020. How and how well do students reflect? multi-dimensional automated reflection assessment in health professions education. In Proceedings of the Tenth International Conference on Learning Analytics & Knowledge (LAK '20). Association for Computing Machinery, New York, NY, USA, 595–604. DOI:\n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3375462.3375528\"> https://doi.org/10.1145/3375462.3375528</a>\n    </p>\n    <p>\n        [172] Ruth Okoilu Akintunde, Preya Shabrina, Veronica Catete, Tiffany Barnes, Collin Lynch, and Teomara Rutherford. 2020. Data-informed curriculum sequences for a curriculum-integrated game. In Proceedings of the Tenth International Conference on Learning Analytics & Knowledge (LAK '20). Association for Computing Machinery, New York, NY, USA, 635–644. https://doi.org/10.1145/3375462.3375530 \n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3375462.3375530 \"> https://doi.org/10.1145/3375462.3375530 </a>\n    </p>\n    <p>\n        [173] Oleksandra Poquet and Jelena Jovanovic. 2020. Intergroup and interpersonal forum positioning in shared-thread and post-reply networks. In Proceedings of the Tenth International Conference on Learning Analytics &amp; Knowledge (LAK '20). Association for Computing Machinery, New York, NY, USA, 187–196. \n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3375462.3375533\"> https://doi.org/10.1145/3375462.3375533</a>\n    </p>\n    <p>\n        [174] Wannisa Matcha, Dragan Gašević, Jelena Jovanović, Nora'ayu Ahmad Uzir, Chris W Oliver, Andrew Murray, and Danijela Gasevic. 2020. Analytics of learning strategies: the association with the personality traits. In Proceedings of the Tenth International Conference on Learning Analytics &amp; Knowledge (LAK '20). Association for Computing Machinery, New York, NY, USA, 151–160. \n         <a target = \"_blank\" href = \"https://doi.org/10.1145/3375462.3375534\"> https://doi.org/10.1145/3375462.3375534</a>\n    </p>\n    <p>\n        [175] Schulten, C., Manske, S., Langner-Thiele, A., Hoppe, H.U. (2020). Digital Value-Adding Chains in Vocational Education: Automatic Keyword Extraction from Learning Videos to Provide Learning Resource Recommendations. In: Alario-Hoyos, C., Rodríguez-Triana, M.J., Scheffel, M., Arnedillo-Sánchez, I., Dennerlein, S.M. (eds) Addressing Global Challenges and Quality Education. EC-TEL 2020. Lecture Notes in Computer Science(), vol 12315. Springer, Cham. \n         <a target = \"_blank\" href = \"https://doi.org/10.1007/978-3-030-57717-9_2\"> https://doi.org/10.1007/978-3-030-57717-9_2</a>\n    </p>\n    <p>\n        [176] Conijn, R., Van Waes, L., van Zaanen, M. (2020). Human-Centered Design of a Dashboard on Students’ Revisions During Writing. In: Alario-Hoyos, C., Rodríguez-Triana, M.J., Scheffel, M., Arnedillo-Sánchez, I., Dennerlein, S.M. (eds) Addressing Global Challenges and Quality Education. EC-TEL 2020. Lecture Notes in Computer Science(), vol 12315. Springer, Cham. \n         <a target = \"_blank\" href = \"https://doi.org/10.1007/978-3-030-57717-9_3\"> https://doi.org/10.1007/978-3-030-57717-9_3</a>\n    </p>\n    <p>\n        [177] Labba, C., Roussanaly, A., Boyer, A. (2020). An Operational Framework for Evaluating the Performance of Learning Record Stores. In: Alario-Hoyos, C., Rodríguez-Triana, M.J., Scheffel, M., Arnedillo-Sánchez, I., Dennerlein, S.M. (eds) Addressing Global Challenges and Quality Education. EC-TEL 2020. Lecture Notes in Computer Science(), vol 12315. Springer, Cham. \n         <a target = \"_blank\" href = \"https://doi.org/10.1007/978-3-030-57717-9_4\"> https://doi.org/10.1007/978-3-030-57717-9_4</a>\n    </p>\n    <p>\n        [178] Nikolayeva, I., Yessad, A., Laforge, B., Luengo, V. (2020). Does an E-mail Reminder Intervention with Learning Analytics Reduce Procrastination in a Blended University Course?. In: Alario-Hoyos, C., Rodríguez-Triana, M.J., Scheffel, M., Arnedillo-Sánchez, I., Dennerlein, S.M. (eds) Addressing Global Challenges and Quality Education. EC-TEL 2020. Lecture Notes in Computer Science(), vol 12315. Springer, Cham.  \n         <a target = \"_blank\" href = \"https://doi.org/10.1007/978-3-030-57717-9_5\"> https://doi.org/10.1007/978-3-030-57717-9_5</a>\n    </p>\n    <p>\n        [179] Delnoij, L.E.C., Janssen, J.P.W., Dirkx, K.J.H., Martens, R.L. (2020). Designing an Online Self-assessment for Informed Study Decisions: The User Perspective. In: Alario-Hoyos, C., Rodríguez-Triana, M.J., Scheffel, M., Arnedillo-Sánchez, I., Dennerlein, S.M. (eds) Addressing Global Challenges and Quality Education. EC-TEL 2020. Lecture Notes in Computer Science(), vol 12315. Springer, Cham. \n         <a target = \"_blank\" href = \"https://doi.org/10.1007/978-3-030-57717-9_6\"> https://doi.org/10.1007/978-3-030-57717-9_6</a>\n    </p>\n    <p>\n        [180] Schlotterbeck, D., Araya, R., Caballero, D., Jimenez, A., Lehesvuori, S., Viiri, J. (2020). Assessing Teacher’s Discourse Effect on Students’ Learning: A Keyword Centrality Approach. In: Alario-Hoyos, C., Rodríguez-Triana, M.J., Scheffel, M., Arnedillo-Sánchez, I., Dennerlein, S.M. (eds) Addressing Global Challenges and Quality Education. EC-TEL 2020. Lecture Notes in Computer Science(), vol 12315. Springer, Cham. \n         <a target = \"_blank\" href = \"https://doi.org/10.1007/978-3-030-57717-9_8\"> https://doi.org/10.1007/978-3-030-57717-9_8</a>\n    </p>\n    <p>\n        [181] Saqr, M., Viberg, O. (2020). Using Diffusion Network Analytics to Examine and Support Knowledge Construction in CSCL Settings. In: Alario-Hoyos, C., Rodríguez-Triana, M.J., Scheffel, M., Arnedillo-Sánchez, I., Dennerlein, S.M. (eds) Addressing Global Challenges and Quality Education. EC-TEL 2020. Lecture Notes in Computer Science(), vol 12315. Springer, Cham. \n         <a target = \"_blank\" href = \"https://doi.org/10.1007/978-3-030-57717-9_12\"> https://doi.org/10.1007/978-3-030-57717-9_12</a>\n    </p>\n    <p>\n        [182] Akhuseyinoglu, K., Barria-Pineda, J., Sosnovsky, S., Lamprecht, AL., Guerra, J., Brusilovsky, P. (2020). Exploring Student-Controlled Social Comparison. In: Alario-Hoyos, C., Rodríguez-Triana, M.J., Scheffel, M., Arnedillo-Sánchez, I., Dennerlein, S.M. (eds) Addressing Global Challenges and Quality Education. EC-TEL 2020. Lecture Notes in Computer Science(), vol 12315. Springer, Cham. \n         <a target = \"_blank\" href = \"https://doi.org/10.1007/978-3-030-57717-9_18\"> https://doi.org/10.1007/978-3-030-57717-9_18</a>\n    </p>\n    <p>\n        [183] Zhang, Z., Brun, A., Boyer, A. (2020). New Measures for Offline Evaluation of Learning Path Recommenders. In: Alario-Hoyos, C., Rodríguez-Triana, M.J., Scheffel, M., Arnedillo-Sánchez, I., Dennerlein, S.M. (eds) Addressing Global Challenges and Quality Education. EC-TEL 2020. Lecture Notes in Computer Science(), vol 12315. Springer, Cham. \n         <a target = \"_blank\" href = \"https://doi.org/10.1007/978-3-030-57717-9_19\"> https://doi.org/10.1007/978-3-030-57717-9_19</a>\n    </p>\n    <p>\n        [184] Yousuf, B., Conlan, O., Wade, V. (2020). Assessing the Impact of the Combination of Self-directed Learning, Immediate Feedback and Visualizations on Student Engagement in Online Learning. In: Alario-Hoyos, C., Rodríguez-Triana, M.J., Scheffel, M., Arnedillo-Sánchez, I., Dennerlein, S.M. (eds) Addressing Global Challenges and Quality Education. EC-TEL 2020. Lecture Notes in Computer Science(), vol 12315. Springer, Cham. \n         <a target = \"_blank\" href = \"https://doi.org/10.1007/978-3-030-57717-9_20\"> https://doi.org/10.1007/978-3-030-57717-9_20</a>\n    </p>\n   \n    <p>\n        <br>\n        <br>\n        <br>\n        <br>\n        <br>\n    </p>\n    \n  \n    <a id=\"back-to-top\" class=\"btn btn-top back-to-top\" role=\"button\" (click)=\"backToTop()\">\n      <i class=\"material-icons\">arrow_upward</i>\n    </a>\n      \n</blockquote>\n");
 
 /***/ }),
 
@@ -920,12 +868,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _auth_guard_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./auth-guard.service */ "./src/app/auth-guard.service.ts");
 /* harmony import */ var _component_reference_referance_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./component/reference/referance.component */ "./src/app/component/reference/referance.component.ts");
 /* harmony import */ var _component_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./component/dashboard/dashboard.component */ "./src/app/component/dashboard/dashboard.component.ts");
-/* harmony import */ var _component_review_edit_review_edit_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./component/review-edit/review-edit.component */ "./src/app/component/review-edit/review-edit.component.ts");
-/* harmony import */ var _superAdmin_super_admin_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./superAdmin/super-admin.service */ "./src/app/superAdmin/super-admin.service.ts");
-/* harmony import */ var _component_add_data_data_resolver__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./component/add-data/data.resolver */ "./src/app/component/add-data/data.resolver.ts");
-
-
-
 
 
 
@@ -941,14 +883,10 @@ const routes = [
     //{ path: '', component: DisplayComponent },
     //{ path: 'admin', component: AdminComponent },
     // { path: 'add/data', component: AddDataComponent, canActivate: [AuthGuardService] },
-    { path: "add", component: _component_add_data_add_data_component__WEBPACK_IMPORTED_MODULE_5__["AddDataComponent"], canActivate: [_auth_guard_service__WEBPACK_IMPORTED_MODULE_6__["AuthGuardService"]], resolve: { data: _component_add_data_data_resolver__WEBPACK_IMPORTED_MODULE_11__["DataResolver"] } },
-    { path: "indicator/:id/edit", component: _component_add_data_add_data_component__WEBPACK_IMPORTED_MODULE_5__["AddDataComponent"], canActivate: [_superAdmin_super_admin_service__WEBPACK_IMPORTED_MODULE_10__["SuperAdminService"]], data: { target: 'indicator' }, resolve: { data: _component_add_data_data_resolver__WEBPACK_IMPORTED_MODULE_11__["DataResolver"] } },
-    { path: "reference/:id/edit", component: _component_add_data_add_data_component__WEBPACK_IMPORTED_MODULE_5__["AddDataComponent"], canActivate: [_superAdmin_super_admin_service__WEBPACK_IMPORTED_MODULE_10__["SuperAdminService"]], data: { target: 'reference' }, resolve: { data: _component_add_data_data_resolver__WEBPACK_IMPORTED_MODULE_11__["DataResolver"] } },
+    { path: "add", component: _component_add_data_add_data_component__WEBPACK_IMPORTED_MODULE_5__["AddDataComponent"], canActivate: [_auth_guard_service__WEBPACK_IMPORTED_MODULE_6__["AuthGuardService"]] },
     { path: "reference", component: _component_reference_referance_component__WEBPACK_IMPORTED_MODULE_7__["ReferanceComponent"] },
     { path: "login", component: _component_admin_admin_component__WEBPACK_IMPORTED_MODULE_4__["AdminComponent"] },
     { path: "dashboard", component: _component_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_8__["DashboardComponent"] },
-    { path: "review/add/:indicatorId", component: _component_review_edit_review_edit_component__WEBPACK_IMPORTED_MODULE_9__["ReviewEditComponent"], canActivate: [_auth_guard_service__WEBPACK_IMPORTED_MODULE_6__["AuthGuardService"]] },
-    { path: "review/:id/edit", component: _component_review_edit_review_edit_component__WEBPACK_IMPORTED_MODULE_9__["ReviewEditComponent"], canActivate: [_auth_guard_service__WEBPACK_IMPORTED_MODULE_6__["AuthGuardService"]] },
     { path: "", component: _component_display_display_component__WEBPACK_IMPORTED_MODULE_3__["DisplayComponent"] },
     { path: "", redirectTo: "display/data", pathMatch: "full" },
 ];
@@ -974,7 +912,7 @@ AppRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".multiselect-dropdown .dropdown-btn {\r\n    display: inline-block;\r\n\r\n    width: 100%;\r\n    padding: 6px 12px;\r\n    margin-bottom: 0;\r\n    font-size: 12px;\r\n    font-weight: 400;\r\n    line-height: 1.1;\r\n    text-align: left;\r\n    vertical-align: middle;\r\n    cursor: pointer;\r\n    background-image: none;\r\n    border-radius: 0px;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxxQkFBcUI7O0lBRXJCLFdBQVc7SUFDWCxpQkFBaUI7SUFDakIsZ0JBQWdCO0lBQ2hCLGVBQWU7SUFDZixnQkFBZ0I7SUFDaEIsZ0JBQWdCO0lBQ2hCLGdCQUFnQjtJQUNoQixzQkFBc0I7SUFDdEIsZUFBZTtJQUNmLHNCQUFzQjtJQUN0QixrQkFBa0I7QUFDdEIiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5tdWx0aXNlbGVjdC1kcm9wZG93biAuZHJvcGRvd24tYnRuIHtcclxuICAgIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuXHJcbiAgICB3aWR0aDogMTAwJTtcclxuICAgIHBhZGRpbmc6IDZweCAxMnB4O1xyXG4gICAgbWFyZ2luLWJvdHRvbTogMDtcclxuICAgIGZvbnQtc2l6ZTogMTJweDtcclxuICAgIGZvbnQtd2VpZ2h0OiA0MDA7XHJcbiAgICBsaW5lLWhlaWdodDogMS4xO1xyXG4gICAgdGV4dC1hbGlnbjogbGVmdDtcclxuICAgIHZlcnRpY2FsLWFsaWduOiBtaWRkbGU7XHJcbiAgICBjdXJzb3I6IHBvaW50ZXI7XHJcbiAgICBiYWNrZ3JvdW5kLWltYWdlOiBub25lO1xyXG4gICAgYm9yZGVyLXJhZGl1czogMHB4O1xyXG59XHJcbiJdfQ== */");
+/* harmony default export */ __webpack_exports__["default"] = (".multiselect-dropdown .dropdown-btn {\n    display: inline-block;\n    \n    width: 100%;\n    padding: 6px 12px;\n    margin-bottom: 0;\n    font-size: 12px;\n    font-weight: 400;\n    line-height: 1.1;\n    text-align: left;\n    vertical-align: middle;\n    cursor: pointer;\n    background-image: none;\n    border-radius: 0px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYXBwLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxxQkFBcUI7O0lBRXJCLFdBQVc7SUFDWCxpQkFBaUI7SUFDakIsZ0JBQWdCO0lBQ2hCLGVBQWU7SUFDZixnQkFBZ0I7SUFDaEIsZ0JBQWdCO0lBQ2hCLGdCQUFnQjtJQUNoQixzQkFBc0I7SUFDdEIsZUFBZTtJQUNmLHNCQUFzQjtJQUN0QixrQkFBa0I7QUFDdEIiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5tdWx0aXNlbGVjdC1kcm9wZG93biAuZHJvcGRvd24tYnRuIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gICAgXG4gICAgd2lkdGg6IDEwMCU7XG4gICAgcGFkZGluZzogNnB4IDEycHg7XG4gICAgbWFyZ2luLWJvdHRvbTogMDtcbiAgICBmb250LXNpemU6IDEycHg7XG4gICAgZm9udC13ZWlnaHQ6IDQwMDtcbiAgICBsaW5lLWhlaWdodDogMS4xO1xuICAgIHRleHQtYWxpZ246IGxlZnQ7XG4gICAgdmVydGljYWwtYWxpZ246IG1pZGRsZTtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgYmFja2dyb3VuZC1pbWFnZTogbm9uZTtcbiAgICBib3JkZXItcmFkaXVzOiAwcHg7XG59Il19 */");
 
 /***/ }),
 
@@ -1080,24 +1018,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _charts_curriculum_usage_curriculum_usage_component__WEBPACK_IMPORTED_MODULE_58__ = __webpack_require__(/*! ./charts/curriculum-usage/curriculum-usage.component */ "./src/app/charts/curriculum-usage/curriculum-usage.component.ts");
 /* harmony import */ var _charts_presentation_skills_presentation_skills_component__WEBPACK_IMPORTED_MODULE_59__ = __webpack_require__(/*! ./charts/presentation-skills/presentation-skills.component */ "./src/app/charts/presentation-skills/presentation-skills.component.ts");
 /* harmony import */ var _component_admin_admin_component__WEBPACK_IMPORTED_MODULE_60__ = __webpack_require__(/*! ./component/admin/admin.component */ "./src/app/component/admin/admin.component.ts");
-/* harmony import */ var _component_star_rating_star_rating_component__WEBPACK_IMPORTED_MODULE_61__ = __webpack_require__(/*! ./component/star-rating/star-rating.component */ "./src/app/component/star-rating/star-rating.component.ts");
-/* harmony import */ var _component_review_display_review_display_component__WEBPACK_IMPORTED_MODULE_62__ = __webpack_require__(/*! ./component/review-display/review-display.component */ "./src/app/component/review-display/review-display.component.ts");
-/* harmony import */ var _angular_material_tooltip__WEBPACK_IMPORTED_MODULE_63__ = __webpack_require__(/*! @angular/material/tooltip */ "./node_modules/@angular/material/esm2015/tooltip.js");
-/* harmony import */ var _component_review_edit_review_edit_component__WEBPACK_IMPORTED_MODULE_64__ = __webpack_require__(/*! ./component/review-edit/review-edit.component */ "./src/app/component/review-edit/review-edit.component.ts");
-/* harmony import */ var _component_display_table_table_component__WEBPACK_IMPORTED_MODULE_65__ = __webpack_require__(/*! ./component/display/table/table.component */ "./src/app/component/display/table/table.component.ts");
-/* harmony import */ var _ng_select_ng_select__WEBPACK_IMPORTED_MODULE_66__ = __webpack_require__(/*! @ng-select/ng-select */ "./node_modules/@ng-select/ng-select/fesm2015/ng-select-ng-select.js");
-/* harmony import */ var _component_header_header_service__WEBPACK_IMPORTED_MODULE_67__ = __webpack_require__(/*! ./component/header/header.service */ "./src/app/component/header/header.service.ts");
-/* harmony import */ var _assets_js_tour_service__WEBPACK_IMPORTED_MODULE_68__ = __webpack_require__(/*! ../assets/js/tour.service */ "./src/assets/js/tour.service.ts");
-/* harmony import */ var _superAdmin_super_admin_service__WEBPACK_IMPORTED_MODULE_69__ = __webpack_require__(/*! ./superAdmin/super-admin.service */ "./src/app/superAdmin/super-admin.service.ts");
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1219,17 +1139,12 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _charts_course_difficulty_course_difficulty_component__WEBPACK_IMPORTED_MODULE_57__["CourseDifficultyComponent"],
             _charts_curriculum_usage_curriculum_usage_component__WEBPACK_IMPORTED_MODULE_58__["CurriculumUsageComponent"],
             _charts_presentation_skills_presentation_skills_component__WEBPACK_IMPORTED_MODULE_59__["PresentationSkillsComponent"],
-            _component_star_rating_star_rating_component__WEBPACK_IMPORTED_MODULE_61__["StarRatingComponent"],
-            _component_review_display_review_display_component__WEBPACK_IMPORTED_MODULE_62__["ReviewDisplayComponent"],
-            _component_review_edit_review_edit_component__WEBPACK_IMPORTED_MODULE_64__["ReviewEditComponent"],
-            _component_display_table_table_component__WEBPACK_IMPORTED_MODULE_65__["TableComponent"],
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
             _app_routing_module__WEBPACK_IMPORTED_MODULE_10__["AppRoutingModule"],
             _angular_forms__WEBPACK_IMPORTED_MODULE_3__["FormsModule"],
             _angular_forms__WEBPACK_IMPORTED_MODULE_3__["ReactiveFormsModule"],
-            _ng_select_ng_select__WEBPACK_IMPORTED_MODULE_66__["NgSelectModule"],
             //RouterModule.forRoot(routes),
             _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_15__["BrowserAnimationsModule"],
             _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatInputModule"],
@@ -1245,10 +1160,8 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatCheckboxModule"],
             angular_font_awesome__WEBPACK_IMPORTED_MODULE_5__["AngularFontAwesomeModule"],
             highcharts_angular__WEBPACK_IMPORTED_MODULE_8__["HighchartsChartModule"],
-            _angular_material__WEBPACK_IMPORTED_MODULE_6__["MatIconModule"],
-            _angular_material_tooltip__WEBPACK_IMPORTED_MODULE_63__["MatTooltipModule"]
         ],
-        providers: [_data_service__WEBPACK_IMPORTED_MODULE_16__["DataService"], _auth_guard_service__WEBPACK_IMPORTED_MODULE_21__["AuthGuardService"], _superAdmin_super_admin_service__WEBPACK_IMPORTED_MODULE_69__["SuperAdminService"], _chart_helper_service__WEBPACK_IMPORTED_MODULE_26__["ChartHelperService"], _component_header_header_service__WEBPACK_IMPORTED_MODULE_67__["HeaderService"], _assets_js_tour_service__WEBPACK_IMPORTED_MODULE_68__["TourService"]],
+        providers: [_data_service__WEBPACK_IMPORTED_MODULE_16__["DataService"], _auth_guard_service__WEBPACK_IMPORTED_MODULE_21__["AuthGuardService"], _chart_helper_service__WEBPACK_IMPORTED_MODULE_26__["ChartHelperService"]],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_11__["AppComponent"]],
     })
 ], AppModule);
@@ -1270,11 +1183,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _data_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./data.service */ "./src/app/data.service.ts");
+
 
 
 
 let AuthGuardService = class AuthGuardService {
-    constructor(router) {
+    constructor(dataService, router) {
+        this.dataService = dataService;
         this.router = router;
     }
     canActivate(route, state) {
@@ -1284,12 +1200,13 @@ let AuthGuardService = class AuthGuardService {
         }
         else {
             //this.router.navigate(['/login']);
-            this.router.navigate(['/login'], { state: { url: state.url } });
+            this.router.navigate(['/login'], { queryParams: { returnUrl: state.url } });
             return false;
         }
     }
 };
 AuthGuardService.ctorParameters = () => [
+    { type: _data_service__WEBPACK_IMPORTED_MODULE_3__["DataService"] },
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] }
 ];
 AuthGuardService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -7282,7 +7199,7 @@ WritingAnalyticsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("input[type=\"checkbox\"] {\r\n    height: 20px;\r\n    width: 20px;\r\n    margin: 0 0.5em 0 0;\r\n}\r\n\r\n.form-element {\r\n    display: flex;\r\n    padding-bottom: 1em;\r\n    flex-direction: column;\r\n    max-width: calc(590px - 1em);\r\n}\r\n\r\n.form-element-15 {\r\n    width: 15%;\r\n}\r\n\r\n.form-element-25 {\r\n    width: 25%;\r\n}\r\n\r\n.form-element-50 {\r\n    width: 50%;\r\n}\r\n\r\n.form-element-75 {\r\n    width: 75%;\r\n}\r\n\r\n.form-element-85 {\r\n    width: 85%;\r\n}\r\n\r\n.form-element-100 {\r\n    width: 100%\r\n}\r\n\r\n.content-wrapper {\r\n    padding: 1.5em;\r\n    display: flex;\r\n    justify-content: space-between;\r\n}\r\n\r\n.form-wrapper {\r\n    width: 100%;\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n\r\n    & ng-select {\r\n        width: calc(100% - 1em);\r\n        margin-right: 1em;\r\n        font-size: 16px;\r\n    }\r\n\r\n    & ng-multiselect-dropdown {\r\n        width: calc(100% - 1em);\r\n        margin-right: 1em;\r\n        font-size: 16px;\r\n\r\n        .dropdown-btn {\r\n            width: 100% !important;\r\n            padding-right: 0 !important;\r\n            height: 26px;\r\n        }\r\n    }\r\n\r\n    & label {\r\n        font-weight: bold;\r\n        font-size: 16px;\r\n        width: 200px;\r\n        padding-bottom: 0.5em;\r\n    }\r\n\r\n    & input:not([type=\"checkbox\"]) {\r\n        font-size: 16px;\r\n        width: calc(100% - 1.5em);\r\n        height: 30px;\r\n    }\r\n\r\n    & textarea {\r\n        font-size: 16px;\r\n        width: calc(100% - 1.4em);\r\n    }\r\n}\r\n\r\n.select-input {\r\n    width: calc(100% - 8px);\r\n    height: 30px;\r\n}\r\n\r\n.title {\r\n    text-align: center;\r\n    font-weight: normal;\r\n    margin: 1em;\r\n    padding: 24px;\r\n    background-color: #3F51B5;\r\n    color: white;\r\n}\r\n\r\n.save-button {\r\n    margin: 0.5em 0 0 0.15em\r\n}\r\n\r\nfieldset {\r\n    width: calc(50% - 3em);\r\n    border-radius: 4px;\r\n\r\n    &:not(.last) {\r\n        margin-right: 1em;\r\n    }\r\n}\r\n\r\n.form-section {\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n\r\n    &.last {\r\n        justify-content: space-between;\r\n        flex-direction: column;\r\n    }\r\n}\r\n\r\n.alert {\r\n    color: red;\r\n    font-size: small;\r\n    margin: 0;\r\n}\r\n\r\n:host ::ng-deep{\r\n    .dropdown-list {\r\n        .item1 {\r\n            overflow: hidden !important;\r\n        }\r\n\r\n        .item2 {\r\n            position: relative;\r\n        }\r\n    }\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50L2FkZC1kYXRhL2FkZC1kYXRhLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxZQUFZO0lBQ1osV0FBVztJQUNYLG1CQUFtQjtBQUN2Qjs7QUFFQTtJQUNJLGFBQWE7SUFDYixtQkFBbUI7SUFDbkIsc0JBQXNCO0lBQ3RCLDRCQUE0QjtBQUNoQzs7QUFFQTtJQUNJLFVBQVU7QUFDZDs7QUFFQTtJQUNJLFVBQVU7QUFDZDs7QUFFQTtJQUNJLFVBQVU7QUFDZDs7QUFFQTtJQUNJLFVBQVU7QUFDZDs7QUFFQTtJQUNJLFVBQVU7QUFDZDs7QUFFQTtJQUNJO0FBQ0o7O0FBRUE7SUFDSSxjQUFjO0lBQ2QsYUFBYTtJQUNiLDhCQUE4QjtBQUNsQzs7QUFFQTtJQUNJLFdBQVc7SUFDWCxhQUFhO0lBQ2IsZUFBZTs7SUFFZjtRQUNJLHVCQUF1QjtRQUN2QixpQkFBaUI7UUFDakIsZUFBZTtJQUNuQjs7SUFFQTtRQUNJLHVCQUF1QjtRQUN2QixpQkFBaUI7UUFDakIsZUFBZTs7UUFFZjtZQUNJLHNCQUFzQjtZQUN0QiwyQkFBMkI7WUFDM0IsWUFBWTtRQUNoQjtJQUNKOztJQUVBO1FBQ0ksaUJBQWlCO1FBQ2pCLGVBQWU7UUFDZixZQUFZO1FBQ1oscUJBQXFCO0lBQ3pCOztJQUVBO1FBQ0ksZUFBZTtRQUNmLHlCQUF5QjtRQUN6QixZQUFZO0lBQ2hCOztJQUVBO1FBQ0ksZUFBZTtRQUNmLHlCQUF5QjtJQUM3QjtBQUNKOztBQUVBO0lBQ0ksdUJBQXVCO0lBQ3ZCLFlBQVk7QUFDaEI7O0FBRUE7SUFDSSxrQkFBa0I7SUFDbEIsbUJBQW1CO0lBQ25CLFdBQVc7SUFDWCxhQUFhO0lBQ2IseUJBQXlCO0lBQ3pCLFlBQVk7QUFDaEI7O0FBRUE7SUFDSTtBQUNKOztBQUVBO0lBQ0ksc0JBQXNCO0lBQ3RCLGtCQUFrQjs7SUFFbEI7UUFDSSxpQkFBaUI7SUFDckI7QUFDSjs7QUFFQTtJQUNJLGFBQWE7SUFDYixlQUFlOztJQUVmO1FBQ0ksOEJBQThCO1FBQzlCLHNCQUFzQjtJQUMxQjtBQUNKOztBQUVBO0lBQ0ksVUFBVTtJQUNWLGdCQUFnQjtJQUNoQixTQUFTO0FBQ2I7O0FBRUE7SUFDSTtRQUNJO1lBQ0ksMkJBQTJCO1FBQy9COztRQUVBO1lBQ0ksa0JBQWtCO1FBQ3RCO0lBQ0o7QUFDSiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudC9hZGQtZGF0YS9hZGQtZGF0YS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiaW5wdXRbdHlwZT1cImNoZWNrYm94XCJdIHtcclxuICAgIGhlaWdodDogMjBweDtcclxuICAgIHdpZHRoOiAyMHB4O1xyXG4gICAgbWFyZ2luOiAwIDAuNWVtIDAgMDtcclxufVxyXG5cclxuLmZvcm0tZWxlbWVudCB7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgcGFkZGluZy1ib3R0b206IDFlbTtcclxuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XHJcbiAgICBtYXgtd2lkdGg6IGNhbGMoNTkwcHggLSAxZW0pO1xyXG59XHJcblxyXG4uZm9ybS1lbGVtZW50LTE1IHtcclxuICAgIHdpZHRoOiAxNSU7XHJcbn1cclxuXHJcbi5mb3JtLWVsZW1lbnQtMjUge1xyXG4gICAgd2lkdGg6IDI1JTtcclxufVxyXG5cclxuLmZvcm0tZWxlbWVudC01MCB7XHJcbiAgICB3aWR0aDogNTAlO1xyXG59XHJcblxyXG4uZm9ybS1lbGVtZW50LTc1IHtcclxuICAgIHdpZHRoOiA3NSU7XHJcbn1cclxuXHJcbi5mb3JtLWVsZW1lbnQtODUge1xyXG4gICAgd2lkdGg6IDg1JTtcclxufVxyXG5cclxuLmZvcm0tZWxlbWVudC0xMDAge1xyXG4gICAgd2lkdGg6IDEwMCVcclxufVxyXG5cclxuLmNvbnRlbnQtd3JhcHBlciB7XHJcbiAgICBwYWRkaW5nOiAxLjVlbTtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XHJcbn1cclxuXHJcbi5mb3JtLXdyYXBwZXIge1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgZmxleC13cmFwOiB3cmFwO1xyXG5cclxuICAgICYgbmctc2VsZWN0IHtcclxuICAgICAgICB3aWR0aDogY2FsYygxMDAlIC0gMWVtKTtcclxuICAgICAgICBtYXJnaW4tcmlnaHQ6IDFlbTtcclxuICAgICAgICBmb250LXNpemU6IDE2cHg7XHJcbiAgICB9XHJcblxyXG4gICAgJiBuZy1tdWx0aXNlbGVjdC1kcm9wZG93biB7XHJcbiAgICAgICAgd2lkdGg6IGNhbGMoMTAwJSAtIDFlbSk7XHJcbiAgICAgICAgbWFyZ2luLXJpZ2h0OiAxZW07XHJcbiAgICAgICAgZm9udC1zaXplOiAxNnB4O1xyXG5cclxuICAgICAgICAuZHJvcGRvd24tYnRuIHtcclxuICAgICAgICAgICAgd2lkdGg6IDEwMCUgIWltcG9ydGFudDtcclxuICAgICAgICAgICAgcGFkZGluZy1yaWdodDogMCAhaW1wb3J0YW50O1xyXG4gICAgICAgICAgICBoZWlnaHQ6IDI2cHg7XHJcbiAgICAgICAgfVxyXG4gICAgfVxyXG5cclxuICAgICYgbGFiZWwge1xyXG4gICAgICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcclxuICAgICAgICB3aWR0aDogMjAwcHg7XHJcbiAgICAgICAgcGFkZGluZy1ib3R0b206IDAuNWVtO1xyXG4gICAgfVxyXG5cclxuICAgICYgaW5wdXQ6bm90KFt0eXBlPVwiY2hlY2tib3hcIl0pIHtcclxuICAgICAgICBmb250LXNpemU6IDE2cHg7XHJcbiAgICAgICAgd2lkdGg6IGNhbGMoMTAwJSAtIDEuNWVtKTtcclxuICAgICAgICBoZWlnaHQ6IDMwcHg7XHJcbiAgICB9XHJcblxyXG4gICAgJiB0ZXh0YXJlYSB7XHJcbiAgICAgICAgZm9udC1zaXplOiAxNnB4O1xyXG4gICAgICAgIHdpZHRoOiBjYWxjKDEwMCUgLSAxLjRlbSk7XHJcbiAgICB9XHJcbn1cclxuXHJcbi5zZWxlY3QtaW5wdXQge1xyXG4gICAgd2lkdGg6IGNhbGMoMTAwJSAtIDhweCk7XHJcbiAgICBoZWlnaHQ6IDMwcHg7XHJcbn1cclxuXHJcbi50aXRsZSB7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICBmb250LXdlaWdodDogbm9ybWFsO1xyXG4gICAgbWFyZ2luOiAxZW07XHJcbiAgICBwYWRkaW5nOiAyNHB4O1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzNGNTFCNTtcclxuICAgIGNvbG9yOiB3aGl0ZTtcclxufVxyXG5cclxuLnNhdmUtYnV0dG9uIHtcclxuICAgIG1hcmdpbjogMC41ZW0gMCAwIDAuMTVlbVxyXG59XHJcblxyXG5maWVsZHNldCB7XHJcbiAgICB3aWR0aDogY2FsYyg1MCUgLSAzZW0pO1xyXG4gICAgYm9yZGVyLXJhZGl1czogNHB4O1xyXG5cclxuICAgICY6bm90KC5sYXN0KSB7XHJcbiAgICAgICAgbWFyZ2luLXJpZ2h0OiAxZW07XHJcbiAgICB9XHJcbn1cclxuXHJcbi5mb3JtLXNlY3Rpb24ge1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGZsZXgtd3JhcDogd3JhcDtcclxuXHJcbiAgICAmLmxhc3Qge1xyXG4gICAgICAgIGp1c3RpZnktY29udGVudDogc3BhY2UtYmV0d2VlbjtcclxuICAgICAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xyXG4gICAgfVxyXG59XHJcblxyXG4uYWxlcnQge1xyXG4gICAgY29sb3I6IHJlZDtcclxuICAgIGZvbnQtc2l6ZTogc21hbGw7XHJcbiAgICBtYXJnaW46IDA7XHJcbn1cclxuXHJcbjpob3N0IDo6bmctZGVlcHtcclxuICAgIC5kcm9wZG93bi1saXN0IHtcclxuICAgICAgICAuaXRlbTEge1xyXG4gICAgICAgICAgICBvdmVyZmxvdzogaGlkZGVuICFpbXBvcnRhbnQ7XHJcbiAgICAgICAgfVxyXG5cclxuICAgICAgICAuaXRlbTIge1xyXG4gICAgICAgICAgICBwb3NpdGlvbjogcmVsYXRpdmU7XHJcbiAgICAgICAgfVxyXG4gICAgfVxyXG59XHJcbiJdfQ== */");
+/* harmony default export */ __webpack_exports__["default"] = (".card {\n  background: white;\n  margin: 15px;\n  height: 75%;\n  width: 50%;\n  box-shadow: 1px 1px 2px 2px #888888;\n  padding-bottom: 24px;\n  position: absolute;\n  transform: translate(50%, 50%);\n  bottom: 40%;\n  right: 50%;\n  overflow: auto;\n}\n\n\n#title {\n  text-align: center;\n  font-weight: normal;\n  margin: 24px;\n  padding: 24px;\n  background-color: #3F51B5;\n  color: white;\n}\n\n\n#dropdown {\n  margin: 16px;\n  font-weight: bold;\n  font-size: 16px;\n}\n\n\n#dropdown>mat-select {\n  height: 20px;\n  width: 300px;\n  padding-left: 25px;\n  font-size: 16px;\n  font-weight: normal;\n  margin-left: 34px;\n  border: none;\n  border-radius: 4px;\n  color: white;\n\n}\n\n\n#dropdown>label {\n  padding-right: 40px;\n  padding-left: 40px;\n}\n\n\noption {\n  color: white;\n  border: none;\n}\n\n\n#activities {\n  margin: 16px;\n  padding-left: 12px;\n  font-weight: bold;\n  font-size: 16px;\n}\n\n\n#activities>mat-select {\n  height: 20px;\n  width: 300px;\n  padding-left: 25px;\n  font-size: 16px;\n  font-weight: normal;\n  margin-left: 32px;\n\n  border: none;\n  border-radius: 4px;\n  color: white;\n\n}\n\n\n#activities>label {\n  padding-right: 24px;\n  padding-left: 24px;\n\n}\n\n\n#indicators {\n  margin-top: 16px;\n  padding-left: 30px;\n  font-weight: bold;\n  font-size: 16px;\n\n}\n\n\n#indicators>label {\n\n  padding-right: 84px;\n  padding-left: 24px;\n\n}\n\n\n#indicators>input {\n  font-size: 16px;\n  font-weight: normal;\n\n  margin-left: 32px;\n  width: 500px;\n  height: 30px;\n  font-weight: bold;\n  font-size: 16px;\n\n}\n\n\n#metrics {\n  margin-top: 16px;\n  padding-left: 30px;\n  font-weight: bold;\n  font-size: 16px;\n\n}\n\n\n.metrics {\n\n  padding-right: 140px;\n  padding-left: 24px;\n  font-size: medium;\n  margin-left: 24px;\n\n\n}\n\n\n#metrics>input {\n  font-size: 16px;\n  font-weight: normal;\n  background-color: #3F51B5;\n  border: none;\n  border-radius: 4px;\n  width: 400px;\n  height: 30px;\n  color: white;\n}\n\n\n.btn {\n  margin-top: 24px;\n  padding-right: 92px;\n  padding-left: 24px;\n  text-align: center;\n}\n\n\n#btn1 {\n  margin-left: 12px;\n  margin-right: 24px;\n}\n\n\n#btn2 {\n  margin-top: 12px;\n  margin-right: 24px;\n}\n\n\n#savebtn {\n\n  margin: 40px;\n  padding-left: 200px;\n}\n\n\n.formfield * {\n  vertical-align: middle;\n  margin-top: 16px;\n  font-weight: bold;\n  font-size: 16px;\n  width: 500px;\n\n}\n\n\n.alert {\n  position: relative;\n  top: 10;\n  left: 0;\n  width: auto;\n  padding: 10px;\n  margin-left: 600px;\n  margin-right: 600px;\n  line-height: 1.8;\n  border-radius: 5px;\n  cursor: hand;\n  cursor: pointer;\n  font-family: sans-serif;\n  font-weight: 400;\n}\n\n\n.alertCheckbox {\n  display: none;\n}\n\n\n:checked + .alert {\n  display: none;\n}\n\n\n.alertText {\n  display: table;\n  margin: 0 auto;\n  text-align: center;\n  font-size: 16px;\n}\n\n\n.alertClose {\n  float: right;\n  padding-top: 5px;\n  font-size: 10px;\n}\n\n\n.clear {\n  clear: both;\n}\n\n\n.success {\n  border: 1px solid rgb(214, 233, 198);\n  background-color: rgb(223, 240, 216);\n  color: rgb(70, 136, 71);\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50L2FkZC1kYXRhL2FkZC1kYXRhLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxpQkFBaUI7RUFDakIsWUFBWTtFQUNaLFdBQVc7RUFDWCxVQUFVO0VBQ1YsbUNBQW1DO0VBQ25DLG9CQUFvQjtFQUNwQixrQkFBa0I7RUFDbEIsOEJBQThCO0VBQzlCLFdBQVc7RUFDWCxVQUFVO0VBQ1YsY0FBYztBQUNoQjs7O0FBR0E7RUFDRSxrQkFBa0I7RUFDbEIsbUJBQW1CO0VBQ25CLFlBQVk7RUFDWixhQUFhO0VBQ2IseUJBQXlCO0VBQ3pCLFlBQVk7QUFDZDs7O0FBRUE7RUFDRSxZQUFZO0VBQ1osaUJBQWlCO0VBQ2pCLGVBQWU7QUFDakI7OztBQUdBO0VBQ0UsWUFBWTtFQUNaLFlBQVk7RUFDWixrQkFBa0I7RUFDbEIsZUFBZTtFQUNmLG1CQUFtQjtFQUNuQixpQkFBaUI7RUFDakIsWUFBWTtFQUNaLGtCQUFrQjtFQUNsQixZQUFZOztBQUVkOzs7QUFFQTtFQUNFLG1CQUFtQjtFQUNuQixrQkFBa0I7QUFDcEI7OztBQUVBO0VBQ0UsWUFBWTtFQUNaLFlBQVk7QUFDZDs7O0FBRUE7RUFDRSxZQUFZO0VBQ1osa0JBQWtCO0VBQ2xCLGlCQUFpQjtFQUNqQixlQUFlO0FBQ2pCOzs7QUFFQTtFQUNFLFlBQVk7RUFDWixZQUFZO0VBQ1osa0JBQWtCO0VBQ2xCLGVBQWU7RUFDZixtQkFBbUI7RUFDbkIsaUJBQWlCOztFQUVqQixZQUFZO0VBQ1osa0JBQWtCO0VBQ2xCLFlBQVk7O0FBRWQ7OztBQUVBO0VBQ0UsbUJBQW1CO0VBQ25CLGtCQUFrQjs7QUFFcEI7OztBQUVBO0VBQ0UsZ0JBQWdCO0VBQ2hCLGtCQUFrQjtFQUNsQixpQkFBaUI7RUFDakIsZUFBZTs7QUFFakI7OztBQUVBOztFQUVFLG1CQUFtQjtFQUNuQixrQkFBa0I7O0FBRXBCOzs7QUFFQTtFQUNFLGVBQWU7RUFDZixtQkFBbUI7O0VBRW5CLGlCQUFpQjtFQUNqQixZQUFZO0VBQ1osWUFBWTtFQUNaLGlCQUFpQjtFQUNqQixlQUFlOztBQUVqQjs7O0FBRUE7RUFDRSxnQkFBZ0I7RUFDaEIsa0JBQWtCO0VBQ2xCLGlCQUFpQjtFQUNqQixlQUFlOztBQUVqQjs7O0FBRUE7O0VBRUUsb0JBQW9CO0VBQ3BCLGtCQUFrQjtFQUNsQixpQkFBaUI7RUFDakIsaUJBQWlCOzs7QUFHbkI7OztBQUVBO0VBQ0UsZUFBZTtFQUNmLG1CQUFtQjtFQUNuQix5QkFBeUI7RUFDekIsWUFBWTtFQUNaLGtCQUFrQjtFQUNsQixZQUFZO0VBQ1osWUFBWTtFQUNaLFlBQVk7QUFDZDs7O0FBRUE7RUFDRSxnQkFBZ0I7RUFDaEIsbUJBQW1CO0VBQ25CLGtCQUFrQjtFQUNsQixrQkFBa0I7QUFDcEI7OztBQUVBO0VBQ0UsaUJBQWlCO0VBQ2pCLGtCQUFrQjtBQUNwQjs7O0FBRUE7RUFDRSxnQkFBZ0I7RUFDaEIsa0JBQWtCO0FBQ3BCOzs7QUFFQTs7RUFFRSxZQUFZO0VBQ1osbUJBQW1CO0FBQ3JCOzs7QUFFQTtFQUNFLHNCQUFzQjtFQUN0QixnQkFBZ0I7RUFDaEIsaUJBQWlCO0VBQ2pCLGVBQWU7RUFDZixZQUFZOztBQUVkOzs7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQixPQUFPO0VBQ1AsT0FBTztFQUNQLFdBQVc7RUFDWCxhQUFhO0VBQ2Isa0JBQWtCO0VBQ2xCLG1CQUFtQjtFQUNuQixnQkFBZ0I7RUFDaEIsa0JBQWtCO0VBQ2xCLFlBQVk7RUFDWixlQUFlO0VBQ2YsdUJBQXVCO0VBQ3ZCLGdCQUFnQjtBQUNsQjs7O0FBRUE7RUFDRSxhQUFhO0FBQ2Y7OztBQUVBO0VBQ0UsYUFBYTtBQUNmOzs7QUFFQTtFQUNFLGNBQWM7RUFDZCxjQUFjO0VBQ2Qsa0JBQWtCO0VBQ2xCLGVBQWU7QUFDakI7OztBQUVBO0VBQ0UsWUFBWTtFQUNaLGdCQUFnQjtFQUNoQixlQUFlO0FBQ2pCOzs7QUFFQTtFQUNFLFdBQVc7QUFDYjs7O0FBRUE7RUFDRSxvQ0FBb0M7RUFDcEMsb0NBQW9DO0VBQ3BDLHVCQUF1QjtBQUN6QiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudC9hZGQtZGF0YS9hZGQtZGF0YS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmNhcmQge1xuICBiYWNrZ3JvdW5kOiB3aGl0ZTtcbiAgbWFyZ2luOiAxNXB4O1xuICBoZWlnaHQ6IDc1JTtcbiAgd2lkdGg6IDUwJTtcbiAgYm94LXNoYWRvdzogMXB4IDFweCAycHggMnB4ICM4ODg4ODg7XG4gIHBhZGRpbmctYm90dG9tOiAyNHB4O1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHRyYW5zZm9ybTogdHJhbnNsYXRlKDUwJSwgNTAlKTtcbiAgYm90dG9tOiA0MCU7XG4gIHJpZ2h0OiA1MCU7XG4gIG92ZXJmbG93OiBhdXRvO1xufVxuXG5cbiN0aXRsZSB7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgZm9udC13ZWlnaHQ6IG5vcm1hbDtcbiAgbWFyZ2luOiAyNHB4O1xuICBwYWRkaW5nOiAyNHB4O1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjM0Y1MUI1O1xuICBjb2xvcjogd2hpdGU7XG59XG5cbiNkcm9wZG93biB7XG4gIG1hcmdpbjogMTZweDtcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gIGZvbnQtc2l6ZTogMTZweDtcbn1cblxuXG4jZHJvcGRvd24+bWF0LXNlbGVjdCB7XG4gIGhlaWdodDogMjBweDtcbiAgd2lkdGg6IDMwMHB4O1xuICBwYWRkaW5nLWxlZnQ6IDI1cHg7XG4gIGZvbnQtc2l6ZTogMTZweDtcbiAgZm9udC13ZWlnaHQ6IG5vcm1hbDtcbiAgbWFyZ2luLWxlZnQ6IDM0cHg7XG4gIGJvcmRlcjogbm9uZTtcbiAgYm9yZGVyLXJhZGl1czogNHB4O1xuICBjb2xvcjogd2hpdGU7XG5cbn1cblxuI2Ryb3Bkb3duPmxhYmVsIHtcbiAgcGFkZGluZy1yaWdodDogNDBweDtcbiAgcGFkZGluZy1sZWZ0OiA0MHB4O1xufVxuXG5vcHRpb24ge1xuICBjb2xvcjogd2hpdGU7XG4gIGJvcmRlcjogbm9uZTtcbn1cblxuI2FjdGl2aXRpZXMge1xuICBtYXJnaW46IDE2cHg7XG4gIHBhZGRpbmctbGVmdDogMTJweDtcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gIGZvbnQtc2l6ZTogMTZweDtcbn1cblxuI2FjdGl2aXRpZXM+bWF0LXNlbGVjdCB7XG4gIGhlaWdodDogMjBweDtcbiAgd2lkdGg6IDMwMHB4O1xuICBwYWRkaW5nLWxlZnQ6IDI1cHg7XG4gIGZvbnQtc2l6ZTogMTZweDtcbiAgZm9udC13ZWlnaHQ6IG5vcm1hbDtcbiAgbWFyZ2luLWxlZnQ6IDMycHg7XG5cbiAgYm9yZGVyOiBub25lO1xuICBib3JkZXItcmFkaXVzOiA0cHg7XG4gIGNvbG9yOiB3aGl0ZTtcblxufVxuXG4jYWN0aXZpdGllcz5sYWJlbCB7XG4gIHBhZGRpbmctcmlnaHQ6IDI0cHg7XG4gIHBhZGRpbmctbGVmdDogMjRweDtcblxufVxuXG4jaW5kaWNhdG9ycyB7XG4gIG1hcmdpbi10b3A6IDE2cHg7XG4gIHBhZGRpbmctbGVmdDogMzBweDtcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gIGZvbnQtc2l6ZTogMTZweDtcblxufVxuXG4jaW5kaWNhdG9ycz5sYWJlbCB7XG5cbiAgcGFkZGluZy1yaWdodDogODRweDtcbiAgcGFkZGluZy1sZWZ0OiAyNHB4O1xuXG59XG5cbiNpbmRpY2F0b3JzPmlucHV0IHtcbiAgZm9udC1zaXplOiAxNnB4O1xuICBmb250LXdlaWdodDogbm9ybWFsO1xuXG4gIG1hcmdpbi1sZWZ0OiAzMnB4O1xuICB3aWR0aDogNTAwcHg7XG4gIGhlaWdodDogMzBweDtcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gIGZvbnQtc2l6ZTogMTZweDtcblxufVxuXG4jbWV0cmljcyB7XG4gIG1hcmdpbi10b3A6IDE2cHg7XG4gIHBhZGRpbmctbGVmdDogMzBweDtcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gIGZvbnQtc2l6ZTogMTZweDtcblxufVxuXG4ubWV0cmljcyB7XG5cbiAgcGFkZGluZy1yaWdodDogMTQwcHg7XG4gIHBhZGRpbmctbGVmdDogMjRweDtcbiAgZm9udC1zaXplOiBtZWRpdW07XG4gIG1hcmdpbi1sZWZ0OiAyNHB4O1xuXG5cbn1cblxuI21ldHJpY3M+aW5wdXQge1xuICBmb250LXNpemU6IDE2cHg7XG4gIGZvbnQtd2VpZ2h0OiBub3JtYWw7XG4gIGJhY2tncm91bmQtY29sb3I6ICMzRjUxQjU7XG4gIGJvcmRlcjogbm9uZTtcbiAgYm9yZGVyLXJhZGl1czogNHB4O1xuICB3aWR0aDogNDAwcHg7XG4gIGhlaWdodDogMzBweDtcbiAgY29sb3I6IHdoaXRlO1xufVxuXG4uYnRuIHtcbiAgbWFyZ2luLXRvcDogMjRweDtcbiAgcGFkZGluZy1yaWdodDogOTJweDtcbiAgcGFkZGluZy1sZWZ0OiAyNHB4O1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG5cbiNidG4xIHtcbiAgbWFyZ2luLWxlZnQ6IDEycHg7XG4gIG1hcmdpbi1yaWdodDogMjRweDtcbn1cblxuI2J0bjIge1xuICBtYXJnaW4tdG9wOiAxMnB4O1xuICBtYXJnaW4tcmlnaHQ6IDI0cHg7XG59XG5cbiNzYXZlYnRuIHtcblxuICBtYXJnaW46IDQwcHg7XG4gIHBhZGRpbmctbGVmdDogMjAwcHg7XG59XG5cbi5mb3JtZmllbGQgKiB7XG4gIHZlcnRpY2FsLWFsaWduOiBtaWRkbGU7XG4gIG1hcmdpbi10b3A6IDE2cHg7XG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xuICBmb250LXNpemU6IDE2cHg7XG4gIHdpZHRoOiA1MDBweDtcblxufVxuXG4uYWxlcnQge1xuICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gIHRvcDogMTA7XG4gIGxlZnQ6IDA7XG4gIHdpZHRoOiBhdXRvO1xuICBwYWRkaW5nOiAxMHB4O1xuICBtYXJnaW4tbGVmdDogNjAwcHg7XG4gIG1hcmdpbi1yaWdodDogNjAwcHg7XG4gIGxpbmUtaGVpZ2h0OiAxLjg7XG4gIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgY3Vyc29yOiBoYW5kO1xuICBjdXJzb3I6IHBvaW50ZXI7XG4gIGZvbnQtZmFtaWx5OiBzYW5zLXNlcmlmO1xuICBmb250LXdlaWdodDogNDAwO1xufVxuXG4uYWxlcnRDaGVja2JveCB7XG4gIGRpc3BsYXk6IG5vbmU7XG59XG5cbjpjaGVja2VkICsgLmFsZXJ0IHtcbiAgZGlzcGxheTogbm9uZTtcbn1cblxuLmFsZXJ0VGV4dCB7XG4gIGRpc3BsYXk6IHRhYmxlO1xuICBtYXJnaW46IDAgYXV0bztcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICBmb250LXNpemU6IDE2cHg7XG59XG5cbi5hbGVydENsb3NlIHtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nLXRvcDogNXB4O1xuICBmb250LXNpemU6IDEwcHg7XG59XG5cbi5jbGVhciB7XG4gIGNsZWFyOiBib3RoO1xufVxuXG4uc3VjY2VzcyB7XG4gIGJvcmRlcjogMXB4IHNvbGlkIHJnYigyMTQsIDIzMywgMTk4KTtcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDIyMywgMjQwLCAyMTYpO1xuICBjb2xvcjogcmdiKDcwLCAxMzYsIDcxKTtcbn0iXX0= */");
 
 /***/ }),
 
@@ -7301,384 +7218,143 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _data_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../data.service */ "./src/app/data.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
-/* harmony import */ var _header_header_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../header/header.service */ "./src/app/component/header/header.service.ts");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
-/* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/esm2015/dialog.js");
-
-
-
 
 
 
 
 
 let AddDataComponent = class AddDataComponent {
-    /*
-    * initializes the add-data page depending on if it is a completely new object,
-    * an indicator is being edited, or a reference is being edited.
-    * */
-    constructor(dataService, router, route, fb, headerService, dialog) {
+    constructor(dataService, router, fb) {
         this.dataService = dataService;
         this.router = router;
-        this.route = route;
         this.fb = fb;
-        this.dialog = dialog;
-        //NEW Stuff
-        this.showActivityMessages = false;
-        this.activityMessages = [];
-        this.affectedEvents = new Set();
-        this.useExistingReference = false;
-        this.verifiedOptions = ['verified', 'not verified', 'not mentioned'];
-        this.developmentOptions = ['developed', 'proposed', 'not mentioned'];
-        this.referenceZero = false;
-        this.dropdownSettings = {
-            singleSelection: false,
-            idField: "_id",
-            textField: "name",
-            selectAllText: "Select All",
-            unSelectAllText: "Deselect All",
-            itemsShowLimit: 3,
-            allowSearchFilter: true,
-        };
-        this.selectedLearningActivities = [];
-        headerService.setHeader('add-indicator');
+        this.options = [];
+        this.selected = [];
+        this.dropdownList = [];
+        this.selectedItems = [];
+        this.fileToUpload = null;
         if (localStorage.getItem('currentUser')) {
             this.CUserName = JSON.parse(localStorage.getItem('currentUser')).username;
-            this.superAdmin = JSON.parse(localStorage.getItem('currentUser')).superAdmin;
         }
-        //target determines which mode we're currently in(new indicator/edit indicator/edit reference)
-        this.target = this.route.snapshot.data.target;
-        this.data = this.route.snapshot.data.data;
-        if (this.data.reference) {
-            this.existingReferenceNumber = this.data.reference.referenceNumber;
-        }
-        if (this.data.indicator) {
-            this.indicatorId = this.data.indicator._id;
-            this.existingReferenceNumber = this.data.indicator.referenceNumber;
-        }
-        //boolean set to true if resource on indicator has been deleted.
-        this.referenceZero = this.existingReferenceNumber === '[0]';
         //// form entries///////
-        this.indicatorForm = this.fb.group({
-            learningActivities: [{ value: [], disabled: this.target }, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required],
-            indicatorName: [{ value: null, disabled: this.readonly('reference') }, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required],
-            metrics: [{ value: null, disabled: this.readonly('reference') }, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required],
-            referenceNumber: [{ value: null, disabled: true }, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required],
-            summary: [{ value: null, disabled: this.readonly('reference') }],
-            verified: [{ value: this.superAdmin, disabled: this.readonly('reference') }]
+        this.dataEntryForm = this.fb.group({
+            learningEvents: ["", _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required],
+            learningActivities: ["", _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required],
+            indicator: this.fb.array([this.createIndicator()])
         });
-        this.referenceForm = this.fb.group({
-            referenceText: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required],
-            referenceLink: [null, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required],
-            referenceNumber: [{ value: null, disabled: true }, _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required],
-            verified: [null],
-            development: [null],
-            checkbox: [{ value: false, disabled: this.readonly('reference') }],
-        });
-        //subscription to update the referenceNumber in the indicator-form if changed in the reference-form
-        this.referenceForm.controls['referenceNumber'].valueChanges.subscribe(value => this.indicatorForm.controls['referenceNumber'].setValue(value));
-        //gathering all activities of indicator, in case of indicator edit mode
-        if (this.target === 'indicator') {
-            this.dataService.getActivitiesByIndicatorId(this.indicatorId).subscribe(learningActivities => {
-                this.originallySelectedLearningActivities = learningActivities;
-                this.selectedLearningActivities = learningActivities;
-                this.learningActivityiesSelected();
-            });
-        }
     }
-    // on initialisation the data from the Database is fetched and after a timeout used.
     ngOnInit() {
-        this.fetchData();
-        setTimeout(() => {
-            this.initializeData();
-        }, 200);
+        this.fetchdata();
     }
-    // fetches Activities, Indicators and References from Database
-    fetchData() {
-        this.dataService.getActivities().subscribe(activities => {
-            this.learningActivitiesOptions = activities;
-        });
-        this.indicatorOptions$ = this.dataService.getIndicators().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["shareReplay"])());
-        this.dataService.getReferences().subscribe(references => {
-            this.referenceOptions = references;
-            const referenceIds = references.map(reference => reference.referenceNumber);
-            for (let i = 1; i <= referenceIds.length + 1; i++) {
-                if (!referenceIds.includes(`[${i}]`)) {
-                    this.newReferenceNumber = `[${i}]`;
-                    if (!this.existingReferenceNumber) {
-                        this.referenceForm.patchValue({ 'referenceNumber': this.newReferenceNumber });
-                    }
-                    break;
-                }
-            }
+    get indicatorControls() {
+        return this.dataEntryForm.get('indicator')['controls'];
+    }
+    /// adding new indicator and meterics entry/////////// 
+    createIndicator() {
+        return this.fb.group({
+            indicatorName: ["", _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required],
+            metrics: ["", _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required],
         });
     }
-    // initializes Form values in case either an indicator or a reference is edited.
-    // If no corresponding data is found, the form is initialized accordingly
-    initializeData() {
-        if (this.target) {
-            if (this.data.indicator) {
-                this.indicatorForm.patchValue({
-                    indicatorName: this.data.indicator.Title,
-                    metrics: this.data.indicator.metrics,
-                    summary: this.data.indicator.summary,
-                    verified: this.data.indicator.verified
-                });
-                this.referenceForm.patchValue({
-                    referenceNumber: this.data.indicator.referenceNumber,
-                });
-            }
-            else {
-                this.indicatorForm.patchValue({
-                    indicatorName: 'No indicator found',
-                    metrics: 'No indicator found',
-                    summary: 'No indicator found',
-                    verified: false
-                });
-            }
-            if (this.data.reference) {
-                this.referenceForm.patchValue({
-                    referenceText: this.data.reference.referenceText,
-                    referenceLink: this.data.reference.link,
-                    referenceNumber: this.data.reference.referenceNumber,
-                    verified: this.data.reference.status,
-                    development: this.data.reference.development
-                });
-            }
-            else {
-                this.referenceForm.patchValue({
-                    referenceText: 'Reference has been deleted',
-                    referenceLink: 'Reference has been deleted'
-                });
-            }
-        }
-    }
-    // method called on save button clicked.
-    // depending on which Mode(Create/Edit Indicator/Edit Reference) is currently active, the matching Model is built
-    // and matching Service call is executed
+    /// code for add button//////////
+    // addIndicator(): void {
+    //   this.indicator = this.dataEntryForm.get('indicator') as FormArray;
+    //   this.indicator.push(this.createIndicator());
+    // }
+    // removeIndicator(i: number) {
+    //   this.indicator.removeAt(i);
+    // }
     addData() {
-        const indicatorFormValue = this.indicatorForm.getRawValue();
-        const referenceFormValue = this.referenceForm.getRawValue();
-        const indicator = {
-            referenceNumber: indicatorFormValue.referenceNumber,
-            Title: indicatorFormValue.indicatorName,
-            metrics: indicatorFormValue.metrics,
-            summary: indicatorFormValue.summary,
-            verified: indicatorFormValue.verified
-        };
-        let referenceLink = referenceFormValue.referenceLink;
-        if (referenceLink === '') {
-            referenceLink = null;
-        }
-        const reference = {
-            referenceNumber: referenceFormValue.referenceNumber,
-            referenceText: referenceFormValue.referenceText,
-            link: referenceLink,
-            status: referenceFormValue.verified,
-            development: referenceFormValue.development
-        };
-        this.indicatorForm.markAllAsTouched();
-        this.referenceForm.markAllAsTouched();
-        switch (this.target) {
-            case 'indicator':
-                if (!this.indicatorForm.valid || !this.referenceForm.valid) {
-                    return;
-                }
-                const removedActivities = this.originallySelectedLearningActivities
-                    .map(item => item._id)
-                    .filter(id => this.selectedLearningActivities
-                    .map(item => item._id).indexOf(id) < 0);
-                const addedActivities = this.selectedLearningActivities
-                    .map(item => item._id)
-                    .filter(id => this.originallySelectedLearningActivities
-                    .map(item => item._id).indexOf(id) < 0);
-                const editObject = {
-                    activitiesDeleted: removedActivities,
-                    activitiesAdded: addedActivities,
-                    indicator
-                };
-                this.dataService.editIndicator(this.indicatorId, editObject).subscribe(() => {
-                    if (!this.useExistingReference) {
-                        this.dataService.updateReference(this.data.reference._id, reference).subscribe(() => {
-                            this.router.navigate(['/']);
-                        });
-                    }
-                    else {
-                        this.router.navigate(['/']);
-                    }
-                });
-                break;
-            case 'reference':
-                if (!this.referenceForm.valid) {
-                    return;
-                }
-                this.dataService.updateReference(this.data.reference._id, reference).subscribe(() => {
-                    this.router.navigate(['/reference']);
-                });
-                break;
-            default:
-                if (!this.referenceForm.valid || !this.indicatorForm.valid) {
-                    return;
-                }
-                const dataObject = {
-                    activities: this.selectedLearningActivities,
-                    indicator,
-                    reference: this.useExistingReference ? null : reference,
-                    superAdmin: this.superAdmin
-                };
-                this.dataService.addIndicatorAndReference(dataObject).subscribe(() => {
-                    if (this.superAdmin) {
-                        window.alert(`Indicator ${indicator.Title} has been saved`);
-                        this.restForms();
-                    }
-                    else {
-                        this.dialog.open(this.normalUserSaveDialog);
-                    }
-                });
+        let indicators = this.dataEntryForm.value.indicator;
+        const indicator = [];
+        const metrics = [];
+        indicators.forEach(element => {
+            const ind = [element.indicatorName];
+            indicator.push(ind);
+        });
+        indicators.forEach(element => {
+            const met = [element.metrics];
+            metrics.push(met);
+        });
+        this.dataService.addData(this.dataEntryForm.value.learningEvents, this.dataEntryForm.value.learningActivities, this.dataEntryForm.value.indicator).subscribe(() => {
+            this.router.navigate(['/data']);
+        });
+        this.dataEntryForm.reset(); // clear from entry
+        this.similarActivityMessage = false;
+        // location.reload(); // reload web page
+        this.successfulMessage = "<b>Indicator and their Metrics added successfully!</b>";
+        //window.alert("");
+    }
+    fetchdata() {
+        this.dataService.getdata().subscribe((data) => {
+            this.data = data;
+            for (var val of this.data) {
+                this.options.push(val["LearningEvents"]);
+            }
+            this.selected.push(this.options);
+        });
+    }
+    learningValueChange(x) {
+        this.successfulMessage = false; //to hide the success message
+        this.selectedevent = x;
+        //console.log("Event: ", x);
+        this.dataService.getdata().subscribe((data) => {
+            this.data = data;
+            let event = this.data.filter(function (obj) {
+                return x.includes(obj.LearningEvents);
+            });
+            this.setLearningActivities(event);
+            if (x != "") {
+                this.data = event;
+            }
+        });
+    }
+    setLearningActivities(event) {
+        this.dropdownList = [];
+        for (let learningEvents of event) {
+            for (let entry of learningEvents.LearningActivities) {
+                this.dropdownList.push(entry.Name);
+            }
         }
     }
-    restForms() {
-        this.indicatorForm.reset();
-        this.selectedLearningActivities = [];
-        this.setActivityMessages(this.selectedLearningActivities);
-        this.referenceForm.reset();
-        this.useExistingReference = false;
-    }
-    navigateToMainPage() {
-        this.router.navigate(['/']);
-    }
-    learningActivityiesSelected() {
-        setTimeout(() => {
-            this.indicatorForm.patchValue({ learningActivities: this.selectedLearningActivities });
-            this.setActivityMessages(this.selectedLearningActivities);
-        }, 10);
-    }
-    // method to compute the strings which are needed to show the corresponding Events depending on the chosen Activities
-    setActivityMessages(activities) {
-        this.affectedEvents.clear();
-        if (activities.length === 0) {
-            this.showActivityMessages = false;
+    onActivityValueChange(activityValue) {
+        let value = activityValue;
+        console.log("ActValue: ", activityValue);
+        if (activityValue == "Group Work") {
+            this.similarActivityMessage = "The selected learning activity <em>\"Group Work\"</em> lies under the learning events <em>\"Create, Practice and Debate\"</em>.<br>Therefore, the Indicator and Metrics you want to add will also be added automatically under the <em>\"Group Work\"</em> activity in the mentioned learning events.";
+        }
+        else if (activityValue == "Review/Study") {
+            this.similarActivityMessage = "The selected learning activity <em>\"Review/Study\"</em> lies under the learning events <em>\"Receive, Meta-learn or Self-reflect and Debate\"</em>.<br>Therefore, the Indicator and Metrics you want to add will also be added automatically under the <em>\"Review/Study\"</em> activity in the mentioned learning events.";
+        }
+        else if (activityValue == "Presentation") {
+            this.similarActivityMessage = "The selected learning activity <em>\"Presentation\"</em> lies under the learning events <em>\"Receive, Imitate and Debate\"</em>.<br>Therefore, the Indicator and Metrics you want to add will also be added automatically under the <em>\"Presentation\"</em> activity in the mentioned learning events.";
+        }
+        else if (activityValue == "Exercise (Training)") {
+            this.similarActivityMessage = "The selected learning activity <em>\"Exercise (Training)\"</em> lies under the learning events <em>\"Imitate, Experiment and Practice\"</em>.<br>Therefore, the Indicator and Metrics you want to add will also be added automatically under the <em>\"Exercise (Training)\"</em> activity in the mentioned learning events.";
+        }
+        else if (activityValue == "Question (Query/Inquiry)") {
+            this.similarActivityMessage = "The selected learning activity <em>\"Question (Query/Inquiry)\"</em> lies under the learning events <em>\"Practice and Debate\"</em>.<br>Therefore, the Indicator and Metrics you want to add will also be added automatically under the <em>\"Question (Query/Inquiry)\"</em> activity in the mentioned learning events.";
+        }
+        else if (activityValue == "Survey (Questionnaire)") {
+            this.similarActivityMessage = "The selected learning activity <em>\"Survey (Questionnaire)\"</em> lies under the learning events <em>\"Explore, Practice and Debate\"</em>.<br>Therefore, the Indicator and Metrics you want to add will also be added automatically under the <em>\"Survey (Questionnaire)\"</em> activity in the mentioned learning events.";
+        }
+        else if (activityValue == "Peer review/Assessment") {
+            this.similarActivityMessage = "The selected learning activity <em>\"Peer review/Assessment\"</em> lies under the learning events <em>\"Practice and Meta-learn or Self-reflect\"</em>.<br>Therefore, the Indicator and Metrics you want to add will also be added automatically under the <em>\"Peer review/Assessment\"</em> activity in the mentioned learning events.";
         }
         else {
-            const messages = [];
-            activities.forEach(activity => {
-                this.dataService.getEventsByActivityId(activity._id).subscribe(events => {
-                    const eventNames = events.map(event => event.name);
-                    eventNames.forEach(name => this.affectedEvents.add(name));
-                    let message;
-                    if (eventNames.length === 1) {
-                        message = `The selected learning activity "${activity.name}"
-                    lies under the learning event "${eventNames[0]}".`;
-                    }
-                    if (eventNames.length > 1) {
-                        const namesWithComma = eventNames.join(', ');
-                        message = `The selected learning activity "${activity.name}" lies under
-                     the learning events "${namesWithComma}".`;
-                    }
-                    messages.push(message);
-                });
-            });
-            setTimeout(() => {
-                this.activityMessages = messages;
-                this.showActivityMessages = true;
-            }, 100);
+            this.similarActivityMessage = false;
         }
     }
-    showEvents() {
-        return [...this.affectedEvents.values()].join(", ");
-    }
-    // logs out user => clear currentUser data from LocalStorage
     logout() {
         localStorage.removeItem('currentUser');
         this.router.navigate(['/']);
-    }
-    // method to switch between using an existing Reference and creating a new one on save.
-    // useExitsingReference switches the Reference Input to a Dropdown and disables the other Reference Form fields.
-    // Previously entered values are saved to reset them in case the checkbox is clicked again.
-    checkboxReferenceClicked() {
-        this.useExistingReference = !this.useExistingReference;
-        if (!this.useExistingReference) {
-            this.referenceForm.get('referenceLink').enable();
-            this.referenceForm.get('verified').enable();
-            this.referenceForm.get('development').enable();
-            this.referenceForm.patchValue({
-                referenceText: this.previousReferenceName,
-                referenceLink: this.previousReferenceLink,
-                referenceNumber: this.existingReferenceNumber ? this.existingReferenceNumber : this.newReferenceNumber,
-                verified: this.previousReferenceVerified,
-                development: this.previousReferenceDevelopment
-            });
-        }
-        else {
-            this.setPreviousValues();
-            this.referenceForm.get('referenceLink').disable();
-            this.referenceForm.get('verified').disable();
-            this.referenceForm.get('development').disable();
-            this.referenceForm.patchValue({
-                referenceText: null,
-                referenceLink: null,
-                referenceNumber: null,
-                verified: null,
-                development: null
-            });
-        }
-    }
-    // method used to compare and differentiate Items in the Activity Dropdown
-    compareMethod(item, selected) {
-        return item._id === selected._id;
-    }
-    // method for filling the referenceForm model when choosing an existing Reference from the Dropdown.
-    onReferenceChange(reference) {
-        if (reference) {
-            this.referenceForm.patchValue({
-                referenceText: reference.referenceText,
-                referenceLink: reference.link,
-                referenceNumber: reference.referenceNumber,
-                verified: reference.status,
-                development: reference.development
-            });
-        }
-        else {
-            this.referenceForm.patchValue({
-                referenceText: null,
-                referenceLink: null,
-                referenceNumber: null,
-                verified: null,
-                development: null
-            });
-        }
-    }
-    // method to temporarily save previously entered reference values
-    setPreviousValues() {
-        this.previousReferenceName = this.referenceForm.value['referenceText'];
-        this.previousReferenceLink = this.referenceForm.value['referenceLink'];
-        this.previousReferenceVerified = this.referenceForm.value['verified'];
-        this.previousReferenceDevelopment = this.referenceForm.value['development'];
-    }
-    // returns true if the omitted target is equal to the target of the current Mode.
-    readonly(target) {
-        if (!target)
-            return false;
-        return this.target === target;
-    }
-    showActivityDialoge() {
-        this.dialog.open(this.activityDialog);
     }
 };
 AddDataComponent.ctorParameters = () => [
     { type: _data_service__WEBPACK_IMPORTED_MODULE_2__["DataService"] },
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"] },
-    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"] },
-    { type: _header_header_service__WEBPACK_IMPORTED_MODULE_5__["HeaderService"] },
-    { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_7__["MatDialog"] }
+    { type: _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormBuilder"] }
 ];
-tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])("activityDialog", { static: true })
-], AddDataComponent.prototype, "activityDialog", void 0);
-tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])("normalUserSaveDialog", { static: true })
-], AddDataComponent.prototype, "normalUserSaveDialog", void 0);
 AddDataComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-add-data',
@@ -7686,53 +7362,6 @@ AddDataComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./add-data.component.css */ "./src/app/component/add-data/add-data.component.css")).default]
     })
 ], AddDataComponent);
-
-
-
-/***/ }),
-
-/***/ "./src/app/component/add-data/data.resolver.ts":
-/*!*****************************************************!*\
-  !*** ./src/app/component/add-data/data.resolver.ts ***!
-  \*****************************************************/
-/*! exports provided: DataResolver */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DataResolver", function() { return DataResolver; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _data_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../data.service */ "./src/app/data.service.ts");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
-
-
-
-
-let DataResolver = class DataResolver {
-    constructor(service) {
-        this.service = service;
-    }
-    resolve(route, state) {
-        const target = route.data.target;
-        if (!target) {
-            return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["of"])({ activity: null, indicator: null, reference: null });
-        }
-        const id = route.params.id;
-        if (target === 'indicator') {
-            return this.service.getPathByIndicatorId(id);
-        }
-        if (target === 'reference') {
-            return this.service.getPathByReferenceId(id);
-        }
-    }
-};
-DataResolver.ctorParameters = () => [
-    { type: _data_service__WEBPACK_IMPORTED_MODULE_2__["DataService"] }
-];
-DataResolver = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({ providedIn: 'root' })
-], DataResolver);
 
 
 
@@ -7747,7 +7376,7 @@ DataResolver = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".container {\r\n\r\n    background: white;\r\n\r\n    height: auto;\r\n    width: auto;\r\n\r\n    box-shadow: 1px 1px 2px 2px #888888;\r\n    padding-bottom: 24px;\r\n    position: absolute;\r\n    transform: translate(50%, 50%);\r\n    bottom: 50%;\r\n    right: 50%;\r\n\r\n\r\n}\r\n\r\n#title {\r\n    text-align: center;\r\n    font-weight: normal;\r\n    padding: 24px;\r\n    background-color: #3F51B5;\r\n    color: white;\r\n}\r\n\r\n#username {\r\n    display: flex;\r\n    justify-content: space-between;\r\n    align-items: baseline;\r\n    margin: 25px 45px 0;\r\n    padding-left: 10px;\r\n    font-size: 16px;\r\n}\r\n\r\n#password {\r\n    display: flex;\r\n    justify-content: space-between;\r\n    align-items: baseline;\r\n    margin: 25px 45px 0;\r\n    padding-left: 10px;\r\n    font-size: 16px;\r\n}\r\n\r\nlabel {\r\n    padding-right: 20px;\r\n    padding-left: 16px;\r\n    font-weight: bold;\r\n}\r\n\r\ninput {\r\n    font-size: 16px;\r\n    font-weight: normal;\r\n    background-color: #3F51B5;\r\n    border: none;\r\n    border-radius: 4px;\r\n    width: 180px;\r\n    height: 28px;\r\n    color: white;\r\n\r\n}\r\n\r\n#submit {\r\n    text-align: center;\r\n    margin: 20px;\r\n\r\n}\r\n\r\n#register, #login {\r\n    text-align: center;\r\n}\r\n\r\na {\r\n    cursor: pointer;\r\n    font-weight: bold;\r\n}\r\n\r\n#submit > button {\r\n    background-color: #3F51B5;\r\n    color: white;\r\n}\r\n\r\n.alert {\r\n    color: red;\r\n    font-size: small;\r\n    margin: 0;\r\n}\r\n\r\n.submitbtn:disabled {\r\n    cursor: not-allowed;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50L2FkbWluL2FkbWluLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O0lBRUksaUJBQWlCOztJQUVqQixZQUFZO0lBQ1osV0FBVzs7SUFFWCxtQ0FBbUM7SUFDbkMsb0JBQW9CO0lBQ3BCLGtCQUFrQjtJQUNsQiw4QkFBOEI7SUFDOUIsV0FBVztJQUNYLFVBQVU7OztBQUdkOztBQUVBO0lBQ0ksa0JBQWtCO0lBQ2xCLG1CQUFtQjtJQUNuQixhQUFhO0lBQ2IseUJBQXlCO0lBQ3pCLFlBQVk7QUFDaEI7O0FBRUE7SUFDSSxhQUFhO0lBQ2IsOEJBQThCO0lBQzlCLHFCQUFxQjtJQUNyQixtQkFBbUI7SUFDbkIsa0JBQWtCO0lBQ2xCLGVBQWU7QUFDbkI7O0FBRUE7SUFDSSxhQUFhO0lBQ2IsOEJBQThCO0lBQzlCLHFCQUFxQjtJQUNyQixtQkFBbUI7SUFDbkIsa0JBQWtCO0lBQ2xCLGVBQWU7QUFDbkI7O0FBRUE7SUFDSSxtQkFBbUI7SUFDbkIsa0JBQWtCO0lBQ2xCLGlCQUFpQjtBQUNyQjs7QUFFQTtJQUNJLGVBQWU7SUFDZixtQkFBbUI7SUFDbkIseUJBQXlCO0lBQ3pCLFlBQVk7SUFDWixrQkFBa0I7SUFDbEIsWUFBWTtJQUNaLFlBQVk7SUFDWixZQUFZOztBQUVoQjs7QUFFQTtJQUNJLGtCQUFrQjtJQUNsQixZQUFZOztBQUVoQjs7QUFFQTtJQUNJLGtCQUFrQjtBQUN0Qjs7QUFFQTtJQUNJLGVBQWU7SUFDZixpQkFBaUI7QUFDckI7O0FBRUE7SUFDSSx5QkFBeUI7SUFDekIsWUFBWTtBQUNoQjs7QUFFQTtJQUNJLFVBQVU7SUFDVixnQkFBZ0I7SUFDaEIsU0FBUztBQUNiOztBQUVBO0lBQ0ksbUJBQW1CO0FBQ3ZCIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50L2FkbWluL2FkbWluLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY29udGFpbmVyIHtcclxuXHJcbiAgICBiYWNrZ3JvdW5kOiB3aGl0ZTtcclxuXHJcbiAgICBoZWlnaHQ6IGF1dG87XHJcbiAgICB3aWR0aDogYXV0bztcclxuXHJcbiAgICBib3gtc2hhZG93OiAxcHggMXB4IDJweCAycHggIzg4ODg4ODtcclxuICAgIHBhZGRpbmctYm90dG9tOiAyNHB4O1xyXG4gICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgdHJhbnNmb3JtOiB0cmFuc2xhdGUoNTAlLCA1MCUpO1xyXG4gICAgYm90dG9tOiA1MCU7XHJcbiAgICByaWdodDogNTAlO1xyXG5cclxuXHJcbn1cclxuXHJcbiN0aXRsZSB7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICBmb250LXdlaWdodDogbm9ybWFsO1xyXG4gICAgcGFkZGluZzogMjRweDtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICMzRjUxQjU7XHJcbiAgICBjb2xvcjogd2hpdGU7XHJcbn1cclxuXHJcbiN1c2VybmFtZSB7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xyXG4gICAgYWxpZ24taXRlbXM6IGJhc2VsaW5lO1xyXG4gICAgbWFyZ2luOiAyNXB4IDQ1cHggMDtcclxuICAgIHBhZGRpbmctbGVmdDogMTBweDtcclxuICAgIGZvbnQtc2l6ZTogMTZweDtcclxufVxyXG5cclxuI3Bhc3N3b3JkIHtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XHJcbiAgICBhbGlnbi1pdGVtczogYmFzZWxpbmU7XHJcbiAgICBtYXJnaW46IDI1cHggNDVweCAwO1xyXG4gICAgcGFkZGluZy1sZWZ0OiAxMHB4O1xyXG4gICAgZm9udC1zaXplOiAxNnB4O1xyXG59XHJcblxyXG5sYWJlbCB7XHJcbiAgICBwYWRkaW5nLXJpZ2h0OiAyMHB4O1xyXG4gICAgcGFkZGluZy1sZWZ0OiAxNnB4O1xyXG4gICAgZm9udC13ZWlnaHQ6IGJvbGQ7XHJcbn1cclxuXHJcbmlucHV0IHtcclxuICAgIGZvbnQtc2l6ZTogMTZweDtcclxuICAgIGZvbnQtd2VpZ2h0OiBub3JtYWw7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjM0Y1MUI1O1xyXG4gICAgYm9yZGVyOiBub25lO1xyXG4gICAgYm9yZGVyLXJhZGl1czogNHB4O1xyXG4gICAgd2lkdGg6IDE4MHB4O1xyXG4gICAgaGVpZ2h0OiAyOHB4O1xyXG4gICAgY29sb3I6IHdoaXRlO1xyXG5cclxufVxyXG5cclxuI3N1Ym1pdCB7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICBtYXJnaW46IDIwcHg7XHJcblxyXG59XHJcblxyXG4jcmVnaXN0ZXIsICNsb2dpbiB7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbn1cclxuXHJcbmEge1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gICAgZm9udC13ZWlnaHQ6IGJvbGQ7XHJcbn1cclxuXHJcbiNzdWJtaXQgPiBidXR0b24ge1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzNGNTFCNTtcclxuICAgIGNvbG9yOiB3aGl0ZTtcclxufVxyXG5cclxuLmFsZXJ0IHtcclxuICAgIGNvbG9yOiByZWQ7XHJcbiAgICBmb250LXNpemU6IHNtYWxsO1xyXG4gICAgbWFyZ2luOiAwO1xyXG59XHJcblxyXG4uc3VibWl0YnRuOmRpc2FibGVkIHtcclxuICAgIGN1cnNvcjogbm90LWFsbG93ZWQ7XHJcbn1cclxuIl19 */");
+/* harmony default export */ __webpack_exports__["default"] = (".container {\n\n  background: white;\n\n  height: auto;\n  width: auto;\n\n  box-shadow: 1px 1px 2px 2px #888888;\n  padding-bottom: 24px;\n  position: absolute;\n  transform: translate(50%, 50%);\n  bottom: 50%;\n  right: 50%;\n\n\n\n}\n\n#title {\n  text-align: center;\n  font-weight: normal;\n  padding: 24px;\n  background-color: #3F51B5;\n  color: white;\n}\n\n#username {\n  margin: 45px;\n  text-align: center;\n  margin-top: 25px;\n  padding-left: 10px;\n  font-weight: bold;\n  font-size: 16px;\n}\n\n#password {\n  margin: 45px;\n  text-align: center;\n  margin-top: 25px;\n  padding-left: 10px;\n  font-weight: bold;\n  font-size: 16px;\n}\n\nlabel {\n  padding-right: 20px;\n  padding-left: 16px;\n}\n\ninput {\n  font-size: 16px;\n  font-weight: normal;\n  background-color: #3F51B5;\n  border: none;\n  border-radius: 4px;\n  width: 180px;\n  height: 28px;\n  color: white;\n\n}\n\n#submit {\n  text-align: center;\n  margin: 40px;\n\n}\n\n#submit>button {\n  background-color: #3F51B5;\n  color: white;\n}\n\n.alert {\n  text-align: center;\n  color: red;\n  font-size: small;\n  margin: 0;\n}\n\n.submitbtn:disabled {\n  cursor: not-allowed;\n\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50L2FkbWluL2FkbWluLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O0VBRUUsaUJBQWlCOztFQUVqQixZQUFZO0VBQ1osV0FBVzs7RUFFWCxtQ0FBbUM7RUFDbkMsb0JBQW9CO0VBQ3BCLGtCQUFrQjtFQUNsQiw4QkFBOEI7RUFDOUIsV0FBVztFQUNYLFVBQVU7Ozs7QUFJWjs7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQixtQkFBbUI7RUFDbkIsYUFBYTtFQUNiLHlCQUF5QjtFQUN6QixZQUFZO0FBQ2Q7O0FBRUE7RUFDRSxZQUFZO0VBQ1osa0JBQWtCO0VBQ2xCLGdCQUFnQjtFQUNoQixrQkFBa0I7RUFDbEIsaUJBQWlCO0VBQ2pCLGVBQWU7QUFDakI7O0FBRUE7RUFDRSxZQUFZO0VBQ1osa0JBQWtCO0VBQ2xCLGdCQUFnQjtFQUNoQixrQkFBa0I7RUFDbEIsaUJBQWlCO0VBQ2pCLGVBQWU7QUFDakI7O0FBRUE7RUFDRSxtQkFBbUI7RUFDbkIsa0JBQWtCO0FBQ3BCOztBQUVBO0VBQ0UsZUFBZTtFQUNmLG1CQUFtQjtFQUNuQix5QkFBeUI7RUFDekIsWUFBWTtFQUNaLGtCQUFrQjtFQUNsQixZQUFZO0VBQ1osWUFBWTtFQUNaLFlBQVk7O0FBRWQ7O0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsWUFBWTs7QUFFZDs7QUFFQTtFQUNFLHlCQUF5QjtFQUN6QixZQUFZO0FBQ2Q7O0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsVUFBVTtFQUNWLGdCQUFnQjtFQUNoQixTQUFTO0FBQ1g7O0FBRUE7RUFDRSxtQkFBbUI7O0FBRXJCIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50L2FkbWluL2FkbWluLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuY29udGFpbmVyIHtcblxuICBiYWNrZ3JvdW5kOiB3aGl0ZTtcblxuICBoZWlnaHQ6IGF1dG87XG4gIHdpZHRoOiBhdXRvO1xuXG4gIGJveC1zaGFkb3c6IDFweCAxcHggMnB4IDJweCAjODg4ODg4O1xuICBwYWRkaW5nLWJvdHRvbTogMjRweDtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSg1MCUsIDUwJSk7XG4gIGJvdHRvbTogNTAlO1xuICByaWdodDogNTAlO1xuXG5cblxufVxuXG4jdGl0bGUge1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIGZvbnQtd2VpZ2h0OiBub3JtYWw7XG4gIHBhZGRpbmc6IDI0cHg7XG4gIGJhY2tncm91bmQtY29sb3I6ICMzRjUxQjU7XG4gIGNvbG9yOiB3aGl0ZTtcbn1cblxuI3VzZXJuYW1lIHtcbiAgbWFyZ2luOiA0NXB4O1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIG1hcmdpbi10b3A6IDI1cHg7XG4gIHBhZGRpbmctbGVmdDogMTBweDtcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gIGZvbnQtc2l6ZTogMTZweDtcbn1cblxuI3Bhc3N3b3JkIHtcbiAgbWFyZ2luOiA0NXB4O1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIG1hcmdpbi10b3A6IDI1cHg7XG4gIHBhZGRpbmctbGVmdDogMTBweDtcbiAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gIGZvbnQtc2l6ZTogMTZweDtcbn1cblxubGFiZWwge1xuICBwYWRkaW5nLXJpZ2h0OiAyMHB4O1xuICBwYWRkaW5nLWxlZnQ6IDE2cHg7XG59XG5cbmlucHV0IHtcbiAgZm9udC1zaXplOiAxNnB4O1xuICBmb250LXdlaWdodDogbm9ybWFsO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjM0Y1MUI1O1xuICBib3JkZXI6IG5vbmU7XG4gIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgd2lkdGg6IDE4MHB4O1xuICBoZWlnaHQ6IDI4cHg7XG4gIGNvbG9yOiB3aGl0ZTtcblxufVxuXG4jc3VibWl0IHtcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xuICBtYXJnaW46IDQwcHg7XG5cbn1cblxuI3N1Ym1pdD5idXR0b24ge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjM0Y1MUI1O1xuICBjb2xvcjogd2hpdGU7XG59XG5cbi5hbGVydCB7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgY29sb3I6IHJlZDtcbiAgZm9udC1zaXplOiBzbWFsbDtcbiAgbWFyZ2luOiAwO1xufVxuXG4uc3VibWl0YnRuOmRpc2FibGVkIHtcbiAgY3Vyc29yOiBub3QtYWxsb3dlZDtcblxufVxuIl19 */");
 
 /***/ }),
 
@@ -7776,53 +7405,20 @@ let AdminComponent = class AdminComponent {
         this.dataService = dataService;
         this.router = router;
         this.fb = fb;
-        this.currentUrl = 'add';
-        this.register = false;
         this.loginForm = this.fb.group({
             username: ["", _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required],
             password: ["", _angular_forms__WEBPACK_IMPORTED_MODULE_4__["Validators"].required],
         });
-        if (this.router.getCurrentNavigation().extras.state) {
-            this.currentUrl = this.router.getCurrentNavigation().extras.state.url;
-            this.additionalInfo = this.router.getCurrentNavigation().extras.state.additionalInfo;
-        }
     }
     ngOnInit() {
     }
-    // depending on submitting or signing in, calls the corresponding service method and logs-in/creates the user
     submit() {
-        if (!this.register) {
-            this.dataService.login(this.loginForm.value.username, window.btoa(this.loginForm.value.password))
-                .subscribe(res => {
-                this.loginForm.reset();
-                this.dataService.loggedIn = true;
-                this.router.navigate([this.currentUrl], { state: { additionalInfo: this.additionalInfo } });
-            }, err => alert('User NOT found!'));
-        }
-        else {
-            const userData = {
-                username: this.loginForm.value.username,
-                password: window.btoa(this.loginForm.value.password)
-            };
-            this.dataService.register(userData).subscribe(added => {
-                if (added) {
-                    window.alert('User has been registered. You will now be directed to the login page');
-                    this.register = false;
-                    this.loginForm.reset();
-                }
-                else {
-                    window.alert(`User could not be registered. Username already exists`);
-                }
-            });
-        }
-    }
-    // switches the local register variable
-    onRegister() {
-        this.register = !this.register;
-    }
-    // computes which Text to show in the Button
-    buttonText() {
-        return this.register ? 'Sign up' : 'Login';
+        this.dataService.login(this.loginForm.value.username, this.loginForm.value.password)
+            .subscribe(res => {
+            this.loginForm.reset();
+            this.dataService.loggedIn = true;
+            this.router.navigate(['add']);
+        }, err => alert('User NOT found!'));
     }
 };
 AdminComponent.ctorParameters = () => [
@@ -7851,7 +7447,7 @@ AdminComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".footer {\r\n  position: fixed;\r\n  left: 0;\r\n  bottom: 0;\r\n  width: 100%;\r\n  background-color: #f5f5f5;\r\n  color: #b9bdc0;\r\n  text-align: center;\r\n  display: none;\r\n}\r\n\r\n.buttonLaTool {\r\n  margin: 0;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50L2Rhc2hib2FyZC9kYXNoYm9hcmQuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGVBQWU7RUFDZixPQUFPO0VBQ1AsU0FBUztFQUNULFdBQVc7RUFDWCx5QkFBeUI7RUFDekIsY0FBYztFQUNkLGtCQUFrQjtFQUNsQixhQUFhO0FBQ2Y7O0FBRUE7RUFDRSxTQUFTO0FBQ1giLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnQvZGFzaGJvYXJkL2Rhc2hib2FyZC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmZvb3RlciB7XHJcbiAgcG9zaXRpb246IGZpeGVkO1xyXG4gIGxlZnQ6IDA7XHJcbiAgYm90dG9tOiAwO1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIGJhY2tncm91bmQtY29sb3I6ICNmNWY1ZjU7XHJcbiAgY29sb3I6ICNiOWJkYzA7XHJcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gIGRpc3BsYXk6IG5vbmU7XHJcbn1cclxuXHJcbi5idXR0b25MYVRvb2wge1xyXG4gIG1hcmdpbjogMDtcclxufVxyXG4iXX0= */");
+/* harmony default export */ __webpack_exports__["default"] = (".footer {\n  position: fixed;\n  left: 0;\n  bottom: 0;\n  width: 100%;\n  background-color: #f5f5f5;\n  color: #b9bdc0;\n  text-align: center;\n  display: none;\n}\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50L2Rhc2hib2FyZC9kYXNoYm9hcmQuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGVBQWU7RUFDZixPQUFPO0VBQ1AsU0FBUztFQUNULFdBQVc7RUFDWCx5QkFBeUI7RUFDekIsY0FBYztFQUNkLGtCQUFrQjtFQUNsQixhQUFhO0FBQ2YiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnQvZGFzaGJvYXJkL2Rhc2hib2FyZC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmZvb3RlciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgbGVmdDogMDtcbiAgYm90dG9tOiAwO1xuICB3aWR0aDogMTAwJTtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2Y1ZjVmNTtcbiAgY29sb3I6ICNiOWJkYzA7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgZGlzcGxheTogbm9uZTtcbn1cbiJdfQ== */");
 
 /***/ }),
 
@@ -7867,24 +7463,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DashboardComponent", function() { return DashboardComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _header_header_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../header/header.service */ "./src/app/component/header/header.service.ts");
-
 
 
 let DashboardComponent = class DashboardComponent {
-    constructor(headerService) {
+    constructor() {
         this.isSticky = false;
         this.element = document.getElementById("header");
-        headerService.setHeader('visualize');
     }
     ngOnInit() { }
     backToTop() {
         this.element.scrollIntoView({ behavior: "smooth" });
     }
 };
-DashboardComponent.ctorParameters = () => [
-    { type: _header_header_service__WEBPACK_IMPORTED_MODULE_2__["HeaderService"] }
-];
 DashboardComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: "app-dashboard",
@@ -7906,7 +7496,7 @@ DashboardComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("\r\n.mat-select {\r\n  /*display: inline-block;*/\r\n  border: 1px solid #adadad;\r\n  width: 100%;\r\n  padding: 6px 2px;\r\n  margin-bottom: 0;\r\n  font-size: 12px;\r\n  font-weight: 100;\r\n  line-height: 1.1;\r\n  text-align: left;\r\n  vertical-align: middle;\r\n  cursor: pointer;\r\n  background-image: none;\r\n  border-radius: 4px;\r\n\r\n\r\n}\r\n::ng-deep .mat-form-field-underline {\r\n  display: none;\r\n}\r\n.mat-form-field {\r\n  font-size: 14px;\r\n  padding: 6px 2px;\r\n  text-align: center;\r\n  line-height: 2;\r\n  font-family: Roboto, \"Helvetica Neue\", sans-serif;\r\n  color: grey;\r\n}\r\n.center {\r\n  margin-left: 10%;\r\n  margin-right: 10%;\r\n}\r\n.highlightText {\r\n  background: yellow;\r\n}\r\n/*************************************/\r\n.tool_Home {\r\n  display: flex;\r\n}\r\n.content-left {\r\n  width: calc(65% - 30px);\r\n  min-width: 980px;\r\n  padding: 20px 0 20px 20px;\r\n  display: flex;\r\n  flex-direction: column;\r\n}\r\n.content-right {\r\n  width: calc(35% - 30px);\r\n  min-width: 630px;\r\n  padding: 20px;\r\n  display: flex;\r\n  flex-direction: column;\r\n}\r\n.h-flex{\r\n  display: flex;\r\n  gap: 2em\r\n}\r\n.mat-input-element-fix {\r\n  margin-left: -18px;\r\n  margin-right: 18px;\r\n}\r\n.pt-1 {\r\n  margin-top: 23px;\r\n}\r\n.w-20 {\r\n  width: 20%;\r\n}\r\n.w-40 {\r\n  width: 40%;\r\n  max-width: 350px;\r\n}\r\n.stepReset, .stepVisualize, .stepDownload, .stepDownloadText {\r\n  height: 41px;\r\n}\r\n.buttonLaTool {\r\n  margin: 0;\r\n}\r\n.extendedMetrics {\r\n  max-height: 250px;\r\n  padding-bottom: 0;\r\n}\r\n.extendedMetricsTable {\r\n  width: calc(100% - 40px);\r\n  padding: 0 20px 20px 20px\r\n}\r\n.logout-button {\r\n  padding-left: 12px;\r\n  padding-right: 12px;\r\n  width: 74px\r\n}\r\n.login-button {\r\n  padding-left: 18px;\r\n  padding-right: 18px;\r\n  width: 74px\r\n}\r\n.selected-indicators-wrapper {\r\n  overflow: auto;\r\n}\r\n.selected-indicators-label {\r\n  margin-top: 20px;\r\n  color: rgb(128, 128, 128);\r\n  font-size: 15px;\r\n  font-weight: 500;\r\n}\r\nul {\r\n  display: block;\r\n  list-style-type: disc;\r\n  -webkit-margin-before: 0.5em;\r\n          margin-block-start: 0.5em;\r\n  -webkit-margin-after: 0.5em;\r\n          margin-block-end: 0.5em;\r\n  -webkit-margin-start: 0;\r\n          margin-inline-start: 0;\r\n  -webkit-margin-end: 0;\r\n          margin-inline-end: 0;\r\n  -webkit-padding-start: 20px;\r\n          padding-inline-start: 20px;\r\n}\r\n.verdictContent {\r\n    display: flex;\r\n    flex-direction: column;\r\n    padding-bottom: 1em;\r\n}\r\n.verdictRow {\r\n    display: flex;\r\n}\r\n.verdictLabel {\r\n    font-weight: bold;\r\n    padding-bottom: 0.5em;\r\n    width: 6.7em;\r\n}\r\n.generateButton {\r\n    width: 15em;\r\n    margin-top: 1em;\r\n}\r\n.indicator-summary {\r\n    color: green;\r\n    width: 500px;\r\n    padding-bottom: 1em;\r\n}\r\n.mat-dialog-content {\r\n    overflow-x: hidden;\r\n    padding-bottom: 1em;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50L2Rpc3BsYXkvZGlzcGxheS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFDQTtFQUNFLHlCQUF5QjtFQUN6Qix5QkFBeUI7RUFDekIsV0FBVztFQUNYLGdCQUFnQjtFQUNoQixnQkFBZ0I7RUFDaEIsZUFBZTtFQUNmLGdCQUFnQjtFQUNoQixnQkFBZ0I7RUFDaEIsZ0JBQWdCO0VBQ2hCLHNCQUFzQjtFQUN0QixlQUFlO0VBQ2Ysc0JBQXNCO0VBQ3RCLGtCQUFrQjs7O0FBR3BCO0FBQ0E7RUFDRSxhQUFhO0FBQ2Y7QUFDQTtFQUNFLGVBQWU7RUFDZixnQkFBZ0I7RUFDaEIsa0JBQWtCO0VBQ2xCLGNBQWM7RUFDZCxpREFBaUQ7RUFDakQsV0FBVztBQUNiO0FBQ0E7RUFDRSxnQkFBZ0I7RUFDaEIsaUJBQWlCO0FBQ25CO0FBRUE7RUFDRSxrQkFBa0I7QUFDcEI7QUFFQSxzQ0FBc0M7QUFFdEM7RUFDRSxhQUFhO0FBQ2Y7QUFFQTtFQUNFLHVCQUF1QjtFQUN2QixnQkFBZ0I7RUFDaEIseUJBQXlCO0VBQ3pCLGFBQWE7RUFDYixzQkFBc0I7QUFDeEI7QUFFQTtFQUNFLHVCQUF1QjtFQUN2QixnQkFBZ0I7RUFDaEIsYUFBYTtFQUNiLGFBQWE7RUFDYixzQkFBc0I7QUFDeEI7QUFFQTtFQUNFLGFBQWE7RUFDYjtBQUNGO0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsa0JBQWtCO0FBQ3BCO0FBRUE7RUFDRSxnQkFBZ0I7QUFDbEI7QUFFQTtFQUNFLFVBQVU7QUFDWjtBQUVBO0VBQ0UsVUFBVTtFQUNWLGdCQUFnQjtBQUNsQjtBQUVBO0VBQ0UsWUFBWTtBQUNkO0FBRUE7RUFDRSxTQUFTO0FBQ1g7QUFFQTtFQUNFLGlCQUFpQjtFQUNqQixpQkFBaUI7QUFDbkI7QUFFQTtFQUNFLHdCQUF3QjtFQUN4QjtBQUNGO0FBRUE7RUFDRSxrQkFBa0I7RUFDbEIsbUJBQW1CO0VBQ25CO0FBQ0Y7QUFFQTtFQUNFLGtCQUFrQjtFQUNsQixtQkFBbUI7RUFDbkI7QUFDRjtBQUVBO0VBQ0UsY0FBYztBQUNoQjtBQUVBO0VBQ0UsZ0JBQWdCO0VBQ2hCLHlCQUF5QjtFQUN6QixlQUFlO0VBQ2YsZ0JBQWdCO0FBQ2xCO0FBRUE7RUFDRSxjQUFjO0VBQ2QscUJBQXFCO0VBQ3JCLDRCQUF5QjtVQUF6Qix5QkFBeUI7RUFDekIsMkJBQXVCO1VBQXZCLHVCQUF1QjtFQUN2Qix1QkFBc0I7VUFBdEIsc0JBQXNCO0VBQ3RCLHFCQUFvQjtVQUFwQixvQkFBb0I7RUFDcEIsMkJBQTBCO1VBQTFCLDBCQUEwQjtBQUM1QjtBQUVBO0lBQ0ksYUFBYTtJQUNiLHNCQUFzQjtJQUN0QixtQkFBbUI7QUFDdkI7QUFFQTtJQUNJLGFBQWE7QUFDakI7QUFFQTtJQUNJLGlCQUFpQjtJQUNqQixxQkFBcUI7SUFDckIsWUFBWTtBQUNoQjtBQUVBO0lBQ0ksV0FBVztJQUNYLGVBQWU7QUFDbkI7QUFFQTtJQUNJLFlBQVk7SUFDWixZQUFZO0lBQ1osbUJBQW1CO0FBQ3ZCO0FBRUE7SUFDSSxrQkFBa0I7SUFDbEIsbUJBQW1CO0FBQ3ZCIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50L2Rpc3BsYXkvZGlzcGxheS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXHJcbi5tYXQtc2VsZWN0IHtcclxuICAvKmRpc3BsYXk6IGlubGluZS1ibG9jazsqL1xyXG4gIGJvcmRlcjogMXB4IHNvbGlkICNhZGFkYWQ7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbiAgcGFkZGluZzogNnB4IDJweDtcclxuICBtYXJnaW4tYm90dG9tOiAwO1xyXG4gIGZvbnQtc2l6ZTogMTJweDtcclxuICBmb250LXdlaWdodDogMTAwO1xyXG4gIGxpbmUtaGVpZ2h0OiAxLjE7XHJcbiAgdGV4dC1hbGlnbjogbGVmdDtcclxuICB2ZXJ0aWNhbC1hbGlnbjogbWlkZGxlO1xyXG4gIGN1cnNvcjogcG9pbnRlcjtcclxuICBiYWNrZ3JvdW5kLWltYWdlOiBub25lO1xyXG4gIGJvcmRlci1yYWRpdXM6IDRweDtcclxuXHJcblxyXG59XHJcbjo6bmctZGVlcCAubWF0LWZvcm0tZmllbGQtdW5kZXJsaW5lIHtcclxuICBkaXNwbGF5OiBub25lO1xyXG59XHJcbi5tYXQtZm9ybS1maWVsZCB7XHJcbiAgZm9udC1zaXplOiAxNHB4O1xyXG4gIHBhZGRpbmc6IDZweCAycHg7XHJcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gIGxpbmUtaGVpZ2h0OiAyO1xyXG4gIGZvbnQtZmFtaWx5OiBSb2JvdG8sIFwiSGVsdmV0aWNhIE5ldWVcIiwgc2Fucy1zZXJpZjtcclxuICBjb2xvcjogZ3JleTtcclxufVxyXG4uY2VudGVyIHtcclxuICBtYXJnaW4tbGVmdDogMTAlO1xyXG4gIG1hcmdpbi1yaWdodDogMTAlO1xyXG59XHJcblxyXG4uaGlnaGxpZ2h0VGV4dCB7XHJcbiAgYmFja2dyb3VuZDogeWVsbG93O1xyXG59XHJcblxyXG4vKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKi9cclxuXHJcbi50b29sX0hvbWUge1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbn1cclxuXHJcbi5jb250ZW50LWxlZnQge1xyXG4gIHdpZHRoOiBjYWxjKDY1JSAtIDMwcHgpO1xyXG4gIG1pbi13aWR0aDogOTgwcHg7XHJcbiAgcGFkZGluZzogMjBweCAwIDIwcHggMjBweDtcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XHJcbn1cclxuXHJcbi5jb250ZW50LXJpZ2h0IHtcclxuICB3aWR0aDogY2FsYygzNSUgLSAzMHB4KTtcclxuICBtaW4td2lkdGg6IDYzMHB4O1xyXG4gIHBhZGRpbmc6IDIwcHg7XHJcbiAgZGlzcGxheTogZmxleDtcclxuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xyXG59XHJcblxyXG4uaC1mbGV4e1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAgZ2FwOiAyZW1cclxufVxyXG5cclxuLm1hdC1pbnB1dC1lbGVtZW50LWZpeCB7XHJcbiAgbWFyZ2luLWxlZnQ6IC0xOHB4O1xyXG4gIG1hcmdpbi1yaWdodDogMThweDtcclxufVxyXG5cclxuLnB0LTEge1xyXG4gIG1hcmdpbi10b3A6IDIzcHg7XHJcbn1cclxuXHJcbi53LTIwIHtcclxuICB3aWR0aDogMjAlO1xyXG59XHJcblxyXG4udy00MCB7XHJcbiAgd2lkdGg6IDQwJTtcclxuICBtYXgtd2lkdGg6IDM1MHB4O1xyXG59XHJcblxyXG4uc3RlcFJlc2V0LCAuc3RlcFZpc3VhbGl6ZSwgLnN0ZXBEb3dubG9hZCwgLnN0ZXBEb3dubG9hZFRleHQge1xyXG4gIGhlaWdodDogNDFweDtcclxufVxyXG5cclxuLmJ1dHRvbkxhVG9vbCB7XHJcbiAgbWFyZ2luOiAwO1xyXG59XHJcblxyXG4uZXh0ZW5kZWRNZXRyaWNzIHtcclxuICBtYXgtaGVpZ2h0OiAyNTBweDtcclxuICBwYWRkaW5nLWJvdHRvbTogMDtcclxufVxyXG5cclxuLmV4dGVuZGVkTWV0cmljc1RhYmxlIHtcclxuICB3aWR0aDogY2FsYygxMDAlIC0gNDBweCk7XHJcbiAgcGFkZGluZzogMCAyMHB4IDIwcHggMjBweFxyXG59XHJcblxyXG4ubG9nb3V0LWJ1dHRvbiB7XHJcbiAgcGFkZGluZy1sZWZ0OiAxMnB4O1xyXG4gIHBhZGRpbmctcmlnaHQ6IDEycHg7XHJcbiAgd2lkdGg6IDc0cHhcclxufVxyXG5cclxuLmxvZ2luLWJ1dHRvbiB7XHJcbiAgcGFkZGluZy1sZWZ0OiAxOHB4O1xyXG4gIHBhZGRpbmctcmlnaHQ6IDE4cHg7XHJcbiAgd2lkdGg6IDc0cHhcclxufVxyXG5cclxuLnNlbGVjdGVkLWluZGljYXRvcnMtd3JhcHBlciB7XHJcbiAgb3ZlcmZsb3c6IGF1dG87XHJcbn1cclxuXHJcbi5zZWxlY3RlZC1pbmRpY2F0b3JzLWxhYmVsIHtcclxuICBtYXJnaW4tdG9wOiAyMHB4O1xyXG4gIGNvbG9yOiByZ2IoMTI4LCAxMjgsIDEyOCk7XHJcbiAgZm9udC1zaXplOiAxNXB4O1xyXG4gIGZvbnQtd2VpZ2h0OiA1MDA7XHJcbn1cclxuXHJcbnVsIHtcclxuICBkaXNwbGF5OiBibG9jaztcclxuICBsaXN0LXN0eWxlLXR5cGU6IGRpc2M7XHJcbiAgbWFyZ2luLWJsb2NrLXN0YXJ0OiAwLjVlbTtcclxuICBtYXJnaW4tYmxvY2stZW5kOiAwLjVlbTtcclxuICBtYXJnaW4taW5saW5lLXN0YXJ0OiAwO1xyXG4gIG1hcmdpbi1pbmxpbmUtZW5kOiAwO1xyXG4gIHBhZGRpbmctaW5saW5lLXN0YXJ0OiAyMHB4O1xyXG59XHJcblxyXG4udmVyZGljdENvbnRlbnQge1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XHJcbiAgICBwYWRkaW5nLWJvdHRvbTogMWVtO1xyXG59XHJcblxyXG4udmVyZGljdFJvdyB7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG59XHJcblxyXG4udmVyZGljdExhYmVsIHtcclxuICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG4gICAgcGFkZGluZy1ib3R0b206IDAuNWVtO1xyXG4gICAgd2lkdGg6IDYuN2VtO1xyXG59XHJcblxyXG4uZ2VuZXJhdGVCdXR0b24ge1xyXG4gICAgd2lkdGg6IDE1ZW07XHJcbiAgICBtYXJnaW4tdG9wOiAxZW07XHJcbn1cclxuXHJcbi5pbmRpY2F0b3Itc3VtbWFyeSB7XHJcbiAgICBjb2xvcjogZ3JlZW47XHJcbiAgICB3aWR0aDogNTAwcHg7XHJcbiAgICBwYWRkaW5nLWJvdHRvbTogMWVtO1xyXG59XHJcblxyXG4ubWF0LWRpYWxvZy1jb250ZW50IHtcclxuICAgIG92ZXJmbG93LXg6IGhpZGRlbjtcclxuICAgIHBhZGRpbmctYm90dG9tOiAxZW07XHJcbn1cclxuIl19 */");
+/* harmony default export */ __webpack_exports__["default"] = ("\n\nthead{\n  \n  color: grey;\n  font-size: .85em;\n  letter-spacing: .1em;\n  text-transform: uppercase;\n}\n\n\n.activities:nth-child(odd) {\n  background-color: #f1f1f1;\n  \n}\n\n\n.leraningevents:nth-child(odd) {\n  background-color: #f1f1f1;\n \n}\n\n\n.sortable {\n  cursor: pointer;\n}\n\n\ndiv {\n  display:inline-block;\n  margin: 20px;\n  \n}\n\n\nbutton {\n  display:inline-block;\n  margin: 30px;\n  \n}\n\n\n.mat-select {\n  display: inline-block;\n  border: 1px solid #adadad;\n  width: 100%;\n  padding: 6px 2px;\n  margin-bottom: 0;\n  font-size: 12px;\n  font-weight: 100;\n  line-height: 1.1;\n  text-align: left;\n  vertical-align: middle;\n  cursor: pointer;\n  background-image: none;\n  border-radius: 4px;\n  \n  \n}\n\n\n::ng-deep .mat-form-field-underline {\n  display: none;\n}\n\n\n.mat-form-field {\n  font-size: 14px;\n  padding: 6px 2px;\n  text-align: center;\n  line-height: 2;\n  font-family: Roboto, \"Helvetica Neue\", sans-serif;\n  color: grey;\n}\n\n\n.center {\n  margin-left: 10%;\n  margin-right: 10%;\n}\n\n\n.highlightText {\n  background: yellow;\n}\n\n\n/*************************************/\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50L2Rpc3BsYXkvZGlzcGxheS5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7O0FBRUE7O0VBRUUsV0FBVztFQUNYLGdCQUFnQjtFQUNoQixvQkFBb0I7RUFDcEIseUJBQXlCO0FBQzNCOzs7QUFHQTtFQUNFLHlCQUF5Qjs7QUFFM0I7OztBQUVBO0VBQ0UseUJBQXlCOztBQUUzQjs7O0FBRUE7RUFDRSxlQUFlO0FBQ2pCOzs7QUFFQTtFQUNFLG9CQUFvQjtFQUNwQixZQUFZOztBQUVkOzs7QUFFQTtFQUNFLG9CQUFvQjtFQUNwQixZQUFZOztBQUVkOzs7QUFHQTtFQUNFLHFCQUFxQjtFQUNyQix5QkFBeUI7RUFDekIsV0FBVztFQUNYLGdCQUFnQjtFQUNoQixnQkFBZ0I7RUFDaEIsZUFBZTtFQUNmLGdCQUFnQjtFQUNoQixnQkFBZ0I7RUFDaEIsZ0JBQWdCO0VBQ2hCLHNCQUFzQjtFQUN0QixlQUFlO0VBQ2Ysc0JBQXNCO0VBQ3RCLGtCQUFrQjs7O0FBR3BCOzs7QUFDQTtFQUNFLGFBQWE7QUFDZjs7O0FBQ0E7RUFDRSxlQUFlO0VBQ2YsZ0JBQWdCO0VBQ2hCLGtCQUFrQjtFQUNsQixjQUFjO0VBQ2QsaURBQWlEO0VBQ2pELFdBQVc7QUFDYjs7O0FBQ0E7RUFDRSxnQkFBZ0I7RUFDaEIsaUJBQWlCO0FBQ25COzs7QUFFQTtFQUNFLGtCQUFrQjtBQUNwQjs7O0FBTUEsc0NBQXNDIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50L2Rpc3BsYXkvZGlzcGxheS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiXG5cbnRoZWFke1xuICBcbiAgY29sb3I6IGdyZXk7XG4gIGZvbnQtc2l6ZTogLjg1ZW07XG4gIGxldHRlci1zcGFjaW5nOiAuMWVtO1xuICB0ZXh0LXRyYW5zZm9ybTogdXBwZXJjYXNlO1xufVxuXG5cbi5hY3Rpdml0aWVzOm50aC1jaGlsZChvZGQpIHtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2YxZjFmMTtcbiAgXG59XG5cbi5sZXJhbmluZ2V2ZW50czpudGgtY2hpbGQob2RkKSB7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmMWYxZjE7XG4gXG59XG5cbi5zb3J0YWJsZSB7XG4gIGN1cnNvcjogcG9pbnRlcjtcbn1cblxuZGl2IHtcbiAgZGlzcGxheTppbmxpbmUtYmxvY2s7XG4gIG1hcmdpbjogMjBweDtcbiAgXG59XG5cbmJ1dHRvbiB7XG4gIGRpc3BsYXk6aW5saW5lLWJsb2NrO1xuICBtYXJnaW46IDMwcHg7XG4gIFxufVxuXG5cbi5tYXQtc2VsZWN0IHtcbiAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICBib3JkZXI6IDFweCBzb2xpZCAjYWRhZGFkO1xuICB3aWR0aDogMTAwJTtcbiAgcGFkZGluZzogNnB4IDJweDtcbiAgbWFyZ2luLWJvdHRvbTogMDtcbiAgZm9udC1zaXplOiAxMnB4O1xuICBmb250LXdlaWdodDogMTAwO1xuICBsaW5lLWhlaWdodDogMS4xO1xuICB0ZXh0LWFsaWduOiBsZWZ0O1xuICB2ZXJ0aWNhbC1hbGlnbjogbWlkZGxlO1xuICBjdXJzb3I6IHBvaW50ZXI7XG4gIGJhY2tncm91bmQtaW1hZ2U6IG5vbmU7XG4gIGJvcmRlci1yYWRpdXM6IDRweDtcbiAgXG4gIFxufVxuOjpuZy1kZWVwIC5tYXQtZm9ybS1maWVsZC11bmRlcmxpbmUge1xuICBkaXNwbGF5OiBub25lO1xufVxuLm1hdC1mb3JtLWZpZWxkIHtcbiAgZm9udC1zaXplOiAxNHB4O1xuICBwYWRkaW5nOiA2cHggMnB4O1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gIGxpbmUtaGVpZ2h0OiAyO1xuICBmb250LWZhbWlseTogUm9ib3RvLCBcIkhlbHZldGljYSBOZXVlXCIsIHNhbnMtc2VyaWY7XG4gIGNvbG9yOiBncmV5O1xufVxuLmNlbnRlciB7XG4gIG1hcmdpbi1sZWZ0OiAxMCU7XG4gIG1hcmdpbi1yaWdodDogMTAlO1xufVxuXG4uaGlnaGxpZ2h0VGV4dCB7XG4gIGJhY2tncm91bmQ6IHllbGxvdztcbn1cblxuXG5cblxuXG4vKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKi8iXX0= */");
 
 /***/ }),
 
@@ -7928,10 +7518,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material_dialog__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/material/dialog */ "./node_modules/@angular/material/esm2015/dialog.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
 /* harmony import */ var src_app_chart_helper_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! src/app/chart-helper.service */ "./src/app/chart-helper.service.ts");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
-/* harmony import */ var _header_header_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../header/header.service */ "./src/app/component/header/header.service.ts");
-
-
 
 
 
@@ -7941,237 +7527,364 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let DisplayComponent = class DisplayComponent {
-    constructor(dataService, chartHelperService, router, snackbar, dialog, sanitizer, headerTemplateService) {
+    constructor(dataService, chartHelperService, router, snackbar, dialog, sanitizer) {
         this.dataService = dataService;
         this.chartHelperService = chartHelperService;
         this.router = router;
         this.snackbar = snackbar;
         this.dialog = dialog;
         this.sanitizer = sanitizer;
-        this.headerTemplateService = headerTemplateService;
+        this.dropdownList = []; //learning activities dropdown
+        this.selectedActivityItems = []; //learning activities dropdown
         this.name = [];
         this.options = []; // learning events options
-        this.element = document.getElementById("header");
+        this.optionsActivities = []; // learning Activities options
+        this.AllActivities = []; // learning Activities options
+        this.AllLearningEventsOptions = [];
+        this.learningEvents = [];
+        this.learningAct = [];
+        this.isLoaded = false;
+        this.LearningEvents_mateSelect = [];
         this.ind_list = [];
-        this.checkedMap = new Map();
-        this.indicatorMap = new Map();
-        this.selectedLearningEvents = [];
-        this.previousSelectedEvents = [];
-        this.selectedLearningActivities = [];
-        this.headerTemplateService.setHeader('display');
-        this.loggedIn = JSON.parse(localStorage.getItem('currentUser'));
-        this.treeData$ = this.dataService.getdata();
+        this.mat_list = [];
+        this.element = document.getElementById("header");
+        this.getSelectedind = (x) => {
+            if (x.length > 0) {
+                const indicator = [];
+                let data = x;
+                data.forEach((element) => {
+                    const o = { [element.indicatorName]: element.metrics.split(",") };
+                    indicator.push(o);
+                    /// other properties and values
+                });
+                // Convert the text to BLOB.
+                let textToBLOB = new Blob([
+                    JSON.stringify({
+                        indicator: indicator,
+                    }),
+                ], { type: "application/json" });
+                let sFileName = "indicators JSON.json"; // The file to save the data.
+                let newLink = document.createElement("a");
+                newLink.download = sFileName;
+                if (window.webkitURL != null) {
+                    newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+                }
+                else {
+                    newLink.href = window.URL.createObjectURL(textToBLOB);
+                    newLink.style.display = "none";
+                    // document.body.appendChild(newLink);
+                }
+                newLink.click();
+            }
+            else {
+                window.alert("No indicator is selected");
+            }
+        };
+        /*
+          This function pushes all selected indicators in an array
+          and stores them in localStorage, so the drop down menu in the dashboard page can display the selected indicators even after refreshing the page
+          We also store the "check" property in localStorage so the check marks stay checked when the user returns to the display component
+          */
+        this.forwardIndicators = (x) => {
+            let indicators = [];
+            let indicatorReferences = [];
+            let selectedLearningEvents = [];
+            let p = this.selectedevent;
+            let regex = /\[[0-9]+\]/;
+            for (const ind of this.ind_list) {
+                //console.log(this.ind_list);
+                //console.log(this.options);
+                if (!indicators.includes(ind)) {
+                    indicatorReferences.push(ind.match(regex)[0]);
+                    indicators.push(ind);
+                }
+            }
+            //this.chartHelperService.setSettings("selectedLearningEvents", selectedLearningEvents);
+            this.chartHelperService.setSettings("selectedIndicators", indicators);
+            this.chartHelperService.setSettings("referenceNumbers", indicatorReferences);
+            if (indicators.length > 0) {
+                let eventList = this.data.filter(function (obj) {
+                    return p.includes(obj.LearningEvents);
+                });
+                localStorage.setItem("check", JSON.stringify(eventList));
+                this.router.navigate(["/dashboard"]);
+            }
+            else {
+                window.alert("No indicator is selected");
+            }
+        };
     }
     ngOnInit() {
         this.fetchdata();
         this.loadScript();
-        this.checkForNotVerifiedIndicators();
         this.dropdownSettings = {
             singleSelection: false,
             idField: "item_id",
             textField: "item_text",
             selectAllText: "Select All",
-            unSelectAllText: "Deselect All",
+            unSelectAllText: "UnSelect All",
             itemsShowLimit: 3,
             allowSearchFilter: true,
         };
     }
-    // fetches Data from Database and retrieves previous selected Entities from LocalStorage to initialize with
+    // function of fetching data from database
     fetchdata() {
-        const previousSelectedEvents = JSON.parse(localStorage.getItem('selectedEventsInit'));
-        const previousSelectedActivities = JSON.parse(localStorage.getItem('selectedActivitiesInit'));
-        const previousSelectedIndicators = JSON.parse(localStorage.getItem('selectedIndicatorsInit'));
-        this.learningEventsOptions$ = this.dataService.getEvents().pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(learningEvents => {
-            return learningEvents.map(learningEvent => {
-                return learningEvent.name;
-            });
-        }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["tap"])(options => {
-            this.allEventOptions = options;
-            this.initFromLocalStorage(previousSelectedEvents, previousSelectedActivities, previousSelectedIndicators);
-        }));
-    }
-    //Initializes Dropdowns and selected Indicators with given attributes
-    initFromLocalStorage(events, activities, indicators) {
-        if (events) {
-            this.onEventValueChange(events, true);
-            this.selectedLearningEvents = events;
-        }
-        else {
-            this.onEventValueChange(this.allEventOptions, true);
-        }
-        if (activities) {
-            this.selectedLearningActivities = activities;
-            this.onActivitySelectChange();
-        }
-        if (indicators) {
-            indicators.forEach(indicator => {
-                this.checkedMap.set(indicator._id, true);
-                this.indicatorMap.set(indicator._id, indicator);
-            });
-            localStorage.setItem("selectedIndicatorsInit", JSON.stringify(indicators));
-            this.ind_list = indicators.map(indicator => indicator.Title);
-        }
-    }
-    // Handles changes in the Event Dropdown. Filters TableData and options for activity dropdown corresponding
-    // to selected Events. Saves selected Events in LocalStorage
-    onEventValueChange(eventValue, init) {
-        if (this.eventsChanged(eventValue) || init) {
-            if (eventValue.length === 0) {
-                eventValue = this.allEventOptions;
+        //console.log("fetchdata: ");
+        this.dataService.getdata().subscribe((data) => {
+            this.data = data; /// complete data present in database
+            let allEventActivities = data; //for pushing all the activities under selected events that are not selected Mainly for maintaing history
+            for (var val of this.data) { //retrive all learning events and PUSH all to the Dropdown and below I PUSH only those WAS checked before going to Dashboard
+                this.AllLearningEventsOptions.push(val["LearningEvents"]); //here it pushes all the Events
             }
-            this.resetTable(true);
-            this.selectedLearningEvents$ = this.treeData$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(learningEvents => {
-                return learningEvents.filter(learningEvent => eventValue.includes(learningEvent.name));
-            }));
-            this.tableData$ = this.selectedLearningEvents$;
-            this.learningActivitiesOptions$ = this.tableData$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(learningEvents => {
-                return [].concat(...learningEvents.map(learningEvent => learningEvent.activities));
-            }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])((learningActivities) => {
-                return [...new Set(learningActivities.map(learningActivity => learningActivity.name))];
-            }));
-            setTimeout(() => {
-                localStorage.setItem("selectedEventsInit", JSON.stringify(this.selectedLearningEvents));
-            });
-        }
+            if (!(localStorage.getItem("check"))) {
+                //retrive all learning Activities and PUSH all to the Dropdown for the first time
+                let eventCount = Object.keys(this.data).length;
+                for (let k = 0; k < eventCount; k++) {
+                    let activitiesCount = Object.keys(this.data[k].LearningActivities).length;
+                    for (let l = 0; l < activitiesCount; l++) {
+                        this.AllActivities.push(this.data[k].LearningActivities[l].Name);
+                    }
+                }
+            }
+            this.isLoaded = true;
+            //After the data is fetched, we check if the localStorage contains the check property (this is to retain the checkbox state)
+            if (localStorage.getItem("check")) {
+                //console.log("localStorage.getItem(): ", localStorage.getItem("check"));
+                //Parse the data with the check property and loop through the indicators and see if the checked property is true
+                //If it's true we push it to the ind_list and mat_list, so the selected indicators from before are displayed at the top
+                this.data = JSON.parse(localStorage.getItem("check"));
+                for (let i = 0; i < this.data.length; i++) {
+                    for (let j = 0; j < this.data[i]["LearningActivities"].length; j++) {
+                        //console.log(data[i]["LearningActivities"][j]["indicator"]);
+                        for (let k = 0; k < this.data[i]["LearningActivities"][j]["indicator"].length; k++) {
+                            if (this.data[i]["LearningActivities"][j]["indicator"][k].checked) {
+                                this.ind_list.push(this.data[i]["LearningActivities"][j]["indicator"][k]["indicatorName"]);
+                                this.mat_list.push(this.data[i]["LearningActivities"][j]["indicator"][k]);
+                            }
+                        }
+                    }
+                }
+                // }
+                // if (localStorage.getItem("check"))
+                // {
+                //to retrive the Checked learningEvents after coming from the Dashboard
+                for (var val of this.data) {
+                    this.options.push(val["LearningEvents"]);
+                }
+                let eventCount = Object.keys(this.data).length;
+                //let activitiesCount = Object.keys(this.data.LearningActivities).length;
+                //to retrive the Checked learningActivities after coming from the Dashboard
+                for (let k = 0; k < eventCount; k++) {
+                    let activitiesCount = Object.keys(this.data[k].LearningActivities).length;
+                    for (let l = 0; l < activitiesCount; l++) {
+                        this.optionsActivities.push(this.data[k].LearningActivities[l].Name);
+                    }
+                }
+                this.LearningEvents_mateSelect = this.options; //to retain the current and previous state
+                this.selectedevent = this.options; // to keep the object filled becasue people can select Activity instead of Event first
+                let op = this.options;
+                let otherActivities = allEventActivities.filter(function (obj) {
+                    return op.includes(obj.LearningEvents);
+                });
+                // let Count = Object.keys(otherActivities).length;
+                //   for (let k = 0; k < Count; k++) {
+                //     let activityCount = Object.keys(otherActivities[k].LearningActivities).length;
+                //     for (let l = 0; l < activityCount; l++) {
+                //       this.AllActivities.push(otherActivities[k].LearningActivities[l].Name);
+                //     }
+                //   }
+                this.setLearningActivities(otherActivities); //this will run for pushing all activities (into the LA Dropdown) under SelectedEvents for maintaining the history otherwise the else will run
+                this.selectedActivityItems = this.optionsActivities; // first the DD will be populated with activities then these will be selected
+            }
+            else {
+                this.setLearningActivities(this.data);
+                this.LearningEvents_mateSelect = this.AllLearningEventsOptions; // to keep the object filled becasue people can select Activity instead of Event first
+                this.selectedevent = this.AllLearningEventsOptions;
+                this.selectedActivityItems = this.AllActivities;
+            }
+        });
     }
-    eventsChanged(currentEvents) {
-        const eventSet = new Set([...this.previousSelectedEvents, ...currentEvents]);
-        return [...eventSet.values()].length !== this.previousSelectedEvents.length || [...eventSet.values()].length !== currentEvents.length;
-    }
-    onOpen() {
-        this.previousSelectedEvents = this.selectedLearningEvents;
-    }
-    // resets the Table and clears table data stored in LocalStorage
-    resetTable(withActivities) {
-        if (withActivities) {
-            this.selectedLearningActivities = []; //empty the seleted list of Activities after event change
-            localStorage.removeItem("selectedActivitiesInit");
-        }
+    onEventValueChange(eventValue) {
+        this.selectedevent = eventValue;
+        //console.log("onEventValueChange:", p);
         this.ind_list = []; //empty the seleted list of indicators after event an Event change
-        this.indicatorMap.clear();
-        this.checkedMap.clear();
-        localStorage.removeItem("selectedIndicatorsInit");
+        this.selectedActivityItems = []; //empty the seleted list of Activities after event change
         this.searchInd = ""; //empty
         this.searchMat = ""; //empty
-    }
-    // Filters TableData corresponding to selected Activities and save those in LocalStorage
-    onActivitySelectChange() {
-        this.resetTable();
-        this.determineTableDataBySelectedEventsAndActivities();
-        setTimeout(() => {
-            localStorage.setItem("selectedActivitiesInit", JSON.stringify(this.selectedLearningActivities));
+        this.dataService.getdata().subscribe((data) => {
+            this.data = data;
+            //console.log("data: ", this.data);
+            //  if (localStorage.getItem("check")) {this.data = JSON.parse(localStorage.getItem("check"));
+            //console.log("localStorage.inside: ", JSON.parse(localStorage.getItem("check")));//  }
+            this.isLoaded = true;
+            //if (eventValue == "Select All") { } else {
+            let event = this.data.filter(function (obj) {
+                //console.log("inside else: ", obj.LearningEvents);
+                return eventValue.includes(obj.LearningEvents);
+            });
+            this.setLearningActivities(event); //to update the DD of LA
+            if (eventValue != "") {
+                this.data = event;
+                //console.log("inside p IF: ", event);
+            }
+            //}
         });
     }
-    // Filters Table Data depending on Events and Activities selected
-    determineTableDataBySelectedEventsAndActivities() {
-        if (this.selectedLearningActivities.length === 0) {
-            this.tableData$ = this.selectedLearningEvents$;
-        }
-        else {
-            this.tableData$ = this.selectedLearningEvents$.pipe(
-            // remove Activities from Events which are not selected
-            Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(learningEvents => {
-                return learningEvents.map(learningEvent => {
-                    learningEvent.activities = learningEvent.activities.filter(activity => {
-                        return this.selectedLearningActivities.includes(activity.name);
-                    });
-                    return learningEvent;
-                });
-            }), 
-            // remove Events which have no Activity left
-            Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(learningEvents => {
-                return learningEvents.filter(learningEvent => learningEvent.activities.length > 0);
-            }));
-        }
-    }
-    // Filters Table Data depending on Search Strings entered in Indicator and Metric Search
-    determineFilteredTableDataByIndicatorAndMetricText() {
-        const indicatorFiltered = (this.searchInd && this.searchInd !== "");
-        const metricFiltered = (this.searchMat && this.searchMat !== "");
-        if (!indicatorFiltered && !metricFiltered) {
-            this.determineTableDataBySelectedEventsAndActivities();
-        }
-        else {
-            if (indicatorFiltered) {
-                this.filterTableDataByIndicatorSearch();
-            }
-            if (metricFiltered) {
-                this.filterTableDataByMetricSearch();
-            }
-        }
-    }
-    filterTableDataByIndicatorSearch() {
-        this.tableData$ = this.tableData$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(learningEvents => {
-            return learningEvents.map(event => {
-                event.activities.map(activity => {
-                    activity.indicators = activity.indicators.filter(indicator => {
-                        return `${indicator.Title} ${indicator.referenceNumber}`.toLowerCase().includes(this.searchInd.toLowerCase());
-                    });
-                    return activity;
-                });
-                event.activities = event.activities.filter(activity => activity.indicators.length > 0);
-                return event;
+    /////////////// function for learning activities selection /////////////
+    onActivitySelect(item) {
+        let p = this.selectedevent;
+        this.ind_list = []; //empty the seleted list of indicators after event an Event change
+        this.searchInd = ""; //empty
+        this.searchMat = ""; //empty
+        //console.log("item: ", item);
+        //console.log("this.selectedevent: ", p);
+        this.dataService.getdata().subscribe((data) => {
+            this.data = data;
+            //console.log("onActivitySelect: ", p);
+            this.isLoaded = true;
+            let event = this.data.filter(function (obj) {
+                return p.includes(obj.LearningEvents);
             });
-        }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(learningEvents => {
-            return learningEvents.filter(learningEvent => learningEvent.activities.length > 0);
-        }));
-    }
-    filterTableDataByMetricSearch() {
-        this.tableData$ = this.tableData$.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(learningEvents => {
-            return learningEvents.map(event => {
-                event.activities.map(activity => {
-                    activity.indicators = activity.indicators.filter(indicator => {
-                        return indicator.metrics.toLowerCase().includes(this.searchMat.toLowerCase());
-                    });
-                    return activity;
+            this.setLearningActivities(event);
+            //console.log("onActivitySelect event: ", event);
+            if (p != "") {
+                this.data = event;
+            }
+            let newArray = this.selectedActivityItems;
+            this.data.filter(function (obj) {
+                obj.LearningActivities = obj.LearningActivities.filter(function (obj2) {
+                    return newArray.includes(obj2.Name);
                 });
-                event.activities = event.activities.filter(activity => activity.indicators.length > 0);
-                return event;
             });
-        }), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_8__["map"])(learningEvents => {
-            return learningEvents.filter(learningEvent => learningEvent.activities.length > 0);
-        }));
+        });
     }
-    // pop up by click Indicator to show meterics
-    getMeterics(indicator) {
-        this.metrics_list = indicator.metrics.split(",");
-        this.dialog.open(this.secondDialog, { data: indicator });
+    onSelectAll(items) {
+        this.onActivitySelect(items);
+        //console.log("onSelectAll: ", items);
+        //console.log("onSelectAll: ", this.selectedItems);
+        // this.onActivitySelect(items);
     }
-    //function for checkbox to select indicator and save selection in LocalStorage
-    onCheckboxChange(indic) {
-        const checked = !this.checkedMap.get(indic._id);
-        this.checkedMap.set(indic._id, checked);
-        if (checked) {
-            this.ind_list.push(indic.Title);
-            this.indicatorMap.set(indic._id, indic);
+    checkvalue(event) {
+        if (this.selectedActivityItems.length == 0) {
+            //this.onEventValueChange(this.selectedevent);
         }
         else {
-            console.log(this.ind_list);
-            console.log(indic.Title);
-            console.log(this.ind_list.indexOf(indic.Title));
-            const index = this.ind_list.indexOf(indic.Title);
+            let index = this.selectedActivityItems.length;
+            if (index !== -1) {
+                this.selectedActivityItems.splice(index, 1);
+                this.onActivitySelect(this.selectedActivityItems);
+            }
+        }
+    }
+    /////////////// display learning activities ////////////////////
+    setLearningActivities(events) {
+        //console.log("setLearningActivities event: ", events);
+        this.dropdownList = [];
+        this.name = [];
+        for (let learningEvent of events) {
+            //console.log("setLearningActivities learningEvents: ", learningEvents);
+            for (let entry of learningEvent.LearningActivities) {
+                //console.log("setLearningActivities - entry- learningEvents.LearningActivities", entry);
+                this.dropdownList.push(entry.Name);
+                for (let ind1 of entry.indicator) {
+                    this.name.push(ind1.metrics);
+                }
+            }
+        }
+    }
+    ////////////////pop up by click Indicator to show meterics ///////////
+    getMeterics(indic) {
+        this.mat = indic.metrics;
+        let res = this.mat;
+        this.sp = res.split(",");
+        this.dialog.open(this.secondDialog);
+    }
+    ///////////////////   search by indicator ///////////////
+    searchIndicator(search) {
+        if (search || search == '') {
+            if (this.selectedevent) {
+                this.dataService.getsearchind(search).subscribe((data) => {
+                    let op = this.selectedevent;
+                    let filterNonSelEvents = data.filter(function (obj) {
+                        return op.includes(obj.LearningEvents);
+                    });
+                    this.data = filterNonSelEvents;
+                });
+            }
+            else {
+                this.dataService.getsearchind(search).subscribe((data) => {
+                    this.data = data;
+                });
+            }
+        }
+        else {
+            console.log("searchIndicator: ");
+        }
+    }
+    ///////////////////   search by metrics ///////////////
+    learningEventsChangeOnSearch(search) {
+        // if (search) {
+        //   this.dataService.getsearchresult(search).subscribe((data: data[]) => {
+        //     this.data = data;
+        //   });
+        // } else {
+        //   console.log("learningEventsChangeOnSearch: ");
+        //  // this.fetchdata();
+        // }
+        if (search || search == '') {
+            if (this.selectedevent) {
+                this.dataService.getsearchresult(search).subscribe((data) => {
+                    let op = this.selectedevent;
+                    let filterNonSelEvents = data.filter(function (obj) {
+                        return op.includes(obj.LearningEvents);
+                    });
+                    this.data = filterNonSelEvents;
+                });
+            }
+            else {
+                this.dataService.getsearchresult(search).subscribe((data) => {
+                    this.data = data;
+                });
+            }
+        }
+        else {
+            console.log("searchMatrics: ");
+        }
+    }
+    ////////////////// function for checkbox to select indicator   //////////////////
+    Checkbox(event, selectInd) {
+        this.ind = selectInd.indicatorName;
+        this.met = selectInd;
+        //console.log("CheckboxFun event", event);
+        //console.log("CheckboxFun selectInd", selectInd);
+        if (event.target.checked) {
+            //Set the checked property to true and store it in localStorage so the checkboxes stay checked after reload
+            selectInd.checked = true;
+            localStorage.setItem("check", JSON.stringify(this.data));
+            this.ind_list.push(this.ind);
+            this.mat_list.push(this.met);
+        }
+        else {
+            let index = this.ind_list.indexOf(this.ind);
+            //Set checked to false and reset the localStorage values to keep it updated
+            selectInd.checked = false;
+            localStorage.setItem("check", JSON.stringify(this.data));
+            let index1 = this.mat_list.indexOf(this.met);
             if (index !== -1) {
                 this.ind_list.splice(index, 1);
-                this.indicatorMap.set(indic._id, null);
+                this.mat_list.splice(index1, 1);
             }
         }
-        setTimeout(() => {
-            localStorage.setItem("selectedIndicatorsInit", JSON.stringify([...this.indicatorMap.values()].filter(i => i)));
-        });
     }
-    // method to check if at least one indicator is selected
-    atLeastOneChecked() {
-        return [...this.checkedMap.values()].includes(true);
-    }
-    // Transforms selected indicators into a downloadable .txt file
-    textClicked() {
-        const selectedIndicatorList = [...this.indicatorMap.values()].filter(indicator => indicator);
-        const mimeType = 'text/plain';
-        const filename = 'Indicators TEXT.txt';
-        if (selectedIndicatorList.length > 0) {
-            const content = selectedIndicatorList.map((indicator, index) => {
-                return `${index + 1} Indicator Name: ${indicator.Title}${indicator.referenceNumber}\n\tMetrics: ${indicator.metrics}\n\n`;
-            }).join('');
+    download(sList, mimeType, filename) {
+        if (sList.length > 0) {
+            var content = "";
+            let data = sList;
+            data.forEach(myFunction);
+            function myFunction(item, index) {
+                content += index + 1 + " Indicator Name: " + item.indicatorName + "\n\t" + "Metrics: " + item.metrics + "\n\n";
+                console.log(item.indicatorName + item.metrics);
+            }
             var a = document.createElement('a');
             var blob = new Blob([content], { type: mimeType });
             var url = URL.createObjectURL(blob);
@@ -8183,79 +7896,24 @@ let DisplayComponent = class DisplayComponent {
             window.alert("No indicator is selected");
         }
     }
-    // Transforms selected indicators into a downloadable .json file
-    jsonClicked() {
-        const selectedIndicatorList = [...this.indicatorMap.values()].filter(indicator => indicator);
-        if (selectedIndicatorList.length > 0) {
-            const indicatorObjects = selectedIndicatorList.map(indicator => {
-                return { [`${indicator.Title}${indicator.referenceNumber}`]: indicator.metrics.split(",") };
-            });
-            // Convert the text to BLOB.
-            let textToBLOB = new Blob([
-                JSON.stringify({
-                    indicator: indicatorObjects,
-                }),
-            ], { type: "application/json" });
-            let sFileName = "indicators JSON.json"; // The file to save the data.
-            let newLink = document.createElement("a");
-            newLink.download = sFileName;
-            if (window.webkitURL != null) {
-                newLink.href = window.webkitURL.createObjectURL(textToBLOB);
-            }
-            else {
-                newLink.href = window.URL.createObjectURL(textToBLOB);
-                newLink.style.display = "none";
-                // document.body.appendChild(newLink);
-            }
-            newLink.click();
-        }
-        else {
-            window.alert("No indicator is selected");
-        }
-    }
-    ;
-    // removes all saved Table states from LocalStorage and clears all selected Events/Activities/Indicators
     reset() {
-        localStorage.removeItem("selectedEventsInit");
-        localStorage.removeItem("selectedActivitiesInit");
-        localStorage.removeItem("selectedIndicatorsInit");
         this.ind_list = [];
-        this.checkedMap.clear();
-        this.indicatorMap.clear();
-        this.selectedLearningEvents = [];
-        this.onEventValueChange(this.allEventOptions, true);
-        localStorage.removeItem("check");
-    }
-    /*
-      This function pushes all selected indicators in an array
-      and stores them in localStorage, so the drop down menu in the dashboard page can display the selected indicators even after refreshing the page
-      We also store the "check" property in localStorage so the check marks stay checked when the user returns to the display component
-      */
-    visualizeClicked() {
-        const indicatorNames = [];
-        const indicatorReferences = [];
-        //our Map of selected indicators is transformed to an Array of [indicatorReference, indicator]
-        [...this.indicatorMap.entries()].forEach(array => {
-            if (array[1]) {
-                indicatorReferences.push(array[1].referenceNumber);
-                indicatorNames.push(array[1].Title);
+        this.mat_list = [];
+        //When the user presses the reset-button the "checked" property of the indicators have to be set to false and the check property in the localstorage is removed
+        for (let i = 0; i < this.data.length; i++) {
+            for (let j = 0; j < this.data[i]["LearningActivities"].length; j++) {
+                //  console.log(data[i]["LearningActivities"][j]["indicator"]);
+                for (let k = 0; k < this.data[i]["LearningActivities"][j]["indicator"].length; k++) {
+                    this.data[i]["LearningActivities"][j]["indicator"][k].checked = false;
+                }
             }
-        });
-        //this.chartHelperService.setSettings("selectedLearningEvents", selectedLearningEvents);
-        this.chartHelperService.setSettings("selectedIndicators", indicatorNames);
-        this.chartHelperService.setSettings("referenceNumbers", indicatorReferences);
-        if (indicatorNames.length > 0) {
-            localStorage.setItem("selectedEventsInit", JSON.stringify(this.selectedLearningEvents));
-            localStorage.setItem("selectedActivitiesInit", JSON.stringify(this.selectedLearningActivities));
-            localStorage.setItem("selectedIndicatorsInit", JSON.stringify([...this.indicatorMap.values()].filter(i => i)));
-            this.router.navigate(["/dashboard"]);
         }
-        else {
-            window.alert("No indicator is selected");
-        }
+        localStorage.removeItem("check");
+        this.uncheckAll();
+        // this.router.navigate(['./display/data']);
+        // location.reload();
+        location.href = "/";
     }
-    ;
-    // Scrolls back to the top of the page
     backToTop() {
         this.element.scrollIntoView({ behavior: "smooth" });
     }
@@ -8269,126 +7927,9 @@ let DisplayComponent = class DisplayComponent {
         // append to head of document
         document.getElementsByTagName("head")[0].appendChild(node);
     }
-    // method to open the review Dialog
-    onReview(indicator) {
-        this.dialog.open(this.reviewDialog, { data: indicator });
-    }
-    // method to open the verdict Dialog
-    onVerdict(indicator) {
-        this.metricsIndicatorTitle = indicator.Title.trim();
-        this.dataService.getReferenceByReferenceNumber(indicator.referenceNumber).subscribe(reference => {
-            if (reference) {
-                this.dialog.open(this.verdictDialog, { data: reference });
-            }
-            else {
-                window.alert('Reference has been deleted.');
-            }
-        });
-    }
-    onDelete(data) {
-        this.dialog.open(this.deleteDialog, { data: { indicator: data.indicator, activity: data.activity } });
-    }
-    onVerify(indicator) {
-        this.dataService.verifyIndicator(indicator._id).subscribe(() => {
-            this.reset();
-            this.checkForNotVerifiedIndicators();
-        });
-    }
-    // navigates to logIn
-    logIn() {
-        this.router.navigate(['/login'], { state: { url: '/', additionalInfo: null } });
-    }
-    // logs out user => clear currentUser data from LocalStorage
-    logout() {
-        localStorage.removeItem('currentUser');
-        this.loggedIn = undefined;
-    }
-    // clears indicator from selected indicators if indicator gets deleted
-    indicatorDeleted(indicator) {
-        if (this.checkedMap.get(indicator._id)) {
-            this.onCheckboxChange(indicator);
-        }
-    }
-    // method to generate the old/previous Tree Structure DataBase and export it as .json file
-    generateTreeStructure() {
-        this.dataService.getdata().subscribe(treeDataNew => {
-            const oldTreeStructure = treeDataNew.map(event => {
-                return {
-                    LearningEvents: event.name,
-                    LearningActivities: event.activities.map(activity => {
-                        return {
-                            Name: activity.name,
-                            indicator: activity.indicators.map(indicator => {
-                                return {
-                                    indicatorName: indicator.Title.trim() + " " + indicator.referenceNumber,
-                                    metrics: indicator.metrics
-                                };
-                            })
-                        };
-                    })
-                };
-            });
-            this.dataService.generateOldTreeStructure(oldTreeStructure).subscribe(success => {
-                if (success) {
-                    window.alert("Successfully generated TreeStructure");
-                }
-                else {
-                    window.alert("Could not generate TreeStructure. Further information can be found in the logs");
-                }
-            });
-            this.exportToJSON(oldTreeStructure);
-        });
-    }
-    // method to export the given treeStructure as Json
-    exportToJSON(oldTreeStructure) {
-        // Convert the text to BLOB.
-        let textToBLOB = new Blob([
-            JSON.stringify(oldTreeStructure),
-        ], { type: "application/json" });
-        let sFileName = "treeStructure.json"; // The file to save the data.
-        let newLink = document.createElement("a");
-        newLink.download = sFileName;
-        if (window.webkitURL != null) {
-            newLink.href = window.webkitURL.createObjectURL(textToBLOB);
-        }
-        else {
-            newLink.href = window.URL.createObjectURL(textToBLOB);
-            newLink.style.display = "none";
-            // document.body.appendChild(newLink);
-        }
-        newLink.click();
-    }
-    // method to navigate to the Reference edit of the Reference which belongs to the omitted id
-    editReference(id) {
-        this.router.navigate([`reference/${id}/edit`]);
-    }
-    deleteIndicator(indicator) {
-        if (confirm(`Do you really want to delete the indicator "${indicator.Title}"?`)) {
-            this.indicatorDeleted(indicator);
-            this.dataService.deleteIndicator(indicator._id).subscribe(() => {
-                this.fetchdata();
-            });
-        }
-    }
-    removeIndicatorFromActivity(data) {
-        this.dataService.removeIndicatorFromActivity(data.activity._id, data.indicator._id).subscribe(success => {
-            if (success) {
-                this.fetchdata();
-            }
-            else {
-                if (confirm(`This activity is the only one assigned to the indicator "${data.indicator.Title}". Do you wish to delete the entire indicator?`)) {
-                    this.indicatorDeleted(data.indicator);
-                    this.dataService.deleteIndicator(data.indicator._id).subscribe(() => {
-                        this.fetchdata();
-                    });
-                }
-            }
-        });
-    }
-    checkForNotVerifiedIndicators() {
-        this.dataService.getIndicators().subscribe(indicators => {
-            const notVerifiedIndicator = indicators.find(indicator => !indicator.verified);
-            this.notVerifiedIndicatorExists = !!notVerifiedIndicator;
+    uncheckAll() {
+        this.indicatorCheckboxs.forEach((element) => {
+            element.nativeElement.checked = false;
         });
     }
 };
@@ -8398,21 +7939,14 @@ DisplayComponent.ctorParameters = () => [
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
     { type: _angular_material__WEBPACK_IMPORTED_MODULE_4__["MatSnackBar"] },
     { type: _angular_material_dialog__WEBPACK_IMPORTED_MODULE_5__["MatDialog"] },
-    { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_6__["DomSanitizer"] },
-    { type: _header_header_service__WEBPACK_IMPORTED_MODULE_9__["HeaderService"] }
+    { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_6__["DomSanitizer"] }
 ];
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])("secondDialog", { static: true })
 ], DisplayComponent.prototype, "secondDialog", void 0);
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])("reviewDialog", { static: true })
-], DisplayComponent.prototype, "reviewDialog", void 0);
-tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])("verdictDialog", { static: true })
-], DisplayComponent.prototype, "verdictDialog", void 0);
-tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])("deleteDialog", { static: true })
-], DisplayComponent.prototype, "deleteDialog", void 0);
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChildren"])("indicatorCheckbox")
+], DisplayComponent.prototype, "indicatorCheckboxs", void 0);
 DisplayComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: "app-display",
@@ -8496,18 +8030,11 @@ let SelectCheckAllComponent = class SelectCheckAllComponent {
         // this.model.update.emit(this.values);
     }
     isChecked() {
-        if (!this.model || !this.values) {
-            return false;
-        }
-        else {
-            return this.model.value.length === this.values.length;
-        }
+        return this.model.value && this.values.length
+            && this.model.value.length === this.values.length;
     }
     isIndeterminate() {
-        if (!this.model || !this.values) {
-            return false;
-        }
-        return this.model.value.length
+        return this.model.value && this.values.length && this.model.value.length
             && this.model.value.length < this.values.length;
     }
     toggleSelection(change) {
@@ -8550,121 +8077,6 @@ SelectCheckAllComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         styles: [""]
     })
 ], SelectCheckAllComponent);
-
-
-
-/***/ }),
-
-/***/ "./src/app/component/display/table/table.component.css":
-/*!*************************************************************!*\
-  !*** ./src/app/component/display/table/table.component.css ***!
-  \*************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".w-100 {\r\n  width: 100%;\r\n}\r\n\r\n.w-50 {\r\n  width: 50%;\r\n}\r\n\r\nth {\r\n  color: grey;\r\n  font-size: .85em;\r\n  letter-spacing: .1em;\r\n  text-transform: uppercase;\r\n  text-align: left;\r\n  padding-left: 1em;\r\n  padding-bottom: 0.5em;\r\n}\r\n\r\n.learningactivities {\r\n  width: 170px;\r\n}\r\n\r\n.activities:nth-child(odd) {\r\n  .learningactivities {\r\n    background-color: #f1f1f1;\r\n  }\r\n\r\n  .indicator {\r\n    background-color: #f1f1f1;\r\n  }\r\n}\r\n\r\n.activities:nth-child(even) {\r\n  .learningactivities {\r\n    background-color: #e5e5e5;\r\n  }\r\n\r\n  .indicator {\r\n    background-color: #e5e5e5;\r\n  }\r\n}\r\n\r\n.leraningevents:nth-child(odd) {\r\n  background-color: #f1f1f1;\r\n}\r\n\r\n.leraningevents {\r\n  width: 120px;\r\n}\r\n\r\n.sortable {\r\n  cursor: pointer;\r\n}\r\n\r\n.review-icon, .reference-icon {\r\n  margin-left: 0.3em;\r\n}\r\n\r\n.indicator-content {\r\n  display: flex;\r\n  align-items: flex-start;\r\n}\r\n\r\n.indicator-text {\r\n  display: flex;\r\n  flex-wrap: wrap;\r\n}\r\n\r\n.not-yet-verified {\r\n    background-color: #8e1e2254 !important;\r\n}\r\n\r\n.not-verified-indicators {\r\n    color: rgba(63, 81, 181, 0.82);\r\n    margin-left: 1em;\r\n}\r\n\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50L2Rpc3BsYXkvdGFibGUvdGFibGUuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFdBQVc7QUFDYjs7QUFFQTtFQUNFLFVBQVU7QUFDWjs7QUFFQTtFQUNFLFdBQVc7RUFDWCxnQkFBZ0I7RUFDaEIsb0JBQW9CO0VBQ3BCLHlCQUF5QjtFQUN6QixnQkFBZ0I7RUFDaEIsaUJBQWlCO0VBQ2pCLHFCQUFxQjtBQUN2Qjs7QUFFQTtFQUNFLFlBQVk7QUFDZDs7QUFFQTtFQUNFO0lBQ0UseUJBQXlCO0VBQzNCOztFQUVBO0lBQ0UseUJBQXlCO0VBQzNCO0FBQ0Y7O0FBRUE7RUFDRTtJQUNFLHlCQUF5QjtFQUMzQjs7RUFFQTtJQUNFLHlCQUF5QjtFQUMzQjtBQUNGOztBQUVBO0VBQ0UseUJBQXlCO0FBQzNCOztBQUVBO0VBQ0UsWUFBWTtBQUNkOztBQUVBO0VBQ0UsZUFBZTtBQUNqQjs7QUFFQTtFQUNFLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLGFBQWE7RUFDYix1QkFBdUI7QUFDekI7O0FBRUE7RUFDRSxhQUFhO0VBQ2IsZUFBZTtBQUNqQjs7QUFFQTtJQUNJLHNDQUFzQztBQUMxQzs7QUFFQTtJQUNJLDhCQUE4QjtJQUM5QixnQkFBZ0I7QUFDcEIiLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnQvZGlzcGxheS90YWJsZS90YWJsZS5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnctMTAwIHtcclxuICB3aWR0aDogMTAwJTtcclxufVxyXG5cclxuLnctNTAge1xyXG4gIHdpZHRoOiA1MCU7XHJcbn1cclxuXHJcbnRoIHtcclxuICBjb2xvcjogZ3JleTtcclxuICBmb250LXNpemU6IC44NWVtO1xyXG4gIGxldHRlci1zcGFjaW5nOiAuMWVtO1xyXG4gIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XHJcbiAgdGV4dC1hbGlnbjogbGVmdDtcclxuICBwYWRkaW5nLWxlZnQ6IDFlbTtcclxuICBwYWRkaW5nLWJvdHRvbTogMC41ZW07XHJcbn1cclxuXHJcbi5sZWFybmluZ2FjdGl2aXRpZXMge1xyXG4gIHdpZHRoOiAxNzBweDtcclxufVxyXG5cclxuLmFjdGl2aXRpZXM6bnRoLWNoaWxkKG9kZCkge1xyXG4gIC5sZWFybmluZ2FjdGl2aXRpZXMge1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2YxZjFmMTtcclxuICB9XHJcblxyXG4gIC5pbmRpY2F0b3Ige1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2YxZjFmMTtcclxuICB9XHJcbn1cclxuXHJcbi5hY3Rpdml0aWVzOm50aC1jaGlsZChldmVuKSB7XHJcbiAgLmxlYXJuaW5nYWN0aXZpdGllcyB7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZTVlNWU1O1xyXG4gIH1cclxuXHJcbiAgLmluZGljYXRvciB7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZTVlNWU1O1xyXG4gIH1cclxufVxyXG5cclxuLmxlcmFuaW5nZXZlbnRzOm50aC1jaGlsZChvZGQpIHtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjFmMWYxO1xyXG59XHJcblxyXG4ubGVyYW5pbmdldmVudHMge1xyXG4gIHdpZHRoOiAxMjBweDtcclxufVxyXG5cclxuLnNvcnRhYmxlIHtcclxuICBjdXJzb3I6IHBvaW50ZXI7XHJcbn1cclxuXHJcbi5yZXZpZXctaWNvbiwgLnJlZmVyZW5jZS1pY29uIHtcclxuICBtYXJnaW4tbGVmdDogMC4zZW07XHJcbn1cclxuXHJcbi5pbmRpY2F0b3ItY29udGVudCB7XHJcbiAgZGlzcGxheTogZmxleDtcclxuICBhbGlnbi1pdGVtczogZmxleC1zdGFydDtcclxufVxyXG5cclxuLmluZGljYXRvci10ZXh0IHtcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIGZsZXgtd3JhcDogd3JhcDtcclxufVxyXG5cclxuLm5vdC15ZXQtdmVyaWZpZWQge1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzhlMWUyMjU0ICFpbXBvcnRhbnQ7XHJcbn1cclxuXHJcbi5ub3QtdmVyaWZpZWQtaW5kaWNhdG9ycyB7XHJcbiAgICBjb2xvcjogcmdiYSg2MywgODEsIDE4MSwgMC44Mik7XHJcbiAgICBtYXJnaW4tbGVmdDogMWVtO1xyXG59XHJcblxyXG4iXX0= */");
-
-/***/ }),
-
-/***/ "./src/app/component/display/table/table.component.ts":
-/*!************************************************************!*\
-  !*** ./src/app/component/display/table/table.component.ts ***!
-  \************************************************************/
-/*! exports provided: TableComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TableComponent", function() { return TableComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _data_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../data.service */ "./src/app/data.service.ts");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-
-
-
-
-let TableComponent = class TableComponent {
-    constructor(dataService, router) {
-        this.dataService = dataService;
-        this.router = router;
-        this.checkboxEmitter = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
-        this.getMetericsEmitter = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
-        this.onReviewEmitter = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
-        this.onVerdictEmitter = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
-        this.onDeleteEmitter = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
-        this.onVerifyEmitter = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
-    }
-    ngOnInit() {
-    }
-    // emits the indicator when the checkbox is clicked
-    onCheckboxChange(indic) {
-        this.checkboxEmitter.emit(indic);
-    }
-    // navigates to edit of indicator
-    editAsSuperAdmin(indic) {
-        this.router.navigate([`indicator/${indic._id}/edit`]);
-    }
-    // computes the original indicator name with referenceNumber
-    getFullIndicatorName(indic) {
-        return `${indic.Title} ${indic.referenceNumber}`;
-    }
-    // navigates to the link corresponding to the reference of the chosen indicator
-    navigateToReferenceLink(indic) {
-        this.dataService.getReferenceByReferenceNumber(indic.referenceNumber).subscribe(reference => {
-            window.open(reference.link);
-        });
-    }
-};
-TableComponent.ctorParameters = () => [
-    { type: _data_service__WEBPACK_IMPORTED_MODULE_2__["DataService"] },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
-];
-tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
-], TableComponent.prototype, "data", void 0);
-tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
-], TableComponent.prototype, "searchInd", void 0);
-tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
-], TableComponent.prototype, "searchMat", void 0);
-tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
-], TableComponent.prototype, "checkedMap", void 0);
-tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
-], TableComponent.prototype, "notVerifiedIndicator", void 0);
-tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])()
-], TableComponent.prototype, "checkboxEmitter", void 0);
-tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])()
-], TableComponent.prototype, "getMetericsEmitter", void 0);
-tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])()
-], TableComponent.prototype, "onReviewEmitter", void 0);
-tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])()
-], TableComponent.prototype, "onVerdictEmitter", void 0);
-tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])()
-], TableComponent.prototype, "onDeleteEmitter", void 0);
-tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])()
-], TableComponent.prototype, "onVerifyEmitter", void 0);
-tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
-], TableComponent.prototype, "loggedIn", void 0);
-TableComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'app-table',
-        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./table.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/component/display/table/table.component.html")).default,
-        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./table.component.css */ "./src/app/component/display/table/table.component.css")).default]
-    })
-], TableComponent);
 
 
 
@@ -8756,7 +8168,7 @@ DropdownComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".example-spacer {\r\n    flex: 1 1 auto;\r\n  }\r\n\r\n  .HeaderLogo {\r\n    cursor: pointer;\r\n  }\r\n\r\n  .buttonHead {\r\n  padding: 13px 26px;\r\n  text-align: center;\r\n  transition: 1s;\r\n  background-size: 1051% auto;\r\n  color: white;\r\n  border-radius: 4px;\r\n  display: inline-block;\r\n  border: 0;\r\n  background-image: linear-gradient(45deg, #3f51b5 10%, #a1bcde 51%, #3f51b5 100%);\r\n  cursor: pointer;\r\n  -moz-user-select: none;\r\n  -ms-user-select: none;\r\n  user-select: none;\r\n  -webkit-user-select: none;\r\n  touch-action: manipulation;\r\n  font-size: 15px;\r\n  height: 100%\r\n}\r\n\r\n  .buttonHead:hover {\r\n  background-position: right center;\r\n  /* change the direction of the change here */\r\n  color: #fff;\r\n  text-decoration: none;\r\n}\r\n\r\n  .buttonHead:active {\r\n  transform: scale(0.80);\r\n}\r\n\r\n  /*RUBEN STUFF*/\r\n\r\n  .template-container-display {\r\n  width: 100%;\r\n  padding-left: 3em;\r\n  display: flex;\r\n  justify-content: space-between;\r\n}\r\n\r\n  .right-buttons {\r\n  display: flex;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50L2hlYWRlci9oZWFkZXIuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGNBQWM7RUFDaEI7O0VBRUE7SUFDRSxlQUFlO0VBQ2pCOztFQUdGO0VBQ0Usa0JBQWtCO0VBQ2xCLGtCQUFrQjtFQUNsQixjQUFjO0VBQ2QsMkJBQTJCO0VBQzNCLFlBQVk7RUFDWixrQkFBa0I7RUFDbEIscUJBQXFCO0VBQ3JCLFNBQVM7RUFDVCxnRkFBZ0Y7RUFDaEYsZUFBZTtFQUNmLHNCQUFzQjtFQUN0QixxQkFBcUI7RUFDckIsaUJBQWlCO0VBQ2pCLHlCQUF5QjtFQUN6QiwwQkFBMEI7RUFDMUIsZUFBZTtFQUNmO0FBQ0Y7O0VBRUE7RUFDRSxpQ0FBaUM7RUFDakMsNENBQTRDO0VBQzVDLFdBQVc7RUFDWCxxQkFBcUI7QUFDdkI7O0VBRUE7RUFDRSxzQkFBc0I7QUFDeEI7O0VBR0EsY0FBYzs7RUFFZDtFQUNFLFdBQVc7RUFDWCxpQkFBaUI7RUFDakIsYUFBYTtFQUNiLDhCQUE4QjtBQUNoQzs7RUFFQTtFQUNFLGFBQWE7QUFDZiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudC9oZWFkZXIvaGVhZGVyLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhhbXBsZS1zcGFjZXIge1xyXG4gICAgZmxleDogMSAxIGF1dG87XHJcbiAgfVxyXG5cclxuICAuSGVhZGVyTG9nbyB7XHJcbiAgICBjdXJzb3I6IHBvaW50ZXI7XHJcbiAgfVxyXG5cclxuXHJcbi5idXR0b25IZWFkIHtcclxuICBwYWRkaW5nOiAxM3B4IDI2cHg7XHJcbiAgdGV4dC1hbGlnbjogY2VudGVyO1xyXG4gIHRyYW5zaXRpb246IDFzO1xyXG4gIGJhY2tncm91bmQtc2l6ZTogMTA1MSUgYXV0bztcclxuICBjb2xvcjogd2hpdGU7XHJcbiAgYm9yZGVyLXJhZGl1czogNHB4O1xyXG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcclxuICBib3JkZXI6IDA7XHJcbiAgYmFja2dyb3VuZC1pbWFnZTogbGluZWFyLWdyYWRpZW50KDQ1ZGVnLCAjM2Y1MWI1IDEwJSwgI2ExYmNkZSA1MSUsICMzZjUxYjUgMTAwJSk7XHJcbiAgY3Vyc29yOiBwb2ludGVyO1xyXG4gIC1tb3otdXNlci1zZWxlY3Q6IG5vbmU7XHJcbiAgLW1zLXVzZXItc2VsZWN0OiBub25lO1xyXG4gIHVzZXItc2VsZWN0OiBub25lO1xyXG4gIC13ZWJraXQtdXNlci1zZWxlY3Q6IG5vbmU7XHJcbiAgdG91Y2gtYWN0aW9uOiBtYW5pcHVsYXRpb247XHJcbiAgZm9udC1zaXplOiAxNXB4O1xyXG4gIGhlaWdodDogMTAwJVxyXG59XHJcblxyXG4uYnV0dG9uSGVhZDpob3ZlciB7XHJcbiAgYmFja2dyb3VuZC1wb3NpdGlvbjogcmlnaHQgY2VudGVyO1xyXG4gIC8qIGNoYW5nZSB0aGUgZGlyZWN0aW9uIG9mIHRoZSBjaGFuZ2UgaGVyZSAqL1xyXG4gIGNvbG9yOiAjZmZmO1xyXG4gIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcclxufVxyXG5cclxuLmJ1dHRvbkhlYWQ6YWN0aXZlIHtcclxuICB0cmFuc2Zvcm06IHNjYWxlKDAuODApO1xyXG59XHJcblxyXG5cclxuLypSVUJFTiBTVFVGRiovXHJcblxyXG4udGVtcGxhdGUtY29udGFpbmVyLWRpc3BsYXkge1xyXG4gIHdpZHRoOiAxMDAlO1xyXG4gIHBhZGRpbmctbGVmdDogM2VtO1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xyXG59XHJcblxyXG4ucmlnaHQtYnV0dG9ucyB7XHJcbiAgZGlzcGxheTogZmxleDtcclxufVxyXG4iXX0= */");
+/* harmony default export */ __webpack_exports__["default"] = (".example-spacer {\n    flex: 1 1 auto;\n  }\n  \n  .HeaderLogo {\n    cursor: pointer;\n  }\n  \n  .buttonHead {\n  padding: 13px 26px;\n  text-align: center;\n  transition: 1s;\n  background-size: 1051% auto;\n  color: white;\n  border-radius: 4px;\n  display: inline-block;\n  border: 0px;\n  background-image: linear-gradient(45deg, #3f51b5 10%, #a1bcde 51%, #3f51b5 100%);\n  cursor: pointer;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  -webkit-user-select: none;\n  touch-action: manipulation;\n  font-size: 15px;\n}\n  \n  .buttonHead:hover {\n  background-position: right center;\n  /* change the direction of the change here */\n  color: #fff;\n  text-decoration: none;\n}\n  \n  .buttonHead:active {\n  transform: scale(0.80);\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50L2hlYWRlci9oZWFkZXIuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtJQUNJLGNBQWM7RUFDaEI7O0VBRUE7SUFDRSxlQUFlO0VBQ2pCOztFQUdGO0VBQ0Usa0JBQWtCO0VBQ2xCLGtCQUFrQjtFQUNsQixjQUFjO0VBQ2QsMkJBQTJCO0VBQzNCLFlBQVk7RUFDWixrQkFBa0I7RUFDbEIscUJBQXFCO0VBQ3JCLFdBQVc7RUFDWCxnRkFBZ0Y7RUFDaEYsZUFBZTtFQUNmLHNCQUFzQjtFQUN0QixxQkFBcUI7RUFDckIsaUJBQWlCO0VBQ2pCLHlCQUF5QjtFQUN6QiwwQkFBMEI7RUFDMUIsZUFBZTtBQUNqQjs7RUFFQTtFQUNFLGlDQUFpQztFQUNqQyw0Q0FBNEM7RUFDNUMsV0FBVztFQUNYLHFCQUFxQjtBQUN2Qjs7RUFFQTtFQUNFLHNCQUFzQjtBQUN4QiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudC9oZWFkZXIvaGVhZGVyLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhhbXBsZS1zcGFjZXIge1xuICAgIGZsZXg6IDEgMSBhdXRvO1xuICB9XG4gIFxuICAuSGVhZGVyTG9nbyB7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xuICB9XG5cblxuLmJ1dHRvbkhlYWQge1xuICBwYWRkaW5nOiAxM3B4IDI2cHg7XG4gIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgdHJhbnNpdGlvbjogMXM7XG4gIGJhY2tncm91bmQtc2l6ZTogMTA1MSUgYXV0bztcbiAgY29sb3I6IHdoaXRlO1xuICBib3JkZXItcmFkaXVzOiA0cHg7XG4gIGRpc3BsYXk6IGlubGluZS1ibG9jaztcbiAgYm9yZGVyOiAwcHg7XG4gIGJhY2tncm91bmQtaW1hZ2U6IGxpbmVhci1ncmFkaWVudCg0NWRlZywgIzNmNTFiNSAxMCUsICNhMWJjZGUgNTElLCAjM2Y1MWI1IDEwMCUpO1xuICBjdXJzb3I6IHBvaW50ZXI7XG4gIC1tb3otdXNlci1zZWxlY3Q6IG5vbmU7XG4gIC1tcy11c2VyLXNlbGVjdDogbm9uZTtcbiAgdXNlci1zZWxlY3Q6IG5vbmU7XG4gIC13ZWJraXQtdXNlci1zZWxlY3Q6IG5vbmU7XG4gIHRvdWNoLWFjdGlvbjogbWFuaXB1bGF0aW9uO1xuICBmb250LXNpemU6IDE1cHg7XG59XG5cbi5idXR0b25IZWFkOmhvdmVyIHtcbiAgYmFja2dyb3VuZC1wb3NpdGlvbjogcmlnaHQgY2VudGVyO1xuICAvKiBjaGFuZ2UgdGhlIGRpcmVjdGlvbiBvZiB0aGUgY2hhbmdlIGhlcmUgKi9cbiAgY29sb3I6ICNmZmY7XG4gIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbn1cblxuLmJ1dHRvbkhlYWQ6YWN0aXZlIHtcbiAgdHJhbnNmb3JtOiBzY2FsZSgwLjgwKTtcbn0iXX0= */");
 
 /***/ }),
 
@@ -8774,25 +8186,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _data_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../data.service */ "./src/app/data.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-/* harmony import */ var _header_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./header.service */ "./src/app/component/header/header.service.ts");
-/* harmony import */ var _assets_js_tour_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../assets/js/tour.service */ "./src/assets/js/tour.service.ts");
-
-
 
 
 
 
 let HeaderComponent = class HeaderComponent {
-    constructor(dataService, router, headerTemplateService, tourService) {
+    constructor(dataService, router) {
         this.dataService = dataService;
         this.router = router;
-        this.headerTemplateService = headerTemplateService;
-        this.tourService = tourService;
     }
     ngOnInit() {
-        this.headerTemplateService.headerSubject.subscribe(headerString => {
-            this.currentPage = headerString;
-        });
     }
     addIndicators() {
         this.router.navigate(['/add']);
@@ -8806,26 +8209,17 @@ let HeaderComponent = class HeaderComponent {
         this.router.navigate(['/login']);
     }
     metrics() {
-        this.router.navigate([]).then(result => {
-            window.open(`/metrics`, '_blank');
-        });
+        // this.router.navigate(['/referance'] );
+        this.router.navigate([]).then(result => { window.open(`/metrics`, '_blank'); });
     }
     reset() {
         location.href = "/";
     }
-    navigateHome() {
-        this.router.navigate(['/']);
-    }
 };
 HeaderComponent.ctorParameters = () => [
     { type: _data_service__WEBPACK_IMPORTED_MODULE_2__["DataService"] },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
-    { type: _header_service__WEBPACK_IMPORTED_MODULE_4__["HeaderService"] },
-    { type: _assets_js_tour_service__WEBPACK_IMPORTED_MODULE_5__["TourService"] }
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
 ];
-tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])("headerDisplay", { static: true })
-], HeaderComponent.prototype, "headerDisplay", void 0);
 HeaderComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-header',
@@ -8833,38 +8227,6 @@ HeaderComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./header.component.css */ "./src/app/component/header/header.component.css")).default]
     })
 ], HeaderComponent);
-
-
-
-/***/ }),
-
-/***/ "./src/app/component/header/header.service.ts":
-/*!****************************************************!*\
-  !*** ./src/app/component/header/header.service.ts ***!
-  \****************************************************/
-/*! exports provided: HeaderService */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HeaderService", function() { return HeaderService; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
-
-
-
-let HeaderService = class HeaderService {
-    constructor() {
-        this.headerSubject = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"](null);
-    }
-    setHeader(header) {
-        this.headerSubject.next(header);
-    }
-};
-HeaderService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])()
-], HeaderService);
 
 
 
@@ -8879,7 +8241,7 @@ HeaderService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".referenceItem {\r\n  padding-bottom: 1em;\r\n}\r\n\r\n.buttonLaTool {\r\n  margin: 0;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50L3JlZmVyZW5jZS9yZWZlcmFuY2UuY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLG1CQUFtQjtBQUNyQjs7QUFFQTtFQUNFLFNBQVM7QUFDWCIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudC9yZWZlcmVuY2UvcmVmZXJhbmNlLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIucmVmZXJlbmNlSXRlbSB7XHJcbiAgcGFkZGluZy1ib3R0b206IDFlbTtcclxufVxyXG5cclxuLmJ1dHRvbkxhVG9vbCB7XHJcbiAgbWFyZ2luOiAwO1xyXG59XHJcbiJdfQ== */");
+/* harmony default export */ __webpack_exports__["default"] = ("\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudC9yZWZlcmVuY2UvcmVmZXJhbmNlLmNvbXBvbmVudC5jc3MifQ== */");
 
 /***/ }),
 
@@ -8895,84 +8257,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReferanceComponent", function() { return ReferanceComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _display_display_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../display/display.component */ "./src/app/component/display/display.component.ts");
-/* harmony import */ var _data_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../data.service */ "./src/app/data.service.ts");
-/* harmony import */ var _header_header_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../header/header.service */ "./src/app/component/header/header.service.ts");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
-
-
-
-
-
 
 
 let ReferanceComponent = class ReferanceComponent {
-    constructor(dataService, router, headerService) {
-        this.dataService = dataService;
-        this.router = router;
+    constructor() {
         this.element = document.getElementById("header");
-        this.references$ = this.dataService.getReferences()
-            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["tap"])(references => this.sortByRefNumber(references)));
-        this.DisplayComponent = _display_display_component__WEBPACK_IMPORTED_MODULE_2__["DisplayComponent"];
-        headerService.setHeader('references');
-        this.loggedIn = JSON.parse(localStorage.getItem('currentUser'));
     }
-    ngOnInit() {
-    }
+    ngOnInit() { }
     backToTop() {
         this.element.scrollIntoView({ behavior: "smooth" });
     }
-    // reduces the link to its value after the https:// or www.
-    shortenLink(link) {
-        const splittedLink = link.split('//');
-        let index = 0;
-        if (splittedLink.length > 1) {
-            index = 1;
-        }
-        if (splittedLink[index].includes('www.')) {
-            return splittedLink[index].slice(4);
-        }
-        else {
-            return splittedLink[index];
-        }
-    }
-    // navigates to the edit page
-    editAsSuperAdmin(id) {
-        this.router.navigate([`reference/${id}/edit`]);
-    }
-    // deletes reference from database
-    deleteAsSuperAdmin(reference) {
-        if (confirm("Do you really want to delete this Reference?")) {
-            this.dataService.deleteReference(reference).subscribe(() => {
-                this.references$ = this.dataService.getReferences()
-                    .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["tap"])(references => this.sortByRefNumber(references)));
-            });
-        }
-    }
-    // Sort method to sort references by referenceNumber
-    sortByRefNumber(references) {
-        return references.sort((a, b) => {
-            const numberA = this.extractNumberFromRefNumber(a.referenceNumber);
-            const numberB = this.extractNumberFromRefNumber(b.referenceNumber);
-            if (numberA > numberB) {
-                return 1;
-            }
-            else {
-                return -1;
-            }
-        });
-    }
-    // method to retrieve the number in brackets from a referenceNumber
-    extractNumberFromRefNumber(refNumber) {
-        return Number(refNumber.substring(1, refNumber.length - 1));
-    }
 };
-ReferanceComponent.ctorParameters = () => [
-    { type: _data_service__WEBPACK_IMPORTED_MODULE_3__["DataService"] },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] },
-    { type: _header_header_service__WEBPACK_IMPORTED_MODULE_4__["HeaderService"] }
-];
 ReferanceComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: "app-referance",
@@ -8981,403 +8276,6 @@ ReferanceComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     })
 ], ReferanceComponent);
 
-
-
-/***/ }),
-
-/***/ "./src/app/component/review-display/review-display.component.css":
-/*!***********************************************************************!*\
-  !*** ./src/app/component/review-display/review-display.component.css ***!
-  \***********************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".mx-1 {\r\n  margin-left: 0.25em;\r\n  margin-right: 0.25em;\r\n}\r\n\r\n.mx-2 {\r\n  margin-left: 0.5em;\r\n  margin-right: 0.5em;\r\n}\r\n\r\n.rating-header {\r\n  min-width: 500px;\r\n    display: flex;\r\n\r\n    justify-content: space-between;\r\n}\r\n\r\n.rating-wrapper {\r\n  display: flex;\r\n  flex-direction: column;\r\n  margin-bottom: 20px;\r\n  min-width: 500px;\r\n}\r\n\r\n.single-rating-wrapper {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n  margin: 0;\r\n}\r\n\r\n.reviewDialogContent {\r\n  margin-bottom: 0.5em;\r\n  overflow-x: hidden;\r\n}\r\n\r\n.d-flex {\r\n  display: flex;\r\n}\r\n\r\n.fa-trash {\r\n  color: #e14b1b;\r\n  cursor: pointer;\r\n}\r\n\r\n.fa-pencil {\r\n  color: #575353;\r\n  cursor: pointer;\r\n}\r\n\r\n.reviewPlaceholder {\r\n  padding: 50px 110px 50px 110px;\r\n;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50L3Jldmlldy1kaXNwbGF5L3Jldmlldy1kaXNwbGF5LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxtQkFBbUI7RUFDbkIsb0JBQW9CO0FBQ3RCOztBQUVBO0VBQ0Usa0JBQWtCO0VBQ2xCLG1CQUFtQjtBQUNyQjs7QUFFQTtFQUNFLGdCQUFnQjtJQUNkLGFBQWE7O0lBRWIsOEJBQThCO0FBQ2xDOztBQUVBO0VBQ0UsYUFBYTtFQUNiLHNCQUFzQjtFQUN0QixtQkFBbUI7RUFDbkIsZ0JBQWdCO0FBQ2xCOztBQUVBO0VBQ0UsYUFBYTtFQUNiLDhCQUE4QjtFQUM5QixtQkFBbUI7RUFDbkIsU0FBUztBQUNYOztBQUVBO0VBQ0Usb0JBQW9CO0VBQ3BCLGtCQUFrQjtBQUNwQjs7QUFFQTtFQUNFLGFBQWE7QUFDZjs7QUFFQTtFQUNFLGNBQWM7RUFDZCxlQUFlO0FBQ2pCOztBQUVBO0VBQ0UsY0FBYztFQUNkLGVBQWU7QUFDakI7O0FBRUE7RUFDRSw4QkFBOEI7O0FBRWhDIiwiZmlsZSI6InNyYy9hcHAvY29tcG9uZW50L3Jldmlldy1kaXNwbGF5L3Jldmlldy1kaXNwbGF5LmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubXgtMSB7XHJcbiAgbWFyZ2luLWxlZnQ6IDAuMjVlbTtcclxuICBtYXJnaW4tcmlnaHQ6IDAuMjVlbTtcclxufVxyXG5cclxuLm14LTIge1xyXG4gIG1hcmdpbi1sZWZ0OiAwLjVlbTtcclxuICBtYXJnaW4tcmlnaHQ6IDAuNWVtO1xyXG59XHJcblxyXG4ucmF0aW5nLWhlYWRlciB7XHJcbiAgbWluLXdpZHRoOiA1MDBweDtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcblxyXG4gICAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xyXG59XHJcblxyXG4ucmF0aW5nLXdyYXBwZXIge1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcclxuICBtYXJnaW4tYm90dG9tOiAyMHB4O1xyXG4gIG1pbi13aWR0aDogNTAwcHg7XHJcbn1cclxuXHJcbi5zaW5nbGUtcmF0aW5nLXdyYXBwZXIge1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xyXG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcbiAgbWFyZ2luOiAwO1xyXG59XHJcblxyXG4ucmV2aWV3RGlhbG9nQ29udGVudCB7XHJcbiAgbWFyZ2luLWJvdHRvbTogMC41ZW07XHJcbiAgb3ZlcmZsb3cteDogaGlkZGVuO1xyXG59XHJcblxyXG4uZC1mbGV4IHtcclxuICBkaXNwbGF5OiBmbGV4O1xyXG59XHJcblxyXG4uZmEtdHJhc2gge1xyXG4gIGNvbG9yOiAjZTE0YjFiO1xyXG4gIGN1cnNvcjogcG9pbnRlcjtcclxufVxyXG5cclxuLmZhLXBlbmNpbCB7XHJcbiAgY29sb3I6ICM1NzUzNTM7XHJcbiAgY3Vyc29yOiBwb2ludGVyO1xyXG59XHJcblxyXG4ucmV2aWV3UGxhY2Vob2xkZXIge1xyXG4gIHBhZGRpbmc6IDUwcHggMTEwcHggNTBweCAxMTBweDtcclxuO1xyXG59XHJcbiJdfQ== */");
-
-/***/ }),
-
-/***/ "./src/app/component/review-display/review-display.component.ts":
-/*!**********************************************************************!*\
-  !*** ./src/app/component/review-display/review-display.component.ts ***!
-  \**********************************************************************/
-/*! exports provided: ReviewDisplayComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReviewDisplayComponent", function() { return ReviewDisplayComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _data_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../data.service */ "./src/app/data.service.ts");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-
-
-
-
-let ReviewDisplayComponent = class ReviewDisplayComponent {
-    constructor(dataService, router) {
-        this.dataService = dataService;
-        this.router = router;
-        this.reviewExistsForUser = false;
-        this.buttonLabel = 'Create Review';
-        this.loggedIn = JSON.parse(localStorage.getItem('currentUser'));
-    }
-    ngOnInit() {
-        this.getReviews();
-    }
-    // retrieves Reviews from the database and calculates the averages
-    getReviews() {
-        this.dataService.getReviews(this.indicator._id).subscribe((reviews) => {
-            this.reviews = !this.loggedIn ? reviews : reviews.sort((e1, e2) => {
-                if (e1.name === this.loggedIn.username) {
-                    return -1;
-                }
-                else if (e2.name === this.loggedIn.username) {
-                    return 1;
-                }
-                else {
-                    return 0;
-                }
-            });
-            if (this.loggedIn && this.reviews.length > 0 && this.reviews[0].name === this.loggedIn.username) {
-                this.reviewExistsForUser = true;
-                this.buttonLabel = 'Edit Review';
-            }
-            else {
-                this.reviewExistsForUser = false;
-                this.buttonLabel = 'Create Review';
-            }
-            this.calculateOverallAverage(reviews);
-        });
-    }
-    // uses reviews from input to calculated the overall average over all categories
-    calculateOverallAverage(reviews) {
-        this.reviewAverage = {
-            name: 'average',
-            articleAnalysis: reviews.reduce((previousValue, currentValue) => previousValue + currentValue.articleAnalysis, 0) / reviews.length,
-            articleContribution: reviews.reduce((previousValue, currentValue) => previousValue + currentValue.articleContribution, 0) / reviews.length,
-            articleClarity: reviews.reduce((previousValue, currentValue) => previousValue + currentValue.articleClarity, 0) / reviews.length,
-            articleConclusion: reviews.reduce((previousValue, currentValue) => previousValue + currentValue.articleConclusion, 0) / reviews.length,
-            articleData: reviews.reduce((previousValue, currentValue) => previousValue + currentValue.articleData, 0) / reviews.length,
-            indicatorQuality: reviews.reduce((previousValue, currentValue) => previousValue + currentValue.indicatorQuality, 0) / reviews.length
-        };
-        this.totalAverage = (this.reviewAverage.articleAnalysis + this.reviewAverage.articleConclusion + this.reviewAverage.articleContribution +
-            this.reviewAverage.articleClarity + this.reviewAverage.articleData + this.reviewAverage.indicatorQuality) / 6;
-    }
-    // uses review from input to calculated the avarage
-    calculateAverage(review) {
-        return (review.articleAnalysis + review.articleConclusion + review.articleContribution +
-            review.articleClarity + review.articleData + review.indicatorQuality) / 6;
-    }
-    // navigates to add review page
-    createReview() {
-        this.router.navigate([`/review/add/${this.indicator._id}`]);
-    }
-    // navigates to edit review page
-    editReview(reviewId) {
-        this.router.navigate([`review/${reviewId}/edit`], { state: { additionalInfo: { indicator: this.indicator } } });
-    }
-    // depending on if a review already exists for the user, the method calls the edit or create method
-    addReview() {
-        if (this.reviewExistsForUser) {
-            this.editReview(this.reviews[0]._id);
-        }
-        else {
-            this.createReview();
-        }
-    }
-    // navigates to login-page
-    logIn() {
-        this.router.navigate([`/review/add/${this.indicator._id}`], { state: { additionalInfo: { indicator: this.indicator } } });
-    }
-    // opens Edit dialog for the superadmin
-    editAsSuperAdmin(reviewId) {
-        this.editReview(reviewId);
-    }
-    // deletes review from database after confirmation in the browser
-    deleteAsSuperAdmin(reviewId) {
-        if (confirm("Do you really want to delete this Review?")) {
-            this.dataService.deleteReview(reviewId).subscribe(() => {
-                this.getReviews();
-            });
-        }
-    }
-};
-ReviewDisplayComponent.ctorParameters = () => [
-    { type: _data_service__WEBPACK_IMPORTED_MODULE_2__["DataService"] },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
-];
-tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
-], ReviewDisplayComponent.prototype, "indicator", void 0);
-ReviewDisplayComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'app-review-display',
-        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./review-display.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/component/review-display/review-display.component.html")).default,
-        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./review-display.component.css */ "./src/app/component/review-display/review-display.component.css")).default]
-    })
-], ReviewDisplayComponent);
-
-
-
-/***/ }),
-
-/***/ "./src/app/component/review-edit/review-edit.component.css":
-/*!*****************************************************************!*\
-  !*** ./src/app/component/review-edit/review-edit.component.css ***!
-  \*****************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".outer-div {\r\n  margin: 50px;\r\n}\r\n\r\n.row {\r\n    width: 100%;\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n}\r\n\r\n.row-no-wrap {\r\n    width: 100%;\r\n    display: flex;\r\n    flex-wrap: nowrap;\r\n    margin-bottom: .5em;\r\n}\r\n\r\n.column-100 {\r\n  display: flex;\r\n  flex-direction: column;\r\n  width: 100%;\r\n  margin-bottom: 20px;\r\n}\r\n\r\n.column-25 {\r\n  display: flex;\r\n  flex-direction: column;\r\n  width: 25%;\r\n  min-width: 280px;\r\n  margin-bottom: 20px;\r\n}\r\n\r\n.note-textarea {\r\n  max-width: 95%;\r\n  min-height: 100px;\r\n  font-size: initial;\r\n  font-family: sans-serif;\r\n}\r\n\r\n.alert {\r\n  color: red;\r\n  font-size: small;\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50L3Jldmlldy1lZGl0L3Jldmlldy1lZGl0LmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxZQUFZO0FBQ2Q7O0FBRUE7SUFDSSxXQUFXO0lBQ1gsYUFBYTtJQUNiLGVBQWU7QUFDbkI7O0FBRUE7SUFDSSxXQUFXO0lBQ1gsYUFBYTtJQUNiLGlCQUFpQjtJQUNqQixtQkFBbUI7QUFDdkI7O0FBRUE7RUFDRSxhQUFhO0VBQ2Isc0JBQXNCO0VBQ3RCLFdBQVc7RUFDWCxtQkFBbUI7QUFDckI7O0FBRUE7RUFDRSxhQUFhO0VBQ2Isc0JBQXNCO0VBQ3RCLFVBQVU7RUFDVixnQkFBZ0I7RUFDaEIsbUJBQW1CO0FBQ3JCOztBQUVBO0VBQ0UsY0FBYztFQUNkLGlCQUFpQjtFQUNqQixrQkFBa0I7RUFDbEIsdUJBQXVCO0FBQ3pCOztBQUVBO0VBQ0UsVUFBVTtFQUNWLGdCQUFnQjtBQUNsQiIsImZpbGUiOiJzcmMvYXBwL2NvbXBvbmVudC9yZXZpZXctZWRpdC9yZXZpZXctZWRpdC5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLm91dGVyLWRpdiB7XHJcbiAgbWFyZ2luOiA1MHB4O1xyXG59XHJcblxyXG4ucm93IHtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGZsZXgtd3JhcDogd3JhcDtcclxufVxyXG5cclxuLnJvdy1uby13cmFwIHtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgZGlzcGxheTogZmxleDtcclxuICAgIGZsZXgtd3JhcDogbm93cmFwO1xyXG4gICAgbWFyZ2luLWJvdHRvbTogLjVlbTtcclxufVxyXG5cclxuLmNvbHVtbi0xMDAge1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcclxuICB3aWR0aDogMTAwJTtcclxuICBtYXJnaW4tYm90dG9tOiAyMHB4O1xyXG59XHJcblxyXG4uY29sdW1uLTI1IHtcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XHJcbiAgd2lkdGg6IDI1JTtcclxuICBtaW4td2lkdGg6IDI4MHB4O1xyXG4gIG1hcmdpbi1ib3R0b206IDIwcHg7XHJcbn1cclxuXHJcbi5ub3RlLXRleHRhcmVhIHtcclxuICBtYXgtd2lkdGg6IDk1JTtcclxuICBtaW4taGVpZ2h0OiAxMDBweDtcclxuICBmb250LXNpemU6IGluaXRpYWw7XHJcbiAgZm9udC1mYW1pbHk6IHNhbnMtc2VyaWY7XHJcbn1cclxuXHJcbi5hbGVydCB7XHJcbiAgY29sb3I6IHJlZDtcclxuICBmb250LXNpemU6IHNtYWxsO1xyXG59XHJcbiJdfQ== */");
-
-/***/ }),
-
-/***/ "./src/app/component/review-edit/review-edit.component.ts":
-/*!****************************************************************!*\
-  !*** ./src/app/component/review-edit/review-edit.component.ts ***!
-  \****************************************************************/
-/*! exports provided: ReviewEditComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReviewEditComponent", function() { return ReviewEditComponent; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm2015/forms.js");
-/* harmony import */ var _data_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../data.service */ "./src/app/data.service.ts");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-/* harmony import */ var _header_header_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../header/header.service */ "./src/app/component/header/header.service.ts");
-
-
-
-
-
-
-let ReviewEditComponent = class ReviewEditComponent {
-    // initializes Edit page depending on the way the page was opened. Edit or New Review
-    constructor(dataService, router, route, headerService) {
-        this.dataService = dataService;
-        this.router = router;
-        this.route = route;
-        this.formGroup = new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormGroup"]({
-            _id: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](null),
-            name: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](''),
-            indicatorId: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](null),
-            indicatorQuality: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
-            indicatorQualityNote: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](''),
-            articleClarity: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
-            articleClarityNote: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](''),
-            articleData: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
-            articleDataNote: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](''),
-            articleAnalysis: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
-            articleAnalysisNote: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](''),
-            articleConclusion: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
-            articleConclusionNote: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](''),
-            articleContribution: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](null, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required),
-            articleContributionNote: new _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormControl"](''),
-        });
-        headerService.setHeader('add-review');
-        this.currentUser = JSON.parse(localStorage.getItem('currentUser'));
-        this.reviewId = this.route.snapshot.params.id;
-        if (this.reviewId) {
-            this.dataService.getReviewById(this.reviewId).subscribe(review => {
-                this.review = review;
-                this.dataService.getIndicatorById(review.indicatorId).subscribe(indicator => {
-                    this.indicator = indicator;
-                    this.dataService.getReferenceByReferenceNumber(indicator.referenceNumber).subscribe(reference => {
-                        this.reference = reference;
-                    });
-                });
-            });
-        }
-        this.indicatorId = this.route.snapshot.params.indicatorId;
-        if (this.indicatorId) {
-            this.dataService.getIndicatorById(this.indicatorId).subscribe(indicator => {
-                this.indicator = indicator;
-                this.dataService.getReferenceByReferenceNumber(indicator.referenceNumber).subscribe(reference => {
-                    this.reference = reference;
-                });
-            });
-            this.dataService.getReviewByIndicatorIdAndUsername(this.indicatorId, this.currentUser.username).subscribe(review => {
-                if (review) {
-                    this.router.navigate([`review/${review._id}/edit`]);
-                }
-            });
-        }
-    }
-    // initializes the form after a timeout for getting data from the backend
-    ngOnInit() {
-        setTimeout(() => {
-            this.formGroup.controls['name'].setValue(this.currentUser.username);
-            if (this.review) {
-                this.initializeForm(this.review);
-            }
-        }, 100);
-    }
-    // if the form is valid saves a new or overwrites an exisiting review
-    onSubmit() {
-        this.formGroup.markAllAsTouched();
-        if (!this.formGroup.valid) {
-            return;
-        }
-        const data = this.formGroup.value;
-        data.indicatorId = this.indicator._id;
-        const saveReview$ = this.reviewId ?
-            this.dataService.editReview(data) :
-            this.dataService.addReview(data);
-        saveReview$.subscribe(savedRating => {
-            this.router.navigate(['/']);
-        });
-    }
-    // sets formcontrol Value for given formcontrolName rating
-    ratingChanged(formControlName, rating) {
-        this.formGroup.controls[formControlName].setValue(rating);
-    }
-    // initializes Form
-    initializeForm(review) {
-        this.formGroup.setValue(review);
-        this.indicatorQuality = review.indicatorQuality;
-        this.articleClarity = review.articleClarity;
-        this.articleData = review.articleData;
-        this.articleAnalysis = review.articleAnalysis;
-        this.articleConclusion = review.articleConclusion;
-        this.articleContribution = review.articleContribution;
-    }
-    // deletes an existing Review
-    deleteReview() {
-        this.dataService.deleteReview(this.formGroup.controls['_id'].value).subscribe(savedRating => {
-            this.router.navigate(['/']);
-        });
-    }
-    // reduces the link string to only show the part after https:// or www.
-    shortenLink(link) {
-        const splittedLink = link.split('//');
-        let index = 0;
-        if (splittedLink.length > 1) {
-            index = 1;
-        }
-        if (splittedLink[index].includes('www.')) {
-            return splittedLink[index].slice(4);
-        }
-        else {
-            return splittedLink[index];
-        }
-    }
-};
-ReviewEditComponent.ctorParameters = () => [
-    { type: _data_service__WEBPACK_IMPORTED_MODULE_3__["DataService"] },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] },
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["ActivatedRoute"] },
-    { type: _header_header_service__WEBPACK_IMPORTED_MODULE_5__["HeaderService"] }
-];
-ReviewEditComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'app-review-edit',
-        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./review-edit.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/component/review-edit/review-edit.component.html")).default,
-        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./review-edit.component.css */ "./src/app/component/review-edit/review-edit.component.css")).default]
-    })
-], ReviewEditComponent);
-
-
-
-/***/ }),
-
-/***/ "./src/app/component/star-rating/star-rating.component.css":
-/*!*****************************************************************!*\
-  !*** ./src/app/component/star-rating/star-rating.component.css ***!
-  \*****************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = (".mat-icon-button[disabled] {\r\n  color: #f5d900;\r\n}\r\n\r\n.mat-icon-button {\r\n  height: 24px;\r\n  width: 24px;\r\n  color: #f5d900 !important;\r\n\r\n  .mat-icon {\r\n    line-height: 19px !important\r\n  }\r\n}\r\n\r\n:host ::ng-deep {\r\n  .mat-button-focus-overlay {\r\n    opacity: 0 !important;\r\n  }\r\n\r\n  /*.mat-button-wrapper {*/\r\n  /*  line-height: 19px !important*/\r\n  /*}*/\r\n}\r\n\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvY29tcG9uZW50L3N0YXItcmF0aW5nL3N0YXItcmF0aW5nLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxjQUFjO0FBQ2hCOztBQUVBO0VBQ0UsWUFBWTtFQUNaLFdBQVc7RUFDWCx5QkFBeUI7O0VBRXpCO0lBQ0U7RUFDRjtBQUNGOztBQUVBO0VBQ0U7SUFDRSxxQkFBcUI7RUFDdkI7O0VBRUEsd0JBQXdCO0VBQ3hCLGlDQUFpQztFQUNqQyxJQUFJO0FBQ04iLCJmaWxlIjoic3JjL2FwcC9jb21wb25lbnQvc3Rhci1yYXRpbmcvc3Rhci1yYXRpbmcuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi5tYXQtaWNvbi1idXR0b25bZGlzYWJsZWRdIHtcclxuICBjb2xvcjogI2Y1ZDkwMDtcclxufVxyXG5cclxuLm1hdC1pY29uLWJ1dHRvbiB7XHJcbiAgaGVpZ2h0OiAyNHB4O1xyXG4gIHdpZHRoOiAyNHB4O1xyXG4gIGNvbG9yOiAjZjVkOTAwICFpbXBvcnRhbnQ7XHJcblxyXG4gIC5tYXQtaWNvbiB7XHJcbiAgICBsaW5lLWhlaWdodDogMTlweCAhaW1wb3J0YW50XHJcbiAgfVxyXG59XHJcblxyXG46aG9zdCA6Om5nLWRlZXAge1xyXG4gIC5tYXQtYnV0dG9uLWZvY3VzLW92ZXJsYXkge1xyXG4gICAgb3BhY2l0eTogMCAhaW1wb3J0YW50O1xyXG4gIH1cclxuXHJcbiAgLyoubWF0LWJ1dHRvbi13cmFwcGVyIHsqL1xyXG4gIC8qICBsaW5lLWhlaWdodDogMTlweCAhaW1wb3J0YW50Ki9cclxuICAvKn0qL1xyXG59XHJcbiJdfQ== */");
-
-/***/ }),
-
-/***/ "./src/app/component/star-rating/star-rating.component.ts":
-/*!****************************************************************!*\
-  !*** ./src/app/component/star-rating/star-rating.component.ts ***!
-  \****************************************************************/
-/*! exports provided: StarRatingComponent, StarRatingColor */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StarRatingComponent", function() { return StarRatingComponent; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "StarRatingColor", function() { return StarRatingColor; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-
-
-let StarRatingComponent = class StarRatingComponent {
-    constructor() {
-        this.rating = 3;
-        this.ratingChange = new _angular_core__WEBPACK_IMPORTED_MODULE_1__["EventEmitter"]();
-        this.starCount = 5;
-        this.color = 'primary';
-        this.disabled = false;
-        this.ratingArr = [];
-    }
-    // initializes the rating array
-    ngOnInit() {
-        for (let index = 0; index < this.starCount; index++) {
-            this.ratingArr.push(index);
-        }
-        this.rating = Math.round(this.rating);
-    }
-    // emits rating changed to parent component
-    onClick(rating) {
-        if (!this.disabled) {
-            this.ratingChange.emit(rating);
-        }
-        return false;
-    }
-    // decides which icon to show, depending on the rating
-    showIcon(index) {
-        if (this.rating >= index + 1) {
-            return 'star';
-        }
-        else {
-            return 'star_border';
-        }
-    }
-};
-tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('rating')
-], StarRatingComponent.prototype, "rating", void 0);
-tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Output"])()
-], StarRatingComponent.prototype, "ratingChange", void 0);
-tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('starCount')
-], StarRatingComponent.prototype, "starCount", void 0);
-tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])('color')
-], StarRatingComponent.prototype, "color", void 0);
-tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
-], StarRatingComponent.prototype, "disabled", void 0);
-StarRatingComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-        selector: 'mat-star-rating',
-        template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./star-rating.component.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/component/star-rating/star-rating.component.html")).default,
-        styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./star-rating.component.css */ "./src/app/component/star-rating/star-rating.component.css")).default]
-    })
-], StarRatingComponent);
-
-var StarRatingColor;
-(function (StarRatingColor) {
-    StarRatingColor["primary"] = "primary";
-    StarRatingColor["accent"] = "accent";
-    StarRatingColor["warn"] = "warn";
-})(StarRatingColor || (StarRatingColor = {}));
 
 
 /***/ }),
@@ -9415,63 +8313,6 @@ let DataService = class DataService {
     getdata() {
         return this.http.get(`${this.uri}/display/data`);
     }
-    getEvents() {
-        return this.http.get(`${this.uri}/events`);
-    }
-    getActivities() {
-        return this.http.get(`${this.uri}/activities`);
-    }
-    getActivitiesByIndicatorId(indicatorId) {
-        return this.http.get(`${this.uri}/activities/indicator/${indicatorId}`);
-    }
-    getIndicators() {
-        return this.http.get(`${this.uri}/indicators`);
-    }
-    getIndicatorById(id) {
-        return this.http.get(`${this.uri}/indicator/${id}`);
-    }
-    verifyIndicator(id) {
-        return this.http.put(`${this.uri}/indicator/verify`, { id });
-    }
-    getPathByIndicatorId(id) {
-        return this.http.get(`${this.uri}/path/${id}`);
-    }
-    getPathByReferenceId(id) {
-        return this.http.get(`${this.uri}/path/reference/${id}`);
-    }
-    getReviews(indicatorId) {
-        return this.http.get(`${this.uri}/display/review/${indicatorId}`);
-    }
-    getReviewById(reviewId) {
-        return this.http.get(`${this.uri}/display/review/${reviewId}/edit`);
-    }
-    getReviewByIndicatorIdAndUsername(indicatorId, username) {
-        return this.http.get(`${this.uri}/display/review/${indicatorId}/${username}`);
-    }
-    addReview(review) {
-        return this.http.post(`${this.uri}/review/add`, review);
-    }
-    editReview(review) {
-        return this.http.put(`${this.uri}/review/edit`, review);
-    }
-    deleteReview(reviewId) {
-        return this.http.delete(`${this.uri}/review/${reviewId}/delete`);
-    }
-    getReferences() {
-        return this.http.get(`${this.uri}/reference`);
-    }
-    getReferenceById(referenceId) {
-        return this.http.get(`${this.uri}/reference/${referenceId}`);
-    }
-    getReferenceByReferenceNumber(referenceNumber) {
-        return this.http.get(`${this.uri}/reference/number/${referenceNumber}`);
-    }
-    updateReference(id, reference) {
-        return this.http.put(`${this.uri}/reference/${id}/edit`, reference);
-    }
-    deleteReference(reference) {
-        return this.http.delete(`${this.uri}/reference/${reference._id}/${reference.referenceNumber}/delete`);
-    }
     getsearchresult(search) {
         const httpOptions = {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
@@ -9488,19 +8329,22 @@ let DataService = class DataService {
         };
         return this.http.post(`${this.uri}/getsearchindicator`, { search, httpOptions });
     }
-    addIndicatorAndReference(data) {
-        return this.http.post(`${this.uri}/indicator/add`, data);
+    addData(LearningEvents, LearningActivities, indicator) {
+        const data1 = {
+            LearningEvents: LearningEvents,
+            LearningActivities: {
+                Name: LearningActivities,
+                indicator: indicator,
+            }
+        };
+        console.log("addData:", data1);
+        return this.http.post(`${this.uri}/add/data`, data1);
     }
-    editIndicator(id, data) {
-        return this.http.put(`${this.uri}/indicator/${id}/edit`, data);
-    }
-    deleteIndicator(indicatorId) {
-        return this.http.delete(`${this.uri}/indicator/${indicatorId}/delete`);
-    }
-    removeIndicatorFromActivity(activityId, indicatorId) {
-        return this.http.put(`${this.uri}/activity/${activityId}/remove`, { indicatorId });
-    }
+    //public get currentUserValue(): User {
+    //return this.currentUserSubject.value;
+    //}
     login(username, password) {
+        console.log(username);
         const httpOptions = {
             headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
                 'Content-Type': 'text/plain',
@@ -9514,22 +8358,21 @@ let DataService = class DataService {
             //return user;
         }));
     }
-    register(user) {
-        return this.http.post(`${this.uri}/register`, user);
-    }
     isLoggedIn() {
         return this.loggedIn;
+    }
+    getActivities(searchAct) {
+        const httpOptions = {
+            headers: new _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpHeaders"]({
+                'Content-Type': 'text/plain',
+            })
+        };
+        return this.http.post(`${this.uri}/getActivities`, { searchAct, httpOptions });
     }
     upload(file) {
         const formData = new FormData();
         formData.append('file', file, file.name);
         return this.http.post(`${this.uri}/upload`, formData);
-    }
-    generateOldTreeStructure(oldTreeStructure) {
-        return this.http.post(`${this.uri}/generate/treeStructure`, oldTreeStructure);
-    }
-    getEventsByActivityId(id) {
-        return this.http.get(`${this.uri}/eventsByActivityId/${id}`);
     }
 };
 DataService.ctorParameters = () => [
@@ -9540,159 +8383,6 @@ DataService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         providedIn: 'root'
     })
 ], DataService);
-
-
-
-/***/ }),
-
-/***/ "./src/app/superAdmin/super-admin.service.ts":
-/*!***************************************************!*\
-  !*** ./src/app/superAdmin/super-admin.service.ts ***!
-  \***************************************************/
-/*! exports provided: SuperAdminService */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SuperAdminService", function() { return SuperAdminService; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-
-
-
-let SuperAdminService = class SuperAdminService {
-    constructor(router) {
-        this.router = router;
-    }
-    // method to only allow logged in users with super-Admin rights to continue
-    canActivate(route, state) {
-        const currentUser = JSON.parse(localStorage.getItem('currentUser')); //this.dataService.currentUserValue;
-        if (currentUser && currentUser.superAdmin) {
-            return true;
-        }
-        else {
-            this.router.navigate(['/reference']);
-            return false;
-        }
-    }
-};
-SuperAdminService.ctorParameters = () => [
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] }
-];
-SuperAdminService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])()
-], SuperAdminService);
-
-
-
-/***/ }),
-
-/***/ "./src/assets/js/tour.service.ts":
-/*!***************************************!*\
-  !*** ./src/assets/js/tour.service.ts ***!
-  \***************************************/
-/*! exports provided: TourService */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TourService", function() { return TourService; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var intro_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! intro.js */ "./node_modules/intro.js/intro.module.js");
-
-
-
-let TourService = class TourService {
-    myTour() {
-        var introguide = intro_js__WEBPACK_IMPORTED_MODULE_2__["default"]();
-        // var startbtn   = $('#startdemotour');
-        introguide.setOptions({
-            steps: [
-                {
-                    element: '.step0',
-                    intro: 'This guided tour will explain how Learning Analytics indicators archive OpenLAIR can be used. <br> You can Exit the tour anytime you want.',
-                    position: 'bottom'
-                },
-                {
-                    element: '.stepDefine',
-                    intro: 'You can CLICK here anytime for the definition of each filter item. i.e. <br> - Learning Events <br> - Learning Activities <br> - Indicators <br> - Metrics <br>',
-                    position: 'bottom'
-                },
-                {
-                    element: '.step1',
-                    intro: 'Step 1: Here you can select your Learning Events or Objectives.',
-                    position: 'right'
-                },
-                {
-                    element: '.step2',
-                    intro: 'Step 2: Here you can select your Learning Activities.',
-                    position: 'right'
-                },
-                {
-                    element: '.step3',
-                    intro: 'Step 3 (Optional): If you are looking for any specific Indicator, here you can search by indicator.',
-                    position: 'right'
-                },
-                {
-                    element: document.querySelector('.step4'),
-                    intro: 'Step 4: Here you can select (x) the Indicator(s) you want.',
-                    position: 'bottom'
-                },
-                {
-                    element: document.querySelector('.stepViewMetrics'),
-                    intro: 'If you want to see the Metrics CLICK on the Indicator. <br> Each indicator is followed by its reference "[No.]"',
-                    position: 'right'
-                },
-                {
-                    element: document.querySelector('.stepReview'),
-                    intro: 'If you want to see the ratings for a specific indicator, or create a review yourself, just click the star icon.',
-                    position: 'right'
-                },
-                {
-                    element: '.stepMetrics',
-                    intro: 'Step 5 (Optional): If you are looking for any specific Metric, here you can search by metrics.',
-                    position: 'right'
-                },
-                {
-                    element: '.stepVisualize',
-                    intro: "Step 6: After selecting the indicator(s), CLICK here to VISUALIZE the chosen indicator(s). This will give you an idea of what type of visualization type one can use. <br> You can also download the Dashboard and use it as a mockup (e.g., for meetings/presentations). <br> <br> NOTE: The selected indicators that are similar will be plotted in a single visualization type. <br> <br> For example the selected indicators 'Predict Student Grades [115]' and 'Predict Final Grade [119]' will be plotted in a single visualization type.",
-                    position: 'bottom'
-                },
-                {
-                    element: '.stepDownload',
-                    intro: "In case you want the selected indicator(s) in a JSON (.json) format/file. CLICK here to DOWNLOAD the Indicator(s) as JSON along with their Metrics.",
-                    position: 'bottom'
-                },
-                {
-                    element: '.stepDownloadText',
-                    intro: "In case you want the selected indicator(s) in a TEXT (.txt) format/file. CLICK here to DOWNLOAD the Indicator(s) as TEXT along with their Metrics.",
-                    position: 'bottom'
-                },
-                {
-                    element: '.stepReset',
-                    intro: "In case you want to Deselect the selected indicator(s) and RESET the filters. CLICK here to RESET.",
-                    position: 'left'
-                },
-                {
-                    element: '.stepReferences',
-                    intro: "Here you can see the References for your selected Indicators.",
-                    position: 'left'
-                },
-                {
-                    element: '.stepStartTour',
-                    intro: "If you want to have this TOUR again you can start here anytime.  <br> <br> &nbsp; &nbsp;  &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;HAVE FUN!",
-                    position: 'left'
-                }
-            ]
-        });
-        introguide.start();
-    }
-};
-TourService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])()
-], TourService);
 
 
 
@@ -9766,7 +8456,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_3__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Ahmad\Documents\GitHub\OpenLairRubenA\frontend\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! D:\OpenLAIR_Docker\frontend\src\main.ts */"./src/main.ts");
 
 
 /***/ })

@@ -136,4 +136,19 @@ fieldset {
             position: relative;
         }
     }
+
+    .selected-item {
+        max-width: 25%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        text-wrap: nowrap;
+        padding-right: 15px !important;
+        position: relative;
+
+        & a {
+            position: absolute;
+            right: 4px;
+            bottom: 0px;
+        }
+    }
 }

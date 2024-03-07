@@ -7,6 +7,8 @@ import {ActivatedRoute, Router} from "@angular/router";
 import {indicator} from "../../_models/indicator.model";
 import {HeaderService} from "../header/header.service";
 import {Reference} from "../../_models/reference.model";
+import {map, switchMap, tap} from "rxjs/operators";
+import {of} from "rxjs";
 
 @Component({
     selector: 'app-review-edit',
@@ -102,9 +104,11 @@ export class ReviewEditComponent implements OnInit {
         const saveReview$ = this.reviewId ?
             this.dataService.editReview(data) :
             this.dataService.addReview(data);
-        saveReview$.subscribe(savedRating => {
-            this.router.navigate(['/']);
-        });
+        saveReview$
+            .pipe(switchMap(savedRating => this.dataService.markIndicatorAsReviewed(data.indicatorId, true)))
+            .subscribe(() => {
+                this.router.navigate(['/']);
+            });
     }
 
     // sets formcontrol Value for given formcontrolName rating
@@ -125,7 +129,19 @@ export class ReviewEditComponent implements OnInit {
 
     // deletes an existing Review
     deleteReview() {
-        this.dataService.deleteReview(this.formGroup.controls['_id'].value).subscribe(savedRating => {
+        this.dataService.deleteReview(this.formGroup.controls['_id'].value).pipe(
+            switchMap(() => {
+                return this.dataService.getReviews(this.indicator._id)
+            }),
+            switchMap((reviews: review[]) => {
+                if (reviews.length === 0) {
+                    return this.dataService.markIndicatorAsReviewed(this.indicator._id, false);
+                } else {
+                    return of(reviews);
+                }
+            })
+        )
+            .subscribe(savedRating => {
             this.router.navigate(['/']);
         });
     }

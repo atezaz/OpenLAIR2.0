@@ -90,6 +90,8 @@ export class DisplayComponent implements OnInit {
     fetchdata() {
         const previousSelectedEvents: string[] = JSON.parse(localStorage.getItem('selectedEventsInit'));
         const previousSelectedActivities: string[] = JSON.parse(localStorage.getItem('selectedActivitiesInit'));
+        const previousIndicatorSearch: string = JSON.parse(localStorage.getItem('indicatorSearchInit'));
+        const previousMetricSearch: string = JSON.parse(localStorage.getItem('metricSearchInit'));
         const previousSelectedIndicators: indicator[] = JSON.parse(localStorage.getItem('selectedIndicatorsInit'));
         this.learningEventsOptions$ = this.dataService.getEvents().pipe(
             map(learningEvents => {
@@ -99,13 +101,13 @@ export class DisplayComponent implements OnInit {
             }),
             tap(options => {
                 this.allEventOptions = options;
-                this.initFromLocalStorage(previousSelectedEvents, previousSelectedActivities, previousSelectedIndicators);
+                this.initFromLocalStorage(previousSelectedEvents, previousSelectedActivities, previousIndicatorSearch, previousMetricSearch, previousSelectedIndicators);
             })
         )
     }
 
     //Initializes Dropdowns and selected Indicators with given attributes
-    private initFromLocalStorage(events: string[], activities: string[], indicators: indicator[]) {
+    private initFromLocalStorage(events: string[], activities: string[], indSearch: string, metSearch: string, indicators: indicator[]) {
         if (events) {
             this.onEventValueChange(events, true);
             this.selectedLearningEvents = events;
@@ -124,6 +126,13 @@ export class DisplayComponent implements OnInit {
             localStorage.setItem("selectedIndicatorsInit", JSON.stringify(indicators))
             this.ind_list = indicators.map(indicator => indicator.Title);
         }
+
+        this.searchInd = indSearch;
+        this.searchMat = metSearch;
+         if (this.searchInd || this.searchMat) {
+             this.determineFilteredTableDataByIndicatorAndMetricText();
+         }
+
     }
 
     // Handles changes in the Event Dropdown. Filters TableData and options for activity dropdown corresponding
@@ -175,6 +184,8 @@ export class DisplayComponent implements OnInit {
         this.indicatorMap.clear();
         this.checkedMap.clear();
         localStorage.removeItem("selectedIndicatorsInit")
+        localStorage.removeItem("indicatorSearchInit")
+        localStorage.removeItem("metricSearchInit")
         this.searchInd = ""; //empty
         this.searchMat = ""; //empty
     }
@@ -225,6 +236,11 @@ export class DisplayComponent implements OnInit {
                 this.filterTableDataByMetricSearch();
             }
         }
+
+        setTimeout(() => {
+            localStorage.setItem("indicatorSearchInit", JSON.stringify(this.searchInd));
+            localStorage.setItem("metricSearchInit", JSON.stringify(this.searchMat));
+        });
     }
 
     filterTableDataByIndicatorSearch() {
@@ -361,6 +377,8 @@ export class DisplayComponent implements OnInit {
     reset() {
         localStorage.removeItem("selectedEventsInit");
         localStorage.removeItem("selectedActivitiesInit");
+        localStorage.removeItem("indicatorSearchInit");
+        localStorage.removeItem("metricSearchInit");
         localStorage.removeItem("selectedIndicatorsInit");
         this.ind_list = [];
         this.checkedMap.clear();
@@ -392,6 +410,8 @@ export class DisplayComponent implements OnInit {
         if (indicatorNames.length > 0) {
             localStorage.setItem("selectedEventsInit", JSON.stringify(this.selectedLearningEvents));
             localStorage.setItem("selectedActivitiesInit", JSON.stringify(this.selectedLearningActivities));
+            localStorage.setItem("indicatorSearchInit", JSON.stringify(this.searchInd));
+            localStorage.setItem("metricSearchInit", JSON.stringify(this.searchMat));
             localStorage.setItem("selectedIndicatorsInit", JSON.stringify([...this.indicatorMap.values()].filter(i => i)));
             this.router.navigate(["/dashboard"]);
         } else {
@@ -550,5 +570,9 @@ export class DisplayComponent implements OnInit {
             const notVerifiedIndicator = indicators.find(indicator => !indicator.verified);
             this.notVerifiedIndicatorExists = !!notVerifiedIndicator;
         })
+    }
+
+    dialogClosed() {
+        window.alert('All reviews have been deleted. To update the review icons, reload the table.')
     }
 }

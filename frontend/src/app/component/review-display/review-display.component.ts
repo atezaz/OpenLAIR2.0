@@ -1,8 +1,10 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {review} from "../../_models/review.model";
 import {indicator} from "../../_models/indicator.model";
 import {DataService} from "../../data.service";
 import {Router} from "@angular/router";
+import {switchMap} from "rxjs/operators";
+import {of} from "rxjs";
 
 @Component({
     selector: 'app-review-display',
@@ -14,12 +16,16 @@ export class ReviewDisplayComponent implements OnInit {
     @Input()
     indicator: indicator;
 
+    @Output()
+    closeDialogEmitter: EventEmitter<any> = new EventEmitter<any>();
+
     reviews: review[];
     reviewAverage: review;
     totalAverage: number;
     loggedIn: any;
     reviewExistsForUser = false;
     buttonLabel = 'Create Review';
+    reviewDeleted = false;
 
     constructor(private dataService: DataService, private router: Router) {
         this.loggedIn = JSON.parse(localStorage.getItem('currentUser'));
@@ -105,9 +111,28 @@ export class ReviewDisplayComponent implements OnInit {
     // deletes review from database after confirmation in the browser
     deleteAsSuperAdmin(reviewId: string) {
         if (confirm("Do you really want to delete this Review?")) {
-            this.dataService.deleteReview(reviewId).subscribe(() => {
-                this.getReviews();
-            });
+            this.dataService.deleteReview(reviewId).pipe(
+                switchMap(() => {
+                    return this.dataService.getReviews(this.indicator._id)
+                }),
+                switchMap((reviews: review[]) => {
+                    if (reviews.length === 0) {
+                        return this.dataService.markIndicatorAsReviewed(this.indicator._id, false);
+                    } else {
+                        return of(reviews);
+                    }
+                })
+            )
+                .subscribe(() => {
+                    this.reviewDeleted = true;
+                    this.getReviews();
+                });
+        }
+    }
+
+    potentialDeletion() {
+        if (this.reviews.length === 0 && this.reviewDeleted) {
+            this.closeDialogEmitter.emit();
         }
     }
 }

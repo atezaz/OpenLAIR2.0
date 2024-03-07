@@ -140,6 +140,10 @@ export class DataService {
         return this.http.put(`${this.uri}/indicator/${id}/edit`, data);
     }
 
+    markIndicatorAsReviewed(id, marked: boolean) {
+        return this.http.put(`${this.uri}/indicator/${id}/mark`, {marked});
+    }
+
     deleteIndicator(indicatorId) {
         return this.http.delete(`${this.uri}/indicator/${indicatorId}/delete`);
     }

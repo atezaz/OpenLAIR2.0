@@ -22,6 +22,9 @@ var MongoClient = require('mongodb').MongoClient;
 
 var mongoURL = "mongodb://localhost:27017/" //Local MongoDB
 
+//var mongoURL = "mongodb://mongo:27017/" //Local MongoDB Docker (mongo)
+
+
 //console.log(mongoURL);
 
 const PORT = process.env.PORT || 3001;
@@ -375,6 +378,23 @@ MongoClient.connect(mongoURL, {useUnifiedTopology: true}, function (err, db) {
                             }
                         })
                     })
+                }
+            });
+    });
+
+    router.route('/indicator/:id/mark').put((req, res) => {
+        const mark = req.body.marked;
+        const indicatorId = mongo.ObjectId(req.params.id);
+
+        db.collection("indicator").updateOne({_id: indicatorId},
+            {
+                $set: {reviewExists: mark}
+            },
+            (error, result) => {
+                if (err) {
+                    console.log(err);
+                } else {
+                    res.status(200).send(result)
                 }
             });
     });

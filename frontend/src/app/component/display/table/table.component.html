@@ -40,13 +40,13 @@
                              [matTooltip]="'Reference'">
                               <i class="fa fa-quote-right"></i>
                           </a>
-                          <a class="sortable reference-icon stepReference" (click)="onVerdictEmitter.emit(indic)"
+                          <a class="sortable verdict-icon stepVerdict" (click)="onVerdictEmitter.emit(indic)"
                              [matTooltip]="'Verdict'">
                               <img style="height: 14px" src="assets/images/verdictHammer.png"/>
                           </a>
                       <a class="sortable review-icon stepReview" (click)="onReviewEmitter.emit(indic)"
                          [matTooltip]="'Reviews'">
-                        <i class="fa fa-star-o"></i>
+                        <i class="fa" [ngClass]="indic.reviewExists ? 'fa-star' : 'fa-star-o'"></i>
                       </a>
 
                       <a *ngIf="loggedIn?.superAdmin" class="superAdmin-icon edit" (click)="editAsSuperAdmin(indic)"
