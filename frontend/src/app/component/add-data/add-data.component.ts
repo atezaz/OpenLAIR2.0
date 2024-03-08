@@ -11,7 +11,6 @@ import {Observable} from "rxjs";
 import {shareReplay} from "rxjs/operators";
 import {PathObject} from "../../_models/pathObject.model";
 import {MatDialog} from "@angular/material/dialog";
-import { MatDialog } from '@angular/material';
 
 import { AddDataDialogComponent } from './add-data-dialog.component';
 
@@ -81,7 +80,6 @@ export class AddDataComponent implements OnInit {
     * an indicator is being edited, or a reference is being edited.
     * */
     constructor(private dataService: DataService, private router: Router, private route: ActivatedRoute, private fb: FormBuilder,
-                headerService: HeaderService, public dialog: MatDialog) {
                 headerService: HeaderService, private http: HttpClient, private dialog: MatDialog) {
         headerService.setHeader('add-indicator')
 
