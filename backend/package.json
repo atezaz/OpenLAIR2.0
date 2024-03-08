@@ -11,9 +11,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-   
-  },
+  "devDependencies": {},
   "dependencies": {
     "connect-multiparty": "^2.2.0",
     "cors": "^2.8.5",
