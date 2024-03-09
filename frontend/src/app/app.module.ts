@@ -17,6 +17,7 @@ import {
   MatCheckboxModule,
   MatIconModule,
   MatTableModule,
+  MatProgressSpinnerModule,
 } from "@angular/material";
 
 import { NgMultiSelectDropDownModule } from "ng-multiselect-dropdown";
@@ -175,7 +176,8 @@ import { AddDataDialogComponent } from "./component/add-data/add-data-dialog.com
     MatTooltipModule,
     MatChipsModule,
     MatTableModule,
-    MatListModule
+    MatListModule,
+    MatProgressSpinnerModule,
   ],
 
   entryComponents: [

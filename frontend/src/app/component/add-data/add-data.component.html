@@ -136,14 +136,32 @@
                 hidden
                 #fileUpload
             >
-            <div class="file-upload">
-
-                {{fileName || "No file uploaded yet."}}
-
-                <button mat-mini-fab color="primary" class="upload-btn"
-                (click)="fileUpload.click()">
-                <mat-icon>cloud_upload</mat-icon>
+            <div 
+                    class="file-upload"
+                    style="display: flex; margin-top:0.5rem;padding:0.5rem; border: 1px solid; width: calc(100% - 2.4em);"
+                    (drop)="dropFile($event)"
+                    (dragover)="allowDrop($event)"
+            >
+                <button 
+                        type="submit"
+                        class="buttonLaTool save-button"
+                        style="margin-right: 1rem;;"
+                        (click)='addData()'
+                >
+                    Save
                 </button>
+                <button 
+                        mat-mini-fab
+                        color="primary"
+                        class="upload-btn" 
+                        *ngIf="!loadingFile"
+                        style="margin-top: 0.5rem;"
+                        (click)="fileUpload.click()"
+                >
+                    <mat-icon>cloud_upload</mat-icon>
+                </button>
+                <mat-progress-spinner diameter="45" mode="indeterminate" *ngIf="loadingFile" class="upload-btn"></mat-progress-spinner>
+                <p style="padding-left:1rem;">{{fileName || "No file uploaded yet."}}</p>
             </div>
             <div *ngIf="fileData" class="table-wrapper">
 
@@ -151,6 +169,7 @@
                 <div class="data-display-wrapper">
                 <table mat-table [dataSource]="fileData.indicators" class="mat-elevation-z8 data-display">
                     <caption>Indicators</caption>
+
                     <ng-container matColumnDef="Name">
                         <th mat-header-cell *matHeaderCellDef> Name </th>
                         <td mat-cell *matCellDef="let element"> 
@@ -165,14 +184,36 @@
                         <td mat-cell *matCellDef="let element"> {{element.count}} </td>
                     </ng-container>
 
+                    <!-- <ng-container matColumnDef="Add">
+                        <th mat-header-cell *matHeaderCellDef> Add </th>
+                        <td mat-cell *matCellDef="let element" class="add-mat-chip"> Add </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="Remove">
+                        <th mat-header-cell *matHeaderCellDef> Remove </th>
+                        <td mat-cell *matCellDef="let element" class="remove-mat-chip"> Remove </td>
+                    </ng-container> -->
+
                     <ng-container matColumnDef="Action">
-                        <th mat-header-cell *matHeaderCellDef> Action </th>
-                        <td mat-cell *matCellDef="let element">
-                            <mat-chip class="add-mat-chip">
-                            Add Indicator
-                            </mat-chip>
+                        <th mat-header-cell *matHeaderCellDef></th>
+                        <td mat-cell *matCellDef="let element" style="float:right">
+                            <i 
+                                    [id]="'add_indicator:' + element.name" 
+                                    (click)="addIndicator($event)"
+                                    class="fa-solid fa-plus fa-lg" 
+                                    style="color: #63E6BE;"
+                            >
+                            </i>
+                            <i 
+                                    [id]="'remove_indicator:' + element.name" 
+                                    (click)="removeIndicator($event)"
+                                    class="fa-solid fa-minus fa-lg" 
+                                    style="color: #ff0000;"
+                            >
+                            </i>
                         </td>
                     </ng-container>
+
 
                     <tr mat-header-row *matHeaderRowDef="indicatorColumns"></tr>
                     <tr mat-row *matRowDef="let row; columns: indicatorColumns;"></tr>
@@ -198,11 +239,22 @@
                     </ng-container>
 
                     <ng-container matColumnDef="Action">
-                        <th mat-header-cell *matHeaderCellDef> Action </th>
-                        <td mat-cell *matCellDef="let element">
-                            <mat-chip class="add-mat-chip">
-                            Add Metric
-                            </mat-chip>
+                        <th mat-header-cell *matHeaderCellDef></th>
+                        <td mat-cell *matCellDef="let element" style="float: right;">
+                            <i 
+                                    [id]="'add_metric:' + element.name" 
+                                    (click)="addMetric($event)"
+                                    class="fa-solid fa-plus fa-lg" 
+                                    style="color: #63E6BE;"
+                            >
+                            </i>
+                            <i 
+                                    [id]="'remove_metric:' + element.name" 
+                                    (click)="removeMetric($event)"
+                                    class="fa-solid fa-minus fa-lg" 
+                                    style="color: #ff0000;"
+                            >
+                            </i>
                         </td>
                     </ng-container>
 
@@ -282,9 +334,6 @@
             <span style="float: right; margin-right: 16px; margin-top: 17px;" *ngIf="CUserName">
                 Welcome, {{CUserName}}
             </span>
-            <button type="submit" class="buttonLaTool save-button" style="float: right;"
-                    (click)='addData()'>Save
-            </button>
         </div>
     </div>
 
