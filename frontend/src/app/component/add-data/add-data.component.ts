@@ -520,7 +520,7 @@ export class AddDataComponent implements OnInit {
 
     addIndicator(event: MouseEvent) {
         const indicatorName = this.indicatorForm.controls.indicatorName
-        const indicatorList: Array<string> = (indicatorName.value as string || "").trim().split(" AND ").filter(value => value != "")
+        const indicatorList: Array<string> = (indicatorName.value as string || "").trim().split(" and ").filter(value => value != "")
         const target: HTMLElement = event.target as HTMLElement
         const delimiter = target.id.indexOf(':')
         const name: string = target.id.slice(delimiter + 1)
@@ -530,18 +530,18 @@ export class AddDataComponent implements OnInit {
         }
         else {
             indicatorList.push(name)
-            indicatorName.setValue(indicatorList.join(" AND "))
+            indicatorName.setValue(indicatorList.join(" and "))
         }
     }
 
     removeIndicator(event: MouseEvent) {
         const indicatorName = this.indicatorForm.controls.indicatorName
-        const indicatorList: Array<string> = (indicatorName.value as string).trim().split(" AND ").filter(value => value != "")
+        const indicatorList: Array<string> = (indicatorName.value as string).trim().split(" and ").filter(value => value != "")
         const target: HTMLElement = event.target as HTMLElement
         const delimiter = target.id.indexOf(':')
         const name: string = target.id.slice(delimiter + 1)
         if(!confirm(`Do you want to remove ${name} from the indicator list?`)) return
-        indicatorName.setValue(indicatorList.filter(value => value !== name).join(" AND "))
+        indicatorName.setValue(indicatorList.filter(value => value !== name).join(" and "))
     }
 
     addMetric(event: MouseEvent) {
