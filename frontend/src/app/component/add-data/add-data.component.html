@@ -129,9 +129,202 @@
                 </form>
             </fieldset>
 
-            <button type="submit" class="buttonLaTool save-button"
-                    (click)='addData()'>Save
-            </button>
+            <!------------------------------------------------------------------------------>
+            <input 
+                type="file" class="file-input"
+                (change)="onFileSelected($event)"
+                hidden
+                #fileUpload
+            >
+            <div 
+                    class="file-upload"
+                    style="display: flex; margin-top:0.5rem;padding:0.5rem; border: 1px solid; width: calc(100% - 2.4em);"
+                    (drop)="dropFile($event)"
+                    (dragover)="allowDrop($event)"
+            >
+                <button 
+                        type="submit"
+                        class="buttonLaTool save-button"
+                        style="margin-right: 1rem;;"
+                        (click)='addData()'
+                >
+                    Save
+                </button>
+                <button 
+                        mat-mini-fab
+                        color="primary"
+                        class="upload-btn" 
+                        *ngIf="!loadingFile"
+                        style="margin-top: 0.5rem;"
+                        (click)="fileUpload.click()"
+                >
+                    <mat-icon>cloud_upload</mat-icon>
+                </button>
+                <mat-progress-spinner diameter="45" mode="indeterminate" *ngIf="loadingFile" class="upload-btn"></mat-progress-spinner>
+                <p style="padding-left:1rem;">{{fileName || "No file uploaded yet."}}</p>
+            </div>
+            <div *ngIf="fileData" class="table-wrapper">
+
+                <!-- Indicators -->
+                <div class="data-display-wrapper">
+                <table mat-table [dataSource]="fileData.indicators" class="mat-elevation-z8 data-display">
+                    <caption>Indicators</caption>
+
+                    <ng-container matColumnDef="Name">
+                        <th mat-header-cell *matHeaderCellDef> Name </th>
+                        <td mat-cell *matCellDef="let element"> 
+                            <mat-chip [id]="'indicator_sentences:' + element.name" (click)="openIndicatorDialog($event)" class="indicator-mat-chip">
+                                {{ element.name }}
+                            </mat-chip>
+                        </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="Count">
+                        <th mat-header-cell *matHeaderCellDef> Count </th>
+                        <td mat-cell *matCellDef="let element"> {{element.count}} </td>
+                    </ng-container>
+
+                    <!-- <ng-container matColumnDef="Add">
+                        <th mat-header-cell *matHeaderCellDef> Add </th>
+                        <td mat-cell *matCellDef="let element" class="add-mat-chip"> Add </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="Remove">
+                        <th mat-header-cell *matHeaderCellDef> Remove </th>
+                        <td mat-cell *matCellDef="let element" class="remove-mat-chip"> Remove </td>
+                    </ng-container> -->
+
+                    <ng-container matColumnDef="Action">
+                        <th mat-header-cell *matHeaderCellDef></th>
+                        <td mat-cell *matCellDef="let element" style="float:right">
+                            <i 
+                                    [id]="'add_indicator:' + element.name" 
+                                    (click)="addIndicator($event)"
+                                    class="fa-solid fa-plus fa-lg" 
+                                    style="color: #63E6BE;"
+                            >
+                            </i>
+                            <i 
+                                    [id]="'remove_indicator:' + element.name" 
+                                    (click)="removeIndicator($event)"
+                                    class="fa-solid fa-minus fa-lg" 
+                                    style="color: #ff0000;"
+                            >
+                            </i>
+                        </td>
+                    </ng-container>
+
+
+                    <tr mat-header-row *matHeaderRowDef="indicatorColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: indicatorColumns;"></tr>
+                </table>
+                </div>
+
+                <!-- Metrics -->
+                <div class="data-display-wrapper">
+                <table mat-table [dataSource]="fileData.metrics" class="mat-elevation-z8 data-display">
+                    <caption>Metrics</caption>
+                    <ng-container matColumnDef="Name">
+                        <th mat-header-cell *matHeaderCellDef> Name </th>
+                        <td mat-cell *matCellDef="let element"> 
+                            <mat-chip [id]="'metric_sentences:' + element.name" (click)="openIndicatorDialog($event)" class="indicator-mat-chip">
+                                {{ element.name }}
+                            </mat-chip>
+                        </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="Count">
+                        <th mat-header-cell *matHeaderCellDef> Count </th>
+                        <td mat-cell *matCellDef="let element"> {{element.count}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="Action">
+                        <th mat-header-cell *matHeaderCellDef></th>
+                        <td mat-cell *matCellDef="let element" style="float: right;">
+                            <i 
+                                    [id]="'add_metric:' + element.name" 
+                                    (click)="addMetric($event)"
+                                    class="fa-solid fa-plus fa-lg" 
+                                    style="color: #63E6BE;"
+                            >
+                            </i>
+                            <i 
+                                    [id]="'remove_metric:' + element.name" 
+                                    (click)="removeMetric($event)"
+                                    class="fa-solid fa-minus fa-lg" 
+                                    style="color: #ff0000;"
+                            >
+                            </i>
+                        </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="metricColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: metricColumns;"></tr>
+                </table>
+                </div>
+
+                <!-- Activities: -->
+                <div class="data-display-wrapper">
+                <table mat-table [dataSource]="fileData.activities" class="mat-elevation-z8 data-display">
+                    <caption>Activities</caption>
+                    <ng-container matColumnDef="Name">
+                        <th mat-header-cell *matHeaderCellDef> Name </th>
+                        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="Count">
+                        <th mat-header-cell *matHeaderCellDef> Count </th>
+                        <td mat-cell *matCellDef="let element"> {{element.count}} </td>
+                    </ng-container>
+
+                    <ng-container matColumnDef="Indicators">
+                        <th mat-header-cell *matHeaderCellDef> List </th>
+                        <td mat-cell *matCellDef="let element">
+                        <mat-chip-list>
+                            <mat-chip *ngFor="let i of element.list">
+                            {{i}}
+                            </mat-chip>
+                        </mat-chip-list>
+                        </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="activityColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: activityColumns;"></tr>
+                </table>
+                </div>
+
+                <!-- Events: -->
+                <div class="data-display-wrapper">
+                <table mat-table [dataSource]="fileData.events" class="mat-elevation-z8 data-display">
+                    <caption>Events</caption>
+                <ng-container matColumnDef="Name">
+                    <th mat-header-cell *matHeaderCellDef> Name </th>
+                    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="Count">
+                    <th mat-header-cell *matHeaderCellDef> Count </th>
+                    <td mat-cell *matCellDef="let element"> {{element.count}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="Activities">
+                    <th mat-header-cell *matHeaderCellDef> List </th>
+                    <td mat-cell *matCellDef="let element">
+                    <mat-chip-list>
+                        <mat-chip *ngFor="let i of element.list">
+                        {{i}}
+                        </mat-chip>
+                    </mat-chip-list>
+                    </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="eventColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: eventColumns;"></tr>
+                </table>
+                </div>
+            </div>
+            <!------------------------------------------------------------------------------>
+
         </div>
         <div style="min-width: 260px">
             <button
@@ -139,8 +332,8 @@
                 class="buttonLaTool" (click)='logout()'>Logout
             </button>
             <span style="float: right; margin-right: 16px; margin-top: 17px;" *ngIf="CUserName">
-       Welcome, {{CUserName}}
-      </span>
+                Welcome, {{CUserName}}
+            </span>
         </div>
     </div>
 

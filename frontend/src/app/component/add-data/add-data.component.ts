@@ -1,4 +1,5 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
+import { HttpClient, HttpHeaders} from '@angular/common/http';
 import {DataService} from '../../data.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
@@ -9,7 +10,10 @@ import {HeaderService} from "../header/header.service";
 import {Observable} from "rxjs";
 import {shareReplay} from "rxjs/operators";
 import {PathObject} from "../../_models/pathObject.model";
-import {MatDialog} from "@angular/material/dialog";
+import { MAT_TOOLTIP_SCROLL_STRATEGY_FACTORY, MatDialog } from '@angular/material';
+
+import { AddDataDialogComponent } from './add-data-dialog.component';
+import { FileData } from 'src/app/data.model';
 
 @Component({
     selector: 'app-add-data',
@@ -21,6 +25,14 @@ import {MatDialog} from "@angular/material/dialog";
 export class AddDataComponent implements OnInit {
     @ViewChild("activityDialog", {static: true}) activityDialog: any;
     @ViewChild("normalUserSaveDialog", {static: true}) normalUserSaveDialog: any;
+
+    public fileName: string = ""
+    public fileData: FileData
+    public indicatorColumns: string[] = ['Count', 'Name', 'Action'];
+    public metricColumns: string[] = ['Count', 'Name', 'Action'];
+    public activityColumns: string[] = ['Count', 'Name', 'Indicators'];
+    public eventColumns: string[] = ['Count', 'Name', 'Activities'];
+    public loadingFile: Boolean = false
 
     data: PathObject;
     private target: string;
@@ -70,7 +82,7 @@ export class AddDataComponent implements OnInit {
     * an indicator is being edited, or a reference is being edited.
     * */
     constructor(private dataService: DataService, private router: Router, private route: ActivatedRoute, private fb: FormBuilder,
-                headerService: HeaderService, public dialog: MatDialog) {
+                headerService: HeaderService, private http: HttpClient, private dialog: MatDialog) {
         headerService.setHeader('add-indicator')
 
         if (localStorage.getItem('currentUser')) {
@@ -416,7 +428,142 @@ export class AddDataComponent implements OnInit {
         return this.target === target;
     }
 
+    resetFileData (): void {
+        this.fileData = {
+            indicators: null,
+            indicator_sentences: null,
+            metrics: null,
+            metric_sentences: null,
+            activities: null,
+            events: null,
+        }
+    }
+
     showActivityDialoge() {
         this.dialog.open(this.activityDialog);
+    }
+
+    openIndicatorDialog(event: MouseEvent): void {
+        const target: HTMLElement = event.target as HTMLElement
+        const delimiter = target.id.indexOf(':')
+        const group: string = target.id.slice(0, delimiter)
+        const name: string = target.id.slice(delimiter + 1)
+        this.dialog.open(AddDataDialogComponent, {
+            data: { name: name, data: this.fileData[group][name] }
+        })
+    }
+
+    // removeListElement(event: MouseEvent): void {
+    //     const target: HTMLElement = event.target as HTMLElement
+    //     // const delimiter = target.id.indexOf(':')
+    //     // const name: string = target.id.slice(delimiter + 1)
+    //     // <mat-chip>.<td>.<tr> delete
+    //     if(confirm("Do you want to delete this item?")) target.parentElement.parentElement.remove()
+    // }
+
+    onFileSelected(event: MouseEvent) {
+        const target: EventTarget = event.target
+        if(target instanceof HTMLInputElement) {
+            let file: File = target.files[0]
+            this.uploadFile(file)
+        }
+    }
+
+    dropFile(event: DragEvent) {
+        event.preventDefault();
+        this.uploadFile(event.dataTransfer.files[0])
+    }
+
+    allowDrop(ev) {
+        ev.preventDefault();
+    }
+
+    uploadFile(file: File) {
+        this.indicatorForm.reset({referenceNumber: this.indicatorForm.controls.referenceNumber.value})
+        if (file) {
+            this.fileName = file.name
+            this.fileData = null
+
+            const formData = new FormData();
+            formData.append("file", file);
+
+            const headers = new HttpHeaders()
+            headers.append('Content-Type', 'multipart/form-data');
+            headers.append('Accept', 'application/json');
+
+            let options = { headers: headers };
+            this.loadingFile = true
+            this.http.post("http://localhost:8502", formData, options = options)
+            .subscribe((res) => {
+                this.resetFileData()
+                console.log("Got something back")
+                const rawData = (Object.values(res)[0])[0]
+                this.fileData.indicators = Object.entries(rawData.indicators)
+                .map(val => { return { name: val[0], count: val[1] as number} })
+                .sort((a, b) => b.count - a.count)
+                this.fileData.metrics = Object.entries(rawData.metrics)
+                .map(val => { return { name: val[0], count: val[1] as number} })
+                .sort((a, b) => b.count - a.count)
+                this.fileData.activities = Object.entries(rawData.activities)
+                .map(val => { return { name: val[0], count: val[1][1] as number, list: val[1][0]} })
+                .sort((a, b) => b.count - a.count)
+                this.fileData.events = Object.entries(rawData.events)
+                .map(val => { return { name: val[0], count: val[1][1] as number, list: val[1][0]} })
+                .sort((a, b) => b.count - a.count)
+                this.fileData.indicator_sentences = rawData.indicator_sentences
+                this.fileData.metric_sentences = rawData.metric_sentences
+                this.loadingFile = false
+            })
+        }
+
+    }
+
+    addIndicator(event: MouseEvent) {
+        const indicatorName = this.indicatorForm.controls.indicatorName
+        const indicatorList: Array<string> = (indicatorName.value as string || "").trim().split(" AND ").filter(value => value != "")
+        const target: HTMLElement = event.target as HTMLElement
+        const delimiter = target.id.indexOf(':')
+        const name: string = target.id.slice(delimiter + 1)
+        if (indicatorList.find(value => value === name)) return
+        if (indicatorList.length === 0) {
+            indicatorName.setValue(name)    
+        }
+        else {
+            indicatorList.push(name)
+            indicatorName.setValue(indicatorList.join(" AND "))
+        }
+    }
+
+    removeIndicator(event: MouseEvent) {
+        const indicatorName = this.indicatorForm.controls.indicatorName
+        const indicatorList: Array<string> = (indicatorName.value as string).trim().split(" AND ").filter(value => value != "")
+        const target: HTMLElement = event.target as HTMLElement
+        const delimiter = target.id.indexOf(':')
+        const name: string = target.id.slice(delimiter + 1)
+        if(!confirm(`Do you want to remove ${name} from the indicator list?`)) return
+        indicatorName.setValue(indicatorList.filter(value => value !== name).join(" AND "))
+    }
+
+    addMetric(event: MouseEvent) {
+        const target: HTMLElement = event.target as HTMLElement
+        const delimiter = target.id.indexOf(':')
+        const name: string = target.id.slice(delimiter + 1)
+        const control = this.indicatorForm.controls.metrics
+        const current = (control.value || "").trim()
+        const metricList = current.split(', ').filter(value => value != "")
+        if (metricList.find(value => value === name)) return
+        metricList.push(name)
+        control.setValue(metricList.join(', '))
+    }
+
+    removeMetric(event: MouseEvent) {
+        const target: HTMLElement = event.target as HTMLElement
+        const delimiter = target.id.indexOf(':')
+        const name: string = target.id.slice(delimiter + 1)
+        if(!confirm(`Do you want to remove "${name}" from the metrics list?`)) return
+        const control = this.indicatorForm.controls.metrics
+        let current = control.value.trim()
+        const metricList = current.split(', ').filter(value => value != "" && value !== name)
+        control.setValue(metricList.join(', '))
     }
 }
