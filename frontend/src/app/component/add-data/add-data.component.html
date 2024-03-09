@@ -134,10 +134,9 @@
 
             <!------------------------------------------------------------------------------>
 
-            
 
             <fieldset style="margin-top: 5px;  width: 100%;">
-                <legend>Alternatively, you can upload the PDF of the article to automatically extract the aforementioned information</legend>
+                <legend>Or, upload the article PDF to automatically extract the information</legend>
                 <input type="file" class="file-input" (change)="onFileSelected($event)" hidden #fileUpload>
 
                 <div class="file-upload" style="display: flex; width: calc(100% - 2.4em);" (drop)="dropFile($event)"
