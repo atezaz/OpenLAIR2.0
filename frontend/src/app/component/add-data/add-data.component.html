@@ -68,10 +68,10 @@
                 <form [formGroup]="referenceForm" class="form-section last" style="height: 100%">
                     <div class="form-section">
                         <div class="form-element form-element-100">
-                            <label>Text *</label>
+                            <label>APA reference text *</label>
                             <ng-container *ngIf="!useExistingReference">
-                                <input type="text" formControlName="referenceText" placeholder="Reference Text"
-                                    required />
+                                <textarea type="text" formControlName="referenceText" placeholder="Reference Text"
+                                    required></textarea>
                             </ng-container>
                             <ng-container *ngIf="useExistingReference">
                                 <ng-select placeholder="Reference"
@@ -135,8 +135,8 @@
             <!------------------------------------------------------------------------------>
 
 
-            <fieldset style="margin-top: 5px;  width: 100%;">
-                <legend>Or, upload the article PDF to automatically extract the information</legend>
+            <fieldset style="margin-top: 5px;  width: 100%;"> 
+                <legend> Or, upload the article PDF <i class="fa-regular fa-file-pdf fa-shake"></i> to automatically extract the information <i class="fa-solid fa-gear fa-spin fa-xl" style="color: #3f51b5;"></i></legend>
                 <input type="file" class="file-input" (change)="onFileSelected($event)" hidden #fileUpload>
 
                 <div class="file-upload" style="display: flex; width: calc(100% - 2.4em);" (drop)="dropFile($event)"
@@ -148,7 +148,7 @@
                     </button>
                     <mat-progress-spinner diameter="45" mode="indeterminate" *ngIf="loadingFile"
                         class="upload-btn"></mat-progress-spinner>
-                    <p style="padding-left:1rem;">{{fileName || "No file uploaded yet."}}</p>
+                    <p style="padding-left:1rem;">{{fileName || "No file uploaded yet."}} </p> 
                 </div>
 
             </fieldset>
@@ -156,6 +156,8 @@
             <div *ngIf="fileData" class="table-wrapper">
 
                 <!-- Indicators -->
+              
+
                 <div class="data-display-wrapper">
                     <table mat-table [dataSource]="fileData.indicators" class="mat-elevation-z8 data-display">
                         <caption>Indicators</caption>
@@ -189,20 +191,19 @@
                             <th mat-header-cell *matHeaderCellDef></th>
                             <td mat-cell *matCellDef="let element" style="float:right">
                                 <i [id]="'add_indicator:' + element.name" (click)="addIndicator($event)"
-                                    class="fa-solid fa-plus fa-lg" style="color: #63E6BE;">
+                                    class="fa-solid fa-plus fa-lg fa-beat-fade" style="color: #3e9279; margin-right: 6px;">
                                 </i>
                                 <i [id]="'remove_indicator:' + element.name" (click)="removeIndicator($event)"
-                                    class="fa-solid fa-minus fa-lg" style="color: #ff0000;">
+                                    class="fa-solid fa-minus fa-lg fa-beat-fade" style="color: #882727;">
                                 </i>
                             </td>
                         </ng-container>
-
 
                         <tr mat-header-row *matHeaderRowDef="indicatorColumns"></tr>
                         <tr mat-row *matRowDef="let row; columns: indicatorColumns;"></tr>
                     </table>
                 </div>
-
+        
                 <!-- Metrics -->
                 <div class="data-display-wrapper">
                     <table mat-table [dataSource]="fileData.metrics" class="mat-elevation-z8 data-display">
@@ -226,10 +227,10 @@
                             <th mat-header-cell *matHeaderCellDef></th>
                             <td mat-cell *matCellDef="let element" style="float: right;">
                                 <i [id]="'add_metric:' + element.name" (click)="addMetric($event)"
-                                    class="fa-solid fa-plus fa-lg" style="color: #63E6BE;">
+                                class="fa-solid fa-plus fa-lg fa-beat-fade" style="color: #3e9279; margin-right: 6px; ">
                                 </i>
                                 <i [id]="'remove_metric:' + element.name" (click)="removeMetric($event)"
-                                    class="fa-solid fa-minus fa-lg" style="color: #ff0000;">
+                                class="fa-solid fa-minus fa-lg fa-beat-fade" style="color: #882727;">
                                 </i>
                             </td>
                         </ng-container>

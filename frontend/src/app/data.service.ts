@@ -22,9 +22,9 @@ export class DataService {
     loggedIn: boolean;
     //uri = 'https://programmingzen.org/openlair';
     //uri = 'https://backend.openlair.edutec.science/openlair'; //live
-    //uri = 'http://localhost:49160/openlair';
+    uri = 'http://localhost:3001/openlair';
 
-    uri = 'http://localhost:3001/openlair';  //local
+    //uri = 'https://backendv2.openlair.edutec.science/openlair';  //local
 
     //68.65.123.130    OLD
     //198.187.29.73

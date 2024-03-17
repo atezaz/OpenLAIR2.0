@@ -21,7 +21,7 @@ var MongoClient = require('mongodb').MongoClient;
 //var mongoURL =  process.env["MONGO_URL"]; // || "mongodb://localhost:27017/"
 
 var mongoURL = "mongodb://localhost:27017/" //Local MongoDB
-var dockerURL = "mongodb://host.docker.internal:27017/" //Local MongoDB
+var dockerURL = "" //Local MongoDB    
 
 //var mongoURL = "mongodb://mongo:27017/" //Local MongoDB Docker (mongo)
 
@@ -578,8 +578,8 @@ function callback(err, db) {
     });
 }
 
-MongoClient.connect(mongoURL, {useUnifiedTopology: true}, function (err, db) {
-  if (err) MongoClient.connect(dockerURL, { useUnifiedTopology: true }, function (err, db) {
+MongoClient.connect(dockerURL , {useUnifiedTopology: true}, function (err, db) {
+  if (err) MongoClient.connect(mongoURL, { useUnifiedTopology: true }, function (err, db) {
     if (err) throw err;
     else callback(err, db)
   })
