@@ -20,14 +20,8 @@ export class DataService {
 
 
     loggedIn: boolean;
-    //uri = 'https://programmingzen.org/openlair';
-    //uri = 'https://backend.openlair.edutec.science/openlair'; //live
+
     uri = 'http://localhost:3001/openlair';
-
-    //uri = 'https://backendv2.openlair.edutec.science/openlair';  //local
-
-    //68.65.123.130    OLD
-    //198.187.29.73
 
     constructor(private http: HttpClient) {
         //this.currentUserSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem('currentUser')));
