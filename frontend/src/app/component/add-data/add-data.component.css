@@ -8,7 +8,7 @@ input[type="checkbox"] {
     display: flex;
     padding-bottom: 1em;
     flex-direction: column;
-    max-width: calc(590px - 1em);
+   /* max-width: calc(590px - 1em);*/
 }
 
 .form-element-15 {
@@ -37,7 +37,7 @@ input[type="checkbox"] {
 
 .content-wrapper {
     padding: 1.5em;
-    display: flex;
+   /* display: flex; */
     justify-content: space-between;
 }
 

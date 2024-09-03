@@ -285,8 +285,10 @@ export class AddDataComponent implements OnInit {
                 }
                 this.dataService.addIndicatorAndReference(dataObject).subscribe(() => {
                     if (this.superAdmin) {
-                        window.alert(`Indicator ${indicator.Title} has been saved`)
-                        this.restForms();
+                        window.alert(`Indicator ${indicator.Title} has been saved..`)
+                        //this.restForms();
+                       // location.reload();
+                       this.router.navigate(['/']);
                     } else {
                         this.dialog.open(this.normalUserSaveDialog);
                     }
@@ -300,6 +302,7 @@ export class AddDataComponent implements OnInit {
         this.setActivityMessages(this.selectedLearningActivities);
         this.referenceForm.reset();
         this.useExistingReference = false;
+        
     }
 
     navigateToMainPage() {
@@ -479,7 +482,7 @@ export class AddDataComponent implements OnInit {
     }
 
     uploadFile(file: File) {
-        this.indicatorForm.reset({referenceNumber: this.indicatorForm.controls.referenceNumber.value})
+        //this.indicatorForm.reset({referenceNumber: this.indicatorForm.controls.referenceNumber.value})
         if (file) {
             this.fileName = file.name
             this.fileData = null
@@ -490,10 +493,10 @@ export class AddDataComponent implements OnInit {
             const headers = new HttpHeaders()
             headers.append('Content-Type', 'multipart/form-data');
             headers.append('Accept', 'application/json');
-
+//https://backendapi.openlair.edutec.science
             let options = { headers: headers };
             this.loadingFile = true
-            this.http.post("https://backendapi.openlair.edutec.science", formData, options = options)
+            this.http.post("http://localhost:3000", formData, options = options)
             .subscribe((res) => {
                 this.resetFileData()
                 console.log("Got something back")
