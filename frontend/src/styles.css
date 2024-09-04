@@ -24,7 +24,7 @@ body {
 .dropdown-list {
   position: absolute;
   padding-top: 0px !important;
-  width: 126% !important;
+  width: 100% !important;
   z-index: 9999;
   border: 1px solid #ccc;
   border-radius: 3px;
@@ -38,8 +38,6 @@ body {
 .multiselect-dropdown .dropdown-btn .dropdown-multiselect__caret {
   line-height: 16px !important;
   width: 26px !important;
-  height: 32px !important;
-  width: 13% !important;
 }
 
 .multiselect-dropdown .dropdown-btn .dropdown-multiselect__caret:before {
