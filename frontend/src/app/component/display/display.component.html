@@ -29,7 +29,7 @@
         </span>
       </span>
     </span>
-        <mat-form-field style="width: 100%">
+        <mat-form-field>
           <mat-select class="step1" placeholder="Learning Events" name="Select" [(ngModel)]="selectedLearningEvents"
                       multiple #selectionModel="ngModel" (opened)="onOpen()" (closed)="onEventValueChange(selectedLearningEvents, false)">
             <app-select-check-all [model]="selectionModel" [values]="(learningEventsOptions$ | async)">
@@ -170,7 +170,7 @@
     </div>
 
       <button *ngIf="loggedIn && loggedIn.superAdmin" (click)="generateTreeStructure()" class="buttonLaTool generateButton">
-          Generate Data for TreeStructure
+        <i class="fa-solid fa-rotate" style="color: #ffffff;"></i> UpdateTree
       </button>
 
     <label *ngIf="atLeastOneChecked()" class="selected-indicators-label"> Selected Indicator(s)</label>

@@ -12,8 +12,8 @@ body {
 .multiselect-dropdown .dropdown-btn {
   font-size: 14px !important;
   color: rgb(150, 139, 139) !important;
-  padding: 4px 22px 4px 1px !important;
-  width: 94% !important;
+  /*padding: 4px 22px 4px 1px !important;*/
+  width: 91% !important;
 }
 
 
@@ -21,10 +21,14 @@ body {
   display: none;
 }
 
+::ng-deep .ng-multiselect-dropdown {
+  display: none;
+}
+
 .dropdown-list {
   position: absolute;
   padding-top: 0px !important;
-  width: 100% !important;
+  /*width: 100% !important;*/
   z-index: 9999;
   border: 1px solid #ccc;
   border-radius: 3px;
@@ -33,7 +37,6 @@ body {
   box-shadow: 0 1px 5px #959595;
   font-size: 13px !important;
 }
-
 
 .multiselect-dropdown .dropdown-btn .dropdown-multiselect__caret {
   line-height: 16px !important;

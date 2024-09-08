@@ -7,6 +7,12 @@
   grid-column: span 6;
 }
 
+.mat-form-field-infix {
+ 
+  width: 219px !important;
+}
+
+
 ::ng-deep .mat-form-field-infix {
   width: 250px !important;
 }
