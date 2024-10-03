@@ -21,10 +21,10 @@ export class DataService {
 
     loggedIn: boolean;
 
-    //uri = 'https://backend.openlair.edutec.science/openlair'; 
+    //uri = 'https://backend.openlair.edutec.science/openlair';      OLD server
     uri = 'http://localhost:3001/openlair';
 
-   //uri = 'https://backendv2.openlair.edutec.science/openlair';  //live
+   //uri = 'https://backendv2.openlair.edutec.science/openlair';  //live    NEW Server
 
     constructor(private http: HttpClient) {
         //this.currentUserSubject = new BehaviorSubject<User>(JSON.parse(localStorage.getItem('currentUser')));

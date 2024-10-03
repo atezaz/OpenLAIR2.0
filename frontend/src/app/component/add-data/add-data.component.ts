@@ -493,10 +493,10 @@ export class AddDataComponent implements OnInit {
             const headers = new HttpHeaders()
             headers.append('Content-Type', 'multipart/form-data');
             headers.append('Accept', 'application/json');
-//https://backendapi.openlair.edutec.science
+//http://localhost:3000  http://localhost:49160  https://backendapi.openlair.edutec.science
             let options = { headers: headers };
             this.loadingFile = true
-            this.http.post("http://localhost:3000", formData, options = options)
+            this.http.post("https://backendapi.openlair.edutec.science", formData, options = options)
             .subscribe((res) => {
                 this.resetFileData()
                 console.log("Got something back")

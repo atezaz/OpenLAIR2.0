@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>OpenLAIR</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-light bg-light static-top">
+        <div class="container">
+            <a class="navbar-brand" href="#!">OpenLAIR</a>
+        </div>
+    </nav>
+    <!-- Masthead-->
+    <header class="masthead">
+        <div class="container position-relative content">
+            <div class="row justify-content-center">
+                <div class="col-xl-12">
+                    <div class="text-center text-white">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <select id="dropdown" onchange="updateTooltipText()">
+                                <option value="events" selected>Events</option>
+                                <option value="activities">Activities</option>
+                                <option value="indicators">Indicators</option>
+                                <option value="searchMetrics">Search Metrics</option>
+                                <option value="searchActivities">Search Activities</option>
+                                <option value="searchIndicators">Search Indicators</option>
+                                <option value="general">General</option>
+                                <option value="references">References</option>
+                            </select>
+                            <div class="tooltip2">
+                                <i class="bi bi-info-circle"></i>
+                                <span id="tooltip-text2" class="tooltiptext2">Select an option to perform an action</span>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <input type="text" id="inputField" placeholder="Enter name">
+                            <button onclick="sendRequest()" class="mt-2">Send Request</button>
+                            <div id="url" class="mt-2"></div> 
+                            <div id="response" class="mt-2"><pre></pre></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Footer-->
+    <footer class="footer bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 h-100 text-center text-lg-start my-auto">
+                    <ul class="list-inline mb-2">
+                        <li class="list-inline-item"><a href="https://edutec-openlair.github.io/">OpenLair Github.io</a></li>
+                    </ul>
+                    <p class="text-muted small mb-4 mb-lg-0">OpenLAIR 2024.</p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <script>
+        function sendRequest() {
+            // Declare all necessary variables
+            const inputField = document.getElementById('inputField');
+            const dropdown = document.getElementById('dropdown');
+            const responsePre = document.querySelector('#response pre'); 
+            const urlDiv = document.getElementById('url');
+            const inputValue = encodeURIComponent(inputField.value); 
+            const selectedOption = dropdown.value;
+            
+            let baseUrl = 'http://localhost:3001/openlair/api';
+            let endpoint = '';
+            let queryParam = 'name'; // Default query parameter
+            
+            // Determine the endpoint and query parameter based on the dropdown selection
+            switch (selectedOption) {
+                case 'events':
+                case 'searchEvents':
+                    endpoint = 'events';
+                    break;
+                case 'activities':
+                    endpoint = 'activities';
+                    break;
+                case 'searchActivities':
+                    endpoint = 'activities/search';
+                    break;
+                case 'indicators':
+                    endpoint = 'indicators';
+                    break;
+                case 'searchIndicators':
+                    endpoint = 'indicators/search';
+                    break;
+                case 'general':
+                    endpoint = 'general';
+                    break;
+                case 'metrics':
+                    endpoint = 'metrics';
+                    break;
+                case 'searchMetrics':
+                    endpoint = 'metrics/search';
+                    break;
+                case 'references':
+                    endpoint = 'references';
+                    queryParam = 'referenceNumber'; // Use referenceNumber for references
+                    break;
+                default:
+                    endpoint = 'events'; // Default endpoint
+            }
+
+            const url = `${baseUrl}/${endpoint}?${queryParam}=${inputValue}`;
+            
+            // Clear previous response
+            responsePre.textContent = '';
+            urlDiv.textContent = `URL: ${url}`; // Display the URL
+
+            
+
+            // Fetch request
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    responsePre.textContent = JSON.stringify(data, null, 2);
+                })
+                .catch(error => {
+                    // Handle error
+                    responsePre.textContent = `Error: ${error.message}`;
+                });
+        }
+
+        function updateTooltipText() {
+            const tooltipText = document.getElementById('tooltip-text2');
+            const selectedValue = document.getElementById('dropdown').value;
+
+            let tooltipMessage = '';
+            
+            switch (selectedValue) {
+                case 'events':
+                    tooltipMessage = 'Search events.';
+                    break;
+                case 'activities':
+                    tooltipMessage = 'Search activities.';
+                    break;
+                case 'indicators':
+                    tooltipMessage = 'Search indicators.';
+                    break;
+                case 'searchMetrics':
+                    tooltipMessage = 'Search for metrics data (returns the whole structure).';
+                    break;
+                case 'searchActivities':
+                    tooltipMessage = 'Search for activities data (returns the whole structure).';
+                    break;
+                case 'searchIndicators':
+                    tooltipMessage = 'Search for indicators data (returns the whole structure).';
+                    break;
+                case 'general':
+                    tooltipMessage = 'Search for events, activities and indicators.';
+                    break;
+                case 'references':
+                    tooltipMessage = 'Search references.';
+                    break;
+                default:
+                    tooltipMessage = 'Select an option to perform an action.';
+            }
+
+            tooltipText.textContent = tooltipMessage;
+        }
+
+            // Initialize tooltip text
+            updateTooltipText();
+    </script>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <!-- SB Forms JS -->
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+</body>
+</html>
